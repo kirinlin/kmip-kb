@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Crawl https://docs.oasis-open.org/kmip/, then download each page as Markdown
 (via a local PullMD instance) or raw XML.
@@ -5,6 +6,7 @@ Crawl https://docs.oasis-open.org/kmip/, then download each page as Markdown
 Usage:
     python kmip_crawl.py [--out raw] [--workers 4] [--save-urls ./raw/kmip_urls.txt]
                          [--urls ./raw/kmip_urls.txt] [--no-skip]
+                         [--skip-file ./raw/404skip.txt]
 
 Environment:
     PULLMD_URL   Base URL of the PullMD instance (default: http://localhost:3000)
@@ -177,7 +179,22 @@ def fetch_direct(url: str) -> tuple[bytes | None, int, str]:
     return None, -1, "max retries exceeded"
 
 
-def process_url(url: str, out_dir: Path, skip_existing: bool) -> dict:
+def load_skip_urls(skip_file: str | None) -> set[str]:
+    if not skip_file:
+        return set()
+    path = Path(skip_file)
+    if not path.exists():
+        log.info("Skip file %s not found; nothing to skip.", path)
+        return set()
+    urls = {u.strip() for u in path.read_text(encoding="utf-8").splitlines() if u.strip()}
+    log.info("Loaded %d skip URL(s) from %s", len(urls), path)
+    return urls
+
+
+def process_url(url: str, out_dir: Path, skip_existing: bool, skip_urls: set[str]) -> dict:
+    if url in skip_urls:
+        return {"url": url, "status": "skipped", "reason": "in skip file"}
+
     local = url_to_local_path(url, out_dir)
     if local is None:
         return {"url": url, "status": "skipped", "reason": "non-HTML file"}
@@ -204,10 +221,11 @@ def process_url(url: str, out_dir: Path, skip_existing: bool) -> dict:
     return {"url": url, "status": "ok", "path": str(local), "info": info}
 
 
-def download_all(urls: list[str], out_dir: Path, workers: int, skip_existing: bool) -> None:
+def download_all(urls: list[str], out_dir: Path, workers: int, skip_existing: bool,
+                 skip_urls: set[str]) -> None:
     ok = skipped = errors = 0
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(process_url, url, out_dir, skip_existing): url for url in urls}
+        futures = {pool.submit(process_url, url, out_dir, skip_existing, skip_urls): url for url in urls}
         for future in as_completed(futures):
             result = future.result()
             status = result["status"]
@@ -236,6 +254,8 @@ def main():
     parser.add_argument("--out", default="raw", help="Output root directory (default: raw)")
     parser.add_argument("--workers", type=int, default=4, help="Parallel download workers (default: 4)")
     parser.add_argument("--no-skip", action="store_true", help="Re-download files that already exist")
+    parser.add_argument("--skip-file", metavar="FILE", default="./raw/404skip.txt",
+                        help="Skip URLs listed in this file, e.g. known 404s (default: ./raw/404skip.txt)")
     args = parser.parse_args()
 
     if args.urls:
@@ -253,14 +273,17 @@ def main():
         save_path.write_text("\n".join(urls) + "\n", encoding="utf-8")
         log.info("Found %d URL(s). Saved to %s", len(urls), save_path)
 
+    skip_urls = load_skip_urls(args.skip_file)
+
     out_dir = Path(args.out)
     log.info("Log file: %s", LOG_FILE)
     log.info("PullMD:  %s", PULLMD_URL)
     log.info("URLs:    %d", len(urls))
+    log.info("Skip:    %d", len(skip_urls))
     log.info("Output:  %s", out_dir.resolve())
     log.info("Workers: %d", args.workers)
 
-    download_all(urls, out_dir, args.workers, skip_existing=not args.no_skip)
+    download_all(urls, out_dir, args.workers, skip_existing=not args.no_skip, skip_urls=skip_urls)
 
 
 if __name__ == "__main__":
