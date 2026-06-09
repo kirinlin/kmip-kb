@@ -2,6 +2,10 @@
 
 Crawls `https://docs.oasis-open.org/kmip/` and mirrors the full documentation tree locally as Markdown (HTML pages) and raw XML.
 
+## Disclaimer
+
+This repository contains independently written notes, summaries, implementation guidance, examples, and metadata based on the OASIS KMIP specification. The official KMIP specification is copyrighted by OASIS Open. This repository is not an official OASIS publication and does not contain the official specification text.
+
 ## Prerequisites
 
 - Python 3.11+ with `requests` and `beautifulsoup4`
