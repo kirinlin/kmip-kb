@@ -1,0 +1,14 @@
+docs/
+# Claude Code — machine-specific, don't share
+.claude/settings.local.json
+.claude/.session*
+.claude/cache/
+.claude/memory.md
+# Optionally, if you want plans private:
+# .claude/plans/
+# Cowork / Claude Code scheduled task runtime state
+.claude/scheduled_tasks.lock
+**/scheduled_tasks.lock
+# Skill auth session caches (OAuth tokens, etc.)
+**/.session/
+**/.session/**
