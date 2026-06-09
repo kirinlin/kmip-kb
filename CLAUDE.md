@@ -4,9 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This project downloads KMIP (Key Management Interoperability Protocol) specification documents from `https://docs.oasis-open.org/kmip/` and converts them to Markdown, storing them in `raw/` with a folder structure that mirrors the original URL path.
+This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x** family (v1.0–v1.4), baseline **v1.4**.
 
-## Script
+The spec is mirrored locally into `raw/` (gitignored) only as a *source* for authoring; the crawler that builds that mirror is secondary tooling.
+
+## The one hard rule: never copy spec prose
+
+Never paste specification text, tables, or definitions into any tracked file. Read `raw/` for understanding, then write original prose. `source_section` front matter is traceability only — it does not license quoting. See `CONTRIBUTING.md`.
+
+## Knowledge-base layout
+
+`concepts/ operations/ (operations/server-to-client/) objects/ attributes/ ttlv/ profiles/ workflows/ examples/ schemas/ (schemas/agent/) mappings/ versions/ references/` plus `templates/`.
+
+Spec section → category mapping: §2.2 Managed Objects→`objects/`, §2.1 Base Objects + §6/§7/§9 Message Contents/Format/Encoding→`ttlv/`, §3→`attributes/`, §4/§5→`operations/`, §8/§10/§11→`concepts/`, §12→`profiles/`, §1→`references/`.
+
+Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`.
+
+## Scaffold generator
+
+`scripts/build_kb_scaffold.py` — parses a raw 1.x spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run.
+
+```
+python scripts/build_kb_scaffold.py [--version 1.4] [--out .] [--toc-only] [--no-stubs] [--check]
+```
+
+The section→category rules and per-section stub depth live in `PREFIX_RULES` at the top of the script; stub bodies come from `templates/<category>.md`.
+
+## Crawler (source preparation, private)
 
 `scripts/kmip_crawler.py` — unified crawl + download in one pass.
 

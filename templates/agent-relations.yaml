@@ -1,0 +1,11 @@
+# Machine-readable relations for GraphRAG / coding agents.
+# One file per operation or object, stored under schemas/agent/.
+# Fill the lists with KB document slugs. Leave [] until authored.
+name: Create
+category: operation        # operation | object
+creates: []                # object slugs this operation produces
+requires: []               # attribute/object slugs required as input
+returns: []                # fields/objects returned
+related_attributes: []     # attribute slugs
+related_objects: []        # object slugs
+related_operations: []     # operation slugs

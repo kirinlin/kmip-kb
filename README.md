@@ -1,25 +1,92 @@
 # kmip-dev
 
-Crawls `https://docs.oasis-open.org/kmip/` and mirrors the full documentation tree locally as Markdown (HTML pages) and raw XML.
+An independently written **KMIP developer knowledge base** — summaries,
+explanations, implementation guidance, examples, and machine-readable metadata
+for the OASIS Key Management Interoperability Protocol (KMIP), structured for
+LLM wikis, RAG / vector search, GraphRAG, and coding agents.
 
-## Disclaimer
+It targets the **KMIP 1.x** specification family (v1.0–v1.4), with **v1.4** as
+the baseline.
 
-This repository contains independently written notes, summaries, implementation guidance, examples, and metadata based on the OASIS KMIP specification. The official KMIP specification is copyrighted by OASIS Open. This repository is not an official OASIS publication and does not contain the official specification text.
+## Structure
 
-## Prerequisites
+| Directory | Contents |
+|---|---|
+| `concepts/` | Cross-cutting concepts: authentication, transport, error handling, key state. |
+| `operations/` | Client-to-server operations; `operations/server-to-client/` for the reverse. |
+| `objects/` | Managed objects (symmetric/asymmetric keys, certificates, secret data, templates). |
+| `attributes/` | Object attributes — data types, constraints, applicability. |
+| `ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
+| `profiles/` | Conformance profiles and implementation conformance. |
+| `workflows/` | End-to-end workflows that chain operations. |
+| `examples/` | Worked request/response examples (original, not copied). |
+| `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
+| `mappings/` | Cross-version / cross-implementation mapping tables. |
+| `versions/` | Per-version TOC maps (`<ver>-toc.yaml`) and 1.0–1.4 delta notes. |
+| `references/` | Terminology and pointers to normative / non-normative references. |
+| `templates/` | Document skeletons used by the scaffold generator. |
 
-- Python 3.11+ with `requests` and `beautifulsoup4`
-- [PullMD](https://github.com/AeternaLabsHQ/pullmd) running locally (default `http://localhost:3000`, override with `PULLMD_URL`)
+Each document carries YAML front matter validated against
+[`schemas/frontmatter.schema.json`](schemas/frontmatter.schema.json):
 
-## Usage
-
-```sh
-python scripts/kmip_crawler.py
+```yaml
+---
+title: Create
+category: operation
+spec_version: "1.4"
+spec_versions: ["1.4"]
+source_section: "4.1"     # traceability only — never verbatim text
+status: stub              # stub | draft | reviewed
+related: []
+keywords: []
+---
 ```
 
-This crawls the KMIP docs site, then downloads every page concurrently. Progress and errors are logged to `logs/kmip_crawler-{timestamp}.log`.
+`status` tracks progress: `stub` (generated skeleton) → `draft` (authored) →
+`reviewed` (human-verified per [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-### Options
+## Scaffold generator
+
+[`scripts/build_kb_scaffold.py`](scripts/build_kb_scaffold.py) parses a locally
+mirrored spec and (re)generates the directory structure, one empty stub per
+section, and the section→file map in `versions/<ver>-toc.yaml`. It is pure
+standard library and **never overwrites a file whose `status` is no longer
+`stub`**, so it is safe to re-run as authoring proceeds.
+
+```sh
+python scripts/build_kb_scaffold.py            # generate for v1.4
+python scripts/build_kb_scaffold.py --check    # validate all front matter
+python scripts/build_kb_scaffold.py --toc-only # only refresh the TOC map
+```
+
+| Flag | Default | Effect |
+|---|---|---|
+| `--version` | `1.4` | KMIP 1.x version to scaffold from |
+| `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
+| `--out DIR` | `.` | Output root |
+| `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |
+| `--no-stubs` | *(off)* | Create dirs + TOC but no stub files |
+| `--check` | *(off)* | Validate front matter against the JSON Schema and exit |
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the content rules — most importantly
+the **no-verbatim** rule: never copy specification prose into tracked files.
+
+## Source preparation (private, local-only)
+
+The knowledge base is written *from* a local mirror of the OASIS docs, which is
+**not** published here — `raw/` is gitignored. To build that mirror,
+[`scripts/kmip_crawler.py`](scripts/kmip_crawler.py) crawls
+`https://docs.oasis-open.org/kmip/` and converts pages to Markdown via
+[PullMD](https://github.com/AeternaLabsHQ/pullmd) (running locally, default
+`http://localhost:3000`, override with `PULLMD_URL`). Requires Python 3.11+ with
+`requests` and `beautifulsoup4`.
+
+```sh
+python scripts/kmip_crawler.py                          # crawl + download
+python scripts/kmip_crawler.py --urls ./raw/kmip_urls.txt   # resume from saved URLs
+```
 
 | Flag | Default | Description |
 |---|---|---|
@@ -29,25 +96,4 @@ This crawls the KMIP docs site, then downloads every page concurrently. Progress
 | `--urls FILE` | — | Skip crawl; use a previously saved URL list |
 | `--no-skip` | — | Re-download files that already exist |
 
-### Resume a partial download
-
-```sh
-python scripts/kmip_crawler.py --urls ./raw/kmip_urls.txt
-```
-
-## Output layout
-
-```
-raw/
-  kmip/
-    kmip-spec/
-      v2.1/
-        kmip-spec-v2.1.md
-        ...
-    kmip-profiles/
-      ...
-logs/
-  kmip_crawler-20260609_101500.log
-```
-
-HTML pages are saved as `.md` (converted via PullMD). Directory index pages become `index.md`. XML test-case files are saved as-is.
+Progress and errors are logged to `logs/kmip_crawler-{timestamp}.log`.

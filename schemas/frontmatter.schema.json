@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kmip-dev/schemas/frontmatter.schema.json",
+  "title": "KMIP KB document front matter",
+  "description": "YAML front-matter contract for every knowledge-base document. Validated by scripts/build_kb_scaffold.py --check.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "category",
+    "spec_version",
+    "spec_versions",
+    "source_section",
+    "status",
+    "related",
+    "keywords"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable document title (the spec section title)."
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "operation",
+        "attribute",
+        "object",
+        "concept",
+        "ttlv",
+        "profile",
+        "reference",
+        "workflow",
+        "example",
+        "schema",
+        "index"
+      ],
+      "description": "Which knowledge-base section this document belongs to."
+    },
+    "spec_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Baseline KMIP version this stub was generated from (e.g. \"1.4\")."
+    },
+    "spec_versions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9]+\\.[0-9]+$"
+      },
+      "uniqueItems": true,
+      "description": "KMIP versions in which this concept appears. Populated during authoring."
+    },
+    "source_section": {
+      "type": "string",
+      "description": "Dotted spec section number for traceability ONLY (e.g. \"4.1\"). Never copy spec prose. Empty string allowed for non-section docs (index pages)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["stub", "draft", "reviewed"],
+      "description": "stub = generated skeleton, prose pending; draft = authored, needs review; reviewed = human-verified per CONTRIBUTING checklist."
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "description": "Slugs or titles of related KB documents (cross-references)."
+    },
+    "keywords": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true,
+      "description": "Retrieval keywords for RAG / search."
+    }
+  }
+}
