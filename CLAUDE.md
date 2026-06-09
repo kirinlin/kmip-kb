@@ -52,7 +52,7 @@ The section→category rules and per-section stub depth live in `PREFIX_RULES` a
 `scripts/kmip_crawler.py` — unified crawl + download in one pass.
 
 ```
-python scripts/kmip_crawler.py [--out raw] [--workers 4] [--save-urls ./raw/kmip_urls.txt] [--urls FILE] [--no-skip]
+python scripts/kmip_crawler.py [--out raw] [--workers 4] [--save-urls ./raw/kmip_urls.txt] [--urls FILE] [--skip-file ./raw/404skip.txt] [--no-skip]
 ```
 
 | Flag | Default | Effect |
@@ -61,6 +61,7 @@ python scripts/kmip_crawler.py [--out raw] [--workers 4] [--save-urls ./raw/kmip
 | `--workers` | `4` | Parallel download workers |
 | `--save-urls` | `./raw/kmip_urls.txt` | Where to write discovered URLs |
 | `--urls FILE` | *(crawl first)* | Skip crawl; load URLs from an existing file |
+| `--skip-file FILE` | `./raw/404skip.txt` | Skip URLs listed in this file, e.g. known 404s (missing file is fine) |
 | `--no-skip` | *(off)* | Re-download files that already exist |
 
 Requires PullMD running locally. Override the default `http://localhost:3000` with `PULLMD_URL` env var.

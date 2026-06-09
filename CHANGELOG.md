@@ -22,6 +22,9 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   run between an authored doc and its `source_section` in the raw spec.
 - `--prune` mode on `scripts/build_kb_scaffold.py` — removes orphaned stub files
   no longer produced by the rules (never touches `draft`/`reviewed` docs).
+- `--skip-file` option on `scripts/kmip_crawler.py` (default `./raw/404skip.txt`)
+  — skips URLs listed in the file, e.g. known 404s, before download; a missing
+  file is ignored.
 
 ### Fixed
 - `scripts/kmip_crawler.py` now prunes paths in `EXCLUDE_PREFIXES` from both the

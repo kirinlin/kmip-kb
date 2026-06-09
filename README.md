@@ -113,6 +113,7 @@ python scripts/kmip_crawler.py --urls ./raw/kmip_urls.txt   # resume from saved 
 | `--workers N` | `4` | Parallel download workers |
 | `--save-urls FILE` | `./raw/kmip_urls.txt` | File to write discovered URLs |
 | `--urls FILE` | — | Skip crawl; use a previously saved URL list |
+| `--skip-file FILE` | `./raw/404skip.txt` | Skip URLs listed in this file (e.g. known 404s); a missing file is ignored |
 | `--no-skip` | — | Re-download files that already exist |
 
 Path prefixes listed in `EXCLUDE_PREFIXES` at the top of the script are pruned
