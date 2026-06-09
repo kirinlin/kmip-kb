@@ -69,6 +69,7 @@ Requires PullMD running locally. Override the default `http://localhost:3000` wi
 
 - HTML pages → Markdown via PullMD (`frontmatter=true`). XML files → downloaded directly.
 - URL path structure under `docs.oasis-open.org` is preserved under `--out`.
+- Paths in `EXCLUDE_PREFIXES` (top of the script) are pruned from both the crawl and any `--urls` list. Currently excludes the `kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0` subtree, which self-references into runaway depth from server mis-linking.
 - Logs written to `./logs/kmip_crawler-{timestamp}.log` (directory is gitignored but kept via placeholder `.gitignore`).
 - `raw/` contents and the script itself are gitignored — local-only artifacts.
 - Python dependencies: `requests`, `beautifulsoup4`.

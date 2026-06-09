@@ -24,6 +24,10 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   no longer produced by the rules (never touches `draft`/`reviewed` docs).
 
 ### Fixed
+- `scripts/kmip_crawler.py` now prunes paths in `EXCLUDE_PREFIXES` from both the
+  crawl and any `--urls` list, starting with the
+  `kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0` subtree that self-references
+  into runaway depth from server mis-linking.
 - Removed two orphaned operation stubs (`operations/notify.md`,
   `operations/put.md`) left at the top level before server-to-client routing
   existed; the correct copies live under `operations/server-to-client/`.

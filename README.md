@@ -115,4 +115,9 @@ python scripts/kmip_crawler.py --urls ./raw/kmip_urls.txt   # resume from saved 
 | `--urls FILE` | — | Skip crawl; use a previously saved URL list |
 | `--no-skip` | — | Re-download files that already exist |
 
+Path prefixes listed in `EXCLUDE_PREFIXES` at the top of the script are pruned
+from both the crawl and any `--urls` list — currently the
+`kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0` subtree, which self-references
+into runaway depth from server mis-linking.
+
 Progress and errors are logged to `logs/kmip_crawler-{timestamp}.log`.

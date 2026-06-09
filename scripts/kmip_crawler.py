@@ -28,6 +28,13 @@ from bs4 import BeautifulSoup
 
 BASE_URL = "https://docs.oasis-open.org/kmip/"
 PULLMD_URL = os.environ.get("PULLMD_URL", "http://localhost:3000")
+
+# Path prefixes to exclude from crawl/download. The test-cases tree under
+# kmip-profiles v3.0 self-references via "kmip-v3.0", producing runaway depth
+# from server mis-linking, so we prune that subtree entirely.
+EXCLUDE_PREFIXES = (
+    "/kmip/kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0",
+)
 CRAWL_DELAY = 0.3   # seconds between crawl requests
 REQUEST_TIMEOUT = 3600
 RETRY_ATTEMPTS = 3
@@ -64,6 +71,7 @@ def is_in_scope(url: str) -> bool:
         parsed.scheme in ("http", "https")
         and parsed.netloc == "docs.oasis-open.org"
         and parsed.path.startswith("/kmip/")
+        and not parsed.path.startswith(EXCLUDE_PREFIXES)
     )
 
 
@@ -264,7 +272,9 @@ def main():
             print(f"Error: {urls_file} not found.", file=sys.stderr)
             sys.exit(1)
         urls = [u.strip() for u in urls_file.read_text(encoding="utf-8").splitlines() if u.strip()]
-        log.info("Loaded %d URL(s) from %s", len(urls), urls_file)
+        before = len(urls)
+        urls = [u for u in urls if not urlparse(u).path.startswith(EXCLUDE_PREFIXES)]
+        log.info("Loaded %d URL(s) from %s (%d excluded)", len(urls), urls_file, before - len(urls))
     else:
         log.info("Starting crawl from %s", BASE_URL)
         urls = crawl(BASE_URL)
