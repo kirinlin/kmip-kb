@@ -7,6 +7,12 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- Authored all 9 managed object types plus the category index (`objects/*.md`)
+  as original prose (`status: draft`): purpose, structure, key attributes,
+  lifecycle/state, and cross-references into `operations/`, `attributes/`, and
+  `ttlv/`. `spec_versions` reflect availability per type (PGP Key from v1.2;
+  Template present v1.0–v1.4 but deprecated in v1.3). Verified clean by
+  `check_verbatim.py`.
 - Authored all 41 client-to-server operations (`operations/*.md`) as original
   prose (`status: draft`): purpose, request/response fields, behavior, errors,
   and cross-references, with `spec_versions` computed per operation across

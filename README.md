@@ -45,6 +45,10 @@ keywords: []
 `status` tracks progress: `stub` (generated skeleton) → `draft` (authored) →
 `reviewed` (human-verified per [CONTRIBUTING.md](CONTRIBUTING.md)).
 
+**Authoring status:** `operations/` (all client-to-server operations) and
+`objects/` (all managed object types) are authored as `draft`; the remaining
+categories are generated stubs awaiting prose.
+
 ## Scaffold generator
 
 [`scripts/build_kb_scaffold.py`](scripts/build_kb_scaffold.py) parses a locally

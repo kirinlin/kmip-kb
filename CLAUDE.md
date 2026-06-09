@@ -20,6 +20,23 @@ Spec section → category mapping: §2.2 Managed Objects→`objects/`, §2.1 Bas
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`.
 
+## Authoring content
+
+Fill a stub's existing section headers with original prose, populate front
+matter (`spec_versions` per the versions a concept appears in, real `related`
+slugs, `keywords`), then flip `status: stub` → `draft`. Match the depth and
+cross-reference style of already-authored docs (e.g. `operations/register.md`,
+`objects/symmetric-key.md`). Use relative links (e.g.
+`[Key Block](../ttlv/key-block.md)`) and confirm targets exist (stub or
+authored) before linking. Validate before committing:
+
+```
+python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
+python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
+```
+
+Authored so far: all of `operations/` (client-to-server) and `objects/`.
+
 ## Scaffold generator
 
 `scripts/build_kb_scaffold.py` — parses a raw 1.x spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run.
