@@ -2,27 +2,44 @@
 title: RNG Retrieve
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.2", "1.3", "1.4"]
 source_section: "4.35"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["rng-seed", "rng-parameters"]
+keywords: ["rng retrieve", "random number", "random bytes", "rng output"]
 ---
 
 # RNG Retrieve
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Purpose
+
+`RNG Retrieve` asks the server to return random bytes from its random number
+generator. It lets a client draw on the server's RNG (often a hardware or
+validated generator) rather than its own. Added in KMIP 1.2.
 
 ## Request Fields
 
+| Field | Required | Description |
+|---|---|---|
+| Data Length | Yes | How many bytes of random output to return. |
+
 ## Response Fields
+
+| Field | Required | Description |
+|---|---|---|
+| Data | Yes | The random bytes produced by the generator. |
 
 ## Behavior & Server Requirements
 
+The server returns the requested number of random bytes. The result status in
+the response header reports success or failure.
+
 ## Errors
 
-## Examples
+Uses the centralized [error handling](../concepts/error-handling.md). Typical
+causes: a request larger than the server will satisfy, or insufficient
+permission.
 
 ## Related Operations
+
+[RNG Seed](rng-seed.md)

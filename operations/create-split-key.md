@@ -2,27 +2,55 @@
 title: Create Split Key
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.2", "1.3", "1.4"]
 source_section: "4.38"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["join-split-key", "create", "split-key"]
+keywords: ["create split key", "split key", "key splitting", "secret sharing", "threshold"]
 ---
 
 # Create Split Key
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Purpose
+
+`Create Split Key` generates a [split key](../objects/split-key.md) — a key
+broken into several parts (splits) under a secret-sharing scheme — and registers
+each part as its own managed object. It was added in KMIP 1.2.
 
 ## Request Fields
 
+| Field | Required | Description |
+|---|---|---|
+| Object Type | Yes | The type of object to create. |
+| Unique Identifier | No | An existing key to split, when the client wants the server to split a known key. |
+| Split Key Parts | Yes | How many parts to produce in all. |
+| Split Key Threshold | Yes | How many parts must be combined to rebuild the key. |
+| Split Key Method | Yes | The secret-sharing method used to split the key. |
+| Prime Field Size | No | The prime field size, for methods that need one. |
+| Template-Attribute | Yes | Attributes for the new objects. |
+
 ## Response Fields
+
+| Field | Required | Description |
+|---|---|---|
+| Unique Identifier | Yes (may repeat) | The identifiers of all the split objects created. |
+| Template-Attribute | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 
+The client can either let the server generate fresh key material to split or name
+an existing key to be split; when an existing key is named and its attributes
+differ from those supplied in the request, the key's own attributes win. The
+server creates every split as a separate object and sets the ID Placeholder to
+the split whose part identifier is 1. Reconstruction later requires at least
+*threshold* parts via [Join Split Key](join-split-key.md).
+
 ## Errors
 
-## Examples
+Uses the centralized [error handling](../concepts/error-handling.md). Typical
+causes: an unsupported split method, an inconsistent parts/threshold
+combination, or insufficient permission.
 
 ## Related Operations
+
+[Join Split Key](join-split-key.md) · [Create](create.md)

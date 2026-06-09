@@ -465,6 +465,47 @@ def cmd_check(args) -> int:
     return 0 if total_errors == 0 else 1
 
 
+def cmd_prune(args) -> int:
+    """Delete orphaned *stub* files no longer produced by the current rules.
+
+    An orphan is a ``.md`` in a category directory whose path is not among the
+    target paths the generator would emit for this version. Only files still at
+    ``status: stub`` are removed -- authored (draft/reviewed) files are reported
+    and left untouched so re-classification never destroys real content.
+    """
+    out = Path(args.out).resolve()
+    version = args.version
+    spec = Path(args.spec).resolve() if args.spec else spec_path_for(version)
+    if not spec.exists():
+        print(f"ERROR: spec not found: {spec}", file=sys.stderr)
+        return 2
+
+    stubs = select_stubs(parse_headings(spec.read_text(encoding="utf-8")))
+    expected = {target_path(s["category"], s["subdir"], s["slug"]) for s in stubs}
+
+    category_dirs = {CATEGORY_DIR[c] for c in CATEGORY_DIR}
+    removed = 0
+    kept_authored = 0
+    for dirname in sorted(category_dirs):
+        d = out / dirname
+        if not d.exists():
+            continue
+        for f in sorted(d.rglob("*.md")):
+            rel = f.relative_to(out).as_posix()
+            if f.name == "index.md" or rel in expected:
+                continue
+            status = (read_front_matter(f) or {}).get("status")
+            if status and status != "stub":
+                print(f"KEEP  {rel}: orphan but status={status} (authored)")
+                kept_authored += 1
+                continue
+            f.unlink()
+            print(f"PRUNE {rel}")
+            removed += 1
+    print(f"pruned {removed} orphan stub(s); kept {kept_authored} authored orphan(s)")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -479,10 +520,14 @@ def main(argv: list[str] | None = None) -> int:
                    help="Create dirs + TOC but no per-section stub files")
     p.add_argument("--check", action="store_true",
                    help="Validate front matter of all KB docs and exit")
+    p.add_argument("--prune", action="store_true",
+                   help="Delete orphaned stub files no longer in the rules and exit")
     args = p.parse_args(argv)
 
     if args.check:
         return cmd_check(args)
+    if args.prune:
+        return cmd_prune(args)
     return cmd_generate(args)
 
 

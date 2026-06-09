@@ -57,6 +57,7 @@ standard library and **never overwrites a file whose `status` is no longer
 python scripts/build_kb_scaffold.py            # generate for v1.4
 python scripts/build_kb_scaffold.py --check    # validate all front matter
 python scripts/build_kb_scaffold.py --toc-only # only refresh the TOC map
+python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 ```
 
 | Flag | Default | Effect |
@@ -67,6 +68,20 @@ python scripts/build_kb_scaffold.py --toc-only # only refresh the TOC map
 | `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |
 | `--no-stubs` | *(off)* | Create dirs + TOC but no stub files |
 | `--check` | *(off)* | Validate front matter against the JSON Schema and exit |
+| `--prune` | *(off)* | Delete stub files no longer in the rules (keeps authored docs) |
+
+## No-verbatim guard
+
+[`scripts/check_verbatim.py`](scripts/check_verbatim.py) enforces the
+no-verbatim rule mechanically: for every authored doc (`status: draft` or
+`reviewed`) it compares the prose against the doc's `source_section` in the raw
+spec and flags any shared run of 8+ words. Run it before committing authored
+content:
+
+```sh
+python scripts/check_verbatim.py operations    # check a directory
+python scripts/check_verbatim.py --n 8         # adjust the run length
+```
 
 ## Contributing
 

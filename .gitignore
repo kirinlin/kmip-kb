@@ -1,4 +1,7 @@
 docs/
+# Python bytecode cache
+__pycache__/
+*.pyc
 # Claude Code — machine-specific, don't share
 .claude/settings.local.json
 .claude/.session*

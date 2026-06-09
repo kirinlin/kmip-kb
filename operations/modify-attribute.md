@@ -2,27 +2,51 @@
 title: Modify Attribute
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
 source_section: "4.15"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["add-attribute", "delete-attribute", "get-attributes"]
+keywords: ["modify attribute", "change attribute", "update value", "attribute index"]
 ---
 
 # Modify Attribute
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Purpose
+
+`Modify Attribute` changes the value of an attribute instance that already
+exists on a managed object. It complements [Add Attribute](add-attribute.md),
+which creates values; `Modify Attribute` only updates existing ones.
 
 ## Request Fields
 
+| Field | Required | Description |
+|---|---|---|
+| Unique Identifier | No | The object to change; the ID Placeholder is used when omitted. |
+| Attribute | Yes | The attribute name, optional index, and new value. |
+
 ## Response Fields
+
+| Field | Required | Description |
+|---|---|---|
+| Unique Identifier | Yes | The object's identifier. |
+| Attribute | Yes | The attribute with its updated value. |
 
 ## Behavior & Server Requirements
 
+Only the single instance named by the index is changed; when no index is given,
+index 0 is assumed. Pointing at an index that has no attribute instance is an
+error, and attributes that do not yet exist must be created with
+[Add Attribute](add-attribute.md) rather than modified. The response echoes the
+new value, and may omit the index when it is 0. Multiple modifications can be
+batched together.
+
 ## Errors
 
-## Examples
+Uses the centralized [error handling](../concepts/error-handling.md). Typical
+causes: an index that names no existing instance, modifying a non-existent or
+read-only attribute, an invalid value, or insufficient permission.
 
 ## Related Operations
+
+[Add Attribute](add-attribute.md) · [Delete Attribute](delete-attribute.md) ·
+[Get Attributes](get-attributes.md)

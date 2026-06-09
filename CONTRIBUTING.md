@@ -34,7 +34,8 @@ the official spec, rewrite it.
 4. **Fill front matter.** Set `spec_versions` to the versions where the concept
    appears, add `related` cross-references and `keywords`, and set
    `status: draft`.
-5. **Validate.** Run `python scripts/build_kb_scaffold.py --check`.
+5. **Validate.** Run `python scripts/build_kb_scaffold.py --check` (front matter)
+   and `python scripts/check_verbatim.py <dir>` (no copied prose).
 6. **Review** against the checklist below, then set `status: reviewed`.
 
 The generator never overwrites a file whose `status` is no longer `stub`, so
@@ -42,7 +43,7 @@ re-running it to pick up new sections is safe.
 
 ## Review checklist
 
-- [ ] No substantial verbatim specification text remains.
+- [ ] No substantial verbatim specification text remains (`check_verbatim.py` clean).
 - [ ] Technical meaning is preserved and correct.
 - [ ] No hallucinated fields, operations, or behaviors.
 - [ ] Cross-references (`related`) resolve to real documents.

@@ -7,6 +7,22 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- Authored all 41 client-to-server operations (`operations/*.md`) as original
+  prose (`status: draft`): purpose, request/response fields, behavior, errors,
+  and cross-references, with `spec_versions` computed per operation across
+  v1.0–v1.4. Includes `operations/re-key.md` (§4.4), whose heading was lost in
+  source conversion and which is therefore not produced by the generator.
+- `scripts/check_verbatim.py` — no-verbatim guard that flags any shared 8+-word
+  run between an authored doc and its `source_section` in the raw spec.
+- `--prune` mode on `scripts/build_kb_scaffold.py` — removes orphaned stub files
+  no longer produced by the rules (never touches `draft`/`reviewed` docs).
+
+### Fixed
+- Removed two orphaned operation stubs (`operations/notify.md`,
+  `operations/put.md`) left at the top level before server-to-client routing
+  existed; the correct copies live under `operations/server-to-client/`.
+
+### Added (scaffold)
 - Knowledge-base scaffold targeting the KMIP 1.x family (baseline v1.4):
   directory structure (`concepts/`, `operations/` + `operations/server-to-client/`,
   `objects/`, `attributes/`, `ttlv/`, `profiles/`, `workflows/`, `examples/`,
