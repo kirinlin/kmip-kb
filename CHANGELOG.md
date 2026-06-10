@@ -7,6 +7,29 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- Authored all remaining stub content (119 docs) as original prose
+  (`status: draft`), bringing the knowledge base to 100% draft coverage
+  (158 content docs, 0 stubs):
+  - `attributes/` — all 51 attributes (§3.1–§3.51) plus a grouped index:
+    data types and structure tables, constraints (instance rules, mutability,
+    lifecycle freezing), applies-to object types, and set/modified-by rules;
+    `spec_versions` computed per attribute across v1.0–v1.4.
+  - `ttlv/` — all 45 docs covering §2.1 base objects, §6 message contents,
+    §7 message format, and §9.1 TTLV encoding, with tag hex values from the
+    §9.1.3.1 registry, plus a structured index.
+  - `concepts/` — authentication, transport, and error handling, plus index.
+  - `operations/` — the three server-to-client operations (Notify, Put, and
+    the v1.3+ Query) with their index, and a categorized top-level
+    operations index.
+  - `profiles/` — server and client implementation conformance plus index.
+  - `references/` — IPR policy, terminology, normative and non-normative
+    references, plus index.
+  - Index pages for `examples/`, `mappings/`, `workflows/`, and `versions/`,
+    each listing planned content.
+  - Validated by `build_kb_scaffold.py --check`, `validate_links.py`, and
+    `check_verbatim.py` (all categories clean; `operations/re-key.md`
+    remains manual-review-only because §4.4's heading was lost in source
+    conversion).
 - Authored all 9 managed object types plus the category index (`objects/*.md`)
   as original prose (`status: draft`): purpose, structure, key attributes,
   lifecycle/state, and cross-references into `operations/`, `attributes/`, and

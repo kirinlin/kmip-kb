@@ -45,9 +45,11 @@ keywords: []
 `status` tracks progress: `stub` (generated skeleton) → `draft` (authored) →
 `reviewed` (human-verified per [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** `operations/` (all client-to-server operations) and
-`objects/` (all managed object types) are authored as `draft`; the remaining
-categories are generated stubs awaiting prose.
+**Authoring status:** all 158 content documents — every operation, object,
+attribute, TTLV structure, concept, profile, and reference, plus the category
+index pages — are authored as `draft`; no stubs remain. Next steps are review
+(`draft` → `reviewed`) and the planned content listed in the `examples/`,
+`workflows/`, and `mappings/` index pages.
 
 ## Scaffold generator
 

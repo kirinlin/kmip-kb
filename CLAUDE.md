@@ -36,7 +36,13 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
-Authored so far: all of `operations/` (client-to-server) and `objects/`.
+Authored so far: **everything** — all 158 content docs across every category
+are `draft` (0 stubs). Remaining work is review (`draft` → `reviewed` per the
+CONTRIBUTING checklist) and net-new content in `examples/`, `workflows/`, and
+`mappings/`, whose index pages list the planned items. One caveat:
+`operations/re-key.md` (§4.4) cannot be auto-checked by `check_verbatim.py`
+because its heading was lost in source conversion — re-verify it manually
+when editing.
 
 ## Authoring status
 
