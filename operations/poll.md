@@ -1,9 +1,10 @@
 ---
 title: Poll
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.28"
+source_section: "6.1.38"
+v1_source_section: "4.28"
 status: draft
 related: ["cancel", "recover", "asynchronous-correlation-value"]
 keywords: ["poll", "asynchronous", "correlation value", "operation status", "pending"]

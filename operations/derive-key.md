@@ -1,9 +1,10 @@
 ---
 title: Derive Key
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.6"
+source_section: "6.1.14"
+v1_source_section: "4.6"
 status: draft
 related: ["create", "register", "secret-data", "symmetric-key", "cryptographic-parameters", "cryptographic-usage-mask"]
 keywords: ["derive key", "key derivation", "PBKDF2", "HKDF", "HMAC", "KDF", "SP800-108"]

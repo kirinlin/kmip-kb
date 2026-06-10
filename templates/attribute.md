@@ -1,9 +1,10 @@
 ---
 title: Cryptographic Algorithm
 category: attribute
-spec_version: "1.4"
-spec_versions: ["1.4"]
-source_section: "3.4"
+spec_version: "2.1"
+spec_versions: ["2.1"]
+source_section: "4.1"
+v1_source_section: "3.4"
 status: stub
 related: []
 keywords: []

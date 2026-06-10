@@ -1,9 +1,10 @@
 ---
 title: Re-key Key Pair
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.5"
+source_section: "6.1.47"
+v1_source_section: "4.5"
 status: draft
 related: ["re-key", "create-key-pair", "certify", "public-key", "private-key", "link"]
 keywords: ["re-key key pair", "rekey", "replacement key pair", "asymmetric rotation"]

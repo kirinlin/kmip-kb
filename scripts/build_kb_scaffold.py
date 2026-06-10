@@ -253,6 +253,12 @@ def render_front_matter(fm: dict) -> str:
         f'spec_version: "{fm["spec_version"]}"',
         f'spec_versions: {fmt_list(fm["spec_versions"])}',
         f'source_section: "{fm["source_section"]}"',
+    ]
+    # Optional cross-version trace: the v1.x section, when the concept existed
+    # in the 1.x family. New v2.x-only stubs have no v1 mapping, so it is absent.
+    if fm.get("v1_source_section") is not None:
+        lines.append(f'v1_source_section: "{fm["v1_source_section"]}"')
+    lines += [
         f'status: {fm["status"]}',
         f'related: {fmt_list(fm["related"])}',
         f'keywords: {fmt_list(fm["keywords"])}',
@@ -335,6 +341,8 @@ def validate_front_matter(fm: dict) -> list[str]:
             for v in fm["spec_versions"]:
                 if not _VER_RE.match(str(v)):
                     errors.append(f"spec_versions entry must match N.M: {v!r}")
+    if "v1_source_section" in fm and not isinstance(fm["v1_source_section"], str):
+        errors.append("v1_source_section must be a string")
     if "status" in fm and fm["status"] not in VALID_STATUS:
         errors.append(f"status not allowed: {fm['status']!r}")
     for listkey in ("related", "keywords"):
@@ -549,8 +557,8 @@ def cmd_prune(args) -> int:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--version", default="1.4",
-                   help="KMIP 1.x version to scaffold from (default: 1.4)")
+    p.add_argument("--version", default="2.1",
+                   help="KMIP version to scaffold from, 1.0-1.4 or 2.0-2.1 (default: 2.1)")
     p.add_argument("--spec", default=None,
                    help="Explicit path to a raw spec markdown file (overrides --version)")
     p.add_argument("--out", default=".", help="Output root (default: repo root)")

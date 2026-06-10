@@ -1,9 +1,10 @@
 ---
 title: Extractable
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
-source_section: "3.50"
+source_section: "4.23"
+v1_source_section: "3.50"
 status: draft
 related: ["never-extractable", "sensitive", "always-sensitive"]
 keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity"]

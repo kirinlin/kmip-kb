@@ -1,9 +1,10 @@
 ---
 title: Init Indicator
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.16"
+source_section: "7.17"
+v1_source_section: "2.1.16"
 status: draft
 related: ["final-indicator", "correlation-value", "data"]
 keywords: ["init indicator", "streaming", "multi-part", "first part"]

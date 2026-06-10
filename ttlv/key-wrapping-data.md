@@ -1,9 +1,10 @@
 ---
 title: Key Wrapping Data
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.5"
+source_section: "3.3"
+v1_source_section: "2.1.5"
 status: draft
 related: ["key-wrapping-specification", "key-block", "key-value"]
 keywords: ["key wrapping data", "wrapping method", "encryption key information", "MAC signature", "encoding option"]

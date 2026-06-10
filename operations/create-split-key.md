@@ -1,9 +1,10 @@
 ---
 title: Create Split Key
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.38"
+source_section: "6.1.10"
+v1_source_section: "4.38"
 status: draft
 related: ["join-split-key", "create", "split-key"]
 keywords: ["create split key", "split key", "key splitting", "secret sharing", "threshold"]

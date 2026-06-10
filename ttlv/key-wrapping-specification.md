@@ -1,9 +1,10 @@
 ---
 title: Key Wrapping Specification
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.6"
+source_section: "7.18"
+v1_source_section: "2.1.6"
 status: draft
 related: ["key-wrapping-data", "key-block", "key-value"]
 keywords: ["key wrapping specification", "wrapped key request", "get wrapped", "encoding option"]

@@ -1,9 +1,10 @@
 ---
 title: Client Correlation Value
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
-source_section: "6.18"
+source_section: "9.9"
+v1_source_section: "6.18"
 status: draft
 related: ["server-correlation-value", "correlation-value", "message-structure"]
 keywords: ["client correlation value", "request tracing", "logging", "observability"]

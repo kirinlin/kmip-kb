@@ -1,9 +1,10 @@
 ---
 title: Signature Data
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.12"
+source_section: "7.38"
+v1_source_section: "2.1.12"
 status: draft
 related: ["data", "mac-data", "digital-signature-algorithm"]
 keywords: ["signature data", "sign", "signature verify", "digital signature bytes"]

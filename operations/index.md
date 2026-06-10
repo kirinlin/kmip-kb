@@ -1,9 +1,10 @@
 ---
 title: Operations
 category: index
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4"
+source_section: "6.1"
+v1_source_section: "4"
 status: draft
 related: ["create", "register", "get", "locate", "query"]
 keywords: ["operations", "client-to-server", "server-to-client", "lifecycle", "cryptographic operations"]
@@ -11,8 +12,9 @@ keywords: ["operations", "client-to-server", "server-to-client", "lifecycle", "c
 
 # Operations
 
-Everything a KMIP client can ask a server to do (spec §4), plus the three
-[server-to-client](server-to-client/index.md) operations (§5). Requests and
+Everything a KMIP client can ask a server to do (v2.1 §6.1; v1.x §4), plus the
+[server-to-client](server-to-client/index.md) operations (v2.1 §6.2; v1.x §5).
+Requests and
 responses are carried as [batch items](../ttlv/batch-item.md) inside the
 standard [message structure](../ttlv/message-structure.md).
 

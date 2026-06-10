@@ -1,9 +1,10 @@
 ---
 title: Authentication
 category: concept
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "8"
+source_section: "10.3"
+v1_source_section: "8"
 status: draft
 related: ["transport", "error-handling", "credential", "kmip-server-implementation-conformance"]
 keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication"]
@@ -28,8 +29,8 @@ Two layers cooperate:
 
 1. **Channel authentication** — established by the [transport](transport.md)
    (TLS with mutual certificate verification per the profiles). This is the
-   normative anchor: §8 of the spec simply points at the profiles document for
-   the required mechanisms.
+   normative anchor: the spec's Authentication section (v2.1 §10.3; v1.x §8)
+   simply points at the profiles document for the required mechanisms.
 2. **In-message identity claims** — the optional
    [Authentication](../ttlv/authentication.md) structure in the request
    header, which carries one or more [Credential](../ttlv/credential.md)

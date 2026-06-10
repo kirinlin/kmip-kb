@@ -1,9 +1,10 @@
 ---
 title: State
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.22"
+source_section: "4.57"
+v1_source_section: "3.22"
 status: draft
 related: ["activation-date", "deactivation-date", "compromise-date", "destroy-date", "revocation-reason"]
 keywords: ["state", "lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "SP 800-57"]

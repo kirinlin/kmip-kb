@@ -1,9 +1,10 @@
 ---
 title: Message Encoding
 category: ttlv
-spec_version: "1.4"
-spec_versions: ["1.4"]
-source_section: "9"
+spec_version: "2.1"
+spec_versions: ["2.1"]
+source_section: "7.1"
+v1_source_section: "9"
 status: stub
 related: []
 keywords: []

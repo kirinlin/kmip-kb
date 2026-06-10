@@ -1,9 +1,10 @@
 ---
 title: Custom Attribute
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.39"
+source_section: "4.60"
+v1_source_section: "3.39"
 status: draft
 related: ["application-specific-information", "description", "comment"]
 keywords: ["custom attribute", "x- prefix", "y- prefix", "vendor extension", "client-defined attribute"]

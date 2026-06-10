@@ -6,7 +6,7 @@ for the OASIS Key Management Interoperability Protocol (KMIP), structured for
 LLM wikis, RAG / vector search, GraphRAG, and coding agents.
 
 It targets the **KMIP 1.x and 2.x** specification families (v1.0–v1.4,
-v2.0–v2.1), with **v1.4** as the baseline.
+v2.0–v2.1), with **v2.1** as the baseline.
 
 ## Structure
 
@@ -33,17 +33,22 @@ Each document carries YAML front matter validated against
 ---
 title: Create
 category: operation
-spec_version: "1.4"
-spec_versions: ["1.4"]
-source_section: "4.1"     # traceability only — never verbatim text
-status: stub              # stub | draft | reviewed
+spec_version: "2.1"
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
+source_section: "6.1.8"      # v2.1 baseline section — traceability only
+v1_source_section: "4.1"     # v1.x section, when the concept existed there
+status: draft                # stub | draft | reviewed
 related: []
 keywords: []
 ---
 ```
 
-`status` tracks progress: `stub` (generated skeleton) → `draft` (authored) →
-`reviewed` (human-verified per [CONTRIBUTING.md](CONTRIBUTING.md)).
+`source_section` is the **v2.1** (baseline) section; `v1_source_section` records
+the v1.x section for the same concept (omitted for v2.x-only features). Docs for
+features removed in v2.0 carry `source_section: "del_v2"` with their last v1.x
+section in `v1_source_section`. `status` tracks progress: `stub` (generated
+skeleton) → `draft` (authored) → `reviewed` (human-verified per
+[CONTRIBUTING.md](CONTRIBUTING.md)).
 
 **Authoring status:** all 158 content documents — every operation, object,
 attribute, TTLV structure, concept, profile, and reference, plus the category
@@ -60,7 +65,7 @@ standard library and **never overwrites a file whose `status` is no longer
 `stub`**, so it is safe to re-run as authoring proceeds.
 
 ```sh
-python scripts/build_kb_scaffold.py            # generate for v1.4
+python scripts/build_kb_scaffold.py            # generate for v2.1
 python scripts/build_kb_scaffold.py --check    # validate all front matter
 python scripts/build_kb_scaffold.py --toc-only # only refresh the TOC map
 python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
@@ -68,7 +73,7 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 
 | Flag | Default | Effect |
 |---|---|---|
-| `--version` | `1.4` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
+| `--version` | `2.1` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
 | `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |

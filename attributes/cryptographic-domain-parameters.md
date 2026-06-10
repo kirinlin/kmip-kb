@@ -1,9 +1,10 @@
 ---
 title: Cryptographic Domain Parameters
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.7"
+source_section: "4.14"
+v1_source_section: "3.7"
 status: draft
 related: ["cryptographic-parameters", "cryptographic-length", "cryptographic-algorithm"]
 keywords: ["domain parameters", "Qlength", "recommended curve", "DSA", "DH", "elliptic curve"]

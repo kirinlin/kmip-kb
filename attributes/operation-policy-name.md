@@ -3,7 +3,8 @@ title: Operation Policy Name
 category: attribute
 spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
-source_section: "3.18"
+source_section: "del_v2"
+v1_source_section: "3.18"
 status: draft
 related: ["cryptographic-usage-mask", "sensitive", "extractable"]
 keywords: ["operation policy", "access control", "default policy", "deprecated", "owner"]

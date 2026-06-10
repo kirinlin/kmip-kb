@@ -1,9 +1,10 @@
 ---
 title: X.509 Certificate Identifier
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.10"
+source_section: "4.61"
+v1_source_section: "3.10"
 status: draft
 related: ["x-509-certificate-subject", "x-509-certificate-issuer", "certificate-identifier"]
 keywords: ["X.509 certificate identifier", "issuer distinguished name", "serial number"]

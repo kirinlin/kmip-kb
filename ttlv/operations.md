@@ -1,9 +1,10 @@
 ---
 title: Operations (Message Format)
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "7.2"
+source_section: "7.25"
+v1_source_section: "7.2"
 status: draft
 related: ["message-structure", "batch-item", "result-status", "authentication"]
 keywords: ["request header", "response header", "header fields", "message format"]
@@ -13,8 +14,9 @@ keywords: ["request header", "response header", "header fields", "message format
 
 ## Overview
 
-Spec §7.2 pins down exactly which fields may appear in the four framing
-structures — request/response header and request/response batch item — and
+The spec's message-format sections (v2.1 §8.1–§8.6; v1.x §7) pin down exactly
+which fields may appear in the four framing structures — request/response
+header and request/response batch item — and
 when each is required. This page summarizes the header layouts; the batch
 item layouts live on [Batch Item](batch-item.md).
 

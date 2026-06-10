@@ -1,9 +1,10 @@
 ---
 title: Register
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.3"
+source_section: "6.1.43"
+v1_source_section: "4.3"
 status: draft
 related: ["create", "create-key-pair", "import", "get", "symmetric-key", "certificate", "secret-data"]
 keywords: ["register", "import object", "store key", "client-supplied key", "provisioning"]

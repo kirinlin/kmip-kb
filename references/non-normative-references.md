@@ -1,9 +1,10 @@
 ---
 title: Non-Normative References
 category: reference
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "1.3"
+source_section: "1.4"
+v1_source_section: "1.3"
 status: draft
 related: ["normative-references", "terminology"]
 keywords: ["non-normative references", "usage guide", "test cases", "Shamir"]
@@ -37,5 +38,5 @@ members of the KMIP 1.4 document family: the Usage Guide and the Test Cases.
 
 ## External References
 
-URLs for each entry are in §1.3 of the mirrored spec. The normative
+URLs for each entry are in v2.1 §1.4 of the mirrored spec. The normative
 counterparts live in [Normative References](normative-references.md).

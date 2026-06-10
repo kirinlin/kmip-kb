@@ -147,8 +147,10 @@ key forms) to §3, object attributes to §4, attribute data structures to §5,
 operations to §6 (client §6.1, server-to-client §6.2), operations data
 structures to §7, message structures to §8–§9, and message protocols
 (TTLV, authentication, transport) to §10. Enumerations and bit masks received
-their own chapters (§11–§12). The KB section-reference fields in existing docs
-still reflect v1.4 numbering.
+their own chapters (§11–§12). The KB's `source_section` fields are baselined
+to **v2.1** numbering; the five docs removed in v2.0 (Template object,
+Certificate Identifier/Subject/Issuer, Operation Policy Name) keep their
+last-present v1.x numbering.
 
 **New operations (§6.1, not in v1.x):**
 - *Adjust Attribute* (§6.1.3): atomically increments or decrements a numeric

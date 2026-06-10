@@ -1,9 +1,10 @@
 ---
 title: Re-key
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.4"
+source_section: "6.1.46"
+v1_source_section: "4.4"
 status: draft
 related: ["re-key-key-pair", "create", "revoke", "symmetric-key", "state", "link"]
 keywords: ["re-key", "rekey", "replacement key", "key rotation", "symmetric key"]
@@ -19,8 +20,9 @@ attributes instead of taking them all from the request, making it the standard
 way to rotate a symmetric key while preserving its identity and metadata. The
 asymmetric equivalent is [Re-key Key Pair](re-key-key-pair.md).
 
-> Note: in the locally mirrored v1.4 source the heading for this section
-> (§4.4) was lost during conversion; the operation's content is present and
+> Note: Re-key is v2.1 §6.1.46 (v1.x §4.4). In the locally mirrored v1.4
+> source the section heading was lost during conversion, so the no-verbatim
+> guard can't auto-anchor it there; the operation's content is present and
 > this document is authored from it.
 
 ## Request Fields

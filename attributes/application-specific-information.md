@@ -1,9 +1,10 @@
 ---
 title: Application Specific Information
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.36"
+source_section: "4.4"
+v1_source_section: "3.36"
 status: draft
 related: ["object-group", "custom-attribute", "name"]
 keywords: ["application specific information", "application namespace", "application data", "ASI"]

@@ -1,9 +1,10 @@
 ---
 title: Process Start Date
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.25"
+source_section: "4.40"
+v1_source_section: "3.25"
 status: draft
 related: ["protect-stop-date", "activation-date", "deactivation-date", "state"]
 keywords: ["process start date", "decryption window", "symmetric key", "lifecycle dates"]

@@ -1,9 +1,10 @@
 ---
 title: Query (Server-to-Client)
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
-source_section: "5.3"
+source_section: "6.2.4"
+v1_source_section: "5.3"
 status: draft
 related: ["notify", "put", "query", "discover-versions", "capability-information", "profile-information"]
 keywords: ["query", "server-to-client", "client capabilities", "interrogate client", "client registration"]

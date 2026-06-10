@@ -1,9 +1,10 @@
 ---
 title: Transport
 category: concept
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "10"
+source_section: "10.4"
+v1_source_section: "10"
 status: draft
 related: ["authentication", "error-handling", "ttlv-encoding", "message-structure"]
 keywords: ["transport", "TLS", "channel security", "port 5696", "confidentiality", "integrity"]
@@ -13,8 +14,9 @@ keywords: ["transport", "TLS", "channel security", "port 5696", "confidentiality
 
 ## Overview
 
-The KMIP specification says almost nothing about transport on purpose: §10 is
-a single requirement that clients and servers maintain a channel providing
+The KMIP specification says almost nothing about transport on purpose: the
+Transport section (v2.1 §10.4; v1.x §10) is a single requirement that clients
+and servers maintain a channel providing
 confidentiality, integrity, and authenticity, with the concrete mechanism
 defined in the profiles document. The protocol itself is just
 [TTLV-encoded](../ttlv/ttlv-encoding.md)

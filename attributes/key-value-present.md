@@ -1,9 +1,10 @@
 ---
 title: Key Value Present
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.41"
+source_section: "4.28"
+v1_source_section: "3.41"
 status: draft
 related: ["key-value-location", "digest", "fresh"]
 keywords: ["key value present", "metadata-only registration", "key value absent", "registry"]

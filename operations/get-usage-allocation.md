@@ -1,9 +1,10 @@
 ---
 title: Get Usage Allocation
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.18"
+source_section: "6.1.23"
+v1_source_section: "4.18"
 status: draft
 related: ["check", "usage-limits", "activate", "encrypt", "sign"]
 keywords: ["get usage allocation", "usage limits", "protection quota", "metering"]
@@ -25,7 +26,7 @@ metered and needs no allocation.
 | Field | Required | Description |
 |---|---|---|
 | Unique Identifier | No | The object to allocate against; the ID Placeholder is used when omitted. |
-| Usage Limits Count | Yes | The number of usage-limit units the client wants to reserve for protection. |
+| Usage Limits Count | Yes | How many usage-limit units the client wants to reserve for protection. |
 
 ## Response Fields
 

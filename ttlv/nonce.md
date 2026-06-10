@@ -1,9 +1,10 @@
 ---
 title: Nonce
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.14"
+source_section: "9.14"
+v1_source_section: "2.1.14"
 status: draft
 related: ["credential", "attestation-capable-indicator", "message-structure"]
 keywords: ["nonce", "attestation", "replay protection", "challenge"]

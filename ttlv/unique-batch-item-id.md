@@ -1,9 +1,10 @@
 ---
 title: Unique Batch Item ID
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.4"
+source_section: "9.21"
+v1_source_section: "6.4"
 status: draft
 related: ["batch-item", "batch-count", "batch-order-option"]
 keywords: ["unique batch item ID", "correlation", "batching", "request response matching"]

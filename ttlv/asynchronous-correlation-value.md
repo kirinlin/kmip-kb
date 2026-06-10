@@ -1,9 +1,10 @@
 ---
 title: Asynchronous Correlation Value
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.8"
+source_section: "9.1"
+v1_source_section: "6.8"
 status: draft
 related: ["asynchronous-indicator", "result-status", "correlation-value"]
 keywords: ["asynchronous correlation value", "pending operation", "poll", "cancel"]

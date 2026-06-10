@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x and 2.x** families (v1.0–v1.4, v2.0–v2.1), baseline **v1.4**.
+This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x and 2.x** families (v1.0–v1.4, v2.0–v2.1), baseline **v2.1**.
 
 The spec is mirrored locally into `raw/` (gitignored) only as a *source* for authoring; the crawler that builds that mirror is secondary tooling.
 
@@ -16,9 +16,9 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 `concepts/ operations/ (operations/server-to-client/) objects/ attributes/ ttlv/ profiles/ workflows/ examples/ schemas/ (schemas/agent/) mappings/ versions/ references/` plus `templates/`.
 
-Spec section → category mapping: §2.2 Managed Objects→`objects/`, §2.1 Base Objects + §6/§7/§9 Message Contents/Format/Encoding→`ttlv/`, §3→`attributes/`, §4/§5→`operations/`, §8/§10/§11→`concepts/`, §12→`profiles/`, §1→`references/`.
+Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV→`ttlv/`, §4 Attributes→`attributes/`, §6.1 client + §6.2 server-to-client→`operations/`, §10.3/§10.4 Authentication/Transport→`concepts/`, §14→`profiles/`, §1→`references/`. (v1.x used a different scheme: §2.2→`objects/`, §3→`attributes/`, §4/§5→`operations/`, §6/§7/§9→`ttlv/`, §8/§10/§11→`concepts/`, §12→`profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
-Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`.
+Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
 ## Authoring content
 
@@ -40,7 +40,7 @@ Authored so far: **everything** — all 158 content docs across every category
 are `draft` (0 stubs). Remaining work is review (`draft` → `reviewed` per the
 CONTRIBUTING checklist) and net-new content in `examples/`, `workflows/`, and
 `mappings/`, whose index pages list the planned items. One caveat:
-`operations/re-key.md` (§4.4) cannot be auto-checked by `check_verbatim.py`
+`operations/re-key.md` (v2.1 §6.1.46) cannot be auto-checked by `check_verbatim.py`
 because its heading was lost in source conversion — re-verify it manually
 when editing.
 
@@ -58,7 +58,7 @@ python scripts/status_report.py --json          # machine-readable output
 `scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`).
 
 ```
-python scripts/build_kb_scaffold.py [--version 1.4] [--out .] [--toc-only] [--no-stubs] [--check]
+python scripts/build_kb_scaffold.py [--version 2.1] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
 ToC maps for all seven releases are committed under `versions/`:

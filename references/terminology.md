@@ -1,9 +1,10 @@
 ---
 title: Terminology
 category: reference
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "1.1"
+source_section: "1.2"
+v1_source_section: "1.1"
 status: draft
 related: ["normative-references", "non-normative-references"]
 keywords: ["terminology", "definitions", "glossary", "RFC 2119", "SP 800-57"]
@@ -13,14 +14,14 @@ keywords: ["terminology", "definitions", "glossary", "RFC 2119", "SP 800-57"]
 
 ## Summary
 
-Spec §1.1 does two jobs: it imports the RFC 2119 keyword conventions (SHALL,
+Spec v2.1 §1.2 does two jobs: it imports the RFC 2119 keyword conventions (SHALL,
 SHOULD, MAY, ...) that give the document its normative force, and it defines
 a glossary of cryptographic terms, most of them aligned with NIST SP 800-57
 Part 1. Definitions not found in the spec are deferred to SP 800-57.
 
 ## Entries
 
-The glossary terms, grouped by theme (paraphrased — consult §1.1 for the
+The glossary terms, grouped by theme (paraphrased — consult v2.1 §1.2 for the
 normative wording):
 
 - **Key material and algorithms** — *symmetric key* (one secret key used for

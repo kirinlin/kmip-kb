@@ -1,9 +1,10 @@
 ---
 title: Cancel
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.27"
+source_section: "6.1.5"
+v1_source_section: "4.27"
 status: draft
 related: ["poll", "asynchronous-correlation-value"]
 keywords: ["cancel", "asynchronous", "correlation value", "abort operation"]

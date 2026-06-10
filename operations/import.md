@@ -1,9 +1,10 @@
 ---
 title: Import
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
-source_section: "4.41"
+source_section: "6.1.25"
+v1_source_section: "4.41"
 status: draft
 related: ["export", "register", "get"]
 keywords: ["import", "object import", "migration", "replace existing", "key wrapping"]

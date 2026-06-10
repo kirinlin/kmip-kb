@@ -1,9 +1,10 @@
 ---
 title: Cryptographic Usage Mask
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.19"
+source_section: "4.17"
+v1_source_section: "3.19"
 status: draft
 related: ["cryptographic-algorithm", "state", "usage-limits", "operation-policy-name"]
 keywords: ["usage mask", "bitmask", "encrypt", "sign", "wrap key", "key usage"]

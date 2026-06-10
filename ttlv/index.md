@@ -1,7 +1,7 @@
 ---
 title: TTLV & Message Structures
 category: index
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: ""
 status: draft
@@ -11,9 +11,10 @@ keywords: ["TTLV", "base objects", "message contents", "message format", "encodi
 
 # TTLV & Message Structures
 
-Everything about KMIP's wire shape: the binary encoding (§9), the base
-objects that compose managed objects and payloads (§2.1), and the message
-contents/format machinery (§6–§7).
+Everything about KMIP's wire shape: the binary encoding (v2.1 §10.1; v1.x §9),
+the base objects and data structures that compose managed objects and payloads
+(v2.1 §3/§7/§9; v1.x §2.1), and the message framing machinery (v2.1 §8/§9;
+v1.x §6–§7).
 
 ## Encoding & framing
 
@@ -26,7 +27,7 @@ contents/format machinery (§6–§7).
   [Batch Order Option](batch-order-option.md) ·
   [Batch Error Continuation Option](batch-error-continuation-option.md)
 
-## Key material containers (§2.1)
+## Key material containers (v2.1 §3)
 
 - [Key Block](key-block.md) → [Key Value](key-value.md) →
   [Transparent Key Structures](transparent-key-structures.md)

@@ -1,9 +1,10 @@
 ---
 title: TTLV Encoding
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "9.1"
+source_section: "10.1"
+v1_source_section: "9.1"
 status: draft
 related: ["message-structure", "extension-information", "transport"]
 keywords: ["TTLV", "tag type length value", "binary encoding", "padding", "big endian"]
@@ -47,11 +48,12 @@ the concatenation of their sub-items in the order their definitions list.
 
 ## Fields & Structure
 
-The defined tag registry (`420001`–`420124` in 1.4) is the master list in
-spec §9.1.3.1; `540000`–`54FFFF` is the
-[extensions](extension-information.md) space. TTLV is one of several
-possible encodings — §9 is structured to admit alternatives, and XML/JSON
-encodings were later standardized in the profiles family — but TTLV is the
+The defined tag registry (`420001`–`420124` in 1.4, extended in later
+releases) is the master list in the spec's tag enumeration (v1.x §9.1.3.1);
+`540000`–`54FFFF` is the [extensions](extension-information.md) space. TTLV is
+one of several possible encodings — the encoding chapter (v2.1 §10.1; v1.x §9)
+is structured to admit alternatives, and v2.0 promoted HTTPS/REST, JSON, and
+XML to first-class wire formats in the core spec (§10.2) — but TTLV is the
 baseline every implementation speaks.
 
 ## Examples

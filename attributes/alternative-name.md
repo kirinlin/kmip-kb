@@ -1,9 +1,10 @@
 ---
 title: Alternative Name
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.40"
+source_section: "4.2"
+v1_source_section: "3.40"
 status: draft
 related: ["name", "unique-identifier", "application-specific-information"]
 keywords: ["alternative name", "alias", "locate", "URI", "DNS name", "email"]

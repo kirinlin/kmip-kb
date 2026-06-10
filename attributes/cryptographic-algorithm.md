@@ -1,9 +1,10 @@
 ---
 title: Cryptographic Algorithm
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.4"
+source_section: "4.13"
+v1_source_section: "3.4"
 status: draft
 related: ["cryptographic-length", "cryptographic-parameters", "digital-signature-algorithm", "cryptographic-usage-mask"]
 keywords: ["cryptographic algorithm", "AES", "RSA", "algorithm enumeration"]

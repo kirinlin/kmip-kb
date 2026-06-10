@@ -1,9 +1,10 @@
 ---
 title: Obtain Lease
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.17"
+source_section: "6.1.35"
+v1_source_section: "4.17"
 status: draft
 related: ["check", "get-attributes", "lease-time", "last-change-date"]
 keywords: ["obtain lease", "lease time", "cache expiry", "client caching"]

@@ -1,9 +1,10 @@
 ---
 title: Check
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.10"
+source_section: "6.1.7"
+v1_source_section: "4.10"
 status: draft
 related: ["locate", "get", "obtain-lease", "get-usage-allocation", "cryptographic-usage-mask"]
 keywords: ["check", "policy check", "usage check", "batch", "pre-flight"]

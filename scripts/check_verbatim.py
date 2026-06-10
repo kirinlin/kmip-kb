@@ -104,6 +104,10 @@ def check_file(path: Path, default_version: str, n: int) -> list[str]:
     if fm.get("status") not in ("draft", "reviewed"):
         return []
     section = str(fm.get("source_section") or "").strip()
+    if section == "del_v2":
+        # Removed in v2.0: anchor against the v1.x section it last appeared in.
+        # These docs keep spec_version 1.x, so the v1 spec is selected below.
+        section = str(fm.get("v1_source_section") or "").strip()
     if not section:
         return []
 

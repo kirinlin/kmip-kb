@@ -3,7 +3,8 @@ title: Certificate Subject
 category: attribute
 spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
-source_section: "3.14"
+source_section: "del_v2"
+v1_source_section: "3.14"
 status: draft
 related: ["x-509-certificate-subject", "certificate-identifier", "certificate-issuer"]
 keywords: ["certificate subject", "deprecated", "subject distinguished name"]

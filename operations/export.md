@@ -1,9 +1,10 @@
 ---
 title: Export
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
-source_section: "4.40"
+source_section: "6.1.18"
+v1_source_section: "4.40"
 status: draft
 related: ["import", "get", "register", "key-wrapping-specification"]
 keywords: ["export", "object export", "migration", "key wrapping", "attributes"]
@@ -24,7 +25,7 @@ object's full attribute set. `Export` is new in KMIP 1.4.
 |---|---|---|
 | Unique Identifier | No | The object to export; the ID Placeholder is used when omitted. |
 | Key Format Type | No | The format in which to return the key. |
-| Key Wrap Type | No | The wrap form for the returned key value. |
+| Key Wrap Type | No | The wrap form applied to the exported key bytes. |
 | Key Compression Type | No | How elliptic-curve public keys should be compressed. |
 | Key Wrapping Specification | No | The keys and parameters for wrapping the returned object. |
 

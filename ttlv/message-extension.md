@@ -1,9 +1,10 @@
 ---
 title: Message Extension
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.16"
+source_section: "9.13"
+v1_source_section: "6.16"
 status: draft
 related: ["batch-item", "extension-information", "ttlv-encoding"]
 keywords: ["message extension", "vendor extension", "criticality indicator", "vendor identification"]

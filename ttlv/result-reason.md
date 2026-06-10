@@ -1,9 +1,10 @@
 ---
 title: Result Reason
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.10"
+source_section: "9.18"
+v1_source_section: "6.10"
 status: draft
 related: ["result-status", "result-message", "batch-item"]
 keywords: ["result reason", "error code", "item not found", "permission denied", "general failure"]
@@ -15,8 +16,9 @@ keywords: ["result reason", "error code", "item not found", "permission denied",
 
 The machine-readable *why* behind a failed batch item — mandatory whenever
 [Result Status](result-status.md) is Operation Failed, optional decoration
-on success. Spec §11 fixes which reason each error condition maps to, per
-operation, so clients can branch on it reliably.
+on success. The spec fixes which reason each error condition maps to, per
+operation — v2.x embeds these rules in each operation's definition; v1.x
+collected them in §11 — so clients can branch on it reliably.
 
 ## Encoding (Tag / Type / Length / Value)
 

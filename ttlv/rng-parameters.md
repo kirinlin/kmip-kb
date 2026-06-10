@@ -1,9 +1,10 @@
 ---
 title: RNG Parameters
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.18"
+source_section: "7.36"
+v1_source_section: "2.1.18"
 status: draft
 related: ["random-number-generator", "capability-information", "validation-information"]
 keywords: ["RNG parameters", "DRBG", "NRBG", "prediction resistance", "randomness"]

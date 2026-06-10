@@ -1,9 +1,10 @@
 ---
 title: Activation Date
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.24"
+source_section: "4.1"
+v1_source_section: "3.24"
 status: draft
 related: ["state", "initial-date", "deactivation-date", "process-start-date"]
 keywords: ["activation date", "active state", "lifecycle dates", "activate"]

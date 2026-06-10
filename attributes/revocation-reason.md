@@ -1,9 +1,10 @@
 ---
 title: Revocation Reason
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.31"
+source_section: "4.47"
+v1_source_section: "3.31"
 status: draft
 related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit"]
@@ -23,7 +24,7 @@ A structure:
 
 | Field | Type | Required |
 |---|---|---|
-| Revocation Reason Code | Enumeration | Yes |
+| Revocation Reason Code | Enumeration | Yes — the coded cause |
 | Revocation Message | Text String | No — free-text detail for audit/logging (e.g. which laptop was stolen) |
 
 Reason codes mirror X.509 CRL reasons: Unspecified, Key Compromise, CA

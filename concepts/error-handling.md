@@ -1,9 +1,10 @@
 ---
 title: Error Handling
 category: concept
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "11"
+source_section: ""
+v1_source_section: "11"
 status: draft
 related: ["result-status", "result-reason", "result-message", "batch-error-continuation-option", "batch-item"]
 keywords: ["error handling", "result status", "result reason", "failure", "batch errors", "invalid message"]
@@ -24,7 +25,8 @@ two conforming servers fail the same bad request the same way.
 
 ## Details
 
-The general rules (spec §11.1) cover conditions any message can hit:
+The general rules (v1.x §11.1; folded into per-operation message processing in
+v2.x) cover conditions any message can hit:
 
 - A request whose **major protocol version** differs from the server's, or a
   message that cannot be parsed at all, gets a response with a header and a

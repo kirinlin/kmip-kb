@@ -1,9 +1,10 @@
 ---
 title: Split Key
 category: object
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.2.5"
+source_section: "2.8"
+v1_source_section: "2.2.5"
 status: draft
 related: ["create-split-key", "join-split-key", "symmetric-key", "private-key", "register", "get", "key-block"]
 keywords: ["split key", "secret sharing", "key splitting", "threshold", "XOR"]

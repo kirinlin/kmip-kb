@@ -6,6 +6,43 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+- **Baseline moved from v1.4 to v2.1.** Each doc now carries both
+  `source_section` (the v2.1 baseline section) and a new optional
+  `v1_source_section` (the v1.x section for the same concept, e.g.
+  `attributes/link.md` → `source_section: "4.31"`, `v1_source_section: "3.35"`).
+  The five docs removed in v2.0 carry `source_section: "del_v2"` with their last
+  v1.x section in `v1_source_section`. v2.x-only features (no v1 mapping) omit
+  `v1_source_section`. The schema, `build_kb_scaffold.py` (render + validate),
+  and `check_verbatim.py` (anchors `del_v2` docs against their v1.x section)
+  were updated accordingly.
+  `source_section` front matter is now v2.1 section numbering: 142 docs renumbered from the committed
+  `versions/2.1-toc.yaml` (e.g. `operations/create.md` §4.1 → §6.1.8,
+  `attributes/name.md` §3.2 → §4.32, `ttlv/key-block.md` §2.1.3 → §3.1), plus
+  renamed/restructured docs mapped by hand (client/server correlation values →
+  §9.9/§9.10, `ttlv/ttlv-encoding.md` → §10.1, `concepts/error-handling.md` →
+  no discrete v2.x section). `spec_version` set to `"2.1"` on every doc present
+  in v2.1. The five docs removed in v2.0 (`objects/template.md`,
+  `attributes/certificate-identifier/subject/issuer.md`,
+  `attributes/operation-policy-name.md`) keep their last-present v1.x
+  baseline and numbering.
+- `scripts/build_kb_scaffold.py` `--version` default changed `1.4` → `2.1`.
+- Baseline declarations updated in `README.md`, `CLAUDE.md`, and the
+  `schemas/frontmatter.schema.json` example; CLAUDE.md's section→category map
+  now leads with v2.1 numbering.
+- In-body `§` cross-references across ~20 content docs re-anchored to v2.1
+  numbering (v1.x noted where useful) — references, profiles, concepts,
+  operations/attributes/ttlv index pages, and the `protocol-version` /
+  `ttlv-encoding` / `operation(s)` / `result-reason` / `attribute` structures.
+  Version-negotiation examples in `ttlv/protocol-version.md` now use 2.x.
+- Reworded five field-table rows (`attributes/digest`, `link`,
+  `revocation-reason`; `operations/export`, `get-usage-allocation`) to keep
+  the no-verbatim guard green against the v2.1 source, which it now checks.
+- Meta/index pages (`examples`, `mappings`, `workflows`, `schemas`,
+  `schemas/agent` indexes) extended to the full `spec_versions` range; document
+  skeletons in `templates/` rebased to `spec_version: "2.1"`,
+  `spec_versions: ["2.1"]`.
+
 ### Added
 - `versions/2.0-toc.yaml` (215 sections) and `versions/2.1-toc.yaml` (234
   sections) — generated section→file maps for KMIP v2.0 and v2.1.

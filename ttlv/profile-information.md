@@ -1,9 +1,10 @@
 ---
 title: Profile Information
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.19"
+source_section: "7.31"
+v1_source_section: "2.1.19"
 status: draft
 related: ["capability-information", "validation-information", "kmip-server-implementation-conformance"]
 keywords: ["profile information", "profile name", "server URI", "conformance discovery"]
@@ -42,7 +43,7 @@ different listeners.
 ## Examples
 
 Query (Profiles) answer: two Profile Information structures — { Baseline
-Server Basic KMIP v1.4 } and { Symmetric Key Lifecycle Server KMIP v1.4,
+Server Basic KMIP v2.1 } and { Symmetric Key Lifecycle Server KMIP v2.1,
 Server URI `tls://kms.example.com`, Server Port 5696 }.
 
 ## Related

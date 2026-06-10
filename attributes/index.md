@@ -1,9 +1,10 @@
 ---
 title: Attributes
 category: index
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3"
+source_section: "4"
+v1_source_section: "3"
 status: draft
 related: ["unique-identifier", "state", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["attributes", "metadata", "attribute rules", "multi-instance", "lifecycle dates"]
@@ -11,7 +12,7 @@ keywords: ["attributes", "metadata", "attribute rules", "multi-instance", "lifec
 
 # Attributes
 
-The metadata KMIP keeps about every managed object (spec §3). Attributes are
+The metadata KMIP keeps about every managed object (v2.1 §4; v1.x §3). Attributes are
 read with [Get Attributes](../operations/get-attributes.md) /
 [Get Attribute List](../operations/get-attribute-list.md) and written with
 [Add](../operations/add-attribute.md) /

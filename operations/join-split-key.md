@@ -1,9 +1,10 @@
 ---
 title: Join Split Key
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.39"
+source_section: "6.1.27"
+v1_source_section: "4.39"
 status: draft
 related: ["create-split-key", "split-key", "secret-data"]
 keywords: ["join split key", "reconstruct key", "secret sharing", "combine splits"]

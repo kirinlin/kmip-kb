@@ -1,9 +1,10 @@
 ---
 title: Maximum Response Size
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.3"
+source_section: "9.12"
+v1_source_section: "6.3"
 status: draft
 related: ["message-structure", "result-reason", "batch-count"]
 keywords: ["maximum response size", "response too large", "buffer limit", "constrained client"]

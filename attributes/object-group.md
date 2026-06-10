@@ -1,9 +1,10 @@
 ---
 title: Object Group
 category: attribute
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "3.33"
+source_section: "4.35"
+v1_source_section: "3.33"
 status: draft
 related: ["name", "application-specific-information", "fresh"]
 keywords: ["object group", "grouping", "group member", "locate", "default group"]

@@ -1,9 +1,10 @@
 ---
 title: Asynchronous Indicator
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.7"
+source_section: "9.2"
+v1_source_section: "6.7"
 status: draft
 related: ["asynchronous-correlation-value", "result-status", "capability-information"]
 keywords: ["asynchronous indicator", "async", "polling", "request header"]

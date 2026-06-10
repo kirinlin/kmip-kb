@@ -3,7 +3,8 @@ title: Template
 category: object
 spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
-source_section: "2.2.6"
+source_section: "del_v2"
+v1_source_section: "2.2.6"
 status: draft
 related: ["register", "create", "create-key-pair", "name", "get"]
 keywords: ["template", "deprecated", "attributes", "named object"]

@@ -1,9 +1,10 @@
 ---
 title: Revoke
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.20"
+source_section: "6.1.44"
+v1_source_section: "4.20"
 status: draft
 related: ["activate", "destroy", "state", "revocation-reason", "compromise-occurrence-date"]
 keywords: ["revoke", "compromise", "deactivate", "revocation reason", "key state"]

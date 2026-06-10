@@ -1,9 +1,10 @@
 ---
 title: Put
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "5.2"
+source_section: "6.2.3"
+v1_source_section: "5.2"
 status: draft
 related: ["notify", "query", "get", "re-key", "obtain-lease", "lease-time"]
 keywords: ["put", "server-to-client", "push", "key distribution", "replace", "put function"]

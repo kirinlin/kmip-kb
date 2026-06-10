@@ -41,7 +41,7 @@
     "spec_version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+$",
-      "description": "Baseline KMIP version this stub was generated from (e.g. \"1.4\")."
+      "description": "Baseline KMIP version this stub was generated from (e.g. \"2.1\")."
     },
     "spec_versions": {
       "type": "array",
@@ -54,7 +54,11 @@
     },
     "source_section": {
       "type": "string",
-      "description": "Dotted spec section number for traceability ONLY (e.g. \"4.1\"). Never copy spec prose. Empty string allowed for non-section docs (index pages)."
+      "description": "Dotted v2.1 (baseline) spec section number for traceability ONLY (e.g. \"6.1.8\"). Never copy spec prose. Empty string allowed for non-section docs (index pages). The sentinel \"del_v2\" marks a doc whose feature was removed in v2.0 — its last-present section lives in v1_source_section."
+    },
+    "v1_source_section": {
+      "type": "string",
+      "description": "Dotted v1.x spec section number for the same concept, when it existed in the 1.x family (e.g. \"3.35\"). Optional: omitted for features introduced in v2.x, which have no v1 mapping."
     },
     "status": {
       "type": "string",

@@ -1,9 +1,10 @@
 ---
 title: Attribute
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.1.1"
+source_section: "5.1"
+v1_source_section: "2.1.1"
 status: draft
 related: ["template-attribute-structures", "custom-attribute", "ttlv-encoding"]
 keywords: ["attribute structure", "attribute name", "attribute index", "attribute value"]
@@ -34,7 +35,8 @@ Structure, tag `420008`. Inside:
 
 ## Fields & Structure
 
-The **name** is the canonical attribute name from spec §3 (e.g.
+The **name** is the canonical attribute name from the spec's attributes
+chapter (v2.1 §4; v1.x §3) (e.g.
 `Cryptographic Algorithm`, or an `x-`/`y-` prefixed
 [custom attribute](../attributes/custom-attribute.md) name). The **index**
 distinguishes instances of multi-instance attributes: numbering starts at 0,

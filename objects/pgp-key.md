@@ -1,9 +1,10 @@
 ---
 title: PGP Key
 category: object
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "2.2.9"
+source_section: "2.4"
+v1_source_section: "2.2.9"
 status: draft
 related: ["register", "get", "public-key", "private-key", "opaque-object", "key-block"]
 keywords: ["PGP key", "OpenPGP", "RFC 4880", "ASCII armor", "key block"]

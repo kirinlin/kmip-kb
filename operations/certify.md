@@ -1,9 +1,10 @@
 ---
 title: Certify
 category: operation
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "4.7"
+source_section: "6.1.6"
+v1_source_section: "4.7"
 status: draft
 related: ["re-certify", "create-key-pair", "register", "certificate", "public-key", "link"]
 keywords: ["certify", "certificate", "X.509", "PKCS#10", "certificate signing request", "CSR"]

@@ -1,9 +1,10 @@
 ---
 title: KMIP Server Implementation Conformance
 category: profile
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "12.1"
+source_section: "14.2"
+v1_source_section: "12.1"
 status: draft
 related: ["kmip-client-implementation-conformance", "query", "discover-versions", "profile-information"]
 keywords: ["conformance", "server profile", "baseline server", "KMIP-Prof", "interoperability"]
@@ -13,9 +14,10 @@ keywords: ["conformance", "server profile", "baseline server", "KMIP-Prof", "int
 
 ## Overview
 
-The 1.4 specification does not itself enumerate what a server must implement.
-Section 12.1 delegates entirely to the companion profiles document
-([KMIP-Prof]): a server conforms to KMIP by conforming to at least one server
+The KMIP specification does not itself enumerate what a server must implement.
+The server-conformance clause (v2.1 §14.2; v1.x §12.1) delegates entirely to
+the companion profiles document ([KMIP-Prof]): a server conforms to KMIP by
+conforming to at least one server
 profile defined there, and once it claims a profile it must satisfy every
 normative statement in that profile's clauses and subclauses.
 
@@ -43,12 +45,12 @@ Query (operations, objects, and — from 1.3 —
 ## Implications for Implementers
 
 - "Implements KMIP" is not a testable claim; "conforms to the Baseline Server
-  profile of [KMIP-Prof] 1.4" is. State the profile(s) and version you claim.
+  profile of [KMIP-Prof] 2.1" is. State the profile(s) and version you claim.
 - Build conformance checks against the profile test cases — OASIS publishes
   request/response transcripts per profile, and interop events exercise them.
 - Advertise claimed profiles via Query so clients can adapt without
   configuration.
-- Mind version skew: a 1.4 server claiming a profile must still answer 1.2
+- Mind version skew: a 2.1 server claiming a profile must still answer 2.0
   clients per its backward-compatibility obligations within the same major
   version.
 

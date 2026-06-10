@@ -1,9 +1,10 @@
 ---
 title: Operation
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.2"
+source_section: "9.15"
+v1_source_section: "6.2"
 status: draft
 related: ["batch-item", "operations", "message-structure"]
 keywords: ["operation field", "operation enumeration", "batch item", "request type"]
@@ -20,7 +21,8 @@ payload that follows is interpreted entirely according to this value.
 ## Encoding (Tag / Type / Length / Value)
 
 Tag `42005C`, Enumeration. The Operation enumeration assigns a value to every
-operation in spec §4 and §5 — Create = 1, Create Key Pair = 2, Register = 3,
+operation in the spec's operations chapters (v2.1 §6.1 client / §6.2
+server-to-client; v1.x §4 / §5) — Create = 1, Create Key Pair = 2, Register = 3,
 Re-key = 4, ... through the 1.2 cryptographic services, up to Export (1.4)
 and Import (1.4) — plus the server-to-client Notify/Put/Query values.
 

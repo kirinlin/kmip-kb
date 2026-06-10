@@ -1,9 +1,10 @@
 ---
 title: Batch Count
 category: ttlv
-spec_version: "1.4"
+spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "6.14"
+source_section: "9.5"
+v1_source_section: "6.14"
 status: draft
 related: ["batch-item", "batch-order-option", "unique-batch-item-id"]
 keywords: ["batch count", "message header", "number of operations"]
