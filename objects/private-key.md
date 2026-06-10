@@ -2,7 +2,7 @@
 title: Private Key
 category: object
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.2.4"
 status: draft
 related: ["public-key", "create-key-pair", "certify", "register", "get", "key-block", "key-wrapping-specification", "cryptographic-algorithm", "cryptographic-usage-mask"]

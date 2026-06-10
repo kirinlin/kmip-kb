@@ -2,7 +2,7 @@
 title: Query
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.25"
 status: draft
 related: ["discover-versions", "profile-information", "rng-parameters"]

@@ -2,7 +2,7 @@
 title: Deactivation Date
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.27"
 status: draft
 related: ["state", "activation-date", "protect-stop-date", "revocation-reason"]

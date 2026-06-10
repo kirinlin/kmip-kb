@@ -2,7 +2,7 @@
 title: Capability Information
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.3", "1.4"]
+spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "2.1.21"
 status: draft
 related: ["profile-information", "validation-information", "correlation-value"]

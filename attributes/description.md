@@ -2,7 +2,7 @@
 title: Description
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "3.46"
 status: draft
 related: ["comment", "contact-information", "custom-attribute"]

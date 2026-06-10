@@ -45,7 +45,9 @@ except Exception:  # pragma: no cover - optional dependency
 # dotted components at which exactly one stub is emitted for that branch, and
 # subdir is an optional path appended under the category directory (used to
 # keep same-named operations -- e.g. client vs server Query -- separate).
-PREFIX_RULES: dict[str, tuple[str, int, str]] = {
+
+# v1.x section numbering (v1.0 – v1.4)
+V1X_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "2.1": ("ttlv", 3, ""),       # Base Objects -> TTLV structures (Key Block, ...)
     "2.2": ("object", 3, ""),     # Managed Objects (Symmetric Key, Certificate, ...)
     "3": ("attribute", 2, ""),    # Attributes 3.1 .. 3.N
@@ -60,6 +62,33 @@ PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "12": ("profile", 2, ""),     # Conformance
     "1": ("reference", 2, ""),    # Introduction / Terminology / References
 }
+
+# v2.0 section numbering (completely reorganised from v1.x)
+V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
+    "1": ("reference", 2, ""),           # Introduction / Terminology / References
+    "2": ("object", 2, ""),              # Objects (managed objects)
+    "3": ("ttlv", 2, ""),                # Object Data Structures (Key Block, ...)
+    "4": ("attribute", 2, ""),           # Object Attributes
+    "5": ("ttlv", 2, ""),                # Attribute Data Structures
+    "6.1": ("operation", 3, ""),         # Client-to-Server Operations
+    "6.2": ("operation", 3, "server-to-client"),  # Server-to-Client Operations
+    "7": ("ttlv", 2, ""),                # Operations Data Structures
+    "8": ("ttlv", 2, ""),                # Messages
+    "9": ("ttlv", 2, ""),                # Message Data Structures
+    "10.1": ("ttlv", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
+    "10.3": ("concept", 2, ""),          # Authentication
+    "10.4": ("concept", 2, ""),          # Transport
+    "14": ("profile", 2, ""),            # Conformance
+}
+
+PREFIX_RULES = V1X_PREFIX_RULES  # default; overridden per-version in cmd_generate
+
+
+def get_prefix_rules(version: str) -> dict[str, tuple[str, int, str]]:
+    """Return the section-classification rules for the given spec version."""
+    if version.startswith("2."):
+        return V20_PREFIX_RULES
+    return V1X_PREFIX_RULES
 
 CATEGORY_DIR: dict[str, str] = {
     "operation": "operations",
@@ -126,7 +155,14 @@ def slugify(title: str) -> str:
 
 
 def spec_path_for(version: str) -> Path:
-    """Return the raw OASIS-Standard spec path for a 1.x version."""
+    """Return the raw OASIS-Standard spec path for a given version.
+
+    v1.x specs live under ``raw/kmip/spec/v<ver>/os/``.
+    v2.0+ specs live under ``raw/kmip/kmip-spec/v<ver>/os/`` (different subdirectory).
+    """
+    if version.startswith("2."):
+        base = REPO_ROOT / "raw" / "kmip" / "kmip-spec" / f"v{version}" / "os"
+        return base / f"kmip-spec-v{version}-os.md"
     base = REPO_ROOT / "raw" / "kmip" / "spec" / f"v{version}" / "os"
     candidates = [
         base / f"kmip-spec-v{version}-os.md",
@@ -138,13 +174,15 @@ def spec_path_for(version: str) -> Path:
     return candidates[0]
 
 
-def classify(num: str) -> tuple[str, int, str] | None:
+def classify(num: str, rules: dict | None = None) -> tuple[str, int, str] | None:
     """Longest-prefix match of a section number to (category, depth, subdir)."""
+    if rules is None:
+        rules = PREFIX_RULES
     parts = num.split(".")
     for i in range(len(parts), 0, -1):
         prefix = ".".join(parts[:i])
-        if prefix in PREFIX_RULES:
-            return PREFIX_RULES[prefix]
+        if prefix in rules:
+            return rules[prefix]
     return None
 
 
@@ -166,11 +204,12 @@ def parse_headings(text: str) -> list[tuple[str, str]]:
     return out
 
 
-def select_stubs(headings: list[tuple[str, str]]) -> list[dict]:
+def select_stubs(headings: list[tuple[str, str]],
+                 rules: dict | None = None) -> list[dict]:
     """Choose which headings become stubs and attach their classification."""
     stubs: list[dict] = []
     for num, title in headings:
-        rule = classify(num)
+        rule = classify(num, rules)
         if rule is None:
             continue
         category, stub_depth, subdir = rule
@@ -389,7 +428,7 @@ def cmd_generate(args) -> int:
 
     text = spec.read_text(encoding="utf-8")
     headings = parse_headings(text)
-    stubs = select_stubs(headings)
+    stubs = select_stubs(headings, get_prefix_rules(version))
 
     # detect slug collisions within a category
     seen: dict[tuple[str, str, str], str] = {}
@@ -480,7 +519,8 @@ def cmd_prune(args) -> int:
         print(f"ERROR: spec not found: {spec}", file=sys.stderr)
         return 2
 
-    stubs = select_stubs(parse_headings(spec.read_text(encoding="utf-8")))
+    stubs = select_stubs(parse_headings(spec.read_text(encoding="utf-8")),
+                         get_prefix_rules(version))
     expected = {target_path(s["category"], s["subdir"], s["slug"]) for s in stubs}
 
     category_dirs = {CATEGORY_DIR[c] for c in CATEGORY_DIR}

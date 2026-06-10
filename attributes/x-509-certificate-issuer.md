@@ -2,7 +2,7 @@
 title: X.509 Certificate Issuer
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.12"
 status: draft
 related: ["x-509-certificate-identifier", "x-509-certificate-subject", "certificate-issuer"]

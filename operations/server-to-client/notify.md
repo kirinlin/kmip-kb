@@ -2,7 +2,7 @@
 title: Notify
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "5.1"
 status: draft
 related: ["put", "query", "modify-attribute", "get-attributes", "last-change-date"]

@@ -2,7 +2,7 @@
 title: Import
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "4.41"
 status: draft
 related: ["export", "register", "get"]

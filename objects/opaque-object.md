@@ -2,7 +2,7 @@
 title: Opaque Object
 category: object
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.2.8"
 status: draft
 related: ["register", "get", "secret-data", "name"]

@@ -2,7 +2,7 @@
 title: RNG Retrieve
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.35"
 status: draft
 related: ["rng-seed", "rng-parameters"]

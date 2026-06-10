@@ -2,7 +2,7 @@
 title: Random Number Generator
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.3", "1.4"]
+spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "3.44"
 status: draft
 related: ["original-creation-date", "cryptographic-algorithm", "rng-parameters"]

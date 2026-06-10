@@ -2,7 +2,7 @@
 title: Re-certify
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.8"
 status: draft
 related: ["certify", "create-key-pair", "certificate", "public-key", "link"]

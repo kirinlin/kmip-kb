@@ -2,7 +2,7 @@
 title: Fresh
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.34"
 status: draft
 related: ["object-group", "initial-date", "key-value-present"]

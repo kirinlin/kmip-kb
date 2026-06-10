@@ -2,7 +2,7 @@
 title: Key Wrapping Data
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.1.5"
 status: draft
 related: ["key-wrapping-specification", "key-block", "key-value"]

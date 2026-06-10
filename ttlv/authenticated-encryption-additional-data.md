@@ -2,7 +2,7 @@
 title: Authenticated Encryption Additional Data
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "2.1.22"
 status: draft
 related: ["authenticated-encryption-tag", "data", "cryptographic-parameters"]

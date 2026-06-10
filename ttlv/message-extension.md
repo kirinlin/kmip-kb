@@ -2,7 +2,7 @@
 title: Message Extension
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.16"
 status: draft
 related: ["batch-item", "extension-information", "ttlv-encoding"]

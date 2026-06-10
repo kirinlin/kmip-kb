@@ -2,7 +2,7 @@
 title: Original Creation Date
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.43"
 status: draft
 related: ["initial-date", "last-change-date", "random-number-generator"]

@@ -2,7 +2,7 @@
 title: Server Correlation Value
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "6.19"
 status: draft
 related: ["client-correlation-value", "correlation-value", "message-structure"]

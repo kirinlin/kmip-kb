@@ -2,7 +2,7 @@
 title: Get Attributes
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.12"
 status: draft
 related: ["get-attribute-list", "get", "add-attribute", "modify-attribute"]

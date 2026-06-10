@@ -2,7 +2,7 @@
 title: Extractable
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "3.50"
 status: draft
 related: ["never-extractable", "sensitive", "always-sensitive"]

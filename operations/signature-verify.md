@@ -2,7 +2,7 @@
 title: Signature Verify
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.32"
 status: draft
 related: ["sign", "cryptographic-parameters", "digital-signature-algorithm", "public-key"]

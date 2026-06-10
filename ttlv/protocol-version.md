@@ -2,7 +2,7 @@
 title: Protocol Version
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1"
 status: draft
 related: ["message-structure", "discover-versions"]

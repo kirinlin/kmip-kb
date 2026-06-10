@@ -2,7 +2,7 @@
 title: Key Value
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.1.4"
 status: draft
 related: ["key-block", "key-wrapping-data", "transparent-key-structures", "attribute"]

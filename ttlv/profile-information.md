@@ -2,7 +2,7 @@
 title: Profile Information
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.3", "1.4"]
+spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "2.1.19"
 status: draft
 related: ["capability-information", "validation-information", "kmip-server-implementation-conformance"]

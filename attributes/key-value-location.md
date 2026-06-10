@@ -2,7 +2,7 @@
 title: Key Value Location
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.42"
 status: draft
 related: ["key-value-present", "application-specific-information"]

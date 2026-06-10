@@ -2,7 +2,7 @@
 title: Always Sensitive
 category: attribute
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "3.49"
 status: draft
 related: ["sensitive", "never-extractable", "extractable"]

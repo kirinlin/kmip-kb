@@ -2,7 +2,7 @@
 title: Attestation Capable Indicator
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.17"
 status: draft
 related: ["credential", "nonce", "result-reason"]

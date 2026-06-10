@@ -2,7 +2,7 @@
 title: Error Handling
 category: concept
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "11"
 status: draft
 related: ["result-status", "result-reason", "result-message", "batch-error-continuation-option", "batch-item"]

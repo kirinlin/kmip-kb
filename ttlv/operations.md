@@ -2,7 +2,7 @@
 title: Operations (Message Format)
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "7.2"
 status: draft
 related: ["message-structure", "batch-item", "result-status", "authentication"]

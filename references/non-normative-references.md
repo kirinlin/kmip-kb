@@ -2,7 +2,7 @@
 title: Non-Normative References
 category: reference
 spec_version: "1.4"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "1.3"
 status: draft
 related: ["normative-references", "terminology"]

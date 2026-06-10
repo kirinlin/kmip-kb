@@ -2,7 +2,7 @@
 title: KMIP Server Implementation Conformance
 category: profile
 spec_version: "1.4"
-spec_versions: ["1.1", "1.2", "1.3", "1.4"]
+spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "12.1"
 status: draft
 related: ["kmip-client-implementation-conformance", "query", "discover-versions", "profile-information"]

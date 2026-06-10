@@ -2,7 +2,7 @@
 title: Hash
 category: operation
 spec_version: "1.4"
-spec_versions: ["1.2", "1.3", "1.4"]
+spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.37"
 status: draft
 related: ["mac", "sign", "cryptographic-parameters", "digest"]
