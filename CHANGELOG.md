@@ -7,6 +7,30 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- `versions/1.0-toc.yaml`, `versions/1.1-toc.yaml`, `versions/1.2-toc.yaml`,
+  `versions/1.3-toc.yaml` — generated section→file maps for KMIP v1.0–v1.3,
+  produced by `scripts/build_kb_scaffold.py --version <ver> --toc-only`
+  (section counts: 104 / 112 / 134 / 143 respectively). All five 1.x releases
+  now have committed ToC maps.
+- Full per-release delta notes in `versions/index.md` covering v1.1–v1.3 (v1.4
+  summary unchanged), each section linking to the relevant KB docs:
+  - **v1.1**: X.509 certificate attribute expansion and deprecations, Discover
+    Versions, Re-key Key Pair, Extension Information, Encoding Option.
+  - **v1.2**: 11 cryptographic service operations (Encrypt/Decrypt, Sign/Verify,
+    MAC/MAC Verify, RNG Retrieve/Seed, Hash), Create/Join Split Key, PGP Key
+    object, 5 crypto-op structures (Data, Data Length, Signature Data, MAC Data,
+    Nonce), 4 attributes, and the full attestation story (Attestation credential
+    type, Nonce challenge/response, Attestation Capable Indicator, Query
+    Attestation Types).
+  - **v1.3**: streaming multi-part crypto (Correlation Value, Init/Final
+    Indicator), capability reporting structures (RNG Parameters, Profile/
+    Validation/Capability Information), Random Number Generator attribute,
+    server-to-client Query, and deprecations (Template, Operation Policy Name,
+    legacy Transparent EC key forms).
+- `spec_versions` front matter verified against ToC diffs across all 53
+  version-boundary docs (v1.1/1.2/1.3/1.4 new sections); 0 errors found.
+
+### Added
 - Authored all remaining stub content (119 docs) as original prose
   (`status: draft`), bringing the knowledge base to 100% draft coverage
   (158 content docs, 0 stubs):

@@ -22,7 +22,7 @@ the baseline.
 | `examples/` | Worked request/response examples (original, not copied). |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
 | `mappings/` | Cross-version / cross-implementation mapping tables. |
-| `versions/` | Per-version TOC maps (`<ver>-toc.yaml`) and 1.0–1.4 delta notes. |
+| `versions/` | Per-version TOC maps (`1.0-toc.yaml` → `1.4-toc.yaml`, 104–157 sections each) and full 1.0–1.4 delta notes. |
 | `references/` | Terminology and pointers to normative / non-normative references. |
 | `templates/` | Document skeletons used by the scaffold generator. |
 
@@ -68,7 +68,7 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 
 | Flag | Default | Effect |
 |---|---|---|
-| `--version` | `1.4` | KMIP 1.x version to scaffold from |
+| `--version` | `1.4` | KMIP 1.x version to scaffold from (`1.0`–`1.4` all supported) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
 | `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |

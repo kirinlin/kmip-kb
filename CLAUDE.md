@@ -61,6 +61,18 @@ python scripts/status_report.py --json          # machine-readable output
 python scripts/build_kb_scaffold.py [--version 1.4] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
+ToC maps for all five releases are committed under `versions/`:
+
+| File | Sections |
+|---|---|
+| `versions/1.4-toc.yaml` | 157 |
+| `versions/1.3-toc.yaml` | 143 |
+| `versions/1.2-toc.yaml` | 134 |
+| `versions/1.1-toc.yaml` | 112 |
+| `versions/1.0-toc.yaml` | 104 |
+
+`versions/index.md` contains delta notes linking each release's additions to the relevant KB docs. `spec_versions` front matter has been verified against the ToC diffs across all 53 version-boundary docs (v1.1–v1.4 new sections; 0 errors).
+
 The section→category rules and per-section stub depth live in `PREFIX_RULES` at the top of the script; stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
