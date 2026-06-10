@@ -2,23 +2,49 @@
 title: Extension Information
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.1", "1.2", "1.3", "1.4"]
 source_section: "2.1.9"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["ttlv-encoding", "message-extension"]
+keywords: ["extension information", "vendor extension", "extension tag", "query extension list"]
 ---
 
 # Extension Information
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Overview
+
+Metadata describing a vendor extension object — one whose TTLV tag lives in
+the Extensions range (`540000`–`54FFFF`). Returned by
+[Query](../operations/query.md) when a client asks for the extension list or
+extension map, so implementations can discover what proprietary objects a
+peer speaks. Added in 1.1.
 
 ## Encoding (Tag / Type / Length / Value)
 
+Structure, tag `4200A4`:
+
+| Field | Tag | Type | Required |
+|---|---|---|---|
+| Extension Name | `4200A5` | Text String | Yes |
+| Extension Tag | `4200A6` | Integer | No |
+| Extension Type | `4200A7` | Integer | No |
+
 ## Fields & Structure
+
+The name is the human-readable label for the extension object; the tag is
+its numeric Item Tag; the type is its Item Type code (per the
+[TTLV type table](ttlv-encoding.md)). Query's *Extension List* function
+returns names only; *Extension Map* fills in tag and type as well — which is
+why both fields are optional here.
 
 ## Examples
 
+A server supporting a proprietary audit blob answers Query (Extension Map)
+with Extension Information { Name = `"y-AcmeAuditRecord"`, Tag = 0x540007,
+Type = 0x01 (Structure) }.
+
 ## Related
+
+[TTLV Encoding](ttlv-encoding.md) ·
+[Message Extension](message-extension.md) ·
+[Query](../operations/query.md)

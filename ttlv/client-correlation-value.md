@@ -4,21 +4,41 @@ category: ttlv
 spec_version: "1.4"
 spec_versions: ["1.4"]
 source_section: "6.18"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["server-correlation-value", "correlation-value", "message-structure"]
+keywords: ["client correlation value", "request tracing", "logging", "observability"]
 ---
 
 # Client Correlation Value
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Overview
+
+A 1.4 observability field: a client-chosen string in the message header that
+tags the exchange for tracing — a transaction ID, a tenant tag, a
+request-chain identifier. Servers are encouraged to log it, turning
+cross-system debugging from log archaeology into a string match.
 
 ## Encoding (Tag / Type / Length / Value)
 
+Tag `420105`, Text String, in the header. Need not be unique.
+
 ## Fields & Structure
+
+Direction follows who initiates: the client puts it in *request* headers of
+normal operations, and it appears in the client's *response* headers for
+[server-to-client](../operations/server-to-client/index.md) operations. It
+carries no protocol semantics — purely for correlation across logs, unlike
+the [streaming](correlation-value.md) and
+[asynchronous](asynchronous-correlation-value.md) correlation values, which
+drive protocol state.
 
 ## Examples
 
+An application sets Client Correlation Value = `"order-svc:txn-58122"` on
+every KMIP call made while processing one business transaction; when a
+decrypt fails, the server log line is findable by that string.
+
 ## Related
+
+[Server Correlation Value](server-correlation-value.md) ·
+[Message Structure](message-structure.md)

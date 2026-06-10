@@ -4,23 +4,42 @@ category: attribute
 spec_version: "1.4"
 spec_versions: ["1.4"]
 source_section: "3.49"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["sensitive", "never-extractable", "extractable"]
+keywords: ["always sensitive", "history flag", "audit", "PKCS#11 parity"]
 ---
 
 # Always Sensitive
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Purpose
+
+The audit companion to [Sensitive](sensitive.md): True only if Sensitive has
+been True for the object's entire life. Because Sensitive itself is
+mutable, this server-maintained history bit is what lets an auditor assert
+"this key was never eligible for plaintext export" — the KMIP analogue of
+PKCS#11's CKA_ALWAYS_SENSITIVE.
 
 ## Data Type & Structure
 
+A Boolean. (The spec's encoding table labels the row "Sensitive" — editorial
+slip; the attribute is Always Sensitive.)
+
 ## Constraints
+
+- Always has a value (1.4 objects); single instance; not deletable.
+- Entirely server-computed: clients can read it but never write it. The
+  server re-evaluates it whenever Sensitive is set or changed; one
+  Sensitive=False moment latches it False forever.
 
 ## Applies To (Object Types)
 
+All managed objects.
+
 ## Set / Modified By
 
+Server only, implicitly whenever the Sensitive attribute is set or modified.
+
 ## Related Attributes
+
+[Sensitive](sensitive.md) · [Never Extractable](never-extractable.md) ·
+[Extractable](extractable.md)

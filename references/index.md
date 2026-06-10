@@ -2,15 +2,22 @@
 title: References
 category: index
 spec_version: "1.4"
-spec_versions: ["1.4"]
-source_section: ""
-status: stub
-related: []
-keywords: []
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
+source_section: "1"
+status: draft
+related: ["terminology", "normative-references", "non-normative-references", "ipr-policy"]
+keywords: ["references", "terminology", "glossary", "citations"]
 ---
 
 # References
 
-Terminology and pointers to normative / non-normative references.
+Front-matter material from §1 of the spec: vocabulary and citations.
 
-_Stubs generated; prose pending. See CONTRIBUTING.md._
+- [IPR Policy](ipr-policy.md) — the OASIS RF-on-RAND licensing mode KMIP is
+  published under (§1.0, new as a numbered section in 1.4).
+- [Terminology](terminology.md) — RFC 2119 keywords plus the SP 800-57-aligned
+  glossary (§1.1).
+- [Normative References](normative-references.md) — standards conforming
+  implementations depend on (§1.2).
+- [Non-Normative References](non-normative-references.md) — companion Usage
+  Guide, Test Cases, and background reading (§1.3).

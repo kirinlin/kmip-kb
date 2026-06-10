@@ -2,15 +2,28 @@
 title: Examples
 category: index
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
 source_section: ""
-status: stub
+status: draft
 related: []
-keywords: []
+keywords: ["examples", "request", "response", "worked examples"]
 ---
 
 # Examples
 
-Worked request/response examples (original, not copied from the spec).
+Worked, original request/response examples — written for this knowledge base,
+never copied from the spec or test-cases documents.
 
-_Stubs generated; prose pending. See CONTRIBUTING.md._
+No standalone examples have been authored yet. Until they are, two places
+already carry example material:
+
+- Each [operation](../operations/index.md) page has an **Examples** section
+  with a narrative walk-through of a typical call.
+- [TTLV Encoding](../ttlv/ttlv-encoding.md) shows byte-level encodings of
+  the primitive types.
+
+The OASIS Test Cases document (see
+[Non-Normative References](../references/non-normative-references.md))
+provides full official transcripts; planned content here will translate a
+few common flows (create → activate → get, register, locate) into annotated
+hex dumps.

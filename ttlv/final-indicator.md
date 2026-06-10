@@ -2,23 +2,40 @@
 title: Final Indicator
 category: ttlv
 spec_version: "1.4"
-spec_versions: ["1.4"]
+spec_versions: ["1.3", "1.4"]
 source_section: "2.1.17"
-status: stub
-related: []
-keywords: []
+status: draft
+related: ["init-indicator", "correlation-value", "data"]
+keywords: ["final indicator", "streaming", "multi-part", "last part"]
 ---
 
 # Final Indicator
 
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
-
 ## Overview
+
+The closing flag of a streamed cryptographic operation (1.3+): True in the
+last request of the sequence opened by [Init
+Indicator](init-indicator.md), telling the server to finalize — flush any
+remaining output, emit the digest/MAC/signature, and discard the streaming
+state behind the [Correlation Value](correlation-value.md).
 
 ## Encoding (Tag / Type / Length / Value)
 
+Tag `4200D8`, Boolean.
+
 ## Fields & Structure
+
+Requests between Init and Final carry neither flag, just the Correlation
+Value and the next [Data](data.md) chunk. The Final request may itself carry
+a last chunk of data (possibly empty for pure finalization).
 
 ## Examples
 
+Closing a streamed MAC over a backup image: Final Indicator = True,
+Correlation Value from the first response, Data = the trailing bytes; the
+response returns the complete [MAC Data](mac-data.md).
+
 ## Related
+
+[Init Indicator](init-indicator.md) ·
+[Correlation Value](correlation-value.md) · [Data](data.md)
