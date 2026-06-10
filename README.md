@@ -5,8 +5,8 @@ explanations, implementation guidance, examples, and machine-readable metadata
 for the OASIS Key Management Interoperability Protocol (KMIP), structured for
 LLM wikis, RAG / vector search, GraphRAG, and coding agents.
 
-It targets the **KMIP 1.x** specification family (v1.0–v1.4), with **v1.4** as
-the baseline.
+It targets the **KMIP 1.x and 2.x** specification families (v1.0–v1.4,
+v2.0–v2.1), with **v1.4** as the baseline.
 
 ## Structure
 
@@ -22,7 +22,7 @@ the baseline.
 | `examples/` | Worked request/response examples (original, not copied). |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
 | `mappings/` | Cross-version / cross-implementation mapping tables. |
-| `versions/` | Per-version TOC maps (`1.0-toc.yaml` → `1.4-toc.yaml`, 104–157 sections each) and full 1.0–1.4 delta notes. |
+| `versions/` | Per-version TOC maps (`1.0-toc.yaml` → `2.1-toc.yaml`, 104–234 sections each) and full 1.0–2.1 delta notes. |
 | `references/` | Terminology and pointers to normative / non-normative references. |
 | `templates/` | Document skeletons used by the scaffold generator. |
 
@@ -68,7 +68,7 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 
 | Flag | Default | Effect |
 |---|---|---|
-| `--version` | `1.4` | KMIP 1.x version to scaffold from (`1.0`–`1.4` all supported) |
+| `--version` | `1.4` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
 | `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |

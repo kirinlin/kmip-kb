@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x** family (v1.0–v1.4), baseline **v1.4**.
+This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x and 2.x** families (v1.0–v1.4, v2.0–v2.1), baseline **v1.4**.
 
 The spec is mirrored locally into `raw/` (gitignored) only as a *source* for authoring; the crawler that builds that mirror is secondary tooling.
 
@@ -55,25 +55,27 @@ python scripts/status_report.py --json          # machine-readable output
 
 ## Scaffold generator
 
-`scripts/build_kb_scaffold.py` — parses a raw 1.x spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run.
+`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`).
 
 ```
 python scripts/build_kb_scaffold.py [--version 1.4] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
-ToC maps for all five releases are committed under `versions/`:
+ToC maps for all seven releases are committed under `versions/`:
 
 | File | Sections |
 |---|---|
+| `versions/2.1-toc.yaml` | 234 |
+| `versions/2.0-toc.yaml` | 215 |
 | `versions/1.4-toc.yaml` | 157 |
 | `versions/1.3-toc.yaml` | 143 |
 | `versions/1.2-toc.yaml` | 134 |
 | `versions/1.1-toc.yaml` | 112 |
 | `versions/1.0-toc.yaml` | 104 |
 
-`versions/index.md` contains delta notes linking each release's additions to the relevant KB docs. `spec_versions` front matter has been verified against the ToC diffs across all 53 version-boundary docs (v1.1–v1.4 new sections; 0 errors).
+`versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
-The section→category rules and per-section stub depth live in `PREFIX_RULES` at the top of the script; stub bodies come from `templates/<category>.md`.
+The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` at the top of the script (v2.x has a completely different section numbering from v1.x); stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
 

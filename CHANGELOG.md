@@ -7,6 +7,31 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- `versions/2.0-toc.yaml` (215 sections) and `versions/2.1-toc.yaml` (234
+  sections) — generated section→file maps for KMIP v2.0 and v2.1.
+  `scripts/build_kb_scaffold.py` extended with `V20_PREFIX_RULES` (v2.x has a
+  completely different section numbering from v1.x) and `spec_path_for()`
+  updated to resolve `raw/kmip/kmip-spec/v<ver>/os/` for v2.x.
+- Full per-release delta notes in `versions/index.md` for v2.0 and v2.1:
+  - **v2.0**: structural renumbering, 9 new client-to-server operations
+    (Adjust Attribute, Delegated Login, Interop, Log, Login/Logout, PKCS#11,
+    Re-Provision, Set Attribute, Set Endpoint Role), 2 new server-to-client
+    operations, Certificate Request object, 5 new attributes (NIST Key Type,
+    Protection Level/Period/Storage Mask, Quantum Safe, Short Unique
+    Identifier), §5 Attribute Data Structures overhaul, §10.2 alternate wire
+    formats, and removal of Template, deprecated cert attributes, and
+    Operation Policy Name.
+  - **v2.1**: 7 Rotate* key-rotation policy attributes, constraints sub-system
+    (Get/Set Constraints + Constraint/Constraints structures), asynchronous-
+    request management (Query Asynchronous Requests + companion structures),
+    and Ping/Process/Set Defaults utility operations.
+- `spec_versions` front matter updated across all 162 KB docs: "2.0" added
+  to all docs whose feature is present in v2.0; "2.1" added to all docs
+  carrying "2.0" (v2.1 is purely additive). Five docs correctly excluded from
+  both (removed in v2.0): `objects/template.md`, `attributes/certificate-
+  identifier/subject/issuer.md`, `attributes/operation-policy-name.md`.
+
+### Added
 - `versions/1.0-toc.yaml`, `versions/1.1-toc.yaml`, `versions/1.2-toc.yaml`,
   `versions/1.3-toc.yaml` — generated section→file maps for KMIP v1.0–v1.3,
   produced by `scripts/build_kb_scaffold.py --version <ver> --toc-only`
