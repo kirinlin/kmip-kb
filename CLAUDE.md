@@ -33,9 +33,19 @@ authored) before linking. Validate before committing:
 ```
 python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
 python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
+python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
 Authored so far: all of `operations/` (client-to-server) and `objects/`.
+
+## Authoring status
+
+```
+python scripts/status_report.py                 # per-category stub/draft/reviewed table
+python scripts/status_report.py --next 10       # list next 10 stubs to author
+python scripts/status_report.py --category ttlv --next 5   # filter to one category
+python scripts/status_report.py --json          # machine-readable output
+```
 
 ## Scaffold generator
 

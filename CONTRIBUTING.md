@@ -25,8 +25,9 @@ the official spec, rewrite it.
 
 ## Authoring workflow
 
-1. **Find the stub.** Use `versions/<ver>-toc.yaml` to locate the generated
-   file for a spec section. Stubs have `status: stub` and section headers only.
+1. **Find the stub.** Use `python scripts/status_report.py --next 10` to see
+   the next stubs to author, or `versions/<ver>-toc.yaml` for the full section
+   map. Stubs have `status: stub` and section headers only.
 2. **Read the source.** Open the corresponding section in `raw/` for
    understanding — never to copy.
 3. **Write original prose** under the existing headers. Explain purpose,
@@ -34,8 +35,12 @@ the official spec, rewrite it.
 4. **Fill front matter.** Set `spec_versions` to the versions where the concept
    appears, add `related` cross-references and `keywords`, and set
    `status: draft`.
-5. **Validate.** Run `python scripts/build_kb_scaffold.py --check` (front matter)
-   and `python scripts/check_verbatim.py <dir>` (no copied prose).
+5. **Validate.** Run the three checks:
+   ```
+   python scripts/build_kb_scaffold.py --check   # front-matter schema
+   python scripts/check_verbatim.py <dir>         # no copied spec prose
+   python scripts/validate_links.py <dir>         # related slugs + body links resolve
+   ```
 6. **Review** against the checklist below, then set `status: reviewed`.
 
 The generator never overwrites a file whose `status` is no longer `stub`, so
