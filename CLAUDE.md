@@ -70,9 +70,11 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
-Authored so far: **317 content docs total — 317 `draft`, 0 `stub`**. All
-categories are 100% draft. Remaining work: review (`draft` → `reviewed` per
-the CONTRIBUTING checklist), and net-new content in `kb/examples/`,
+Authored so far: **317 content docs total — 317 `reviewed`, 0 `draft`, 0
+`stub`**. All categories are 100% reviewed per the CONTRIBUTING checklist
+(validators clean; identifier-only verbatim flags in 3 profile docs — TLS
+cipher-suite names and `LIBRARY-LTO*` namespaces — are accepted as
+unavoidable). Remaining work: net-new content in `kb/examples/`,
 `kb/workflows/`, and `kb/mappings/`. One caveat:
 `kb/operations/re-key.md` (v2.1 §6.1.46) cannot be auto-checked by `check_verbatim.py`
 because its heading was lost in source conversion — re-verify it manually

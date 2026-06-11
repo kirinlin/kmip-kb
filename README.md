@@ -54,16 +54,17 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** 317 content documents total — 317 `draft`, 0 `stub`.
-All categories are 100% draft. `kb/profiles/` is fully authored: authentication
-suites, encoding profiles (HTTPS/XML/JSON), Suite B, all use-case profiles through
+**Authoring status:** 317 content documents total — 317 `reviewed`, 0 `draft`,
+0 `stub`. All categories are 100% reviewed per the
+[CONTRIBUTING.md](CONTRIBUTING.md) checklist: validators clean (front-matter
+schema, no-verbatim, link resolution), per-category technical spot checks, and
+KMIP 2.0 version notes added where docs described the request envelope only by
+its v1.x Template-Attribute name. `kb/profiles/` covers authentication suites,
+encoding profiles (HTTPS/XML/JSON), Suite B, all use-case profiles through
 PKCS#11 and Quantum Safe, and the complete set of granular per-profile entries
-(baseline/complete server variants, symmetric/asymmetric key foundry variants,
-secret data, storage, certificate, and discover-versions profiles) for KMIP-Prof
-v1.0–v2.1. `kb/usage-guide/` is fully authored: all 83 KMIP-UG v2.1 articles
-covering design goals, usage notes, usage examples, and deprecations. Next steps
-are review (`draft` → `reviewed`), and the planned content in `kb/examples/`,
-`kb/workflows/`, and `kb/mappings/`.
+for KMIP-Prof v1.0–v2.1. `kb/usage-guide/` covers all 83 KMIP-UG v2.1 articles.
+Remaining work is the planned content in `kb/examples/`, `kb/workflows/`, and
+`kb/mappings/`.
 
 ## Tag field populator
 

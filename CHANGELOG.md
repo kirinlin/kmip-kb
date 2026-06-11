@@ -6,6 +6,23 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+- **All 317 KB content docs promoted `draft` → `reviewed`** after a full review
+  pass per the CONTRIBUTING checklist: front-matter schema, no-verbatim, and
+  link validators all clean; per-category technical spot checks. The 3 remaining
+  `check_verbatim.py` flags are literal identifiers (TLS cipher-suite names,
+  `LIBRARY-LTO*` namespaces) and are accepted as unavoidable.
+- **KMIP 2.0 version notes** added to the 10 operation docs (Create, Register,
+  Create Key Pair, Re-key, Re-key Key Pair, Re-certify, Certify, Derive Key,
+  Create Split Key, Join Split Key) and `kb/ttlv/template-attribute-structures.md`,
+  noting that the v1.x Template-Attribute wrappers were replaced by the flat §5
+  Attributes structures in 2.0+.
+- **Rewrote 3 prose overlaps** in `kb/profiles/suite-b-profiles.md` flagged by
+  `check_verbatim.py`.
+- **Removed the scaffold authoring comment** left in 82 `kb/usage-guide/` docs.
+- **`kb/usage-guide/index.md`** — the last remaining stub, now an authored
+  grouped index of all 83 usage-guide articles.
+
 ### Added
 - **`tag_hex` and `xml_element` frontmatter fields** on 107 KB docs that map to a
   named KMIP tag (§11.56 Tag Enumeration). `tag_hex` is the 6-digit uppercase hex
