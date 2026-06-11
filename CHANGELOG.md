@@ -16,9 +16,12 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digit,
   per official spec algorithm). Both fields declared as optional in
   `schemas/frontmatter.schema.json`.
-- **`scripts/populate_tag_fields.py`** — parses the v2.1 spec tag table and
-  populates `tag_hex` / `xml_element` frontmatter in KB docs whose title matches a
-  KMIP tag name. Idempotent (skips docs already populated). Supports `--dry-run`.
+- **`scripts/populate_tag_fields.py`** — parses all v1.x, v2.0, and v2.1 spec
+  tag tables and populates `tag_hex` / `xml_element` frontmatter in KB docs whose
+  title matches a KMIP tag name. v2.1 is the primary source (354 tags); earlier
+  versions add 17 tags deprecated by v2.0 so that `del_v2` docs are covered (6
+  matched). Cross-version diff confirmed 0 renames and 79 tags first introduced
+  in v2.0–v2.1. Idempotent (skips docs already populated). Supports `--dry-run`.
 
 - **`kb/usage-guide/` — 83 new KMIP Usage Guide articles** (`status: draft`),
   covering the full KMIP-UG v2.1 document (§2 Design Goals, §3 Usage Notes,

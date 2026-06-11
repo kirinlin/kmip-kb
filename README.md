@@ -69,10 +69,12 @@ are review (`draft` → `reviewed`), and the planned content in `kb/examples/`,
 
 [`scripts/populate_tag_fields.py`](scripts/populate_tag_fields.py) adds `tag_hex`
 and `xml_element` frontmatter fields to any KB doc whose title matches a named
-KMIP tag in §11.56 Tag Enumeration. Parses the v2.1 spec directly; implements the
-official KMIP-ENCODE §6.1.3 CamelCase algorithm verified against v2.1 test-case
-XML (e.g. `X_509CertificateIdentifier`, `PKCS_12FriendlyName`). Safe to re-run —
-skips docs that already have `tag_hex`.
+KMIP tag. Parses all v1.x, v2.0, and v2.1 spec tag tables: v2.1 is the primary
+source (354 tags); earlier versions supply the 17 tags deprecated by v2.0 so
+that `del_v2` docs are also covered. Implements the official KMIP-ENCODE §6.1.3
+CamelCase algorithm verified against v2.1 test-case XML (e.g.
+`X_509CertificateIdentifier`, `PKCS_12FriendlyName`). Safe to re-run — skips
+docs that already have `tag_hex`.
 
 ```sh
 python scripts/populate_tag_fields.py --dry-run   # preview matches

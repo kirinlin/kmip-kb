@@ -22,7 +22,7 @@ Every doc has YAML front matter validated against `schemas/frontmatter.schema.js
 
 Two optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
 - `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
-- `xml_element`: CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 107 docs carry these fields. Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML).
+- `xml_element`: CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 113 docs carry these fields (107 from v2.1, 6 from removed v1.x tags). Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs).
 
 ## source_section for KMIP-Prof articles
 
