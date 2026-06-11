@@ -34,7 +34,8 @@
         "workflow",
         "example",
         "schema",
-        "index"
+        "index",
+        "usage-guide"
       ],
       "description": "Which knowledge-base section this document belongs to."
     },

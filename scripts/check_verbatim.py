@@ -29,7 +29,7 @@ from pathlib import Path
 
 # Reuse front-matter reading and spec-path resolution from the scaffold tool.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_kb_scaffold import read_front_matter, spec_path_for, prof_path_for  # noqa: E402
+from build_kb_scaffold import read_front_matter, spec_path_for, prof_path_for, ug_path_for  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HEADING_RE = re.compile(r"^(#{1,6})\s+(\d+(?:\.\d+)*)\s+(.*)$")
@@ -114,11 +114,20 @@ def check_file(path: Path, default_version: str, n: int) -> list[str]:
     version = str(fm.get("spec_version") or default_version)
 
     # Sections prefixed "prof-" come from the KMIP-Prof document, not KMIP-SPEC.
+    # Sections prefixed "ug-" come from the KMIP-UG document, not KMIP-SPEC.
     if section.startswith("prof-"):
         bare_section = section[len("prof-"):]
         spec = prof_path_for(version)
         if not spec.exists():
             print(f"WARN {path.name}: KMIP-Prof not found for version {version}",
+                  file=sys.stderr)
+            return []
+        section = bare_section
+    elif section.startswith("ug-"):
+        bare_section = section[len("ug-"):]
+        spec = ug_path_for(version)
+        if not spec.exists():
+            print(f"WARN {path.name}: KMIP-UG not found for version {version}",
                   file=sys.stderr)
             return []
         section = bare_section

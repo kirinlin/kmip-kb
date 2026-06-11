@@ -37,7 +37,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 ALL_KB_DIRS = [
     "kb/attributes", "kb/concepts", "kb/objects", "kb/operations",
     "kb/operations/server-to-client", "kb/profiles", "kb/references",
-    "kb/ttlv", "kb/workflows", "kb/examples",
+    "kb/ttlv", "kb/workflows", "kb/examples", "kb/usage-guide",
 ]
 
 _LINK_RE = re.compile(r"\[(?:[^\]]*)\]\(([^)]+)\)")

@@ -1,8 +1,8 @@
 ---
 title: Agent
 category: index
-spec_version: "1.0"
-spec_versions: ["1.0"]
+spec_version: "2.1"
+spec_versions: ["2.1"]
 source_section: ""
 status: stub
 related: []

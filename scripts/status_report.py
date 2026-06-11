@@ -36,6 +36,7 @@ CONTENT_DIRS = [
     "kb/ttlv",
     "kb/workflows",
     "kb/examples",
+    "kb/usage-guide",
 ]
 
 # Human-readable labels for display grouping (sub-dirs collapse under parent).

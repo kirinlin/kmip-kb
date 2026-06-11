@@ -147,6 +147,7 @@ CATEGORY_DIR: dict[str, str] = {
     "ttlv": "kb/ttlv",
     "profile": "kb/profiles",
     "reference": "kb/references",
+    "usage-guide": "kb/usage-guide",
 }
 
 CATEGORY_TEMPLATE: dict[str, str] = {
@@ -157,6 +158,7 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "ttlv": "ttlv.md",
     "profile": "concept.md",   # profiles reuse the concept skeleton
     "reference": "reference.md",
+    "usage-guide": "usage-guide.md",
 }
 
 # Directories that make up the knowledge base. Each gets an index.md. The ones
@@ -176,13 +178,44 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/mappings": "Cross-version and cross-implementation mapping tables.",
     "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
     "kb/references": "Terminology and pointers to normative / non-normative references.",
+    "kb/usage-guide": "KMIP Usage Guide articles: design goals, usage notes, worked examples, and deprecation guidance.",
 }
 
 VALID_CATEGORIES = {
     "operation", "attribute", "object", "concept", "ttlv", "profile",
-    "reference", "workflow", "example", "schema", "index",
+    "reference", "workflow", "example", "schema", "index", "usage-guide",
 }
 VALID_STATUS = {"stub", "draft", "reviewed"}
+
+# KMIP Usage Guide ([KMIP-UG]) section classification.
+# The UG is a separate OASIS document, versioned in sync with KMIP-SPEC.
+# Stubs emitted from this ruleset use source_section "ug-N.M".
+# §1 (Introduction/References) is intentionally excluded.
+UG_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
+    "2": ("usage-guide", 2, ""),  # §2 Design Goals
+    "3": ("usage-guide", 2, ""),  # §3 Usage Notes
+    "4": ("usage-guide", 2, ""),  # §4 Usage Examples
+    "5": ("usage-guide", 2, ""),  # §5 Deprecation notes
+}
+
+
+def ug_path_for(version: str) -> Path:
+    """Return the raw KMIP-UG document path for a given version.
+
+    v2.x docs live under ``raw/kmip/kmip-ug/v<ver>/``.
+    v1.x docs live under ``raw/kmip/ug/v<ver>/``.
+    v1.0 uses no leading "v" in the filename (kmip-ug-1.0.md).
+    v1.1+ use the "v" prefix (kmip-ug-v1.1.md).
+    """
+    if version.startswith("2."):
+        base = REPO_ROOT / "raw" / "kmip" / "kmip-ug" / f"v{version}"
+        return base / f"kmip-ug-v{version}.md"
+    base = REPO_ROOT / "raw" / "kmip" / "ug" / f"v{version}"
+    _, minor = version.split(".", 1)
+    if minor == "0":
+        return base / f"kmip-ug-{version}.md"  # v1.0: no "v" prefix
+    return base / f"kmip-ug-v{version}.md"
+
 
 HEADING_RE = re.compile(r"^(#{2,6})\s+(\d+(?:\.\d+)*)\s+(.*?)\s*$")
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -485,6 +518,8 @@ def cmd_generate(args) -> int:
         spec = Path(args.spec).resolve()
     elif source == "prof":
         spec = prof_path_for(version)
+    elif source == "ug":
+        spec = ug_path_for(version)
     else:
         spec = spec_path_for(version)
     if not spec.exists():
@@ -493,8 +528,15 @@ def cmd_generate(args) -> int:
 
     text = spec.read_text(encoding="utf-8")
     headings = parse_headings(text)
-    rules = get_prof_prefix_rules(version) if source == "prof" else get_prefix_rules(version)
-    section_prefix = "prof-" if source == "prof" else ""
+    if source == "prof":
+        rules = get_prof_prefix_rules(version)
+        section_prefix = "prof-"
+    elif source == "ug":
+        rules = UG_PREFIX_RULES
+        section_prefix = "ug-"
+    else:
+        rules = get_prefix_rules(version)
+        section_prefix = ""
     stubs = select_stubs(headings, rules)
 
     # detect slug collisions within a category
@@ -523,7 +565,12 @@ def cmd_generate(args) -> int:
 
     # 2. TOC map
     (out / "kb" / "versions").mkdir(parents=True, exist_ok=True)
-    toc_name = f"{version}-prof-toc.yaml" if source == "prof" else f"{version}-toc.yaml"
+    if source == "prof":
+        toc_name = f"{version}-prof-toc.yaml"
+    elif source == "ug":
+        toc_name = f"{version}-ug-toc.yaml"
+    else:
+        toc_name = f"{version}-toc.yaml"
     toc_path = out / "kb" / "versions" / toc_name
     toc_path.write_text(render_toc(version, spec_rel, stubs), encoding="utf-8")
 
@@ -619,8 +666,8 @@ def main(argv: list[str] | None = None) -> int:
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--version", default="2.1",
                    help="KMIP version to scaffold from, 1.0-1.4 or 2.0-2.1 (default: 2.1)")
-    p.add_argument("--source", default="spec", choices=["spec", "prof"],
-                   help="Source document: spec = KMIP-SPEC, prof = KMIP-Prof (default: spec)")
+    p.add_argument("--source", default="spec", choices=["spec", "prof", "ug"],
+                   help="Source document: spec = KMIP-SPEC, prof = KMIP-Prof, ug = KMIP-UG (default: spec)")
     p.add_argument("--spec", default=None,
                    help="Explicit path to a raw spec markdown file (overrides --version)")
     p.add_argument("--out", default=".", help="Output root (default: repo root)")

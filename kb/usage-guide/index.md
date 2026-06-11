@@ -1,5 +1,5 @@
 ---
-title: Schemas
+title: Usage Guide
 category: index
 spec_version: "2.1"
 spec_versions: ["2.1"]
@@ -9,8 +9,8 @@ related: []
 keywords: []
 ---
 
-# Schemas
+# Usage Guide
 
-JSON Schemas and machine-readable contracts (e.g. front-matter schema).
+KMIP Usage Guide articles: design goals, usage notes, worked examples, and deprecation guidance.
 
 _Stubs generated; prose pending. See CONTRIBUTING.md._
