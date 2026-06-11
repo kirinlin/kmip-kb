@@ -12,18 +12,18 @@ v2.0–v2.1), with **v2.1** as the baseline.
 
 | Directory | Contents |
 |---|---|
-| `concepts/` | Cross-cutting concepts: authentication, transport, error handling, key state. |
-| `operations/` | Client-to-server operations; `operations/server-to-client/` for the reverse. |
-| `objects/` | Managed objects (symmetric/asymmetric keys, certificates, secret data, templates). |
-| `attributes/` | Object attributes — data types, constraints, applicability. |
-| `ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
-| `profiles/` | Conformance profiles and implementation conformance. |
-| `workflows/` | End-to-end workflows that chain operations. |
-| `examples/` | Worked request/response examples (original, not copied). |
+| `kb/concepts/` | Cross-cutting concepts: authentication, transport, error handling, key state. |
+| `kb/operations/` | Client-to-server operations; `kb/operations/server-to-client/` for the reverse. |
+| `kb/objects/` | Managed objects (symmetric/asymmetric keys, certificates, secret data, templates). |
+| `kb/attributes/` | Object attributes — data types, constraints, applicability. |
+| `kb/ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
+| `kb/profiles/` | Conformance profiles and implementation conformance. |
+| `kb/versions/` | Per-version TOC maps (`1.0-toc.yaml` → `2.1-toc.yaml`, 104–234 sections each) and full 1.0–2.1 delta notes. |
+| `kb/references/` | Terminology and pointers to normative / non-normative references. |
+| `kb/workflows/` | End-to-end workflows that chain operations. |
+| `kb/examples/` | Worked request/response examples (original, not copied). |
+| `kb/mappings/` | Cross-version / cross-implementation mapping tables. |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
-| `mappings/` | Cross-version / cross-implementation mapping tables. |
-| `versions/` | Per-version TOC maps (`1.0-toc.yaml` → `2.1-toc.yaml`, 104–234 sections each) and full 1.0–2.1 delta notes. |
-| `references/` | Terminology and pointers to normative / non-normative references. |
 | `templates/` | Document skeletons used by the scaffold generator. |
 
 Each document carries YAML front matter validated against
@@ -53,14 +53,14 @@ skeleton) → `draft` (authored) → `reviewed` (human-verified per
 **Authoring status:** all 158 content documents — every operation, object,
 attribute, TTLV structure, concept, profile, and reference, plus the category
 index pages — are authored as `draft`; no stubs remain. Next steps are review
-(`draft` → `reviewed`) and the planned content listed in the `examples/`,
-`workflows/`, and `mappings/` index pages.
+(`draft` → `reviewed`) and the planned content listed in the `kb/examples/`,
+`kb/workflows/`, and `kb/mappings/` index pages.
 
 ## Scaffold generator
 
 [`scripts/build_kb_scaffold.py`](scripts/build_kb_scaffold.py) parses a locally
 mirrored spec and (re)generates the directory structure, one empty stub per
-section, and the section→file map in `versions/<ver>-toc.yaml`. It is pure
+section, and the section→file map in `kb/versions/<ver>-toc.yaml`. It is pure
 standard library and **never overwrites a file whose `status` is no longer
 `stub`**, so it is safe to re-run as authoring proceeds.
 
@@ -76,7 +76,7 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 | `--version` | `2.1` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
-| `--toc-only` | *(off)* | Only regenerate `versions/<ver>-toc.yaml` |
+| `--toc-only` | *(off)* | Only regenerate `kb/versions/<ver>-toc.yaml` |
 | `--no-stubs` | *(off)* | Create dirs + TOC but no stub files |
 | `--check` | *(off)* | Validate front matter against the JSON Schema and exit |
 | `--prune` | *(off)* | Delete stub files no longer in the rules (keeps authored docs) |
@@ -90,7 +90,7 @@ spec and flags any shared run of 8+ words. Run it before committing authored
 content:
 
 ```sh
-python scripts/check_verbatim.py operations    # check a directory
+python scripts/check_verbatim.py kb/operations  # check a directory
 python scripts/check_verbatim.py --n 8         # adjust the run length
 ```
 

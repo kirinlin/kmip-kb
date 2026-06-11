@@ -26,21 +26,21 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # Content directories to track (infrastructure dirs are excluded).
 CONTENT_DIRS = [
-    "attributes",
-    "concepts",
-    "objects",
-    "operations",
-    "operations/server-to-client",
-    "profiles",
-    "references",
-    "ttlv",
-    "workflows",
-    "examples",
+    "kb/attributes",
+    "kb/concepts",
+    "kb/objects",
+    "kb/operations",
+    "kb/operations/server-to-client",
+    "kb/profiles",
+    "kb/references",
+    "kb/ttlv",
+    "kb/workflows",
+    "kb/examples",
 ]
 
 # Human-readable labels for display grouping (sub-dirs collapse under parent).
 _DISPLAY_LABEL = {
-    "operations/server-to-client": "operations/server-to-client",
+    "kb/operations/server-to-client": "kb/operations/server-to-client",
 }
 
 

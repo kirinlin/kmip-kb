@@ -14,9 +14,9 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`concepts/ operations/ (operations/server-to-client/) objects/ attributes/ ttlv/ profiles/ workflows/ examples/ schemas/ (schemas/agent/) mappings/ versions/ references/` plus `templates/`.
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ kb/profiles/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
 
-Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV→`ttlv/`, §4 Attributes→`attributes/`, §6.1 client + §6.2 server-to-client→`operations/`, §10.3/§10.4 Authentication/Transport→`concepts/`, §14→`profiles/`, §1→`references/`. (v1.x used a different scheme: §2.2→`objects/`, §3→`attributes/`, §4/§5→`operations/`, §6/§7/§9→`ttlv/`, §8/§10/§11→`concepts/`, §12→`profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
+Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV→`kb/ttlv/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
@@ -25,8 +25,8 @@ Every doc has YAML front matter validated against `schemas/frontmatter.schema.js
 Fill a stub's existing section headers with original prose, populate front
 matter (`spec_versions` per the versions a concept appears in, real `related`
 slugs, `keywords`), then flip `status: stub` → `draft`. Match the depth and
-cross-reference style of already-authored docs (e.g. `operations/register.md`,
-`objects/symmetric-key.md`). Use relative links (e.g.
+cross-reference style of already-authored docs (e.g. `kb/operations/register.md`,
+`kb/objects/symmetric-key.md`). Use relative links (e.g.
 `[Key Block](../ttlv/key-block.md)`) and confirm targets exist (stub or
 authored) before linking. Validate before committing:
 
@@ -38,9 +38,9 @@ python scripts/validate_links.py [dir ...]      # checks related slugs + relativ
 
 Authored so far: **everything** — all 158 content docs across every category
 are `draft` (0 stubs). Remaining work is review (`draft` → `reviewed` per the
-CONTRIBUTING checklist) and net-new content in `examples/`, `workflows/`, and
-`mappings/`, whose index pages list the planned items. One caveat:
-`operations/re-key.md` (v2.1 §6.1.46) cannot be auto-checked by `check_verbatim.py`
+CONTRIBUTING checklist) and net-new content in `kb/examples/`, `kb/workflows/`, and
+`kb/mappings/`, whose index pages list the planned items. One caveat:
+`kb/operations/re-key.md` (v2.1 §6.1.46) cannot be auto-checked by `check_verbatim.py`
 because its heading was lost in source conversion — re-verify it manually
 when editing.
 
@@ -49,31 +49,31 @@ when editing.
 ```
 python scripts/status_report.py                 # per-category stub/draft/reviewed table
 python scripts/status_report.py --next 10       # list next 10 stubs to author
-python scripts/status_report.py --category ttlv --next 5   # filter to one category
+python scripts/status_report.py --category kb/ttlv --next 5   # filter to one category
 python scripts/status_report.py --json          # machine-readable output
 ```
 
 ## Scaffold generator
 
-`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and `versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`).
+`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and `kb/versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`).
 
 ```
 python scripts/build_kb_scaffold.py [--version 2.1] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
-ToC maps for all seven releases are committed under `versions/`:
+ToC maps for all seven releases are committed under `kb/versions/`:
 
 | File | Sections |
 |---|---|
-| `versions/2.1-toc.yaml` | 234 |
-| `versions/2.0-toc.yaml` | 215 |
-| `versions/1.4-toc.yaml` | 157 |
-| `versions/1.3-toc.yaml` | 143 |
-| `versions/1.2-toc.yaml` | 134 |
-| `versions/1.1-toc.yaml` | 112 |
-| `versions/1.0-toc.yaml` | 104 |
+| `kb/versions/2.1-toc.yaml` | 234 |
+| `kb/versions/2.0-toc.yaml` | 215 |
+| `kb/versions/1.4-toc.yaml` | 157 |
+| `kb/versions/1.3-toc.yaml` | 143 |
+| `kb/versions/1.2-toc.yaml` | 134 |
+| `kb/versions/1.1-toc.yaml` | 112 |
+| `kb/versions/1.0-toc.yaml` | 104 |
 
-`versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
+`kb/versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
 The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` at the top of the script (v2.x has a completely different section numbering from v1.x); stub bodies come from `templates/<category>.md`.
 

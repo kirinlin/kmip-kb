@@ -91,13 +91,13 @@ def get_prefix_rules(version: str) -> dict[str, tuple[str, int, str]]:
     return V1X_PREFIX_RULES
 
 CATEGORY_DIR: dict[str, str] = {
-    "operation": "operations",
-    "attribute": "attributes",
-    "object": "objects",
-    "concept": "concepts",
-    "ttlv": "ttlv",
-    "profile": "profiles",
-    "reference": "references",
+    "operation": "kb/operations",
+    "attribute": "kb/attributes",
+    "object": "kb/objects",
+    "concept": "kb/concepts",
+    "ttlv": "kb/ttlv",
+    "profile": "kb/profiles",
+    "reference": "kb/references",
 }
 
 CATEGORY_TEMPLATE: dict[str, str] = {
@@ -113,20 +113,20 @@ CATEGORY_TEMPLATE: dict[str, str] = {
 # Directories that make up the knowledge base. Each gets an index.md. The ones
 # without spec-derived stubs (workflows/examples/schemas/...) are seeded empty.
 STRUCTURE_DIRS: dict[str, str] = {
-    "concepts": "Cross-cutting concepts: authentication, transport, error handling, key state and lifecycle.",
-    "operations": "Client-to-server and server-to-client operations (Create, Locate, Get, ...).",
-    "objects": "Managed objects: symmetric/asymmetric keys, certificates, secret data, templates.",
-    "attributes": "Object attributes and their data types, constraints, and applicability.",
-    "ttlv": "TTLV encoding plus base-object structures and message contents/format.",
-    "profiles": "Conformance profiles and implementation conformance requirements.",
-    "workflows": "End-to-end usage workflows that chain operations together.",
-    "examples": "Worked request/response examples (original, not copied from the spec).",
+    "kb/concepts": "Cross-cutting concepts: authentication, transport, error handling, key state and lifecycle.",
+    "kb/operations": "Client-to-server and server-to-client operations (Create, Locate, Get, ...).",
+    "kb/objects": "Managed objects: symmetric/asymmetric keys, certificates, secret data, templates.",
+    "kb/attributes": "Object attributes and their data types, constraints, and applicability.",
+    "kb/ttlv": "TTLV encoding plus base-object structures and message contents/format.",
+    "kb/profiles": "Conformance profiles and implementation conformance requirements.",
+    "kb/workflows": "End-to-end usage workflows that chain operations together.",
+    "kb/examples": "Worked request/response examples (original, not copied from the spec).",
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",
-    "operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
+    "kb/operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
     "schemas/agent": "GraphRAG / coding-agent relation files (operation/object graphs).",
-    "mappings": "Cross-version and cross-implementation mapping tables.",
-    "versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
-    "references": "Terminology and pointers to normative / non-normative references.",
+    "kb/mappings": "Cross-version and cross-implementation mapping tables.",
+    "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
+    "kb/references": "Terminology and pointers to normative / non-normative references.",
 }
 
 VALID_CATEGORIES = {
@@ -463,8 +463,8 @@ def cmd_generate(args) -> int:
             counts[res] += 1
 
     # 2. TOC map
-    (out / "versions").mkdir(parents=True, exist_ok=True)
-    toc_path = out / "versions" / f"{version}-toc.yaml"
+    (out / "kb" / "versions").mkdir(parents=True, exist_ok=True)
+    toc_path = out / "kb" / "versions" / f"{version}-toc.yaml"
     toc_path.write_text(render_toc(version, spec_rel, stubs), encoding="utf-8")
 
     # 3. stubs
@@ -486,7 +486,7 @@ def cmd_generate(args) -> int:
 
 def cmd_check(args) -> int:
     out = Path(args.out).resolve()
-    dirs = [d for d in STRUCTURE_DIRS if d != "schemas"]  # schemas holds JSON
+    dirs = [d for d in STRUCTURE_DIRS if d not in ("schemas", "schemas/agent")]  # hold JSON
     md_files: list[Path] = []
     for dirname in dirs:
         d = out / dirname

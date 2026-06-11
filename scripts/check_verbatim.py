@@ -148,15 +148,15 @@ def check_file(path: Path, default_version: str, n: int) -> list[str]:
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("paths", nargs="*", default=["operations"],
-                   help="Directories or files to check (default: operations)")
+    p.add_argument("paths", nargs="*", default=["kb/operations"],
+                   help="Directories or files to check (default: kb/operations)")
     p.add_argument("--n", type=int, default=8,
                    help="Minimum shared word-run length to flag (default: 8)")
     p.add_argument("--version", default="1.4",
                    help="Fallback spec version when a doc omits spec_version")
     args = p.parse_args(argv)
 
-    files = iter_md(args.paths or ["operations"])
+    files = iter_md(args.paths or ["kb/operations"])
     checked = 0
     flagged = 0
     for f in files:

@@ -35,9 +35,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 # All directories that contain KB documents (same list as status_report.py).
 ALL_KB_DIRS = [
-    "attributes", "concepts", "objects", "operations",
-    "operations/server-to-client", "profiles", "references",
-    "ttlv", "workflows", "examples",
+    "kb/attributes", "kb/concepts", "kb/objects", "kb/operations",
+    "kb/operations/server-to-client", "kb/profiles", "kb/references",
+    "kb/ttlv", "kb/workflows", "kb/examples",
 ]
 
 _LINK_RE = re.compile(r"\[(?:[^\]]*)\]\(([^)]+)\)")
