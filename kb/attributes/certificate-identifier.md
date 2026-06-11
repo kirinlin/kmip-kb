@@ -8,6 +8,8 @@ v1_source_section: "3.13"
 status: draft
 related: ["x-509-certificate-identifier", "certificate-subject", "certificate-issuer"]
 keywords: ["certificate identifier", "deprecated", "issuer", "serial number"]
+tag_hex: "420014"
+xml_element: "CertificateIdentifier"
 ---
 
 # Certificate Identifier

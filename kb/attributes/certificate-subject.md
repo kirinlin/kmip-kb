@@ -8,6 +8,8 @@ v1_source_section: "3.14"
 status: draft
 related: ["x-509-certificate-subject", "certificate-identifier", "certificate-issuer"]
 keywords: ["certificate subject", "deprecated", "subject distinguished name"]
+tag_hex: "42001A"
+xml_element: "CertificateSubject"
 ---
 
 # Certificate Subject

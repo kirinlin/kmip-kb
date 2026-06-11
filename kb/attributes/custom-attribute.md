@@ -8,6 +8,8 @@ v1_source_section: "3.39"
 status: draft
 related: ["application-specific-information", "description", "comment"]
 keywords: ["custom attribute", "x- prefix", "y- prefix", "vendor extension", "client-defined attribute"]
+tag_hex: "42002D"
+xml_element: "CustomAttribute"
 ---
 
 # Custom Attribute

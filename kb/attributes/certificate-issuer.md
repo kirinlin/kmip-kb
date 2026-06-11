@@ -8,6 +8,8 @@ v1_source_section: "3.15"
 status: draft
 related: ["x-509-certificate-issuer", "certificate-identifier", "certificate-subject"]
 keywords: ["certificate issuer", "deprecated", "issuer distinguished name"]
+tag_hex: "420015"
+xml_element: "CertificateIssuer"
 ---
 
 # Certificate Issuer

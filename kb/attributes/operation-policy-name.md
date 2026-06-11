@@ -8,6 +8,8 @@ v1_source_section: "3.18"
 status: draft
 related: ["cryptographic-usage-mask", "sensitive", "extractable"]
 keywords: ["operation policy", "access control", "default policy", "deprecated", "owner"]
+tag_hex: "42005D"
+xml_element: "OperationPolicyName"
 ---
 
 # Operation Policy Name

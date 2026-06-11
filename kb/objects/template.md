@@ -8,6 +8,8 @@ v1_source_section: "2.2.6"
 status: draft
 related: ["register", "create", "create-key-pair", "name", "get"]
 keywords: ["template", "deprecated", "attributes", "named object"]
+tag_hex: "420090"
+xml_element: "Template"
 ---
 
 # Template
