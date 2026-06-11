@@ -18,7 +18,8 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/attributes/` | Object attributes — data types, constraints, applicability. |
 | `kb/ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
 | `kb/profiles/` | Conformance profiles and implementation conformance. |
-| `kb/versions/` | Per-version TOC maps — `1.0-toc.yaml` → `2.1-toc.yaml` (104–234 sections) and `1.0-prof-toc.yaml` → `2.1-prof-toc.yaml` (8–44 sections each) — plus full 1.0–2.1 delta notes. |
+| `kb/usage-guide/` | Design goals, usage notes, usage examples, and deprecation guidance from the KMIP Usage Guide ([KMIP-UG]), sourced with `ug-` prefix on `source_section`. |
+| `kb/versions/` | Per-version TOC maps — `1.0-toc.yaml` → `2.1-toc.yaml` (104–234 sections), `1.0-prof-toc.yaml` → `2.1-prof-toc.yaml` (8–44 sections), and `1.0-ug-toc.yaml` → `2.1-ug-toc.yaml` (36–83 sections) — plus full 1.0–2.1 delta notes. |
 | `kb/references/` | Terminology and pointers to normative / non-normative references. |
 | `kb/workflows/` | End-to-end workflows that chain operations. |
 | `kb/examples/` | Worked request/response examples (original, not copied). |
@@ -51,14 +52,16 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** 234 content documents total — 234 `draft`, 0 `stub`.
+**Authoring status:** 317 content documents total — 317 `draft`, 0 `stub`.
 All categories are 100% draft. `kb/profiles/` is fully authored: authentication
 suites, encoding profiles (HTTPS/XML/JSON), Suite B, all use-case profiles through
 PKCS#11 and Quantum Safe, and the complete set of granular per-profile entries
 (baseline/complete server variants, symmetric/asymmetric key foundry variants,
 secret data, storage, certificate, and discover-versions profiles) for KMIP-Prof
-v1.0–v2.1. Next steps are review (`draft` → `reviewed`), and the planned content
-in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
+v1.0–v2.1. `kb/usage-guide/` is fully authored: all 83 KMIP-UG v2.1 articles
+covering design goals, usage notes, usage examples, and deprecations. Next steps
+are review (`draft` → `reviewed`), and the planned content in `kb/examples/`,
+`kb/workflows/`, and `kb/mappings/`.
 
 ## Scaffold generator
 
@@ -78,7 +81,7 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 | Flag | Default | Effect |
 |---|---|---|
 | `--version` | `2.1` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
-| `--source` | `spec` | Source document: `spec` = KMIP-SPEC, `prof` = KMIP-Prof (writes `<ver>-prof-toc.yaml`, prefixes sections with `prof-`) |
+| `--source` | `spec` | Source document: `spec` = KMIP-SPEC, `prof` = KMIP-Prof (writes `<ver>-prof-toc.yaml`, prefixes sections with `prof-`), `ug` = KMIP-UG (writes `<ver>-ug-toc.yaml`, prefixes sections with `ug-`) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
 | `--toc-only` | *(off)* | Only regenerate the TOC map |

@@ -7,6 +7,27 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **`kb/usage-guide/` — 83 new KMIP Usage Guide articles** (`status: draft`),
+  covering the full KMIP-UG v2.1 document (§2 Design Goals, §3 Usage Notes,
+  §4 Usage Examples, §5 Deprecations). All articles carry accurate `spec_versions`
+  arrays, `related` slugs, and `keywords`; all pass `check_verbatim.py` (0-word
+  runs), `validate_links.py` (0 issues), and `build_kb_scaffold.py --check`
+  (0 schema errors). Brings the total KB to 317 draft articles, 0 stubs.
+- **`ug-` prefix convention** for `source_section` (e.g., `source_section: "ug-3.1"`),
+  analogous to the existing `prof-` prefix; `check_verbatim.py` routes `ug-`
+  prefixed sections to the KMIP-UG source document rather than KMIP-SPEC.
+- **`--source ug` scaffold support** in `build_kb_scaffold.py`: new
+  `UG_PREFIX_RULES` dict, `ug_path_for(version)` helper, and TOC output at
+  `kb/versions/<ver>-ug-toc.yaml`; v1.x UG sourced from `raw/kmip/ug/`,
+  v2.x from `raw/kmip/kmip-ug/`.
+- **7 UG TOC files** generated for all supported versions: `1.0-ug-toc.yaml`
+  (36 sections) through `2.1-ug-toc.yaml` (83 sections).
+- `"usage-guide"` added to the `category` enum in `schemas/frontmatter.schema.json`.
+- `templates/usage-guide.md` — new stub template for UG articles (Overview,
+  Guidance, Implementation Notes, Related Concepts sections).
+- `"kb/usage-guide"` added to `CONTENT_DIRS` in `status_report.py` and to
+  `ALL_KB_DIRS` in `validate_links.py`.
+
 - **Authored all 56 remaining `kb/profiles/` stubs** (`stub → draft`), bringing
   the knowledge base to 234 docs, 0 stubs, 234 drafts (100% draft coverage):
   - `tls-1-2-authentication-suite.md` — TLS 1.2 Authentication Suite, v1.0–v1.2;

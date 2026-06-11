@@ -14,7 +14,7 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ kb/profiles/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
 
 Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV→`kb/ttlv/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
@@ -28,6 +28,17 @@ to distinguish them from sections of KMIP-SPEC. `check_verbatim.py` and
 `build_kb_scaffold.py` both resolve this prefix against the profiles document
 (`raw/kmip/kmip-profiles/v<ver>/kmip-profiles-v<ver>.md`) rather than the main
 spec.
+
+## source_section for KMIP-UG articles
+
+Articles sourced from the separate OASIS Usage Guide document ([KMIP-UG]) use
+the prefix `ug-` in `source_section` (e.g., `source_section: "ug-3.1"`)
+to distinguish them from sections of KMIP-SPEC. `check_verbatim.py` and
+`build_kb_scaffold.py` both resolve this prefix against the usage guide document
+(`raw/kmip/kmip-ug/v<ver>/kmip-ug-v<ver>.md` for v2.x, `raw/kmip/ug/v<ver>/`
+for v1.x) rather than the main spec. UG source for `--source ug` is generated
+with the `UG_PREFIX_RULES` ruleset covering §2–§5 of the UG at depth 2; TOC
+files land at `kb/versions/<ver>-ug-toc.yaml`.
 
 ## source_section for KMIP-ENCODE articles
 
@@ -55,7 +66,7 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
-Authored so far: **234 content docs total — 234 `draft`, 0 `stub`**. All
+Authored so far: **317 content docs total — 317 `draft`, 0 `stub`**. All
 categories are 100% draft. Remaining work: review (`draft` → `reviewed` per
 the CONTRIBUTING checklist), and net-new content in `kb/examples/`,
 `kb/workflows/`, and `kb/mappings/`. One caveat:
@@ -74,14 +85,15 @@ python scripts/status_report.py --json          # machine-readable output
 
 ## Scaffold generator
 
-`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and a version TOC file. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`). Also supports the separate KMIP Profiles document via `--source prof`.
+`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and a version TOC file. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`). Also supports the KMIP Profiles document via `--source prof` and the KMIP Usage Guide via `--source ug`.
 
 ```
-python scripts/build_kb_scaffold.py [--version 2.1] [--source spec|prof] [--out .] [--toc-only] [--no-stubs] [--check]
+python scripts/build_kb_scaffold.py [--version 2.1] [--source spec|prof|ug] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
 - `--source spec` (default): parses KMIP-SPEC; writes `kb/versions/<ver>-toc.yaml`
 - `--source prof`: parses KMIP-Prof (`raw/kmip/kmip-profiles/v<ver>/`); writes `kb/versions/<ver>-prof-toc.yaml`; prefixes `source_section` with `prof-`
+- `--source ug`: parses KMIP-UG (`raw/kmip/kmip-ug/v<ver>/` or `raw/kmip/ug/v<ver>/`); writes `kb/versions/<ver>-ug-toc.yaml`; prefixes `source_section` with `ug-`
 
 ToC maps for all seven spec releases and all KMIP-Prof versions are committed under `kb/versions/`:
 
@@ -101,12 +113,19 @@ ToC maps for all seven spec releases and all KMIP-Prof versions are committed un
 | `kb/versions/1.2-prof-toc.yaml` | 8 (KMIP-Prof §3 + §4) |
 | `kb/versions/1.1-prof-toc.yaml` | 44 (KMIP-Prof §3 + §4) |
 | `kb/versions/1.0-prof-toc.yaml` | 8 (KMIP-Prof §3 + §4) |
+| `kb/versions/2.1-ug-toc.yaml` | 83 (KMIP-UG §2–§5) |
+| `kb/versions/2.0-ug-toc.yaml` | 74 (KMIP-UG §2–§5) |
+| `kb/versions/1.4-ug-toc.yaml` | 60 (KMIP-UG §2–§4) |
+| `kb/versions/1.3-ug-toc.yaml` | 55 (KMIP-UG §2–§4) |
+| `kb/versions/1.2-ug-toc.yaml` | 51 (KMIP-UG §2–§4) |
+| `kb/versions/1.1-ug-toc.yaml` | 44 (KMIP-UG §2–§4) |
+| `kb/versions/1.0-ug-toc.yaml` | 36 (KMIP-UG §2–§4) |
 
-v1.0–v1.2 profiles put profile definitions in §4 (§5 is Conformance Clauses in those releases); v1.3+ and v2.x use §5.
+v1.0–v1.2 profiles put profile definitions in §4 (§5 is Conformance Clauses in those releases); v1.3+ and v2.x use §5. KMIP-UG §5 (Deprecations) first appears in v2.0.
 
 `kb/versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
-The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. Stub bodies come from `templates/<category>.md`.
+The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` / `UG_PREFIX_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. Stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
 
