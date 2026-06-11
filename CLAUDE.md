@@ -20,6 +20,10 @@ Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
+Two optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
+- `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
+- `xml_element`: CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 107 docs carry these fields. Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML).
+
 ## source_section for KMIP-Prof articles
 
 Articles sourced from the separate OASIS Profiles document ([KMIP-Prof]) use

@@ -7,6 +7,19 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **`tag_hex` and `xml_element` frontmatter fields** on 107 KB docs that map to a
+  named KMIP tag (§11.56 Tag Enumeration). `tag_hex` is the 6-digit uppercase hex
+  value (e.g. `"42000D"`); `xml_element` is the CamelCase XML element name per the
+  official KMIP-ENCODE §6.1.3 algorithm (e.g. `"BatchCount"`), implemented and
+  verified against v2.1 test-case XML. Covers `kb/attributes/`, `kb/ttlv/`,
+  `kb/objects/`, `kb/concepts/`, and matching `kb/usage-guide/` docs. Edge cases:
+  `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digit,
+  per official spec algorithm). Both fields declared as optional in
+  `schemas/frontmatter.schema.json`.
+- **`scripts/populate_tag_fields.py`** — parses the v2.1 spec tag table and
+  populates `tag_hex` / `xml_element` frontmatter in KB docs whose title matches a
+  KMIP tag name. Idempotent (skips docs already populated). Supports `--dry-run`.
+
 - **`kb/usage-guide/` — 83 new KMIP Usage Guide articles** (`status: draft`),
   covering the full KMIP-UG v2.1 document (§2 Design Goals, §3 Usage Notes,
   §4 Usage Examples, §5 Deprecations). All articles carry accurate `spec_versions`

@@ -42,6 +42,8 @@ v1_source_section: "4.1"     # v1.x section, when the concept existed there
 status: draft                # stub | draft | reviewed
 related: []
 keywords: []
+tag_hex: "420018"            # optional — 6-digit hex from §11.56 Tag Enumeration
+xml_element: "CertificateRequest"  # optional — CamelCase XML element name (KMIP-ENCODE §6.1.3)
 ---
 ```
 
@@ -62,6 +64,20 @@ v1.0–v2.1. `kb/usage-guide/` is fully authored: all 83 KMIP-UG v2.1 articles
 covering design goals, usage notes, usage examples, and deprecations. Next steps
 are review (`draft` → `reviewed`), and the planned content in `kb/examples/`,
 `kb/workflows/`, and `kb/mappings/`.
+
+## Tag field populator
+
+[`scripts/populate_tag_fields.py`](scripts/populate_tag_fields.py) adds `tag_hex`
+and `xml_element` frontmatter fields to any KB doc whose title matches a named
+KMIP tag in §11.56 Tag Enumeration. Parses the v2.1 spec directly; implements the
+official KMIP-ENCODE §6.1.3 CamelCase algorithm verified against v2.1 test-case
+XML (e.g. `X_509CertificateIdentifier`, `PKCS_12FriendlyName`). Safe to re-run —
+skips docs that already have `tag_hex`.
+
+```sh
+python scripts/populate_tag_fields.py --dry-run   # preview matches
+python scripts/populate_tag_fields.py              # apply
+```
 
 ## Scaffold generator
 
