@@ -1,8 +1,8 @@
 ---
 title: Schemas
 category: index
-spec_version: "2.1"
-spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
+spec_version: "1.0"
+spec_versions: ["1.0"]
 source_section: ""
 status: stub
 related: []
