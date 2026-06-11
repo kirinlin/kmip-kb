@@ -7,6 +7,45 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **KMIP KB MCP server** (`mcp_server/kmip_kb_server.py`) — FastMCP server
+  exposing the knowledge base over stdio with four tools: `search_kb` (BM25
+  full-text search), `get_article` (full article retrieval), `list_articles`
+  (front-matter-filtered listing), `get_related` (related-article discovery).
+  Pre-wired for Claude Code via `.mcp.json` and `.claude/settings.json`; a
+  `kmip-authoring` coding-agent skill added at `.claude/skills/kmip-authoring.md`.
+- **59 new `kb/profiles/` stubs** generated from KMIP-Prof v1.0–v1.4 and v2.0:
+  granular per-profile entries (basic/complete server variants, symmetric and
+  asymmetric key foundry variants, certificate, secret data, storage, and
+  discover-versions profiles), plus `quantum-safe-client.md`,
+  `quantum-safe-server.md`, and `mandatory-quantum-safe-test-cases-kmip-v2-0.md`.
+- `kb/versions/2.0-prof-toc.yaml`, `1.4-prof-toc.yaml`, `1.3-prof-toc.yaml`,
+  `1.2-prof-toc.yaml`, `1.1-prof-toc.yaml`, `1.0-prof-toc.yaml` — KMIP-Prof
+  section→file maps for all v1.x and v2.0 releases (8–44 sections each).
+- `PROF_V1X_EARLY_RULES` and `get_prof_prefix_rules(version)` in
+  `build_kb_scaffold.py` — handles v1.0–v1.2 KMIP-Prof documents where profile
+  definitions sit in §4 (§5 is Conformance Clauses in those releases) rather
+  than §5 as in v1.3+.
+- **`enc-` prefix convention** for `v1_source_section` values that trace to the
+  separate `[KMIP-ENCODE]` document (*KMIP Additional Message Encodings v1.0*);
+  documented in `CLAUDE.md`. `v1_source_section: "enc-2/4/6"` added to
+  `https-profiles.md`, `json-profiles.md`, and `xml-profiles.md` respectively,
+  along with a Version History section in each article.
+- **Suite B profile articles authored** (`stub → draft`): `suite-b-profiles.md`,
+  `suite-b-minlos-128-authentication-suite.md`,
+  `suite-b-minlos-192-authentication-suite.md` — covering v1.0–v1.4, sourced
+  from the standalone `kmip-suite-b-profile/v1.0` companion and KMIP-Prof
+  §3.3/§3.4/§5.13; includes P-256/P-384 algorithm table, cipher-suite
+  requirements, NSA deprecation note (2017), and absence from KMIP-Prof v2.0+.
+- **Enriched 7 use-case profile articles** from standalone companion docs
+  (`kmip-*-profile/v1.0`): added test case naming convention, Permitted Test
+  Case Variations sections, conformance asymmetry rules (client vs. server pass
+  requirements), and v1.x provenance notes to `asymmetric-key-lifecycle-profiles.md`,
+  `cryptographic-profiles.md`, `opaque-managed-object-store-profiles.md`,
+  `storage-array-with-self-encrypting-drives-profiles.md`
+  (including Template-removal and capacity deltas),
+  `symmetric-key-foundry-for-fips-140-profiles.md`,
+  `symmetric-key-lifecycle-profiles.md`, and `tape-library-profiles.md`
+  (including VENDOR-LIBRARY-LTO namespace and x-Barcode Custom Attribute).
 - **17 new `kb/profiles/` articles** sourced from the KMIP Profiles document
   ([KMIP-Prof] v2.1, separate from KMIP-SPEC):
   - Authentication suites: `basic-authentication-suite.md`,
@@ -30,6 +69,12 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   TOC to `<ver>-prof-toc.yaml`. Stubs emitted with `source_section: "prof-N.M"`.
 - **`check_verbatim.py`** now resolves `prof-*` `source_section` values against
   the KMIP-Prof document rather than KMIP-SPEC.
+
+### Fixed
+- `spec_versions` in `schemas/index.md` and `schemas/agent/index.md` narrowed
+  to `["1.0"]`; these are project-level index files, not versioned spec content.
+- Typo in `symmetric-key-foundry-for-fips-140-profiles.md`: attribute name
+  corrected from `Protect Stop Date` to `Process Stop Date`.
 
 ## [0.9.0] - 2026-06-11
 

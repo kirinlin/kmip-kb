@@ -18,13 +18,14 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/attributes/` | Object attributes — data types, constraints, applicability. |
 | `kb/ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
 | `kb/profiles/` | Conformance profiles and implementation conformance. |
-| `kb/versions/` | Per-version TOC maps (`1.0-toc.yaml` → `2.1-toc.yaml`, 104–234 sections each) and full 1.0–2.1 delta notes. |
+| `kb/versions/` | Per-version TOC maps — `1.0-toc.yaml` → `2.1-toc.yaml` (104–234 sections) and `1.0-prof-toc.yaml` → `2.1-prof-toc.yaml` (8–44 sections each) — plus full 1.0–2.1 delta notes. |
 | `kb/references/` | Terminology and pointers to normative / non-normative references. |
 | `kb/workflows/` | End-to-end workflows that chain operations. |
 | `kb/examples/` | Worked request/response examples (original, not copied). |
 | `kb/mappings/` | Cross-version / cross-implementation mapping tables. |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
 | `templates/` | Document skeletons used by the scaffold generator. |
+| `mcp_server/` | FastMCP server exposing the knowledge base to coding agents via BM25 search, article retrieval, listing, and related-article discovery. |
 
 Each document carries YAML front matter validated against
 [`schemas/frontmatter.schema.json`](schemas/frontmatter.schema.json):
@@ -50,14 +51,17 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** all 175 content documents — every operation, object,
-attribute, TTLV structure, concept, profile, reference, plus the category
-index pages — are authored as `draft`; no stubs remain. This includes 17 new
-articles from the KMIP Profiles document ([KMIP-Prof]): authentication suites,
-baseline/complete server, encoding profiles (HTTPS/XML/JSON), and all use-case
-profiles through PKCS#11 and Quantum Safe. Next steps are review
-(`draft` → `reviewed`) and the planned content listed in the `kb/examples/`,
-`kb/workflows/`, and `kb/mappings/` index pages.
+**Authoring status:** 234 content documents total — 178 `draft`, 56 `stub`.
+All non-profile categories (operations, objects, attributes, TTLV, concepts,
+references) are 100% draft. The 56 remaining stubs are exclusively in
+`kb/profiles/`: granular per-profile entries generated from KMIP-Prof v1.0–v2.0
+(baseline/complete server variants, symmetric/asymmetric key foundry variants,
+secret data, storage, certificate, and discover-versions profiles). The 22 authored
+profile articles cover authentication suites, encoding profiles (HTTPS/XML/JSON),
+Suite B, and all use-case profiles through PKCS#11 and Quantum Safe, enriched with
+test case naming conventions and v1.x provenance from the standalone companion docs.
+Next steps are authoring those profile stubs, then review (`draft` → `reviewed`),
+and the planned content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
 ## Scaffold generator
 
@@ -97,6 +101,24 @@ content:
 python scripts/check_verbatim.py kb/operations  # check a directory
 python scripts/check_verbatim.py --n 8         # adjust the run length
 ```
+
+## MCP server
+
+[`mcp_server/kmip_kb_server.py`](mcp_server/kmip_kb_server.py) is a FastMCP
+server that exposes the knowledge base to coding agents over stdio. It provides
+four tools: BM25 full-text search (`search_kb`), full article retrieval
+(`get_article`), article listing with front-matter filters (`list_articles`),
+and related-article discovery (`get_related`). Start it with:
+
+```sh
+bash mcp_server/start.sh          # activate venv and run via stdio
+```
+
+Dependencies (`fastmcp`, `rank-bm25`, `pyyaml`) are listed in
+`mcp_server/requirements.txt`. The server is pre-wired for Claude Code via
+`.mcp.json` and `.claude/settings.json`; a `kmip-authoring` skill at
+`.claude/skills/kmip-authoring.md` bundles authoring conventions for agents
+working in this repo.
 
 ## Contributing
 
