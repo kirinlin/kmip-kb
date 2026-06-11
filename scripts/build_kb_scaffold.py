@@ -87,9 +87,17 @@ PREFIX_RULES = V1X_PREFIX_RULES  # default; overridden per-version in cmd_genera
 # The profiles doc is versioned in sync with KMIP-SPEC (both 2.1, etc.) but is a
 # separate OASIS document. Section numbers here come from that document, not
 # KMIP-SPEC, so stubs emitted from this ruleset use source_section "prof-N.M".
+#
+# v1.3–v2.x: §3 = Auth Suites, §5 = Profile definitions.
 PROF_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
-    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, HTTPS)
+    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, HTTPS, Suite B, ...)
     "5": ("profile", 2, ""),  # §5 Profile definitions (Baseline, Complete, HTTPS, ...)
+}
+
+# v1.0–v1.2: §4 = KMIP Profiles (§5 is Conformance Clauses, not profiles).
+PROF_V1X_EARLY_RULES: dict[str, tuple[str, int, str]] = {
+    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, TLS 1.2)
+    "4": ("profile", 2, ""),  # §4 KMIP Profiles
 }
 
 
@@ -98,6 +106,18 @@ def get_prefix_rules(version: str) -> dict[str, tuple[str, int, str]]:
     if version.startswith("2."):
         return V20_PREFIX_RULES
     return V1X_PREFIX_RULES
+
+
+def get_prof_prefix_rules(version: str) -> dict[str, tuple[str, int, str]]:
+    """Return the KMIP-Prof section-classification rules for the given version.
+
+    v1.0–v1.2 moved profiles to §4 (§5 is Conformance Clauses in those releases).
+    v1.3+ and v2.x use §5 for profiles, matching PROF_PREFIX_RULES.
+    """
+    major, minor = version.split(".", 1)
+    if major == "1" and minor in ("0", "1", "2"):
+        return PROF_V1X_EARLY_RULES
+    return PROF_PREFIX_RULES
 
 
 def prof_path_for(version: str) -> Path:
@@ -473,7 +493,7 @@ def cmd_generate(args) -> int:
 
     text = spec.read_text(encoding="utf-8")
     headings = parse_headings(text)
-    rules = PROF_PREFIX_RULES if source == "prof" else get_prefix_rules(version)
+    rules = get_prof_prefix_rules(version) if source == "prof" else get_prefix_rules(version)
     section_prefix = "prof-" if source == "prof" else ""
     stubs = select_stubs(headings, rules)
 

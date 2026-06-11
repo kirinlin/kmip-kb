@@ -73,7 +73,7 @@ python scripts/build_kb_scaffold.py [--version 2.1] [--source spec|prof] [--out 
 - `--source spec` (default): parses KMIP-SPEC; writes `kb/versions/<ver>-toc.yaml`
 - `--source prof`: parses KMIP-Prof (`raw/kmip/kmip-profiles/v<ver>/`); writes `kb/versions/<ver>-prof-toc.yaml`; prefixes `source_section` with `prof-`
 
-ToC maps for all seven spec releases and KMIP-Prof v2.1 are committed under `kb/versions/`:
+ToC maps for all seven spec releases and all KMIP-Prof versions are committed under `kb/versions/`:
 
 | File | Sections |
 |---|---|
@@ -85,10 +85,18 @@ ToC maps for all seven spec releases and KMIP-Prof v2.1 are committed under `kb/
 | `kb/versions/1.1-toc.yaml` | 112 |
 | `kb/versions/1.0-toc.yaml` | 104 |
 | `kb/versions/2.1-prof-toc.yaml` | 20 (KMIP-Prof §3 + §5) |
+| `kb/versions/2.0-prof-toc.yaml` | 20 (KMIP-Prof §3 + §5) |
+| `kb/versions/1.4-prof-toc.yaml` | 19 (KMIP-Prof §3 + §5) |
+| `kb/versions/1.3-prof-toc.yaml` | 18 (KMIP-Prof §3 + §5) |
+| `kb/versions/1.2-prof-toc.yaml` | 8 (KMIP-Prof §3 + §4) |
+| `kb/versions/1.1-prof-toc.yaml` | 44 (KMIP-Prof §3 + §4) |
+| `kb/versions/1.0-prof-toc.yaml` | 8 (KMIP-Prof §3 + §4) |
+
+v1.0–v1.2 profiles put profile definitions in §4 (§5 is Conformance Clauses in those releases); v1.3+ and v2.x use §5.
 
 `kb/versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
-The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` at the top of the script; stub bodies come from `templates/<category>.md`.
+The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. Stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
 
