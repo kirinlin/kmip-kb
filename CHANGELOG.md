@@ -7,6 +7,18 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Changed
+- **Repo restructured: all KB content moved under `kb/`.** The 11 content
+  directories (`attributes`, `concepts`, `examples`, `mappings`, `objects`,
+  `operations`, `profiles`, `references`, `ttlv`, `versions`, `workflows`)
+  now live under `kb/`; the root retains only `schemas/`, `templates/`, and
+  `scripts/`. Scripts updated: `CATEGORY_DIR` and `STRUCTURE_DIRS` in
+  `build_kb_scaffold.py`, `CONTENT_DIRS` in `status_report.py`,
+  `ALL_KB_DIRS` in `validate_links.py`, and the default path in
+  `check_verbatim.py`. Cross-links in `kb/workflows`, `kb/examples`, and
+  `kb/mappings` index pages corrected for their new sibling position inside
+  `kb/`. `README.md` and `CLAUDE.md` updated throughout.
+
+### Changed
 - **Baseline moved from v1.4 to v2.1.** Each doc now carries both
   `source_section` (the v2.1 baseline section) and a new optional
   `v1_source_section` (the v1.x section for the same concept, e.g.
