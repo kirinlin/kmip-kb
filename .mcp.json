@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kmip-kb": {
+      "command": "bash",
+      "args": ["mcp_server/start.sh"]
+    }
+  }
+}
