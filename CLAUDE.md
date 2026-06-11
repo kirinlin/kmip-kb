@@ -20,6 +20,15 @@ Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
+## source_section for KMIP-Prof articles
+
+Articles sourced from the separate OASIS Profiles document ([KMIP-Prof]) use
+the prefix `prof-` in `source_section` (e.g., `source_section: "prof-5.1"`)
+to distinguish them from sections of KMIP-SPEC. `check_verbatim.py` and
+`build_kb_scaffold.py` both resolve this prefix against the profiles document
+(`raw/kmip/kmip-profiles/v<ver>/kmip-profiles-v<ver>.md`) rather than the main
+spec.
+
 ## Authoring content
 
 Fill a stub's existing section headers with original prose, populate front
@@ -55,13 +64,16 @@ python scripts/status_report.py --json          # machine-readable output
 
 ## Scaffold generator
 
-`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and `kb/versions/<ver>-toc.yaml`. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`).
+`scripts/build_kb_scaffold.py` — parses a raw spec and (re)generates dirs, one empty stub per section, and a version TOC file. Pure stdlib. **Never overwrites a file whose `status` ≠ `stub`**, so it is safe to re-run. Supports v1.0–v1.4 (from `raw/kmip/spec/`) and v2.0–v2.1 (from `raw/kmip/kmip-spec/`). Also supports the separate KMIP Profiles document via `--source prof`.
 
 ```
-python scripts/build_kb_scaffold.py [--version 2.1] [--out .] [--toc-only] [--no-stubs] [--check]
+python scripts/build_kb_scaffold.py [--version 2.1] [--source spec|prof] [--out .] [--toc-only] [--no-stubs] [--check]
 ```
 
-ToC maps for all seven releases are committed under `kb/versions/`:
+- `--source spec` (default): parses KMIP-SPEC; writes `kb/versions/<ver>-toc.yaml`
+- `--source prof`: parses KMIP-Prof (`raw/kmip/kmip-profiles/v<ver>/`); writes `kb/versions/<ver>-prof-toc.yaml`; prefixes `source_section` with `prof-`
+
+ToC maps for all seven spec releases and KMIP-Prof v2.1 are committed under `kb/versions/`:
 
 | File | Sections |
 |---|---|
@@ -72,10 +84,11 @@ ToC maps for all seven releases are committed under `kb/versions/`:
 | `kb/versions/1.2-toc.yaml` | 134 |
 | `kb/versions/1.1-toc.yaml` | 112 |
 | `kb/versions/1.0-toc.yaml` | 104 |
+| `kb/versions/2.1-prof-toc.yaml` | 20 (KMIP-Prof §3 + §5) |
 
 `kb/versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
-The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` at the top of the script (v2.x has a completely different section numbering from v1.x); stub bodies come from `templates/<category>.md`.
+The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` at the top of the script; stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
 

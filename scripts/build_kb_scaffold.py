@@ -83,12 +83,41 @@ V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
 
 PREFIX_RULES = V1X_PREFIX_RULES  # default; overridden per-version in cmd_generate
 
+# KMIP Profiles document ([KMIP-Prof]) section classification.
+# The profiles doc is versioned in sync with KMIP-SPEC (both 2.1, etc.) but is a
+# separate OASIS document. Section numbers here come from that document, not
+# KMIP-SPEC, so stubs emitted from this ruleset use source_section "prof-N.M".
+PROF_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
+    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, HTTPS)
+    "5": ("profile", 2, ""),  # §5 Profile definitions (Baseline, Complete, HTTPS, ...)
+}
+
 
 def get_prefix_rules(version: str) -> dict[str, tuple[str, int, str]]:
     """Return the section-classification rules for the given spec version."""
     if version.startswith("2."):
         return V20_PREFIX_RULES
     return V1X_PREFIX_RULES
+
+
+def prof_path_for(version: str) -> Path:
+    """Return the raw KMIP-Prof document path for a given version.
+
+    v2.x profiles live under ``raw/kmip/kmip-profiles/v<ver>/``.
+    v1.x profiles live under ``raw/kmip/profiles/v<ver>/os/``.
+    """
+    if version.startswith("2."):
+        base = REPO_ROOT / "raw" / "kmip" / "kmip-profiles" / f"v{version}"
+        return base / f"kmip-profiles-v{version}.md"
+    base = REPO_ROOT / "raw" / "kmip" / "profiles" / f"v{version}" / "os"
+    candidates = [
+        base / f"kmip-profiles-v{version}-os.md",
+        base / f"kmip-profiles-{version}-os.md",  # v1.0 uses this form
+    ]
+    for c in candidates:
+        if c.exists():
+            return c
+    return candidates[0]
 
 CATEGORY_DIR: dict[str, str] = {
     "operation": "kb/operations",
@@ -390,13 +419,14 @@ def build_index(out: Path, dirname: str, purpose: str, version: str) -> str:
     return render_front_matter(fm) + body
 
 
-def build_stub(stub: dict, version: str, bodies: dict[str, str]) -> str:
+def build_stub(stub: dict, version: str, bodies: dict[str, str],
+               section_prefix: str = "") -> str:
     fm = {
         "title": stub["title"],
         "category": stub["category"],
         "spec_version": version,
         "spec_versions": [version],
-        "source_section": stub["section"],
+        "source_section": f"{section_prefix}{stub['section']}" if section_prefix else stub["section"],
         "status": "stub",
         "related": [],
         "keywords": [],
@@ -429,14 +459,23 @@ def render_toc(version: str, spec_rel: str, stubs: list[dict]) -> str:
 def cmd_generate(args) -> int:
     out = Path(args.out).resolve()
     version = args.version
-    spec = Path(args.spec).resolve() if args.spec else spec_path_for(version)
+    source = getattr(args, "source", "spec")
+
+    if args.spec:
+        spec = Path(args.spec).resolve()
+    elif source == "prof":
+        spec = prof_path_for(version)
+    else:
+        spec = spec_path_for(version)
     if not spec.exists():
         print(f"ERROR: spec not found: {spec}", file=sys.stderr)
         return 2
 
     text = spec.read_text(encoding="utf-8")
     headings = parse_headings(text)
-    stubs = select_stubs(headings, get_prefix_rules(version))
+    rules = PROF_PREFIX_RULES if source == "prof" else get_prefix_rules(version)
+    section_prefix = "prof-" if source == "prof" else ""
+    stubs = select_stubs(headings, rules)
 
     # detect slug collisions within a category
     seen: dict[tuple[str, str, str], str] = {}
@@ -464,7 +503,8 @@ def cmd_generate(args) -> int:
 
     # 2. TOC map
     (out / "kb" / "versions").mkdir(parents=True, exist_ok=True)
-    toc_path = out / "kb" / "versions" / f"{version}-toc.yaml"
+    toc_name = f"{version}-prof-toc.yaml" if source == "prof" else f"{version}-toc.yaml"
+    toc_path = out / "kb" / "versions" / toc_name
     toc_path.write_text(render_toc(version, spec_rel, stubs), encoding="utf-8")
 
     # 3. stubs
@@ -474,12 +514,12 @@ def cmd_generate(args) -> int:
                   for cat, tmpl in CATEGORY_TEMPLATE.items()}
         for s in stubs:
             path = out / target_path(s["category"], s["subdir"], s["slug"])
-            res = write_if_stub(path, build_stub(s, version, bodies))
+            res = write_if_stub(path, build_stub(s, version, bodies, section_prefix))
             counts[res] += 1
 
     print(f"spec: {spec_rel}")
     print(f"headings parsed: {len(headings)}  stubs: {len(stubs)}")
-    print(f"toc: versions/{version}-toc.yaml")
+    print(f"toc: versions/{toc_name}")
     print("files: " + "  ".join(f"{k}={v}" for k, v in counts.items()))
     return 0
 
@@ -559,6 +599,8 @@ def main(argv: list[str] | None = None) -> int:
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--version", default="2.1",
                    help="KMIP version to scaffold from, 1.0-1.4 or 2.0-2.1 (default: 2.1)")
+    p.add_argument("--source", default="spec", choices=["spec", "prof"],
+                   help="Source document: spec = KMIP-SPEC, prof = KMIP-Prof (default: spec)")
     p.add_argument("--spec", default=None,
                    help="Explicit path to a raw spec markdown file (overrides --version)")
     p.add_argument("--out", default=".", help="Output root (default: repo root)")

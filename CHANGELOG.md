@@ -6,6 +6,31 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+- **17 new `kb/profiles/` articles** sourced from the KMIP Profiles document
+  ([KMIP-Prof] v2.1, separate from KMIP-SPEC):
+  - Authentication suites: `basic-authentication-suite.md`,
+    `https-authentication-suite.md`
+  - Base/encoding profiles: `base-profiles.md`, `complete-server-profile.md`,
+    `https-profiles.md`, `xml-profiles.md`, `json-profiles.md`
+  - Key-management use-case profiles: `symmetric-key-lifecycle-profiles.md`,
+    `symmetric-key-foundry-for-fips-140-profiles.md`,
+    `asymmetric-key-lifecycle-profiles.md`, `cryptographic-profiles.md`,
+    `opaque-managed-object-store-profiles.md`,
+    `storage-array-with-self-encrypting-drives-profiles.md`,
+    `tape-library-profiles.md`, `aes-xts-profiles.md`,
+    `quantum-safe-profiles.md` (§5.14–5.17 consolidated),
+    `pkcs-11-profiles.md`
+  - `kb/profiles/index.md` updated with links to all articles.
+- `kb/versions/2.1-prof-toc.yaml` — machine-readable section→file map for
+  KMIP-Prof v2.1 (20 profile-family entries from §3 and §5).
+- **`build_kb_scaffold.py --source prof`** flag: scaffolds from the KMIP-Prof
+  document instead of KMIP-SPEC. Adds `PROF_PREFIX_RULES` (§3 auth suites,
+  §5 profile definitions at depth 2), `prof_path_for()` resolver, and writes
+  TOC to `<ver>-prof-toc.yaml`. Stubs emitted with `source_section: "prof-N.M"`.
+- **`check_verbatim.py`** now resolves `prof-*` `source_section` values against
+  the KMIP-Prof document rather than KMIP-SPEC.
+
 ## [0.9.0] - 2026-06-11
 
 ### Added

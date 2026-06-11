@@ -29,7 +29,7 @@ from pathlib import Path
 
 # Reuse front-matter reading and spec-path resolution from the scaffold tool.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_kb_scaffold import read_front_matter, spec_path_for  # noqa: E402
+from build_kb_scaffold import read_front_matter, spec_path_for, prof_path_for  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 HEADING_RE = re.compile(r"^(#{1,6})\s+(\d+(?:\.\d+)*)\s+(.*)$")
@@ -112,11 +112,22 @@ def check_file(path: Path, default_version: str, n: int) -> list[str]:
         return []
 
     version = str(fm.get("spec_version") or default_version)
-    spec = spec_path_for(version)
-    if not spec.exists():
-        print(f"WARN {path.name}: source spec not found for version {version}",
-              file=sys.stderr)
-        return []
+
+    # Sections prefixed "prof-" come from the KMIP-Prof document, not KMIP-SPEC.
+    if section.startswith("prof-"):
+        bare_section = section[len("prof-"):]
+        spec = prof_path_for(version)
+        if not spec.exists():
+            print(f"WARN {path.name}: KMIP-Prof not found for version {version}",
+                  file=sys.stderr)
+            return []
+        section = bare_section
+    else:
+        spec = spec_path_for(version)
+        if not spec.exists():
+            print(f"WARN {path.name}: source spec not found for version {version}",
+                  file=sys.stderr)
+            return []
 
     src = extract_section(spec.read_text(encoding="utf-8"), section)
     if src is None:

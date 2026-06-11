@@ -50,9 +50,12 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** all 158 content documents — every operation, object,
-attribute, TTLV structure, concept, profile, and reference, plus the category
-index pages — are authored as `draft`; no stubs remain. Next steps are review
+**Authoring status:** all 175 content documents — every operation, object,
+attribute, TTLV structure, concept, profile, reference, plus the category
+index pages — are authored as `draft`; no stubs remain. This includes 17 new
+articles from the KMIP Profiles document ([KMIP-Prof]): authentication suites,
+baseline/complete server, encoding profiles (HTTPS/XML/JSON), and all use-case
+profiles through PKCS#11 and Quantum Safe. Next steps are review
 (`draft` → `reviewed`) and the planned content listed in the `kb/examples/`,
 `kb/workflows/`, and `kb/mappings/` index pages.
 
@@ -74,9 +77,10 @@ python scripts/build_kb_scaffold.py --prune    # delete orphaned stubs
 | Flag | Default | Effect |
 |---|---|---|
 | `--version` | `2.1` | KMIP version to scaffold from (`1.0`–`1.4` and `2.0`–`2.1` all supported) |
+| `--source` | `spec` | Source document: `spec` = KMIP-SPEC, `prof` = KMIP-Prof (writes `<ver>-prof-toc.yaml`, prefixes sections with `prof-`) |
 | `--spec FILE` | *(derived)* | Explicit raw spec path (overrides `--version`) |
 | `--out DIR` | `.` | Output root |
-| `--toc-only` | *(off)* | Only regenerate `kb/versions/<ver>-toc.yaml` |
+| `--toc-only` | *(off)* | Only regenerate the TOC map |
 | `--no-stubs` | *(off)* | Create dirs + TOC but no stub files |
 | `--check` | *(off)* | Validate front matter against the JSON Schema and exit |
 | `--prune` | *(off)* | Delete stub files no longer in the rules (keeps authored docs) |
