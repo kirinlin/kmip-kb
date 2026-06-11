@@ -6,63 +6,11 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-### Added
-- `Makefile`: `report` target runs `scripts/status_report.py`; `crawl` target runs `scripts/kmip_crawler.py` (extracted from old `build`).
-
-### Changed
-- `Makefile`: `build` target is now a stub (`echo "Coming Soon"`).
-- `.gitignore`: removed `docs/` exclusion so a generated `docs/` directory can be tracked.
-
-### Changed
-- **Repo restructured: all KB content moved under `kb/`.** The 11 content
-  directories (`attributes`, `concepts`, `examples`, `mappings`, `objects`,
-  `operations`, `profiles`, `references`, `ttlv`, `versions`, `workflows`)
-  now live under `kb/`; the root retains only `schemas/`, `templates/`, and
-  `scripts/`. Scripts updated: `CATEGORY_DIR` and `STRUCTURE_DIRS` in
-  `build_kb_scaffold.py`, `CONTENT_DIRS` in `status_report.py`,
-  `ALL_KB_DIRS` in `validate_links.py`, and the default path in
-  `check_verbatim.py`. Cross-links in `kb/workflows`, `kb/examples`, and
-  `kb/mappings` index pages corrected for their new sibling position inside
-  `kb/`. `README.md` and `CLAUDE.md` updated throughout.
-
-### Changed
-- **Baseline moved from v1.4 to v2.1.** Each doc now carries both
-  `source_section` (the v2.1 baseline section) and a new optional
-  `v1_source_section` (the v1.x section for the same concept, e.g.
-  `attributes/link.md` → `source_section: "4.31"`, `v1_source_section: "3.35"`).
-  The five docs removed in v2.0 carry `source_section: "del_v2"` with their last
-  v1.x section in `v1_source_section`. v2.x-only features (no v1 mapping) omit
-  `v1_source_section`. The schema, `build_kb_scaffold.py` (render + validate),
-  and `check_verbatim.py` (anchors `del_v2` docs against their v1.x section)
-  were updated accordingly.
-  `source_section` front matter is now v2.1 section numbering: 142 docs renumbered from the committed
-  `versions/2.1-toc.yaml` (e.g. `operations/create.md` §4.1 → §6.1.8,
-  `attributes/name.md` §3.2 → §4.32, `ttlv/key-block.md` §2.1.3 → §3.1), plus
-  renamed/restructured docs mapped by hand (client/server correlation values →
-  §9.9/§9.10, `ttlv/ttlv-encoding.md` → §10.1, `concepts/error-handling.md` →
-  no discrete v2.x section). `spec_version` set to `"2.1"` on every doc present
-  in v2.1. The five docs removed in v2.0 (`objects/template.md`,
-  `attributes/certificate-identifier/subject/issuer.md`,
-  `attributes/operation-policy-name.md`) keep their last-present v1.x
-  baseline and numbering.
-- `scripts/build_kb_scaffold.py` `--version` default changed `1.4` → `2.1`.
-- Baseline declarations updated in `README.md`, `CLAUDE.md`, and the
-  `schemas/frontmatter.schema.json` example; CLAUDE.md's section→category map
-  now leads with v2.1 numbering.
-- In-body `§` cross-references across ~20 content docs re-anchored to v2.1
-  numbering (v1.x noted where useful) — references, profiles, concepts,
-  operations/attributes/ttlv index pages, and the `protocol-version` /
-  `ttlv-encoding` / `operation(s)` / `result-reason` / `attribute` structures.
-  Version-negotiation examples in `ttlv/protocol-version.md` now use 2.x.
-- Reworded five field-table rows (`attributes/digest`, `link`,
-  `revocation-reason`; `operations/export`, `get-usage-allocation`) to keep
-  the no-verbatim guard green against the v2.1 source, which it now checks.
-- Meta/index pages (`examples`, `mappings`, `workflows`, `schemas`,
-  `schemas/agent` indexes) extended to the full `spec_versions` range; document
-  skeletons in `templates/` rebased to `spec_version: "2.1"`,
-  `spec_versions: ["2.1"]`.
+## [0.9.0] - 2026-06-11
 
 ### Added
+- `Makefile`: `report` target runs `scripts/status_report.py`; `crawl` target
+  runs `scripts/kmip_crawler.py` (extracted from old `build`).
 - `versions/2.0-toc.yaml` (215 sections) and `versions/2.1-toc.yaml` (234
   sections) — generated section→file maps for KMIP v2.0 and v2.1.
   `scripts/build_kb_scaffold.py` extended with `V20_PREFIX_RULES` (v2.x has a
@@ -86,8 +34,6 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   carrying "2.0" (v2.1 is purely additive). Five docs correctly excluded from
   both (removed in v2.0): `objects/template.md`, `attributes/certificate-
   identifier/subject/issuer.md`, `attributes/operation-policy-name.md`.
-
-### Added
 - `versions/1.0-toc.yaml`, `versions/1.1-toc.yaml`, `versions/1.2-toc.yaml`,
   `versions/1.3-toc.yaml` — generated section→file maps for KMIP v1.0–v1.3,
   produced by `scripts/build_kb_scaffold.py --version <ver> --toc-only`
@@ -110,8 +56,6 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     legacy Transparent EC key forms).
 - `spec_versions` front matter verified against ToC diffs across all 53
   version-boundary docs (v1.1/1.2/1.3/1.4 new sections); 0 errors found.
-
-### Added
 - Authored all remaining stub content (119 docs) as original prose
   (`status: draft`), bringing the knowledge base to 100% draft coverage
   (158 content docs, 0 stubs):
@@ -153,17 +97,6 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `--skip-file` option on `scripts/kmip_crawler.py` (default `./raw/404skip.txt`)
   — skips URLs listed in the file, e.g. known 404s, before download; a missing
   file is ignored.
-
-### Fixed
-- `scripts/kmip_crawler.py` now prunes paths in `EXCLUDE_PREFIXES` from both the
-  crawl and any `--urls` list, starting with the
-  `kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0` subtree that self-references
-  into runaway depth from server mis-linking.
-- Removed two orphaned operation stubs (`operations/notify.md`,
-  `operations/put.md`) left at the top level before server-to-client routing
-  existed; the correct copies live under `operations/server-to-client/`.
-
-### Added (scaffold)
 - Knowledge-base scaffold targeting the KMIP 1.x family (baseline v1.4):
   directory structure (`concepts/`, `operations/` + `operations/server-to-client/`,
   `objects/`, `attributes/`, `ttlv/`, `profiles/`, `workflows/`, `examples/`,
@@ -184,9 +117,67 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   and review checklist.
 
 ### Changed
+- `Makefile`: `build` target is now a stub (`echo "Coming Soon"`).
+- `.gitignore`: removed `docs/` exclusion so a generated `docs/` directory can
+  be tracked.
+- **Repo restructured: all KB content moved under `kb/`.** The 11 content
+  directories (`attributes`, `concepts`, `examples`, `mappings`, `objects`,
+  `operations`, `profiles`, `references`, `ttlv`, `versions`, `workflows`)
+  now live under `kb/`; the root retains only `schemas/`, `templates/`, and
+  `scripts/`. Scripts updated: `CATEGORY_DIR` and `STRUCTURE_DIRS` in
+  `build_kb_scaffold.py`, `CONTENT_DIRS` in `status_report.py`,
+  `ALL_KB_DIRS` in `validate_links.py`, and the default path in
+  `check_verbatim.py`. Cross-links in `kb/workflows`, `kb/examples`, and
+  `kb/mappings` index pages corrected for their new sibling position inside
+  `kb/`. `README.md` and `CLAUDE.md` updated throughout.
+- **Baseline moved from v1.4 to v2.1.** Each doc now carries both
+  `source_section` (the v2.1 baseline section) and a new optional
+  `v1_source_section` (the v1.x section for the same concept, e.g.
+  `attributes/link.md` → `source_section: "4.31"`, `v1_source_section: "3.35"`).
+  The five docs removed in v2.0 carry `source_section: "del_v2"` with their last
+  v1.x section in `v1_source_section`. v2.x-only features (no v1 mapping) omit
+  `v1_source_section`. The schema, `build_kb_scaffold.py` (render + validate),
+  and `check_verbatim.py` (anchors `del_v2` docs against their v1.x section)
+  were updated accordingly.
+  `source_section` front matter is now v2.1 section numbering: 142 docs renumbered from the committed
+  `versions/2.1-toc.yaml` (e.g. `operations/create.md` §4.1 → §6.1.8,
+  `attributes/name.md` §3.2 → §4.32, `ttlv/key-block.md` §2.1.3 → §3.1), plus
+  renamed/restructured docs mapped by hand (client/server correlation values →
+  §9.9/§9.10, `ttlv/ttlv-encoding.md` → §10.1, `concepts/error-handling.md` →
+  no discrete v2.x section). `spec_version` set to `"2.1"` on every doc present
+  in v2.1. The five docs removed in v2.0 (`objects/template.md`,
+  `attributes/certificate-identifier/subject/issuer.md`,
+  `attributes/operation-policy-name.md`) keep their last-present v1.x
+  baseline and numbering.
+- `scripts/build_kb_scaffold.py` `--version` default changed `1.4` → `2.1`.
+- Baseline declarations updated in `README.md`, `CLAUDE.md`, and the
+  `schemas/frontmatter.schema.json` example; CLAUDE.md's section→category map
+  now leads with v2.1 numbering.
+- In-body `§` cross-references across ~20 content docs re-anchored to v2.1
+  numbering (v1.x noted where useful) — references, profiles, concepts,
+  operations/attributes/ttlv index pages, and the `protocol-version` /
+  `ttlv-encoding` / `operation(s)` / `result-reason` / `attribute` structures.
+  Version-negotiation examples in `ttlv/protocol-version.md` now use 2.x.
+- Reworded five field-table rows (`attributes/digest`, `link`,
+  `revocation-reason`; `operations/export`, `get-usage-allocation`) to keep
+  the no-verbatim guard green against the v2.1 source, which it now checks.
+- Meta/index pages (`examples`, `mappings`, `workflows`, `schemas`,
+  `schemas/agent` indexes) extended to the full `spec_versions` range; document
+  skeletons in `templates/` rebased to `spec_version: "2.1"`,
+  `spec_versions: ["2.1"]`.
 - `README.md` rewritten knowledge-base-first; the crawler is documented as
   secondary, private source-preparation tooling.
 - `CLAUDE.md` updated with the knowledge-base layout, the scaffold generator,
   the front-matter contract, and the no-verbatim rule.
 
-[Unreleased]: https://github.com/kmip-dev/kmip-dev/commits/main
+### Fixed
+- `scripts/kmip_crawler.py` now prunes paths in `EXCLUDE_PREFIXES` from both the
+  crawl and any `--urls` list, starting with the
+  `kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0` subtree that self-references
+  into runaway depth from server mis-linking.
+- Removed two orphaned operation stubs (`operations/notify.md`,
+  `operations/put.md`) left at the top level before server-to-client routing
+  existed; the correct copies live under `operations/server-to-client/`.
+
+[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.9.0...HEAD
+[0.9.0]: https://github.com/kmip-dev/kmip-dev/releases/tag/v0.9.0
