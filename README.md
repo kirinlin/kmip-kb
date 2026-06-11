@@ -51,17 +51,14 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** 234 content documents total — 178 `draft`, 56 `stub`.
-All non-profile categories (operations, objects, attributes, TTLV, concepts,
-references) are 100% draft. The 56 remaining stubs are exclusively in
-`kb/profiles/`: granular per-profile entries generated from KMIP-Prof v1.0–v2.0
+**Authoring status:** 234 content documents total — 234 `draft`, 0 `stub`.
+All categories are 100% draft. `kb/profiles/` is fully authored: authentication
+suites, encoding profiles (HTTPS/XML/JSON), Suite B, all use-case profiles through
+PKCS#11 and Quantum Safe, and the complete set of granular per-profile entries
 (baseline/complete server variants, symmetric/asymmetric key foundry variants,
-secret data, storage, certificate, and discover-versions profiles). The 22 authored
-profile articles cover authentication suites, encoding profiles (HTTPS/XML/JSON),
-Suite B, and all use-case profiles through PKCS#11 and Quantum Safe, enriched with
-test case naming conventions and v1.x provenance from the standalone companion docs.
-Next steps are authoring those profile stubs, then review (`draft` → `reviewed`),
-and the planned content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
+secret data, storage, certificate, and discover-versions profiles) for KMIP-Prof
+v1.0–v2.1. Next steps are review (`draft` → `reviewed`), and the planned content
+in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
 ## Scaffold generator
 

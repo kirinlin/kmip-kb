@@ -7,6 +7,36 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
 ### Added
+- **Authored all 56 remaining `kb/profiles/` stubs** (`stub → draft`), bringing
+  the knowledge base to 234 docs, 0 stubs, 234 drafts (100% draft coverage):
+  - `tls-1-2-authentication-suite.md` — TLS 1.2 Authentication Suite, v1.0–v1.2;
+    `spec_versions` corrected from `["1.0"]` to `["1.0", "1.1", "1.2"]`.
+  - **v1.0 combined client+server profiles** (6 files): `secret-data-kmip-profile.md`,
+    `basic-symmetric-key-store-and-server-kmip-profile.md` (updated to `["1.0","1.1"]`),
+    `basic-symmetric-key-foundry-and-server-kmip-profile.md` (updated to `["1.0","1.1"]`),
+    and their three TLS 1.2 authentication variants.
+  - **v1.1 Basic server profiles** (8 files): Discover Versions, Baseline, Secret
+    Data, Asymmetric Key Store, Asymmetric Key + Certificate Store, Asymmetric Key
+    Foundry, Certificate, and Asymmetric Key Foundry + Certificate.
+  - **v1.1 Basic client profiles** (10 files): the full client-side mirror of the
+    server set, plus Symmetric Key Store and Symmetric Key Foundry clients.
+  - **v1.1 TLS 1.2 server and client variants** (20 files): one-for-one TLS 1.2
+    transport variants of each v1.1 Basic server and client profile.
+  - **Storage client profiles** (2 files): `storage-client-kmip-profile.md` and its
+    TLS 1.2 variant — Opaque Managed Object storage (not Secret Data).
+  - **v1.2 renamed Baseline and Complete profiles** (6 files): `baseline-server-basic-kmip-profile.md`,
+    `baseline-server-tls-v1-2-kmip-profile.md`, `baseline-client-basic-kmip-profile.md`,
+    `baseline-client-tls-v1-2-kmip-profile.md`, `complete-server-basic-kmip-profile.md`,
+    `complete-server-tls-v1-2-kmip-profile.md` — v1.2 cosmetic word-order renames
+    from v1.1 "Basic Baseline" → "Baseline Basic"; Complete Server profiles introduce
+    the highest v1.2 compliance tier.
+  - **Quantum Safe trio** (3 files): `quantum-safe-client.md` and
+    `quantum-safe-server.md` (both `spec_versions` corrected from `["2.0"]` to
+    `["2.0","2.1"]`), and `mandatory-quantum-safe-test-cases-kmip-v2-0.md` —
+    includes full algorithm matrix (AES, ChaCha20, McEliece-6960119,
+    McEliece-8192128, SPHINCS-256, ECDSA, Ed25519), three new attributes (Protection
+    Level, Protection Period, Quantum Safe), algorithm-selection behavior, and the
+    two mandatory v2.0 test cases (QS-M-1-20, QS-M-2-20).
 - **KMIP KB MCP server** (`mcp_server/kmip_kb_server.py`) — FastMCP server
   exposing the knowledge base over stdio with four tools: `search_kb` (BM25
   full-text search), `get_article` (full article retrieval), `list_articles`
