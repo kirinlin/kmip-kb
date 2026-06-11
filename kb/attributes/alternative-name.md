@@ -8,6 +8,8 @@ v1_source_section: "3.40"
 status: draft
 related: ["name", "unique-identifier", "application-specific-information"]
 keywords: ["alternative name", "alias", "locate", "URI", "DNS name", "email"]
+tag_hex: "4200BF"
+xml_element: "AlternativeName"
 ---
 
 # Alternative Name

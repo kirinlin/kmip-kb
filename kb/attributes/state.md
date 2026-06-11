@@ -8,6 +8,8 @@ v1_source_section: "3.22"
 status: draft
 related: ["activation-date", "deactivation-date", "compromise-date", "destroy-date", "revocation-reason"]
 keywords: ["state", "lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "SP 800-57"]
+tag_hex: "42008D"
+xml_element: "State"
 ---
 
 # State

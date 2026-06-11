@@ -8,6 +8,8 @@ v1_source_section: "3.28"
 status: draft
 related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["destroy date", "destroyed state", "key destruction", "audit"]
+tag_hex: "420033"
+xml_element: "DestroyDate"
 ---
 
 # Destroy Date

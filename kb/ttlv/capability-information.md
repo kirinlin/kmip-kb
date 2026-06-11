@@ -8,6 +8,8 @@ v1_source_section: "2.1.21"
 status: draft
 related: ["profile-information", "validation-information", "correlation-value"]
 keywords: ["capability information", "streaming capability", "asynchronous capability", "destroy action", "unwrap mode"]
+tag_hex: "4200F7"
+xml_element: "CapabilityInformation"
 ---
 
 # Capability Information

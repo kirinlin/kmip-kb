@@ -8,6 +8,8 @@ v1_source_section: "3.36"
 status: draft
 related: ["object-group", "custom-attribute", "name"]
 keywords: ["application specific information", "application namespace", "application data", "ASI"]
+tag_hex: "420004"
+xml_element: "ApplicationSpecificInformation"
 ---
 
 # Application Specific Information

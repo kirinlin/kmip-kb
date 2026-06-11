@@ -8,6 +8,8 @@ v1_source_section: "6.10"
 status: draft
 related: ["result-status", "result-message", "batch-item"]
 keywords: ["result reason", "error code", "item not found", "permission denied", "general failure"]
+tag_hex: "42007E"
+xml_element: "ResultReason"
 ---
 
 # Result Reason

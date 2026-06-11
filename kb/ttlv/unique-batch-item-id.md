@@ -8,6 +8,8 @@ v1_source_section: "6.4"
 status: draft
 related: ["batch-item", "batch-count", "batch-order-option"]
 keywords: ["unique batch item ID", "correlation", "batching", "request response matching"]
+tag_hex: "420093"
+xml_element: "UniqueBatchItemID"
 ---
 
 # Unique Batch Item ID

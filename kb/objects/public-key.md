@@ -8,6 +8,8 @@ v1_source_section: "2.2.3"
 status: draft
 related: ["private-key", "create-key-pair", "certify", "register", "get", "certificate", "key-block", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["public key", "asymmetric key", "RSA", "EC", "key pair"]
+tag_hex: "42006D"
+xml_element: "PublicKey"
 ---
 
 # Public Key

@@ -8,6 +8,8 @@ v1_source_section: "2.1.13"
 status: draft
 related: ["data", "signature-data", "authenticated-encryption-tag"]
 keywords: ["MAC data", "message authentication code", "HMAC", "MAC verify"]
+tag_hex: "4200C6"
+xml_element: "MACData"
 ---
 
 # MAC Data

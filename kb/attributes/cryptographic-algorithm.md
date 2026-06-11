@@ -8,6 +8,8 @@ v1_source_section: "3.4"
 status: draft
 related: ["cryptographic-length", "cryptographic-parameters", "digital-signature-algorithm", "cryptographic-usage-mask"]
 keywords: ["cryptographic algorithm", "AES", "RSA", "algorithm enumeration"]
+tag_hex: "420028"
+xml_element: "CryptographicAlgorithm"
 ---
 
 # Cryptographic Algorithm

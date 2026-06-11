@@ -8,6 +8,8 @@ v1_source_section: "2.1.4"
 status: draft
 related: ["key-block", "key-wrapping-data", "transparent-key-structures", "attribute"]
 keywords: ["key value", "key material", "wrapped key", "encapsulated attributes"]
+tag_hex: "420045"
+xml_element: "KeyValue"
 ---
 
 # Key Value

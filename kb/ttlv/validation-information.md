@@ -8,6 +8,8 @@ v1_source_section: "2.1.20"
 status: draft
 related: ["profile-information", "capability-information", "rng-parameters"]
 keywords: ["validation information", "FIPS 140", "Common Criteria", "certification", "CMVP"]
+tag_hex: "4200DF"
+xml_element: "ValidationInformation"
 ---
 
 # Validation Information

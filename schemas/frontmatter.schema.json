@@ -77,6 +77,16 @@
       "items": { "type": "string" },
       "uniqueItems": true,
       "description": "Retrieval keywords for RAG / search."
+    },
+    "tag_hex": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]{6}$",
+      "description": "6-digit uppercase hex tag value from KMIP §11.56 Tag Enumeration (e.g. \"42000D\"). Present only on docs that map to a named KMIP tag."
+    },
+    "xml_element": {
+      "type": "string",
+      "minLength": 1,
+      "description": "CamelCase XML element name for this tag (e.g. \"BatchCount\"). Derived from the tag name per KMIP XML encoding rules (split on non-alphanumeric, capitalise each part)."
     }
   }
 }

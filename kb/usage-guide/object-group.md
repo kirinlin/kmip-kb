@@ -7,6 +7,8 @@ source_section: "ug-3.28"
 status: draft
 related: ["attributes", "locate"]
 keywords: ["Object Group", "Fresh", "group member", "round robin", "key pool", "Locate"]
+tag_hex: "420056"
+xml_element: "ObjectGroup"
 ---
 
 # Object Group

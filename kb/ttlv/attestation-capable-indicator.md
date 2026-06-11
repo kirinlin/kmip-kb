@@ -8,6 +8,8 @@ v1_source_section: "6.17"
 status: draft
 related: ["credential", "nonce", "result-reason"]
 keywords: ["attestation capable indicator", "TPM", "attestation required", "request header"]
+tag_hex: "4200D3"
+xml_element: "AttestationCapableIndicator"
 ---
 
 # Attestation Capable Indicator

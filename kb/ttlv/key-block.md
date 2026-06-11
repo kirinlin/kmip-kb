@@ -8,6 +8,8 @@ v1_source_section: "2.1.3"
 status: draft
 related: ["key-value", "key-wrapping-data", "transparent-key-structures", "cryptographic-algorithm"]
 keywords: ["key block", "key format type", "key compression", "wrapped key", "key container"]
+tag_hex: "420040"
+xml_element: "KeyBlock"
 ---
 
 # Key Block

@@ -8,6 +8,8 @@ v1_source_section: "2.1.6"
 status: draft
 related: ["key-wrapping-data", "key-block", "key-value"]
 keywords: ["key wrapping specification", "wrapped key request", "get wrapped", "encoding option"]
+tag_hex: "420047"
+xml_element: "KeyWrappingSpecification"
 ---
 
 # Key Wrapping Specification

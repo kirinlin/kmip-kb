@@ -8,6 +8,8 @@ v1_source_section: "3.27"
 status: draft
 related: ["state", "activation-date", "protect-stop-date", "revocation-reason"]
 keywords: ["deactivation date", "deactivated state", "expiry", "lifecycle dates"]
+tag_hex: "42002F"
+xml_element: "DeactivationDate"
 ---
 
 # Deactivation Date

@@ -8,6 +8,8 @@ v1_source_section: "2.2.7"
 status: draft
 related: ["derive-key", "register", "get", "symmetric-key", "key-block", "cryptographic-usage-mask"]
 keywords: ["secret data", "password", "shared secret", "seed", "derivation"]
+tag_hex: "420085"
+xml_element: "SecretData"
 ---
 
 # Secret Data

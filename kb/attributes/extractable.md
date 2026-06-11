@@ -8,6 +8,8 @@ v1_source_section: "3.50"
 status: draft
 related: ["never-extractable", "sensitive", "always-sensitive"]
 keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity"]
+tag_hex: "420122"
+xml_element: "Extractable"
 ---
 
 # Extractable

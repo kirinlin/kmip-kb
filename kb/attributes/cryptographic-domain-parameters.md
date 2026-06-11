@@ -8,6 +8,8 @@ v1_source_section: "3.7"
 status: draft
 related: ["cryptographic-parameters", "cryptographic-length", "cryptographic-algorithm"]
 keywords: ["domain parameters", "Qlength", "recommended curve", "DSA", "DH", "elliptic curve"]
+tag_hex: "420029"
+xml_element: "CryptographicDomainParameters"
 ---
 
 # Cryptographic Domain Parameters

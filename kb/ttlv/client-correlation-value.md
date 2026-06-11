@@ -8,6 +8,8 @@ v1_source_section: "6.18"
 status: draft
 related: ["server-correlation-value", "correlation-value", "message-structure"]
 keywords: ["client correlation value", "request tracing", "logging", "observability"]
+tag_hex: "420105"
+xml_element: "ClientCorrelationValue"
 ---
 
 # Client Correlation Value

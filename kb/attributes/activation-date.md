@@ -8,6 +8,8 @@ v1_source_section: "3.24"
 status: draft
 related: ["state", "initial-date", "deactivation-date", "process-start-date"]
 keywords: ["activation date", "active state", "lifecycle dates", "activate"]
+tag_hex: "420001"
+xml_element: "ActivationDate"
 ---
 
 # Activation Date

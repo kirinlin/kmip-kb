@@ -8,6 +8,8 @@ v1_source_section: "3.9"
 status: draft
 related: ["certificate-type", "cryptographic-length"]
 keywords: ["certificate length", "bytes", "DER size"]
+tag_hex: "4200AD"
+xml_element: "CertificateLength"
 ---
 
 # Certificate Length

@@ -7,6 +7,8 @@ source_section: "ug-3.25"
 status: draft
 related: ["key-block", "key-encoding"]
 keywords: ["Key Format Type", "Digest", "encoding format", "interoperability", "format negotiation"]
+tag_hex: "420042"
+xml_element: "KeyFormatType"
 ---
 
 # Key Format Type

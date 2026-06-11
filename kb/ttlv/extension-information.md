@@ -8,6 +8,8 @@ v1_source_section: "2.1.9"
 status: draft
 related: ["ttlv-encoding", "message-extension"]
 keywords: ["extension information", "vendor extension", "extension tag", "query extension list"]
+tag_hex: "4200A4"
+xml_element: "ExtensionInformation"
 ---
 
 # Extension Information

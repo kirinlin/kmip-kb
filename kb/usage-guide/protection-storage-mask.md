@@ -7,6 +7,8 @@ source_section: "ug-3.29"
 status: draft
 related: ["server-policy"]
 keywords: ["Protection Storage Mask", "storage", "HSM", "data sovereignty", "geographic constraint", "preference"]
+tag_hex: "42015E"
+xml_element: "ProtectionStorageMask"
 ---
 
 # Protection Storage Mask

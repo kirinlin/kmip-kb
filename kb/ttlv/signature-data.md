@@ -8,6 +8,8 @@ v1_source_section: "2.1.12"
 status: draft
 related: ["data", "mac-data", "digital-signature-algorithm"]
 keywords: ["signature data", "sign", "signature verify", "digital signature bytes"]
+tag_hex: "4200C3"
+xml_element: "SignatureData"
 ---
 
 # Signature Data

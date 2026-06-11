@@ -8,6 +8,8 @@ v1_source_section: "6.7"
 status: draft
 related: ["asynchronous-correlation-value", "result-status", "capability-information"]
 keywords: ["asynchronous indicator", "async", "polling", "request header"]
+tag_hex: "420007"
+xml_element: "AsynchronousIndicator"
 ---
 
 # Asynchronous Indicator

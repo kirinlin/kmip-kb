@@ -8,6 +8,8 @@ v1_source_section: "2.1.23"
 status: draft
 related: ["authenticated-encryption-additional-data", "data", "mac-data"]
 keywords: ["authentication tag", "GCM tag", "AEAD", "integrity"]
+tag_hex: "4200FF"
+xml_element: "AuthenticatedEncryptionTag"
 ---
 
 # Authenticated Encryption Tag

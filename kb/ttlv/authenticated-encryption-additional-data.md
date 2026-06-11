@@ -8,6 +8,8 @@ v1_source_section: "2.1.22"
 status: draft
 related: ["authenticated-encryption-tag", "data", "cryptographic-parameters"]
 keywords: ["AAD", "additional authenticated data", "GCM", "CCM", "AEAD"]
+tag_hex: "4200FE"
+xml_element: "AuthenticatedEncryptionAdditionalData"
 ---
 
 # Authenticated Encryption Additional Data

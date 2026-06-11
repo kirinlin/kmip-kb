@@ -8,6 +8,8 @@ v1_source_section: "2.2"
 status: draft
 related: ["symmetric-key", "certificate", "public-key", "private-key", "split-key", "secret-data", "opaque-object", "pgp-key", "template"]
 keywords: ["managed objects", "managed cryptographic objects", "key", "certificate"]
+tag_hex: "42014E"
+xml_element: "Objects"
 ---
 
 # Objects

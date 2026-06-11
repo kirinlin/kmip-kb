@@ -8,6 +8,8 @@ v1_source_section: "3.5"
 status: draft
 related: ["cryptographic-algorithm", "certificate-length", "cryptographic-domain-parameters"]
 keywords: ["cryptographic length", "key size", "bits", "key length"]
+tag_hex: "42002A"
+xml_element: "CryptographicLength"
 ---
 
 # Cryptographic Length

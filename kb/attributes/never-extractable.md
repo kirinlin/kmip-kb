@@ -8,6 +8,8 @@ v1_source_section: "3.51"
 status: draft
 related: ["extractable", "always-sensitive", "sensitive"]
 keywords: ["never extractable", "history flag", "audit", "PKCS#11 parity"]
+tag_hex: "420123"
+xml_element: "NeverExtractable"
 ---
 
 # Never Extractable

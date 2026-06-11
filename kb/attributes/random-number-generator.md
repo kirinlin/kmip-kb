@@ -8,6 +8,8 @@ v1_source_section: "3.44"
 status: draft
 related: ["original-creation-date", "cryptographic-algorithm", "rng-parameters"]
 keywords: ["random number generator", "RNG", "DRBG", "entropy provenance", "FIPS"]
+tag_hex: "4200DE"
+xml_element: "RandomNumberGenerator"
 ---
 
 # Random Number Generator

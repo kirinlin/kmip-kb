@@ -8,6 +8,8 @@ v1_source_section: "2.1.2"
 status: draft
 related: ["authentication", "nonce", "message-structure"]
 keywords: ["credential", "username password", "device credential", "attestation", "client identity"]
+tag_hex: "420023"
+xml_element: "Credential"
 ---
 
 # Credential

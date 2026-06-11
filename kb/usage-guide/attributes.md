@@ -7,6 +7,8 @@ source_section: "ug-3.15"
 status: draft
 related: ["mutating-attributes"]
 keywords: ["attributes", "Add Attribute", "Set Attribute", "Modify Attribute", "Delete Attribute", "Adjust Attribute", "multi-instance"]
+tag_hex: "420125"
+xml_element: "Attributes"
 ---
 
 # Attributes

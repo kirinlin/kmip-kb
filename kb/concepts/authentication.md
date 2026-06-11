@@ -8,6 +8,8 @@ v1_source_section: "8"
 status: draft
 related: ["transport", "error-handling", "credential", "kmip-server-implementation-conformance"]
 keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication"]
+tag_hex: "42000C"
+xml_element: "Authentication"
 ---
 
 # Authentication

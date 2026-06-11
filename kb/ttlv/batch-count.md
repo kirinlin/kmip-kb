@@ -8,6 +8,8 @@ v1_source_section: "6.14"
 status: draft
 related: ["batch-item", "batch-order-option", "unique-batch-item-id"]
 keywords: ["batch count", "message header", "number of operations"]
+tag_hex: "42000D"
+xml_element: "BatchCount"
 ---
 
 # Batch Count

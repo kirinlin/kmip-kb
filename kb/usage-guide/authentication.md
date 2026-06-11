@@ -7,6 +7,8 @@ source_section: "ug-3.1"
 status: draft
 related: ["credential", "transport"]
 keywords: ["authentication", "TLS", "credential", "username password", "device credential", "attestation", "identity"]
+tag_hex: "42000C"
+xml_element: "Authentication"
 ---
 
 # Authentication

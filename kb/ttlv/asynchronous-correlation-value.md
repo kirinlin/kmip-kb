@@ -8,6 +8,8 @@ v1_source_section: "6.8"
 status: draft
 related: ["asynchronous-indicator", "result-status", "correlation-value"]
 keywords: ["asynchronous correlation value", "pending operation", "poll", "cancel"]
+tag_hex: "420006"
+xml_element: "AsynchronousCorrelationValue"
 ---
 
 # Asynchronous Correlation Value

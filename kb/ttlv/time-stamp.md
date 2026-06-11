@@ -8,6 +8,8 @@ v1_source_section: "6.5"
 status: draft
 related: ["message-structure", "initial-date", "last-change-date"]
 keywords: ["time stamp", "message header", "clock skew", "POSIX time"]
+tag_hex: "420092"
+xml_element: "TimeStamp"
 ---
 
 # Time Stamp

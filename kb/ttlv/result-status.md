@@ -8,6 +8,8 @@ v1_source_section: "6.9"
 status: draft
 related: ["result-reason", "result-message", "batch-error-continuation-option"]
 keywords: ["result status", "success", "operation failed", "operation pending", "operation undone"]
+tag_hex: "42007F"
+xml_element: "ResultStatus"
 ---
 
 # Result Status

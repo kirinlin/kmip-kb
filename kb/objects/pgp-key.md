@@ -8,6 +8,8 @@ v1_source_section: "2.2.9"
 status: draft
 related: ["register", "get", "public-key", "private-key", "opaque-object", "key-block"]
 keywords: ["PGP key", "OpenPGP", "RFC 4880", "ASCII armor", "key block"]
+tag_hex: "4200BD"
+xml_element: "PGPKey"
 ---
 
 # PGP Key

@@ -8,6 +8,8 @@ v1_source_section: "2.1.19"
 status: draft
 related: ["capability-information", "validation-information", "kmip-server-implementation-conformance"]
 keywords: ["profile information", "profile name", "server URI", "conformance discovery"]
+tag_hex: "4200EB"
+xml_element: "ProfileInformation"
 ---
 
 # Profile Information

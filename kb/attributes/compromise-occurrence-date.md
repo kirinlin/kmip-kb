@@ -8,6 +8,8 @@ v1_source_section: "3.29"
 status: draft
 related: ["compromise-date", "revocation-reason", "state", "initial-date"]
 keywords: ["compromise occurrence date", "incident time", "key compromise", "forensics"]
+tag_hex: "420021"
+xml_element: "CompromiseOccurrenceDate"
 ---
 
 # Compromise Occurrence Date

@@ -8,6 +8,8 @@ v1_source_section: "3.31"
 status: draft
 related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit"]
+tag_hex: "420081"
+xml_element: "RevocationReason"
 ---
 
 # Revocation Reason

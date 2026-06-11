@@ -8,6 +8,8 @@ v1_source_section: "4"
 status: draft
 related: ["create", "register", "get", "locate", "query"]
 keywords: ["operations", "client-to-server", "server-to-client", "lifecycle", "cryptographic operations"]
+tag_hex: "42014F"
+xml_element: "Operations"
 ---
 
 # Operations

@@ -8,6 +8,8 @@ v1_source_section: "3.32"
 status: draft
 related: ["initial-date", "last-change-date", "state"]
 keywords: ["archive date", "archival storage", "recover", "storage status"]
+tag_hex: "420005"
+xml_element: "ArchiveDate"
 ---
 
 # Archive Date

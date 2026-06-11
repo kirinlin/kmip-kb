@@ -8,6 +8,8 @@ v1_source_section: "6.3"
 status: draft
 related: ["message-structure", "result-reason", "batch-count"]
 keywords: ["maximum response size", "response too large", "buffer limit", "constrained client"]
+tag_hex: "420050"
+xml_element: "MaximumResponseSize"
 ---
 
 # Maximum Response Size

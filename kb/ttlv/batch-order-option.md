@@ -8,6 +8,8 @@ v1_source_section: "6.12"
 status: draft
 related: ["batch-count", "batch-error-continuation-option", "batch-item"]
 keywords: ["batch order option", "in-order execution", "batching", "ID placeholder"]
+tag_hex: "420010"
+xml_element: "BatchOrderOption"
 ---
 
 # Batch Order Option

@@ -7,6 +7,8 @@ source_section: "ug-3.22"
 status: draft
 related: ["default-crypto-parameters", "server-policy"]
 keywords: ["constraints", "SetConstraints", "GetConstraints", "algorithm constraints", "key length", "Object Group"]
+tag_hex: "420168"
+xml_element: "Constraints"
 ---
 
 # Constraints

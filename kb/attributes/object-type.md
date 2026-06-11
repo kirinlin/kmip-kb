@@ -8,6 +8,8 @@ v1_source_section: "3.3"
 status: draft
 related: ["unique-identifier", "cryptographic-algorithm"]
 keywords: ["object type", "enumeration", "symmetric key", "certificate", "classification"]
+tag_hex: "420057"
+xml_element: "ObjectType"
 ---
 
 # Object Type

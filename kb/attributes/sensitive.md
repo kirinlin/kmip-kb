@@ -8,6 +8,8 @@ v1_source_section: "3.48"
 status: draft
 related: ["always-sensitive", "extractable", "never-extractable", "cryptographic-usage-mask"]
 keywords: ["sensitive", "wrapped export only", "key extraction", "PKCS#11 parity"]
+tag_hex: "420120"
+xml_element: "Sensitive"
 ---
 
 # Sensitive

@@ -8,6 +8,8 @@ v1_source_section: "2.1.10"
 status: draft
 related: ["data-length", "signature-data", "mac-data", "correlation-value"]
 keywords: ["data", "payload", "encrypt", "decrypt", "sign", "cryptographic operations"]
+tag_hex: "4200C2"
+xml_element: "Data"
 ---
 
 # Data

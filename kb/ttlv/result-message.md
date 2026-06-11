@@ -8,6 +8,8 @@ v1_source_section: "6.11"
 status: draft
 related: ["result-status", "result-reason"]
 keywords: ["result message", "error text", "diagnostics", "logging"]
+tag_hex: "42007D"
+xml_element: "ResultMessage"
 ---
 
 # Result Message

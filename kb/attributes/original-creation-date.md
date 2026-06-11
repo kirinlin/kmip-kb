@@ -8,6 +8,8 @@ v1_source_section: "3.43"
 status: draft
 related: ["initial-date", "last-change-date", "random-number-generator"]
 keywords: ["original creation date", "key age", "registration", "provenance"]
+tag_hex: "4200BC"
+xml_element: "OriginalCreationDate"
 ---
 
 # Original Creation Date

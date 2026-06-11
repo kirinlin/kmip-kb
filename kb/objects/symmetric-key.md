@@ -8,6 +8,8 @@ v1_source_section: "2.2.2"
 status: draft
 related: ["create", "register", "get", "derive-key", "encrypt", "decrypt", "key-block", "cryptographic-algorithm", "cryptographic-length", "cryptographic-usage-mask"]
 keywords: ["symmetric key", "AES", "secret key", "managed cryptographic object", "key block"]
+tag_hex: "42008F"
+xml_element: "SymmetricKey"
 ---
 
 # Symmetric Key

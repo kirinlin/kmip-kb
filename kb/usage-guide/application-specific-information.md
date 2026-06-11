@@ -7,6 +7,8 @@ source_section: "ug-3.18"
 status: draft
 related: ["object-group"]
 keywords: ["Application Specific Information", "Application Namespace", "Application Data", "server-generated data", "namespaces"]
+tag_hex: "420004"
+xml_element: "ApplicationSpecificInformation"
 ---
 
 # Application Specific Information

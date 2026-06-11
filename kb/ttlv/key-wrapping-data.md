@@ -8,6 +8,8 @@ v1_source_section: "2.1.5"
 status: draft
 related: ["key-wrapping-specification", "key-block", "key-value"]
 keywords: ["key wrapping data", "wrapping method", "encryption key information", "MAC signature", "encoding option"]
+tag_hex: "420046"
+xml_element: "KeyWrappingData"
 ---
 
 # Key Wrapping Data

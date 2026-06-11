@@ -8,6 +8,8 @@ v1_source_section: "2.1.1"
 status: draft
 related: ["template-attribute-structures", "custom-attribute", "ttlv-encoding"]
 keywords: ["attribute structure", "attribute name", "attribute index", "attribute value"]
+tag_hex: "420008"
+xml_element: "Attribute"
 ---
 
 # Attribute

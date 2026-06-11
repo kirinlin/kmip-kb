@@ -8,6 +8,8 @@ v1_source_section: "6.13"
 status: draft
 related: ["batch-order-option", "batch-count", "result-status", "capability-information"]
 keywords: ["batch error continuation", "undo", "stop", "continue", "rollback"]
+tag_hex: "42000E"
+xml_element: "BatchErrorContinuationOption"
 ---
 
 # Batch Error Continuation Option

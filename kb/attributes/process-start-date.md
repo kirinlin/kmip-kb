@@ -8,6 +8,8 @@ v1_source_section: "3.25"
 status: draft
 related: ["protect-stop-date", "activation-date", "deactivation-date", "state"]
 keywords: ["process start date", "decryption window", "symmetric key", "lifecycle dates"]
+tag_hex: "420067"
+xml_element: "ProcessStartDate"
 ---
 
 # Process Start Date

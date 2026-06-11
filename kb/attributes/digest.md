@@ -8,6 +8,8 @@ v1_source_section: "3.17"
 status: draft
 related: ["unique-identifier", "key-value-present", "digital-signature-algorithm"]
 keywords: ["digest", "hash", "SHA-256", "fingerprint", "key material integrity"]
+tag_hex: "420034"
+xml_element: "Digest"
 ---
 
 # Digest

@@ -8,6 +8,8 @@ v1_source_section: "3.41"
 status: draft
 related: ["key-value-location", "digest", "fresh"]
 keywords: ["key value present", "metadata-only registration", "key value absent", "registry"]
+tag_hex: "4200BB"
+xml_element: "KeyValuePresent"
 ---
 
 # Key Value Present

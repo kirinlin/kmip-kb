@@ -8,6 +8,8 @@ v1_source_section: "3.49"
 status: draft
 related: ["sensitive", "never-extractable", "extractable"]
 keywords: ["always sensitive", "history flag", "audit", "PKCS#11 parity"]
+tag_hex: "420121"
+xml_element: "AlwaysSensitive"
 ---
 
 # Always Sensitive

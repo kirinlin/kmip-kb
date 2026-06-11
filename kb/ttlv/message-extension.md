@@ -8,6 +8,8 @@ v1_source_section: "6.16"
 status: draft
 related: ["batch-item", "extension-information", "ttlv-encoding"]
 keywords: ["message extension", "vendor extension", "criticality indicator", "vendor identification"]
+tag_hex: "420051"
+xml_element: "MessageExtension"
 ---
 
 # Message Extension

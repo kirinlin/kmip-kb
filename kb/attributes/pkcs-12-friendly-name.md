@@ -8,6 +8,8 @@ v1_source_section: "3.45"
 status: draft
 related: ["link", "name", "secret-data"]
 keywords: ["PKCS#12", "friendly name", "alias", "keystore", "private key"]
+tag_hex: "4200FB"
+xml_element: "PKCS_12FriendlyName"
 ---
 
 # PKCS#12 Friendly Name

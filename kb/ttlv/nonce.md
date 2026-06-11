@@ -8,6 +8,8 @@ v1_source_section: "2.1.14"
 status: draft
 related: ["credential", "attestation-capable-indicator", "message-structure"]
 keywords: ["nonce", "attestation", "replay protection", "challenge"]
+tag_hex: "4200C8"
+xml_element: "Nonce"
 ---
 
 # Nonce

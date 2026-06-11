@@ -8,6 +8,8 @@ v1_source_section: "3.34"
 status: draft
 related: ["object-group", "initial-date", "key-value-present"]
 keywords: ["fresh", "unused key", "key pool", "group member fresh"]
+tag_hex: "4200A8"
+xml_element: "Fresh"
 ---
 
 # Fresh

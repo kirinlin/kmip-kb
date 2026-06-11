@@ -8,6 +8,8 @@ v1_source_section: "3.37"
 status: draft
 related: ["description", "comment", "custom-attribute"]
 keywords: ["contact information", "owner contact", "informational attribute"]
+tag_hex: "420022"
+xml_element: "ContactInformation"
 ---
 
 # Contact Information

@@ -8,6 +8,8 @@ v1_source_section: "3.47"
 status: draft
 related: ["description", "contact-information", "custom-attribute"]
 keywords: ["comment", "notes", "informational attribute"]
+tag_hex: "4200FD"
+xml_element: "Comment"
 ---
 
 # Comment

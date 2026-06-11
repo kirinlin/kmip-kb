@@ -7,6 +7,8 @@ source_section: "ug-3.12"
 status: draft
 related: ["key-block", "key-value"]
 keywords: ["Key Block", "Key Value", "Key Wrapping Data", "Key Value Type", "attributes in Key Value", "wrapping"]
+tag_hex: "420040"
+xml_element: "KeyBlock"
 ---
 
 # Key Block

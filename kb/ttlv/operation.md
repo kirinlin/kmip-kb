@@ -8,6 +8,8 @@ v1_source_section: "6.2"
 status: draft
 related: ["batch-item", "operations", "message-structure"]
 keywords: ["operation field", "operation enumeration", "batch item", "request type"]
+tag_hex: "42005C"
+xml_element: "Operation"
 ---
 
 # Operation

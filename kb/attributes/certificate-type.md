@@ -8,6 +8,8 @@ v1_source_section: "3.8"
 status: draft
 related: ["certificate-length", "x-509-certificate-identifier", "digital-signature-algorithm"]
 keywords: ["certificate type", "X.509", "PGP", "certificate"]
+tag_hex: "42001D"
+xml_element: "CertificateType"
 ---
 
 # Certificate Type

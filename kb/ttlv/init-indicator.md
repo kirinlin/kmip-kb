@@ -8,6 +8,8 @@ v1_source_section: "2.1.16"
 status: draft
 related: ["final-indicator", "correlation-value", "data"]
 keywords: ["init indicator", "streaming", "multi-part", "first part"]
+tag_hex: "4200D7"
+xml_element: "InitIndicator"
 ---
 
 # Init Indicator

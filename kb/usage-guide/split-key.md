@@ -7,6 +7,8 @@ source_section: "ug-3.9"
 status: draft
 related: ["symmetric-key"]
 keywords: ["split key", "key splitting", "Shamir", "XOR", "key threshold", "Join Split Key", "Create Split Key"]
+tag_hex: "420089"
+xml_element: "SplitKey"
 ---
 
 # Split Key

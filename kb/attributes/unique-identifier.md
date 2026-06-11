@@ -8,6 +8,8 @@ v1_source_section: "3.1"
 status: draft
 related: ["name", "object-type", "alternative-name", "link"]
 keywords: ["unique identifier", "UID", "object identity", "ID placeholder"]
+tag_hex: "420094"
+xml_element: "UniqueIdentifier"
 ---
 
 # Unique Identifier

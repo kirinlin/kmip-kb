@@ -8,6 +8,8 @@ v1_source_section: "3.26"
 status: draft
 related: ["process-start-date", "deactivation-date", "activation-date", "state"]
 keywords: ["protect stop date", "encryption cutoff", "symmetric key", "lifecycle dates"]
+tag_hex: "420068"
+xml_element: "ProtectStopDate"
 ---
 
 # Protect Stop Date

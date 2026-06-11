@@ -8,6 +8,8 @@ v1_source_section: "2.2.5"
 status: draft
 related: ["create-split-key", "join-split-key", "symmetric-key", "private-key", "register", "get", "key-block"]
 keywords: ["split key", "secret sharing", "key splitting", "threshold", "XOR"]
+tag_hex: "420089"
+xml_element: "SplitKey"
 ---
 
 # Split Key

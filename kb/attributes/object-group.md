@@ -8,6 +8,8 @@ v1_source_section: "3.33"
 status: draft
 related: ["name", "application-specific-information", "fresh"]
 keywords: ["object group", "grouping", "group member", "locate", "default group"]
+tag_hex: "420056"
+xml_element: "ObjectGroup"
 ---
 
 # Object Group

@@ -8,6 +8,8 @@ v1_source_section: "6.6"
 status: draft
 related: ["credential", "message-structure", "nonce"]
 keywords: ["authentication structure", "request header", "credential container"]
+tag_hex: "42000C"
+xml_element: "Authentication"
 ---
 
 # Authentication

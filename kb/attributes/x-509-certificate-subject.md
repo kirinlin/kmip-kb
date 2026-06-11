@@ -8,6 +8,8 @@ v1_source_section: "3.11"
 status: draft
 related: ["x-509-certificate-identifier", "x-509-certificate-issuer", "certificate-subject"]
 keywords: ["X.509 certificate subject", "subject distinguished name", "subject alternative name", "SAN"]
+tag_hex: "4200B7"
+xml_element: "X_509CertificateSubject"
 ---
 
 # X.509 Certificate Subject

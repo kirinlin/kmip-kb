@@ -8,6 +8,8 @@ v1_source_section: "6.1"
 status: draft
 related: ["message-structure", "discover-versions"]
 keywords: ["protocol version", "version negotiation", "major minor", "backward compatibility"]
+tag_hex: "420069"
+xml_element: "ProtocolVersion"
 ---
 
 # Protocol Version

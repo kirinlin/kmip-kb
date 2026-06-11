@@ -8,6 +8,8 @@ v1_source_section: "3.23"
 status: draft
 related: ["original-creation-date", "activation-date", "last-change-date", "state"]
 keywords: ["initial date", "creation time", "registration time", "lifecycle dates"]
+tag_hex: "420039"
+xml_element: "InitialDate"
 ---
 
 # Initial Date

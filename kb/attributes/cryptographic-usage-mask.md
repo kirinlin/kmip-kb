@@ -8,6 +8,8 @@ v1_source_section: "3.19"
 status: draft
 related: ["cryptographic-algorithm", "state", "usage-limits", "operation-policy-name"]
 keywords: ["usage mask", "bitmask", "encrypt", "sign", "wrap key", "key usage"]
+tag_hex: "42002C"
+xml_element: "CryptographicUsageMask"
 ---
 
 # Cryptographic Usage Mask

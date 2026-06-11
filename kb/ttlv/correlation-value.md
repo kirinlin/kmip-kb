@@ -8,6 +8,8 @@ v1_source_section: "2.1.15"
 status: draft
 related: ["init-indicator", "final-indicator", "data", "asynchronous-correlation-value"]
 keywords: ["correlation value", "streaming", "multi-part operation", "session handle"]
+tag_hex: "4200D6"
+xml_element: "CorrelationValue"
 ---
 
 # Correlation Value

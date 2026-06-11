@@ -8,6 +8,8 @@ v1_source_section: "2.1.18"
 status: draft
 related: ["random-number-generator", "capability-information", "validation-information"]
 keywords: ["RNG parameters", "DRBG", "NRBG", "prediction resistance", "randomness"]
+tag_hex: "4200D9"
+xml_element: "RNGParameters"
 ---
 
 # RNG Parameters

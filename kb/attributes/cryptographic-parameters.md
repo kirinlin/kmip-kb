@@ -8,6 +8,8 @@ v1_source_section: "3.6"
 status: draft
 related: ["cryptographic-algorithm", "cryptographic-domain-parameters", "cryptographic-usage-mask"]
 keywords: ["cryptographic parameters", "block cipher mode", "padding", "IV", "key role", "OAEP", "PSS"]
+tag_hex: "42002B"
+xml_element: "CryptographicParameters"
 ---
 
 # Cryptographic Parameters

@@ -8,6 +8,8 @@ v1_source_section: "2.2.8"
 status: draft
 related: ["register", "get", "secret-data", "name"]
 keywords: ["opaque object", "blob", "custom attributes", "unmanaged format"]
+tag_hex: "42005B"
+xml_element: "OpaqueObject"
 ---
 
 # Opaque Object

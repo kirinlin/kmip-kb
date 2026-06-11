@@ -8,6 +8,8 @@ v1_source_section: "6.15"
 status: draft
 related: ["batch-count", "operation", "message-structure", "operations"]
 keywords: ["batch item", "request payload", "response payload", "message body"]
+tag_hex: "42000F"
+xml_element: "BatchItem"
 ---
 
 # Batch Item

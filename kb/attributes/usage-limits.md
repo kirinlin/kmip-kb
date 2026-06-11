@@ -8,6 +8,8 @@ v1_source_section: "3.21"
 status: draft
 related: ["lease-time", "cryptographic-usage-mask", "state"]
 keywords: ["usage limits", "usage allocation", "byte limit", "key exhaustion", "quota"]
+tag_hex: "420095"
+xml_element: "UsageLimits"
 ---
 
 # Usage Limits

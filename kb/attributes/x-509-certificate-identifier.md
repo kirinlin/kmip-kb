@@ -8,6 +8,8 @@ v1_source_section: "3.10"
 status: draft
 related: ["x-509-certificate-subject", "x-509-certificate-issuer", "certificate-identifier"]
 keywords: ["X.509 certificate identifier", "issuer distinguished name", "serial number"]
+tag_hex: "4200B5"
+xml_element: "X_509CertificateIdentifier"
 ---
 
 # X.509 Certificate Identifier

@@ -8,6 +8,8 @@ v1_source_section: "2.1.11"
 status: draft
 related: ["data", "rng-retrieve"]
 keywords: ["data length", "requested bytes", "RNG retrieve"]
+tag_hex: "4200C4"
+xml_element: "DataLength"
 ---
 
 # Data Length

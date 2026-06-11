@@ -8,6 +8,8 @@ v1_source_section: "3.2"
 status: draft
 related: ["unique-identifier", "alternative-name", "object-group"]
 keywords: ["name", "human-readable label", "locate by name", "name type"]
+tag_hex: "420053"
+xml_element: "Name"
 ---
 
 # Name

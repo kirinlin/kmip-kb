@@ -8,6 +8,8 @@ v1_source_section: "2.2.4"
 status: draft
 related: ["public-key", "create-key-pair", "certify", "register", "get", "key-block", "key-wrapping-specification", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["private key", "asymmetric key", "RSA", "EC", "key pair", "wrapping"]
+tag_hex: "420064"
+xml_element: "PrivateKey"
 ---
 
 # Private Key
