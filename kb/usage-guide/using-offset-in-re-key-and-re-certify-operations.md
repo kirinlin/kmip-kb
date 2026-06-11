@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.40"
-status: draft
+status: reviewed
 related: ["key-rotation", "certify-and-re-certify", "key-state-and-times"]
 keywords: ["offset", "Re-key", "Re-key Key Pair", "Re-certify", "Activation Date", "forward-dating", "interval"]
 ---
 
 # Using Offset in Re-key and Re-certify Operations
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

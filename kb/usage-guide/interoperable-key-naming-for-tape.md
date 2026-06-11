@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.3"
-status: draft
+status: reviewed
 related: ["application-specific-information"]
 keywords: ["tape", "LTO", "KAD", "Key Associated Data", "ASI", "Application Specific Information", "LIBRARY-LTO", "key identifier"]
 ---
 
 # Interoperable Key Naming for Tape
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

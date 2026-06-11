@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "4.3"
 v1_source_section: "3.49"
-status: draft
+status: reviewed
 related: ["sensitive", "never-extractable", "extractable"]
 keywords: ["always sensitive", "history flag", "audit", "PKCS#11 parity"]
 tag_hex: "420121"

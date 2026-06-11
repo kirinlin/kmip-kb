@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.20"
 v1_source_section: "4.12"
-status: draft
+status: reviewed
 related: ["get-attribute-list", "get", "add-attribute", "modify-attribute"]
 keywords: ["get attributes", "read attributes", "attribute values", "metadata"]
 ---

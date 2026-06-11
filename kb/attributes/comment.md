@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "4.9"
 v1_source_section: "3.47"
-status: draft
+status: reviewed
 related: ["description", "contact-information", "custom-attribute"]
 keywords: ["comment", "notes", "informational attribute"]
 tag_hex: "4200FD"

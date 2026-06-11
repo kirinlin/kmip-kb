@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.18"
 v1_source_section: "3.27"
-status: draft
+status: reviewed
 related: ["state", "activation-date", "protect-stop-date", "revocation-reason"]
 keywords: ["deactivation date", "deactivated state", "expiry", "lifecycle dates"]
 tag_hex: "42002F"

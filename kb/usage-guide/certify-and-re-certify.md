@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.39"
-status: draft
+status: reviewed
 related: ["certificate-renewal-update-and-re-key", "private-key"]
 keywords: ["Certify", "Re-certify", "CA", "certificate request", "PKCS#10", "PEM", "CRMF", "Proof-of-Possession"]
 ---
 
 # Certify and Re-certify
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

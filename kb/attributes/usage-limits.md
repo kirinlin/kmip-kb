@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.59"
 v1_source_section: "3.21"
-status: draft
+status: reviewed
 related: ["lease-time", "cryptographic-usage-mask", "state"]
 keywords: ["usage limits", "usage allocation", "byte limit", "key exhaustion", "quota"]
 tag_hex: "420095"

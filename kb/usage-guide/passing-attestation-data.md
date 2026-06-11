@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "ug-3.58"
-status: draft
+status: reviewed
 related: ["authentication"]
 keywords: ["attestation", "TPM", "nonce", "Attestation Credential", "integrity measurement", "freshness", "Attestation Capable Indicator"]
 ---
 
 # Passing Attestation Data
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-2.10"
-status: draft
+status: reviewed
 related: ["maximum-message-size", "handling-large-locate-result-sets"]
 keywords: ["maximum response size", "large response", "Locate", "truncation", "pagination"]
 ---
 
 # Large Responses
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

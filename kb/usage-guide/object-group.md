@@ -4,7 +4,7 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.28"
-status: draft
+status: reviewed
 related: ["attributes", "locate"]
 keywords: ["Object Group", "Fresh", "group member", "round robin", "key pool", "Locate"]
 tag_hex: "420056"
@@ -12,8 +12,6 @@ xml_element: "ObjectGroup"
 ---
 
 # Object Group
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

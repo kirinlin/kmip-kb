@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "10.4"
 v1_source_section: "10"
-status: draft
+status: reviewed
 related: ["authentication", "error-handling", "ttlv-encoding", "message-structure"]
 keywords: ["transport", "TLS", "channel security", "port 5696", "confidentiality", "integrity"]
 ---

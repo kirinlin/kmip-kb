@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.31"
 v1_source_section: "3.35"
-status: draft
+status: reviewed
 related: ["unique-identifier", "object-type", "pkcs-12-friendly-name"]
 keywords: ["link", "link type", "object relationships", "replacement object", "certificate chain", "derived key"]
 tag_hex: "42004A"

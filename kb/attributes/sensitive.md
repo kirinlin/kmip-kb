@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "4.55"
 v1_source_section: "3.48"
-status: draft
+status: reviewed
 related: ["always-sensitive", "extractable", "never-extractable", "cryptographic-usage-mask"]
 keywords: ["sensitive", "wrapped export only", "key extraction", "PKCS#11 parity"]
 tag_hex: "420120"

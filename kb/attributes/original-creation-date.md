@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.38"
 v1_source_section: "3.43"
-status: draft
+status: reviewed
 related: ["initial-date", "last-change-date", "random-number-generator"]
 keywords: ["original creation date", "key age", "registration", "provenance"]
 tag_hex: "4200BC"

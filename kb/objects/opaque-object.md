@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.3"
 v1_source_section: "2.2.8"
-status: draft
+status: reviewed
 related: ["register", "get", "secret-data", "name"]
 keywords: ["opaque object", "blob", "custom attributes", "unmanaged format"]
 tag_hex: "42005B"

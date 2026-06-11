@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.10"
-status: draft
+status: reviewed
 related: ["base-profiles", "tape-library-profiles"]
 keywords: ["opaque object", "opaque data", "blob storage", "key management server", "Register"]
 ---

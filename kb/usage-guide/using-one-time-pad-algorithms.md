@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.7"
-status: draft
+status: reviewed
 related: ["cryptographic-services"]
 keywords: ["One Time Pad", "OTP", "Cryptographic Algorithm enumeration", "key material unknown to server"]
 ---
 
 # Using One Time Pad Algorithms
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

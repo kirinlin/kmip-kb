@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "ug-3.59"
-status: draft
+status: reviewed
 related: ["extensible-protocol", "message-extensions"]
 keywords: ["vendor extensions", "custom attributes", "x- prefix", "y- prefix", "TTLV tags", "extension registration"]
 ---
 
 # Vendor Extensions
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

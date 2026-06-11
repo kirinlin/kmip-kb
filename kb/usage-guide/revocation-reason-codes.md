@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.30"
-status: draft
+status: reviewed
 related: ["compromised-objects", "authorization-for-revoke-recover-destroy-and-archive-operations"]
 keywords: ["Revocation Reason", "Key Compromise", "CA Compromise", "unspecified", "affiliation changed", "X.509", "RFC 5280"]
 ---
 
 # Revocation Reason Codes
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

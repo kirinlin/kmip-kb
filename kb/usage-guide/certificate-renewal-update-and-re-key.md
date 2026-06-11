@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.41"
-status: draft
+status: reviewed
 related: ["certify-and-re-certify", "private-key"]
 keywords: ["certificate renewal", "certificate update", "certificate re-key", "Re-certify", "Certify", "RFC 3647", "RFC 4949"]
 ---
 
 # Certificate Renewal, Update, and Re-key
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

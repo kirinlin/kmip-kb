@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.10"
-status: draft
+status: reviewed
 related: ["cryptographic-usage-mask"]
 keywords: ["Cryptographic Usage Mask", "MAC", "asymmetric concepts", "usage separation", "MAC Generate", "MAC Verify", "Translate"]
 ---
 
 # Asymmetric Concepts with Symmetric Keys
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

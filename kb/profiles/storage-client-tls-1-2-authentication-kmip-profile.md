@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.42"
-status: draft
+status: reviewed
 related: ["tls-1-2-authentication-suite", "storage-client-kmip-profile", "opaque-managed-object-store-profiles"]
 keywords: ["storage client", "Opaque Managed Object", "TLS 1.2", "authentication suite", "client profile"]
 ---

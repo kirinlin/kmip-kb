@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.24"
-status: draft
+status: reviewed
 related: ["attributes", "use-of-meta-data-only-mdo-keys"]
 keywords: ["Extractable", "Sensitive", "Always Sensitive", "Never Extractable", "PKCS#11", "key export control"]
 ---
 
 # Extractable and Sensitive Attributes
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

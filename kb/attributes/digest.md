@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.21"
 v1_source_section: "3.17"
-status: draft
+status: reviewed
 related: ["unique-identifier", "key-value-present", "digital-signature-algorithm"]
 keywords: ["digest", "hash", "SHA-256", "fingerprint", "key material integrity"]
 tag_hex: "420034"

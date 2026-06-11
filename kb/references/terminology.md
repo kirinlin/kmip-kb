@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "1.2"
 v1_source_section: "1.1"
-status: draft
+status: reviewed
 related: ["normative-references", "non-normative-references"]
 keywords: ["terminology", "definitions", "glossary", "RFC 2119", "SP 800-57"]
 ---

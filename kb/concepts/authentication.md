@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "10.3"
 v1_source_section: "8"
-status: draft
+status: reviewed
 related: ["transport", "error-handling", "credential", "kmip-server-implementation-conformance"]
 keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication"]
 tag_hex: "42000C"

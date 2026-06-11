@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "5.1"
 v1_source_section: "2.1.1"
-status: draft
+status: reviewed
 related: ["template-attribute-structures", "custom-attribute", "ttlv-encoding"]
 keywords: ["attribute structure", "attribute name", "attribute index", "attribute value"]
 tag_hex: "420008"

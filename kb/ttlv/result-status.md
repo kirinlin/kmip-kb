@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.19"
 v1_source_section: "6.9"
-status: draft
+status: reviewed
 related: ["result-reason", "result-message", "batch-error-continuation-option"]
 keywords: ["result status", "success", "operation failed", "operation pending", "operation undone"]
 tag_hex: "42007F"

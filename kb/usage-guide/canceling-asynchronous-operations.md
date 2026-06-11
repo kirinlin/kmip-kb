@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.33"
-status: draft
+status: reviewed
 related: ["synchronous-and-asynchronous-operations", "querying-outstanding-asynchronous-requests"]
 keywords: ["async cancel", "Cancel", "asynchronous", "partial completion", "operation status", "server state"]
 ---
 
 # Canceling Asynchronous Operations
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.9"
-status: draft
+status: reviewed
 related: ["base-profiles", "symmetric-key-lifecycle-profiles", "asymmetric-key-lifecycle-profiles", "quantum-safe-profiles"]
 keywords: ["cryptographic services", "Encrypt", "Decrypt", "Sign", "MAC", "RNG", "hash", "server-side crypto"]
 ---

@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.28"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "basic-asymmetric-key-foundry-and-server-kmip-profile", "asymmetric-key-foundry-client-tls-1-2-authentication-kmip-profile", "basic-asymmetric-key-store-client-kmip-profile"]
 keywords: ["asymmetric key", "Create Key Pair", "RSA", "Basic Authentication Suite", "client profile", "key generation"]
 ---

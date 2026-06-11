@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.50"
-status: draft
+status: reviewed
 related: ["flow-control", "synchronous-and-asynchronous-operations"]
 keywords: ["Notify", "Put", "server-to-client", "server-initiated", "acknowledgement", "key push", "proxy"]
 ---
 
 # Using Notify and Put Operations
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

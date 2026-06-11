@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.14"
 v1_source_section: "4.6"
-status: draft
+status: reviewed
 related: ["create", "register", "secret-data", "symmetric-key", "cryptographic-parameters", "cryptographic-usage-mask"]
 keywords: ["derive key", "key derivation", "PBKDF2", "HKDF", "HMAC", "KDF", "SP800-108"]
 ---
@@ -28,7 +28,7 @@ material rather than randomly generated.
 | Unique Identifier | Yes (may repeat) | The base object(s) whose material feeds the derivation. The ID Placeholder may not be substituted here. |
 | Derivation Method | Yes | An enumeration naming the derivation function to apply. |
 | Derivation Parameters | Yes | A structure carrying the inputs the chosen method needs. |
-| Template-Attribute | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. |
+| Template-Attribute | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

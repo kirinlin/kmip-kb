@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.9"
 v1_source_section: "2.2.2"
-status: draft
+status: reviewed
 related: ["create", "register", "get", "derive-key", "encrypt", "decrypt", "key-block", "cryptographic-algorithm", "cryptographic-length", "cryptographic-usage-mask"]
 keywords: ["symmetric key", "AES", "secret key", "managed cryptographic object", "key block"]
 tag_hex: "42008F"

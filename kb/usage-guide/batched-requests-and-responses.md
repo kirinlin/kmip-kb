@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-2.8"
-status: draft
+status: reviewed
 related: ["id-placeholder", "reducing-multiple-requests-through-the-use-of-batch", "maximum-message-size"]
 keywords: ["batch", "batch error", "pipeline", "ID placeholder", "throughput", "undo"]
 ---
 
 # Batched Requests and Responses
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

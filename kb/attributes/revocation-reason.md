@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.47"
 v1_source_section: "3.31"
-status: draft
+status: reviewed
 related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit"]
 tag_hex: "420081"

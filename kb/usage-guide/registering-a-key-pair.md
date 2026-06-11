@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.49"
-status: draft
+status: reviewed
 related: ["private-key", "public-key", "authentication"]
 keywords: ["key pair", "Register", "Link attribute", "public key link", "private key link", "manual registration"]
 ---
 
 # Registering a Key Pair
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

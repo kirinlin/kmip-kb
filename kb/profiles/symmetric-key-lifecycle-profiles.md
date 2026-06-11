@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.6"
-status: draft
+status: reviewed
 related: ["base-profiles", "symmetric-key-foundry-for-fips-140-profiles", "asymmetric-key-lifecycle-profiles", "cryptographic-profiles"]
 keywords: ["symmetric key", "key lifecycle", "Create", "AES", "3DES", "key management"]
 ---

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.58"
 v1_source_section: "3.1"
-status: draft
+status: reviewed
 related: ["name", "object-type", "alternative-name", "link"]
 keywords: ["unique identifier", "UID", "object identity", "ID placeholder"]
 tag_hex: "420094"

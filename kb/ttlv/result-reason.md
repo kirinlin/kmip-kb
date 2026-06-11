@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.18"
 v1_source_section: "6.10"
-status: draft
+status: reviewed
 related: ["result-status", "result-message", "batch-item"]
 keywords: ["result reason", "error code", "item not found", "permission denied", "general failure"]
 tag_hex: "42007E"

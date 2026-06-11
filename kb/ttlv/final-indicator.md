@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "7.14"
 v1_source_section: "2.1.17"
-status: draft
+status: reviewed
 related: ["init-indicator", "correlation-value", "data"]
 keywords: ["final indicator", "streaming", "multi-part", "last part"]
 tag_hex: "4200D8"

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.13"
-status: draft
+status: reviewed
 related: ["key-block"]
 keywords: ["key encoding", "AES", "Triple-DES", "AES-XTS", "byte order", "key material", "FIPS 197"]
 ---
 
 # Key Encoding
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -4,7 +4,7 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.18"
-status: draft
+status: reviewed
 related: ["object-group"]
 keywords: ["Application Specific Information", "Application Namespace", "Application Data", "server-generated data", "namespaces"]
 tag_hex: "420004"
@@ -12,8 +12,6 @@ xml_element: "ApplicationSpecificInformation"
 ---
 
 # Application Specific Information
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

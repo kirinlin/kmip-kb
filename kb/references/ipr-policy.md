@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "1.1"
 v1_source_section: "1.0"
-status: draft
+status: reviewed
 related: ["normative-references"]
 keywords: ["IPR", "intellectual property", "OASIS", "RF on RAND", "patents"]
 ---

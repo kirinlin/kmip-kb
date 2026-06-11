@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.43"
-status: draft
+status: reviewed
 related: ["authentication", "login-and-logout"]
 keywords: ["Delegated Login", "delegation", "login ticket", "subset of rights", "time limit", "request count"]
 ---
 
 # Delegated Login
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

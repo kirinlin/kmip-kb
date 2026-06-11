@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-3.1"
-status: draft
+status: reviewed
 related: ["https-authentication-suite", "kmip-server-implementation-conformance", "kmip-client-implementation-conformance"]
 keywords: ["TLS", "authentication", "cipher suite", "mutual authentication", "port 5696", "transport security"]
 ---

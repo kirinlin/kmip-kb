@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.4"
 v1_source_section: "2.1.7"
-status: draft
+status: reviewed
 related: ["key-block", "key-value", "cryptographic-domain-parameters"]
 keywords: ["transparent key", "key material structure", "RSA components", "DSA", "EC private key", "CRT"]
 ---

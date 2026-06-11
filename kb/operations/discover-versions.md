@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.16"
 v1_source_section: "4.26"
-status: draft
+status: reviewed
 related: ["query", "protocol-version"]
 keywords: ["discover versions", "protocol version", "version negotiation", "compatibility"]
 ---

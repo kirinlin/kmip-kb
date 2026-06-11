@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "7.13"
 v1_source_section: "2.1.9"
-status: draft
+status: reviewed
 related: ["ttlv-encoding", "message-extension"]
 keywords: ["extension information", "vendor extension", "extension tag", "query extension list"]
 tag_hex: "4200A4"

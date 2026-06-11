@@ -4,7 +4,7 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.25"
-status: draft
+status: reviewed
 related: ["key-block", "key-encoding"]
 keywords: ["Key Format Type", "Digest", "encoding format", "interoperability", "format negotiation"]
 tag_hex: "420042"
@@ -12,8 +12,6 @@ xml_element: "KeyFormatType"
 ---
 
 # Key Format Type
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

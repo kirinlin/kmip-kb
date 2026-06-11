@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1"
 v1_source_section: "4"
-status: draft
+status: reviewed
 related: ["create", "register", "get", "locate", "query"]
 keywords: ["operations", "client-to-server", "server-to-client", "lifecycle", "cryptographic operations"]
 tag_hex: "42014F"

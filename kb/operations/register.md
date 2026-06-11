@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.43"
 v1_source_section: "4.3"
-status: draft
+status: reviewed
 related: ["create", "create-key-pair", "import", "get", "symmetric-key", "certificate", "secret-data"]
 keywords: ["register", "import object", "store key", "client-supplied key", "provisioning"]
 ---
@@ -26,7 +26,7 @@ registered: keys, certificates, secret data, split keys, opaque objects, and
 | Field | Required | Description |
 |---|---|---|
 | Object Type | Yes | The type of object being handed over. |
-| Template-Attribute | Yes | The attributes to associate with the object, given individually and/or via named templates. |
+| Template-Attribute | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure; the attribute payload is unchanged. |
 | Managed Object | Yes | The object itself (for example a [Symmetric Key](../objects/symmetric-key.md), [Certificate](../objects/certificate.md), private/public key, split key, secret data, or opaque object). The object and its attributes may be supplied in wrapped form. |
 
 ## Response Fields

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.10"
 v1_source_section: "4.38"
-status: draft
+status: reviewed
 related: ["join-split-key", "create", "split-key"]
 keywords: ["create split key", "split key", "key splitting", "secret sharing", "threshold"]
 ---
@@ -28,7 +28,7 @@ each part as its own managed object. It was added in KMIP 1.2.
 | Split Key Threshold | Yes | How many parts must be combined to rebuild the key. |
 | Split Key Method | Yes | The secret-sharing method used to split the key. |
 | Prime Field Size | No | The prime field size, for methods that need one. |
-| Template-Attribute | Yes | Attributes for the new objects. |
+| Template-Attribute | Yes | Attributes for the new objects. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

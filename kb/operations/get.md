@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.19"
 v1_source_section: "4.11"
-status: draft
+status: reviewed
 related: ["locate", "get-attributes", "register", "key-wrapping-specification", "symmetric-key"]
 keywords: ["get", "retrieve object", "fetch key", "key wrapping", "PKCS#12", "key format"]
 ---

@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.1"
-status: draft
+status: reviewed
 related: ["complete-server-profile", "kmip-client-implementation-conformance", "kmip-server-implementation-conformance", "basic-authentication-suite", "query"]
 keywords: ["baseline client", "baseline server", "conformance", "base profile", "KMIP-Prof"]
 ---

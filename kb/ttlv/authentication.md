@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.4"
 v1_source_section: "6.6"
-status: draft
+status: reviewed
 related: ["credential", "message-structure", "nonce"]
 keywords: ["authentication structure", "request header", "credential container"]
 tag_hex: "42000C"

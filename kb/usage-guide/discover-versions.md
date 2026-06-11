@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "ug-3.44"
-status: draft
+status: reviewed
 related: ["query"]
 keywords: ["Discover Versions", "protocol version negotiation", "version compatibility", "smart client", "dumb client"]
 ---
 
 # Discover Versions
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

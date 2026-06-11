@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "7.4"
 v1_source_section: "2.1.23"
-status: draft
+status: reviewed
 related: ["authenticated-encryption-additional-data", "data", "mac-data"]
 keywords: ["authentication tag", "GCM tag", "AEAD", "integrity"]
 tag_hex: "4200FF"

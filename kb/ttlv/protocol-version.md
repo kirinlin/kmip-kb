@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "8.2"
 v1_source_section: "6.1"
-status: draft
+status: reviewed
 related: ["message-structure", "discover-versions"]
 keywords: ["protocol version", "version negotiation", "major minor", "backward compatibility"]
 tag_hex: "420069"

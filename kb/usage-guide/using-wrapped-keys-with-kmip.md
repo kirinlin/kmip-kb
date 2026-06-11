@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.2"
-status: draft
+status: reviewed
 related: ["key-block", "extractable-and-sensitive-attributes"]
 keywords: ["wrapped key", "Key Wrapping Specification", "Key Wrapping Data", "Register wrapped key", "Get wrapped key", "Encoding Option", "Key Wrap Type"]
 ---
 
 # Using Wrapped Keys with KMIP
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

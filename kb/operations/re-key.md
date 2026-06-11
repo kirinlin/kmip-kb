@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.46"
 v1_source_section: "4.4"
-status: draft
+status: reviewed
 related: ["re-key-key-pair", "create", "revoke", "symmetric-key", "state", "link"]
 keywords: ["re-key", "rekey", "replacement key", "key rotation", "symmetric key"]
 ---
@@ -31,7 +31,7 @@ asymmetric equivalent is [Re-key Key Pair](re-key-key-pair.md).
 |---|---|---|
 | Unique Identifier | No | The existing symmetric key to replace. If omitted, the server uses the ID Placeholder. |
 | Offset | No | An interval giving the gap between the replacement key's initial date and its activation date. |
-| Template-Attribute | No | Additional attributes for the replacement key. |
+| Template-Attribute | No | Additional attributes for the replacement key. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

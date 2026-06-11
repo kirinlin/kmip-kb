@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "1.3"
 v1_source_section: "1.2"
-status: draft
+status: reviewed
 related: ["non-normative-references", "terminology"]
 keywords: ["normative references", "RFC", "NIST", "FIPS", "PKCS", "ANSI X9"]
 ---

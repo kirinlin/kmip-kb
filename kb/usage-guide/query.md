@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "ug-3.48"
-status: draft
+status: reviewed
 related: ["discover-versions"]
 keywords: ["Query", "Query Function", "Capability Information", "extensions", "profiles", "RNGs", "validations", "Client Registration Methods"]
 ---
 
 # Query
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

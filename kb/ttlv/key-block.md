@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "3.1"
 v1_source_section: "2.1.3"
-status: draft
+status: reviewed
 related: ["key-value", "key-wrapping-data", "transparent-key-structures", "cryptographic-algorithm"]
 keywords: ["key block", "key format type", "key compression", "wrapped key", "key container"]
 tag_hex: "420040"

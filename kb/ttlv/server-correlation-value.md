@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "9.10"
 v1_source_section: "6.19"
-status: draft
+status: reviewed
 related: ["client-correlation-value", "correlation-value", "message-structure"]
 keywords: ["server correlation value", "request ID", "audit", "logging"]
 tag_hex: "420106"

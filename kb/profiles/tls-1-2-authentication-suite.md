@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.2"
 spec_versions: ["1.0", "1.1", "1.2"]
 source_section: "prof-3.2"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "https-authentication-suite"]
 keywords: ["TLS 1.2", "authentication suite", "cipher suite", "mutual authentication", "port 5696", "transport security"]
 ---

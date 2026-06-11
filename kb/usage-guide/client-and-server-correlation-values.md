@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.52"
-status: draft
+status: reviewed
 related: ["interop"]
 keywords: ["Client Correlation Value", "Server Correlation Value", "request tracing", "audit", "logging", "correlation"]
 ---
 
 # Client and Server Correlation Values
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.15"
 v1_source_section: "6.2"
-status: draft
+status: reviewed
 related: ["batch-item", "operations", "message-structure"]
 keywords: ["operation field", "operation enumeration", "batch item", "request type"]
 tag_hex: "42005C"

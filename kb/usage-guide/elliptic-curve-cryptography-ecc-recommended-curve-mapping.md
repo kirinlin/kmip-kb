@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.14"
-status: draft
+status: reviewed
 related: ["private-key", "public-key"]
 keywords: ["ECC", "elliptic curve", "OID", "curve mapping", "NIST curves", "Brainpool", "SECP", "SECT", "Curve25519"]
 ---
 
 # Elliptic Curve Cryptography (ECC) Recommended Curve Mapping
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

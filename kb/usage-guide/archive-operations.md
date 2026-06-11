@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.38"
-status: draft
+status: reviewed
 related: ["authorization-for-revoke-recover-destroy-and-archive-operations"]
 keywords: ["Archive", "Recover", "off-line storage", "State attribute", "operational efficiency"]
 ---
 
 # Archive Operations
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

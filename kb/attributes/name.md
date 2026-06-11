@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.32"
 v1_source_section: "3.2"
-status: draft
+status: reviewed
 related: ["unique-identifier", "alternative-name", "object-group"]
 keywords: ["name", "human-readable label", "locate by name", "name type"]
 tag_hex: "420053"

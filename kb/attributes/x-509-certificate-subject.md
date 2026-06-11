@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.63"
 v1_source_section: "3.11"
-status: draft
+status: reviewed
 related: ["x-509-certificate-identifier", "x-509-certificate-issuer", "certificate-subject"]
 keywords: ["X.509 certificate subject", "subject distinguished name", "subject alternative name", "SAN"]
 tag_hex: "4200B7"

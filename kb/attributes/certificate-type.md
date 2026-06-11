@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.7"
 v1_source_section: "3.8"
-status: draft
+status: reviewed
 related: ["certificate-length", "x-509-certificate-identifier", "digital-signature-algorithm"]
 keywords: ["certificate type", "X.509", "PGP", "certificate"]
 tag_hex: "42001D"

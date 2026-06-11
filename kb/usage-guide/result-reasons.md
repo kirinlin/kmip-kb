@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "ug-3.57"
-status: draft
+status: reviewed
 related: ["result-message-text"]
 keywords: ["Result Reason", "error diagnosis", "error codes", "self-diagnosis", "Result Status"]
 ---
 
 # Result Reasons
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

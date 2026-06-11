@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "prof-5.13"
-status: draft
+status: reviewed
 related: ["base-profiles", "symmetric-key-lifecycle-profiles"]
 keywords: ["AES XTS", "XTS-AES", "disk encryption", "key encrypting key", "KEK", "full-disk encryption", "NVMe"]
 ---

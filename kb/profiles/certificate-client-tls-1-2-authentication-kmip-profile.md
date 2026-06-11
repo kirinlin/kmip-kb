@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.39"
-status: draft
+status: reviewed
 related: ["tls-1-2-authentication-suite", "basic-certificate-client-kmip-profile", "certificate-server-tls-1-2-authentication-kmip-profile", "asymmetric-key-and-certificate-store-client-tls-1-2-authentication-kmip-profile"]
 keywords: ["certificate", "X.509", "PKI", "TLS 1.2", "Register", "authentication suite", "client profile"]
 ---

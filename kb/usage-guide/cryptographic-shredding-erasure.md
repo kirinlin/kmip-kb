@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.8"
-status: draft
+status: reviewed
 related: ["key-shredding", "using-notify-and-put-operations"]
 keywords: ["cryptographic shredding", "crypto erasure", "Destroy", "Notify", "key deletion", "data unrecoverable"]
 ---
 
 # Cryptographic Shredding (Erasure)
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

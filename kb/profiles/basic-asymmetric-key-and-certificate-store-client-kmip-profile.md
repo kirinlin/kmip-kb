@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.27"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "basic-asymmetric-key-and-certificate-store-server-kmip-profile", "asymmetric-key-and-certificate-store-client-tls-1-2-authentication-kmip-profile", "basic-asymmetric-key-store-client-kmip-profile", "basic-certificate-client-kmip-profile"]
 keywords: ["asymmetric key", "certificate", "PKI", "RSA", "Basic Authentication Suite", "client profile"]
 ---

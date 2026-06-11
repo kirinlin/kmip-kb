@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.6"
-status: draft
+status: reviewed
 related: ["authentication", "discover-versions"]
 keywords: ["client registration", "manual registration", "automated registration", "X.509 certificate", "TLS", "bootstrapping", "sub-client"]
 ---
 
 # KMIP Client Registration Models
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

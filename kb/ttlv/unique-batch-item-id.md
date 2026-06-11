@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.21"
 v1_source_section: "6.4"
-status: draft
+status: reviewed
 related: ["batch-item", "batch-count", "batch-order-option"]
 keywords: ["unique batch item ID", "correlation", "batching", "request response matching"]
 tag_hex: "420093"

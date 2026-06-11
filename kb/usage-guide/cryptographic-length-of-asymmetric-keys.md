@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.20"
-status: draft
+status: reviewed
 related: ["private-key", "public-key"]
 keywords: ["Cryptographic Length", "RSA", "key length", "modulus", "asymmetric", "key size"]
 ---
 
 # Cryptographic Length of Asymmetric Keys
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

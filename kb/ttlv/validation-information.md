@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "7.41"
 v1_source_section: "2.1.20"
-status: draft
+status: reviewed
 related: ["profile-information", "capability-information", "rng-parameters"]
 keywords: ["validation information", "FIPS 140", "Common Criteria", "certification", "CMVP"]
 tag_hex: "4200DF"

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "ug-3.56"
-status: draft
+status: reviewed
 related: ["result-reasons"]
 keywords: ["Result Message", "Result Status", "Result Reason", "internationalisation", "error message", "language"]
 ---
 
 # Result Message Text
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

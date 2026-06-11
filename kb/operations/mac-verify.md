@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.33"
 v1_source_section: "4.34"
-status: draft
+status: reviewed
 related: ["mac", "signature-verify", "cryptographic-parameters", "symmetric-key"]
 keywords: ["mac verify", "verify mac", "validity indicator", "integrity check"]
 ---

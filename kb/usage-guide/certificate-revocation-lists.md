@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.42"
-status: draft
+status: reviewed
 related: ["certify-and-re-certify"]
 keywords: ["CRL", "Certificate Revocation List", "revocation checking", "client responsibility", "Register", "Re-key"]
 ---
 
 # Certificate Revocation Lists
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

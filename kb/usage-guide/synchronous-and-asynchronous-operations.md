@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-2.6"
-status: draft
+status: reviewed
 related: ["canceling-asynchronous-operations", "querying-outstanding-asynchronous-requests", "full-async"]
 keywords: ["synchronous", "asynchronous", "pending", "polling", "correlation value"]
 ---
 
 # Synchronous and Asynchronous Operations
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

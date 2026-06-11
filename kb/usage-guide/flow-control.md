@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.51"
-status: draft
+status: reviewed
 related: ["using-notify-and-put-operations"]
 keywords: ["Flow Control", "endpoint role", "intermittent client", "server-to-client delivery", "polling"]
 ---
 
 # Flow Control
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.30"
 v1_source_section: "3.20"
-status: draft
+status: reviewed
 related: ["usage-limits", "state", "last-change-date"]
 keywords: ["lease time", "interval", "obtain lease", "caching", "time-limited use"]
 tag_hex: "420049"

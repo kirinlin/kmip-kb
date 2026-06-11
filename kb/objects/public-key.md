@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2.6"
 v1_source_section: "2.2.3"
-status: draft
+status: reviewed
 related: ["private-key", "create-key-pair", "certify", "register", "get", "certificate", "key-block", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["public key", "asymmetric key", "RSA", "EC", "key pair"]
 tag_hex: "42006D"

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.45"
 v1_source_section: "4.8"
-status: draft
+status: reviewed
 related: ["certify", "create-key-pair", "certificate", "public-key", "link"]
 keywords: ["re-certify", "recertify", "certificate renewal", "X.509", "certificate update"]
 ---
@@ -27,7 +27,7 @@ unsupporting server returns an error.
 | Certificate Request Type | No | An enumeration naming the request format; required when a Certificate Request is included. |
 | Certificate Request | No | A byte string carrying the request itself (PKCS#10, PEM, etc.). |
 | Offset | No | An interval giving the gap between the new certificate's initial date and its activation date. |
-| Template-Attribute | No | Desired attributes for the new certificate. |
+| Template-Attribute | No | Desired attributes for the new certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 If the Certificate Request and its type are both omitted and no certificate type
 is given via the template-attribute, the new certificate keeps the type of the

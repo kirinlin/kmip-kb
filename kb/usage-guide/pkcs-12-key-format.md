@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.27"
-status: draft
+status: reviewed
 related: ["private-key", "certificate"]
 keywords: ["PKCS#12", "keystore", "private key", "certificate chain", "Friendly Name", "password protection", "PBE"]
 ---
 
 # PKCS#12 Key Format
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

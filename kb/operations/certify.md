@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.6"
 v1_source_section: "4.7"
-status: draft
+status: reviewed
 related: ["re-certify", "create-key-pair", "register", "certificate", "public-key", "link"]
 keywords: ["certify", "certificate", "X.509", "PKCS#10", "certificate signing request", "CSR"]
 ---
@@ -27,7 +27,7 @@ server that does not implement it returns an error.
 | Unique Identifier | No | The [Public Key](../objects/public-key.md) to certify. If omitted, the ID Placeholder is used. |
 | Certificate Request Type | No | An enumeration naming the request format; required when a Certificate Request is included. |
 | Certificate Request | No | A byte string carrying the request itself (for example PKCS#10 or PEM). |
-| Template-Attribute | No | Desired attributes for the resulting certificate. |
+| Template-Attribute | No | Desired attributes for the resulting certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 When no Certificate Request is supplied, the public key is named only by its
 Unique Identifier and the desired certificate type comes from the

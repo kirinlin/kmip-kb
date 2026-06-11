@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.12"
-status: draft
+status: reviewed
 related: ["base-profiles", "storage-array-with-self-encrypting-drives-profiles", "symmetric-key-lifecycle-profiles"]
 keywords: ["tape library", "LTO", "KAD", "Application Specific Information", "Alternative Name", "barcode", "encryption key management"]
 ---

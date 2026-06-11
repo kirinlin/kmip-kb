@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "ug-3.47"
-status: draft
+status: reviewed
 related: ["authentication", "delegated-login"]
 keywords: ["Login", "Logout", "login ticket", "authentication caching", "time limit", "request count"]
 ---
 
 # Login and Logout
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

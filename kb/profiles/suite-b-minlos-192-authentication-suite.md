@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
 source_section: "prof-3.4"
-status: draft
+status: reviewed
 related: ["suite-b-profiles", "suite-b-minlos-128-authentication-suite", "tls-1-2-authentication-suite", "basic-authentication-suite"]
 keywords: ["Suite B", "minLOS_192", "TLS", "ECDSA-384", "AES-256-GCM", "P-384", "cipher suite", "NSA", "TOP SECRET"]
 ---

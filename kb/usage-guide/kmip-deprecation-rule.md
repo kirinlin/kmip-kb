@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-5.1"
-status: draft
+status: reviewed
 related: ["deprecated-functions"]
 keywords: ["deprecation", "major version", "minor version", "removal", "normative", "non-normative"]
 ---
 
 # KMIP Deprecation Rule
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

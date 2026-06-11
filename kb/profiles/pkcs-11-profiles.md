@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "prof-5.18"
-status: draft
+status: reviewed
 related: ["base-profiles", "cryptographic-profiles"]
 keywords: ["PKCS#11", "CKA", "CKM", "token", "slot", "HSM bridge", "cryptoki", "KMIP operation"]
 ---

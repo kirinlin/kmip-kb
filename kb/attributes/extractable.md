@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "4.23"
 v1_source_section: "3.50"
-status: draft
+status: reviewed
 related: ["never-extractable", "sensitive", "always-sensitive"]
 keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity"]
 tag_hex: "420122"

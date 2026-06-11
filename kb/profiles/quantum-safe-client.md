@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "prof-5.15"
-status: draft
+status: reviewed
 related: ["quantum-safe-profiles", "quantum-safe-server", "mandatory-quantum-safe-test-cases-kmip-v2-0", "base-profiles", "basic-authentication-suite"]
 keywords: ["quantum safe", "post-quantum", "TLS 1.3", "Protection Level", "Protection Period", "PQC", "client profile"]
 ---

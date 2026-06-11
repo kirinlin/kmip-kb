@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-3.2"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "https-profiles", "kmip-server-implementation-conformance"]
 keywords: ["HTTPS", "HTTP over TLS", "authentication", "transport", "RFC2818"]
 ---

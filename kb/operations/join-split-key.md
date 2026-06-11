@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.27"
 v1_source_section: "4.39"
-status: draft
+status: reviewed
 related: ["create-split-key", "split-key", "secret-data"]
 keywords: ["join split key", "reconstruct key", "secret sharing", "combine splits"]
 ---
@@ -26,7 +26,7 @@ was added in KMIP 1.2.
 | Object Type | Yes | The type of object to form from the splits. |
 | Unique Identifier | Yes (may repeat) | The split objects to combine; at least the threshold number must be supplied. |
 | Secret Data Type | No | When the result is secret data, which secret-data type the splits form. |
-| Template-Attribute | No | Attributes for the reconstructed object. |
+| Template-Attribute | No | Attributes for the reconstructed object. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.0"
 spec_versions: ["1.0"]
 source_section: "prof-4.4"
-status: draft
+status: reviewed
 related: ["tls-1-2-authentication-suite", "basic-authentication-suite", "secret-data-kmip-profile", "secret-data-server-tls-1-2-authentication-kmip-profile", "secret-data-client-tls-1-2-authentication-kmip-profile"]
 keywords: ["secret data", "TLS 1.2", "authentication suite", "password", "token", "opaque secret"]
 ---

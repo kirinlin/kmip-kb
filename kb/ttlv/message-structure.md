@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "8"
 v1_source_section: "7.1"
-status: draft
+status: reviewed
 related: ["operations", "batch-item", "protocol-version", "ttlv-encoding"]
 keywords: ["message structure", "request message", "response message", "header", "framing"]
 ---

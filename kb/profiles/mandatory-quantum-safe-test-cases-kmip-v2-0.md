@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.0"
 spec_versions: ["2.0"]
 source_section: "prof-5.17"
-status: draft
+status: reviewed
 related: ["quantum-safe-profiles", "quantum-safe-client", "quantum-safe-server"]
 keywords: ["quantum safe", "test cases", "QS-M", "mandatory test", "conformance", "Protection Period", "Protection Level", "PQC"]
 ---

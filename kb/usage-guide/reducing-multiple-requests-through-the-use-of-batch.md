@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.53"
-status: draft
+status: reviewed
 related: ["batched-requests-and-responses", "id-placeholder"]
 keywords: ["batch", "round trips", "Locate and Get", "atomicity", "undo", "continue", "Batch Undo Capability"]
 ---
 
 # Reducing Multiple Requests Through the Use of Batch
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

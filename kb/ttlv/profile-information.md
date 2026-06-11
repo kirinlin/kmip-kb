@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "7.31"
 v1_source_section: "2.1.19"
-status: draft
+status: reviewed
 related: ["capability-information", "validation-information", "kmip-server-implementation-conformance"]
 keywords: ["profile information", "profile name", "server URI", "conformance discovery"]
 tag_hex: "4200EB"

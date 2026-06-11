@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.9"
 v1_source_section: "4.2"
-status: draft
+status: reviewed
 related: ["create", "register", "re-key-key-pair", "certify", "public-key", "private-key", "cryptographic-algorithm"]
 keywords: ["create key pair", "asymmetric key", "public key", "private key", "RSA", "key generation"]
 ---
@@ -32,7 +32,11 @@ key-specific template-attribute wins over the common one, and an explicitly
 listed attribute wins over one pulled in via a named template; for
 multi-valued attributes the values from all three sources are combined. Template
 objects have been deprecated since version 1.3, so attributes are better
-supplied individually.
+supplied individually. In KMIP 2.0+ these wrappers are replaced by the
+corresponding flat Common Attributes / Private Key Attributes / Public Key
+Attributes structures
+([Template-Attribute Structures](../ttlv/template-attribute-structures.md));
+the routing semantics are unchanged.
 
 ## Response Fields
 

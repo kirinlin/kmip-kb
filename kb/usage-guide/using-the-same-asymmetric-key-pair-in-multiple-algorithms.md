@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.7"
-status: draft
+status: reviewed
 related: ["private-key", "public-key"]
 keywords: ["asymmetric key", "DSA", "ECDSA", "ECDH", "DH", "key format", "multiple algorithms", "key reuse"]
 ---
 
 # Using the Same Asymmetric Key Pair in Multiple Algorithms
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "ug-4.11"
-status: draft
+status: reviewed
 related: ["key-state-and-times", "unique-identifiers"]
 keywords: ["key replication", "multi-server", "fault tolerance", "consistency", "conflict resolution", "partition"]
 ---
 
 # Key Replication Between Servers
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

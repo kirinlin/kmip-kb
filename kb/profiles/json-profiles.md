@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.5"
 v1_source_section: "enc-4"
-status: draft
+status: reviewed
 related: ["base-profiles", "xml-profiles", "https-profiles"]
 keywords: ["JSON", "message encoding", "CamelCase", "TTLV", "alternative encoding"]
 ---

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-2.7"
-status: draft
+status: reviewed
 related: ["using-notify-and-put-operations"]
 keywords: ["intelligent client", "key using device", "device credential", "IoT", "constrained device", "protocol subset"]
 ---
 
 # Support for "Intelligent Clients" and "Key Using Devices"
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

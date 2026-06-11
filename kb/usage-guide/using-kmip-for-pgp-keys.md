@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.5"
-status: draft
+status: reviewed
 related: ["pgp-key", "application-specific-information"]
 keywords: ["PGP", "OpenPGP", "RFC 4880", "PGP Key object", "Alternative Name", "Link attribute", "web of trust"]
 ---
 
 # Using KMIP for PGP Keys
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

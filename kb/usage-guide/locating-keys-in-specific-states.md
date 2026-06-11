@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.1"
-status: draft
+status: reviewed
 related: ["id-placeholder", "key-state-and-times"]
 keywords: ["Locate", "key state", "date range", "ActivationDate", "DeactivationDate", "CompromiseDate", "range match"]
 ---
 
 # Locating Keys in Specific States
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

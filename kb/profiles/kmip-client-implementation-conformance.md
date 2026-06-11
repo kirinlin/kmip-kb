@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "14.1"
 v1_source_section: "12.2"
-status: draft
+status: reviewed
 related: ["kmip-server-implementation-conformance", "query", "discover-versions"]
 keywords: ["conformance", "client profile", "baseline client", "KMIP-Prof", "interoperability"]
 ---

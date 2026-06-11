@@ -4,7 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "prof-5.16"
-status: draft
+status: reviewed
 related: ["quantum-safe-profiles", "quantum-safe-client", "mandatory-quantum-safe-test-cases-kmip-v2-0", "base-profiles", "cryptographic-profiles", "asymmetric-key-lifecycle-profiles"]
 keywords: ["quantum safe", "post-quantum", "McEliece", "SPHINCS", "TLS 1.3", "Protection Level", "Protection Period", "Quantum Safe attribute", "PQC", "server profile"]
 ---

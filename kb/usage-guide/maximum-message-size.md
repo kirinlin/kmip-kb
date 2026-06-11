@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.54"
-status: draft
+status: reviewed
 related: ["large-responses", "batched-requests-and-responses"]
 keywords: ["Maximum Response Size", "batch", "message size", "error response", "cumulative size check"]
 ---
 
 # Maximum Message Size
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

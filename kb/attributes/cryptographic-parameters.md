@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.16"
 v1_source_section: "3.6"
-status: draft
+status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-domain-parameters", "cryptographic-usage-mask"]
 keywords: ["cryptographic parameters", "block cipher mode", "padding", "IV", "key role", "OAEP", "PSS"]
 tag_hex: "42002B"

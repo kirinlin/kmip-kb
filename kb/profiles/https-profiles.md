@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.3"
 v1_source_section: "enc-2"
-status: draft
+status: reviewed
 related: ["base-profiles", "https-authentication-suite", "xml-profiles", "json-profiles"]
 keywords: ["HTTPS", "HTTP over TLS", "message encoding", "transport", "REST-like", "KMIP client", "KMIP server"]
 ---

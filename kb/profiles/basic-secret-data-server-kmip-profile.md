@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.3"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "basic-baseline-server-kmip-profile", "basic-secret-data-client-kmip-profile", "secret-data-server-tls-1-2-authentication-kmip-profile", "secret-data-kmip-profile"]
 keywords: ["secret data", "password", "token", "Basic Authentication Suite", "Register", "server profile"]
 ---

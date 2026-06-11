@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.41"
 v1_source_section: "3.26"
-status: draft
+status: reviewed
 related: ["process-start-date", "deactivation-date", "activation-date", "state"]
 keywords: ["protect stop date", "encryption cutoff", "symmetric key", "lifecycle dates"]
 tag_hex: "420068"

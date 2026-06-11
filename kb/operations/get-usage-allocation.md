@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.23"
 v1_source_section: "4.18"
-status: draft
+status: reviewed
 related: ["check", "usage-limits", "activate", "encrypt", "sign"]
 keywords: ["get usage allocation", "usage limits", "protection quota", "metering"]
 ---

@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.25"
 v1_source_section: "3.23"
-status: draft
+status: reviewed
 related: ["original-creation-date", "activation-date", "last-change-date", "state"]
 keywords: ["initial date", "creation time", "registration time", "lifecycle dates"]
 tag_hex: "420039"

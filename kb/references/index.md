@@ -4,7 +4,7 @@ category: index
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "1"
-status: draft
+status: reviewed
 related: ["terminology", "normative-references", "non-normative-references", "ipr-policy"]
 keywords: ["references", "terminology", "glossary", "citations"]
 ---

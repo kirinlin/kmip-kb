@@ -5,7 +5,7 @@ spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
 source_section: "del_v2"
 v1_source_section: "3.15"
-status: draft
+status: reviewed
 related: ["x-509-certificate-issuer", "certificate-identifier", "certificate-subject"]
 keywords: ["certificate issuer", "deprecated", "issuer distinguished name"]
 tag_hex: "420015"

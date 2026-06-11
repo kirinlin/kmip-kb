@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "7.5"
 v1_source_section: "2.1.21"
-status: draft
+status: reviewed
 related: ["profile-information", "validation-information", "correlation-value"]
 keywords: ["capability information", "streaming capability", "asynchronous capability", "destroy action", "unwrap mode"]
 tag_hex: "4200F7"

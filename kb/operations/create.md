@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.8"
 v1_source_section: "4.1"
-status: draft
+status: reviewed
 related: ["create-key-pair", "register", "derive-key", "get", "symmetric-key", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["create", "symmetric key", "generate key", "provisioning", "key generation"]
 ---
@@ -27,6 +27,10 @@ for asymmetric keys. `Create` is not used to build Template objects.
 |---|---|---|
 | Object Type | Yes | The kind of object to generate — a [Symmetric Key](../objects/symmetric-key.md). |
 | Template-Attribute | Yes | The attributes the new key should carry, given as individual attributes and/or by referencing server-side Template objects by name. Template objects have been deprecated since version 1.3, so attributes are better supplied individually. |
+
+*Version note:* KMIP 2.0 replaced the Template-Attribute wrapper with the flat
+[Attributes](../ttlv/template-attribute-structures.md) structure; the attribute
+payload it carries is unchanged.
 
 At minimum the request must convey a [Cryptographic Algorithm](../attributes/cryptographic-algorithm.md)
 and a [Cryptographic Usage Mask](../attributes/cryptographic-usage-mask.md);

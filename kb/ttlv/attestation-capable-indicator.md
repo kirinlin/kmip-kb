@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "9.3"
 v1_source_section: "6.17"
-status: draft
+status: reviewed
 related: ["credential", "nonce", "result-reason"]
 keywords: ["attestation capable indicator", "TPM", "attestation required", "request header"]
 tag_hex: "4200D3"

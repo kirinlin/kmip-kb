@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.4"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4"]
 source_section: "prof-5.13"
-status: draft
+status: reviewed
 related: ["suite-b-minlos-128-authentication-suite", "suite-b-minlos-192-authentication-suite", "base-profiles", "asymmetric-key-lifecycle-profiles"]
 keywords: ["Suite B", "NSA", "ECDSA", "ECDH", "AES-GCM", "minLOS_128", "minLOS_192", "classified", "ECC"]
 ---
@@ -23,11 +23,11 @@ Suite B defines two non-signature primitive sets:
 
 | Primitive | Column 1 (128-bit floor) | Column 2 (192-bit floor) |
 |---|---|---|
-| Encryption | AES-128 | AES-256 |
-| Key Agreement | ECDH on P-256 | ECDH on P-384 |
-| Hash (PRF/MAC) | SHA-256 | SHA-384 |
+| Key agreement | ECDH over P-256 | ECDH over P-384 |
+| Symmetric encryption | AES-128 | AES-256 |
+| Hashing (PRF/MAC) | SHA-256 | SHA-384 |
 
-At minLOS_128 a session must draw exclusively from Column 1 or exclusively from Column 2 — mixing is prohibited. At minLOS_192, only Column 2 is permitted.
+At minLOS_128 a session must commit to a single column — all algorithms from Column 1 or all from Column 2, never a mix. At minLOS_192, only Column 2 is permitted.
 
 Digital signatures use ECDSA. At minLOS_128 either ECDSA-256 (P-256 + SHA-256) or ECDSA-384 (P-384 + SHA-384) may be used, and the two peers may authenticate with different sizes. At minLOS_192 both parties must use ECDSA-384.
 
@@ -60,7 +60,7 @@ Test case identifiers encode the tier and protocol version: `SUITEB_128-M-N-10` 
 
 ## Permitted Test Case Variations
 
-The list of operations and object types returned in Query responses may vary, as may `UniqueIdentifier`, `UniqueBatchItemIdentifier`, `TimeStamp`, and datetime attributes. Extensions reported in `Query` (`ExtensionList`, `ExtensionMap`, `ApplicationNamespaces`) are unconstrained.
+Query responses may legitimately differ in which operations and object types they enumerate, as may `UniqueIdentifier`, `UniqueBatchItemIdentifier`, `TimeStamp`, and datetime attributes. Extensions reported in `Query` (`ExtensionList`, `ExtensionMap`, `ApplicationNamespaces`) are unconstrained.
 
 ## Implications for Implementers
 

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "ug-4.10"
-status: draft
+status: reviewed
 related: ["cryptographic-services", "batched-requests-and-responses"]
 keywords: ["ReEncrypt", "re-encryption", "ephemeral", "plaintext protection", "Decrypt Encrypt batch", "Data Enumeration"]
 ---
 
 # ReEncrypt
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

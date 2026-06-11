@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.47"
 v1_source_section: "4.5"
-status: draft
+status: reviewed
 related: ["re-key", "create-key-pair", "certify", "public-key", "private-key", "link"]
 keywords: ["re-key key pair", "rekey", "replacement key pair", "asymmetric rotation"]
 ---
@@ -31,7 +31,11 @@ introduced in KMIP 1.1.
 | Public Key Template-Attribute | No | Attributes for the replacement public key (override the common set). |
 
 The same precedence rules as [Create Key Pair](create-key-pair.md) apply when an
-attribute is supplied in more than one place.
+attribute is supplied in more than one place. In KMIP 2.0+ these wrappers are
+replaced by the corresponding flat Common Attributes / Private Key Attributes /
+Public Key Attributes structures
+([Template-Attribute Structures](../ttlv/template-attribute-structures.md));
+the routing semantics are unchanged.
 
 ## Response Fields
 

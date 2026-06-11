@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "4.46"
 v1_source_section: "3.44"
-status: draft
+status: reviewed
 related: ["original-creation-date", "cryptographic-algorithm", "rng-parameters"]
 keywords: ["random number generator", "RNG", "DRBG", "entropy provenance", "FIPS"]
 tag_hex: "4200DE"

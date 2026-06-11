@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-2.11"
-status: draft
+status: reviewed
 related: ["key-state-and-times", "symmetric-key-lifecycle-profiles"]
 keywords: ["key lifecycle", "key state", "NIST SP 800-57", "activation", "deactivation", "cryptoperiod"]
 ---
 
 # Key Life-cycle and Key State
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

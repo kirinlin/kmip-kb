@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["2.0", "2.1"]
 source_section: "ug-3.55"
-status: draft
+status: reviewed
 related: ["vendor-extensions"]
 keywords: ["Message Extension", "vendor extension", "optional structure", "KMIP message", "multiple extensions"]
 ---
 
 # Message Extensions
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

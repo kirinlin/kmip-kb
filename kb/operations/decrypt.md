@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.11"
 v1_source_section: "4.30"
-status: draft
+status: reviewed
 related: ["encrypt", "cryptographic-parameters", "cryptographic-usage-mask", "symmetric-key"]
 keywords: ["decrypt", "decryption", "cipher", "AEAD", "plaintext recovery"]
 ---

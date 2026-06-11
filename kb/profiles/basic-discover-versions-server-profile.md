@@ -4,7 +4,7 @@ category: profile
 spec_version: "1.1"
 spec_versions: ["1.1"]
 source_section: "prof-4.1"
-status: draft
+status: reviewed
 related: ["basic-authentication-suite", "basic-baseline-server-kmip-profile", "basic-discover-versions-client-kmip-profile", "discover-versions-tls-1-2-authentication-server-profile"]
 keywords: ["Discover Versions", "version negotiation", "Basic Authentication Suite", "server profile"]
 ---

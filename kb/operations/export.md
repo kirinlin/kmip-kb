@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "6.1.18"
 v1_source_section: "4.40"
-status: draft
+status: reviewed
 related: ["import", "get", "register", "key-wrapping-specification"]
 keywords: ["export", "object export", "migration", "key wrapping", "attributes"]
 ---

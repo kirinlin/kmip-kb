@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-4.9"
-status: draft
+status: reviewed
 related: ["cryptographic-shredding-erasure"]
 keywords: ["key shredding", "data sanitisation", "overwrite", "forensics", "Shredding Algorithm", "Query Capabilities", "NIST SP 800-88"]
 ---
 
 # Key Shredding
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.32"
-status: draft
+status: reviewed
 related: ["key-state-and-times"]
 keywords: ["usage allocation", "Get Usage Allocation", "encryption usage", "tape encryption", "allocation loss", "stable storage"]
 ---
 
 # Usage Allocation
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

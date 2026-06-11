@@ -4,7 +4,7 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.15"
-status: draft
+status: reviewed
 related: ["mutating-attributes"]
 keywords: ["attributes", "Add Attribute", "Set Attribute", "Modify Attribute", "Delete Attribute", "Adjust Attribute", "multi-instance"]
 tag_hex: "420125"
@@ -12,8 +12,6 @@ xml_element: "Attributes"
 ---
 
 # Attributes
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

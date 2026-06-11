@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "6.1.55"
 v1_source_section: "4.31"
-status: draft
+status: reviewed
 related: ["signature-verify", "get-usage-allocation", "cryptographic-parameters", "digital-signature-algorithm", "private-key"]
 keywords: ["sign", "signature", "digital signature", "private key", "signing"]
 ---

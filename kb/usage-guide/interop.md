@@ -4,14 +4,12 @@ category: usage-guide
 spec_version: "2.1"
 spec_versions: ["1.4", "2.0", "2.1"]
 source_section: "ug-3.45"
-status: draft
+status: reviewed
 related: ["client-and-server-correlation-values"]
 keywords: ["interoperability testing", "test case identifier", "server log", "KMIP TC", "automated testing"]
 ---
 
 # Interop
-
-<!-- Author original prose only. Do NOT paste spec text. See CONTRIBUTING.md. -->
 
 ## Overview
 

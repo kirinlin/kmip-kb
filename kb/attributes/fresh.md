@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "4.24"
 v1_source_section: "3.34"
-status: draft
+status: reviewed
 related: ["object-group", "initial-date", "key-value-present"]
 keywords: ["fresh", "unused key", "key pool", "group member fresh"]
 tag_hex: "4200A8"

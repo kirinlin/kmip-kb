@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "7.9"
 v1_source_section: "2.1.10"
-status: draft
+status: reviewed
 related: ["data-length", "signature-data", "mac-data", "correlation-value"]
 keywords: ["data", "payload", "encrypt", "decrypt", "sign", "cryptographic operations"]
 tag_hex: "4200C2"

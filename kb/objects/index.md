@@ -5,7 +5,7 @@ spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "2"
 v1_source_section: "2.2"
-status: draft
+status: reviewed
 related: ["symmetric-key", "certificate", "public-key", "private-key", "split-key", "secret-data", "opaque-object", "pgp-key", "template"]
 keywords: ["managed objects", "managed cryptographic objects", "key", "certificate"]
 tag_hex: "42014E"
