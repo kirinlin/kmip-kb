@@ -4,6 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.4"
+v1_source_section: "enc-6"
 status: draft
 related: ["base-profiles", "json-profiles", "https-profiles"]
 keywords: ["XML", "message encoding", "CamelCase", "TTLV", "alternative encoding"]
@@ -38,6 +39,15 @@ Both client and server start from the corresponding [Base Profiles](base-profile
 - The `Maximum Response Size` field in XML requests still governs the length of a hypothetical TTLV-encoded response. Size your limit based on TTLV byte counts, not XML byte counts.
 - CamelCase normalization follows a deterministic algorithm (split on whitespace/dashes, capitalize each word, concatenate). Implement the algorithm rather than maintaining a lookup table to handle future tags correctly.
 - Validating against the KMIP XML Schema (published as an appendix to the profiles document) catches encoding errors early; use it in your test suite.
+
+## Version History
+
+For v1.0–v1.2 the XML encoding rules were published in the separate
+`[KMIP-ENCODE]` document (*KMIP Additional Message Encodings v1.0*, §6), not
+in KMIP-PROF. XML Client and Server profile IDs for v1.3 appeared in the
+core spec enumerations, and by v2.0 the full encoding specification was
+absorbed into KMIP-Prof §5.4 (where it remains in v2.1). The `enc-6`
+traceability in `v1_source_section` points to §6 of that earlier document.
 
 ## Related Concepts
 

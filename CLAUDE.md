@@ -29,6 +29,16 @@ to distinguish them from sections of KMIP-SPEC. `check_verbatim.py` and
 (`raw/kmip/kmip-profiles/v<ver>/kmip-profiles-v<ver>.md`) rather than the main
 spec.
 
+## source_section for KMIP-ENCODE articles
+
+Articles whose v1.x origin is the separate `[KMIP-ENCODE]` document (*KMIP
+Additional Message Encodings v1.0*, `raw/kmip/kmip-addtl-msg-enc/v1.0/`) use
+the prefix `enc-` in `v1_source_section` (e.g., `v1_source_section: "enc-2"`).
+This applies to the HTTPS, JSON, and XML encoding profiles, which were defined
+in KMIP-ENCODE for v1.0–v1.2 before being absorbed into KMIP-Prof in v2.0.
+The `enc-` prefix is traceability only; no scaffold tooling currently resolves
+it automatically.
+
 ## Authoring content
 
 Fill a stub's existing section headers with original prose, populate front

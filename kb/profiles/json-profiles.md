@@ -4,6 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.5"
+v1_source_section: "enc-4"
 status: draft
 related: ["base-profiles", "xml-profiles", "https-profiles"]
 keywords: ["JSON", "message encoding", "CamelCase", "TTLV", "alternative encoding"]
@@ -37,6 +38,15 @@ Both client and server start from the corresponding [Base Profiles](base-profile
 - The `|` separator for mask values is not standard JSON and must be handled as a special case in your parser; do not rely on generic JSON libraries to handle it automatically.
 - Because JavaScript numbers lack 64-bit integer precision, always use hex strings for Long Integer and Big Integer values when building clients that run in JavaScript environments.
 - `Maximum Response Size` is still based on hypothetical TTLV encoding, not JSON byte count.
+
+## Version History
+
+For v1.0–v1.2 the JSON encoding rules were published in the separate
+`[KMIP-ENCODE]` document (*KMIP Additional Message Encodings v1.0*, §4), not
+in KMIP-PROF. JSON Client and Server profile IDs for v1.3 appeared in the
+core spec enumerations, and by v2.0 the full encoding specification was
+absorbed into KMIP-Prof §5.5 (where it remains in v2.1). The `enc-4`
+traceability in `v1_source_section` points to §4 of that earlier document.
 
 ## Related Concepts
 

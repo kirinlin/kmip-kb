@@ -4,6 +4,7 @@ category: profile
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "prof-5.3"
+v1_source_section: "enc-2"
 status: draft
 related: ["base-profiles", "https-authentication-suite", "xml-profiles", "json-profiles"]
 keywords: ["HTTPS", "HTTP over TLS", "message encoding", "transport", "REST-like", "KMIP client", "KMIP server"]
@@ -33,6 +34,15 @@ An HTTPS Server extends the [Baseline Server](base-profiles.md) to accept KMIP m
 - `Maximum Response Size` is still interpreted in terms of TTLV-encoded length, not HTTP body length. A client that configures this based on HTTP expectations will get surprising results.
 - Interoperability with HTTP proxies that enforce `Content-Length` is a common issue; always compute the correct value before sending.
 - Prefer explicit URI configuration over relying on `/kmip` — some server products use different paths.
+
+## Version History
+
+For v1.0–v1.2 the HTTPS binding was defined in the separate `[KMIP-ENCODE]`
+document (*KMIP Additional Message Encodings v1.0*, §2), not in KMIP-PROF.
+Starting with v1.3 the HTTPS Client and Server profile IDs appeared in the
+core spec enumerations, and by v2.0 the rules were fully absorbed into
+KMIP-Prof §5.3 (where they remain in v2.1). The `enc-2` traceability in
+`v1_source_section` points to §2 of that earlier document.
 
 ## Related Concepts
 
