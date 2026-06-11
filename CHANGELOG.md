@@ -6,6 +6,13 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+- `Makefile`: `report` target runs `scripts/status_report.py`; `crawl` target runs `scripts/kmip_crawler.py` (extracted from old `build`).
+
+### Changed
+- `Makefile`: `build` target is now a stub (`echo "Coming Soon"`).
+- `.gitignore`: removed `docs/` exclusion so a generated `docs/` directory can be tracked.
+
 ### Changed
 - **Repo restructured: all KB content moved under `kb/`.** The 11 content
   directories (`attributes`, `concepts`, `examples`, `mappings`, `objects`,
