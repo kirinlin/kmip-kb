@@ -6,6 +6,38 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-06-12
+
+### Added
+
+- **All 135 remaining stubs authored and promoted to `reviewed`**, bringing the
+  KB to 452/452 (100%) reviewed. Groups covered:
+  - **16 v2.1 attributes**: `certificate-attributes`, `key-format-type`,
+    `nist-key-type`, `opaque-data-type`, `protection-level`, `protection-period`,
+    `protection-storage-mask`, `quantum-safe`, `rotate-automatic`, `rotate-date`,
+    `rotate-generation`, `rotate-interval`, `rotate-latest`, `rotate-name`,
+    `rotate-offset`, `short-unique-identifier`.
+  - **1 concept**: `split-key-algorithms` (XOR, Shamir polynomial, Blakley).
+  - **1 object**: `certificate-request` (v2.1 CSR managed object, PKCS#10/PEM/CRMF/CMC).
+  - **1 reference**: `item-data-types` (all 10 TTLV primitive types).
+  - **16 v2.1 operations**: `login`, `logout`, `delegated-login`, `ping`, `log`,
+    `set-attribute`, `adjust-attribute`, `set-defaults`, `set-constraints`,
+    `get-constraints`, `set-endpoint-role`, `re-provision`, `interop`, `pkcs-11`,
+    `process`, `query-asynchronous-requests`.
+  - **2 server-to-client operations**: `discover-versions` (§6.2.1),
+    `set-endpoint-role` (§6.2.5).
+  - **34 TTLV structures** (§5, §7, §12): `constraint`, `constraints`, `right`,
+    `rights`, `ticket`, `defaults-information`, `object-defaults`,
+    `derivation-parameters`, `asynchronous-request`,
+    `asynchronous-correlation-values`, `pkcs-11-{function,interface,
+    input-parameters,output-parameters,return-code}`, `interop-{function,
+    identifier}`, `log-message`, `protection-storage-{mask,masks}`,
+    `server-information`, `profile-version`, `usage-limits`,
+    `storage-status-mask`, `attribute-reference`, `{common,private,public}-
+    key-attributes`, `{new,current}-attribute`, `objects`, `object-{types,groups}`,
+    `cryptographic-usage-mask`.
+  - **64 enumeration docs** (§11.1–§11.64): all KMIP v2.1 enumerations.
+
 ## [0.10.0] - 2026-06-12
 
 ### Changed

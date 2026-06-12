@@ -54,17 +54,14 @@ section in `v1_source_section`. `status` tracks progress: `stub` (generated
 skeleton) → `draft` (authored) → `reviewed` (human-verified per
 [CONTRIBUTING.md](CONTRIBUTING.md)).
 
-**Authoring status:** 317 content documents total — 317 `reviewed`, 0 `draft`,
-0 `stub`. All categories are 100% reviewed per the
-[CONTRIBUTING.md](CONTRIBUTING.md) checklist: validators clean (front-matter
-schema, no-verbatim, link resolution), per-category technical spot checks, and
-KMIP 2.0 version notes added where docs described the request envelope only by
-its v1.x Template-Attribute name. `kb/profiles/` covers authentication suites,
-encoding profiles (HTTPS/XML/JSON), Suite B, all use-case profiles through
-PKCS#11 and Quantum Safe, and the complete set of granular per-profile entries
-for KMIP-Prof v1.0–v2.1. `kb/usage-guide/` covers all 83 KMIP-UG v2.1 articles.
-Remaining work is the planned content in `kb/examples/`, `kb/workflows/`, and
-`kb/mappings/`.
+**Authoring status:** 452 content documents — **452 `reviewed`**, 0 `draft`,
+0 `stub`. All categories are at 100% reviewed. Covers every KMIP 2.1 section:
+operations (client and server-to-client), attributes, objects, TTLV structures,
+all 64 enumerations (§11), bit masks (§12), algorithm implementation (§13),
+profiles (KMIP-Prof v1.0–v2.1), and 83 usage-guide articles (KMIP-UG v2.1).
+Validators clean (front-matter schema, no-verbatim, link resolution) per the
+[CONTRIBUTING.md](CONTRIBUTING.md) checklist. Remaining work is the planned
+content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
 ## Tag field populator
 

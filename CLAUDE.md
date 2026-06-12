@@ -70,22 +70,15 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
-Authored so far: **452 content docs total — 317 `reviewed`, 0 `draft`, 135
-`stub`**. All previously authored docs are reviewed per the CONTRIBUTING
-checklist (validators clean; identifier-only verbatim flags in 3 profile
-docs — TLS cipher-suite names and `LIBRARY-LTO*` namespaces — are accepted
-as unavoidable). The 135 stubs come from two scaffold extensions: 68 from
-adding v2.1 §11 Enumerations (64, in `kb/ttlv/enumerations/`), §12 Bit
-Masks (3, in `kb/ttlv/`), and §13 Algorithm Implementation (1, in
-`kb/concepts/`) to `V20_PREFIX_RULES`; and 67 v2.x-only sections that had
-never been scaffolded during the v1.x→v2.x reorganisation (Login/Logout/
-Delegated Login, Set/Adjust Attribute, Rotate-* attributes, PKCS#11,
-Interop, Constraints/Defaults/Rights structures, §5.2–§5.7 attribute
-structures, Certificate Request object, ...). Every `target_path` in
-`kb/versions/2.1-toc.yaml` now exists on disk, and re-running the
-generator is a no-op (created=0). Remaining work: author those 135 stubs,
-plus net-new content in `kb/examples/`, `kb/workflows/`, and
-`kb/mappings/`.
+Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0
+`stub`**. All docs are reviewed per the CONTRIBUTING checklist (validators
+clean; identifier-only verbatim flags accepted as unavoidable: TLS
+cipher-suite names and `LIBRARY-LTO*` namespaces in 3 profile docs, plus
+EC key-compression enum value names in `kb/ttlv/enumerations/
+key-compression-type-enumeration.md`). Every `target_path` in
+`kb/versions/2.1-toc.yaml` now exists on disk at `reviewed` status, and
+re-running the generator is a no-op (created=0). Remaining work: net-new
+content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
 Deliberate consolidations/renames are encoded in `V21_SLUG_OVERRIDES` in
 `build_kb_scaffold.py` (25 sections → existing authored docs: §1.3→
