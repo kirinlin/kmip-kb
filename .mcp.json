@@ -2,7 +2,7 @@
   "mcpServers": {
     "kmip-kb": {
       "command": "bash",
-      "args": ["mcp_server/start.sh"]
+      "args": ["mcp_py/start.sh"]
     }
   }
 }

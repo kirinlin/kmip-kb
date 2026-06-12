@@ -26,7 +26,7 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/mappings/` | Cross-version / cross-implementation mapping tables. |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
 | `templates/` | Document skeletons used by the scaffold generator. |
-| `mcp_server/` | FastMCP server exposing the knowledge base to coding agents via BM25 search, article retrieval, listing, and related-article discovery. |
+| `mcp_py/` | FastMCP server exposing the knowledge base to coding agents via BM25 search, article retrieval, listing, and related-article discovery. |
 
 Each document carries YAML front matter validated against
 [`schemas/frontmatter.schema.json`](schemas/frontmatter.schema.json):
@@ -120,18 +120,18 @@ python scripts/check_verbatim.py --n 8         # adjust the run length
 
 ## MCP server
 
-[`mcp_server/kmip_kb_server.py`](mcp_server/kmip_kb_server.py) is a FastMCP
+[`mcp_py/kmip_kb_server.py`](mcp_py/kmip_kb_server.py) is a FastMCP
 server that exposes the knowledge base to coding agents over stdio. It provides
 four tools: BM25 full-text search (`search_kb`), full article retrieval
 (`get_article`), article listing with front-matter filters (`list_articles`),
 and related-article discovery (`get_related`). Start it with:
 
 ```sh
-bash mcp_server/start.sh          # activate venv and run via stdio
+bash mcp_py/start.sh          # activate venv and run via stdio
 ```
 
 Dependencies (`fastmcp`, `rank-bm25`, `pyyaml`) are listed in
-`mcp_server/requirements.txt`. The server is pre-wired for Claude Code via
+`mcp_py/requirements.txt`. The server is pre-wired for Claude Code via
 `.mcp.json` and `.claude/settings.json`; a `kmip-authoring` skill at
 `.claude/skills/kmip-authoring.md` bundles authoring conventions for agents
 working in this repo.

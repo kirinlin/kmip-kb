@@ -125,7 +125,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
     McEliece-8192128, SPHINCS-256, ECDSA, Ed25519), three new attributes (Protection
     Level, Protection Period, Quantum Safe), algorithm-selection behavior, and the
     two mandatory v2.0 test cases (QS-M-1-20, QS-M-2-20).
-- **KMIP KB MCP server** (`mcp_server/kmip_kb_server.py`) — FastMCP server
+- **KMIP KB MCP server** (`mcp_py/kmip_kb_server.py`) — FastMCP server
   exposing the knowledge base over stdio with four tools: `search_kb` (BM25
   full-text search), `get_article` (full article retrieval), `list_articles`
   (front-matter-filtered listing), `get_related` (related-article discovery).
