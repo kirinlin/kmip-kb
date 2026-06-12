@@ -3,7 +3,7 @@ title: Protocol Version
 category: ttlv
 spec_version: "2.1"
 spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
-source_section: "8.2"
+source_section: "9.16"
 v1_source_section: "6.1"
 status: reviewed
 related: ["message-structure", "discover-versions"]

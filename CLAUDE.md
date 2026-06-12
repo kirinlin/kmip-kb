@@ -14,9 +14,9 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
 
-Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV→`kb/ttlv/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
+Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV + §12 Bit Masks→`kb/ttlv/`, §11 Enumerations→`kb/ttlv/enumerations/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
@@ -70,14 +70,34 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 ```
 
-Authored so far: **317 content docs total — 317 `reviewed`, 0 `draft`, 0
-`stub`**. All categories are 100% reviewed per the CONTRIBUTING checklist
-(validators clean; identifier-only verbatim flags in 3 profile docs — TLS
-cipher-suite names and `LIBRARY-LTO*` namespaces — are accepted as
-unavoidable). Remaining work: net-new content in `kb/examples/`,
-`kb/workflows/`, and `kb/mappings/`. One caveat:
-`kb/operations/re-key.md` (v2.1 §6.1.46) cannot be auto-checked by `check_verbatim.py`
-because its heading was lost in source conversion — re-verify it manually
+Authored so far: **452 content docs total — 317 `reviewed`, 0 `draft`, 135
+`stub`**. All previously authored docs are reviewed per the CONTRIBUTING
+checklist (validators clean; identifier-only verbatim flags in 3 profile
+docs — TLS cipher-suite names and `LIBRARY-LTO*` namespaces — are accepted
+as unavoidable). The 135 stubs come from two scaffold extensions: 68 from
+adding v2.1 §11 Enumerations (64, in `kb/ttlv/enumerations/`), §12 Bit
+Masks (3, in `kb/ttlv/`), and §13 Algorithm Implementation (1, in
+`kb/concepts/`) to `V20_PREFIX_RULES`; and 67 v2.x-only sections that had
+never been scaffolded during the v1.x→v2.x reorganisation (Login/Logout/
+Delegated Login, Set/Adjust Attribute, Rotate-* attributes, PKCS#11,
+Interop, Constraints/Defaults/Rights structures, §5.2–§5.7 attribute
+structures, Certificate Request object, ...). Every `target_path` in
+`kb/versions/2.1-toc.yaml` now exists on disk, and re-running the
+generator is a no-op (created=0). Remaining work: author those 135 stubs,
+plus net-new content in `kb/examples/`, `kb/workflows/`, and
+`kb/mappings/`.
+
+Deliberate consolidations/renames are encoded in `V21_SLUG_OVERRIDES` in
+`build_kb_scaffold.py` (25 sections → existing authored docs: §1.3→
+`normative-references`, §3.4–§3.12→`transparent-key-structures`, §4.60→
+`custom-attribute`, §5.1→`attribute`, §8.1–§8.6→`message-structure`,
+§9.9/§9.10→`client-/server-correlation-value`, §10.1.1–§10.1.5→
+`ttlv-encoding`); the TOC points at the authored doc for those sections
+and the generator never emits stubs for them. Two caveats:
+`kb/operations/re-key.md` (v2.1 §6.1.46) and `kb/ttlv/protocol-version.md`
+(v2.1 §9.16) cannot be auto-checked by `check_verbatim.py` because their
+headings were lost in source conversion (§9.16 is the only numbered
+heading missing from the converted v2.1 spec) — re-verify them manually
 when editing.
 
 ## Authoring status
@@ -105,8 +125,8 @@ ToC maps for all seven spec releases and all KMIP-Prof versions are committed un
 
 | File | Sections |
 |---|---|
-| `kb/versions/2.1-toc.yaml` | 234 |
-| `kb/versions/2.0-toc.yaml` | 215 |
+| `kb/versions/2.1-toc.yaml` | 302 |
+| `kb/versions/2.0-toc.yaml` | 281 |
 | `kb/versions/1.4-toc.yaml` | 157 |
 | `kb/versions/1.3-toc.yaml` | 143 |
 | `kb/versions/1.2-toc.yaml` | 134 |
@@ -131,7 +151,7 @@ v1.0–v1.2 profiles put profile definitions in §4 (§5 is Conformance Clauses 
 
 `kb/versions/index.md` contains delta notes for every release (v1.1–v2.1). `spec_versions` front matter has been audited across all releases: 53 version-boundary docs for v1.1–v1.4 (0 errors); v2.0/v2.1 audited across all 162 KB docs (5 correctly excluded as removed in v2.0).
 
-The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` / `UG_PREFIX_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. Stub bodies come from `templates/<category>.md`.
+The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` / `UG_PREFIX_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. `V21_SLUG_OVERRIDES` (applied for `--source spec --version 2.1` only) maps consolidated/renamed sections to their authored doc's slug so re-runs stay idempotent. Stub bodies come from `templates/<category>.md`.
 
 ## Crawler (source preparation, private)
 

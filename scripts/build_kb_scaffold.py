@@ -78,10 +78,46 @@ V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "10.1": ("ttlv", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
     "10.3": ("concept", 2, ""),          # Authentication
     "10.4": ("concept", 2, ""),          # Transport
+    "11": ("ttlv", 2, "enumerations"),   # Enumerations (Tag, Operation, State, ...)
+    "12": ("ttlv", 2, ""),               # Bit Masks (Cryptographic Usage, ...)
+    "13": ("concept", 2, ""),            # Algorithm Implementation (Split Key)
     "14": ("profile", 2, ""),            # Conformance
 }
 
 PREFIX_RULES = V1X_PREFIX_RULES  # default; overridden per-version in cmd_generate
+
+# Sections whose content is deliberately covered by an already-authored doc
+# under a different slug (rename or many-sections-into-one consolidation).
+# Applied for --source spec --version 2.1 only: the stub target resolves to
+# the existing doc (so write_if_stub skips it as authored) and the TOC points
+# at the real file instead of a slug that will never exist.
+V21_SLUG_OVERRIDES: dict[str, str] = {
+    "1.3": "normative-references",          # renamed from NormativeReferences
+    "3.4": "transparent-key-structures",    # §3.4–3.12 consolidated
+    "3.5": "transparent-key-structures",
+    "3.6": "transparent-key-structures",
+    "3.7": "transparent-key-structures",
+    "3.8": "transparent-key-structures",
+    "3.9": "transparent-key-structures",
+    "3.10": "transparent-key-structures",
+    "3.11": "transparent-key-structures",
+    "3.12": "transparent-key-structures",
+    "4.60": "custom-attribute",             # Vendor Attribute, authored as Custom Attribute
+    "5.1": "attribute",                     # Attributes structure, authored singular
+    "8.1": "message-structure",             # §8 Messages consolidated
+    "8.2": "message-structure",
+    "8.3": "message-structure",
+    "8.4": "message-structure",
+    "8.5": "message-structure",
+    "8.6": "message-structure",
+    "9.9": "client-correlation-value",      # Correlation Value (Client)
+    "9.10": "server-correlation-value",     # Correlation Value (Server)
+    "10.1.1": "ttlv-encoding",              # §10.1.1–10.1.5 consolidated
+    "10.1.2": "ttlv-encoding",
+    "10.1.3": "ttlv-encoding",
+    "10.1.4": "ttlv-encoding",
+    "10.1.5": "ttlv-encoding",
+}
 
 # KMIP Profiles document ([KMIP-Prof]) section classification.
 # The profiles doc is versioned in sync with KMIP-SPEC (both 2.1, etc.) but is a
@@ -174,6 +210,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/examples": "Worked request/response examples (original, not copied from the spec).",
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",
     "kb/operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
+    "kb/ttlv/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
     "schemas/agent": "GraphRAG / coding-agent relation files (operation/object graphs).",
     "kb/mappings": "Cross-version and cross-implementation mapping tables.",
     "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
@@ -539,9 +576,18 @@ def cmd_generate(args) -> int:
         section_prefix = ""
     stubs = select_stubs(headings, rules)
 
+    # resolve consolidated/renamed sections to their authored doc's slug
+    if source == "spec" and version == "2.1":
+        for s in stubs:
+            if s["section"] in V21_SLUG_OVERRIDES:
+                s["slug"] = V21_SLUG_OVERRIDES[s["section"]]
+                s["consolidated"] = True
+
     # detect slug collisions within a category
     seen: dict[tuple[str, str, str], str] = {}
     for s in stubs:
+        if s.get("consolidated"):
+            continue
         key = (s["category"], s["subdir"], s["slug"])
         if key in seen:
             print(f"WARNING: slug collision {key} from sections "
