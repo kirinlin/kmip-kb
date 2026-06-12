@@ -6,6 +6,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-06-12
+
 ### Changed
 - **All 317 KB content docs promoted `draft` → `reviewed`** after a full review
   pass per the CONTRIBUTING checklist: front-matter schema, no-verbatim, and
@@ -333,5 +335,6 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `operations/put.md`) left at the top level before server-to-client routing
   existed; the correct copies live under `operations/server-to-client/`.
 
-[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.9.0...HEAD
+[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.10.0...HEAD
+[0.10.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/kmip-dev/kmip-dev/releases/tag/v0.9.0
