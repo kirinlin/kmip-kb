@@ -6,6 +6,11 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- Renamed `mcp_server/` directory to `mcp_py/`; updated `.mcp.json`, `README.md`,
+  and `CHANGELOG.md` references accordingly.
+
 ## [0.11.0] - 2026-06-12
 
 ### Added

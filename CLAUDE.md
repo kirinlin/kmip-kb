@@ -14,7 +14,7 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/`.
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
 
 Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV + §12 Bit Masks→`kb/ttlv/`, §11 Enumerations→`kb/ttlv/enumerations/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
