@@ -32,10 +32,10 @@ PULLMD_URL = os.environ.get("PULLMD_URL", "http://localhost:3000")
 # Path prefixes to exclude from crawl/download. The test-cases tree under
 # kmip-profiles v3.0 self-references via "kmip-v3.0", producing runaway depth
 # from server mis-linking, so we prune that subtree entirely.
-# usecases are renamed to testcases
+# usecases are renamed to testcases, but keep v1.0.
 EXCLUDE_PREFIXES = (
     "/kmip/kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0",
-    "/kmip/usecases",
+    "/kmip/usecases/v1.1",
 )
 CRAWL_DELAY = 0.3   # seconds between crawl requests
 REQUEST_TIMEOUT = 3600
