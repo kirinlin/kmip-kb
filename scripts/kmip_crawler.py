@@ -79,7 +79,7 @@ def is_in_scope(url: str) -> bool:
 
 def looks_like_html(url: str) -> bool:
     path = urlparse(url).path.rstrip("/")
-    return not path or path.endswith(("/", ".html", ".htm", ".xml")) or "." not in path.split("/")[-1]
+    return not path or path.endswith(("/", ".html", ".htm", ".xml", ".txt")) or "." not in path.split("/")[-1]
 
 
 def fetch_links(url: str) -> list[str]:
@@ -143,7 +143,7 @@ def url_to_local_path(url: str, out_dir: Path) -> Path | None:
 
     if ext in ("html", "htm"):
         return out_dir / (stem + ".md")
-    if ext == "xml":
+    if ext in ("xml", "txt"):
         return out_dir / rel
     if ext == "":
         return out_dir / rel / "index.md"
@@ -214,7 +214,7 @@ def process_url(url: str, out_dir: Path, skip_existing: bool, skip_urls: set[str
 
     ext = urlparse(url).path.rsplit(".", 1)[-1].lower() if "." in urlparse(url).path else ""
 
-    if ext == "xml":
+    if ext in ("xml", "txt"):
         raw, code, info = fetch_direct(url)
         if raw is None:
             return {"url": url, "status": "error", "code": code, "info": info}
