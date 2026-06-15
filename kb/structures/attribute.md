@@ -7,9 +7,9 @@ source_section: "5.1"
 v1_source_section: "2.1.1"
 status: reviewed
 related: ["template-attribute-structures", "custom-attribute", "ttlv-encoding"]
-keywords: ["attribute structure", "attribute name", "attribute index", "attribute value"]
+keywords: ["attribute structure", "attribute name", "attribute index", "attribute value", "420008", "Attribute"]
 tag_hex: "420008"
-xml_element: "Attribute"
+xml_text: "Attribute"
 ---
 
 # Attribute

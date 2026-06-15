@@ -6,9 +6,9 @@ spec_versions: ["2.0","2.1"]
 source_section: "11.18"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "wrapping-method-enumeration", "key-value"]
-keywords: ["encoding option", "key wrapping", "TTLV encoding", "no encoding", "key value", "wrapped key"]
+keywords: ["encoding option", "key wrapping", "TTLV encoding", "no encoding", "key value", "wrapped key", "4200A3", "EncodingOption"]
 tag_hex: "4200A3"
-xml_element: "EncodingOption"
+xml_text: "EncodingOption"
 ---
 
 # Encoding Option Enumeration
@@ -17,11 +17,12 @@ xml_element: "EncodingOption"
 
 The Encoding Option enumeration controls how the [Key Value](../../structures/key-value.md) structure is represented when it is wrapped. When a key is wrapped for transport or storage under a wrapping key, the server must decide whether to wrap just the raw key bytes or the full TTLV-encoded Key Value structure (which includes the key material plus any associated attributes). Wrapping the full TTLV structure preserves attribute data alongside the key so that it can be recovered when unwrapped, whereas wrapping raw bytes produces a more compact result compatible with simpler key exchange protocols. This enumeration appears in the Key Wrapping Specification.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Key Wrapping Specification structure within a Get or Register request when key wrapping is requested.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| No Encoding | `0x00000001` | `NoEncoding` |  |
+| TTLV Encoding | `0x00000002` | `TTLVEncoding` |  |
 
 - **No Encoding**: The raw key material bytes are wrapped directly without any TTLV framing. The wrapping input is the key value as a plain byte string. This produces a compact, format-agnostic wrapped blob that can be exchanged with non-KMIP systems that expect bare wrapped key bytes.
 - **TTLV Encoding**: The full TTLV-encoded Key Value structure — which includes the key material along with any accompanying attributes such as cryptographic parameters or IV/nonce data — is serialised as a byte string and then wrapped. When the recipient unwraps the blob, they recover the complete Key Value structure and can reconstruct the KMIP key object with all its context intact.

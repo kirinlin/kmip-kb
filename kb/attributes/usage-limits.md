@@ -7,9 +7,9 @@ source_section: "4.59"
 v1_source_section: "3.21"
 status: reviewed
 related: ["lease-time", "cryptographic-usage-mask", "state"]
-keywords: ["usage limits", "usage allocation", "byte limit", "key exhaustion", "quota"]
+keywords: ["usage limits", "usage allocation", "byte limit", "key exhaustion", "quota", "420095", "UsageLimits"]
 tag_hex: "420095"
-xml_element: "UsageLimits"
+xml_text: "UsageLimits"
 ---
 
 # Usage Limits

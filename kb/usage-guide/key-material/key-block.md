@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.12"
 status: reviewed
 related: ["key-block", "key-value"]
-keywords: ["Key Block", "Key Value", "Key Wrapping Data", "Key Value Type", "attributes in Key Value", "wrapping"]
+keywords: ["Key Block", "Key Value", "Key Wrapping Data", "Key Value Type", "attributes in Key Value", "wrapping", "420040", "KeyBlock"]
 tag_hex: "420040"
-xml_element: "KeyBlock"
+xml_text: "KeyBlock"
 ---
 
 # Key Block

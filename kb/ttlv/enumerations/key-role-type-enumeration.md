@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.26"
 status: reviewed
 related: ["split-key", "create-split-key", "join-split-key"]
-keywords: ["key role", "split key", "BDK", "KEK", "PIN", "payment", "DEK", "CVK", "base derivation key"]
+keywords: ["key role", "split key", "BDK", "KEK", "PIN", "payment", "DEK", "CVK", "base derivation key", "420083", "KeyRoleType"]
 tag_hex: "420083"
-xml_element: "KeyRoleType"
+xml_text: "KeyRoleType"
 ---
 
 # Key Role Type Enumeration
@@ -17,11 +17,34 @@ xml_element: "KeyRoleType"
 
 The Key Role Type enumeration identifies the functional role of a cryptographic key within a split-key scheme and specifically within payment card industry key hierarchies. When a master key is split across multiple shares using a secret-sharing scheme, each share inherits the role of the original key. The role type allows key management systems to enforce policy based on what the key is used for — for example, restricting which operations are permitted on a Base Derivation Key versus a PIN Encryption Key. This enumeration is most prevalent in payment and financial system integrations. It appears in [Split Key](../../objects/split-key.md) objects.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside Split Key objects and key attribute structures that record key role for policy enforcement.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| BDK | `0x00000001` | `BDK` |  |
+| CVK | `0x00000002` | `CVK` |  |
+| DEK | `0x00000003` | `DEK` |  |
+| MKAC | `0x00000004` | `MKAC` |  |
+| MKSMC | `0x00000005` | `MKSMC` |  |
+| MKSMI | `0x00000006` | `MKSMI` |  |
+| MKDAC | `0x00000007` | `MKDAC` |  |
+| MKDN | `0x00000008` | `MKDN` |  |
+| MKCP | `0x00000009` | `MKCP` |  |
+| MKOTH | `0x0000000A` | `MKOTH` |  |
+| KEK | `0x0000000B` | `KEK` |  |
+| MAC16609 | `0x0000000C` | `MAC16609` |  |
+| MAC97971 | `0x0000000D` | `MAC97971` |  |
+| MAC97972 | `0x0000000E` | `MAC97972` |  |
+| MAC97973 | `0x0000000F` | `MAC97973` |  |
+| MAC97974 | `0x00000010` | `MAC97974` |  |
+| MAC97975 | `0x00000011` | `MAC97975` |  |
+| ZPK | `0x00000012` | `ZPK` |  |
+| PVKIBM | `0x00000013` | `PVKIBM` |  |
+| PVKPVV | `0x00000014` | `PVKPVV` |  |
+| PVKOTH | `0x00000015` | `PVKOTH` |  |
+| DUKPT | `0x00000016` | `DUKPT` |  |
+| IV | `0x00000017` | `IV` |  |
+| TRKBK | `0x00000018` | `TRKBK` |  |
 
 **Derivation and master keys:**
 - **BDK** (Base Derivation Key): The root key from which session keys, device-specific keys, or PIN encryption keys are derived in triple-DES payment key hierarchies (e.g., DUKPT).

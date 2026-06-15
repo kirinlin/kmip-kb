@@ -7,9 +7,9 @@ source_section: "7.5"
 v1_source_section: "2.1.21"
 status: reviewed
 related: ["profile-information", "validation-information", "correlation-value"]
-keywords: ["capability information", "streaming capability", "asynchronous capability", "destroy action", "unwrap mode"]
+keywords: ["capability information", "streaming capability", "asynchronous capability", "destroy action", "unwrap mode", "4200F7", "CapabilityInformation"]
 tag_hex: "4200F7"
-xml_element: "CapabilityInformation"
+xml_text: "CapabilityInformation"
 ---
 
 # Capability Information

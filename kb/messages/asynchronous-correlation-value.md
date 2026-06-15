@@ -7,9 +7,9 @@ source_section: "9.1"
 v1_source_section: "6.8"
 status: reviewed
 related: ["asynchronous-indicator", "result-status", "correlation-value"]
-keywords: ["asynchronous correlation value", "pending operation", "poll", "cancel"]
+keywords: ["asynchronous correlation value", "pending operation", "poll", "cancel", "420006", "AsynchronousCorrelationValue"]
 tag_hex: "420006"
-xml_element: "AsynchronousCorrelationValue"
+xml_text: "AsynchronousCorrelationValue"
 ---
 
 # Asynchronous Correlation Value

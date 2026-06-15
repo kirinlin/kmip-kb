@@ -6,9 +6,9 @@ spec_versions: ["1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.2"
 status: reviewed
 related: ["alternative-name", "name-type-enumeration", "unique-identifier"]
-keywords: ["alternative name", "name type", "URI", "DNS name", "X.500", "object identity", "serial number"]
+keywords: ["alternative name", "name type", "URI", "DNS name", "X.500", "object identity", "serial number", "4200C1", "AlternativeNameType"]
 tag_hex: "4200C1"
-xml_element: "AlternativeNameType"
+xml_text: "AlternativeNameType"
 ---
 
 # Alternative Name Type Enumeration
@@ -17,11 +17,17 @@ xml_element: "AlternativeNameType"
 
 The Alternative Name Type enumeration classifies each entry in the [Alternative Name](../../attributes/alternative-name.md) attribute, which allows a managed object to carry additional identifiers beyond its server-assigned Unique Identifier. Because different systems use different conventions for naming objects — serial numbers, directory distinguished names, DNS hostnames, email addresses, URIs — this enumeration tells consumers how to interpret and route the string they receive. A single object can carry multiple Alternative Name entries, each with its own type.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside each Alternative Name structure paired with the Alternative Name Value text string.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Uninterpreted Text String | `0x00000001` | `UninterpretedTextString` |  |
+| URI | `0x00000002` | `URI` |  |
+| Object Serial Number | `0x00000003` | `ObjectSerialNumber` |  |
+| Email Address | `0x00000004` | `EmailAddress` |  |
+| DNS Name | `0x00000005` | `DNSName` |  |
+| X.500 Distinguished Name | `0x00000006` | `X_500DistinguishedName` |  |
+| IP Address | `0x00000007` | `IPAddress` |  |
 
 - **Uninterpreted Text String**: The name carries no defined format or external semantics. Used for application-specific labels, internal tracking identifiers, or any free-form string that does not conform to a standard naming scheme.
 - **URI**: The name is a Uniform Resource Identifier, enabling the object to be addressed via URL or URN in REST-oriented or web-services integrations.

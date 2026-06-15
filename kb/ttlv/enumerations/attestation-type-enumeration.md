@@ -6,9 +6,9 @@ spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.4"
 status: reviewed
 related: ["credential-type-enumeration", "login"]
-keywords: ["attestation", "TPM", "TCG", "SAML", "credential", "authentication", "hardware trust"]
+keywords: ["attestation", "TPM", "TCG", "SAML", "credential", "authentication", "hardware trust", "4200C7", "AttestationType"]
 tag_hex: "4200C7"
-xml_element: "AttestationType"
+xml_text: "AttestationType"
 ---
 
 # Attestation Type Enumeration
@@ -17,11 +17,13 @@ xml_element: "AttestationType"
 
 The Attestation Type enumeration identifies the format and origin of an attestation credential, which is a proof provided by a client that its hardware or software environment is in a known-good state. Attestation-based authentication is used in environments where the server needs assurance not just that the client knows a secret, but that the client is running on trustworthy hardware or a verified software stack. The type tells the server which verification method and trust chain to apply when evaluating the credential.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside attestation credential structures within the Authentication message header field.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| TPM Quote | `0x00000001` | `TPMQuote` |  |
+| TCG Integrity Report | `0x00000002` | `TCGIntegrityReport` |  |
+| SAML Assertion | `0x00000003` | `SAMLAssertion` |  |
 
 - **TPM Quote**: An attestation produced by a Trusted Platform Module, in which the TPM signs a selection of Platform Configuration Register (PCR) values that describe the platform's measured boot state. Relying parties can verify the quote using the TPM's endorsement key certificate.
 - **TCG Integrity Report**: A broader report format defined by the Trusted Computing Group that can aggregate measurements from multiple components of a platform's boot and runtime environment, often expressed as an XML or binary report.

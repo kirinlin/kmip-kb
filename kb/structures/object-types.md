@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.24"
 status: reviewed
 related: ["objects", "query", "locate", "object-type", "server-information"]
-keywords: ["object types", "supported object types", "object type list", "query response", "locate filter"]
+keywords: ["object types", "supported object types", "object type list", "query response", "locate filter", "420167", "ObjectTypes"]
 tag_hex: "420167"
-xml_element: "ObjectTypes"
+xml_text: "ObjectTypes"
 ---
 
 # Object Types

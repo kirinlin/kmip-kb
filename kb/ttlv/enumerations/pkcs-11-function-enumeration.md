@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.38"
 status: reviewed
 related: ["pkcs-11-function", "pkcs-11-interface", "pkcs-11-input-parameters", "pkcs-11-output-parameters", "pkcs-11-return-code-enumeration"]
-keywords: ["pkcs11", "cryptoki", "CK function", "C_Encrypt", "C_Sign", "C_GenerateKey", "PKCS11 function"]
+keywords: ["pkcs11", "cryptoki", "CK function", "C_Encrypt", "C_Sign", "C_GenerateKey", "PKCS11 function", "42015A", "PKCS_11Function"]
 tag_hex: "42015A"
-xml_element: "PKCS_11Function"
+xml_text: "PKCS_11Function"
 ---
 
 # PKCS#11 Function Enumeration
@@ -16,10 +16,6 @@ xml_element: "PKCS_11Function"
 ## Overview
 
 The PKCS#11 Function enumeration names the PKCS#11 Cryptoki API functions that can be tunneled over KMIP via the [PKCS#11 operation](../../operations/pkcs-11.md). Each value corresponds to a `C_*` function from the PKCS#11 standard. When a KMIP client calls the PKCS#11 operation, it selects the function to invoke from this enumeration and passes the corresponding input parameters; the server executes the Cryptoki call against its internal token and returns the output.
-
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
 
 ## Fields & Structure
 

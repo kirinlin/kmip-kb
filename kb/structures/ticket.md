@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.39"
 status: reviewed
 related: ["login", "logout", "delegated-login", "authentication", "message-structure"]
-keywords: ["ticket", "session ticket", "delegation ticket", "ticket type", "ticket value", "token authentication"]
+keywords: ["ticket", "session ticket", "delegation ticket", "ticket type", "ticket value", "token authentication", "420149"]
 tag_hex: "420149"
-xml_element: "Ticket"
+xml_text: "Ticket"
 ---
 
 # Ticket

@@ -7,9 +7,9 @@ source_section: "4.9"
 v1_source_section: "3.47"
 status: reviewed
 related: ["description", "contact-information", "custom-attribute"]
-keywords: ["comment", "notes", "informational attribute"]
+keywords: ["comment", "notes", "informational attribute", "4200FD"]
 tag_hex: "4200FD"
-xml_element: "Comment"
+xml_text: "Comment"
 ---
 
 # Comment

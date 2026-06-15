@@ -7,9 +7,9 @@ source_section: "9.4"
 v1_source_section: "6.6"
 status: reviewed
 related: ["credential", "message-structure", "nonce"]
-keywords: ["authentication structure", "request header", "credential container"]
+keywords: ["authentication structure", "request header", "credential container", "42000C", "Authentication"]
 tag_hex: "42000C"
-xml_element: "Authentication"
+xml_text: "Authentication"
 ---
 
 # Authentication

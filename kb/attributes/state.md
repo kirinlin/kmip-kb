@@ -7,9 +7,9 @@ source_section: "4.57"
 v1_source_section: "3.22"
 status: reviewed
 related: ["activation-date", "deactivation-date", "compromise-date", "destroy-date", "revocation-reason"]
-keywords: ["state", "lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "SP 800-57"]
+keywords: ["state", "lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "SP 800-57", "42008D"]
 tag_hex: "42008D"
-xml_element: "State"
+xml_text: "State"
 ---
 
 # State

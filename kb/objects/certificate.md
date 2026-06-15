@@ -7,9 +7,9 @@ source_section: "2.1"
 v1_source_section: "2.2.1"
 status: reviewed
 related: ["certify", "re-certify", "register", "get", "public-key", "certificate-type", "x-509-certificate-identifier", "digest"]
-keywords: ["certificate", "X.509", "DER", "public key certificate", "PKI"]
+keywords: ["certificate", "X.509", "DER", "public key certificate", "PKI", "420013"]
 tag_hex: "420013"
-xml_element: "Certificate"
+xml_text: "Certificate"
 ---
 
 # Certificate

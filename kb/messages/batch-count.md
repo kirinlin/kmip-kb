@@ -7,9 +7,9 @@ source_section: "9.5"
 v1_source_section: "6.14"
 status: reviewed
 related: ["batch-item", "batch-order-option", "unique-batch-item-id"]
-keywords: ["batch count", "message header", "number of operations"]
+keywords: ["batch count", "message header", "number of operations", "42000D", "BatchCount"]
 tag_hex: "42000D"
-xml_element: "BatchCount"
+xml_text: "BatchCount"
 ---
 
 # Batch Count

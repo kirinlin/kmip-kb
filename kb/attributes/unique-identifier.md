@@ -7,9 +7,9 @@ source_section: "4.58"
 v1_source_section: "3.1"
 status: reviewed
 related: ["name", "object-type", "alternative-name", "link"]
-keywords: ["unique identifier", "UID", "object identity", "ID placeholder"]
+keywords: ["unique identifier", "UID", "object identity", "ID placeholder", "420094", "UniqueIdentifier"]
 tag_hex: "420094"
-xml_element: "UniqueIdentifier"
+xml_text: "UniqueIdentifier"
 ---
 
 # Unique Identifier

@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.47"
 status: reviewed
 related: ["result-reason-enumeration", "message-structure", "error-handling", "asynchronous-request"]
-keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "batch response"]
+keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "batch response", "42007F", "ResultStatus"]
 tag_hex: "42007F"
-xml_element: "ResultStatus"
+xml_text: "ResultStatus"
 ---
 
 # Result Status Enumeration
@@ -17,11 +17,14 @@ xml_element: "ResultStatus"
 
 The Result Status enumeration is the top-level success or failure indicator in every batch item response. It appears in every KMIP response alongside an optional Result Reason and Result Message, giving clients a structured way to distinguish success from the various categories of failure without parsing free-text messages.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration), tag `420092`.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Success | `0x00000000` | `Success` |  |
+| Operation Failed | `0x00000001` | `OperationFailed` |  |
+| Operation Pending | `0x00000002` | `OperationPending` |  |
+| Operation Undone | `0x00000003` | `OperationUndone` |  |
 
 - **Success**: The operation completed without error. The response payload carries the operation's results.
 - **Operation Failed**: The operation did not complete due to an error. Result Reason and Result Message provide details.

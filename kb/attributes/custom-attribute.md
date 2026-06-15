@@ -7,9 +7,9 @@ source_section: "4.60"
 v1_source_section: "3.39"
 status: reviewed
 related: ["application-specific-information", "description", "comment"]
-keywords: ["custom attribute", "x- prefix", "y- prefix", "vendor extension", "client-defined attribute"]
+keywords: ["custom attribute", "x- prefix", "y- prefix", "vendor extension", "client-defined attribute", "42002D", "CustomAttribute"]
 tag_hex: "42002D"
-xml_element: "CustomAttribute"
+xml_text: "CustomAttribute"
 ---
 
 # Custom Attribute

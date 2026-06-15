@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.42"
 status: reviewed
 related: ["protection-storage-mask", "protection-period", "sensitive", "extractable", "cryptographic-usage-mask"]
-keywords: ["protection level", "hsm", "hardware security", "software protection", "storage protection", "key protection tier"]
+keywords: ["protection level", "hsm", "hardware security", "software protection", "storage protection", "key protection tier", "420145", "ProtectionLevel"]
 tag_hex: "420145"
-xml_element: "ProtectionLevel"
+xml_text: "ProtectionLevel"
 ---
 
 # Protection Level

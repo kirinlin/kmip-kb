@@ -7,9 +7,9 @@ source_section: "9.18"
 v1_source_section: "6.10"
 status: reviewed
 related: ["result-status", "result-message", "batch-item"]
-keywords: ["result reason", "error code", "item not found", "permission denied", "general failure"]
+keywords: ["result reason", "error code", "item not found", "permission denied", "general failure", "42007E", "ResultReason"]
 tag_hex: "42007E"
-xml_element: "ResultReason"
+xml_text: "ResultReason"
 ---
 
 # Result Reason

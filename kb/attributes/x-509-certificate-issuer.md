@@ -7,9 +7,9 @@ source_section: "4.62"
 v1_source_section: "3.12"
 status: reviewed
 related: ["x-509-certificate-identifier", "x-509-certificate-subject", "certificate-issuer"]
-keywords: ["X.509 certificate issuer", "issuer distinguished name", "issuer alternative name", "CA"]
+keywords: ["X.509 certificate issuer", "issuer distinguished name", "issuer alternative name", "CA", "4200B6", "X_509CertificateIssuer"]
 tag_hex: "4200B6"
-xml_element: "X_509CertificateIssuer"
+xml_text: "X_509CertificateIssuer"
 ---
 
 # X.509 Certificate Issuer

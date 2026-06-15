@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.34"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-usage-mask", "symmetric-key", "protection-level"]
-keywords: ["nist key type", "sp 800-57", "key classification", "signing key", "wrapping key", "data encryption key", "key agreement", "authentication key"]
+keywords: ["nist key type", "sp 800-57", "key classification", "signing key", "wrapping key", "data encryption key", "key agreement", "authentication key", "42013A", "NISTKeyType"]
 tag_hex: "42013A"
-xml_element: "NISTKeyType"
+xml_text: "NISTKeyType"
 ---
 
 # NIST Key Type

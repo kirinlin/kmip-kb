@@ -7,9 +7,9 @@ source_section: "4.7"
 v1_source_section: "3.8"
 status: reviewed
 related: ["certificate-length", "x-509-certificate-identifier", "digital-signature-algorithm"]
-keywords: ["certificate type", "X.509", "PGP", "certificate"]
+keywords: ["certificate type", "X.509", "PGP", "certificate", "42001D", "CertificateType"]
 tag_hex: "42001D"
-xml_element: "CertificateType"
+xml_text: "CertificateType"
 ---
 
 # Certificate Type

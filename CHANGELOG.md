@@ -6,8 +6,17 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- New `templates/enumeration.md` template for `kb/ttlv/enumerations/` docs. The `Fields & Structure` section now uses a table with `Value | Hex | XML Text | Description` columns, where `Hex` is the 8-digit integer value (e.g. `0x00000001`) and `XML Text` is the CamelCase enumeration value text per KMIP-ENCODE §6.1.3.
+- `scripts/enrich_enum_tables.py` — inserts `Value | Hex | XML Text` tables into enumeration docs from spec data; idempotent with `--check` CI guard.
+- New `templates/structures.md`, `templates/messages.md`, and `templates/profile.md` templates for the `structures`, `messages`, and `profile` KB categories (previously had no dedicated template).
+- `tag_hex` and `xml_text` front matter values are now automatically included in each doc's `keywords` array to improve RAG retrieval by hex code and CamelCase identifier.
+
 ### Changed
 
+- Renamed front matter field `xml_element` → `xml_text` across all 223 KB docs, the frontmatter JSON Schema, scripts, templates, README, and authoring docs. The field represents the CamelCase XML text identifier used both as an element name for structure fields and as enumeration value text — `xml_text` captures this dual role more precisely.
+- The `Encoding (Tag / Type / Length / Value)` section is now omitted from standard enumeration docs (all 60 that contained only the trivial "Encoded as a 4-byte integer" statement), since the tag is already in `tag_hex` front matter and the encoding is uniform for all enumerations. Four docs with non-standard encoding (item type, PKCS#11 return code, Tag, Unique Identifier) keep their Encoding sections.
 - Reorganised `kb/profiles/` into four subdirectories by source section:
   `authentication/` ([KMIP-Prof] §3 auth suites), `base-encoding/`
   ([KMIP-Prof] §5.1–5.5 base/encoding profiles), `key-management/`

@@ -7,9 +7,9 @@ source_section: "2.5"
 v1_source_section: "2.2.4"
 status: reviewed
 related: ["public-key", "create-key-pair", "certify", "register", "get", "key-block", "key-wrapping-specification", "cryptographic-algorithm", "cryptographic-usage-mask"]
-keywords: ["private key", "asymmetric key", "RSA", "EC", "key pair", "wrapping"]
+keywords: ["private key", "asymmetric key", "RSA", "EC", "key pair", "wrapping", "420064", "PrivateKey"]
 tag_hex: "420064"
-xml_element: "PrivateKey"
+xml_text: "PrivateKey"
 ---
 
 # Private Key

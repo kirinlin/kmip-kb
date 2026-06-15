@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.21"
 status: reviewed
 related: ["object-types", "unique-identifier", "query", "locate", "message-structure"]
-keywords: ["objects structure", "object list", "query response", "unique identifier list", "managed objects summary"]
+keywords: ["objects structure", "object list", "query response", "unique identifier list", "managed objects summary", "42014E", "Objects"]
 tag_hex: "42014E"
-xml_element: "Objects"
+xml_text: "Objects"
 ---
 
 # Objects

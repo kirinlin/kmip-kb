@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.30"
 status: reviewed
 related: ["cryptographic-parameters", "padding-method-enumeration", "hashing-algorithm-enumeration"]
-keywords: ["mask generator", "MGF", "MFG1", "OAEP", "PSS", "RSA", "mask generation function"]
+keywords: ["mask generator", "MGF", "MFG1", "OAEP", "PSS", "RSA", "mask generation function", "420101", "MaskGenerator"]
 tag_hex: "420101"
-xml_element: "MaskGenerator"
+xml_text: "MaskGenerator"
 ---
 
 # Mask Generator Enumeration
@@ -17,11 +17,11 @@ xml_element: "MaskGenerator"
 
 The Mask Generator enumeration identifies the mask generation function (MGF) used in RSA encryption and signature padding schemes that require one. RSA-OAEP (Optimal Asymmetric Encryption Padding) and RSA-PSS (Probabilistic Signature Scheme) both use a mask generation function to expand a seed value into a mask of arbitrary length. The choice of MGF and its underlying hash algorithm are part of the complete algorithm specification and must match between the sender and receiver. This enumeration names the MGF; the Hashing Algorithm field in the same Cryptographic Parameters structure specifies the hash function it uses internally.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Cryptographic Parameters structure alongside Padding Method and Hashing Algorithm fields when the padding mode is OAEP or PSS.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| MFG1 | `0x00000001` | `MFG1` |  |
 
 - **MFG1**: Mask Generation Function 1 as defined in PKCS#1 v2.x (RFC 8017) and IEEE P1363. MFG1 applies a hash function iteratively over a counter and seed to produce a mask of the required length. It is by far the most commonly deployed MGF: OAEP as used in TLS and S/MIME almost universally uses MFG1 with SHA-1, SHA-256, or SHA-384.
 

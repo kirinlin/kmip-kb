@@ -7,9 +7,9 @@ source_section: "2"
 v1_source_section: "2.2"
 status: reviewed
 related: ["symmetric-key", "certificate", "public-key", "private-key", "split-key", "secret-data", "opaque-object", "pgp-key", "template"]
-keywords: ["managed objects", "managed cryptographic objects", "key", "certificate"]
+keywords: ["managed objects", "managed cryptographic objects", "key", "certificate", "42014E", "Objects"]
 tag_hex: "42014E"
-xml_element: "Objects"
+xml_text: "Objects"
 ---
 
 # Objects

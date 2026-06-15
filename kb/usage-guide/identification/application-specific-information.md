@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.18"
 status: reviewed
 related: ["object-group"]
-keywords: ["Application Specific Information", "Application Namespace", "Application Data", "server-generated data", "namespaces"]
+keywords: ["Application Specific Information", "Application Namespace", "Application Data", "server-generated data", "namespaces", "420004", "ApplicationSpecificInformation"]
 tag_hex: "420004"
-xml_element: "ApplicationSpecificInformation"
+xml_text: "ApplicationSpecificInformation"
 ---
 
 # Application Specific Information

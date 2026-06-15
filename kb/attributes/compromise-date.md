@@ -7,9 +7,9 @@ source_section: "4.10"
 v1_source_section: "3.30"
 status: reviewed
 related: ["compromise-occurrence-date", "revocation-reason", "state", "destroy-date"]
-keywords: ["compromise date", "compromised state", "revoke", "incident response"]
+keywords: ["compromise date", "compromised state", "revoke", "incident response", "420020", "CompromiseDate"]
 tag_hex: "420020"
-xml_element: "CompromiseDate"
+xml_text: "CompromiseDate"
 ---
 
 # Compromise Date

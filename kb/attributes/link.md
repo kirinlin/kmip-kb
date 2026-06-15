@@ -7,9 +7,9 @@ source_section: "4.31"
 v1_source_section: "3.35"
 status: reviewed
 related: ["unique-identifier", "object-type", "pkcs-12-friendly-name"]
-keywords: ["link", "link type", "object relationships", "replacement object", "certificate chain", "derived key"]
+keywords: ["link", "link type", "object relationships", "replacement object", "certificate chain", "derived key", "42004A"]
 tag_hex: "42004A"
-xml_element: "Link"
+xml_text: "Link"
 ---
 
 # Link

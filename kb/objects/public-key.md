@@ -7,9 +7,9 @@ source_section: "2.6"
 v1_source_section: "2.2.3"
 status: reviewed
 related: ["private-key", "create-key-pair", "certify", "register", "get", "certificate", "key-block", "cryptographic-algorithm", "cryptographic-usage-mask"]
-keywords: ["public key", "asymmetric key", "RSA", "EC", "key pair"]
+keywords: ["public key", "asymmetric key", "RSA", "EC", "key pair", "42006D", "PublicKey"]
 tag_hex: "42006D"
-xml_element: "PublicKey"
+xml_text: "PublicKey"
 ---
 
 # Public Key

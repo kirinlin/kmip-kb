@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "7.40"
 status: reviewed
 related: ["get-attributes", "locate", "state", "cryptographic-usage-mask"]
-keywords: ["usage limits", "usage count", "usage total", "usage limits unit", "key usage enforcement", "byte count", "object count"]
+keywords: ["usage limits", "usage count", "usage total", "usage limits unit", "key usage enforcement", "byte count", "object count", "420095", "UsageLimits"]
 tag_hex: "420095"
-xml_element: "UsageLimits"
+xml_text: "UsageLimits"
 ---
 
 # Usage Limits

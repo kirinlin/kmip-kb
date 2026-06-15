@@ -7,9 +7,9 @@ source_section: "4.5"
 v1_source_section: "3.32"
 status: reviewed
 related: ["initial-date", "last-change-date", "state"]
-keywords: ["archive date", "archival storage", "recover", "storage status"]
+keywords: ["archive date", "archival storage", "recover", "storage status", "420005", "ArchiveDate"]
 tag_hex: "420005"
-xml_element: "ArchiveDate"
+xml_text: "ArchiveDate"
 ---
 
 # Archive Date

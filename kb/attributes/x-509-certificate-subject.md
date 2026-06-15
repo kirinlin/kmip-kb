@@ -7,9 +7,9 @@ source_section: "4.63"
 v1_source_section: "3.11"
 status: reviewed
 related: ["x-509-certificate-identifier", "x-509-certificate-issuer", "certificate-subject"]
-keywords: ["X.509 certificate subject", "subject distinguished name", "subject alternative name", "SAN"]
+keywords: ["X.509 certificate subject", "subject distinguished name", "subject alternative name", "SAN", "4200B7", "X_509CertificateSubject"]
 tag_hex: "4200B7"
-xml_element: "X_509CertificateSubject"
+xml_text: "X_509CertificateSubject"
 ---
 
 # X.509 Certificate Subject

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.56"
 status: reviewed
 related: ["unique-identifier", "name", "object-type", "locate"]
-keywords: ["short unique identifier", "abbreviated id", "short id", "compact identifier", "text string", "alias"]
+keywords: ["short unique identifier", "abbreviated id", "short id", "compact identifier", "text string", "alias", "420136", "ShortUniqueIdentifier"]
 tag_hex: "420136"
-xml_element: "ShortUniqueIdentifier"
+xml_text: "ShortUniqueIdentifier"
 ---
 
 # Short Unique Identifier

@@ -7,9 +7,9 @@ source_section: "4.46"
 v1_source_section: "3.44"
 status: reviewed
 related: ["original-creation-date", "cryptographic-algorithm", "rng-parameters"]
-keywords: ["random number generator", "RNG", "DRBG", "entropy provenance", "FIPS"]
+keywords: ["random number generator", "RNG", "DRBG", "entropy provenance", "FIPS", "4200DE", "RandomNumberGenerator"]
 tag_hex: "4200DE"
-xml_element: "RandomNumberGenerator"
+xml_text: "RandomNumberGenerator"
 ---
 
 # Random Number Generator

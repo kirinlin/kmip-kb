@@ -7,9 +7,9 @@ source_section: "3.3"
 v1_source_section: "2.1.5"
 status: reviewed
 related: ["key-wrapping-specification", "key-block", "key-value"]
-keywords: ["key wrapping data", "wrapping method", "encryption key information", "MAC signature", "encoding option"]
+keywords: ["key wrapping data", "wrapping method", "encryption key information", "MAC signature", "encoding option", "420046", "KeyWrappingData"]
 tag_hex: "420046"
-xml_element: "KeyWrappingData"
+xml_text: "KeyWrappingData"
 ---
 
 # Key Wrapping Data

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "5.7"
 status: reviewed
 related: ["attribute", "current-attribute", "attribute-reference", "set-attribute", "adjust-attribute"]
-keywords: ["new attribute", "updated attribute", "replacement attribute value", "attribute modification"]
+keywords: ["new attribute", "updated attribute", "replacement attribute value", "attribute modification", "42013D", "NewAttribute"]
 tag_hex: "42013D"
-xml_element: "NewAttribute"
+xml_text: "NewAttribute"
 ---
 
 # New Attribute

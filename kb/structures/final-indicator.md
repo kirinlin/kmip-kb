@@ -7,9 +7,9 @@ source_section: "7.14"
 v1_source_section: "2.1.17"
 status: reviewed
 related: ["init-indicator", "correlation-value", "data"]
-keywords: ["final indicator", "streaming", "multi-part", "last part"]
+keywords: ["final indicator", "streaming", "multi-part", "last part", "4200D8", "FinalIndicator"]
 tag_hex: "4200D8"
-xml_element: "FinalIndicator"
+xml_text: "FinalIndicator"
 ---
 
 # Final Indicator

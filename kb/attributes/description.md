@@ -7,9 +7,9 @@ source_section: "4.19"
 v1_source_section: "3.46"
 status: reviewed
 related: ["comment", "contact-information", "custom-attribute"]
-keywords: ["description", "informational attribute", "metadata"]
+keywords: ["description", "informational attribute", "metadata", "4200FC"]
 tag_hex: "4200FC"
-xml_element: "Description"
+xml_text: "Description"
 ---
 
 # Description

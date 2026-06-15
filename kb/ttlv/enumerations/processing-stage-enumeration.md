@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.40"
 status: reviewed
 related: ["asynchronous-request", "asynchronous-correlation-values", "query-asynchronous-requests"]
-keywords: ["processing stage", "async status", "asynchronous", "pending", "completed", "cancelled"]
+keywords: ["processing stage", "async status", "asynchronous", "pending", "completed", "cancelled", "420175", "ProcessingStage"]
 tag_hex: "420175"
-xml_element: "ProcessingStage"
+xml_text: "ProcessingStage"
 ---
 
 # Processing Stage Enumeration
@@ -17,11 +17,13 @@ xml_element: "ProcessingStage"
 
 The Processing Stage enumeration reports the current state of an asynchronous operation when a client calls [Query Asynchronous Requests](../../operations/query-asynchronous-requests.md). The asynchronous execution model lets a server acknowledge receipt of an operation immediately and process it in the background; the Processing Stage tells the polling client how far along the operation is.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Submitted | `0x00000001` | `Submitted` |  |
+| In Process | `0x00000002` | `InProcess` |  |
+| Completed | `0x00000003` | `Completed` |  |
 
 - **Server Processing**: The server has accepted the operation and is currently working on it. The client should poll again later.
 - **Completed**: The operation has finished. The response for the original operation is available in the [Asynchronous Request](../../structures/asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated.

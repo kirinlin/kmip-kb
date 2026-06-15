@@ -7,9 +7,9 @@ source_section: "9.15"
 v1_source_section: "6.2"
 status: reviewed
 related: ["batch-item", "operations", "message-structure"]
-keywords: ["operation field", "operation enumeration", "batch item", "request type"]
+keywords: ["operation field", "operation enumeration", "batch item", "request type", "42005C", "Operation"]
 tag_hex: "42005C"
-xml_element: "Operation"
+xml_text: "Operation"
 ---
 
 # Operation

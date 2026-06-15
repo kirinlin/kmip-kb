@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.64"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "get", "cryptographic-parameters", "encoding-option-enumeration", "unwrap-mode-enumeration"]
-keywords: ["wrapping method", "key wrap", "encrypt", "MAC", "TR-31", "key protection", "key transport"]
+keywords: ["wrapping method", "key wrap", "encrypt", "MAC", "TR-31", "key protection", "key transport", "42009E", "WrappingMethod"]
 tag_hex: "42009E"
-xml_element: "WrappingMethod"
+xml_text: "WrappingMethod"
 ---
 
 # Wrapping Method Enumeration
@@ -17,11 +17,15 @@ xml_element: "WrappingMethod"
 
 The Wrapping Method enumeration specifies the cryptographic technique used to protect key material during transport or storage in wrapped form. It appears in the Key Wrapping Data structure inside a Key Block, describing how the Key Value was protected before delivery to the client. The method determines what cryptographic operations the recipient must perform to recover the plaintext key material.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration), tag `4200AE`.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| Hardware | `0x00000002` | `Hardware` |  |
+| Software | `0x00000003` | `Software` |  |
+| Firmware | `0x00000004` | `Firmware` |  |
+| Hybrid | `0x00000005` | `Hybrid` |  |
 
 - **Encrypt**: The key material is wrapped using a key-encryption key (KEK) via symmetric encryption. The most common method — typically AES Key Wrap (RFC 3394), AES-GCM, or RSA-OAEP. The recipient decrypts with the corresponding KEK or private key to recover the plaintext.
 - **MAC/Hash**: The key material is integrity-protected using a MAC or cryptographic hash but is not encrypted. The plaintext key is present; only its integrity is verified. Rarely used for key transport; used in specific financial protocols where the recipient already holds the key.

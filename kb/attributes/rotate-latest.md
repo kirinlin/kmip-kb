@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.52"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interval", "rotate-name", "re-key"]
-keywords: ["rotate latest", "latest rotation", "current key version", "key family head", "boolean"]
+keywords: ["rotate latest", "latest rotation", "current key version", "key family head", "boolean", "420172", "RotateLatest"]
 tag_hex: "420172"
-xml_element: "RotateLatest"
+xml_text: "RotateLatest"
 ---
 
 # Rotate Latest

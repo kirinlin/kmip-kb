@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.54"
 status: reviewed
 related: ["rotate-interval", "rotate-date", "rotate-automatic", "rotate-name", "protection-period", "activation-date", "deactivation-date"]
-keywords: ["rotate offset", "rotation offset", "grace period", "lead time", "rotation adjustment", "interval"]
+keywords: ["rotate offset", "rotation offset", "grace period", "lead time", "rotation adjustment", "interval", "42016C", "RotateOffset"]
 tag_hex: "42016C"
-xml_element: "RotateOffset"
+xml_text: "RotateOffset"
 ---
 
 # Rotate Offset

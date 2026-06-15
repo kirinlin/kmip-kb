@@ -7,9 +7,9 @@ source_section: "2.8"
 v1_source_section: "2.2.5"
 status: reviewed
 related: ["create-split-key", "join-split-key", "symmetric-key", "private-key", "register", "get", "key-block"]
-keywords: ["split key", "secret sharing", "key splitting", "threshold", "XOR"]
+keywords: ["split key", "secret sharing", "key splitting", "threshold", "XOR", "420089", "SplitKey"]
 tag_hex: "420089"
-xml_element: "SplitKey"
+xml_text: "SplitKey"
 ---
 
 # Split Key

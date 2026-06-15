@@ -7,9 +7,9 @@ source_section: "9.14"
 v1_source_section: "2.1.14"
 status: reviewed
 related: ["credential", "attestation-capable-indicator", "message-structure"]
-keywords: ["nonce", "attestation", "replay protection", "challenge"]
+keywords: ["nonce", "attestation", "replay protection", "challenge", "4200C8"]
 tag_hex: "4200C8"
-xml_element: "Nonce"
+xml_text: "Nonce"
 ---
 
 # Nonce

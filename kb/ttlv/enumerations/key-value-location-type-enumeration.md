@@ -6,9 +6,9 @@ spec_versions: ["1.3","1.4","2.0","2.1"]
 source_section: "11.27"
 status: reviewed
 related: ["key-block", "get"]
-keywords: ["key value location", "URI", "text string", "key reference", "external key", "key location"]
+keywords: ["key value location", "URI", "text string", "key reference", "external key", "key location", "4200BA", "KeyValueLocationType"]
 tag_hex: "4200BA"
-xml_element: "KeyValueLocationType"
+xml_text: "KeyValueLocationType"
 ---
 
 # Key Value Location Type Enumeration
@@ -17,11 +17,12 @@ xml_element: "KeyValueLocationType"
 
 The Key Value Location Type enumeration classifies how the Key Value Location attribute describes where the actual key material resides when the key is not stored directly in the KMIP server's object store. In architectures where large volumes of key material reside in external vaults, hardware security modules, or cloud key stores, the KMIP server may hold only metadata and a pointer to the actual key rather than the key bytes themselves. This enumeration tells consumers whether the location is a plain text descriptor or a dereferenceable URI.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears alongside the Key Value Location string in the Key Value Location attribute structure.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Uninterpreted Text String | `0x00000001` | `UninterpretedTextString` |  |
+| URI | `0x00000002` | `URI` |  |
 
 - **Uninterpreted Text String**: The location is a free-form string whose interpretation is application-specific. It could be a hardware slot identifier, an HSM label, a partition name, or any other opaque reference that the consuming system understands without a standard URI scheme.
 - **URI**: The location is a Uniform Resource Identifier that can be used to retrieve or reference the key material through a standard protocol (e.g., an HTTPS URL to a REST key vault API or a PKCS#11 URI as defined in RFC 7512).

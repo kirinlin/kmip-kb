@@ -7,9 +7,9 @@ source_section: "del_v2"
 v1_source_section: "3.14"
 status: reviewed
 related: ["x-509-certificate-subject", "certificate-identifier", "certificate-issuer"]
-keywords: ["certificate subject", "deprecated", "subject distinguished name"]
+keywords: ["certificate subject", "deprecated", "subject distinguished name", "42001A", "CertificateSubject"]
 tag_hex: "42001A"
-xml_element: "CertificateSubject"
+xml_text: "CertificateSubject"
 ---
 
 # Certificate Subject

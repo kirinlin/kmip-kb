@@ -40,7 +40,8 @@ Optional fields:
 v1_source_section: # v1.x section for the same concept (omit for v2.x-only features).
                    # Use "enc-X" if the v1.x source is KMIP-ENCODE, not KMIP-SPEC.
 tag_hex:           # 6-digit uppercase hex KMIP tag, e.g. "42000D" — enables hex-lookup search
-xml_element:       # CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. "BatchCount"
+xml_text:          # CamelCase XML text identifier per KMIP-ENCODE §6.1.3, e.g. "BatchCount"
+                   # Used as element name for structure fields, value text for enumerations.
 ```
 
 `source_section` prefix rules:

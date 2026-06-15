@@ -7,9 +7,9 @@ source_section: "9.17"
 v1_source_section: "6.11"
 status: reviewed
 related: ["result-status", "result-reason"]
-keywords: ["result message", "error text", "diagnostics", "logging"]
+keywords: ["result message", "error text", "diagnostics", "logging", "42007D", "ResultMessage"]
 tag_hex: "42007D"
-xml_element: "ResultMessage"
+xml_text: "ResultMessage"
 ---
 
 # Result Message

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.1"
 status: reviewed
 related: ["adjust-attribute", "rotate-generation", "rotate-interval", "rotate-offset"]
-keywords: ["adjustment type", "numeric delta", "adjust attribute", "arithmetic operation"]
+keywords: ["adjustment type", "numeric delta", "adjust attribute", "arithmetic operation", "420158", "AdjustmentType"]
 tag_hex: "420158"
-xml_element: "AdjustmentType"
+xml_text: "AdjustmentType"
 ---
 
 # Adjustment Type Enumeration
@@ -17,11 +17,13 @@ xml_element: "AdjustmentType"
 
 The Adjustment Type enumeration controls how the [Adjust Attribute](../../operations/adjust-attribute.md) operation modifies the current value of a numeric attribute. Rather than always replacing a value outright, this enumeration lets a client express an intent — increment, decrement, scale, or overwrite — and lets the server apply that intent atomically on the stored value. This is particularly useful for counters and rotation-related attributes where the client may not know the current value but needs to nudge it in a specific direction.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside the Adjust Attribute request structure alongside the attribute name and the adjustment value.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Increment | `0x00000001` | `Increment` |  |
+| Decrement | `0x00000002` | `Decrement` |  |
+| Negate | `0x00000003` | `Negate` |  |
 
 - **Add**: Increases the existing numeric attribute value by the supplied adjustment amount. Used when incrementing counters such as a rotate-generation counter or a usage count.
 - **Subtract**: Decreases the existing numeric attribute value by the supplied adjustment amount. Mirrors Add but in the opposite direction; useful for releasing reserved usage allocations.

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.42"
 status: reviewed
 related: ["protection-level", "protection-storage-mask", "sensitive"]
-keywords: ["protection level", "software protection", "hardware module", "HSM", "FIPS 140", "key protection tier"]
+keywords: ["protection level", "software protection", "hardware module", "HSM", "FIPS 140", "key protection tier", "420145", "ProtectionLevel"]
 tag_hex: "420145"
-xml_element: "ProtectionLevel"
+xml_text: "ProtectionLevel"
 ---
 
 # Protection Level Enumeration
@@ -17,11 +17,12 @@ xml_element: "ProtectionLevel"
 
 The Protection Level enumeration classifies the minimum physical or logical security environment required to store and process a key or secret object. It is the type of the [Protection Level attribute](../../attributes/protection-level.md), enabling servers and clients to express protection requirements in a standardized way. A server that cannot meet the stated level for an object should refuse the operation rather than silently storing the key in a less-secure environment.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| High | `0x00000001` | `High` |  |
+| Low | `0x00000002` | `Low` |  |
 
 - **Software**: The key material is stored and processed solely under operating-system-level software access controls, with no dedicated cryptographic hardware.
 - **Hardware**: The key material is stored in or processed by dedicated cryptographic hardware that provides additional protection beyond OS controls — such as a hardware accelerator or TPM — but may not be a formally certified HSM.

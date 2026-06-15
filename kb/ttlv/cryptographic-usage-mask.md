@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "12.1"
 status: reviewed
 related: ["cryptographic-usage-mask", "key-block", "create", "create-key-pair", "register", "locate"]
-keywords: ["cryptographic usage mask", "bit mask", "key usage", "encrypt", "decrypt", "sign", "verify", "wrap key", "unwrap key", "export"]
+keywords: ["cryptographic usage mask", "bit mask", "key usage", "encrypt", "decrypt", "sign", "verify", "wrap key", "unwrap key", "export", "42002C", "CryptographicUsageMask"]
 tag_hex: "42002C"
-xml_element: "CryptographicUsageMask"
+xml_text: "CryptographicUsageMask"
 ---
 
 # Cryptographic Usage Mask

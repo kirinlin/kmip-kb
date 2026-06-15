@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.16"
 status: reviewed
 related: ["interop-function", "interop", "message-structure"]
-keywords: ["interop identifier", "interoperability test suite", "test case name", "interop test identifier"]
+keywords: ["interop identifier", "interoperability test suite", "test case name", "interop test identifier", "420161", "InteropIdentifier"]
 tag_hex: "420161"
-xml_element: "InteropIdentifier"
+xml_text: "InteropIdentifier"
 ---
 
 # Interop Identifier

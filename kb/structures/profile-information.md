@@ -7,9 +7,9 @@ source_section: "7.31"
 v1_source_section: "2.1.19"
 status: reviewed
 related: ["capability-information", "validation-information", "kmip-server-implementation-conformance"]
-keywords: ["profile information", "profile name", "server URI", "conformance discovery"]
+keywords: ["profile information", "profile name", "server URI", "conformance discovery", "4200EB", "ProfileInformation"]
 tag_hex: "4200EB"
-xml_element: "ProfileInformation"
+xml_text: "ProfileInformation"
 ---
 
 # Profile Information

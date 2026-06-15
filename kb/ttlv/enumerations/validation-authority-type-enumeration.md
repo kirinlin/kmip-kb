@@ -6,9 +6,9 @@ spec_versions: ["1.3","1.4","2.0","2.1"]
 source_section: "11.61"
 status: reviewed
 related: ["cryptographic-parameters"]
-keywords: ["validation authority", "CMVP", "Common Criteria", "NIST validation", "cryptographic module validation"]
+keywords: ["validation authority", "CMVP", "Common Criteria", "NIST validation", "cryptographic module validation", "4200E0", "ValidationAuthorityType"]
 tag_hex: "4200E0"
-xml_element: "ValidationAuthorityType"
+xml_text: "ValidationAuthorityType"
 ---
 
 # Validation Authority Type Enumeration
@@ -17,11 +17,13 @@ xml_element: "ValidationAuthorityType"
 
 The Validation Authority Type enumeration identifies which standards body or programme validated the cryptographic implementation associated with a key or operation. It appears in Cryptographic Parameters and validation-related attributes, enabling clients and policy engines to enforce requirements for FIPS-validated or CC-evaluated implementations without inspection of implementation details.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Valid | `0x00000001` | `Valid` |  |
+| Invalid | `0x00000002` | `Invalid` |  |
+| Unknown | `0x00000003` | `Unknown` |  |
 
 - **Unspecified**: No validation authority is identified. The implementation's validation status is unknown or not applicable.
 - **NIST CMVP** (Cryptographic Module Validation Program): The module has been validated under the NIST FIPS 140 programme (CMVP), run jointly by NIST and CCCS. CMVP-validated modules carry a certificate number and validation level (1–4). Required by US federal information systems.

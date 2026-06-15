@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.16"
 status: reviewed
 related: ["cryptographic-algorithm-enumeration", "hashing-algorithm-enumeration", "certify", "digest"]
-keywords: ["digital signature", "signature algorithm", "RSA", "ECDSA", "DSA", "EdDSA", "HMAC", "signing"]
+keywords: ["digital signature", "signature algorithm", "RSA", "ECDSA", "DSA", "EdDSA", "HMAC", "signing", "4200AE", "DigitalSignatureAlgorithm"]
 tag_hex: "4200AE"
-xml_element: "DigitalSignatureAlgorithm"
+xml_text: "DigitalSignatureAlgorithm"
 ---
 
 # Digital Signature Algorithm Enumeration
@@ -17,11 +17,29 @@ xml_element: "DigitalSignatureAlgorithm"
 
 The Digital Signature Algorithm enumeration identifies the full signature algorithm as a combined hash-plus-key-algorithm pairing. While the [Cryptographic Algorithm Enumeration](cryptographic-algorithm-enumeration.md) names the underlying key type (RSA, EC, DSA) and the [Hashing Algorithm Enumeration](hashing-algorithm-enumeration.md) names the hash, some contexts — particularly certificate attributes and signature verification operations — require the compound identifier that ties the two together in a single value. This enumeration follows the convention used in X.509 certificate `signatureAlgorithm` OIDs, where the hash and signature primitive are named as a unit.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Used in certificate structures, the Digital Signature Algorithm attribute, and cryptographic operation parameters where the combined algorithm must be specified unambiguously.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| MD2 with RSA Encryption | `0x00000001` | `MD2WithRSAEncryption` |  |
+| MD5 with RSA Encryption | `0x00000002` | `MD5WithRSAEncryption` |  |
+| SHA-1 with RSA Encryption | `0x00000003` | `SHA_1WithRSAEncryption` |  |
+| SHA-224 with RSA Encryption | `0x00000004` | `SHA_224WithRSAEncryption` |  |
+| SHA-256 with RSA Encryption | `0x00000005` | `SHA_256WithRSAEncryption` |  |
+| SHA-384 with RSA Encryption | `0x00000006` | `SHA_384WithRSAEncryption` |  |
+| SHA-512 with RSA Encryption | `0x00000007` | `SHA_512WithRSAEncryption` |  |
+| RSASSA-PSS | `0x00000008` | `RSASSA_PSS` |  |
+| DSA with SHA-1 | `0x00000009` | `DSAWithSHA_1` |  |
+| DSA with SHA224 | `0x0000000A` | `DSAWithSHA224` |  |
+| DSA with SHA256 | `0x0000000B` | `DSAWithSHA256` |  |
+| ECDSA with SHA-1 | `0x0000000C` | `ECDSAWithSHA_1` |  |
+| ECDSA with SHA224 | `0x0000000D` | `ECDSAWithSHA224` |  |
+| ECDSA with SHA256 | `0x0000000E` | `ECDSAWithSHA256` |  |
+| ECDSA with SHA384 | `0x0000000F` | `ECDSAWithSHA384` |  |
+| ECDSA with SHA512 | `0x00000010` | `ECDSAWithSHA512` |  |
+| SHA3-256 with RSA Encryption | `0x00000011` | `SHA3_256WithRSAEncryption` |  |
+| SHA3-384 with RSA Encryption | `0x00000012` | `SHA3_384WithRSAEncryption` |  |
+| SHA3-512 with RSA Encryption | `0x00000013` | `SHA3_512WithRSAEncryption` |  |
 
 **RSA-based signature algorithms:**
 - **MD2 with RSA**: RSA signature with MD2 hash. Historically used in early TLS certificates; considered broken and no longer acceptable.

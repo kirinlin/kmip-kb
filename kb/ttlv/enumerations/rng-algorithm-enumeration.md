@@ -6,9 +6,9 @@ spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.49"
 status: reviewed
 related: ["cryptographic-parameters", "drbg-algorithm-enumeration", "rng-mode-enumeration"]
-keywords: ["RNG", "random number generator", "DRBG", "NRBG", "ANSI X9.31", "FIPS 186", "random generation"]
+keywords: ["RNG", "random number generator", "DRBG", "NRBG", "ANSI X9.31", "FIPS 186", "random generation", "4200DA", "RNGAlgorithm"]
 tag_hex: "4200DA"
-xml_element: "RNGAlgorithm"
+xml_text: "RNGAlgorithm"
 ---
 
 # RNG Algorithm Enumeration
@@ -17,11 +17,16 @@ xml_element: "RNGAlgorithm"
 
 The RNG Algorithm enumeration identifies the algorithm or standard used by a random-number or deterministic random-bit generator. It is used in [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) when performing RNG-related operations (RNG Retrieve, RNG Seed) and in Query responses advertising the server's RNG capabilities. The enumeration distinguishes true random generators from deterministic ones and from algorithm-standard-specific instantiations.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| FIPS 186-2 | `0x00000002` | `FIPS186_2` |  |
+| DRBG | `0x00000003` | `DRBG` |  |
+| NRBG | `0x00000004` | `NRBG` |  |
+| ANSI X9.31 | `0x00000005` | `ANSIX9_31` |  |
+| ANSI X9.62 | `0x00000006` | `ANSIX9_62` |  |
 
 - **Unspecified**: The algorithm is not identified or is implementation-defined.
 - **FIPS 186-2**: The DSA-based random-number generation method from FIPS 186-2. Largely superseded by SP 800-90A DRBGs.

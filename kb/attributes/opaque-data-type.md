@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.37"
 status: reviewed
 related: ["opaque-object", "object-type", "custom-attribute"]
-keywords: ["opaque data type", "opaque object", "vendor-defined", "blob type", "opaque data subtype"]
+keywords: ["opaque data type", "opaque object", "vendor-defined", "blob type", "opaque data subtype", "420059", "OpaqueDataType"]
 tag_hex: "420059"
-xml_element: "OpaqueDataType"
+xml_text: "OpaqueDataType"
 ---
 
 # Opaque Data Type

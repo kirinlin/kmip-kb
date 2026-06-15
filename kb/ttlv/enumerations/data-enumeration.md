@@ -6,9 +6,9 @@ spec_versions: ["2.0","2.1"]
 source_section: "11.13"
 status: reviewed
 related: ["process"]
-keywords: ["data type", "process operation", "encrypt input", "decrypt input", "sign input", "verify input", "data payload"]
+keywords: ["data type", "process operation", "encrypt input", "decrypt input", "sign input", "verify input", "data payload", "4200C2", "Data"]
 tag_hex: "4200C2"
-xml_element: "Data"
+xml_text: "Data"
 ---
 
 # Data Enumeration
@@ -17,11 +17,17 @@ xml_element: "Data"
 
 The Data enumeration discriminates the role of a data payload within the [Process](../../operations/process.md) operation, which provides a generic cryptographic processing interface for applying key-based operations to raw data. Because Process can perform multiple cryptographic functions — encryption, decryption, signing, and signature verification — the Data enumeration tells the server which role the accompanying byte string plays. This avoids ambiguity when the same operation supports multiple data inputs or when a pipeline processes data in stages.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Data structure within a Process request to qualify what the data bytes represent.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Decrypt | `0x00000001` | `Decrypt` |  |
+| Encrypt | `0x00000002` | `Encrypt` |  |
+| Hash | `0x00000003` | `Hash` |  |
+| MAC MAC Data | `0x00000004` | `MACMACData` |  |
+| RNG Retrieve | `0x00000005` | `RNGRetrieve` |  |
+| Sign Signature Data | `0x00000006` | `SignSignatureData` |  |
+| Signature Verify | `0x00000007` | `SignatureVerify` |  |
 
 - **Encrypt Input**: The plaintext bytes to be encrypted using the referenced key and algorithm parameters. The output will be ciphertext.
 - **Decrypt Input**: The ciphertext bytes to be decrypted. The output will be plaintext.

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.32"
 status: reviewed
 related: ["server-information", "query", "protocol-version"]
-keywords: ["profile version", "profile name", "KMIP profile", "conformance profile", "server capabilities"]
+keywords: ["profile version", "profile name", "KMIP profile", "conformance profile", "server capabilities", "420142", "ProfileVersion"]
 tag_hex: "420142"
-xml_element: "ProfileVersion"
+xml_text: "ProfileVersion"
 ---
 
 # Profile Version

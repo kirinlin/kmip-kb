@@ -7,9 +7,9 @@ source_section: "4.41"
 v1_source_section: "3.26"
 status: reviewed
 related: ["process-start-date", "deactivation-date", "activation-date", "state"]
-keywords: ["protect stop date", "encryption cutoff", "symmetric key", "lifecycle dates"]
+keywords: ["protect stop date", "encryption cutoff", "symmetric key", "lifecycle dates", "420068", "ProtectStopDate"]
 tag_hex: "420068"
-xml_element: "ProtectStopDate"
+xml_text: "ProtectStopDate"
 ---
 
 # Protect Stop Date

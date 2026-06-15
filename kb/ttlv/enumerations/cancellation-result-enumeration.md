@@ -6,9 +6,9 @@ spec_versions: ["1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.7"
 status: reviewed
 related: ["cancel", "asynchronous-indicator-enumeration", "processing-stage-enumeration", "query-asynchronous-requests"]
-keywords: ["cancellation", "cancel", "async", "asynchronous operation", "stop", "abort"]
+keywords: ["cancellation", "cancel", "async", "asynchronous operation", "stop", "abort", "420012", "CancellationResult"]
 tag_hex: "420012"
-xml_element: "CancellationResult"
+xml_text: "CancellationResult"
 ---
 
 # Cancellation Result Enumeration
@@ -17,11 +17,15 @@ xml_element: "CancellationResult"
 
 The Cancellation Result enumeration conveys the server's response to a [Cancel](../../operations/cancel.md) request. When a client has submitted an operation asynchronously and subsequently decides it no longer needs the result, it sends a Cancel request with the operation's correlation value. The Cancellation Result tells the client whether the server was able to honour the request, what state the operation was in, or why cancellation was not possible. This feedback is important for clients that need to decide whether to wait for a result or treat the operation as abandoned.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Returned in the response to a Cancel operation.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Canceled | `0x00000001` | `Canceled` |  |
+| Unable to Cancel | `0x00000002` | `UnableToCancel` |  |
+| Completed | `0x00000003` | `Completed` |  |
+| Failed | `0x00000004` | `Failed` |  |
+| Unavailable | `0x00000005` | `Unavailable` |  |
 
 - **Cancelled**: The server successfully stopped the operation before it completed. Any work-in-progress has been discarded and the correlation value is no longer valid.
 - **Unable to Cancel**: The operation has already completed by the time the Cancel request arrived. The result is available via Query Asynchronous Requests; the Cancel had no effect.

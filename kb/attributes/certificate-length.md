@@ -7,9 +7,9 @@ source_section: "4.8"
 v1_source_section: "3.9"
 status: reviewed
 related: ["certificate-type", "cryptographic-length"]
-keywords: ["certificate length", "bytes", "DER size"]
+keywords: ["certificate length", "bytes", "DER size", "4200AD", "CertificateLength"]
 tag_hex: "4200AD"
-xml_element: "CertificateLength"
+xml_text: "CertificateLength"
 ---
 
 # Certificate Length

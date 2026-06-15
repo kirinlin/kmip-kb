@@ -7,9 +7,9 @@ source_section: "7.18"
 v1_source_section: "2.1.6"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "key-value"]
-keywords: ["key wrapping specification", "wrapped key request", "get wrapped", "encoding option"]
+keywords: ["key wrapping specification", "wrapped key request", "get wrapped", "encoding option", "420047", "KeyWrappingSpecification"]
 tag_hex: "420047"
-xml_element: "KeyWrappingSpecification"
+xml_text: "KeyWrappingSpecification"
 ---
 
 # Key Wrapping Specification

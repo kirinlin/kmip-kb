@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "5.2"
 status: reviewed
 related: ["attribute", "private-key-attributes", "public-key-attributes", "template-attribute-structures", "unique-identifier", "object-type", "cryptographic-algorithm"]
-keywords: ["common attributes", "attribute structure", "all object types", "shared attributes", "key pair attributes"]
+keywords: ["common attributes", "attribute structure", "all object types", "shared attributes", "key pair attributes", "420126", "CommonAttributes"]
 tag_hex: "420126"
-xml_element: "CommonAttributes"
+xml_text: "CommonAttributes"
 ---
 
 # Common Attributes

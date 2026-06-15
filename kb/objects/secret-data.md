@@ -7,9 +7,9 @@ source_section: "2.7"
 v1_source_section: "2.2.7"
 status: reviewed
 related: ["derive-key", "register", "get", "symmetric-key", "key-block", "cryptographic-usage-mask"]
-keywords: ["secret data", "password", "shared secret", "seed", "derivation"]
+keywords: ["secret data", "password", "shared secret", "seed", "derivation", "420085", "SecretData"]
 tag_hex: "420085"
-xml_element: "SecretData"
+xml_text: "SecretData"
 ---
 
 # Secret Data

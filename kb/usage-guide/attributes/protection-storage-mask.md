@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.29"
 status: reviewed
 related: ["server-policy"]
-keywords: ["Protection Storage Mask", "storage", "HSM", "data sovereignty", "geographic constraint", "preference"]
+keywords: ["Protection Storage Mask", "storage", "HSM", "data sovereignty", "geographic constraint", "preference", "42015E", "ProtectionStorageMask"]
 tag_hex: "42015E"
-xml_element: "ProtectionStorageMask"
+xml_text: "ProtectionStorageMask"
 ---
 
 # Protection Storage Mask

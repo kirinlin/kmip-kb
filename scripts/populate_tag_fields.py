@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add tag_hex and xml_element to KB docs that map to a named KMIP tag.
+"""Add tag_hex and xml_text to KB docs that map to a named KMIP tag.
 
 Primary source: §11.56 Tag Enumeration from v2.1 (354 named tags).
 Supplemental: all v1.x and v2.0 specs are also parsed to pick up the 17 tags
@@ -8,8 +8,8 @@ KB docs with source_section: "del_v2".  No tags were renamed across versions.
 
 Inserts two frontmatter fields on every KB doc whose title exactly matches:
 
-    tag_hex: "42000D"          # 6-char uppercase hex, no 0x prefix
-    xml_element: "BatchCount"  # CamelCase XML element name per KMIP XML encoding
+    tag_hex: "42000D"       # 6-char uppercase hex, no 0x prefix
+    xml_text: "BatchCount"  # CamelCase XML text per KMIP-ENCODE §6.1.3
 
 Fields are only added if absent; already-populated docs are skipped.
 
@@ -89,7 +89,7 @@ def _normalize_hex(val: str) -> str:
 
 def _parse_table_rows(section: str) -> dict[str, tuple[str, str]]:
     """Parse the two-column tag table from a spec section and return
-    {tag_name_lower: (hex6, xml_element)}, skipping Reserved/Unused rows."""
+    {tag_name_lower: (hex6, xml_text)}, skipping Reserved/Unused rows."""
     tags: dict[str, tuple[str, str]] = {}
     for line in section.splitlines():
         if not line.startswith("|"):
@@ -113,7 +113,7 @@ def _parse_table_rows(section: str) -> dict[str, tuple[str, str]]:
 
 
 def parse_tag_table_v2x(spec_path: Path) -> dict[str, tuple[str, str]]:
-    """Return {tag_name_lower: (hex6, xml_element)} from v2.x §11.5x Tag Enumeration."""
+    """Return {tag_name_lower: (hex6, xml_text)} from v2.x §11.5x Tag Enumeration."""
     text = spec_path.read_text(encoding="utf-8")
     m = re.search(r'## \d+\.\d+ Tag Enumeration', text)
     if not m:
@@ -125,7 +125,7 @@ def parse_tag_table_v2x(spec_path: Path) -> dict[str, tuple[str, str]]:
 
 
 def parse_tag_table_v1x(spec_path: Path) -> dict[str, tuple[str, str]]:
-    """Return {tag_name_lower: (hex6, xml_element)} from v1.x §9.1.3.1 Tags."""
+    """Return {tag_name_lower: (hex6, xml_text)} from v1.x §9.1.3.1 Tags."""
     text = spec_path.read_text(encoding="utf-8")
     heading = "#### 9.1.3.1 Tags"
     start = text.find(heading)
@@ -216,12 +216,12 @@ def _read_title(text: str) -> str | None:
     return m.group(1).strip().strip('"').strip("'")
 
 
-def _insert_tag_fields(text: str, tag_hex: str, xml_element: str) -> str:
-    """Append tag_hex and xml_element lines just before the closing --- of frontmatter."""
+def _insert_tag_fields(text: str, tag_hex: str, xml_text: str) -> str:
+    """Append tag_hex and xml_text lines just before the closing --- of frontmatter."""
     end = _frontmatter_end(text)
     if end == -1:
         return text
-    insertion = f'\ntag_hex: "{tag_hex}"\nxml_element: "{xml_element}"'
+    insertion = f'\ntag_hex: "{tag_hex}"\nxml_text: "{xml_text}"'
     return text[:end] + insertion + text[end:]
 
 
@@ -231,7 +231,7 @@ def _insert_tag_fields(text: str, tag_hex: str, xml_element: str) -> str:
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="Populate tag_hex and xml_element frontmatter fields in KB docs."
+        description="Populate tag_hex and xml_text frontmatter fields in KB docs."
     )
     ap.add_argument("--dry-run", action="store_true",
                     help="Print matches without writing files.")
@@ -264,7 +264,7 @@ def main() -> None:
             unmatched += 1
             continue
 
-        hex6, xml_el = entry
+        hex6, xml_t = entry
 
         if _has_field(text, "tag_hex"):
             skipped_existing += 1
@@ -272,10 +272,10 @@ def main() -> None:
 
         rel = doc.relative_to(repo_root)
         verb = "[DRY RUN]" if args.dry_run else "WRITE   "
-        print(f"  {verb}  {rel}  →  {hex6}  /  {xml_el}")
+        print(f"  {verb}  {rel}  →  {hex6}  /  {xml_t}")
 
         if not args.dry_run:
-            doc.write_text(_insert_tag_fields(text, hex6, xml_el), encoding="utf-8")
+            doc.write_text(_insert_tag_fields(text, hex6, xml_t), encoding="utf-8")
 
         matched += 1
 

@@ -7,9 +7,9 @@ source_section: "9.13"
 v1_source_section: "6.16"
 status: reviewed
 related: ["batch-item", "extension-information", "ttlv-encoding"]
-keywords: ["message extension", "vendor extension", "criticality indicator", "vendor identification"]
+keywords: ["message extension", "vendor extension", "criticality indicator", "vendor identification", "420051", "MessageExtension"]
 tag_hex: "420051"
-xml_element: "MessageExtension"
+xml_text: "MessageExtension"
 ---
 
 # Message Extension

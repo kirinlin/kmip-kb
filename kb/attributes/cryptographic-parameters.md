@@ -7,9 +7,9 @@ source_section: "4.16"
 v1_source_section: "3.6"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-domain-parameters", "cryptographic-usage-mask"]
-keywords: ["cryptographic parameters", "block cipher mode", "padding", "IV", "key role", "OAEP", "PSS"]
+keywords: ["cryptographic parameters", "block cipher mode", "padding", "IV", "key role", "OAEP", "PSS", "42002B", "CryptographicParameters"]
 tag_hex: "42002B"
-xml_element: "CryptographicParameters"
+xml_text: "CryptographicParameters"
 ---
 
 # Cryptographic Parameters

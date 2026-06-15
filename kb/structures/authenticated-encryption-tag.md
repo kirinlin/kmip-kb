@@ -7,9 +7,9 @@ source_section: "7.4"
 v1_source_section: "2.1.23"
 status: reviewed
 related: ["authenticated-encryption-additional-data", "data", "mac-data"]
-keywords: ["authentication tag", "GCM tag", "AEAD", "integrity"]
+keywords: ["authentication tag", "GCM tag", "AEAD", "integrity", "4200FF", "AuthenticatedEncryptionTag"]
 tag_hex: "4200FF"
-xml_element: "AuthenticatedEncryptionTag"
+xml_text: "AuthenticatedEncryptionTag"
 ---
 
 # Authenticated Encryption Tag

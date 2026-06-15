@@ -7,9 +7,9 @@ source_section: "4.24"
 v1_source_section: "3.34"
 status: reviewed
 related: ["object-group", "initial-date", "key-value-present"]
-keywords: ["fresh", "unused key", "key pool", "group member fresh"]
+keywords: ["fresh", "unused key", "key pool", "group member fresh", "4200A8"]
 tag_hex: "4200A8"
-xml_element: "Fresh"
+xml_text: "Fresh"
 ---
 
 # Fresh

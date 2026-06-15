@@ -7,9 +7,9 @@ source_section: "9.12"
 v1_source_section: "6.3"
 status: reviewed
 related: ["message-structure", "result-reason", "batch-count"]
-keywords: ["maximum response size", "response too large", "buffer limit", "constrained client"]
+keywords: ["maximum response size", "response too large", "buffer limit", "constrained client", "420050", "MaximumResponseSize"]
 tag_hex: "420050"
-xml_element: "MaximumResponseSize"
+xml_text: "MaximumResponseSize"
 ---
 
 # Maximum Response Size

@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.9"
 status: reviewed
 related: ["certificate", "certify", "certificate-request-type-enumeration", "object-type-enumeration"]
-keywords: ["certificate", "X.509", "PGP", "certificate type", "public key certificate"]
+keywords: ["certificate", "X.509", "PGP", "certificate type", "public key certificate", "42001D", "CertificateType"]
 tag_hex: "42001D"
-xml_element: "CertificateType"
+xml_text: "CertificateType"
 ---
 
 # Certificate Type Enumeration
@@ -17,11 +17,12 @@ xml_element: "CertificateType"
 
 The Certificate Type enumeration classifies the format of a certificate object managed by the KMIP server. Certificates in KMIP are first-class managed objects alongside keys, and they may come from different PKI ecosystems with different encoding formats. The type field allows the server and its clients to distinguish standard X.509 public key infrastructure certificates from OpenPGP certificates, and ensures that certificate consumers know which parser and trust model to apply.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in Certificate objects (as the Certificate Type attribute) and in Certify request and response structures.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| X.509 | `0x00000001` | `X_509` |  |
+| PGP | `0x00000002` | `PGP` |  |
 
 - **X.509**: An ASN.1/DER-encoded X.509v3 public key certificate as defined in RFC 5280. This is the dominant certificate format for TLS, code signing, and most enterprise PKI deployments. X.509 certificates carry a subject distinguished name, public key, validity period, extensions such as Subject Alternative Names and Key Usage, and a CA signature.
 - **PGP**: An OpenPGP certificate as defined in RFC 4880 or its successor RFC 9580. PGP certificates use a web-of-trust model rather than a hierarchical CA chain, and the encoding is based on PGP packet format rather than ASN.1. Used in email encryption and software signing workflows.

@@ -7,9 +7,9 @@ source_section: "4.21"
 v1_source_section: "3.17"
 status: reviewed
 related: ["unique-identifier", "key-value-present", "digital-signature-algorithm"]
-keywords: ["digest", "hash", "SHA-256", "fingerprint", "key material integrity"]
+keywords: ["digest", "hash", "SHA-256", "fingerprint", "key material integrity", "420034"]
 tag_hex: "420034"
-xml_element: "Digest"
+xml_text: "Digest"
 ---
 
 # Digest

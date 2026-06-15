@@ -7,9 +7,9 @@ source_section: "4.11"
 v1_source_section: "3.29"
 status: reviewed
 related: ["compromise-date", "revocation-reason", "state", "initial-date"]
-keywords: ["compromise occurrence date", "incident time", "key compromise", "forensics"]
+keywords: ["compromise occurrence date", "incident time", "key compromise", "forensics", "420021", "CompromiseOccurrenceDate"]
 tag_hex: "420021"
-xml_element: "CompromiseOccurrenceDate"
+xml_text: "CompromiseOccurrenceDate"
 ---
 
 # Compromise Occurrence Date

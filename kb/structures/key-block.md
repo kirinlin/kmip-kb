@@ -7,9 +7,9 @@ source_section: "3.1"
 v1_source_section: "2.1.3"
 status: reviewed
 related: ["key-value", "key-wrapping-data", "transparent-key-structures", "cryptographic-algorithm"]
-keywords: ["key block", "key format type", "key compression", "wrapped key", "key container"]
+keywords: ["key block", "key format type", "key compression", "wrapped key", "key container", "420040", "KeyBlock"]
 tag_hex: "420040"
-xml_element: "KeyBlock"
+xml_text: "KeyBlock"
 ---
 
 # Key Block

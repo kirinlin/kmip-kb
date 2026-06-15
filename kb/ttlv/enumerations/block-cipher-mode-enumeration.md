@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.6"
 status: reviewed
 related: ["cryptographic-parameters", "cryptographic-algorithm-enumeration", "padding-method-enumeration"]
-keywords: ["cipher mode", "CBC", "GCM", "CCM", "CTR", "ECB", "AEAD", "block cipher", "encryption mode"]
+keywords: ["cipher mode", "CBC", "GCM", "CCM", "CTR", "ECB", "AEAD", "block cipher", "encryption mode", "420011", "BlockCipherMode"]
 tag_hex: "420011"
-xml_element: "BlockCipherMode"
+xml_text: "BlockCipherMode"
 ---
 
 # Block Cipher Mode Enumeration
@@ -17,11 +17,28 @@ xml_element: "BlockCipherMode"
 
 The Block Cipher Mode enumeration specifies the mode of operation for a symmetric block cipher, which determines how the cipher processes data longer than a single block and whether it provides authentication as well as confidentiality. The choice of mode has significant security implications: some modes (like ECB) are generally discouraged for general use because identical plaintext blocks produce identical ciphertext, while authenticated encryption modes (like GCM and CCM) provide both confidentiality and integrity in a single pass. This enumeration appears in the [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) structure used across encryption, decryption, wrapping, and MAC operations.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside the Cryptographic Parameters structure alongside the algorithm, key length, and padding method fields.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| CBC | `0x00000001` | `CBC` |  |
+| ECB | `0x00000002` | `ECB` |  |
+| PCBC | `0x00000003` | `PCBC` |  |
+| CFB | `0x00000004` | `CFB` |  |
+| OFB | `0x00000005` | `OFB` |  |
+| CTR | `0x00000006` | `CTR` |  |
+| CMAC | `0x00000007` | `CMAC` |  |
+| CCM | `0x00000008` | `CCM` |  |
+| GCM | `0x00000009` | `GCM` |  |
+| CBC-MAC | `0x0000000A` | `CBC_MAC` |  |
+| XTS | `0x0000000B` | `XTS` |  |
+| AESKeyWrapPadding | `0x0000000C` | `AESKeyWrapPadding` |  |
+| NISTKeyWrap | `0x0000000D` | `NISTKeyWrap` |  |
+| X9.102 AESKW | `0x0000000E` | `X9_102AESKW` |  |
+| X9.102 TDKW | `0x0000000F` | `X9_102TDKW` |  |
+| X9.102 AKW1 | `0x00000010` | `X9_102AKW1` |  |
+| X9.102 AKW2 | `0x00000011` | `X9_102AKW2` |  |
+| AEAD | `0x00000012` | `AEAD` |  |
 
 Common confidentiality-only modes:
 - **ECB** (Electronic Code Book): Processes each block independently with no chaining. Suitable for encrypting a single block or small random values; not recommended for multi-block messages due to pattern leakage.

@@ -7,9 +7,9 @@ source_section: "del_v2"
 v1_source_section: "3.15"
 status: reviewed
 related: ["x-509-certificate-issuer", "certificate-identifier", "certificate-subject"]
-keywords: ["certificate issuer", "deprecated", "issuer distinguished name"]
+keywords: ["certificate issuer", "deprecated", "issuer distinguished name", "420015", "CertificateIssuer"]
 tag_hex: "420015"
-xml_element: "CertificateIssuer"
+xml_text: "CertificateIssuer"
 ---
 
 # Certificate Issuer

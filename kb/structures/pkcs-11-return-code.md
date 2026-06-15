@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.30"
 status: reviewed
 related: ["pkcs-11-function", "pkcs-11-output-parameters", "pkcs-11", "error-handling"]
-keywords: ["PKCS#11 return code", "CKR", "Cryptoki return value", "CKR_OK", "error code", "PKCS11 status"]
+keywords: ["PKCS#11 return code", "CKR", "Cryptoki return value", "CKR_OK", "error code", "PKCS11 status", "42015D", "PKCS_11ReturnCode"]
 tag_hex: "42015D"
-xml_element: "PKCS_11ReturnCode"
+xml_text: "PKCS_11ReturnCode"
 ---
 
 # PKCS#11 Return Code

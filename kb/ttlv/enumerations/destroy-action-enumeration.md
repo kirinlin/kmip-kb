@@ -6,9 +6,9 @@ spec_versions: ["2.0","2.1"]
 source_section: "11.15"
 status: reviewed
 related: ["destroy", "shredding-algorithm-enumeration", "state-enumeration", "revoke"]
-keywords: ["destroy action", "key destruction", "shred", "deletion", "metadata", "cryptographic erase", "destroy"]
+keywords: ["destroy action", "key destruction", "shred", "deletion", "metadata", "cryptographic erase", "destroy", "4200F3", "DestroyAction"]
 tag_hex: "4200F3"
-xml_element: "DestroyAction"
+xml_text: "DestroyAction"
 ---
 
 # Destroy Action Enumeration
@@ -17,11 +17,17 @@ xml_element: "DestroyAction"
 
 The Destroy Action enumeration describes what actually happened to a managed object — and specifically to its key material and metadata — when a [Destroy](../../operations/destroy.md) operation was processed. Different security policies require different levels of assurance about what has been removed: simply deleting a database record is very different from overwriting key material with zeros or cryptographically erasing the storage medium. This enumeration allows servers to communicate and record the specific action taken, enabling auditors and policy engines to verify that destruction met the required assurance level.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Returned in the Destroy response or stored in a Destroy Date / Destroy Action attribute on the object record after destruction.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| Key Material Deleted | `0x00000002` | `KeyMaterialDeleted` |  |
+| Key Material Shredded | `0x00000003` | `KeyMaterialShredded` |  |
+| Meta Data Deleted | `0x00000004` | `MetaDataDeleted` |  |
+| Meta Data Shredded | `0x00000005` | `MetaDataShredded` |  |
+| Deleted | `0x00000006` | `Deleted` |  |
+| Shredded | `0x00000007` | `Shredded` |  |
 
 - **Unspecified**: The destruction method is not reported or is not meaningful for this object type. Used as a default when the server does not report granular action details.
 - **Key Material Deleted**: The raw cryptographic key bytes were logically deleted from the server's storage (e.g., database row removed) but no secure overwrite was performed.

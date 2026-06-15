@@ -7,9 +7,9 @@ source_section: "4.30"
 v1_source_section: "3.20"
 status: reviewed
 related: ["usage-limits", "state", "last-change-date"]
-keywords: ["lease time", "interval", "obtain lease", "caching", "time-limited use"]
+keywords: ["lease time", "interval", "obtain lease", "caching", "time-limited use", "420049", "LeaseTime"]
 tag_hex: "420049"
-xml_element: "LeaseTime"
+xml_text: "LeaseTime"
 ---
 
 # Lease Time

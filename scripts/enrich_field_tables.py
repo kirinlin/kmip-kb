@@ -5,8 +5,8 @@ Many KB articles describe a KMIP structure or operation payload with a Markdown
 table whose first column lists the *fields* of that structure.  Most of those
 field names are themselves named KMIP tags (§11.56 Tag Enumeration), so each
 row can be annotated with the field's 6-digit hex tag value and its CamelCase
-XML element name — the same two identifiers carried in front matter by
-``populate_tag_fields.py``.
+XML element name — the same two identifiers carried in front matter by ``populate_tag_fields.py``
+as ``tag_hex`` and ``xml_text``.
 
 This script enriches every table whose header's first column is exactly
 ``Field`` by inserting two columns immediately after it::

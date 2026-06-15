@@ -7,9 +7,9 @@ source_section: "4.36"
 v1_source_section: "3.3"
 status: reviewed
 related: ["unique-identifier", "cryptographic-algorithm"]
-keywords: ["object type", "enumeration", "symmetric key", "certificate", "classification"]
+keywords: ["object type", "enumeration", "symmetric key", "certificate", "classification", "420057", "ObjectType"]
 tag_hex: "420057"
-xml_element: "ObjectType"
+xml_text: "ObjectType"
 ---
 
 # Object Type

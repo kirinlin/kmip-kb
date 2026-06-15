@@ -7,9 +7,9 @@ source_section: "9.6"
 v1_source_section: "6.13"
 status: reviewed
 related: ["batch-order-option", "batch-count", "result-status", "capability-information"]
-keywords: ["batch error continuation", "undo", "stop", "continue", "rollback"]
+keywords: ["batch error continuation", "undo", "stop", "continue", "rollback", "42000E", "BatchErrorContinuationOption"]
 tag_hex: "42000E"
-xml_element: "BatchErrorContinuationOption"
+xml_text: "BatchErrorContinuationOption"
 ---
 
 # Batch Error Continuation Option

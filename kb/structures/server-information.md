@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.37"
 status: reviewed
 related: ["query", "profile-version", "protocol-version", "object-types", "protection-storage-masks"]
-keywords: ["server information", "server name", "server version", "vendor identification", "server instance", "conformance clause"]
+keywords: ["server information", "server name", "server version", "vendor identification", "server instance", "conformance clause", "420088", "ServerInformation"]
 tag_hex: "420088"
-xml_element: "ServerInformation"
+xml_text: "ServerInformation"
 ---
 
 # Server Information

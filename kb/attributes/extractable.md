@@ -7,9 +7,9 @@ source_section: "4.23"
 v1_source_section: "3.50"
 status: reviewed
 related: ["never-extractable", "sensitive", "always-sensitive"]
-keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity"]
+keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity", "420122"]
 tag_hex: "420122"
-xml_element: "Extractable"
+xml_text: "Extractable"
 ---
 
 # Extractable

@@ -7,9 +7,9 @@ source_section: "7.20"
 v1_source_section: "2.1.13"
 status: reviewed
 related: ["data", "signature-data", "authenticated-encryption-tag"]
-keywords: ["MAC data", "message authentication code", "HMAC", "MAC verify"]
+keywords: ["MAC data", "message authentication code", "HMAC", "MAC verify", "4200C6", "MACData"]
 tag_hex: "4200C6"
-xml_element: "MACData"
+xml_text: "MACData"
 ---
 
 # MAC Data

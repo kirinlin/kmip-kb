@@ -7,9 +7,9 @@ source_section: "9.16"
 v1_source_section: "6.1"
 status: reviewed
 related: ["message-structure", "discover-versions"]
-keywords: ["protocol version", "version negotiation", "major minor", "backward compatibility"]
+keywords: ["protocol version", "version negotiation", "major minor", "backward compatibility", "420069", "ProtocolVersion"]
 tag_hex: "420069"
-xml_element: "ProtocolVersion"
+xml_text: "ProtocolVersion"
 ---
 
 # Protocol Version

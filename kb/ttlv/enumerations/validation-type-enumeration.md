@@ -6,9 +6,9 @@ spec_versions: ["1.3","1.4","2.0","2.1"]
 source_section: "11.62"
 status: reviewed
 related: ["cryptographic-parameters", "validation-authority-type-enumeration"]
-keywords: ["validation type", "software validation", "hardware validation", "firmware validation", "hybrid validation", "cryptographic validation"]
+keywords: ["validation type", "software validation", "hardware validation", "firmware validation", "hybrid validation", "cryptographic validation", "4200E5", "ValidationType"]
 tag_hex: "4200E5"
-xml_element: "ValidationType"
+xml_text: "ValidationType"
 ---
 
 # Validation Type Enumeration
@@ -17,11 +17,15 @@ xml_element: "ValidationType"
 
 The Validation Type enumeration classifies the implementation layer that was subject to cryptographic validation. While [Validation Authority Type](validation-authority-type-enumeration.md) names the body that performed the validation, Validation Type identifies what was validated — whether the cryptographic algorithms run in pure software, in dedicated hardware, in firmware, or a combination. This allows policy engines to distinguish between a software-only FIPS module (acceptable for some uses) and a hardware module (required for higher-assurance uses).
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Encrypt | `0x00000001` | `Encrypt` |  |
+| MAC/sign | `0x00000002` | `MACSign` |  |
+| Encrypt then MAC/sign | `0x00000003` | `EncryptThenMACSign` |  |
+| MAC/sign then encrypt | `0x00000004` | `MACSignThenEncrypt` |  |
+| TR-31 | `0x00000005` | `TR_31` |  |
 
 - **Unspecified**: The validation type is unknown or not applicable.
 - **Software**: The cryptographic implementation that was validated runs entirely in software, with no hardware cryptographic accelerator or tamper-resistant element involved. A software FIPS module on a general-purpose CPU falls into this category.

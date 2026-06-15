@@ -7,9 +7,9 @@ source_section: "del_v2"
 v1_source_section: "3.18"
 status: reviewed
 related: ["cryptographic-usage-mask", "sensitive", "extractable"]
-keywords: ["operation policy", "access control", "default policy", "deprecated", "owner"]
+keywords: ["operation policy", "access control", "default policy", "deprecated", "owner", "42005D", "OperationPolicyName"]
 tag_hex: "42005D"
-xml_element: "OperationPolicyName"
+xml_text: "OperationPolicyName"
 ---
 
 # Operation Policy Name

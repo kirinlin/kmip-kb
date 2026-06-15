@@ -7,9 +7,9 @@ source_section: "2.9"
 v1_source_section: "2.2.2"
 status: reviewed
 related: ["create", "register", "get", "derive-key", "encrypt", "decrypt", "key-block", "cryptographic-algorithm", "cryptographic-length", "cryptographic-usage-mask"]
-keywords: ["symmetric key", "AES", "secret key", "managed cryptographic object", "key block"]
+keywords: ["symmetric key", "AES", "secret key", "managed cryptographic object", "key block", "42008F", "SymmetricKey"]
 tag_hex: "42008F"
-xml_element: "SymmetricKey"
+xml_text: "SymmetricKey"
 ---
 
 # Symmetric Key

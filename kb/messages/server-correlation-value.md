@@ -7,9 +7,9 @@ source_section: "9.10"
 v1_source_section: "6.19"
 status: reviewed
 related: ["client-correlation-value", "correlation-value", "message-structure"]
-keywords: ["server correlation value", "request ID", "audit", "logging"]
+keywords: ["server correlation value", "request ID", "audit", "logging", "420106", "ServerCorrelationValue"]
 tag_hex: "420106"
-xml_element: "ServerCorrelationValue"
+xml_text: "ServerCorrelationValue"
 ---
 
 # Server Correlation Value

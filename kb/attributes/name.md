@@ -7,9 +7,9 @@ source_section: "4.32"
 v1_source_section: "3.2"
 status: reviewed
 related: ["unique-identifier", "alternative-name", "object-group"]
-keywords: ["name", "human-readable label", "locate by name", "name type"]
+keywords: ["name", "human-readable label", "locate by name", "name type", "420053"]
 tag_hex: "420053"
-xml_element: "Name"
+xml_text: "Name"
 ---
 
 # Name

@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.28"
 status: reviewed
 related: ["attributes", "locate"]
-keywords: ["Object Group", "Fresh", "group member", "round robin", "key pool", "Locate"]
+keywords: ["Object Group", "Fresh", "group member", "round robin", "key pool", "Locate", "420056", "ObjectGroup"]
 tag_hex: "420056"
-xml_element: "ObjectGroup"
+xml_text: "ObjectGroup"
 ---
 
 # Object Group

@@ -7,9 +7,9 @@ source_section: "4.28"
 v1_source_section: "3.41"
 status: reviewed
 related: ["key-value-location", "digest", "fresh"]
-keywords: ["key value present", "metadata-only registration", "key value absent", "registry"]
+keywords: ["key value present", "metadata-only registration", "key value absent", "registry", "4200BB", "KeyValuePresent"]
 tag_hex: "4200BB"
-xml_element: "KeyValuePresent"
+xml_text: "KeyValuePresent"
 ---
 
 # Key Value Present

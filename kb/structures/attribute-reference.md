@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "5.5"
 status: reviewed
 related: ["attribute", "current-attribute", "new-attribute", "set-attribute", "delete-attribute", "adjust-attribute", "constraint"]
-keywords: ["attribute reference", "attribute name", "attribute index", "attribute pointer", "attribute identification"]
+keywords: ["attribute reference", "attribute name", "attribute index", "attribute pointer", "attribute identification", "42013B", "AttributeReference"]
 tag_hex: "42013B"
-xml_element: "AttributeReference"
+xml_text: "AttributeReference"
 ---
 
 # Attribute Reference

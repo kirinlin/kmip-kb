@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.15"
 status: reviewed
 related: ["interop-identifier", "interop", "message-structure"]
-keywords: ["interop function", "interoperability test", "test function", "interop operation", "KMIP testing"]
+keywords: ["interop function", "interoperability test", "test function", "interop operation", "KMIP testing", "420160", "InteropFunction"]
 tag_hex: "420160"
-xml_element: "InteropFunction"
+xml_text: "InteropFunction"
 ---
 
 # Interop Function

@@ -45,7 +45,7 @@ status: draft                # stub | draft | reviewed
 related: []
 keywords: []
 tag_hex: "420018"            # optional — 6-digit hex from §11.56 Tag Enumeration
-xml_element: "CertificateRequest"  # optional — CamelCase XML element name (KMIP-ENCODE §6.1.3)
+xml_text: "CertificateRequest"     # optional — CamelCase XML text identifier (KMIP-ENCODE §6.1.3)
 ---
 ```
 
@@ -70,7 +70,7 @@ content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 ## Tag field populator
 
 [`scripts/populate_tag_fields.py`](scripts/populate_tag_fields.py) adds `tag_hex`
-and `xml_element` frontmatter fields to any KB doc whose title matches a named
+and `xml_text` frontmatter fields to any KB doc whose title matches a named
 KMIP tag. Parses all v1.x, v2.0, and v2.1 spec tag tables: v2.1 is the primary
 source (354 tags); earlier versions supply the 17 tags deprecated by v2.0 so
 that `del_v2` docs are also covered. Implements the official KMIP-ENCODE §6.1.3

@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.37"
 status: reviewed
 related: ["cryptographic-algorithm-enumeration", "block-cipher-mode-enumeration"]
-keywords: ["padding", "OAEP", "PKCS#1 v1.5", "PSS", "RSA padding", "block padding", "padding method"]
+keywords: ["padding", "OAEP", "PKCS#1 v1.5", "PSS", "RSA padding", "block padding", "padding method", "42005F", "PaddingMethod"]
 tag_hex: "42005F"
-xml_element: "PaddingMethod"
+xml_text: "PaddingMethod"
 ---
 
 # Padding Method Enumeration
@@ -17,11 +17,20 @@ xml_element: "PaddingMethod"
 
 The Padding Method enumeration specifies the padding scheme applied during asymmetric encryption or during block-cipher operations that require padding to fill the final block. It appears in the [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) structure whenever padding is a configurable aspect of the operation — primarily for RSA encryption and signing, and for block ciphers operating in modes that do not handle arbitrary-length plaintext natively.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration), tag `420063`.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| None | `0x00000001` | `None` |  |
+| OAEP | `0x00000002` | `OAEP` |  |
+| PKCS5 | `0x00000003` | `PKCS5` |  |
+| SSL3 | `0x00000004` | `SSL3` |  |
+| Zeros | `0x00000005` | `Zeros` |  |
+| ANSI X9.23 | `0x00000006` | `ANSIX9_23` |  |
+| ISO 10126 | `0x00000007` | `ISO10126` |  |
+| PKCS1 v1.5 | `0x00000008` | `PKCS1V1_5` |  |
+| X9.31 | `0x00000009` | `X9_31` |  |
+| PSS | `0x0000000A` | `PSS` |  |
 
 - **None**: No padding applied. Used for algorithms and modes that handle arbitrary data lengths or where the caller guarantees block-aligned input.
 - **OAEP** (PKCS#1 OAEP): Optimal Asymmetric Encryption Padding. The recommended padding for RSA encryption in modern systems, using a mask generation function and a hash to randomise the ciphertext.

@@ -7,9 +7,9 @@ source_section: "9.19"
 v1_source_section: "6.9"
 status: reviewed
 related: ["result-reason", "result-message", "batch-error-continuation-option"]
-keywords: ["result status", "success", "operation failed", "operation pending", "operation undone"]
+keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "42007F", "ResultStatus"]
 tag_hex: "42007F"
-xml_element: "ResultStatus"
+xml_text: "ResultStatus"
 ---
 
 # Result Status

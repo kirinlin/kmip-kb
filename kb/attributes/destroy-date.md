@@ -7,9 +7,9 @@ source_section: "4.20"
 v1_source_section: "3.28"
 status: reviewed
 related: ["state", "compromise-date", "deactivation-date"]
-keywords: ["destroy date", "destroyed state", "key destruction", "audit"]
+keywords: ["destroy date", "destroyed state", "key destruction", "audit", "420033", "DestroyDate"]
 tag_hex: "420033"
-xml_element: "DestroyDate"
+xml_text: "DestroyDate"
 ---
 
 # Destroy Date

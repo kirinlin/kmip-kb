@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.1"
 status: reviewed
 related: ["credential", "transport"]
-keywords: ["authentication", "TLS", "credential", "username password", "device credential", "attestation", "identity"]
+keywords: ["authentication", "TLS", "credential", "username password", "device credential", "attestation", "identity", "42000C"]
 tag_hex: "42000C"
-xml_element: "Authentication"
+xml_text: "Authentication"
 ---
 
 # Authentication

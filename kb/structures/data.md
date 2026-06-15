@@ -7,9 +7,9 @@ source_section: "7.9"
 v1_source_section: "2.1.10"
 status: reviewed
 related: ["data-length", "signature-data", "mac-data", "correlation-value"]
-keywords: ["data", "payload", "encrypt", "decrypt", "sign", "cryptographic operations"]
+keywords: ["data", "payload", "encrypt", "decrypt", "sign", "cryptographic operations", "4200C2"]
 tag_hex: "4200C2"
-xml_element: "Data"
+xml_text: "Data"
 ---
 
 # Data

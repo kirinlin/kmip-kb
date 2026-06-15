@@ -7,9 +7,9 @@ source_section: "3.2"
 v1_source_section: "2.1.4"
 status: reviewed
 related: ["key-block", "key-wrapping-data", "transparent-key-structures", "attribute"]
-keywords: ["key value", "key material", "wrapped key", "encapsulated attributes"]
+keywords: ["key value", "key material", "wrapped key", "encapsulated attributes", "420045", "KeyValue"]
 tag_hex: "420045"
-xml_element: "KeyValue"
+xml_text: "KeyValue"
 ---
 
 # Key Value

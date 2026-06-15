@@ -7,9 +7,9 @@ source_section: "7.36"
 v1_source_section: "2.1.18"
 status: reviewed
 related: ["random-number-generator", "capability-information", "validation-information"]
-keywords: ["RNG parameters", "DRBG", "NRBG", "prediction resistance", "randomness"]
+keywords: ["RNG parameters", "DRBG", "NRBG", "prediction resistance", "randomness", "4200D9", "RNGParameters"]
 tag_hex: "4200D9"
-xml_element: "RNGParameters"
+xml_text: "RNGParameters"
 ---
 
 # RNG Parameters

@@ -7,9 +7,9 @@ source_section: "7.17"
 v1_source_section: "2.1.16"
 status: reviewed
 related: ["final-indicator", "correlation-value", "data"]
-keywords: ["init indicator", "streaming", "multi-part", "first part"]
+keywords: ["init indicator", "streaming", "multi-part", "first part", "4200D7", "InitIndicator"]
 tag_hex: "4200D7"
-xml_element: "InitIndicator"
+xml_text: "InitIndicator"
 ---
 
 # Init Indicator

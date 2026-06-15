@@ -6,9 +6,9 @@ spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.50"
 status: reviewed
 related: ["cryptographic-parameters", "rng-algorithm-enumeration", "drbg-algorithm-enumeration"]
-keywords: ["RNG mode", "prediction resistance", "reseeding", "non-reseeding", "random generation mode"]
+keywords: ["RNG mode", "prediction resistance", "reseeding", "non-reseeding", "random generation mode", "4200F5", "RNGMode"]
 tag_hex: "4200F5"
-xml_element: "RNGMode"
+xml_text: "RNGMode"
 ---
 
 # RNG Mode Enumeration
@@ -17,11 +17,13 @@ xml_element: "RNGMode"
 
 The RNG Mode enumeration controls the reseeding and prediction-resistance behaviour of a deterministic random bit generator (DRBG) as defined in NIST SP 800-90A. It is carried in [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) alongside the [RNG Algorithm](rng-algorithm-enumeration.md) to fully specify how the RNG should operate when a security requirement calls for prediction resistance or controlled reseeding.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| Shared Instantiation | `0x00000002` | `SharedInstantiation` |  |
+| Non-Shared Instantiation | `0x00000003` | `NonSharedInstantiation` |  |
 
 - **Unspecified**: The mode is not constrained; the server uses its default reseeding policy.
 - **Non-Reseeding**: The DRBG is instantiated without reseeding support. The internal state evolves from its initial seed without injecting additional entropy. Suitable when the seed is trusted and state exhaustion is not a concern.

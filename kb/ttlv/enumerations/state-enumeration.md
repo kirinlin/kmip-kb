@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.55"
 status: reviewed
 related: ["state", "activate", "revoke", "destroy", "archive", "recover"]
-keywords: ["state", "object lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "lifecycle state"]
+keywords: ["state", "object lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "lifecycle state", "42008D"]
 tag_hex: "42008D"
-xml_element: "State"
+xml_text: "State"
 ---
 
 # State Enumeration
@@ -17,11 +17,16 @@ xml_element: "State"
 
 The State enumeration is the lifecycle state of a managed KMIP object. It is the type of the [State attribute](../../attributes/state.md) and appears in Locate filters, response structures, and the [State attribute](../../attributes/state.md). Every managed object has exactly one State at any moment; state transitions are triggered by lifecycle operations (Activate, Revoke, Destroy, Archive, Recover) or by attribute changes (setting an Activation Date to the past).
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration), tag `42008D`.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Pre-Active | `0x00000001` | `PreActive` |  |
+| Active | `0x00000002` | `Active` |  |
+| Deactivated | `0x00000003` | `Deactivated` |  |
+| Compromised | `0x00000004` | `Compromised` |  |
+| Destroyed | `0x00000005` | `Destroyed` |  |
+| Destroyed Compromised | `0x00000006` | `DestroyedCompromised` |  |
 
 The six states form a directed lifecycle graph:
 

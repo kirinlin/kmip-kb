@@ -7,9 +7,9 @@ source_section: "4.40"
 v1_source_section: "3.25"
 status: reviewed
 related: ["protect-stop-date", "activation-date", "deactivation-date", "state"]
-keywords: ["process start date", "decryption window", "symmetric key", "lifecycle dates"]
+keywords: ["process start date", "decryption window", "symmetric key", "lifecycle dates", "420067", "ProcessStartDate"]
 tag_hex: "420067"
-xml_element: "ProcessStartDate"
+xml_text: "ProcessStartDate"
 ---
 
 # Process Start Date

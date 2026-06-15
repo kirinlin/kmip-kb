@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.49"
 status: reviewed
 related: ["rotate-automatic", "rotate-interval", "rotate-generation", "rotate-latest", "rotate-name", "rotate-offset", "re-key", "activation-date", "deactivation-date"]
-keywords: ["rotate date", "key rotation date", "next rotation", "rotation schedule", "date-time"]
+keywords: ["rotate date", "key rotation date", "next rotation", "rotation schedule", "date-time", "42016D", "RotateDate"]
 tag_hex: "42016D"
-xml_element: "RotateDate"
+xml_text: "RotateDate"
 ---
 
 # Rotate Date

@@ -6,9 +6,9 @@ spec_versions: ["1.4","2.0","2.1"]
 source_section: "11.14"
 status: reviewed
 related: ["derive-key", "derivation-parameters", "hashing-algorithm-enumeration", "cryptographic-algorithm-enumeration"]
-keywords: ["key derivation", "KDF", "PBKDF2", "HKDF", "HMAC", "NIST 800-108", "AWS", "derive key", "derivation method"]
+keywords: ["key derivation", "KDF", "PBKDF2", "HKDF", "HMAC", "NIST 800-108", "AWS", "derive key", "derivation method", "420031", "DerivationMethod"]
 tag_hex: "420031"
-xml_element: "DerivationMethod"
+xml_text: "DerivationMethod"
 ---
 
 # Derivation Method Enumeration
@@ -17,11 +17,20 @@ xml_element: "DerivationMethod"
 
 The Derivation Method enumeration names the key derivation function (KDF) or key derivation algorithm applied when creating a new key from a base key material or secret. It appears in the [Derivation Parameters](../../structures/derivation-parameters.md) structure of a [Derive Key](../../operations/derive-key.md) request. The choice of derivation method determines which additional parameters are required — for example, PBKDF2 requires an iteration count and salt, while NIST 800-108 counter mode requires a label and context string. Correct selection is critical because different KDFs have different security properties and are appropriate for different use cases.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Derivation Parameters structure alongside hashing algorithm, iteration count, salt, and other KDF-specific parameters.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| PBKDF2 | `0x00000001` | `PBKDF2` |  |
+| HASH | `0x00000002` | `HASH` |  |
+| HMAC | `0x00000003` | `HMAC` |  |
+| ENCRYPT | `0x00000004` | `ENCRYPT` |  |
+| NIST800-108-C | `0x00000005` | `NIST800_108_C` |  |
+| NIST800-108-F | `0x00000006` | `NIST800_108_F` |  |
+| NIST800-108-DPI | `0x00000007` | `NIST800_108_DPI` |  |
+| Asymmetric Key | `0x00000008` | `AsymmetricKey` |  |
+| AWS Signature Version 4 | `0x00000009` | `AWSSignatureVersion4` |  |
+| HKDF | `0x0000000A` | `HKDF` |  |
 
 - **PBKDF2** (Password-Based Key Derivation Function 2, RFC 8018): Derives a key from a password and salt using an iterated HMAC or hash. The iteration count controls computational cost to resist offline brute-force attacks. The standard choice for deriving encryption keys from passwords.
 - **Hash**: Derives key material by hashing the input directly (without HMAC). A simple but less flexible option; the hash algorithm is specified in the accompanying Hashing Algorithm field.

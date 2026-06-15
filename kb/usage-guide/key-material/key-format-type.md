@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.25"
 status: reviewed
 related: ["key-block", "key-encoding"]
-keywords: ["Key Format Type", "Digest", "encoding format", "interoperability", "format negotiation"]
+keywords: ["Key Format Type", "Digest", "encoding format", "interoperability", "format negotiation", "420042", "KeyFormatType"]
 tag_hex: "420042"
-xml_element: "KeyFormatType"
+xml_text: "KeyFormatType"
 ---
 
 # Key Format Type

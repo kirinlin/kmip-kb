@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.32"
 status: reviewed
 related: ["nist-key-type", "cryptographic-usage-mask", "cryptographic-algorithm-enumeration"]
-keywords: ["NIST key type", "SP 800-57", "key classification", "signature key", "encryption key", "key agreement", "authorization key"]
+keywords: ["NIST key type", "SP 800-57", "key classification", "signature key", "encryption key", "key agreement", "authorization key", "42013A", "NISTKeyType"]
 tag_hex: "42013A"
-xml_element: "NISTKeyType"
+xml_text: "NISTKeyType"
 ---
 
 # NIST Key Type Enumeration
@@ -17,11 +17,29 @@ xml_element: "NISTKeyType"
 
 The NIST Key Type enumeration classifies a cryptographic key according to the functional categories defined in NIST Special Publication 800-57 Part 1, which provides recommendations for cryptographic key management. SP 800-57 classifies keys by their purpose — signature, authentication, encryption, key wrapping, key agreement, random number generation, master key, or authorisation — and distinguishes private from public from symmetric variants of each. This classification informs key management policy decisions: different key types have different recommended lifetimes, storage requirements, and access controls. The enumeration appears in the [NIST Key Type attribute](../../attributes/nist-key-type.md).
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the NIST Key Type attribute structure on managed key objects.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Private signature key | `0x00000001` | `PrivateSignatureKey` |  |
+| Public signature verification key | `0x00000002` | `PublicSignatureVerificationKey` |  |
+| Symmetric authentication key | `0x00000003` | `SymmetricAuthenticationKey` |  |
+| Private authentication key | `0x00000004` | `PrivateAuthenticationKey` |  |
+| Public authentication key | `0x00000005` | `PublicAuthenticationKey` |  |
+| Symmetric data encryption key | `0x00000006` | `SymmetricDataEncryptionKey` |  |
+| Symmetric key wrapping key | `0x00000007` | `SymmetricKeyWrappingKey` |  |
+| Symmetric random number generation key | `0x00000008` | `SymmetricRandomNumberGenerationKey` |  |
+| Symmetric master key | `0x00000009` | `SymmetricMasterKey` |  |
+| Private key transport key | `0x0000000A` | `PrivateKeyTransportKey` |  |
+| Public key transport key | `0x0000000B` | `PublicKeyTransportKey` |  |
+| Symmetric key agreement key | `0x0000000C` | `SymmetricKeyAgreementKey` |  |
+| Private static key agreement key | `0x0000000D` | `PrivateStaticKeyAgreementKey` |  |
+| Public static key agreement key | `0x0000000E` | `PublicStaticKeyAgreementKey` |  |
+| Private ephemeral key agreement key | `0x0000000F` | `PrivateEphemeralKeyAgreementKey` |  |
+| Public ephemeral key agreement key | `0x00000010` | `PublicEphemeralKeyAgreementKey` |  |
+| Symmetric authorization key | `0x00000011` | `SymmetricAuthorizationKey` |  |
+| Private authorization key | `0x00000012` | `PrivateAuthorizationKey` |  |
+| Public authorization key | `0x00000013` | `PublicAuthorizationKey` |  |
 
 **Signature keys:**
 - **Private Signature Key**: An asymmetric private key used to generate digital signatures (RSA, DSA, ECDSA, EdDSA). Must be strongly protected; exposure compromises all previously signed material.

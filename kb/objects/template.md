@@ -7,9 +7,9 @@ source_section: "del_v2"
 v1_source_section: "2.2.6"
 status: reviewed
 related: ["register", "create", "create-key-pair", "name", "get"]
-keywords: ["template", "deprecated", "attributes", "named object"]
+keywords: ["template", "deprecated", "attributes", "named object", "420090"]
 tag_hex: "420090"
-xml_element: "Template"
+xml_text: "Template"
 ---
 
 # Template

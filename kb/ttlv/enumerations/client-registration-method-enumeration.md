@@ -6,9 +6,9 @@ spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.10"
 status: reviewed
 related: ["query", "query-function-enumeration", "login", "credential-type-enumeration"]
-keywords: ["client registration", "registration method", "provisioning", "client identity", "server pre-generated"]
+keywords: ["client registration", "registration method", "provisioning", "client identity", "server pre-generated", "4200F6", "ClientRegistrationMethod"]
 tag_hex: "4200F6"
-xml_element: "ClientRegistrationMethod"
+xml_text: "ClientRegistrationMethod"
 ---
 
 # Client Registration Method Enumeration
@@ -17,11 +17,15 @@ xml_element: "ClientRegistrationMethod"
 
 The Client Registration Method enumeration describes how a KMIP client identity is established with the server. In enterprise deployments, clients do not always self-register; sometimes credentials are pre-provisioned by administrators, sometimes generated on demand by the server, and sometimes brought by the client itself. Knowing the registration method helps the server apply the appropriate policy and helps administrators understand the provenance of client identities. This enumeration is surfaced in Query responses when a client asks about the server's capabilities and supported registration workflows.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Returned in the Query Defaults Information and server information structures when a client queries supported Client Registration Methods.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| Server Pre-Generated | `0x00000002` | `ServerPreGenerated` |  |
+| Server On-Demand | `0x00000003` | `ServerOnDemand` |  |
+| Client Generated | `0x00000004` | `ClientGenerated` |  |
+| Client Registered | `0x00000005` | `ClientRegistered` |  |
 
 - **Unspecified**: The registration method is not declared or is not applicable. Acts as a catch-all for deployments that do not distinguish among methods.
 - **Server Pre-Generated**: The server generates the client's credentials (certificates, tokens, or other identity material) ahead of time and distributes them through an out-of-band channel such as a management console or secure enrollment ceremony.

@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.11"
 status: reviewed
 related: ["login", "attestation-type-enumeration", "ticket-type-enumeration"]
-keywords: ["credential", "authentication", "username password", "device", "attestation", "one-time password", "ticket", "hashed password"]
+keywords: ["credential", "authentication", "username password", "device", "attestation", "one-time password", "ticket", "hashed password", "420024", "CredentialType"]
 tag_hex: "420024"
-xml_element: "CredentialType"
+xml_text: "CredentialType"
 ---
 
 # Credential Type Enumeration
@@ -17,11 +17,16 @@ xml_element: "CredentialType"
 
 The Credential Type enumeration identifies the kind of authentication credential the client presents in the Authentication field of a KMIP request header. KMIP supports multiple authentication models because key management spans a wide range of deployment contexts — from simple username/password web services to hardware-attested storage devices and session-ticket-based workflows. The server uses the credential type to route the authentication material to the appropriate validation mechanism.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears inside the Credential structure within the Authentication header field of every request message that requires authentication.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Username and Password | `0x00000001` | `UsernameAndPassword` |  |
+| Device | `0x00000002` | `Device` |  |
+| Attestation | `0x00000003` | `Attestation` |  |
+| One Time Password | `0x00000004` | `OneTimePassword` |  |
+| Hashed Password | `0x00000005` | `HashedPassword` |  |
+| Ticket | `0x00000006` | `Ticket` |  |
 
 - **Username and Password**: The simplest credential — a plaintext username and password pair transmitted over an already-secured transport (typically TLS). Widely supported but provides no hardware binding or replay protection beyond the transport layer.
 - **Device**: A device-level credential that identifies a specific physical endpoint rather than a user, typically using a device certificate or identifier. Used for machine-to-machine authentication in storage and HSM integrations.

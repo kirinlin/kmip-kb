@@ -7,9 +7,9 @@ source_section: "4.47"
 v1_source_section: "3.31"
 status: reviewed
 related: ["state", "compromise-date", "deactivation-date"]
-keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit"]
+keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit", "420081", "RevocationReason"]
 tag_hex: "420081"
-xml_element: "RevocationReason"
+xml_text: "RevocationReason"
 ---
 
 # Revocation Reason

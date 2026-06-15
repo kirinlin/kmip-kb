@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.45"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-length", "nist-key-type", "protection-level"]
-keywords: ["quantum safe", "post-quantum", "quantum resistant", "pqc", "quantum computer", "boolean attribute"]
+keywords: ["quantum safe", "post-quantum", "quantum resistant", "pqc", "quantum computer", "boolean attribute", "420147", "QuantumSafe"]
 tag_hex: "420147"
-xml_element: "QuantumSafe"
+xml_text: "QuantumSafe"
 ---
 
 # Quantum Safe

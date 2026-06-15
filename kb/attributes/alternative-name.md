@@ -7,9 +7,9 @@ source_section: "4.2"
 v1_source_section: "3.40"
 status: reviewed
 related: ["name", "unique-identifier", "application-specific-information"]
-keywords: ["alternative name", "alias", "locate", "URI", "DNS name", "email"]
+keywords: ["alternative name", "alias", "locate", "URI", "DNS name", "email", "4200BF", "AlternativeName"]
 tag_hex: "4200BF"
-xml_element: "AlternativeName"
+xml_text: "AlternativeName"
 ---
 
 # Alternative Name

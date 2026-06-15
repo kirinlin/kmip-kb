@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.28"
 status: reviewed
 related: ["unique-identifier", "create-key-pair", "certify", "register"]
-keywords: ["link type", "linked objects", "certificate link", "public key link", "private key link", "derivation", "replacement", "parent", "child"]
+keywords: ["link type", "linked objects", "certificate link", "public key link", "private key link", "derivation", "replacement", "parent", "child", "42004B", "LinkType"]
 tag_hex: "42004B"
-xml_element: "LinkType"
+xml_text: "LinkType"
 ---
 
 # Link Type Enumeration
@@ -17,11 +17,24 @@ xml_element: "LinkType"
 
 The Link Type enumeration classifies the relationship between a managed object and another managed object referenced via the Link attribute. KMIP managed objects — keys, certificates, split-key shares — do not exist in isolation: a private key is paired with a public key and a certificate; a derived key traces back to its base key; a rotated key has a predecessor and a successor. The Link attribute records these relationships as named directed edges, allowing clients to traverse the object graph by following links rather than searching by attribute. Each Link entry carries one value from this enumeration to declare what relationship the link represents.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Link attribute structure alongside the Linked Object Identifier that identifies the related object.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Certificate Link | `0x00000101` | `CertificateLink` |  |
+| Public Key Link | `0x00000102` | `PublicKeyLink` |  |
+| Private Key Link | `0x00000103` | `PrivateKeyLink` |  |
+| Derivation Base Object Link | `0x00000104` | `DerivationBaseObjectLink` |  |
+| Derived Key Link | `0x00000105` | `DerivedKeyLink` |  |
+| Replacement Object Link | `0x00000106` | `ReplacementObjectLink` |  |
+| Replaced Object Link | `0x00000107` | `ReplacedObjectLink` |  |
+| Parent Link | `0x00000108` | `ParentLink` |  |
+| Child Link | `0x00000109` | `ChildLink` |  |
+| Previous Link | `0x0000010A` | `PreviousLink` |  |
+| Next Link | `0x0000010B` | `NextLink` |  |
+| PKCS#12 Certificate Link | `0x0000010C` | `PKCS_12CertificateLink` |  |
+| PKCS#12 Password Link | `0x0000010D` | `PKCS_12PasswordLink` |  |
+| Wrapping Key Link | `0x0000010E` | `WrappingKeyLink` |  |
 
 **PKI relationships:**
 - **Certificate Link**: Points from a key object (typically a private or public key) to its associated certificate.

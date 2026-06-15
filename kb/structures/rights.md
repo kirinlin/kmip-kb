@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.35"
 status: reviewed
 related: ["right", "constraint", "constraints", "set-constraints", "get-constraints"]
-keywords: ["rights", "access rights", "principal permissions", "authorization policy", "KMIP access control", "operation list"]
+keywords: ["rights", "access rights", "principal permissions", "authorization policy", "KMIP access control", "operation list", "42014D"]
 tag_hex: "42014D"
-xml_element: "Rights"
+xml_text: "Rights"
 ---
 
 # Rights

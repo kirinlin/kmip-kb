@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.22"
 status: reviewed
 related: ["interop", "interop-function", "interop-identifier", "query-function-enumeration"]
-keywords: ["interop", "interoperability", "test function", "conformance testing", "KMIP interop"]
+keywords: ["interop", "interoperability", "test function", "conformance testing", "KMIP interop", "420160", "InteropFunction"]
 tag_hex: "420160"
-xml_element: "InteropFunction"
+xml_text: "InteropFunction"
 ---
 
 # Interop Function Enumeration
@@ -17,11 +17,13 @@ xml_element: "InteropFunction"
 
 The Interop Function enumeration names the specific interoperability test function to invoke via the [Interop](../../operations/interop.md) operation. The Interop operation is designed to support conformance and interoperability testing by allowing one KMIP endpoint to invoke named test scenarios on another, verifying that both parties implement a given set of operations consistently. Each enumeration value corresponds to a named test function that exercises a particular KMIP capability, such as creating a key, locating it by attribute, or destroying it. This makes automated KMIP conformance test suites expressible within the protocol itself.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the [Interop Function structure](../../structures/interop-function.md) within an Interop request, alongside an Interop Identifier that qualifies the specific test instance.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Begin | `0x00000001` | `Begin` |  |
+| End | `0x00000002` | `End` |  |
+| Reset | `0x00000003` | `Reset` |  |
 
 The enumeration values correspond to KMIP operation names and test scenarios used in formal interoperability workshops. Defined test functions include:
 

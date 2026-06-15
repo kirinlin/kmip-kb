@@ -7,9 +7,9 @@ source_section: "7.41"
 v1_source_section: "2.1.20"
 status: reviewed
 related: ["profile-information", "capability-information", "rng-parameters"]
-keywords: ["validation information", "FIPS 140", "Common Criteria", "certification", "CMVP"]
+keywords: ["validation information", "FIPS 140", "Common Criteria", "certification", "CMVP", "4200DF", "ValidationInformation"]
 tag_hex: "4200DF"
-xml_element: "ValidationInformation"
+xml_text: "ValidationInformation"
 ---
 
 # Validation Information

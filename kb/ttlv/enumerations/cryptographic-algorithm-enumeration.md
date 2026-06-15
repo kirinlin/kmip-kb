@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.12"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-length", "cryptographic-parameters", "key-block", "derive-key", "create", "create-key-pair"]
-keywords: ["algorithm", "AES", "RSA", "ECDSA", "ECDH", "Ed25519", "3DES", "ChaCha20", "symmetric key", "asymmetric key", "cryptographic algorithm"]
+keywords: ["algorithm", "AES", "RSA", "ECDSA", "ECDH", "Ed25519", "3DES", "ChaCha20", "symmetric key", "asymmetric key", "cryptographic algorithm", "420028", "CryptographicAlgorithm"]
 tag_hex: "420028"
-xml_element: "CryptographicAlgorithm"
+xml_text: "CryptographicAlgorithm"
 ---
 
 # Cryptographic Algorithm Enumeration
@@ -17,11 +17,66 @@ xml_element: "CryptographicAlgorithm"
 
 The Cryptographic Algorithm enumeration identifies the algorithm associated with a managed key or applied during a cryptographic operation. It is one of the most pervasive enumerations in KMIP, appearing in the [Cryptographic Algorithm attribute](../../attributes/cryptographic-algorithm.md), in [Key Block](../../structures/key-block.md) structures, in [Derivation Parameters](../../structures/derivation-parameters.md), and in operation request structures whenever the caller needs to name the algorithm. The enumeration spans the full spectrum of symmetric ciphers, asymmetric algorithms, elliptic curves, and MAC algorithms defined across the KMIP version history.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears wherever an algorithm identifier is required in request or response structures.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| DES | `0x00000001` | `DES` |  |
+| 3DES | `0x00000002` | `DES3` |  |
+| AES | `0x00000003` | `AES` |  |
+| RSA | `0x00000004` | `RSA` |  |
+| DSA | `0x00000005` | `DSA` |  |
+| ECDSA | `0x00000006` | `ECDSA` |  |
+| HMAC-SHA1 | `0x00000007` | `HMAC_SHA1` |  |
+| HMAC-SHA224 | `0x00000008` | `HMAC_SHA224` |  |
+| HMAC-SHA256 | `0x00000009` | `HMAC_SHA256` |  |
+| HMAC-SHA384 | `0x0000000A` | `HMAC_SHA384` |  |
+| HMAC-SHA512 | `0x0000000B` | `HMAC_SHA512` |  |
+| HMAC-MD5 | `0x0000000C` | `HMAC_MD5` |  |
+| DH | `0x0000000D` | `DH` |  |
+| ECDH | `0x0000000E` | `ECDH` |  |
+| ECMQV | `0x0000000F` | `ECMQV` |  |
+| Blowfish | `0x00000010` | `Blowfish` |  |
+| Camellia | `0x00000011` | `Camellia` |  |
+| CAST5 | `0x00000012` | `CAST5` |  |
+| IDEA | `0x00000013` | `IDEA` |  |
+| MARS | `0x00000014` | `MARS` |  |
+| RC2 | `0x00000015` | `RC2` |  |
+| RC4 | `0x00000016` | `RC4` |  |
+| RC5 | `0x00000017` | `RC5` |  |
+| SKIPJACK | `0x00000018` | `SKIPJACK` |  |
+| Twofish | `0x00000019` | `Twofish` |  |
+| EC | `0x0000001A` | `EC` |  |
+| One Time Pad | `0x0000001B` | `OneTimePad` |  |
+| ChaCha20 | `0x0000001C` | `ChaCha20` |  |
+| Poly1305 | `0x0000001D` | `Poly1305` |  |
+| ChaCha20Poly1305 | `0x0000001E` | `ChaCha20Poly1305` |  |
+| SHA3-224 | `0x0000001F` | `SHA3_224` |  |
+| SHA3-256 | `0x00000020` | `SHA3_256` |  |
+| SHA3-384 | `0x00000021` | `SHA3_384` |  |
+| SHA3-512 | `0x00000022` | `SHA3_512` |  |
+| HMAC-SHA3-224 | `0x00000023` | `HMAC_SHA3_224` |  |
+| HMAC-SHA3-256 | `0x00000024` | `HMAC_SHA3_256` |  |
+| HMAC-SHA3-384 | `0x00000025` | `HMAC_SHA3_384` |  |
+| HMAC-SHA3-512 | `0x00000026` | `HMAC_SHA3_512` |  |
+| SHAKE-128 | `0x00000027` | `SHAKE_128` |  |
+| SHAKE-256 | `0x00000028` | `SHAKE_256` |  |
+| ARIA | `0x00000029` | `ARIA` |  |
+| SEED | `0x0000002A` | `SEED` |  |
+| SM2 | `0x0000002B` | `SM2` |  |
+| SM3 | `0x0000002C` | `SM3` |  |
+| SM4 | `0x0000002D` | `SM4` |  |
+| GOST R 34.10-2012 | `0x0000002E` | `GOSTR34_10_2012` |  |
+| GOST R 34.11-2012 | `0x0000002F` | `GOSTR34_11_2012` |  |
+| GOST R 34.13-2015 | `0x00000030` | `GOSTR34_13_2015` |  |
+| GOST 28147-89 | `0x00000031` | `GOST28147_89` |  |
+| XMSS | `0x00000032` | `XMSS` |  |
+| SPHINCS-256 | `0x00000033` | `SPHINCS_256` |  |
+| McEliece | `0x00000034` | `McEliece` |  |
+| McEliece-6960119 | `0x00000035` | `McEliece_6960119` |  |
+| McEliece-8192128 | `0x00000036` | `McEliece_8192128` |  |
+| Ed25519 | `0x00000037` | `Ed25519` |  |
+| Ed448 | `0x00000038` | `Ed448` |  |
 
 **Symmetric block ciphers:**
 - **AES** (Advanced Encryption Standard): The dominant symmetric cipher for enterprise key management. Paired with a key length of 128, 192, or 256 bits and a block cipher mode.

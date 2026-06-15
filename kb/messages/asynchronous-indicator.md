@@ -7,9 +7,9 @@ source_section: "9.2"
 v1_source_section: "6.7"
 status: reviewed
 related: ["asynchronous-correlation-value", "result-status", "capability-information"]
-keywords: ["asynchronous indicator", "async", "polling", "request header"]
+keywords: ["asynchronous indicator", "async", "polling", "request header", "420007", "AsynchronousIndicator"]
 tag_hex: "420007"
-xml_element: "AsynchronousIndicator"
+xml_text: "AsynchronousIndicator"
 ---
 
 # Asynchronous Indicator

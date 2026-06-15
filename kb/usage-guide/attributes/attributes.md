@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.15"
 status: reviewed
 related: ["mutating-attributes"]
-keywords: ["attributes", "Add Attribute", "Set Attribute", "Modify Attribute", "Delete Attribute", "Adjust Attribute", "multi-instance"]
+keywords: ["attributes", "Add Attribute", "Set Attribute", "Modify Attribute", "Delete Attribute", "Adjust Attribute", "multi-instance", "420125"]
 tag_hex: "420125"
-xml_element: "Attributes"
+xml_text: "Attributes"
 ---
 
 # Attributes

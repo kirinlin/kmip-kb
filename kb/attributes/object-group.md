@@ -7,9 +7,9 @@ source_section: "4.35"
 v1_source_section: "3.33"
 status: reviewed
 related: ["name", "application-specific-information", "fresh"]
-keywords: ["object group", "grouping", "group member", "locate", "default group"]
+keywords: ["object group", "grouping", "group member", "locate", "default group", "420056", "ObjectGroup"]
 tag_hex: "420056"
-xml_element: "ObjectGroup"
+xml_text: "ObjectGroup"
 ---
 
 # Object Group

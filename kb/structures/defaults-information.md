@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.11"
 status: reviewed
 related: ["object-defaults", "set-defaults", "get-constraints", "attribute", "object-type"]
-keywords: ["defaults information", "server defaults", "object defaults", "default attributes", "set defaults"]
+keywords: ["defaults information", "server defaults", "object defaults", "default attributes", "set defaults", "420152", "DefaultsInformation"]
 tag_hex: "420152"
-xml_element: "DefaultsInformation"
+xml_text: "DefaultsInformation"
 ---
 
 # Defaults Information

@@ -7,9 +7,9 @@ source_section: "4.22"
 v1_source_section: "3.16"
 status: reviewed
 related: ["cryptographic-algorithm", "certificate-type", "digest"]
-keywords: ["digital signature algorithm", "signature", "SHA-256 with RSA", "ECDSA", "certificate signing"]
+keywords: ["digital signature algorithm", "signature", "SHA-256 with RSA", "ECDSA", "certificate signing", "4200AE", "DigitalSignatureAlgorithm"]
 tag_hex: "4200AE"
-xml_element: "DigitalSignatureAlgorithm"
+xml_text: "DigitalSignatureAlgorithm"
 ---
 
 # Digital Signature Algorithm

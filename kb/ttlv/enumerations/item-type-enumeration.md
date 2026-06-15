@@ -21,6 +21,20 @@ Unlike other KMIP enumerations (which are encoded as 4-byte integers with type `
 
 ## Fields & Structure
 
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Structure | `0x00000001` | `Structure` |  |
+| Integer | `0x00000002` | `Integer` |  |
+| Long Integer | `0x00000003` | `LongInteger` |  |
+| Big Integer | `0x00000004` | `BigInteger` |  |
+| Enumeration | `0x00000005` | `Enumeration` |  |
+| Boolean | `0x00000006` | `Boolean` |  |
+| Text String | `0x00000007` | `TextString` |  |
+| Byte String | `0x00000008` | `ByteString` |  |
+| Date Time | `0x00000009` | `DateTime` |  |
+| Interval | `0x0000000A` | `Interval` |  |
+| Date Time Extended | `0x0000000B` | `DateTimeExtended` |  |
+
 - **Structure** (`0x01`): A container item that holds a sequence of nested TTLV items. Structures do not have a value of their own — the Length field indicates how many bytes of sub-items follow. Almost every complex KMIP object (request, response, key block) is a Structure.
 - **Integer** (`0x02`): A signed 32-bit integer, stored in 4 bytes of value. Used for small numeric fields such as cryptographic key lengths, batch counts, and offset values.
 - **Long Integer** (`0x03`): A signed 64-bit integer, stored in 8 bytes of value. Used for timestamps, large counters, and date-time values that require 64-bit precision.

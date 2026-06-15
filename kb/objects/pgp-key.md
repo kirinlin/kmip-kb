@@ -7,9 +7,9 @@ source_section: "2.4"
 v1_source_section: "2.2.9"
 status: reviewed
 related: ["register", "get", "public-key", "private-key", "opaque-object", "key-block"]
-keywords: ["PGP key", "OpenPGP", "RFC 4880", "ASCII armor", "key block"]
+keywords: ["PGP key", "OpenPGP", "RFC 4880", "ASCII armor", "key block", "4200BD", "PGPKey"]
 tag_hex: "4200BD"
-xml_element: "PGPKey"
+xml_text: "PGPKey"
 ---
 
 # PGP Key

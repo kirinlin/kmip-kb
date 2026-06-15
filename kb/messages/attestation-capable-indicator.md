@@ -7,9 +7,9 @@ source_section: "9.3"
 v1_source_section: "6.17"
 status: reviewed
 related: ["credential", "nonce", "result-reason"]
-keywords: ["attestation capable indicator", "TPM", "attestation required", "request header"]
+keywords: ["attestation capable indicator", "TPM", "attestation required", "request header", "4200D3", "AttestationCapableIndicator"]
 tag_hex: "4200D3"
-xml_element: "AttestationCapableIndicator"
+xml_text: "AttestationCapableIndicator"
 ---
 
 # Attestation Capable Indicator

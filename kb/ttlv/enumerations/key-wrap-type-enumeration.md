@@ -6,9 +6,9 @@ spec_versions: ["2.0","2.1"]
 source_section: "11.29"
 status: reviewed
 related: ["key-block", "key-wrapping-data", "wrapping-method-enumeration", "encoding-option-enumeration", "get"]
-keywords: ["key wrap type", "wrapped", "not wrapped", "key wrapping", "key block", "transport"]
+keywords: ["key wrap type", "wrapped", "not wrapped", "key wrapping", "key block", "transport", "4200F8", "KeyWrapType"]
 tag_hex: "4200F8"
-xml_element: "KeyWrapType"
+xml_text: "KeyWrapType"
 ---
 
 # Key Wrap Type Enumeration
@@ -17,11 +17,12 @@ xml_element: "KeyWrapType"
 
 The Key Wrap Type enumeration indicates whether and how the key material in a [Key Block](../../structures/key-block.md) is currently wrapped. Key wrapping is the process of encrypting or integrity-protecting key material under another key for storage or transport; the wrap type lets consumers determine immediately whether they are receiving plaintext key bytes or an encrypted blob that must first be unwrapped before use. A transitional state is also defined for use during in-place re-wrapping operations.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Key Block structure to describe the wrapping state of the enclosed key material.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Not Wrapped | `0x00000001` | `NotWrapped` |  |
+| As Registered | `0x00000002` | `AsRegistered` |  |
 
 - **Not Wrapped**: The key material is present in plaintext form (subject only to transport-layer protection). The client receives raw key bytes and can use them directly.
 - **As Registered That Is**: The key is delivered exactly as it was stored — wrapped or unwrapped — without any additional wrapping applied by the server at retrieval time. Used when a client wants to retrieve the key in its stored form rather than requesting a specific wrap.

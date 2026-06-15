@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.25"
 status: reviewed
 related: ["key-block", "key-format-type", "get", "register", "key-value"]
-keywords: ["key format", "PKCS#1", "PKCS#8", "X.509", "raw", "transparent", "key encoding", "ECPrivateKey", "PKCS#12"]
+keywords: ["key format", "PKCS#1", "PKCS#8", "X.509", "raw", "transparent", "key encoding", "ECPrivateKey", "PKCS#12", "420042", "KeyFormatType"]
 tag_hex: "420042"
-xml_element: "KeyFormatType"
+xml_text: "KeyFormatType"
 ---
 
 # Key Format Type Enumeration
@@ -17,11 +17,27 @@ xml_element: "KeyFormatType"
 
 The Key Format Type enumeration specifies the encoding or serialisation format of the key material stored inside a [Key Block](../../structures/key-block.md). Different applications, protocols, and hardware require keys in different wire formats: a TLS library expects PKCS#8 or ECPrivateKey for private keys; an HSM API may require PKCS#1 for RSA; a key escrow system may need raw transparent key structures; and a PKCS#12 archive bundles a private key with its certificate chain. The key format type tells consumers exactly how to interpret and parse the key bytes they receive. It also controls what the client receives from a [Get](../../operations/get.md) operation when a specific format is requested.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Key Block structure and is also used as an attribute on managed key objects.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Raw | `0x00000001` | `Raw` |  |
+| Opaque | `0x00000002` | `Opaque` |  |
+| PKCS#1 | `0x00000003` | `PKCS_1` |  |
+| PKCS#8 | `0x00000004` | `PKCS_8` |  |
+| X.509 | `0x00000005` | `X_509` |  |
+| ECPrivateKey | `0x00000006` | `ECPrivateKey` |  |
+| Transparent Symmetric Key | `0x00000007` | `TransparentSymmetricKey` |  |
+| Transparent DSA Private Key | `0x00000008` | `TransparentDSAPrivateKey` |  |
+| Transparent DSA Public Key | `0x00000009` | `TransparentDSAPublicKey` |  |
+| Transparent RSA Private Key | `0x0000000A` | `TransparentRSAPrivateKey` |  |
+| Transparent RSA Public Key | `0x0000000B` | `TransparentRSAPublicKey` |  |
+| Transparent DH Private Key | `0x0000000C` | `TransparentDHPrivateKey` |  |
+| Transparent DH Public Key | `0x0000000D` | `TransparentDHPublicKey` |  |
+| Transparent EC Private Key | `0x00000014` | `TransparentECPrivateKey` |  |
+| Transparent EC Public Key | `0x00000015` | `TransparentECPublicKey` |  |
+| PKCS#12 | `0x00000016` | `PKCS_12` |  |
+| PKCS#10 | `0x00000017` | `PKCS_10` |  |
 
 **Format-agnostic and opaque:**
 - **Raw**: The key material is an unformatted sequence of bytes — just the key value itself with no ASN.1, no headers. Used for symmetric keys and raw shared secrets.

@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.21"
 status: reviewed
 related: ["cryptographic-parameters", "derivation-parameters", "digest", "digital-signature-algorithm-enumeration", "drbg-algorithm-enumeration"]
-keywords: ["hash", "SHA", "SHA-256", "SHA-3", "MD5", "RIPEMD", "Whirlpool", "hashing algorithm", "digest", "message digest"]
+keywords: ["hash", "SHA", "SHA-256", "SHA-3", "MD5", "RIPEMD", "Whirlpool", "hashing algorithm", "digest", "message digest", "420038", "HashingAlgorithm"]
 tag_hex: "420038"
-xml_element: "HashingAlgorithm"
+xml_text: "HashingAlgorithm"
 ---
 
 # Hashing Algorithm Enumeration
@@ -17,11 +17,27 @@ xml_element: "HashingAlgorithm"
 
 The Hashing Algorithm enumeration identifies the cryptographic hash function to use in contexts that require a digest — for example, the underlying hash for HMAC-based key derivation, the hash used in signature algorithms, the algorithm used to compute the [Digest attribute](../../attributes/digest.md), or the hash component of Derivation Parameters. It spans a broad range of hash families from legacy algorithms (MD2, MD4, MD5, SHA-1) still needed for backward compatibility, through the current SHA-2 and SHA-3 families, to international standard hashes from Russia and other jurisdictions.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in Cryptographic Parameters, Derivation Parameters, Digest attribute structures, and anywhere else a hash function must be identified.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| MD2 | `0x00000001` | `MD2` |  |
+| MD4 | `0x00000002` | `MD4` |  |
+| MD5 | `0x00000003` | `MD5` |  |
+| SHA-1 | `0x00000004` | `SHA_1` |  |
+| SHA-224 | `0x00000005` | `SHA_224` |  |
+| SHA-256 | `0x00000006` | `SHA_256` |  |
+| SHA-384 | `0x00000007` | `SHA_384` |  |
+| SHA-512 | `0x00000008` | `SHA_512` |  |
+| RIPEMD-160 | `0x00000009` | `RIPEMD_160` |  |
+| Tiger | `0x0000000A` | `Tiger` |  |
+| Whirlpool | `0x0000000B` | `Whirlpool` |  |
+| SHA-512/224 | `0x0000000C` | `SHA_512_224` |  |
+| SHA-512/256 | `0x0000000D` | `SHA_512_256` |  |
+| SHA3-224 | `0x0000000E` | `SHA3_224` |  |
+| SHA3-256 | `0x0000000F` | `SHA3_256` |  |
+| SHA3-384 | `0x00000010` | `SHA3_384` |  |
+| SHA3-512 | `0x00000011` | `SHA3_512` |  |
 
 **Legacy algorithms (avoid for new designs):**
 - **MD2**: Produces a 128-bit digest. Considered broken; included for legacy interoperability only.

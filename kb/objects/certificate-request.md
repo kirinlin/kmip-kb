@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "2.2"
 status: reviewed
 related: ["certificate", "private-key", "public-key", "certify", "re-certify", "register", "create-key-pair", "unique-identifier"]
-keywords: ["certificate request", "csr", "pkcs10", "pem", "crmf", "cmc", "certificate signing request", "managed object"]
+keywords: ["certificate request", "csr", "pkcs10", "pem", "crmf", "cmc", "certificate signing request", "managed object", "420018", "CertificateRequest"]
 tag_hex: "420018"
-xml_element: "CertificateRequest"
+xml_text: "CertificateRequest"
 ---
 
 # Certificate Request

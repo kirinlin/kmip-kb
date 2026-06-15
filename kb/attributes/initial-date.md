@@ -7,9 +7,9 @@ source_section: "4.25"
 v1_source_section: "3.23"
 status: reviewed
 related: ["original-creation-date", "activation-date", "last-change-date", "state"]
-keywords: ["initial date", "creation time", "registration time", "lifecycle dates"]
+keywords: ["initial date", "creation time", "registration time", "lifecycle dates", "420039", "InitialDate"]
 tag_hex: "420039"
-xml_element: "InitialDate"
+xml_text: "InitialDate"
 ---
 
 # Initial Date

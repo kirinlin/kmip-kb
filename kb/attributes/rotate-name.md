@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.53"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interval", "rotate-latest", "rotate-offset", "name"]
-keywords: ["rotate name", "rotation group", "rotation policy name", "key family", "rotation identifier"]
+keywords: ["rotate name", "rotation group", "rotation policy name", "key family", "rotation identifier", "42016F", "RotateName"]
 tag_hex: "42016F"
-xml_element: "RotateName"
+xml_text: "RotateName"
 ---
 
 # Rotate Name

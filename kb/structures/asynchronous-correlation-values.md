@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.1"
 status: reviewed
 related: ["asynchronous-request", "asynchronous-correlation-value", "query-asynchronous-requests", "message-structure"]
-keywords: ["asynchronous", "correlation values", "pending operations", "async batch", "polling"]
+keywords: ["asynchronous", "correlation values", "pending operations", "async batch", "polling", "420176", "AsynchronousCorrelationValues"]
 tag_hex: "420176"
-xml_element: "AsynchronousCorrelationValues"
+xml_text: "AsynchronousCorrelationValues"
 ---
 
 # Asynchronous Correlation Values

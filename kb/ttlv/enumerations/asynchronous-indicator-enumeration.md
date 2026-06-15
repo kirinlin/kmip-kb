@@ -6,9 +6,9 @@ spec_versions: ["1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.3"
 status: reviewed
 related: ["asynchronous-request", "query-asynchronous-requests", "cancel", "poll", "batch-error-continuation-option-enumeration"]
-keywords: ["asynchronous", "async", "synchronous", "correlation value", "batch", "non-blocking"]
+keywords: ["asynchronous", "async", "synchronous", "correlation value", "batch", "non-blocking", "420007", "AsynchronousIndicator"]
 tag_hex: "420007"
-xml_element: "AsynchronousIndicator"
+xml_text: "AsynchronousIndicator"
 ---
 
 # Asynchronous Indicator Enumeration
@@ -17,11 +17,13 @@ xml_element: "AsynchronousIndicator"
 
 The Asynchronous Indicator enumeration controls whether a particular batch item should be processed asynchronously or synchronously. When a client submits a potentially long-running operation such as a cryptographic key generation, it may prefer not to block waiting for completion. Setting the indicator to the asynchronous value tells the server to queue the work and immediately return a correlation value that the client can later use to retrieve the result. This enumeration applies per-item within a batch, giving fine-grained control over which operations block and which do not.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the batch item request structure when the client wants to override the default synchronous behavior.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Mandatory | `0x00000001` | `Mandatory` |  |
+| Optional | `0x00000002` | `Optional` |  |
+| Prohibited | `0x00000003` | `Prohibited` |  |
 
 - **Synchronous**: The server processes the operation fully before returning the response. This is the default behavior when no Asynchronous Indicator is supplied. The response batch item contains the complete result.
 - **Asynchronous**: The server accepts the request, assigns an Asynchronous Correlation Value, and returns immediately without waiting for the operation to finish. The client must subsequently poll using [Query Asynchronous Requests](../../operations/query-asynchronous-requests.md) or use [Poll](../../operations/poll.md) to retrieve the eventual outcome.

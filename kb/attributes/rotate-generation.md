@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "4.50"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-interval", "rotate-latest", "rotate-name", "rotate-offset", "re-key"]
-keywords: ["rotate generation", "key generation", "rotation count", "generation number", "key versioning"]
+keywords: ["rotate generation", "key generation", "rotation count", "generation number", "key versioning", "42016E", "RotateGeneration"]
 tag_hex: "42016E"
-xml_element: "RotateGeneration"
+xml_text: "RotateGeneration"
 ---
 
 # Rotate Generation

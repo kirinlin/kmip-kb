@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.44"
 status: reviewed
 related: ["query", "server-information", "profile-version", "protection-storage-masks"]
-keywords: ["query function", "query", "server capabilities", "query operations", "server information", "profiles"]
+keywords: ["query function", "query", "server capabilities", "query operations", "server information", "profiles", "420074", "QueryFunction"]
 tag_hex: "420074"
-xml_element: "QueryFunction"
+xml_text: "QueryFunction"
 ---
 
 # Query Function Enumeration
@@ -17,11 +17,22 @@ xml_element: "QueryFunction"
 
 The Query Function enumeration selects which sections of server information a [Query](../../operations/query.md) request returns. Rather than always returning all available data, a client specifies one or more Query Function values to retrieve only the relevant subset. This keeps responses small and allows incremental capability discovery.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Query Operations | `0x00000001` | `QueryOperations` |  |
+| Query Objects | `0x00000002` | `QueryObjects` |  |
+| Query Server Information | `0x00000003` | `QueryServerInformation` |  |
+| Query Application Namespaces | `0x00000004` | `QueryApplicationNamespaces` |  |
+| Query Attestation Types | `0x00000007` | `QueryAttestationTypes` |  |
+| Query RNGs | `0x00000008` | `QueryRNGs` |  |
+| Query Validations | `0x00000009` | `QueryValidations` |  |
+| Query Profiles | `0x0000000A` | `QueryProfiles` |  |
+| Query Capabilities | `0x0000000B` | `QueryCapabilities` |  |
+| Query Client Registration Methods | `0x0000000C` | `QueryClientRegistrationMethods` |  |
+| Query Defaults Information | `0x0000000D` | `QueryDefaultsInformation` |  |
+| Query Storage Protection Masks | `0x0000000E` | `QueryStorageProtectionMasks` |  |
 
 - **Query Operations**: Returns the list of KMIP operations the server supports.
 - **Query Objects**: Returns the list of managed object types the server stores.

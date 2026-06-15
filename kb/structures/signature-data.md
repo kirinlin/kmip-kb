@@ -7,9 +7,9 @@ source_section: "7.38"
 v1_source_section: "2.1.12"
 status: reviewed
 related: ["data", "mac-data", "digital-signature-algorithm"]
-keywords: ["signature data", "sign", "signature verify", "digital signature bytes"]
+keywords: ["signature data", "sign", "signature verify", "digital signature bytes", "4200C3", "SignatureData"]
 tag_hex: "4200C3"
-xml_element: "SignatureData"
+xml_text: "SignatureData"
 ---
 
 # Signature Data

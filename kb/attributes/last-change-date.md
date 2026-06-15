@@ -7,9 +7,9 @@ source_section: "4.29"
 v1_source_section: "3.38"
 status: reviewed
 related: ["initial-date", "original-creation-date", "state"]
-keywords: ["last change date", "modification time", "audit", "notify"]
+keywords: ["last change date", "modification time", "audit", "notify", "420048", "LastChangeDate"]
 tag_hex: "420048"
-xml_element: "LastChangeDate"
+xml_text: "LastChangeDate"
 ---
 
 # Last Change Date

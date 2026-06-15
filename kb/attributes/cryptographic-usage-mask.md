@@ -7,9 +7,9 @@ source_section: "4.17"
 v1_source_section: "3.19"
 status: reviewed
 related: ["cryptographic-algorithm", "state", "usage-limits", "operation-policy-name"]
-keywords: ["usage mask", "bitmask", "encrypt", "sign", "wrap key", "key usage"]
+keywords: ["usage mask", "bitmask", "encrypt", "sign", "wrap key", "key usage", "42002C", "CryptographicUsageMask"]
 tag_hex: "42002C"
-xml_element: "CryptographicUsageMask"
+xml_text: "CryptographicUsageMask"
 ---
 
 # Cryptographic Usage Mask

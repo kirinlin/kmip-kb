@@ -7,9 +7,9 @@ source_section: "4"
 v1_source_section: "3"
 status: reviewed
 related: ["unique-identifier", "state", "cryptographic-algorithm", "cryptographic-usage-mask"]
-keywords: ["attributes", "metadata", "attribute rules", "multi-instance", "lifecycle dates"]
+keywords: ["attributes", "metadata", "attribute rules", "multi-instance", "lifecycle dates", "420125"]
 tag_hex: "420125"
-xml_element: "Attributes"
+xml_text: "Attributes"
 ---
 
 # Attributes

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "7.19"
 status: reviewed
 related: ["log", "message-structure"]
-keywords: ["log message", "audit log", "log operation", "log level", "log text", "server log"]
+keywords: ["log message", "audit log", "log operation", "log level", "log text", "server log", "420141", "LogMessage"]
 tag_hex: "420141"
-xml_element: "LogMessage"
+xml_text: "LogMessage"
 ---
 
 # Log Message

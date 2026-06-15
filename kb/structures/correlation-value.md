@@ -7,9 +7,9 @@ source_section: "7.8"
 v1_source_section: "2.1.15"
 status: reviewed
 related: ["init-indicator", "final-indicator", "data", "asynchronous-correlation-value"]
-keywords: ["correlation value", "streaming", "multi-part operation", "session handle"]
+keywords: ["correlation value", "streaming", "multi-part operation", "session handle", "4200D6", "CorrelationValue"]
 tag_hex: "4200D6"
-xml_element: "CorrelationValue"
+xml_text: "CorrelationValue"
 ---
 
 # Correlation Value

@@ -7,9 +7,9 @@ source_section: "4.39"
 v1_source_section: "3.45"
 status: reviewed
 related: ["link", "name", "secret-data"]
-keywords: ["PKCS#12", "friendly name", "alias", "keystore", "private key"]
+keywords: ["PKCS#12", "friendly name", "alias", "keystore", "private key", "4200FB", "PKCS_12FriendlyName"]
 tag_hex: "4200FB"
-xml_element: "PKCS_12FriendlyName"
+xml_text: "PKCS_12FriendlyName"
 ---
 
 # PKCS#12 Friendly Name

@@ -7,9 +7,9 @@ source_section: "4.55"
 v1_source_section: "3.48"
 status: reviewed
 related: ["always-sensitive", "extractable", "never-extractable", "cryptographic-usage-mask"]
-keywords: ["sensitive", "wrapped export only", "key extraction", "PKCS#11 parity"]
+keywords: ["sensitive", "wrapped export only", "key extraction", "PKCS#11 parity", "420120"]
 tag_hex: "420120"
-xml_element: "Sensitive"
+xml_text: "Sensitive"
 ---
 
 # Sensitive

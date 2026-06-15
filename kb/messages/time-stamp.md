@@ -7,9 +7,9 @@ source_section: "9.20"
 v1_source_section: "6.5"
 status: reviewed
 related: ["message-structure", "initial-date", "last-change-date"]
-keywords: ["time stamp", "message header", "clock skew", "POSIX time"]
+keywords: ["time stamp", "message header", "clock skew", "POSIX time", "420092", "TimeStamp"]
 tag_hex: "420092"
-xml_element: "TimeStamp"
+xml_text: "TimeStamp"
 ---
 
 # Time Stamp

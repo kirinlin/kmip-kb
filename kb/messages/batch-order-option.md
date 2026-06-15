@@ -7,9 +7,9 @@ source_section: "9.8"
 v1_source_section: "6.12"
 status: reviewed
 related: ["batch-count", "batch-error-continuation-option", "batch-item"]
-keywords: ["batch order option", "in-order execution", "batching", "ID placeholder"]
+keywords: ["batch order option", "in-order execution", "batching", "ID placeholder", "420010", "BatchOrderOption"]
 tag_hex: "420010"
-xml_element: "BatchOrderOption"
+xml_text: "BatchOrderOption"
 ---
 
 # Batch Order Option

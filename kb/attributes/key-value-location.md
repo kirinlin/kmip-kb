@@ -7,9 +7,9 @@ source_section: "4.27"
 v1_source_section: "3.42"
 status: reviewed
 related: ["key-value-present", "application-specific-information"]
-keywords: ["key value location", "external key material", "URI", "metadata-only registration"]
+keywords: ["key value location", "external key material", "URI", "metadata-only registration", "4200B8", "KeyValueLocation"]
 tag_hex: "4200B8"
-xml_element: "KeyValueLocation"
+xml_text: "KeyValueLocation"
 ---
 
 # Key Value Location

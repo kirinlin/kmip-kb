@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "12.3"
 status: reviewed
 related: ["locate", "protection-storage-mask", "state"]
-keywords: ["storage status mask", "bit mask", "online storage", "archival storage", "destroyed storage", "locate filter", "storage status"]
+keywords: ["storage status mask", "bit mask", "online storage", "archival storage", "destroyed storage", "locate filter", "storage status", "42008E", "StorageStatusMask"]
 tag_hex: "42008E"
-xml_element: "StorageStatusMask"
+xml_text: "StorageStatusMask"
 ---
 
 # Storage Status Mask

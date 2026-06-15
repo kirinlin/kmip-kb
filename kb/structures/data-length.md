@@ -7,9 +7,9 @@ source_section: "7.10"
 v1_source_section: "2.1.11"
 status: reviewed
 related: ["data", "rng-retrieve"]
-keywords: ["data length", "requested bytes", "RNG retrieve"]
+keywords: ["data length", "requested bytes", "RNG retrieve", "4200C4", "DataLength"]
 tag_hex: "4200C4"
-xml_element: "DataLength"
+xml_text: "DataLength"
 ---
 
 # Data Length

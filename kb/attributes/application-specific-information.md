@@ -7,9 +7,9 @@ source_section: "4.4"
 v1_source_section: "3.36"
 status: reviewed
 related: ["object-group", "custom-attribute", "name"]
-keywords: ["application specific information", "application namespace", "application data", "ASI"]
+keywords: ["application specific information", "application namespace", "application data", "ASI", "420004", "ApplicationSpecificInformation"]
 tag_hex: "420004"
-xml_element: "ApplicationSpecificInformation"
+xml_text: "ApplicationSpecificInformation"
 ---
 
 # Application Specific Information

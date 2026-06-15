@@ -7,9 +7,9 @@ source_section: "4.1"
 v1_source_section: "3.24"
 status: reviewed
 related: ["state", "initial-date", "deactivation-date", "process-start-date"]
-keywords: ["activation date", "active state", "lifecycle dates", "activate"]
+keywords: ["activation date", "active state", "lifecycle dates", "activate", "420001", "ActivationDate"]
 tag_hex: "420001"
-xml_element: "ActivationDate"
+xml_text: "ActivationDate"
 ---
 
 # Activation Date

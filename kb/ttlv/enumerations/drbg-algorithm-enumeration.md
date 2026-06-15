@@ -6,9 +6,9 @@ spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.17"
 status: reviewed
 related: ["cryptographic-parameters", "rng-algorithm-enumeration", "rng-mode-enumeration", "hashing-algorithm-enumeration"]
-keywords: ["DRBG", "deterministic random", "NIST SP 800-90A", "random number generator", "Dual-EC", "Hash DRBG", "HMAC DRBG", "CTR DRBG"]
+keywords: ["DRBG", "deterministic random", "NIST SP 800-90A", "random number generator", "Dual-EC", "Hash DRBG", "HMAC DRBG", "CTR DRBG", "4200DB", "DRBGAlgorithm"]
 tag_hex: "4200DB"
-xml_element: "DRBGAlgorithm"
+xml_text: "DRBGAlgorithm"
 ---
 
 # DRBG Algorithm Enumeration
@@ -17,11 +17,15 @@ xml_element: "DRBGAlgorithm"
 
 The DRBG Algorithm enumeration identifies the specific deterministic random bit generator construction used when the server is generating random numbers or key material. NIST SP 800-90A defines several approved DRBG mechanisms, each with different performance, security, and hardware-implementation characteristics. The choice of DRBG algorithm matters both for compliance with specific security standards and for interoperability with systems that require a particular random source. This enumeration appears in the Cryptographic Parameters structure when the operation involves random number generation.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears within the Cryptographic Parameters structure when the calling context requires specifying the DRBG construction.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| Dual-EC | `0x00000002` | `Dual_EC` |  |
+| Hash | `0x00000003` | `Hash` |  |
+| HMAC | `0x00000004` | `HMAC` |  |
+| CTR | `0x00000005` | `CTR` |  |
 
 - **Unspecified**: The DRBG algorithm is not specified by the client; the server selects a suitable approved algorithm according to its policy.
 - **Dual-EC**: The Dual Elliptic Curve DRBG defined in early NIST SP 800-90A. This algorithm attracted significant scrutiny due to a potential backdoor in the standardised curve parameters; it is generally avoided in new implementations, though it remains enumerated for completeness.

@@ -6,9 +6,9 @@ spec_versions: ["2.1"]
 source_section: "11.57"
 status: reviewed
 related: ["ticket", "login", "logout", "delegated-login", "authentication"]
-keywords: ["ticket type", "session ticket", "login ticket", "delegation ticket", "authentication ticket"]
+keywords: ["ticket type", "session ticket", "login ticket", "delegation ticket", "authentication ticket", "42014A", "TicketType"]
 tag_hex: "42014A"
-xml_element: "TicketType"
+xml_text: "TicketType"
 ---
 
 # Ticket Type Enumeration
@@ -17,11 +17,11 @@ xml_element: "TicketType"
 
 The Ticket Type enumeration classifies the nature of a session [Ticket](../../structures/ticket.md) issued by the [Login](../../operations/login.md) or [Delegated Login](../../operations/delegated-login.md) operations. A ticket is an opaque, server-issued token that a client presents in place of full credentials in subsequent requests. The type tells the server (and any auditing infrastructure) what kind of session the ticket represents.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Login | `0x00000001` | `Login` |  |
 
 - **Login**: The ticket was issued as a result of a successful [Login](../../operations/login.md) operation. It represents a standard authenticated session for the principal who logged in. This is the only baseline-defined value in KMIP v2.1.
 

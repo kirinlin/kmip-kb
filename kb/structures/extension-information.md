@@ -7,9 +7,9 @@ source_section: "7.13"
 v1_source_section: "2.1.9"
 status: reviewed
 related: ["ttlv-encoding", "message-extension"]
-keywords: ["extension information", "vendor extension", "extension tag", "query extension list"]
+keywords: ["extension information", "vendor extension", "extension tag", "query extension list", "4200A4", "ExtensionInformation"]
 tag_hex: "4200A4"
-xml_element: "ExtensionInformation"
+xml_text: "ExtensionInformation"
 ---
 
 # Extension Information

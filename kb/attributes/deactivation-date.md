@@ -7,9 +7,9 @@ source_section: "4.18"
 v1_source_section: "3.27"
 status: reviewed
 related: ["state", "activation-date", "protect-stop-date", "revocation-reason"]
-keywords: ["deactivation date", "deactivated state", "expiry", "lifecycle dates"]
+keywords: ["deactivation date", "deactivated state", "expiry", "lifecycle dates", "42002F", "DeactivationDate"]
 tag_hex: "42002F"
-xml_element: "DeactivationDate"
+xml_text: "DeactivationDate"
 ---
 
 # Deactivation Date

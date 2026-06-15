@@ -7,9 +7,9 @@ source_section: "4.13"
 v1_source_section: "3.4"
 status: reviewed
 related: ["cryptographic-length", "cryptographic-parameters", "digital-signature-algorithm", "cryptographic-usage-mask"]
-keywords: ["cryptographic algorithm", "AES", "RSA", "algorithm enumeration"]
+keywords: ["cryptographic algorithm", "AES", "RSA", "algorithm enumeration", "420028", "CryptographicAlgorithm"]
 tag_hex: "420028"
-xml_element: "CryptographicAlgorithm"
+xml_text: "CryptographicAlgorithm"
 ---
 
 # Cryptographic Algorithm

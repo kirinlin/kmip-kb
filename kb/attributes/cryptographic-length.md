@@ -7,9 +7,9 @@ source_section: "4.15"
 v1_source_section: "3.5"
 status: reviewed
 related: ["cryptographic-algorithm", "certificate-length", "cryptographic-domain-parameters"]
-keywords: ["cryptographic length", "key size", "bits", "key length"]
+keywords: ["cryptographic length", "key size", "bits", "key length", "42002A", "CryptographicLength"]
 tag_hex: "42002A"
-xml_element: "CryptographicLength"
+xml_text: "CryptographicLength"
 ---
 
 # Cryptographic Length

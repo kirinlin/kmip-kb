@@ -7,9 +7,9 @@ source_section: "10.3"
 v1_source_section: "8"
 status: reviewed
 related: ["transport", "error-handling", "credential", "kmip-server-implementation-conformance"]
-keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication"]
+keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication", "42000C"]
 tag_hex: "42000C"
-xml_element: "Authentication"
+xml_text: "Authentication"
 ---
 
 # Authentication

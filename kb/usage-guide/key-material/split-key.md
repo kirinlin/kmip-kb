@@ -6,9 +6,9 @@ spec_versions: ["1.0", "1.1", "1.2", "1.3", "1.4", "2.0", "2.1"]
 source_section: "ug-3.9"
 status: reviewed
 related: ["symmetric-key"]
-keywords: ["split key", "key splitting", "Shamir", "XOR", "key threshold", "Join Split Key", "Create Split Key"]
+keywords: ["split key", "key splitting", "Shamir", "XOR", "key threshold", "Join Split Key", "Create Split Key", "420089", "SplitKey"]
 tag_hex: "420089"
-xml_element: "SplitKey"
+xml_text: "SplitKey"
 ---
 
 # Split Key

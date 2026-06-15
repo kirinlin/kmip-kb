@@ -15,11 +15,17 @@ keywords: ["FIPS 186", "DSA", "key generation", "prime generation", "GPB", "prov
 
 The FIPS 186 Variation enumeration specifies which variation of the FIPS 186 standard should be used when generating DSA domain parameters or key pairs. FIPS 186 (Digital Signature Standard) has been revised through multiple editions, and each edition allows several methods for generating the prime numbers and domain parameters that define a DSA or elliptic-curve key. Selecting the correct variation ensures that the generated key material satisfies the mathematical guarantees required by a specific edition of the standard. This enumeration appears in the Cryptographic Parameters structure used during key generation.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Cryptographic Parameters structure within a Create Key Pair request for DSA keys.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Unspecified | `0x00000001` | `Unspecified` |  |
+| GP x-Original | `0x00000002` | `GPXOriginal` |  |
+| GP x-Change Notice | `0x00000003` | `GPXChangeNotice` |  |
+| x-Original | `0x00000004` | `XOriginal` |  |
+| x-Change Notice | `0x00000005` | `XChangeNotice` |  |
+| k-Original | `0x00000006` | `KOriginal` |  |
+| k-Change Notice | `0x00000007` | `KChangeNotice` |  |
 
 - **Unspecified**: No specific variation is requested; the server selects an appropriate method according to its policy and the FIPS 186 edition it implements.
 - **GPB** (Generation of Probable Primes by testing candidates): Domain parameters are generated using a probabilistic primality test (e.g., Miller-Rabin). This is the most common and efficient method in practice. The security relies on the probability of a composite passing repeated tests being negligibly small.

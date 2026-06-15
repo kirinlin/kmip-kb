@@ -24,7 +24,7 @@ Every doc has YAML front matter validated against `schemas/frontmatter.schema.js
 
 Two optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
 - `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
-- `xml_element`: CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 113 docs carry these fields (107 from v2.1, 6 from removed v1.x tags). Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs).
+- `xml_text`: CamelCase XML text identifier per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — used as the XML element name for structure fields and as the enumeration value text for enumeration tags. Enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 223 docs carry these fields. Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs). Both `tag_hex` and `xml_text` values are automatically added to `keywords` for RAG retrieval.
 
 ## Field tables (Tag / XML Element columns)
 
@@ -38,7 +38,7 @@ the table's own columns (`Required`, `Type`, `Description`, …):
 
 `Tag` holds the 6-digit uppercase hex tag value in backticks (e.g. `` `420057` ``)
 and `XML Element` the CamelCase element name in backticks (e.g. `` `ObjectType` ``)
-— the same two identifiers carried in front matter by `tag_hex`/`xml_element`.
+— the same two identifiers carried in front matter by `tag_hex`/`xml_text`.
 Rows whose field is not a named tag (e.g. a generic "Managed Object" placeholder)
 leave both cells blank. `scripts/enrich_field_tables.py` fills these columns from
 the shared tag lookup; it only targets tables whose header's first column is
@@ -50,6 +50,26 @@ a field table:
 ```
 python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
 ```
+
+## Enumeration docs (kb/ttlv/enumerations/)
+
+Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Value | Hex | XML Text | Description`:
+
+```
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| Certificate | `0x00000001` | `Certificate` | ... |
+```
+
+`Hex` is the 8-digit hex integer value of each enumeration value (e.g. `0x00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled.
+
+`scripts/enrich_enum_tables.py` inserts these tables from spec data and is idempotent. Run it when adding or editing enumeration docs:
+
+```
+python scripts/enrich_enum_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
+```
+
+The `Encoding (Tag / Type / Length / Value)` section is **omitted** from enumeration docs that encode as a standard 4-byte TTLV Integer (type `05`) — the tag is already in `tag_hex` front matter and the encoding is uniform. Only docs where the encoding is non-standard (e.g. `item-type-enumeration.md`, `tag-enumeration.md`) keep an Encoding section.
 
 ## source_section for KMIP-Prof articles
 

@@ -7,9 +7,9 @@ source_section: "4.38"
 v1_source_section: "3.43"
 status: reviewed
 related: ["initial-date", "last-change-date", "random-number-generator"]
-keywords: ["original creation date", "key age", "registration", "provenance"]
+keywords: ["original creation date", "key age", "registration", "provenance", "4200BC", "OriginalCreationDate"]
 tag_hex: "4200BC"
-xml_element: "OriginalCreationDate"
+xml_text: "OriginalCreationDate"
 ---
 
 # Original Creation Date

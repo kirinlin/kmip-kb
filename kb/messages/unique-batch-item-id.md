@@ -7,9 +7,9 @@ source_section: "9.21"
 v1_source_section: "6.4"
 status: reviewed
 related: ["batch-item", "batch-count", "batch-order-option"]
-keywords: ["unique batch item ID", "correlation", "batching", "request response matching"]
+keywords: ["unique batch item ID", "correlation", "batching", "request response matching", "420093", "UniqueBatchItemID"]
 tag_hex: "420093"
-xml_element: "UniqueBatchItemID"
+xml_text: "UniqueBatchItemID"
 ---
 
 # Unique Batch Item ID

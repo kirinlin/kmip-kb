@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.35"
 status: reviewed
 related: ["opaque-data-type", "opaque-object", "object-type-enumeration"]
-keywords: ["opaque data type", "opaque object", "vendor-defined", "blob classification"]
+keywords: ["opaque data type", "opaque object", "vendor-defined", "blob classification", "420059", "OpaqueDataType"]
 tag_hex: "420059"
-xml_element: "OpaqueDataType"
+xml_text: "OpaqueDataType"
 ---
 
 # Opaque Data Type Enumeration
@@ -16,10 +16,6 @@ xml_element: "OpaqueDataType"
 ## Overview
 
 The Opaque Data Type enumeration sub-classifies an Opaque Object — the KMIP managed object type for arbitrary byte blobs whose content the server does not interpret. Because the server cannot inspect opaque content, this enumeration provides the only structured hook for policy engines and clients to distinguish different categories of opaque material. The core KMIP specification defines only one baseline value; implementations use extension ranges for vendor-specific subtypes.
-
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration), tag `420054`.
 
 ## Fields & Structure
 

@@ -7,9 +7,9 @@ source_section: "7.3"
 v1_source_section: "2.1.22"
 status: reviewed
 related: ["authenticated-encryption-tag", "data", "cryptographic-parameters"]
-keywords: ["AAD", "additional authenticated data", "GCM", "CCM", "AEAD"]
+keywords: ["AAD", "additional authenticated data", "GCM", "CCM", "AEAD", "4200FE", "AuthenticatedEncryptionAdditionalData"]
 tag_hex: "4200FE"
-xml_element: "AuthenticatedEncryptionAdditionalData"
+xml_text: "AuthenticatedEncryptionAdditionalData"
 ---
 
 # Authenticated Encryption Additional Data

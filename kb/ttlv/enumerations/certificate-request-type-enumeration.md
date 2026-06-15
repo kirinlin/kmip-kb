@@ -6,9 +6,9 @@ spec_versions: ["1.0","1.1","1.2","1.3","1.4","2.0","2.1"]
 source_section: "11.8"
 status: reviewed
 related: ["certify", "certificate-type-enumeration", "certificate-request", "certificate"]
-keywords: ["certificate request", "CSR", "PKCS#10", "CRMF", "PEM", "PGP", "certify"]
+keywords: ["certificate request", "CSR", "PKCS#10", "CRMF", "PEM", "PGP", "certify", "420019", "CertificateRequestType"]
 tag_hex: "420019"
-xml_element: "CertificateRequestType"
+xml_text: "CertificateRequestType"
 ---
 
 # Certificate Request Type Enumeration
@@ -17,11 +17,13 @@ xml_element: "CertificateRequestType"
 
 The Certificate Request Type enumeration identifies the format of the certificate signing request (CSR) data submitted to a KMIP server via the [Certify](../../operations/certify.md) operation. Different PKI ecosystems use different CSR formats with varying capabilities for expressing certificate policy, key usage, and subject attributes. Specifying the correct type allows the server (or the CA it proxies) to parse the request correctly and validate its signature.
 
-## Encoding (Tag / Type / Length / Value)
-
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the Certificate Request structure within a Certify request, alongside the raw CSR bytes.
-
 ## Fields & Structure
+
+| Value | Hex | XML Text | Description |
+|---|---|---|---|
+| CRMF | `0x00000001` | `CRMF` |  |
+| PKCS#10 | `0x00000002` | `PKCS_10` |  |
+| PEM | `0x00000003` | `PEM` |  |
 
 - **CRMF** (Certificate Request Message Format, RFC 4211): An ASN.1-based format used in Certificate Management over CMS (CMC) and the Certificate Management Protocol (CMP). More expressive than PKCS#10, allowing proof-of-possession and certificate template constraints to be specified.
 - **PKCS#10** (RFC 2986): The most widely deployed CSR format, consisting of a DER-encoded CertificationRequest structure signed by the private key corresponding to the public key being certified. Supported by virtually all CAs and PKI toolkits.
