@@ -39,7 +39,15 @@ CONTENT_DIRS = [
     "kb/messages",
     "kb/workflows",
     "kb/examples",
-    "kb/usage-guide",
+    "kb/usage-guide/messaging",
+    "kb/usage-guide/discovery",
+    "kb/usage-guide/identity",
+    "kb/usage-guide/lifecycle",
+    "kb/usage-guide/identification",
+    "kb/usage-guide/attributes",
+    "kb/usage-guide/key-material",
+    "kb/usage-guide/asymmetric",
+    "kb/usage-guide/crypto-services",
 ]
 
 # Human-readable labels for display grouping (sub-dirs collapse under parent).

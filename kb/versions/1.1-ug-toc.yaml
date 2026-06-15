@@ -6,23 +6,23 @@ sections:
   - section: "2.1"
     title: "Island of Trust"
     category: usage-guide
-    target_path: kb/usage-guide/island-of-trust.md
+    target_path: kb/usage-guide/identity/island-of-trust.md
   - section: "2.2"
     title: "Message Security"
     category: usage-guide
-    target_path: kb/usage-guide/message-security.md
+    target_path: kb/usage-guide/messaging/message-security.md
   - section: "2.3"
     title: "State-less Server"
     category: usage-guide
-    target_path: kb/usage-guide/state-less-server.md
+    target_path: kb/usage-guide/identity/state-less-server.md
   - section: "2.4"
     title: "Extensible Protocol"
     category: usage-guide
-    target_path: kb/usage-guide/extensible-protocol.md
+    target_path: kb/usage-guide/discovery/extensible-protocol.md
   - section: "2.5"
     title: "Server Policy"
     category: usage-guide
-    target_path: kb/usage-guide/server-policy.md
+    target_path: kb/usage-guide/identity/server-policy.md
   - section: "2.6"
     title: "Support for Cryptographic Objects"
     category: usage-guide
@@ -38,43 +38,43 @@ sections:
   - section: "2.9"
     title: "Support for “Intelligent Clients” and “Key Using Devices“"
     category: usage-guide
-    target_path: kb/usage-guide/support-for-intelligent-clients-and-key-using-devices.md
+    target_path: kb/usage-guide/identity/support-for-intelligent-clients-and-key-using-devices.md
   - section: "2.10"
     title: "Batched Requests and Responses"
     category: usage-guide
-    target_path: kb/usage-guide/batched-requests-and-responses.md
+    target_path: kb/usage-guide/messaging/batched-requests-and-responses.md
   - section: "2.11"
     title: "Reliable Message Delivery"
     category: usage-guide
-    target_path: kb/usage-guide/reliable-message-delivery.md
+    target_path: kb/usage-guide/messaging/reliable-message-delivery.md
   - section: "2.12"
     title: "Large Responses"
     category: usage-guide
-    target_path: kb/usage-guide/large-responses.md
+    target_path: kb/usage-guide/messaging/large-responses.md
   - section: "2.13"
     title: "Key Life-cycle and Key State"
     category: usage-guide
-    target_path: kb/usage-guide/key-life-cycle-and-key-state.md
+    target_path: kb/usage-guide/lifecycle/key-life-cycle-and-key-state.md
   - section: "3.1"
     title: "Authentication"
     category: usage-guide
-    target_path: kb/usage-guide/authentication.md
+    target_path: kb/usage-guide/identity/authentication.md
   - section: "3.2"
     title: "Authorization for Revoke, Recover, Destroy and Archive Operations"
     category: usage-guide
-    target_path: kb/usage-guide/authorization-for-revoke-recover-destroy-and-archive-operations.md
+    target_path: kb/usage-guide/identity/authorization-for-revoke-recover-destroy-and-archive-operations.md
   - section: "3.3"
     title: "Using Notify and Put Operations"
     category: usage-guide
-    target_path: kb/usage-guide/using-notify-and-put-operations.md
+    target_path: kb/usage-guide/messaging/using-notify-and-put-operations.md
   - section: "3.4"
     title: "Usage Allocation"
     category: usage-guide
-    target_path: kb/usage-guide/usage-allocation.md
+    target_path: kb/usage-guide/lifecycle/usage-allocation.md
   - section: "3.5"
     title: "Key State and Times"
     category: usage-guide
-    target_path: kb/usage-guide/key-state-and-times.md
+    target_path: kb/usage-guide/lifecycle/key-state-and-times.md
   - section: "3.6"
     title: "Template"
     category: usage-guide
@@ -82,47 +82,47 @@ sections:
   - section: "3.7"
     title: "Archive Operations"
     category: usage-guide
-    target_path: kb/usage-guide/archive-operations.md
+    target_path: kb/usage-guide/lifecycle/archive-operations.md
   - section: "3.8"
     title: "Message Extensions"
     category: usage-guide
-    target_path: kb/usage-guide/message-extensions.md
+    target_path: kb/usage-guide/discovery/message-extensions.md
   - section: "3.9"
     title: "Unique Identifiers"
     category: usage-guide
-    target_path: kb/usage-guide/unique-identifiers.md
+    target_path: kb/usage-guide/identification/unique-identifiers.md
   - section: "3.10"
     title: "Result Message Text"
     category: usage-guide
-    target_path: kb/usage-guide/result-message-text.md
+    target_path: kb/usage-guide/messaging/result-message-text.md
   - section: "3.11"
     title: "Query"
     category: usage-guide
-    target_path: kb/usage-guide/query.md
+    target_path: kb/usage-guide/discovery/query.md
   - section: "3.12"
     title: "Canceling Asynchronous Operations"
     category: usage-guide
-    target_path: kb/usage-guide/canceling-asynchronous-operations.md
+    target_path: kb/usage-guide/messaging/canceling-asynchronous-operations.md
   - section: "3.13"
     title: "Multi-instance Hash"
     category: usage-guide
-    target_path: kb/usage-guide/multi-instance-hash.md
+    target_path: kb/usage-guide/attributes/multi-instance-hash.md
   - section: "3.14"
     title: "Returning Related Objects"
     category: usage-guide
-    target_path: kb/usage-guide/returning-related-objects.md
+    target_path: kb/usage-guide/identification/returning-related-objects.md
   - section: "3.15"
     title: "Reducing Multiple Requests through the Use of Batch"
     category: usage-guide
-    target_path: kb/usage-guide/reducing-multiple-requests-through-the-use-of-batch.md
+    target_path: kb/usage-guide/messaging/reducing-multiple-requests-through-the-use-of-batch.md
   - section: "3.16"
     title: "Maximum Message Size"
     category: usage-guide
-    target_path: kb/usage-guide/maximum-message-size.md
+    target_path: kb/usage-guide/messaging/maximum-message-size.md
   - section: "3.17"
     title: "Using Offset in Re-key and Re-certify Operations"
     category: usage-guide
-    target_path: kb/usage-guide/using-offset-in-re-key-and-re-certify-operations.md
+    target_path: kb/usage-guide/lifecycle/using-offset-in-re-key-and-re-certify-operations.md
   - section: "3.18"
     title: "Locate Queries"
     category: usage-guide
@@ -130,23 +130,23 @@ sections:
   - section: "3.19"
     title: "ID Placeholder"
     category: usage-guide
-    target_path: kb/usage-guide/id-placeholder.md
+    target_path: kb/usage-guide/identification/id-placeholder.md
   - section: "3.20"
     title: "Key Block"
     category: usage-guide
-    target_path: kb/usage-guide/key-block.md
+    target_path: kb/usage-guide/key-material/key-block.md
   - section: "3.21"
     title: "Using Wrapped Keys with KMIP"
     category: usage-guide
-    target_path: kb/usage-guide/using-wrapped-keys-with-kmip.md
+    target_path: kb/usage-guide/key-material/using-wrapped-keys-with-kmip.md
   - section: "3.22"
     title: "Object Group"
     category: usage-guide
-    target_path: kb/usage-guide/object-group.md
+    target_path: kb/usage-guide/identification/object-group.md
   - section: "3.23"
     title: "Certify and Re-certify"
     category: usage-guide
-    target_path: kb/usage-guide/certify-and-re-certify.md
+    target_path: kb/usage-guide/asymmetric/certify-and-re-certify.md
   - section: "3.24"
     title: "Specifying Attributes during a Create Key Pair or Re-key Key Pair Operation"
     category: usage-guide
@@ -154,55 +154,55 @@ sections:
   - section: "3.25"
     title: "Registering a Key Pair"
     category: usage-guide
-    target_path: kb/usage-guide/registering-a-key-pair.md
+    target_path: kb/usage-guide/asymmetric/registering-a-key-pair.md
   - section: "3.26"
     title: "Non-Cryptographic Objects"
     category: usage-guide
-    target_path: kb/usage-guide/non-cryptographic-objects.md
+    target_path: kb/usage-guide/attributes/non-cryptographic-objects.md
   - section: "3.27"
     title: "Asymmetric Concepts with Symmetric Keys"
     category: usage-guide
-    target_path: kb/usage-guide/asymmetric-concepts-with-symmetric-keys.md
+    target_path: kb/usage-guide/asymmetric/asymmetric-concepts-with-symmetric-keys.md
   - section: "3.28"
     title: "Application Specific Information"
     category: usage-guide
-    target_path: kb/usage-guide/application-specific-information.md
+    target_path: kb/usage-guide/identification/application-specific-information.md
   - section: "3.29"
     title: "Mutating Attributes"
     category: usage-guide
-    target_path: kb/usage-guide/mutating-attributes.md
+    target_path: kb/usage-guide/lifecycle/mutating-attributes.md
   - section: "3.30"
     title: "Interoperable Key Naming for Tape"
     category: usage-guide
-    target_path: kb/usage-guide/interoperable-key-naming-for-tape.md
+    target_path: kb/usage-guide/identification/interoperable-key-naming-for-tape.md
   - section: "3.31"
     title: "Revocation Reason Codes"
     category: usage-guide
-    target_path: kb/usage-guide/revocation-reason-codes.md
+    target_path: kb/usage-guide/lifecycle/revocation-reason-codes.md
   - section: "3.32"
     title: "Certificate Renewal, Update, and Re-key"
     category: usage-guide
-    target_path: kb/usage-guide/certificate-renewal-update-and-re-key.md
+    target_path: kb/usage-guide/asymmetric/certificate-renewal-update-and-re-key.md
   - section: "3.33"
     title: "Key Encoding"
     category: usage-guide
-    target_path: kb/usage-guide/key-encoding.md
+    target_path: kb/usage-guide/key-material/key-encoding.md
   - section: "3.34"
     title: "Using the Same Asymmetric Key Pair in Multiple Algorithms"
     category: usage-guide
-    target_path: kb/usage-guide/using-the-same-asymmetric-key-pair-in-multiple-algorithms.md
+    target_path: kb/usage-guide/asymmetric/using-the-same-asymmetric-key-pair-in-multiple-algorithms.md
   - section: "3.35"
     title: "Cryptographic Length of Asymmetric Keys"
     category: usage-guide
-    target_path: kb/usage-guide/cryptographic-length-of-asymmetric-keys.md
+    target_path: kb/usage-guide/asymmetric/cryptographic-length-of-asymmetric-keys.md
   - section: "3.36"
     title: "Discover Versions"
     category: usage-guide
-    target_path: kb/usage-guide/discover-versions.md
+    target_path: kb/usage-guide/discovery/discover-versions.md
   - section: "3.37"
     title: "Vendor Extensions"
     category: usage-guide
-    target_path: kb/usage-guide/vendor-extensions.md
+    target_path: kb/usage-guide/discovery/vendor-extensions.md
   - section: "3.38"
     title: "Certificate Attribute Related Fields"
     category: usage-guide
@@ -210,11 +210,11 @@ sections:
   - section: "3.39"
     title: "Certificate Revocation Lists"
     category: usage-guide
-    target_path: kb/usage-guide/certificate-revocation-lists.md
+    target_path: kb/usage-guide/asymmetric/certificate-revocation-lists.md
   - section: "3.40"
     title: "Using the “Raw” Key Format Type"
     category: usage-guide
-    target_path: kb/usage-guide/using-the-raw-key-format-type.md
+    target_path: kb/usage-guide/key-material/using-the-raw-key-format-type.md
   - section: "3.41"
     title: "Deprecated Functionality"
     category: usage-guide
