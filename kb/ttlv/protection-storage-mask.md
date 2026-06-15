@@ -21,11 +21,11 @@ By examining the bit field a consumer can determine what protection tiers a key 
 
 ## Encoding (Tag / Type / Length / Value)
 
-The Protection Storage Mask value encodes as a 32-bit Integer (tag `420126`). It is a scalar field whose bits are interpreted individually.
+The Protection Storage Mask value encodes as a 32-bit Integer (tag `42015E`). It is a scalar field whose bits are interpreted individually.
 
-| Tag | Type | Width |
-|---|---|---|
-| `420126` | Integer | 32 bits |
+| Tag | XML Element | Type | Width |
+|---|---|---|---|
+| `42015E` | `ProtectionStorageMask` | Integer | 32 bits |
 
 ## Fields & Structure
 
@@ -33,14 +33,22 @@ The defined bit positions and their storage protection categories:
 
 | Bit | Category |
 |---|---|
-| 0 (0x00000001) | On Premise |
-| 1 (0x00000002) | Off Premise |
-| 2 (0x00000004) | Hardware Module |
-| 3 (0x00000008) | Cloud |
-| 4 (0x00000010) | Client |
-| 5 (0x00000020) | Third Party |
+| 0 (0x00000001) | Software |
+| 1 (0x00000002) | Hardware |
+| 2 (0x00000004) | On Processor |
+| 3 (0x00000008) | On System |
+| 4 (0x00000010) | Off System |
+| 5 (0x00000020) | Hypervisor |
+| 6 (0x00000040) | Operating System |
+| 7 (0x00000080) | Container |
+| 8 (0x00000100) | On Premises |
+| 9 (0x00000200) | Off Premises |
+| 10 (0x00000400) | Self Managed |
+| 11 (0x00000800) | Outsourced |
+| 12 (0x00001000) | Validated |
+| 13 (0x00002000) | Same Jurisdiction |
 
-Higher bits are reserved. Multiple bits may be set simultaneously to indicate that a key is stored under more than one protection category (for example, an HSM-backed key at an on-premise data center would set both On Premise and Hardware Module).
+Bits 14 and above are reserved for standard use; extension values use even-numbered bit positions only. Multiple bits may be set simultaneously to indicate that a key is stored under more than one protection category (for example, an HSM-backed key at an on-premises data center would set both On Premises and Hardware).
 
 The mask operates differently depending on context:
 
@@ -50,7 +58,9 @@ The mask operates differently depending on context:
 
 ## Examples
 
-A key stored on an on-premise HSM would carry a Protection Storage Mask of `0x00000005` (On Premise | Hardware Module). A key stored by a cloud key management service would carry `0x00000008` (Cloud). A policy requiring that a key remain on premise in hardware at all times would specify a mask of `0x00000005` as the required minimum.
+A key stored in an on-premises HSM carries `0x00000102` (On Premises | Hardware). A key hosted by a cloud provider and managed externally carries `0x00000A00` (Off Premises | Outsourced). A software-based key held on the local system carries `0x00000009` (Software | On System).
+
+A compliance policy requiring that a key remain in on-premises hardware storage specifies `0x00000102` as the minimum required mask. A stricter policy that additionally mandates the key be held in a validated store specifies `0x00001102` (On Premises | Hardware | Validated).
 
 ## Related
 
