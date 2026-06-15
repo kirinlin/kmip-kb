@@ -25,7 +25,7 @@ the client, arranged through configuration outside the protocol.
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Which object the notification is about. |
-| Attribute | `420008` | `Attribute` | Yes (repeatable) | Each attribute that changed, with its new value. [Last Change Date](../../attributes/last-change-date.md) is always among them. A deleted attribute is conveyed by an [Attribute structure](../../ttlv/attribute.md) with no Attribute Value. |
+| Attribute | `420008` | `Attribute` | Yes (repeatable) | Each attribute that changed, with its new value. [Last Change Date](../../attributes/last-change-date.md) is always among them. A deleted attribute is conveyed by an [Attribute structure](../../structures/attribute.md) with no Attribute Value. |
 
 ## Response Fields
 
@@ -36,7 +36,7 @@ defined.
 ## Behavior & Server Requirements
 
 The message reuses the normal [request message
-format](../../ttlv/message-structure.md), minus the fields that only make
+format](../../messages/message-structure.md), minus the fields that only make
 sense for client requests: Asynchronous Indicator, Maximum Response Size,
 Batch Order Option, and Batch Error Continuation Option must not appear. The
 server learns where and how to reach the client through out-of-band

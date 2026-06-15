@@ -17,7 +17,7 @@ xml_element: "Objects"
 Managed Objects are the things KMIP key management operations act on. The subset
 that carries cryptographic material — keys, certificates, secret data — are
 called Managed Cryptographic Objects. Most are built on a shared
-[Key Block](../ttlv/key-block.md) and described by common
+[Key Block](../structures/key-block.md) and described by common
 [attributes](../attributes/) such as
 [Unique Identifier](../attributes/unique-identifier.md) and
 [State](../attributes/state.md).

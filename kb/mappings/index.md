@@ -26,6 +26,6 @@ order:
   [Cryptographic Usage Mask](../attributes/cryptographic-usage-mask.md).
 - **Transparent key fields ↔ PKCS#1 / FIPS 186 / X9.42 parameter names** —
   summarized in
-  [Transparent Key Structures](../ttlv/transparent-key-structures.md).
+  [Transparent Key Structures](../structures/transparent-key-structures.md).
 - **PKCS#11 ↔ KMIP** — attribute and mechanism correspondence for
   implementers bridging the two APIs.

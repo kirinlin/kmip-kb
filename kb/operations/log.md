@@ -15,13 +15,13 @@ keywords: ["log", "audit log", "log message", "audit trail", "client logging", "
 
 `Log` submits a client-generated entry to the server's audit log. Rather than maintaining a separate client-side log that must later be correlated with server-side records, a client can use `Log` to write events directly into the centralized key management audit trail. This is useful for recording application-level events — such as a key being used to encrypt a specific document, or a policy decision being made — alongside the server's own record of KMIP operations, without requiring the client to maintain its own logging infrastructure.
 
-`Log` was introduced in v2.1 and uses the [Log Message](../ttlv/log-message.md) structure as its primary payload.
+`Log` was introduced in v2.1 and uses the [Log Message](../structures/log-message.md) structure as its primary payload.
 
 ## Request Fields
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Log Message | `420141` | `LogMessage` | Yes | The [Log Message](../ttlv/log-message.md) structure carrying the content of the log entry. Includes the log message text; may also carry a log level indicator and a timestamp. |
+| Log Message | `420141` | `LogMessage` | Yes | The [Log Message](../structures/log-message.md) structure carrying the content of the log entry. Includes the log message text; may also carry a log level indicator and a timestamp. |
 
 ## Response Fields
 

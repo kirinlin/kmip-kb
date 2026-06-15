@@ -28,7 +28,7 @@ each part as its own managed object. It was added in KMIP 1.2.
 | Split Key Threshold | `42008C` | `SplitKeyThreshold` | Yes | How many parts must be combined to rebuild the key. |
 | Split Key Method | `42008A` | `SplitKeyMethod` | Yes | The secret-sharing method used to split the key. |
 | Prime Field Size | `420062` | `PrimeFieldSize` | No | The prime field size, for methods that need one. |
-| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the new objects. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the new objects. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

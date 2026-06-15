@@ -34,8 +34,8 @@ Two layers cooperate:
    normative anchor: the spec's Authentication section (v2.1 §10.3; v1.x §8)
    simply points at the profiles document for the required mechanisms.
 2. **In-message identity claims** — the optional
-   [Authentication](../ttlv/authentication.md) structure in the request
-   header, which carries one or more [Credential](../ttlv/credential.md)
+   [Authentication](../messages/authentication.md) structure in the request
+   header, which carries one or more [Credential](../messages/credential.md)
    structures (Username and Password, Device, or — from 1.2 — Attestation).
    These let a client supply an application-level identity on top of the TLS
    identity, for example when many users share one TLS-authenticated
@@ -46,7 +46,7 @@ all. The spec recommends that [Query](../operations/query.md) remain usable
 without authentication so that clients can probe server capabilities before
 enrolling. When credentials fail to validate, the server fails the batch item
 with the `Authentication Not Successful`
-[result reason](../ttlv/result-reason.md).
+[result reason](../messages/result-reason.md).
 
 ## Implications for Implementers
 
@@ -59,11 +59,11 @@ with the `Authentication Not Successful`
   identifiers, optionally a shared secret); at least one identifying field
   must be present and the combination must be unique on the server.
 - Attestation credentials (1.2+) involve a server-issued
-  [Nonce](../ttlv/nonce.md) and TPM/SAML evidence; only advertise support if
+  [Nonce](../messages/nonce.md) and TPM/SAML evidence; only advertise support if
   you can actually validate the evidence.
 
 ## Related Concepts
 
 [Transport](transport.md) · [Error Handling](error-handling.md) ·
-[Authentication structure](../ttlv/authentication.md) ·
-[Credential](../ttlv/credential.md)
+[Authentication structure](../messages/authentication.md) ·
+[Credential](../messages/credential.md)

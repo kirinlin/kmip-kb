@@ -27,7 +27,7 @@ test cases.
 
 Runtime discovery of what a peer actually implements goes through
 [Query](../operations/query.md) and, from 1.3,
-[Profile Information](../ttlv/profile-information.md).
+[Profile Information](../structures/profile-information.md).
 
 ## Authentication Suites ([KMIP-Prof] §3)
 

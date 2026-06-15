@@ -23,7 +23,7 @@ key be generated only by an RNG matching given parameters.
 
 ## Data Type & Structure
 
-The value is an [RNG Parameters](../ttlv/rng-parameters.md) structure: a
+The value is an [RNG Parameters](../structures/rng-parameters.md) structure: a
 mandatory RNG Algorithm (Unspecified, FIPS 186-2, DRBG, NRBG, ANSI X9.31,
 ANSI X9.62) plus optional detail — cryptographic algorithm and length,
 hashing algorithm, DRBG flavor (Hash/HMAC/CTR/Dual-EC), recommended curve,

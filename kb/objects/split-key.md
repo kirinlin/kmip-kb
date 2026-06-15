@@ -36,7 +36,7 @@ splitting scheme.
 | Split Key Threshold | `42008C` | `SplitKeyThreshold` | Yes | Minimum number of shares needed to reconstruct the secret. |
 | Split Key Method | `42008A` | `SplitKeyMethod` | Yes | The sharing algorithm used (see below). |
 | Prime Field Size | `420062` | `PrimeFieldSize` | Conditional | Required only when the method is polynomial sharing over a prime field. |
-| Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../ttlv/key-block.md) carrying this share's material. |
+| Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../structures/key-block.md) carrying this share's material. |
 
 ## Key Attributes
 

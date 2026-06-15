@@ -32,4 +32,4 @@ A successful Create operation returns **Success** and a Unique Identifier. A Cre
 
 ## Related
 
-[Result Reason Enumeration](result-reason-enumeration.md) · [Error Handling](../../concepts/error-handling.md) · [Asynchronous Request](../asynchronous-request.md) · [Message Structure](../message-structure.md)
+[Result Reason Enumeration](result-reason-enumeration.md) · [Error Handling](../../concepts/error-handling.md) · [Asynchronous Request](../../structures/asynchronous-request.md) · [Message Structure](../../messages/message-structure.md)

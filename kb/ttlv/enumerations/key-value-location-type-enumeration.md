@@ -30,5 +30,5 @@ An enterprise that stores its HSM partition assignments in a configuration manag
 
 ## Related
 
-- [Key Block structure](../key-block.md) — the structure within which key location metadata may appear
+- [Key Block structure](../../structures/key-block.md) — the structure within which key location metadata may appear
 - [Get operation](../../operations/get.md) — the operation that retrieves key material, potentially by following a location reference

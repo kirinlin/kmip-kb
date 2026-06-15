@@ -43,7 +43,7 @@ Higher bits are reserved. Multiple bits may be set simultaneously to indicate th
 The mask operates differently depending on context:
 
 - On a managed object, it describes where that object's key material is currently stored.
-- In a [Protection Storage Masks](protection-storage-masks.md) structure (in a Query response), it describes a storage configuration the server supports.
+- In a [Protection Storage Masks](../structures/protection-storage-masks.md) structure (in a Query response), it describes a storage configuration the server supports.
 - As a [Protection Level](../attributes/protection-level.md) or [Protection Period](../attributes/protection-period.md) anchor, it defines the minimum required storage tier for a given object lifecycle phase.
 
 ## Examples
@@ -52,4 +52,4 @@ A key stored on an on-premise HSM would carry a Protection Storage Mask of `0x00
 
 ## Related
 
-[Protection Storage Masks](protection-storage-masks.md) · [Protection Storage Mask (attribute)](../attributes/protection-storage-mask.md) · [Protection Level](../attributes/protection-level.md) · [Protection Period](../attributes/protection-period.md) · [Query](../operations/query.md)
+[Protection Storage Masks](../structures/protection-storage-masks.md) · [Protection Storage Mask (attribute)](../attributes/protection-storage-mask.md) · [Protection Level](../attributes/protection-level.md) · [Protection Period](../attributes/protection-period.md) · [Query](../operations/query.md)

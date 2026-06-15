@@ -51,7 +51,7 @@ A Derive Key request using HKDF for TLS key material would specify **SHA-256** a
 ## Related
 
 - [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) — uses this enumeration to specify the hash in HMAC and signature operations
-- [Derivation Parameters structure](../derivation-parameters.md) — specifies the hash for key derivation
+- [Derivation Parameters structure](../../structures/derivation-parameters.md) — specifies the hash for key derivation
 - [Digest attribute](../../attributes/digest.md) — stores a hash of the object, recording which algorithm was used
 - [Digital Signature Algorithm Enumeration](digital-signature-algorithm-enumeration.md) — compound algorithm that names the hash alongside the signature primitive
 - [DRBG Algorithm Enumeration](drbg-algorithm-enumeration.md) — Hash and HMAC DRBGs require specifying a hash algorithm

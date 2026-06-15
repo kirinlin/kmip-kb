@@ -30,7 +30,7 @@ A client generating a large RSA key pair over a slow HSM might specify **Asynchr
 
 ## Related
 
-- [Asynchronous Request structure](../asynchronous-request.md) — carries the Asynchronous Correlation Value
+- [Asynchronous Request structure](../../structures/asynchronous-request.md) — carries the Asynchronous Correlation Value
 - [Query Asynchronous Requests operation](../../operations/query-asynchronous-requests.md) — retrieves the result of a pending async operation
 - [Cancel operation](../../operations/cancel.md) — cancels a queued asynchronous operation
 - [Poll operation](../../operations/poll.md) — server-push notification of async completion

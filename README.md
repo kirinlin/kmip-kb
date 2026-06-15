@@ -16,7 +16,9 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/operations/` | Client-to-server operations; `kb/operations/server-to-client/` for the reverse. |
 | `kb/objects/` | Managed objects (symmetric/asymmetric keys, certificates, secret data, templates). |
 | `kb/attributes/` | Object attributes — data types, constraints, applicability. |
-| `kb/ttlv/` | TTLV encoding plus base-object structures and message contents/format. |
+| `kb/ttlv/` | TTLV wire encoding, enumerations (`kb/ttlv/enumerations/`), and bit masks. |
+| `kb/structures/` | Data structures: object (Key Block, …), attribute, and operation building blocks. |
+| `kb/messages/` | Protocol message structures: request/response envelope and message fields. |
 | `kb/profiles/` | Conformance profiles and implementation conformance. |
 | `kb/usage-guide/` | Design goals, usage notes, usage examples, and deprecation guidance from the KMIP Usage Guide ([KMIP-UG]), sourced with `ug-` prefix on `source_section`. |
 | `kb/versions/` | Per-version TOC maps — `1.0-toc.yaml` → `2.1-toc.yaml` (104–234 sections), `1.0-prof-toc.yaml` → `2.1-prof-toc.yaml` (8–44 sections), and `1.0-ug-toc.yaml` → `2.1-ug-toc.yaml` (36–83 sections) — plus full 1.0–2.1 delta notes. |
@@ -56,7 +58,8 @@ skeleton) → `draft` (authored) → `reviewed` (human-verified per
 
 **Authoring status:** 452 content documents — **452 `reviewed`**, 0 `draft`,
 0 `stub`. All categories are at 100% reviewed. Covers every KMIP 2.1 section:
-operations (client and server-to-client), attributes, objects, TTLV structures,
+operations (client and server-to-client), attributes, objects, data structures
+(§3/§5/§7) and message structures (§8/§9), TTLV encoding (§10.1),
 all 64 enumerations (§11), bit masks (§12), algorithm implementation (§13),
 profiles (KMIP-Prof v1.0–v2.1), and 83 usage-guide articles (KMIP-UG v2.1).
 Validators clean (front-matter schema, no-verbatim, link resolution,

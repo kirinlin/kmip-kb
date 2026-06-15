@@ -31,4 +31,4 @@ A key wrapped using AES-GCM (which provides authenticated encryption) specifies 
 
 ## Related
 
-[Key Wrapping Data](../key-wrapping-data.md) · [Key Block](../key-block.md) · [Get](../../operations/get.md)
+[Key Wrapping Data](../../structures/key-wrapping-data.md) · [Key Block](../../structures/key-block.md) · [Get](../../operations/get.md)

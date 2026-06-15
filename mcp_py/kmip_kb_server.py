@@ -144,7 +144,8 @@ def search_kb(
     Args:
         query: Free-text search query (e.g. "symmetric key creation", "TTLV encoding").
         category: Filter by category — one of: operation, attribute, object, concept,
-                  ttlv, profile, reference, workflow, example, schema, index.
+                  ttlv, structures, messages, profile, reference, workflow, example,
+                  schema, index.
         status: Filter by status — stub | draft | reviewed.
         spec_version: Filter to articles present in a specific version (e.g. "2.1", "1.4").
         limit: Max results (default 10).
@@ -248,7 +249,8 @@ def list_articles(
 
     Args:
         category: Filter by category (operation, attribute, object, concept, ttlv,
-                  profile, reference, workflow, example, schema, index).
+                  structures, messages, profile, reference, workflow, example, schema,
+                  index).
         status: Filter by status (stub, draft, reviewed).
 
     Returns one line per article: slug | category | status | title.

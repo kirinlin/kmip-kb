@@ -27,7 +27,7 @@ unsupporting server returns an error.
 | Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
 | Certificate Request | `420018` | `CertificateRequest` | No | A byte string carrying the request itself (PKCS#10, PEM, etc.). |
 | Offset | `420058` | `Offset` | No | An interval giving the gap between the new certificate's initial date and its activation date. |
-| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the new certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the new certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 If the Certificate Request and its type are both omitted and no certificate type
 is given via the template-attribute, the new certificate keeps the type of the

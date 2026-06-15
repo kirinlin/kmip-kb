@@ -35,6 +35,8 @@ CONTENT_DIRS = [
     "kb/references",
     "kb/ttlv",
     "kb/ttlv/enumerations",
+    "kb/structures",
+    "kb/messages",
     "kb/workflows",
     "kb/examples",
     "kb/usage-guide",

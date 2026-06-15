@@ -35,7 +35,7 @@ objects have been deprecated since version 1.3, so attributes are better
 supplied individually. In KMIP 2.0+ these wrappers are replaced by the
 corresponding flat Common Attributes / Private Key Attributes / Public Key
 Attributes structures
-([Template-Attribute Structures](../ttlv/template-attribute-structures.md));
+([Template-Attribute Structures](../structures/template-attribute-structures.md));
 the routing semantics are unchanged.
 
 ## Response Fields

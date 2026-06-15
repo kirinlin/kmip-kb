@@ -17,7 +17,7 @@ The Interop Function enumeration names the specific interoperability test functi
 
 ## Encoding (Tag / Type / Length / Value)
 
-Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the [Interop Function structure](../interop-function.md) within an Interop request, alongside an Interop Identifier that qualifies the specific test instance.
+Encoded as a 4-byte integer (TTLV type `05`, Enumeration). Appears in the [Interop Function structure](../../structures/interop-function.md) within an Interop request, alongside an Interop Identifier that qualifies the specific test instance.
 
 ## Fields & Structure
 
@@ -38,6 +38,6 @@ A KMIP client vendor running an interoperability test with a server vendor's imp
 ## Related
 
 - [Interop operation](../../operations/interop.md) — the operation that accepts this enumeration
-- [Interop Function structure](../interop-function.md) — the TTLV structure pairing this enumeration with an identifier
-- [Interop Identifier structure](../interop-identifier.md) — qualifies which test instance of the named function to run
+- [Interop Function structure](../../structures/interop-function.md) — the TTLV structure pairing this enumeration with an identifier
+- [Interop Identifier structure](../../structures/interop-identifier.md) — qualifies which test instance of the named function to run
 - [Query Function Enumeration](query-function-enumeration.md) — servers advertise supported interop functions via Query

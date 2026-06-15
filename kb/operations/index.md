@@ -17,8 +17,8 @@ xml_element: "Operations"
 Everything a KMIP client can ask a server to do (v2.1 §6.1; v1.x §4), plus the
 [server-to-client](server-to-client/index.md) operations (v2.1 §6.2; v1.x §5).
 Requests and
-responses are carried as [batch items](../ttlv/batch-item.md) inside the
-standard [message structure](../ttlv/message-structure.md).
+responses are carried as [batch items](../messages/batch-item.md) inside the
+standard [message structure](../messages/message-structure.md).
 
 ## Object creation and import
 

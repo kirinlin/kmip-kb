@@ -31,7 +31,7 @@ asymmetric equivalent is [Re-key Key Pair](re-key-key-pair.md).
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The existing symmetric key to replace. If omitted, the server uses the ID Placeholder. |
 | Offset | `420058` | `Offset` | No | An interval giving the gap between the replacement key's initial date and its activation date. |
-| Template-Attribute | `420091` | `TemplateAttribute` | No | Additional attributes for the replacement key. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Additional attributes for the replacement key. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

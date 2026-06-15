@@ -13,7 +13,7 @@ keywords: ["key derivation", "KDF", "PBKDF2", "HKDF", "HMAC", "NIST 800-108", "A
 
 ## Overview
 
-The Derivation Method enumeration names the key derivation function (KDF) or key derivation algorithm applied when creating a new key from a base key material or secret. It appears in the [Derivation Parameters](../derivation-parameters.md) structure of a [Derive Key](../../operations/derive-key.md) request. The choice of derivation method determines which additional parameters are required — for example, PBKDF2 requires an iteration count and salt, while NIST 800-108 counter mode requires a label and context string. Correct selection is critical because different KDFs have different security properties and are appropriate for different use cases.
+The Derivation Method enumeration names the key derivation function (KDF) or key derivation algorithm applied when creating a new key from a base key material or secret. It appears in the [Derivation Parameters](../../structures/derivation-parameters.md) structure of a [Derive Key](../../operations/derive-key.md) request. The choice of derivation method determines which additional parameters are required — for example, PBKDF2 requires an iteration count and salt, while NIST 800-108 counter mode requires a label and context string. Correct selection is critical because different KDFs have different security properties and are appropriate for different use cases.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -37,6 +37,6 @@ A cloud application storing tenant secrets in KMIP might derive per-tenant encry
 
 ## Related
 
-- [Derivation Parameters structure](../derivation-parameters.md) — the structure that carries the derivation method and its parameters
+- [Derivation Parameters structure](../../structures/derivation-parameters.md) — the structure that carries the derivation method and its parameters
 - [Derive Key operation](../../operations/derive-key.md) — the operation that performs key derivation
 - [Hashing Algorithm Enumeration](hashing-algorithm-enumeration.md) — selects the underlying hash for HMAC- and hash-based methods

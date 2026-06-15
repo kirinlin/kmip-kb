@@ -15,10 +15,10 @@ keywords: ["error handling", "result status", "result reason", "failure", "batch
 ## Overview
 
 KMIP reports errors per batch item, not per connection. Every response batch
-item carries a [Result Status](../ttlv/result-status.md) (Success, Operation
+item carries a [Result Status](../messages/result-status.md) (Success, Operation
 Failed, Operation Pending, or Operation Undone); failures additionally carry
-a machine-readable [Result Reason](../ttlv/result-reason.md) and may carry a
-human-readable [Result Message](../ttlv/result-message.md). Section 11 of the
+a machine-readable [Result Reason](../messages/result-reason.md) and may carry a
+human-readable [Result Message](../messages/result-message.md). Section 11 of the
 spec is a catalogue that pins down exactly which Result Reason a server
 returns for each error condition, operation by operation — the goal is that
 two conforming servers fail the same bad request the same way.
@@ -39,16 +39,16 @@ v2.x) cover conditions any message can hit:
   `Operation Not Supported`; an unsupported optional feature →
   `Feature Not Supported`.
 - A response that would exceed the request's
-  [Maximum Response Size](../ttlv/maximum-response-size.md) →
+  [Maximum Response Size](../messages/maximum-response-size.md) →
   `Response Too Large`.
-- A critical [Message Extension](../ttlv/message-extension.md) the receiver
+- A critical [Message Extension](../messages/message-extension.md) the receiver
   does not understand → `Feature Not Supported`.
 - Attestation cases (1.2+): missing attestation data yields
   `Attestation Required` if the client declared itself attestation-capable,
   otherwise `Permission Denied`; invalid evidence yields `Attestation Failed`.
 
 For multi-item batches, the
-[Batch Error Continuation Option](../ttlv/batch-error-continuation-option.md)
+[Batch Error Continuation Option](../messages/batch-error-continuation-option.md)
 governs what happens after the first failure: `Stop` (default) returns
 results for the items already done and drops the rest; `Continue` processes
 every item regardless; `Undo` rolls back completed items, which then report
@@ -66,12 +66,12 @@ negotiated version.
 - Only advertise `Undo` support if you can genuinely roll back partial
   batches; servers that cannot must reject requests asking for it.
 - An asynchronous flow ends in the same statuses: `Operation Pending` plus an
-  [Asynchronous Correlation Value](../ttlv/asynchronous-correlation-value.md)
+  [Asynchronous Correlation Value](../messages/asynchronous-correlation-value.md)
   now, the final status later via [Poll](../operations/poll.md).
 
 ## Related Concepts
 
-[Result Status](../ttlv/result-status.md) ·
-[Result Reason](../ttlv/result-reason.md) ·
-[Result Message](../ttlv/result-message.md) ·
-[Batch Error Continuation Option](../ttlv/batch-error-continuation-option.md)
+[Result Status](../messages/result-status.md) ·
+[Result Reason](../messages/result-reason.md) ·
+[Result Message](../messages/result-message.md) ·
+[Batch Error Continuation Option](../messages/batch-error-continuation-option.md)

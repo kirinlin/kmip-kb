@@ -13,7 +13,7 @@ keywords: ["encoding option", "key wrapping", "TTLV encoding", "no encoding", "k
 
 ## Overview
 
-The Encoding Option enumeration controls how the [Key Value](../key-value.md) structure is represented when it is wrapped. When a key is wrapped for transport or storage under a wrapping key, the server must decide whether to wrap just the raw key bytes or the full TTLV-encoded Key Value structure (which includes the key material plus any associated attributes). Wrapping the full TTLV structure preserves attribute data alongside the key so that it can be recovered when unwrapped, whereas wrapping raw bytes produces a more compact result compatible with simpler key exchange protocols. This enumeration appears in the Key Wrapping Specification.
+The Encoding Option enumeration controls how the [Key Value](../../structures/key-value.md) structure is represented when it is wrapped. When a key is wrapped for transport or storage under a wrapping key, the server must decide whether to wrap just the raw key bytes or the full TTLV-encoded Key Value structure (which includes the key material plus any associated attributes). Wrapping the full TTLV structure preserves attribute data alongside the key so that it can be recovered when unwrapped, whereas wrapping raw bytes produces a more compact result compatible with simpler key exchange protocols. This enumeration appears in the Key Wrapping Specification.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -30,7 +30,7 @@ A KMIP client requesting a symmetric key wrapped for export to a hardware securi
 
 ## Related
 
-- [Key Wrapping Data structure](../key-wrapping-data.md) — the structure that records how a key was wrapped, including the encoding option used
-- [Key Value structure](../key-value.md) — the structure that is optionally TTLV-encoded before wrapping
-- [Key Block structure](../key-block.md) — the outer container for wrapped key material
+- [Key Wrapping Data structure](../../structures/key-wrapping-data.md) — the structure that records how a key was wrapped, including the encoding option used
+- [Key Value structure](../../structures/key-value.md) — the structure that is optionally TTLV-encoded before wrapping
+- [Key Block structure](../../structures/key-block.md) — the outer container for wrapped key material
 - [Wrapping Method Enumeration](wrapping-method-enumeration.md) — specifies the cryptographic wrapping technique

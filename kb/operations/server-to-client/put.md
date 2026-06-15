@@ -37,13 +37,13 @@ no payload fields are defined.
 ## Behavior & Server Requirements
 
 Like [Notify](notify.md), Put uses the standard [request
-format](../../ttlv/message-structure.md) without Asynchronous Indicator,
+format](../../messages/message-structure.md) without Asynchronous Indicator,
 Maximum Response Size, Batch Order Option, or Batch Error Continuation
 Option, and rides a server-initiated channel arranged out of band. If the
 client receives `Replace` naming an object it does not hold, it treats the
 message as `New`. When the pushed key is wrapped, the wrapping arrangement
 (which KEK, which parameters) must have been agreed beforehand — there is no
-in-band [Key Wrapping Specification](../../ttlv/key-wrapping-specification.md)
+in-band [Key Wrapping Specification](../../structures/key-wrapping-specification.md)
 exchange in this flow.
 
 ## Errors

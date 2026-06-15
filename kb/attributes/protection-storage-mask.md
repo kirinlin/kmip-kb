@@ -15,7 +15,7 @@ keywords: ["protection storage mask", "storage constraints", "hsm storage", "sof
 
 Protection Storage Mask is an attribute that records which storage environments are permissible for a key or secret object as a bit field. It constrains where the key material may reside — for instance, requiring HSM-on-premises storage while prohibiting cloud software storage. This is the object-level policy expression; the bit definitions themselves are defined by the Protection Storage Masks bit-mask structure in §12.2.
 
-This attribute is distinct from the [Protection Storage Masks](../ttlv/protection-storage-masks.md) TTLV structure used in request/response messages to communicate server capabilities.
+This attribute is distinct from the [Protection Storage Masks](../structures/protection-storage-masks.md) TTLV structure used in request/response messages to communicate server capabilities.
 
 ## Data Type & Structure
 

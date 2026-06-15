@@ -13,7 +13,7 @@ keywords: ["get constraints", "operation constraints", "access control", "permis
 
 ## Purpose
 
-`Get Constraints` retrieves the [Constraints](../ttlv/constraints.md) structure that governs which operations a client may perform on a specific managed object or on a class of objects sharing the same type. Constraints encode operation-level permission rules — for example, restricting which clients may invoke [`Destroy`](destroy.md), or limiting the cryptographic operations permitted against a particular key. Retrieving current constraints is the first step in any workflow that audits or modifies access policy.
+`Get Constraints` retrieves the [Constraints](../structures/constraints.md) structure that governs which operations a client may perform on a specific managed object or on a class of objects sharing the same type. Constraints encode operation-level permission rules — for example, restricting which clients may invoke [`Destroy`](destroy.md), or limiting the cryptographic operations permitted against a particular key. Retrieving current constraints is the first step in any workflow that audits or modifies access policy.
 
 `Get Constraints` is the read counterpart to [`Set Constraints`](set-constraints.md) and was introduced in v2.1 alongside the full Constraints and Defaults system.
 
@@ -29,7 +29,7 @@ keywords: ["get constraints", "operation constraints", "access control", "permis
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Present when the request targeted a specific object; echoes back the identifier. |
-| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../ttlv/constraints.md) structure describing the operation permissions in effect for the identified object or object type. |
+| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../structures/constraints.md) structure describing the operation permissions in effect for the identified object or object type. |
 
 ## Behavior & Server Requirements
 

@@ -24,14 +24,14 @@ keywords: ["adjust attribute", "delta", "increment", "decrement", "attribute upd
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Identifies the managed object to update. Defaults to the server's ID Placeholder when omitted. |
 | Attribute Name | `42000A` | `AttributeName` | Yes | The name of the attribute whose value is being adjusted. Must refer to a numeric or date-time attribute that supports delta operations. |
 | Adjustment Type | `420158` | `AdjustmentType` | Yes | Enumeration indicating how to combine the current value with the adjustment value: `Add`, `Subtract`, or `Multiply` for numeric attributes; `Replace` for date-time attributes where an absolute rewrite is performed. |
-| Attribute | `420008` | `Attribute` | Yes | Carries the adjustment value — the operand applied to the current attribute value according to the Adjustment Type. The structure mirrors the standard [Attribute](../ttlv/attribute.md) structure but holds the delta, not a final value. |
+| Attribute | `420008` | `Attribute` | Yes | Carries the adjustment value — the operand applied to the current attribute value according to the Adjustment Type. The structure mirrors the standard [Attribute](../structures/attribute.md) structure but holds the delta, not a final value. |
 
 ## Response Fields
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Confirms which object was updated. |
-| Attribute | `420008` | `Attribute` | Yes | Returns the updated [Attribute](../ttlv/attribute.md), containing the attribute name and the resulting value after the adjustment was applied. |
+| Attribute | `420008` | `Attribute` | Yes | Returns the updated [Attribute](../structures/attribute.md), containing the attribute name and the resulting value after the adjustment was applied. |
 
 ## Behavior & Server Requirements
 

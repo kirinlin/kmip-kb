@@ -37,10 +37,10 @@ Relevant attributes include:
 
 ## Lifecycle & State
 
-Certificate Request objects participate in the standard [State](../attributes/state.md). A newly registered request enters Pre-Active. The server or client may Activate it when it is ready for submission to a CA, at which point it transitions to Active. Once the CA issues the certificate — or the request is cancelled or superseded — the object can be Revoked or Destroyed. An issued certificate is typically a separate [Certificate](../objects/certificate.md) object linked to the request.
+Certificate Request objects participate in the standard [State](../attributes/state.md). A newly registered request enters Pre-Active. The server or client may Activate it when it is ready for submission to a CA, at which point it transitions to Active. Once the CA issues the certificate — or the request is cancelled or superseded — the object can be Revoked or Destroyed. An issued certificate is typically a separate [Certificate](certificate.md) object linked to the request.
 
 Clients create Certificate Request objects via [Register](../operations/register.md) (submitting an externally generated CSR) or may generate the underlying key pair and the request together using [Create Key Pair](../operations/create-key-pair.md) when the server supports inline CSR generation.
 
 ## Related Objects
 
-[Certificate](../objects/certificate.md) · [Private Key](../objects/private-key.md) · [Public Key](../objects/public-key.md)
+[Certificate](certificate.md) · [Private Key](private-key.md) · [Public Key](public-key.md)

@@ -32,6 +32,6 @@ A TLS 1.3 key exchange using ECDH over P-256 typically transmits **EC Public Key
 
 ## Related
 
-- [Key Block structure](../key-block.md) — the container that holds the key material and this compression type field
+- [Key Block structure](../../structures/key-block.md) — the container that holds the key material and this compression type field
 - [Recommended Curve Enumeration](recommended-curve-enumeration.md) — specifies which elliptic curve the key is on
 - [Cryptographic Algorithm Enumeration](cryptographic-algorithm-enumeration.md) — identifies the algorithm (ECDH, ECDSA, etc.) for this key

@@ -13,7 +13,7 @@ keywords: ["operation", "operation code", "KMIP operations", "rights", "access c
 
 ## Overview
 
-The Operation enumeration assigns a numeric code to every KMIP operation, making it possible to reference operations by value in structures that talk about operations rather than perform them — most importantly in [Rights](../rights.md) access control entries, in [Constraints](../constraints.md), in Cancel requests, and in Query responses. It is the machine-readable complement to the human-readable operation names used throughout the specification.
+The Operation enumeration assigns a numeric code to every KMIP operation, making it possible to reference operations by value in structures that talk about operations rather than perform them — most importantly in [Rights](../../structures/rights.md) access control entries, in [Constraints](../../structures/constraints.md), in Cancel requests, and in Query responses. It is the machine-readable complement to the human-readable operation names used throughout the specification.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -37,8 +37,8 @@ Key operations and their enumeration presence across versions:
 
 ## Examples
 
-A [Right](../right.md) entry granting a service account permission to perform Get and Activate on a symmetric key lists **Get** and **Activate** as Operation values. A Cancel request targeting a pending async operation names the operation being cancelled using this enumeration.
+A [Right](../../structures/right.md) entry granting a service account permission to perform Get and Activate on a symmetric key lists **Get** and **Activate** as Operation values. A Cancel request targeting a pending async operation names the operation being cancelled using this enumeration.
 
 ## Related
 
-[Right](../right.md) · [Rights](../rights.md) · [Constraint](../constraint.md) · [Message Structure](../message-structure.md)
+[Right](../../structures/right.md) · [Rights](../../structures/rights.md) · [Constraint](../../structures/constraint.md) · [Message Structure](../../messages/message-structure.md)

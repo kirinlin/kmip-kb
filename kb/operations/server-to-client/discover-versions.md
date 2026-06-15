@@ -25,7 +25,7 @@ The server sends the following in the server-initiated message:
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Protocol Version | `420069` | `ProtocolVersion` | Yes (one or more) | One or more [Protocol Version](../../ttlv/protocol-version.md) structures, each identifying a KMIP major.minor version the server is willing to use. Ordered from most to least preferred. |
+| Protocol Version | `420069` | `ProtocolVersion` | Yes (one or more) | One or more [Protocol Version](../../messages/protocol-version.md) structures, each identifying a KMIP major.minor version the server is willing to use. Ordered from most to least preferred. |
 
 ## Response Fields (client response)
 
@@ -33,7 +33,7 @@ The client acknowledges the server's version advertisement:
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Protocol Version | `420069` | `ProtocolVersion` | Yes | The single [Protocol Version](../../ttlv/protocol-version.md) value the client selects from the server's list. Indicates the version the client will use for subsequent communication. |
+| Protocol Version | `420069` | `ProtocolVersion` | Yes | The single [Protocol Version](../../messages/protocol-version.md) value the client selects from the server's list. Indicates the version the client will use for subsequent communication. |
 
 ## Behavior & Server Requirements
 
@@ -75,4 +75,4 @@ Both sides then switch to using v2.1 message encoding for subsequent communicati
 
 ## Related Operations
 
-[Query](../query.md) · [Set Endpoint Role (server-to-client)](set-endpoint-role.md) · [Protocol Version](../../ttlv/protocol-version.md)
+[Query](../query.md) · [Set Endpoint Role (server-to-client)](set-endpoint-role.md) · [Protocol Version](../../messages/protocol-version.md)

@@ -21,96 +21,96 @@ sections:
     target_path: references/non-normative-references.md
   - section: "2.1.1"
     title: "Attribute"
-    category: ttlv
-    target_path: ttlv/attribute.md
+    category: structures
+    target_path: structures/attribute.md
   - section: "2.1.2"
     title: "Credential"
-    category: ttlv
-    target_path: ttlv/credential.md
+    category: messages
+    target_path: messages/credential.md
   - section: "2.1.3"
     title: "Key Block"
-    category: ttlv
-    target_path: ttlv/key-block.md
+    category: structures
+    target_path: structures/key-block.md
   - section: "2.1.4"
     title: "Key Value"
-    category: ttlv
-    target_path: ttlv/key-value.md
+    category: structures
+    target_path: structures/key-value.md
   - section: "2.1.5"
     title: "Key Wrapping Data"
-    category: ttlv
-    target_path: ttlv/key-wrapping-data.md
+    category: structures
+    target_path: structures/key-wrapping-data.md
   - section: "2.1.6"
     title: "Key Wrapping Specification"
-    category: ttlv
-    target_path: ttlv/key-wrapping-specification.md
+    category: structures
+    target_path: structures/key-wrapping-specification.md
   - section: "2.1.7"
     title: "Transparent Key Structures"
-    category: ttlv
-    target_path: ttlv/transparent-key-structures.md
+    category: structures
+    target_path: structures/transparent-key-structures.md
   - section: "2.1.8"
     title: "Template-Attribute Structures"
-    category: ttlv
-    target_path: ttlv/template-attribute-structures.md
+    category: structures
+    target_path: structures/template-attribute-structures.md
   - section: "2.1.9"
     title: "Extension Information"
-    category: ttlv
-    target_path: ttlv/extension-information.md
+    category: structures
+    target_path: structures/extension-information.md
   - section: "2.1.10"
     title: "Data"
-    category: ttlv
-    target_path: ttlv/data.md
+    category: structures
+    target_path: structures/data.md
   - section: "2.1.11"
     title: "Data Length"
-    category: ttlv
-    target_path: ttlv/data-length.md
+    category: structures
+    target_path: structures/data-length.md
   - section: "2.1.12"
     title: "Signature Data"
-    category: ttlv
-    target_path: ttlv/signature-data.md
+    category: structures
+    target_path: structures/signature-data.md
   - section: "2.1.13"
     title: "MAC Data"
-    category: ttlv
-    target_path: ttlv/mac-data.md
+    category: structures
+    target_path: structures/mac-data.md
   - section: "2.1.14"
     title: "Nonce"
-    category: ttlv
-    target_path: ttlv/nonce.md
+    category: messages
+    target_path: messages/nonce.md
   - section: "2.1.15"
     title: "Correlation Value"
-    category: ttlv
-    target_path: ttlv/correlation-value.md
+    category: structures
+    target_path: structures/correlation-value.md
   - section: "2.1.16"
     title: "Init Indicator"
-    category: ttlv
-    target_path: ttlv/init-indicator.md
+    category: structures
+    target_path: structures/init-indicator.md
   - section: "2.1.17"
     title: "Final Indicator"
-    category: ttlv
-    target_path: ttlv/final-indicator.md
+    category: structures
+    target_path: structures/final-indicator.md
   - section: "2.1.18"
     title: "RNG Parameters"
-    category: ttlv
-    target_path: ttlv/rng-parameters.md
+    category: structures
+    target_path: structures/rng-parameters.md
   - section: "2.1.19"
     title: "Profile Information"
-    category: ttlv
-    target_path: ttlv/profile-information.md
+    category: structures
+    target_path: structures/profile-information.md
   - section: "2.1.20"
     title: "Validation Information"
-    category: ttlv
-    target_path: ttlv/validation-information.md
+    category: structures
+    target_path: structures/validation-information.md
   - section: "2.1.21"
     title: "Capability Information"
-    category: ttlv
-    target_path: ttlv/capability-information.md
+    category: structures
+    target_path: structures/capability-information.md
   - section: "2.1.22"
     title: "Authenticated Encryption Additional Data"
-    category: ttlv
-    target_path: ttlv/authenticated-encryption-additional-data.md
+    category: structures
+    target_path: structures/authenticated-encryption-additional-data.md
   - section: "2.1.23"
     title: "Authenticated Encryption Tag"
-    category: ttlv
-    target_path: ttlv/authenticated-encryption-tag.md
+    category: structures
+    target_path: structures/authenticated-encryption-tag.md
   - section: "2.2.1"
     title: "Certificate"
     category: object
@@ -525,88 +525,88 @@ sections:
     target_path: operations/server-to-client/query.md
   - section: "6.1"
     title: "Protocol Version"
-    category: ttlv
-    target_path: ttlv/protocol-version.md
+    category: messages
+    target_path: messages/protocol-version.md
   - section: "6.2"
     title: "Operation"
-    category: ttlv
-    target_path: ttlv/operation.md
+    category: messages
+    target_path: messages/operation.md
   - section: "6.3"
     title: "Maximum Response Size"
-    category: ttlv
-    target_path: ttlv/maximum-response-size.md
+    category: messages
+    target_path: messages/maximum-response-size.md
   - section: "6.4"
     title: "Unique Batch Item ID"
-    category: ttlv
-    target_path: ttlv/unique-batch-item-id.md
+    category: messages
+    target_path: messages/unique-batch-item-id.md
   - section: "6.5"
     title: "Time Stamp"
-    category: ttlv
-    target_path: ttlv/time-stamp.md
+    category: messages
+    target_path: messages/time-stamp.md
   - section: "6.6"
     title: "Authentication"
-    category: ttlv
-    target_path: ttlv/authentication.md
+    category: messages
+    target_path: messages/authentication.md
   - section: "6.7"
     title: "Asynchronous Indicator"
-    category: ttlv
-    target_path: ttlv/asynchronous-indicator.md
+    category: messages
+    target_path: messages/asynchronous-indicator.md
   - section: "6.8"
     title: "Asynchronous Correlation Value"
-    category: ttlv
-    target_path: ttlv/asynchronous-correlation-value.md
+    category: messages
+    target_path: messages/asynchronous-correlation-value.md
   - section: "6.9"
     title: "Result Status"
-    category: ttlv
-    target_path: ttlv/result-status.md
+    category: messages
+    target_path: messages/result-status.md
   - section: "6.10"
     title: "Result Reason"
-    category: ttlv
-    target_path: ttlv/result-reason.md
+    category: messages
+    target_path: messages/result-reason.md
   - section: "6.11"
     title: "Result Message"
-    category: ttlv
-    target_path: ttlv/result-message.md
+    category: messages
+    target_path: messages/result-message.md
   - section: "6.12"
     title: "Batch Order Option"
-    category: ttlv
-    target_path: ttlv/batch-order-option.md
+    category: messages
+    target_path: messages/batch-order-option.md
   - section: "6.13"
     title: "Batch Error Continuation Option"
-    category: ttlv
-    target_path: ttlv/batch-error-continuation-option.md
+    category: messages
+    target_path: messages/batch-error-continuation-option.md
   - section: "6.14"
     title: "Batch Count"
-    category: ttlv
-    target_path: ttlv/batch-count.md
+    category: messages
+    target_path: messages/batch-count.md
   - section: "6.15"
     title: "Batch Item"
-    category: ttlv
-    target_path: ttlv/batch-item.md
+    category: messages
+    target_path: messages/batch-item.md
   - section: "6.16"
     title: "Message Extension"
-    category: ttlv
-    target_path: ttlv/message-extension.md
+    category: messages
+    target_path: messages/message-extension.md
   - section: "6.17"
     title: "Attestation Capable Indicator"
-    category: ttlv
-    target_path: ttlv/attestation-capable-indicator.md
+    category: messages
+    target_path: messages/attestation-capable-indicator.md
   - section: "6.18"
     title: "Client Correlation Value"
-    category: ttlv
-    target_path: ttlv/client-correlation-value.md
+    category: messages
+    target_path: messages/client-correlation-value.md
   - section: "6.19"
     title: "Server Correlation Value"
-    category: ttlv
-    target_path: ttlv/server-correlation-value.md
+    category: messages
+    target_path: messages/server-correlation-value.md
   - section: "7.1"
     title: "Message Structure"
-    category: ttlv
-    target_path: ttlv/message-structure.md
+    category: messages
+    target_path: messages/message-structure.md
   - section: "7.2"
     title: "Operations"
-    category: ttlv
-    target_path: ttlv/operations.md
+    category: structures
+    target_path: structures/operations.md
   - section: "8"
     title: "Authentication"
     category: concept

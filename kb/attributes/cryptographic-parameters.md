@@ -22,7 +22,7 @@ construction, and signature scheme details. Operations like
 take these parameters in the request or fall back to an instance stored on
 the object. For certificates it describes the embedded public key. Key
 wrapping uses it too, via the key-information structures in
-[Key Wrapping Data](../ttlv/key-wrapping-data.md).
+[Key Wrapping Data](../structures/key-wrapping-data.md).
 
 ## Data Type & Structure
 
@@ -40,7 +40,7 @@ A structure in which every field is optional:
 
 - Optional; **multi-instance** — an object can store several parameter sets
   (e.g. one for CBC, one for GCM), distinguished by Attribute Index.
-- When a [Key Wrapping Specification](../ttlv/key-wrapping-specification.md)
+- When a [Key Wrapping Specification](../structures/key-wrapping-specification.md)
   names parameters, they must match one stored instance; with none specified,
   the server uses the instance with the lowest index.
 - For digital signatures, specify either the Digital Signature Algorithm

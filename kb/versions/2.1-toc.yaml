@@ -61,52 +61,52 @@ sections:
     target_path: kb/objects/symmetric-key.md
   - section: "3.1"
     title: "Key Block"
-    category: ttlv
-    target_path: kb/ttlv/key-block.md
+    category: structures
+    target_path: kb/structures/key-block.md
   - section: "3.2"
     title: "Key Value"
-    category: ttlv
-    target_path: kb/ttlv/key-value.md
+    category: structures
+    target_path: kb/structures/key-value.md
   - section: "3.3"
     title: "Key Wrapping Data"
-    category: ttlv
-    target_path: kb/ttlv/key-wrapping-data.md
+    category: structures
+    target_path: kb/structures/key-wrapping-data.md
   - section: "3.4"
     title: "Transparent Symmetric Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.5"
     title: "Transparent DSA Private Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.6"
     title: "Transparent DSA Public Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.7"
     title: "Transparent RSA Private Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.8"
     title: "Transparent RSA Public Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.9"
     title: "Transparent DH Private Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.10"
     title: "Transparent DH Public Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.11"
     title: "Transparent EC Private Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "3.12"
     title: "Transparent EC Public Key"
-    category: ttlv
-    target_path: kb/ttlv/transparent-key-structures.md
+    category: structures
+    target_path: kb/structures/transparent-key-structures.md
   - section: "4.1"
     title: "Activation Date"
     category: attribute
@@ -361,32 +361,32 @@ sections:
     target_path: kb/attributes/x-509-certificate-subject.md
   - section: "5.1"
     title: "Attributes"
-    category: ttlv
-    target_path: kb/ttlv/attribute.md
+    category: structures
+    target_path: kb/structures/attribute.md
   - section: "5.2"
     title: "Common Attributes"
-    category: ttlv
-    target_path: kb/ttlv/common-attributes.md
+    category: structures
+    target_path: kb/structures/common-attributes.md
   - section: "5.3"
     title: "Private Key Attributes"
-    category: ttlv
-    target_path: kb/ttlv/private-key-attributes.md
+    category: structures
+    target_path: kb/structures/private-key-attributes.md
   - section: "5.4"
     title: "Public Key Attributes"
-    category: ttlv
-    target_path: kb/ttlv/public-key-attributes.md
+    category: structures
+    target_path: kb/structures/public-key-attributes.md
   - section: "5.5"
     title: "Attribute Reference"
-    category: ttlv
-    target_path: kb/ttlv/attribute-reference.md
+    category: structures
+    target_path: kb/structures/attribute-reference.md
   - section: "5.6"
     title: "Current Attribute"
-    category: ttlv
-    target_path: kb/ttlv/current-attribute.md
+    category: structures
+    target_path: kb/structures/current-attribute.md
   - section: "5.7"
     title: "New Attribute"
-    category: ttlv
-    target_path: kb/ttlv/new-attribute.md
+    category: structures
+    target_path: kb/structures/new-attribute.md
   - section: "6.1.1"
     title: "Activate"
     category: operation
@@ -637,272 +637,272 @@ sections:
     target_path: kb/operations/server-to-client/set-endpoint-role.md
   - section: "7.1"
     title: "Asynchronous Correlation Values"
-    category: ttlv
-    target_path: kb/ttlv/asynchronous-correlation-values.md
+    category: structures
+    target_path: kb/structures/asynchronous-correlation-values.md
   - section: "7.2"
     title: "Asynchronous Request"
-    category: ttlv
-    target_path: kb/ttlv/asynchronous-request.md
+    category: structures
+    target_path: kb/structures/asynchronous-request.md
   - section: "7.3"
     title: "Authenticated Encryption Additional Data"
-    category: ttlv
-    target_path: kb/ttlv/authenticated-encryption-additional-data.md
+    category: structures
+    target_path: kb/structures/authenticated-encryption-additional-data.md
   - section: "7.4"
     title: "Authenticated Encryption Tag"
-    category: ttlv
-    target_path: kb/ttlv/authenticated-encryption-tag.md
+    category: structures
+    target_path: kb/structures/authenticated-encryption-tag.md
   - section: "7.5"
     title: "Capability Information"
-    category: ttlv
-    target_path: kb/ttlv/capability-information.md
+    category: structures
+    target_path: kb/structures/capability-information.md
   - section: "7.6"
     title: "Constraint"
-    category: ttlv
-    target_path: kb/ttlv/constraint.md
+    category: structures
+    target_path: kb/structures/constraint.md
   - section: "7.7"
     title: "Constraints"
-    category: ttlv
-    target_path: kb/ttlv/constraints.md
+    category: structures
+    target_path: kb/structures/constraints.md
   - section: "7.8"
     title: "Correlation Value"
-    category: ttlv
-    target_path: kb/ttlv/correlation-value.md
+    category: structures
+    target_path: kb/structures/correlation-value.md
   - section: "7.9"
     title: "Data"
-    category: ttlv
-    target_path: kb/ttlv/data.md
+    category: structures
+    target_path: kb/structures/data.md
   - section: "7.10"
     title: "Data Length"
-    category: ttlv
-    target_path: kb/ttlv/data-length.md
+    category: structures
+    target_path: kb/structures/data-length.md
   - section: "7.11"
     title: "Defaults Information"
-    category: ttlv
-    target_path: kb/ttlv/defaults-information.md
+    category: structures
+    target_path: kb/structures/defaults-information.md
   - section: "7.12"
     title: "Derivation Parameters"
-    category: ttlv
-    target_path: kb/ttlv/derivation-parameters.md
+    category: structures
+    target_path: kb/structures/derivation-parameters.md
   - section: "7.13"
     title: "Extension Information"
-    category: ttlv
-    target_path: kb/ttlv/extension-information.md
+    category: structures
+    target_path: kb/structures/extension-information.md
   - section: "7.14"
     title: "Final Indicator"
-    category: ttlv
-    target_path: kb/ttlv/final-indicator.md
+    category: structures
+    target_path: kb/structures/final-indicator.md
   - section: "7.15"
     title: "Interop Function"
-    category: ttlv
-    target_path: kb/ttlv/interop-function.md
+    category: structures
+    target_path: kb/structures/interop-function.md
   - section: "7.16"
     title: "Interop Identifier"
-    category: ttlv
-    target_path: kb/ttlv/interop-identifier.md
+    category: structures
+    target_path: kb/structures/interop-identifier.md
   - section: "7.17"
     title: "Init Indicator"
-    category: ttlv
-    target_path: kb/ttlv/init-indicator.md
+    category: structures
+    target_path: kb/structures/init-indicator.md
   - section: "7.18"
     title: "Key Wrapping Specification"
-    category: ttlv
-    target_path: kb/ttlv/key-wrapping-specification.md
+    category: structures
+    target_path: kb/structures/key-wrapping-specification.md
   - section: "7.19"
     title: "Log Message"
-    category: ttlv
-    target_path: kb/ttlv/log-message.md
+    category: structures
+    target_path: kb/structures/log-message.md
   - section: "7.20"
     title: "MAC Data"
-    category: ttlv
-    target_path: kb/ttlv/mac-data.md
+    category: structures
+    target_path: kb/structures/mac-data.md
   - section: "7.21"
     title: "Objects"
-    category: ttlv
-    target_path: kb/ttlv/objects.md
+    category: structures
+    target_path: kb/structures/objects.md
   - section: "7.22"
     title: "Object Defaults"
-    category: ttlv
-    target_path: kb/ttlv/object-defaults.md
+    category: structures
+    target_path: kb/structures/object-defaults.md
   - section: "7.23"
     title: "Object Groups"
-    category: ttlv
-    target_path: kb/ttlv/object-groups.md
+    category: structures
+    target_path: kb/structures/object-groups.md
   - section: "7.24"
     title: "Object Types"
-    category: ttlv
-    target_path: kb/ttlv/object-types.md
+    category: structures
+    target_path: kb/structures/object-types.md
   - section: "7.25"
     title: "Operations"
-    category: ttlv
-    target_path: kb/ttlv/operations.md
+    category: structures
+    target_path: kb/structures/operations.md
   - section: "7.26"
     title: "PKCS#11 Function"
-    category: ttlv
-    target_path: kb/ttlv/pkcs-11-function.md
+    category: structures
+    target_path: kb/structures/pkcs-11-function.md
   - section: "7.27"
     title: "PKCS#11 Input Parameters"
-    category: ttlv
-    target_path: kb/ttlv/pkcs-11-input-parameters.md
+    category: structures
+    target_path: kb/structures/pkcs-11-input-parameters.md
   - section: "7.28"
     title: "PKCS#11 Interface"
-    category: ttlv
-    target_path: kb/ttlv/pkcs-11-interface.md
+    category: structures
+    target_path: kb/structures/pkcs-11-interface.md
   - section: "7.29"
     title: "PKCS#11 Output Parameters"
-    category: ttlv
-    target_path: kb/ttlv/pkcs-11-output-parameters.md
+    category: structures
+    target_path: kb/structures/pkcs-11-output-parameters.md
   - section: "7.30"
     title: "PKCS#11 Return Code"
-    category: ttlv
-    target_path: kb/ttlv/pkcs-11-return-code.md
+    category: structures
+    target_path: kb/structures/pkcs-11-return-code.md
   - section: "7.31"
     title: "Profile Information"
-    category: ttlv
-    target_path: kb/ttlv/profile-information.md
+    category: structures
+    target_path: kb/structures/profile-information.md
   - section: "7.32"
     title: "Profile Version"
-    category: ttlv
-    target_path: kb/ttlv/profile-version.md
+    category: structures
+    target_path: kb/structures/profile-version.md
   - section: "7.33"
     title: "Protection Storage Masks"
-    category: ttlv
-    target_path: kb/ttlv/protection-storage-masks.md
+    category: structures
+    target_path: kb/structures/protection-storage-masks.md
   - section: "7.34"
     title: "Right"
-    category: ttlv
-    target_path: kb/ttlv/right.md
+    category: structures
+    target_path: kb/structures/right.md
   - section: "7.35"
     title: "Rights"
-    category: ttlv
-    target_path: kb/ttlv/rights.md
+    category: structures
+    target_path: kb/structures/rights.md
   - section: "7.36"
     title: "RNG Parameters"
-    category: ttlv
-    target_path: kb/ttlv/rng-parameters.md
+    category: structures
+    target_path: kb/structures/rng-parameters.md
   - section: "7.37"
     title: "Server Information"
-    category: ttlv
-    target_path: kb/ttlv/server-information.md
+    category: structures
+    target_path: kb/structures/server-information.md
   - section: "7.38"
     title: "Signature Data"
-    category: ttlv
-    target_path: kb/ttlv/signature-data.md
+    category: structures
+    target_path: kb/structures/signature-data.md
   - section: "7.39"
     title: "Ticket"
-    category: ttlv
-    target_path: kb/ttlv/ticket.md
+    category: structures
+    target_path: kb/structures/ticket.md
   - section: "7.40"
     title: "Usage Limits"
-    category: ttlv
-    target_path: kb/ttlv/usage-limits.md
+    category: structures
+    target_path: kb/structures/usage-limits.md
   - section: "7.41"
     title: "Validation Information"
-    category: ttlv
-    target_path: kb/ttlv/validation-information.md
+    category: structures
+    target_path: kb/structures/validation-information.md
   - section: "8.1"
     title: "Request Message"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "8.2"
     title: "Request Header"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "8.3"
     title: "Request Batch Item"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "8.4"
     title: "Response Message"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "8.5"
     title: "Response Header"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "8.6"
     title: "Response Batch Item"
-    category: ttlv
-    target_path: kb/ttlv/message-structure.md
+    category: messages
+    target_path: kb/messages/message-structure.md
   - section: "9.1"
     title: "Asynchronous Correlation Value"
-    category: ttlv
-    target_path: kb/ttlv/asynchronous-correlation-value.md
+    category: messages
+    target_path: kb/messages/asynchronous-correlation-value.md
   - section: "9.2"
     title: "Asynchronous Indicator"
-    category: ttlv
-    target_path: kb/ttlv/asynchronous-indicator.md
+    category: messages
+    target_path: kb/messages/asynchronous-indicator.md
   - section: "9.3"
     title: "Attestation Capable Indicator"
-    category: ttlv
-    target_path: kb/ttlv/attestation-capable-indicator.md
+    category: messages
+    target_path: kb/messages/attestation-capable-indicator.md
   - section: "9.4"
     title: "Authentication"
-    category: ttlv
-    target_path: kb/ttlv/authentication.md
+    category: messages
+    target_path: kb/messages/authentication.md
   - section: "9.5"
     title: "Batch Count"
-    category: ttlv
-    target_path: kb/ttlv/batch-count.md
+    category: messages
+    target_path: kb/messages/batch-count.md
   - section: "9.6"
     title: "Batch Error Continuation Option"
-    category: ttlv
-    target_path: kb/ttlv/batch-error-continuation-option.md
+    category: messages
+    target_path: kb/messages/batch-error-continuation-option.md
   - section: "9.7"
     title: "Batch Item"
-    category: ttlv
-    target_path: kb/ttlv/batch-item.md
+    category: messages
+    target_path: kb/messages/batch-item.md
   - section: "9.8"
     title: "Batch Order Option"
-    category: ttlv
-    target_path: kb/ttlv/batch-order-option.md
+    category: messages
+    target_path: kb/messages/batch-order-option.md
   - section: "9.9"
     title: "Correlation Value (Client)"
-    category: ttlv
-    target_path: kb/ttlv/client-correlation-value.md
+    category: messages
+    target_path: kb/messages/client-correlation-value.md
   - section: "9.10"
     title: "Correlation Value (Server)"
-    category: ttlv
-    target_path: kb/ttlv/server-correlation-value.md
+    category: messages
+    target_path: kb/messages/server-correlation-value.md
   - section: "9.11"
     title: "Credential"
-    category: ttlv
-    target_path: kb/ttlv/credential.md
+    category: messages
+    target_path: kb/messages/credential.md
   - section: "9.12"
     title: "Maximum Response Size"
-    category: ttlv
-    target_path: kb/ttlv/maximum-response-size.md
+    category: messages
+    target_path: kb/messages/maximum-response-size.md
   - section: "9.13"
     title: "Message Extension"
-    category: ttlv
-    target_path: kb/ttlv/message-extension.md
+    category: messages
+    target_path: kb/messages/message-extension.md
   - section: "9.14"
     title: "Nonce"
-    category: ttlv
-    target_path: kb/ttlv/nonce.md
+    category: messages
+    target_path: kb/messages/nonce.md
   - section: "9.15"
     title: "Operation"
-    category: ttlv
-    target_path: kb/ttlv/operation.md
+    category: messages
+    target_path: kb/messages/operation.md
   - section: "9.17"
     title: "Result Message"
-    category: ttlv
-    target_path: kb/ttlv/result-message.md
+    category: messages
+    target_path: kb/messages/result-message.md
   - section: "9.18"
     title: "Result Reason"
-    category: ttlv
-    target_path: kb/ttlv/result-reason.md
+    category: messages
+    target_path: kb/messages/result-reason.md
   - section: "9.19"
     title: "Result Status"
-    category: ttlv
-    target_path: kb/ttlv/result-status.md
+    category: messages
+    target_path: kb/messages/result-status.md
   - section: "9.20"
     title: "Time Stamp"
-    category: ttlv
-    target_path: kb/ttlv/time-stamp.md
+    category: messages
+    target_path: kb/messages/time-stamp.md
   - section: "9.21"
     title: "Unique Batch Item ID"
-    category: ttlv
-    target_path: kb/ttlv/unique-batch-item-id.md
+    category: messages
+    target_path: kb/messages/unique-batch-item-id.md
   - section: "10.1.1"
     title: "Tag"
     category: ttlv

@@ -28,7 +28,7 @@ material rather than randomly generated.
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The base object(s) whose material feeds the derivation. The ID Placeholder may not be substituted here. |
 | Derivation Method | `420031` | `DerivationMethod` | Yes | An enumeration naming the derivation function to apply. |
 | Derivation Parameters | `420032` | `DerivationParameters` | Yes | A structure carrying the inputs the chosen method needs. |
-| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

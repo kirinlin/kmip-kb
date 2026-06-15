@@ -50,7 +50,7 @@ the concatenation of their sub-items in the order their definitions list.
 
 The defined tag registry (`420001`–`420124` in 1.4, extended in later
 releases) is the master list in the spec's tag enumeration (v1.x §9.1.3.1);
-`540000`–`54FFFF` is the [extensions](extension-information.md) space. TTLV is
+`540000`–`54FFFF` is the [extensions](../structures/extension-information.md) space. TTLV is
 one of several possible encodings — the encoding chapter (v2.1 §10.1; v1.x §9)
 is structured to admit alternatives, and v2.0 promoted HTTPS/REST, JSON, and
 XML to first-class wire formats in the core spec (§10.2) — but TTLV is the
@@ -65,6 +65,6 @@ length 4, then the 4-byte value plus 4 padding bytes. A Text String
 
 ## Related
 
-[Message Structure](message-structure.md) ·
-[Extension Information](extension-information.md) ·
+[Message Structure](../messages/message-structure.md) ·
+[Extension Information](../structures/extension-information.md) ·
 [Transport](../concepts/transport.md)

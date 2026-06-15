@@ -26,7 +26,7 @@ subclauses.
 Client profiles are deliberately lighter than server profiles. A **Baseline
 Client** must form well-encoded requests, negotiate TLS as the profile
 requires, handle the standard [response
-structure](../ttlv/message-structure.md) including failures, and tolerate
+structure](../messages/message-structure.md) including failures, and tolerate
 fields it does not recognize from newer minor versions. On top of that,
 use-case profiles (symmetric key client, storage client, cryptographic
 services client, and so on) prescribe which operations the client must be

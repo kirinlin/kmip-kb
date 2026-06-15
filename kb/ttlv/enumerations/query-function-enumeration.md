@@ -23,18 +23,18 @@ Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
 
 - **Query Operations**: Returns the list of KMIP operations the server supports.
 - **Query Objects**: Returns the list of managed object types the server stores.
-- **Query Server Information**: Returns the [Server Information](../server-information.md) structure — server name, vendor, version, conformance clauses.
+- **Query Server Information**: Returns the [Server Information](../../structures/server-information.md) structure — server name, vendor, version, conformance clauses.
 - **Query Application Namespaces**: Returns vendor-defined application namespaces.
 - **Query Extension List**: Returns names of vendor extensions supported.
 - **Query Extension Map**: Returns the full extension map (name to numeric code).
 - **Query Attestation Types**: Returns the attestation credential types the server accepts.
 - **Query RNG Parameters**: Returns random number generation capabilities.
 - **Query Validations**: Returns cryptographic validation records the server holds.
-- **Query Profiles** *(v1.1+)*: Returns the [Profile Version](../profile-version.md) structures listing supported conformance profiles.
+- **Query Profiles** *(v1.1+)*: Returns the [Profile Version](../../structures/profile-version.md) structures listing supported conformance profiles.
 - **Query Capabilities** *(v1.1+)*: Returns algorithm-and-mode capability declarations.
 - **Query Client Registration Methods** *(v1.2+)*: Returns how clients may register with the server.
-- **Query Defaults Information** *(v2.1)*: Returns the [Defaults Information](../defaults-information.md) structure — server default attributes by object type.
-- **Query Storage Protection Masks** *(v2.1)*: Returns the [Protection Storage Masks](../protection-storage-masks.md) the server supports.
+- **Query Defaults Information** *(v2.1)*: Returns the [Defaults Information](../../structures/defaults-information.md) structure — server default attributes by object type.
+- **Query Storage Protection Masks** *(v2.1)*: Returns the [Protection Storage Masks](../../structures/protection-storage-masks.md) the server supports.
 - **Query Interop Functions** *(v2.1)*: Returns named interoperability test functions available via the Interop operation.
 - **Query PKCS#11 Interfaces** *(v2.1)*: Returns PKCS#11 interface descriptors for the PKCS#11 tunnel.
 
@@ -44,4 +44,4 @@ A client discovering a new server typically sends a single Query with all releva
 
 ## Related
 
-[Query](../../operations/query.md) · [Server Information](../server-information.md) · [Profile Version](../profile-version.md) · [Defaults Information](../defaults-information.md)
+[Query](../../operations/query.md) · [Server Information](../../structures/server-information.md) · [Profile Version](../../structures/profile-version.md) · [Defaults Information](../../structures/defaults-information.md)

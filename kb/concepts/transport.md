@@ -20,7 +20,7 @@ and servers maintain a channel providing
 confidentiality, integrity, and authenticity, with the concrete mechanism
 defined in the profiles document. The protocol itself is just
 [TTLV-encoded](../ttlv/ttlv-encoding.md)
-[messages](../ttlv/message-structure.md) exchanged over that secured channel.
+[messages](../messages/message-structure.md) exchanged over that secured channel.
 
 ## Details
 
@@ -50,7 +50,7 @@ out-of-band configuration.
 - Stream parsing matters: TTLV messages are self-delimiting via their length
   fields, and multiple requests may arrive back-to-back on one connection.
   Read the eight-byte tag/type/length prefix, then exactly `length` bytes.
-- Respect [Maximum Response Size](../ttlv/maximum-response-size.md) — small
+- Respect [Maximum Response Size](../messages/maximum-response-size.md) — small
   embedded clients use it to keep responses inside their buffer budget.
 - Long-lived connections are normal; clients commonly batch many operations
   per connection rather than reconnecting per request.
@@ -59,4 +59,4 @@ out-of-band configuration.
 
 [Authentication](authentication.md) · [Error Handling](error-handling.md) ·
 [TTLV Encoding](../ttlv/ttlv-encoding.md) ·
-[Message Structure](../ttlv/message-structure.md)
+[Message Structure](../messages/message-structure.md)

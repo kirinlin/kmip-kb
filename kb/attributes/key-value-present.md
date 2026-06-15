@@ -18,7 +18,7 @@ xml_element: "KeyValuePresent"
 
 Marks an object that was registered *without* its key material. KMIP 1.2
 allowed [Register](../operations/register.md) to omit the
-[Key Value](../ttlv/key-value.md) from the [Key Block](../ttlv/key-block.md),
+[Key Value](../structures/key-value.md) from the [Key Block](../structures/key-block.md),
 so a server can act as a pure metadata registry for keys stored elsewhere
 (an HSM, a tape silo). This attribute is how that condition is recorded and
 queried.

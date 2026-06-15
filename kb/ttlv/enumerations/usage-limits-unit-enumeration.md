@@ -13,7 +13,7 @@ keywords: ["usage limits", "usage unit", "byte count", "object count", "key usag
 
 ## Overview
 
-The Usage Limits Unit enumeration specifies how the usage counter in the [Usage Limits](../usage-limits.md) structure is measured. It is the unit of the Usage Limits Count and Usage Limits Total fields, determining whether the server counts individual operation invocations or the total data volume processed with the key.
+The Usage Limits Unit enumeration specifies how the usage counter in the [Usage Limits](../../structures/usage-limits.md) structure is measured. It is the unit of the Usage Limits Count and Usage Limits Total fields, determining whether the server counts individual operation invocations or the total data volume processed with the key.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -30,4 +30,4 @@ An AES-GCM key for database column encryption might have Usage Limits Unit = **B
 
 ## Related
 
-[Usage Limits structure](../usage-limits.md) · [Get Usage Allocation](../../operations/get-usage-allocation.md) · [Obtain Lease](../../operations/obtain-lease.md)
+[Usage Limits structure](../../structures/usage-limits.md) · [Get Usage Allocation](../../operations/get-usage-allocation.md) · [Obtain Lease](../../operations/obtain-lease.md)

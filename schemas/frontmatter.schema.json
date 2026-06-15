@@ -29,6 +29,8 @@
         "object",
         "concept",
         "ttlv",
+        "structures",
+        "messages",
         "profile",
         "reference",
         "workflow",

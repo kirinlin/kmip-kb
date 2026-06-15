@@ -22,7 +22,7 @@ Encoded as a 4-byte integer (TTLV type `05`, Enumeration).
 ## Fields & Structure
 
 - **Server Processing**: The server has accepted the operation and is currently working on it. The client should poll again later.
-- **Completed**: The operation has finished. The response for the original operation is available in the [Asynchronous Request](../asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated.
+- **Completed**: The operation has finished. The response for the original operation is available in the [Asynchronous Request](../../structures/asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated.
 - **Cancelled**: The operation was stopped before completion, either because the client issued a Cancel or the server aborted it. No result is available.
 
 ## Examples
@@ -31,4 +31,4 @@ A client that submitted a large key-generation batch operation polls with Query 
 
 ## Related
 
-[Asynchronous Request](../asynchronous-request.md) · [Asynchronous Correlation Values](../asynchronous-correlation-values.md) · [Query Asynchronous Requests](../../operations/query-asynchronous-requests.md)
+[Asynchronous Request](../../structures/asynchronous-request.md) · [Asynchronous Correlation Values](../../structures/asynchronous-correlation-values.md) · [Query Asynchronous Requests](../../operations/query-asynchronous-requests.md)

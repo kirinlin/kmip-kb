@@ -55,8 +55,8 @@ Primarily expanded certificate management and added two new operations.
 - *Extension Information* (§2.1.9): new base-object structure carrying
   vendor-extension metadata, returned by Query.
 - *Encoding Option*: new field in
-  [Key Wrapping Data](../ttlv/key-wrapping-data.md) and
-  [Key Wrapping Specification](../ttlv/key-wrapping-specification.md) that
+  [Key Wrapping Data](../structures/key-wrapping-data.md) and
+  [Key Wrapping Specification](../structures/key-wrapping-specification.md) that
   specifies how the wrapped key-value bytes are encoded.
 
 ### 1.2
@@ -78,11 +78,11 @@ management, PGP key objects, and attestation.
   managed object type alongside symmetric keys, asymmetric key pairs, and
   certificates.
 - *Crypto-operation structures* (§2.1.10–14): five new base objects supporting
-  the new crypto operations — [Data](../ttlv/data.md),
-  [Data Length](../ttlv/data-length.md),
-  [Signature Data](../ttlv/signature-data.md),
-  [MAC Data](../ttlv/mac-data.md), and
-  [Nonce](../ttlv/nonce.md) (used as an attestation challenge).
+  the new crypto operations — [Data](../structures/data.md),
+  [Data Length](../structures/data-length.md),
+  [Signature Data](../structures/signature-data.md),
+  [MAC Data](../structures/mac-data.md), and
+  [Nonce](../messages/nonce.md) (used as an attestation challenge).
 - *New attributes* (§3.40–43):
   [Alternative Name](../attributes/alternative-name.md),
   [Key Value Present](../attributes/key-value-present.md),
@@ -90,10 +90,10 @@ management, PGP key objects, and attestation.
   [Original Creation Date](../attributes/original-creation-date.md).
 - *Attestation* (§6.17): an Attestation credential type allows a client to
   present a hardware/software measurement or third-party assertion instead of
-  a password. The server issues a [Nonce](../ttlv/nonce.md) challenge; the
+  a password. The server issues a [Nonce](../messages/nonce.md) challenge; the
   client responds with an Attestation Credential containing either an
   Attestation Measurement or Attestation Assertion. The new
-  [Attestation Capable Indicator](../ttlv/attestation-capable-indicator.md)
+  [Attestation Capable Indicator](../messages/attestation-capable-indicator.md)
   message-header flag advertises whether the client supports attestation.
   Query gains a "Query Attestation Types" function to discover which
   attestation methods a server accepts.
@@ -103,16 +103,16 @@ management, PGP key objects, and attestation.
 Streaming multi-part operations, server-to-client Query, richer server
 capability reporting, and several deprecations clearing the path toward 1.4.
 
-- *Streaming crypto* (§2.1.15–17): [Correlation Value](../ttlv/correlation-value.md),
-  [Init Indicator](../ttlv/init-indicator.md), and
-  [Final Indicator](../ttlv/final-indicator.md) link the batch items of a
+- *Streaming crypto* (§2.1.15–17): [Correlation Value](../structures/correlation-value.md),
+  [Init Indicator](../structures/init-indicator.md), and
+  [Final Indicator](../structures/final-indicator.md) link the batch items of a
   multi-part Encrypt/Decrypt/Sign/MAC sequence into a single logical session.
 - *Capability reporting* (§2.1.18–21): four new structures returned by the
   §4.25 Query response —
-  [RNG Parameters](../ttlv/rng-parameters.md) describes a random-number
-  generator; [Profile Information](../ttlv/profile-information.md),
-  [Validation Information](../ttlv/validation-information.md), and
-  [Capability Information](../ttlv/capability-information.md) let servers
+  [RNG Parameters](../structures/rng-parameters.md) describes a random-number
+  generator; [Profile Information](../structures/profile-information.md),
+  [Validation Information](../structures/validation-information.md), and
+  [Capability Information](../structures/capability-information.md) let servers
   advertise their conformance and operational limits in machine-readable form.
 - *Random Number Generator attribute* (§3.44): records which RNG was used
   when a managed object was created (see
@@ -215,7 +215,7 @@ wire formats, making multi-protocol servers an official first-class concern.
 
 **Removals:**
 - *Template object* (deprecated v1.3): callers should use per-operation
-  [Template-Attribute](../ttlv/template-attribute-structures.md) structures
+  [Template-Attribute](../structures/template-attribute-structures.md) structures
   or the new §5 Attribute Data Structures instead.
 - *Certificate Identifier*, *Certificate Subject*, *Certificate Issuer*
   attributes (deprecated v1.1): use

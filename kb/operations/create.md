@@ -29,7 +29,7 @@ for asymmetric keys. `Create` is not used to build Template objects.
 | Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes the new key should carry, given as individual attributes and/or by referencing server-side Template objects by name. Template objects have been deprecated since version 1.3, so attributes are better supplied individually. |
 
 *Version note:* KMIP 2.0 replaced the Template-Attribute wrapper with the flat
-[Attributes](../ttlv/template-attribute-structures.md) structure; the attribute
+[Attributes](../structures/template-attribute-structures.md) structure; the attribute
 payload it carries is unchanged.
 
 At minimum the request must convey a [Cryptographic Algorithm](../attributes/cryptographic-algorithm.md)

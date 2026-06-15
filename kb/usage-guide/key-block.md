@@ -29,4 +29,4 @@ Clients that do not request wrapping receive the key in plaintext within the Key
 
 ## Related Concepts
 
-See [Key Block](../ttlv/key-block.md) for the TTLV encoding details and [Using Wrapped Keys with KMIP](using-wrapped-keys-with-kmip.md) for wrapping examples.
+See [Key Block](../structures/key-block.md) for the TTLV encoding details and [Using Wrapped Keys with KMIP](using-wrapped-keys-with-kmip.md) for wrapping examples.

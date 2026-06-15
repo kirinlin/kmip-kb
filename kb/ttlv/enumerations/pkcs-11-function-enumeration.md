@@ -39,4 +39,4 @@ A KMIP client that implements a PKCS#11 provider uses the PKCS#11 operation with
 
 ## Related
 
-[PKCS#11 Function structure](../pkcs-11-function.md) · [PKCS#11 operation](../../operations/pkcs-11.md) · [PKCS#11 Return Code Enumeration](pkcs-11-return-code-enumeration.md)
+[PKCS#11 Function structure](../../structures/pkcs-11-function.md) · [PKCS#11 operation](../../operations/pkcs-11.md) · [PKCS#11 Return Code Enumeration](pkcs-11-return-code-enumeration.md)

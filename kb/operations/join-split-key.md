@@ -26,7 +26,7 @@ was added in KMIP 1.2.
 | Object Type | `420057` | `ObjectType` | Yes | The type of object to form from the splits. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The split objects to combine; at least the threshold number must be supplied. |
 | Secret Data Type | `420086` | `SecretDataType` | No | When the result is secret data, which secret-data type the splits form. |
-| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes for the reconstructed object. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes for the reconstructed object. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 ## Response Fields
 

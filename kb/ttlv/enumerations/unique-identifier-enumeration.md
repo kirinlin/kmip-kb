@@ -32,4 +32,4 @@ A three-item batch — item 1: Locate (attributes = State: Active, Object Type: 
 
 ## Related
 
-[Unique Identifier attribute](../../attributes/unique-identifier.md) · [Locate](../../operations/locate.md) · [Message Structure](../message-structure.md)
+[Unique Identifier attribute](../../attributes/unique-identifier.md) · [Locate](../../operations/locate.md) · [Message Structure](../../messages/message-structure.md)

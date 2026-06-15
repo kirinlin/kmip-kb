@@ -13,7 +13,7 @@ keywords: ["key format", "PKCS#1", "PKCS#8", "X.509", "raw", "transparent", "key
 
 ## Overview
 
-The Key Format Type enumeration specifies the encoding or serialisation format of the key material stored inside a [Key Block](../key-block.md). Different applications, protocols, and hardware require keys in different wire formats: a TLS library expects PKCS#8 or ECPrivateKey for private keys; an HSM API may require PKCS#1 for RSA; a key escrow system may need raw transparent key structures; and a PKCS#12 archive bundles a private key with its certificate chain. The key format type tells consumers exactly how to interpret and parse the key bytes they receive. It also controls what the client receives from a [Get](../../operations/get.md) operation when a specific format is requested.
+The Key Format Type enumeration specifies the encoding or serialisation format of the key material stored inside a [Key Block](../../structures/key-block.md). Different applications, protocols, and hardware require keys in different wire formats: a TLS library expects PKCS#8 or ECPrivateKey for private keys; an HSM API may require PKCS#1 for RSA; a key escrow system may need raw transparent key structures; and a PKCS#12 archive bundles a private key with its certificate chain. The key format type tells consumers exactly how to interpret and parse the key bytes they receive. It also controls what the client receives from a [Get](../../operations/get.md) operation when a specific format is requested.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -47,7 +47,7 @@ An application using Java's KeyStore API requests a private key in **PKCS#8** fo
 
 ## Related
 
-- [Key Block structure](../key-block.md) — the container that holds key material with this format type field
+- [Key Block structure](../../structures/key-block.md) — the container that holds key material with this format type field
 - [Key Format Type attribute](../../attributes/key-format-type.md) — the per-object attribute recording the stored format
 - [Get operation](../../operations/get.md) — clients can request a specific format type when retrieving a key
 - [Register operation](../../operations/register.md) — clients specify the format of key material being imported

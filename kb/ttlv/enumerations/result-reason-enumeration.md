@@ -45,4 +45,4 @@ A Get request for a non-existent key returns Result Status = **Operation Failed*
 
 ## Related
 
-[Result Status Enumeration](result-status-enumeration.md) · [Error Handling](../../concepts/error-handling.md) · [Message Structure](../message-structure.md)
+[Result Status Enumeration](result-status-enumeration.md) · [Error Handling](../../concepts/error-handling.md) · [Message Structure](../../messages/message-structure.md)

@@ -41,4 +41,4 @@ A tunneled C_Sign that fails because the session has not been logged in returns 
 
 ## Related
 
-[PKCS#11 Return Code structure](../pkcs-11-return-code.md) · [PKCS#11 Function Enumeration](pkcs-11-function-enumeration.md) · [PKCS#11 operation](../../operations/pkcs-11.md)
+[PKCS#11 Return Code structure](../../structures/pkcs-11-return-code.md) · [PKCS#11 Function Enumeration](pkcs-11-function-enumeration.md) · [PKCS#11 operation](../../operations/pkcs-11.md)

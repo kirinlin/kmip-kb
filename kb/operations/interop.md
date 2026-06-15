@@ -13,7 +13,7 @@ keywords: ["interop", "interoperability", "conformance", "test", "protocol valid
 
 ## Purpose
 
-`Interop` is a v2.1 operation that allows a client to invoke a named interoperability test function on the server. It provides a standardized channel for conformance testing, protocol validation, and vendor-specific interoperability exercises without requiring out-of-band communication or non-KMIP tooling. A client identifies the test to run via an [Interop Identifier](../ttlv/interop-identifier.md) and optionally parameterizes it with an [Interop Function](../ttlv/interop-function.md) and associated input data; the server executes the test and returns the result.
+`Interop` is a v2.1 operation that allows a client to invoke a named interoperability test function on the server. It provides a standardized channel for conformance testing, protocol validation, and vendor-specific interoperability exercises without requiring out-of-band communication or non-KMIP tooling. A client identifies the test to run via an [Interop Identifier](../structures/interop-identifier.md) and optionally parameterizes it with an [Interop Function](../structures/interop-function.md) and associated input data; the server executes the test and returns the result.
 
 Servers that advertise interop capability in their [`Query`](query.md) response support this operation. Servers that do not advertise it must return Operation Not Supported.
 
@@ -21,8 +21,8 @@ Servers that advertise interop capability in their [`Query`](query.md) response 
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Interop Identifier | `420161` | `InteropIdentifier` | Yes | Names the interoperability scenario or test suite to invoke on the server. The [Interop Identifier](../ttlv/interop-identifier.md) structure encodes the test namespace and identifier. |
-| Interop Function | `420160` | `InteropFunction` | No | Specifies the particular function within the named test to execute. The [Interop Function](../ttlv/interop-function.md) structure provides additional resolution when a test scenario contains multiple sub-functions. |
+| Interop Identifier | `420161` | `InteropIdentifier` | Yes | Names the interoperability scenario or test suite to invoke on the server. The [Interop Identifier](../structures/interop-identifier.md) structure encodes the test namespace and identifier. |
+| Interop Function | `420160` | `InteropFunction` | No | Specifies the particular function within the named test to execute. The [Interop Function](../structures/interop-function.md) structure provides additional resolution when a test scenario contains multiple sub-functions. |
 | Data | `4200C2` | `Data` | No | Input data for the interop function, such as a plaintext to encrypt or a message to sign, depending on the scenario being tested. |
 
 ## Response Fields

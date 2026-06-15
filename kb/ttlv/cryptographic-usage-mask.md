@@ -66,4 +66,4 @@ An AES key intended solely for encrypting data would carry a Cryptographic Usage
 
 ## Related
 
-[Cryptographic Usage Mask (attribute)](../attributes/cryptographic-usage-mask.md) · [Key Block](key-block.md) · [Create](../operations/create.md) · [Create Key Pair](../operations/create-key-pair.md) · [Register](../operations/register.md)
+[Cryptographic Usage Mask (attribute)](../attributes/cryptographic-usage-mask.md) · [Key Block](../structures/key-block.md) · [Create](../operations/create.md) · [Create Key Pair](../operations/create-key-pair.md) · [Register](../operations/register.md)

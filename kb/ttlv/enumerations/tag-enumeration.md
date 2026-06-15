@@ -47,4 +47,4 @@ A TTLV decoder encountering `42 00 28 05 00 00 00 04 00 00 00 03 00 00 00 00` pa
 
 ## Related
 
-[TTLV Encoding](../ttlv-encoding.md) · [Item Data Types](../../references/item-data-types.md) · [Message Structure](../message-structure.md)
+[TTLV Encoding](../ttlv-encoding.md) · [Item Data Types](../../references/item-data-types.md) · [Message Structure](../../messages/message-structure.md)

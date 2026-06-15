@@ -31,7 +31,7 @@ A single Integer, in bits — not bytes, and not the size of any encoded blob
 - Always present where applicable; single instance; immutable and not
   deletable once the object exists.
 - Must match the key material and the corresponding
-  [Key Block](../ttlv/key-block.md) field.
+  [Key Block](../structures/key-block.md) field.
 - For DSA/DH the value is the length of the prime P; the subgroup size Q is
   requested separately via
   [Cryptographic Domain Parameters](cryptographic-domain-parameters.md).

@@ -21,13 +21,13 @@ This operation is the primary polling mechanism in the KMIP asynchronous executi
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Yes (one or more) | One or more [Asynchronous Correlation Values](../ttlv/asynchronous-correlation-values.md) identifying the pending operations whose status the client wants. Each value was issued by the server when the corresponding asynchronous request was accepted. |
+| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Yes (one or more) | One or more [Asynchronous Correlation Values](../structures/asynchronous-correlation-values.md) identifying the pending operations whose status the client wants. Each value was issued by the server when the corresponding asynchronous request was accepted. |
 
 ## Response Fields
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Asynchronous Request | `420173` | `AsynchronousRequest` | Yes (one per queried value) | One [Asynchronous Request](../ttlv/asynchronous-request.md) entry for each correlation value in the request. Each entry carries the correlation value, the current status of the operation (pending, processing, complete, failed), and — when the operation has completed — the full result that the operation would have returned synchronously. |
+| Asynchronous Request | `420173` | `AsynchronousRequest` | Yes (one per queried value) | One [Asynchronous Request](../structures/asynchronous-request.md) entry for each correlation value in the request. Each entry carries the correlation value, the current status of the operation (pending, processing, complete, failed), and — when the operation has completed — the full result that the operation would have returned synchronously. |
 
 ## Behavior & Server Requirements
 

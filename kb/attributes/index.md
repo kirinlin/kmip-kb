@@ -22,7 +22,7 @@ read with [Get Attributes](../operations/get-attributes.md) /
 [Delete Attribute](../operations/delete-attribute.md), within per-attribute
 rules: who may set it, whether it can change, whether multiple instances may
 exist, and which operations set it implicitly. On the wire each one travels
-in an [Attribute structure](../ttlv/attribute.md) (name + optional index +
+in an [Attribute structure](../structures/attribute.md) (name + optional index +
 value).
 
 ## Identity

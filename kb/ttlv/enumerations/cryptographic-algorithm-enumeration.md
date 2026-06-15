@@ -13,7 +13,7 @@ keywords: ["algorithm", "AES", "RSA", "ECDSA", "ECDH", "Ed25519", "3DES", "ChaCh
 
 ## Overview
 
-The Cryptographic Algorithm enumeration identifies the algorithm associated with a managed key or applied during a cryptographic operation. It is one of the most pervasive enumerations in KMIP, appearing in the [Cryptographic Algorithm attribute](../../attributes/cryptographic-algorithm.md), in [Key Block](../key-block.md) structures, in [Derivation Parameters](../derivation-parameters.md), and in operation request structures whenever the caller needs to name the algorithm. The enumeration spans the full spectrum of symmetric ciphers, asymmetric algorithms, elliptic curves, and MAC algorithms defined across the KMIP version history.
+The Cryptographic Algorithm enumeration identifies the algorithm associated with a managed key or applied during a cryptographic operation. It is one of the most pervasive enumerations in KMIP, appearing in the [Cryptographic Algorithm attribute](../../attributes/cryptographic-algorithm.md), in [Key Block](../../structures/key-block.md) structures, in [Derivation Parameters](../../structures/derivation-parameters.md), and in operation request structures whenever the caller needs to name the algorithm. The enumeration spans the full spectrum of symmetric ciphers, asymmetric algorithms, elliptic curves, and MAC algorithms defined across the KMIP version history.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -58,5 +58,5 @@ A client creating a 256-bit AES key for database column encryption specifies **A
 - [Cryptographic Algorithm attribute](../../attributes/cryptographic-algorithm.md) — the per-object attribute using this enumeration
 - [Cryptographic Length attribute](../../attributes/cryptographic-length.md) — specifies key size in bits, paired with this enumeration
 - [Cryptographic Parameters](../../attributes/cryptographic-parameters.md) — structure that combines algorithm with mode and padding settings
-- [Key Block](../key-block.md) — carries algorithm identifier for the enclosed key material
+- [Key Block](../../structures/key-block.md) — carries algorithm identifier for the enclosed key material
 - [Recommended Curve Enumeration](recommended-curve-enumeration.md) — specifies the elliptic curve when the algorithm is EC/ECDSA/ECDH

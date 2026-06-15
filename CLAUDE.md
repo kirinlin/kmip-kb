@@ -14,9 +14,9 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/structures/ kb/messages/ kb/profiles/ kb/usage-guide/ kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
 
-Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures + §8/§9 Messages + §10.1 TTLV + §12 Bit Masks→`kb/ttlv/`, §11 Enumerations→`kb/ttlv/enumerations/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7/§9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
+Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §10.1 TTLV + §12 Bit Masks→`kb/ttlv/`, §11 Enumerations→`kb/ttlv/enumerations/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures→`kb/structures/`, §8/§9 Messages→`kb/messages/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.1 Base Objects→`kb/structures/`, §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7→`kb/messages/`, §9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
@@ -86,7 +86,7 @@ matter (`spec_versions` per the versions a concept appears in, real `related`
 slugs, `keywords`), then flip `status: stub` → `draft`. Match the depth and
 cross-reference style of already-authored docs (e.g. `kb/operations/register.md`,
 `kb/objects/symmetric-key.md`). Use relative links (e.g.
-`[Key Block](../ttlv/key-block.md)`) and confirm targets exist (stub or
+`[Key Block](../structures/key-block.md)`) and confirm targets exist (stub or
 authored) before linking. Validate before committing:
 
 ```
@@ -113,7 +113,7 @@ Deliberate consolidations/renames are encoded in `V21_SLUG_OVERRIDES` in
 §9.9/§9.10→`client-/server-correlation-value`, §10.1.1–§10.1.5→
 `ttlv-encoding`); the TOC points at the authored doc for those sections
 and the generator never emits stubs for them. Two caveats:
-`kb/operations/re-key.md` (v2.1 §6.1.46) and `kb/ttlv/protocol-version.md`
+`kb/operations/re-key.md` (v2.1 §6.1.46) and `kb/messages/protocol-version.md`
 (v2.1 §9.16) cannot be auto-checked by `check_verbatim.py` because their
 headings were lost in source conversion (§9.16 is the only numbered
 heading missing from the converted v2.1 spec) — re-verify them manually

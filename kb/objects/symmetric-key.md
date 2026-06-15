@@ -24,7 +24,7 @@ most common managed cryptographic object in KMIP, and the natural result of a
 
 ## Structure
 
-A Symmetric Key carries its key material in a single [Key Block](../ttlv/key-block.md),
+A Symmetric Key carries its key material in a single [Key Block](../structures/key-block.md),
 which wraps the format, algorithm, length, and the actual bytes (optionally in
 wrapped form).
 

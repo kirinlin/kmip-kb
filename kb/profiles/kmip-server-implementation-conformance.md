@@ -38,9 +38,9 @@ and attributes plus test cases.
 A server may implement any superset: profiles state minimums, not ceilings.
 What a given server actually supports is discoverable at runtime through
 Query (operations, objects, and — from 1.3 —
-[Profile Information](../ttlv/profile-information.md),
-[capabilities](../ttlv/capability-information.md), and
-[validations](../ttlv/validation-information.md)).
+[Profile Information](../structures/profile-information.md),
+[capabilities](../structures/capability-information.md), and
+[validations](../structures/validation-information.md)).
 
 ## Implications for Implementers
 
@@ -58,4 +58,4 @@ Query (operations, objects, and — from 1.3 —
 
 [KMIP Client Implementation Conformance](kmip-client-implementation-conformance.md) ·
 [Query](../operations/query.md) ·
-[Profile Information](../ttlv/profile-information.md)
+[Profile Information](../structures/profile-information.md)

@@ -34,4 +34,4 @@ A root CA private key requires **FIPS 140-2 Level 3** or higher. A short-lived s
 
 ## Related
 
-[Protection Level attribute](../../attributes/protection-level.md) · [Protection Storage Mask](../../ttlv/protection-storage-mask.md) · [Sensitive attribute](../../attributes/sensitive.md)
+[Protection Level attribute](../../attributes/protection-level.md) · [Protection Storage Mask](../protection-storage-mask.md) · [Sensitive attribute](../../attributes/sensitive.md)

@@ -48,13 +48,13 @@ except Exception:  # pragma: no cover - optional dependency
 
 # v1.x section numbering (v1.0 – v1.4)
 V1X_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
-    "2.1": ("ttlv", 3, ""),       # Base Objects -> TTLV structures (Key Block, ...)
+    "2.1": ("structures", 3, ""), # Base Objects -> data structures (Key Block, ...)
     "2.2": ("object", 3, ""),     # Managed Objects (Symmetric Key, Certificate, ...)
     "3": ("attribute", 2, ""),    # Attributes 3.1 .. 3.N
     "4": ("operation", 2, ""),    # Client-to-Server Operations
     "5": ("operation", 2, "server-to-client"),  # Server-to-Client Operations
-    "6": ("ttlv", 2, ""),         # Message Contents
-    "7": ("ttlv", 2, ""),         # Message Format
+    "6": ("messages", 2, ""),     # Message Contents
+    "7": ("messages", 2, ""),     # Message Format
     "8": ("concept", 1, ""),      # Authentication (whole section)
     "9": ("ttlv", 2, ""),         # Message Encoding (TTLV)
     "10": ("concept", 1, ""),     # Transport
@@ -67,14 +67,14 @@ V1X_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
 V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "1": ("reference", 2, ""),           # Introduction / Terminology / References
     "2": ("object", 2, ""),              # Objects (managed objects)
-    "3": ("ttlv", 2, ""),                # Object Data Structures (Key Block, ...)
+    "3": ("structures", 2, ""),          # Object Data Structures (Key Block, ...)
     "4": ("attribute", 2, ""),           # Object Attributes
-    "5": ("ttlv", 2, ""),                # Attribute Data Structures
+    "5": ("structures", 2, ""),          # Attribute Data Structures
     "6.1": ("operation", 3, ""),         # Client-to-Server Operations
     "6.2": ("operation", 3, "server-to-client"),  # Server-to-Client Operations
-    "7": ("ttlv", 2, ""),                # Operations Data Structures
-    "8": ("ttlv", 2, ""),                # Messages
-    "9": ("ttlv", 2, ""),                # Message Data Structures
+    "7": ("structures", 2, ""),          # Operations Data Structures
+    "8": ("messages", 2, ""),            # Messages
+    "9": ("messages", 2, ""),            # Message Data Structures
     "10.1": ("ttlv", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
     "10.3": ("concept", 2, ""),          # Authentication
     "10.4": ("concept", 2, ""),          # Transport
@@ -181,6 +181,8 @@ CATEGORY_DIR: dict[str, str] = {
     "object": "kb/objects",
     "concept": "kb/concepts",
     "ttlv": "kb/ttlv",
+    "structures": "kb/structures",
+    "messages": "kb/messages",
     "profile": "kb/profiles",
     "reference": "kb/references",
     "usage-guide": "kb/usage-guide",
@@ -192,6 +194,8 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "object": "object.md",
     "concept": "concept.md",
     "ttlv": "ttlv.md",
+    "structures": "ttlv.md",   # data structures reuse the TTLV/structure skeleton
+    "messages": "ttlv.md",     # message structures reuse the same skeleton
     "profile": "concept.md",   # profiles reuse the concept skeleton
     "reference": "reference.md",
     "usage-guide": "usage-guide.md",
@@ -204,7 +208,9 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/operations": "Client-to-server and server-to-client operations (Create, Locate, Get, ...).",
     "kb/objects": "Managed objects: symmetric/asymmetric keys, certificates, secret data, templates.",
     "kb/attributes": "Object attributes and their data types, constraints, and applicability.",
-    "kb/ttlv": "TTLV encoding plus base-object structures and message contents/format.",
+    "kb/ttlv": "TTLV wire encoding, enumerations, and bit masks.",
+    "kb/structures": "Data structures: object (Key Block, ...), attribute, and operation building blocks.",
+    "kb/messages": "Protocol message structures: request/response envelope and message fields.",
     "kb/profiles": "Conformance profiles and implementation conformance requirements.",
     "kb/workflows": "End-to-end usage workflows that chain operations together.",
     "kb/examples": "Worked request/response examples (original, not copied from the spec).",
@@ -219,8 +225,9 @@ STRUCTURE_DIRS: dict[str, str] = {
 }
 
 VALID_CATEGORIES = {
-    "operation", "attribute", "object", "concept", "ttlv", "profile",
-    "reference", "workflow", "example", "schema", "index", "usage-guide",
+    "operation", "attribute", "object", "concept", "ttlv", "structures",
+    "messages", "profile", "reference", "workflow", "example", "schema",
+    "index", "usage-guide",
 }
 VALID_STATUS = {"stub", "draft", "reviewed"}
 

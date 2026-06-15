@@ -27,7 +27,7 @@ server that does not implement it returns an error.
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The [Public Key](../objects/public-key.md) to certify. If omitted, the ID Placeholder is used. |
 | Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
 | Certificate Request | `420018` | `CertificateRequest` | No | A byte string carrying the request itself (for example PKCS#10 or PEM). |
-| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the resulting certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the resulting certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure. |
 
 When no Certificate Request is supplied, the public key is named only by its
 Unique Identifier and the desired certificate type comes from the

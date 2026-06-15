@@ -13,7 +13,7 @@ keywords: ["key format type", "key format", "raw", "pkcs1", "pkcs8", "transparen
 
 ## Purpose
 
-Key Format Type records the encoding format in which the key material is persisted on the server. This top-level attribute, introduced in v2.1, makes it possible to query or locate objects by their stored format without retrieving the key material itself. It is distinct from — but consistent with — the Key Format Type field embedded inside the [Key Block](../ttlv/key-block.md), which has existed since v1.0.
+Key Format Type records the encoding format in which the key material is persisted on the server. This top-level attribute, introduced in v2.1, makes it possible to query or locate objects by their stored format without retrieving the key material itself. It is distinct from — but consistent with — the Key Format Type field embedded inside the [Key Block](../structures/key-block.md), which has existed since v1.0.
 
 ## Data Type & Structure
 

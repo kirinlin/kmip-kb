@@ -20,7 +20,7 @@ Marks the object as being in archival (long-term, offline-ish) storage and
 records when it was moved there. Its presence is also the protocol's signal
 of archived status: [Locate](../operations/locate.md) can filter by storage
 status, and operations on an archived object fail with the
-`Object Archived` [result reason](../ttlv/result-reason.md) until a
+`Object Archived` [result reason](../messages/result-reason.md) until a
 [Recover](../operations/recover.md) brings it back.
 
 ## Data Type & Structure

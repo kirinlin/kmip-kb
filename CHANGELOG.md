@@ -6,6 +6,15 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- Narrowed the `kb/ttlv/` category to TTLV wire encoding, enumerations, and bit
+  masks. Data-structure articles (object, attribute, and operation building
+  blocks) moved to a new `kb/structures/` category, and message-structure
+  articles (request/response envelope and message fields) moved to a new
+  `kb/messages/` category. Article paths and `category` front-matter values for
+  the moved docs change accordingly.
+
 ## [0.12.0] - 2026-06-15
 
 ### Added

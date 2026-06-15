@@ -34,7 +34,7 @@ The same precedence rules as [Create Key Pair](create-key-pair.md) apply when an
 attribute is supplied in more than one place. In KMIP 2.0+ these wrappers are
 replaced by the corresponding flat Common Attributes / Private Key Attributes /
 Public Key Attributes structures
-([Template-Attribute Structures](../ttlv/template-attribute-structures.md));
+([Template-Attribute Structures](../structures/template-attribute-structures.md));
 the routing semantics are unchanged.
 
 ## Response Fields

@@ -41,4 +41,4 @@ The choice of algorithm is fixed at split time; switching schemes requires destr
 
 ## Related Concepts
 
-[Split Key](../objects/split-key.md) · [Cryptographic Parameters](../attributes/cryptographic-parameters.md) · [Transparent Key Structures](../ttlv/transparent-key-structures.md)
+[Split Key](../objects/split-key.md) · [Cryptographic Parameters](../attributes/cryptographic-parameters.md) · [Transparent Key Structures](../structures/transparent-key-structures.md)

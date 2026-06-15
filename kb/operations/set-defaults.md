@@ -15,13 +15,13 @@ keywords: ["set defaults", "defaults", "default attributes", "object defaults", 
 
 `Set Defaults` configures the server-wide or object-type-scoped default attributes that the server applies when a client creates a managed object without specifying those attributes. For example, a deployment might require all new symmetric keys to default to a specific `Cryptographic Usage Mask` or a particular `Deactivation Date` offset. By setting those defaults once with `Set Defaults`, administrators avoid requiring every client to repeat the same attribute values on every [`Create`](create.md) call.
 
-`Set Defaults` was introduced in v2.1 and uses the [Defaults Information](../ttlv/defaults-information.md) structure as its payload. It is administratively scoped — not all clients should be permitted to change server defaults.
+`Set Defaults` was introduced in v2.1 and uses the [Defaults Information](../structures/defaults-information.md) structure as its payload. It is administratively scoped — not all clients should be permitted to change server defaults.
 
 ## Request Fields
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| Defaults Information | `420152` | `DefaultsInformation` | Yes | The [Defaults Information](../ttlv/defaults-information.md) structure containing one or more Object Defaults entries. Each entry pairs an Object Type with a list of default attribute values to apply when creating objects of that type. Submitting a new Defaults Information structure replaces whatever defaults were previously configured. |
+| Defaults Information | `420152` | `DefaultsInformation` | Yes | The [Defaults Information](../structures/defaults-information.md) structure containing one or more Object Defaults entries. Each entry pairs an Object Type with a list of default attribute values to apply when creating objects of that type. Submitting a new Defaults Information structure replaces whatever defaults were previously configured. |
 
 ## Response Fields
 

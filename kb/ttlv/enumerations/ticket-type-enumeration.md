@@ -13,7 +13,7 @@ keywords: ["ticket type", "session ticket", "login ticket", "delegation ticket",
 
 ## Overview
 
-The Ticket Type enumeration classifies the nature of a session [Ticket](../ticket.md) issued by the [Login](../../operations/login.md) or [Delegated Login](../../operations/delegated-login.md) operations. A ticket is an opaque, server-issued token that a client presents in place of full credentials in subsequent requests. The type tells the server (and any auditing infrastructure) what kind of session the ticket represents.
+The Ticket Type enumeration classifies the nature of a session [Ticket](../../structures/ticket.md) issued by the [Login](../../operations/login.md) or [Delegated Login](../../operations/delegated-login.md) operations. A ticket is an opaque, server-issued token that a client presents in place of full credentials in subsequent requests. The type tells the server (and any auditing infrastructure) what kind of session the ticket represents.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -31,4 +31,4 @@ After a successful Login, the server returns a Ticket with Ticket Type = **Login
 
 ## Related
 
-[Ticket structure](../ticket.md) · [Login](../../operations/login.md) · [Logout](../../operations/logout.md) · [Delegated Login](../../operations/delegated-login.md)
+[Ticket structure](../../structures/ticket.md) · [Login](../../operations/login.md) · [Logout](../../operations/logout.md) · [Delegated Login](../../operations/delegated-login.md)

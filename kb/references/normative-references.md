@@ -40,7 +40,7 @@ By cluster (citation keys as used in the spec):
   updates).
 - **RSA PKCS**: #1 (RSA), #5 (password-based crypto), #8 (private-key
   syntax), #10 (certification requests) — these define several
-  [Key Format Types](../ttlv/key-block.md).
+  [Key Format Types](../structures/key-block.md).
 - **ANSI X9 / ISO**: X9.24-1 (retail key management), X9.31, X9.42 (DH),
   X9.62 (ECDSA), X9.63 (EC key agreement), X9.102 (key wrapping), X9 TR-31
   (interoperable key blocks; source of the Key Role Types in

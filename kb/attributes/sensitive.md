@@ -19,7 +19,7 @@ xml_element: "Sensitive"
 When True, the object's material may leave the server **only wrapped**: a
 plaintext [Get](../operations/get.md) is refused (result reason
 `Sensitive`), but a Get with a
-[Key Wrapping Specification](../ttlv/key-wrapping-specification.md)
+[Key Wrapping Specification](../structures/key-wrapping-specification.md)
 succeeds. Added in 1.4 to mirror PKCS#11's CKA_SENSITIVE and close the gap
 for HSM-backed deployments.
 

@@ -13,7 +13,7 @@ keywords: ["set constraints", "constraints", "access control", "operation permis
 
 ## Purpose
 
-`Set Constraints` stores or replaces the [Constraints](../ttlv/constraints.md) governing which operations are permitted on a specific managed object or on a class of objects of a given type. Constraints encode fine-grained operation permissions beyond what the standard access-control model provides — for example, specifying that a particular key may only be used for encryption by clients presenting a specific certificate, or that the `Destroy` operation requires a quorum of administrators.
+`Set Constraints` stores or replaces the [Constraints](../structures/constraints.md) governing which operations are permitted on a specific managed object or on a class of objects of a given type. Constraints encode fine-grained operation permissions beyond what the standard access-control model provides — for example, specifying that a particular key may only be used for encryption by clients presenting a specific certificate, or that the `Destroy` operation requires a quorum of administrators.
 
 `Set Constraints` is the write counterpart to [`Get Constraints`](get-constraints.md) and was introduced in v2.1 alongside the full Constraints and Defaults system.
 
@@ -23,7 +23,7 @@ keywords: ["set constraints", "constraints", "access control", "operation permis
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The identifier of the specific managed object whose constraints should be set. When omitted, the server uses the ID Placeholder. |
 | Object Type | `420057` | `ObjectType` | No | When supplied without a Unique Identifier, sets the type-level default constraints for objects of that type, applying to all future objects of that type that do not have explicit per-object constraints. |
-| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../ttlv/constraints.md) structure defining the new permission policy. If constraints already exist on the target, this call replaces them entirely — it is not a merge operation. |
+| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../structures/constraints.md) structure defining the new permission policy. If constraints already exist on the target, this call replaces them entirely — it is not a merge operation. |
 
 ## Response Fields
 

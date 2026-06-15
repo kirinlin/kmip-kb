@@ -26,7 +26,7 @@ convention: client-created names start `x-`, server-created names start
 Any TTLV data type, including a structure — but a structure value must stay
 flat (no nested sub-structures). Because the Custom Attribute tag itself says
 nothing about *which* custom attribute it is, the value only ever travels
-inside an [Attribute structure](../ttlv/attribute.md) where the Attribute
+inside an [Attribute structure](../structures/attribute.md) where the Attribute
 Name disambiguates it.
 
 ## Constraints

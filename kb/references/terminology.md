@@ -45,7 +45,7 @@ normative wording):
 
 This knowledge base uses the same vocabulary throughout; per-concept pages
 (e.g. [State](../attributes/state.md),
-[Key Block](../ttlv/key-block.md)) carry the operational detail.
+[Key Block](../structures/key-block.md)) carry the operational detail.
 
 ## External References
 

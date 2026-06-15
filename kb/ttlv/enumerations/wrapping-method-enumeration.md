@@ -33,4 +33,4 @@ A KMIP server delivering an AES-256 key wrapped for a specific client RSA key us
 
 ## Related
 
-[Key Wrapping Data](../key-wrapping-data.md) · [Key Block](../key-block.md) · [Unwrap Mode Enumeration](unwrap-mode-enumeration.md) · [Encoding Option Enumeration](encoding-option-enumeration.md) · [Get](../../operations/get.md)
+[Key Wrapping Data](../../structures/key-wrapping-data.md) · [Key Block](../../structures/key-block.md) · [Unwrap Mode Enumeration](unwrap-mode-enumeration.md) · [Encoding Option Enumeration](encoding-option-enumeration.md) · [Get](../../operations/get.md)

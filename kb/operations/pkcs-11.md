@@ -23,16 +23,16 @@ This enables existing PKCS#11 application stacks to operate against a centralize
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| PKCS#11 Interface | `420159` | `PKCS_11Interface` | Yes | Identifies the PKCS#11 slot, token, or session context on the server against which the function should be dispatched. Corresponds to the [PKCS#11 Interface](../ttlv/pkcs-11-interface.md) structure. |
-| PKCS#11 Function | `42015A` | `PKCS_11Function` | Yes | The name of the Cryptoki function to invoke (e.g., `C_Encrypt`, `C_Sign`, `C_GenerateKey`). Encoded in the [PKCS#11 Function](../ttlv/pkcs-11-function.md) structure. |
-| PKCS#11 Input Parameters | `42015B` | `PKCS_11InputParameters` | No | The arguments to the specified Cryptoki function, encoded in the [PKCS#11 Input Parameters](../ttlv/pkcs-11-input-parameters.md) structure. The content and encoding of these parameters mirrors the PKCS#11 standard for the named function. |
+| PKCS#11 Interface | `420159` | `PKCS_11Interface` | Yes | Identifies the PKCS#11 slot, token, or session context on the server against which the function should be dispatched. Corresponds to the [PKCS#11 Interface](../structures/pkcs-11-interface.md) structure. |
+| PKCS#11 Function | `42015A` | `PKCS_11Function` | Yes | The name of the Cryptoki function to invoke (e.g., `C_Encrypt`, `C_Sign`, `C_GenerateKey`). Encoded in the [PKCS#11 Function](../structures/pkcs-11-function.md) structure. |
+| PKCS#11 Input Parameters | `42015B` | `PKCS_11InputParameters` | No | The arguments to the specified Cryptoki function, encoded in the [PKCS#11 Input Parameters](../structures/pkcs-11-input-parameters.md) structure. The content and encoding of these parameters mirrors the PKCS#11 standard for the named function. |
 
 ## Response Fields
 
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
-| PKCS#11 Output Parameters | `42015C` | `PKCS_11OutputParameters` | No | The output arguments produced by the Cryptoki function, encoded in the [PKCS#11 Output Parameters](../ttlv/pkcs-11-output-parameters.md) structure. Present when the function produces output (e.g., ciphertext from `C_Encrypt`). |
-| PKCS#11 Return Code | `42015D` | `PKCS_11ReturnCode` | Yes | The Cryptoki return code (CKR_*) produced by the function execution on the server, encoded in the [PKCS#11 Return Code](../ttlv/pkcs-11-return-code.md) structure. A value of `CKR_OK` indicates success. Non-OK codes are returned within a successful KMIP response; they are not translated to KMIP error codes. |
+| PKCS#11 Output Parameters | `42015C` | `PKCS_11OutputParameters` | No | The output arguments produced by the Cryptoki function, encoded in the [PKCS#11 Output Parameters](../structures/pkcs-11-output-parameters.md) structure. Present when the function produces output (e.g., ciphertext from `C_Encrypt`). |
+| PKCS#11 Return Code | `42015D` | `PKCS_11ReturnCode` | Yes | The Cryptoki return code (CKR_*) produced by the function execution on the server, encoded in the [PKCS#11 Return Code](../structures/pkcs-11-return-code.md) structure. A value of `CKR_OK` indicates success. Non-OK codes are returned within a successful KMIP response; they are not translated to KMIP error codes. |
 
 ## Behavior & Server Requirements
 

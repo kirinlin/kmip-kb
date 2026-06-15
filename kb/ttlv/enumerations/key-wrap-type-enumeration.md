@@ -13,7 +13,7 @@ keywords: ["key wrap type", "wrapped", "not wrapped", "key wrapping", "key block
 
 ## Overview
 
-The Key Wrap Type enumeration indicates whether and how the key material in a [Key Block](../key-block.md) is currently wrapped. Key wrapping is the process of encrypting or integrity-protecting key material under another key for storage or transport; the wrap type lets consumers determine immediately whether they are receiving plaintext key bytes or an encrypted blob that must first be unwrapped before use. A transitional state is also defined for use during in-place re-wrapping operations.
+The Key Wrap Type enumeration indicates whether and how the key material in a [Key Block](../../structures/key-block.md) is currently wrapped. Key wrapping is the process of encrypting or integrity-protecting key material under another key for storage or transport; the wrap type lets consumers determine immediately whether they are receiving plaintext key bytes or an encrypted blob that must first be unwrapped before use. A transitional state is also defined for use during in-place re-wrapping operations.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -31,8 +31,8 @@ A client that registered a key wrapped under a Key Encryption Key receives it ba
 
 ## Related
 
-- [Key Block structure](../key-block.md) — the container that carries this field
-- [Key Wrapping Data structure](../key-wrapping-data.md) — describes the wrapping parameters used when the key is wrapped
+- [Key Block structure](../../structures/key-block.md) — the container that carries this field
+- [Key Wrapping Data structure](../../structures/key-wrapping-data.md) — describes the wrapping parameters used when the key is wrapped
 - [Wrapping Method Enumeration](wrapping-method-enumeration.md) — specifies how the wrapping was applied
 - [Encoding Option Enumeration](encoding-option-enumeration.md) — controls whether the Key Value was TTLV-encoded before wrapping
 - [Get operation](../../operations/get.md) — retrieves key material; clients can specify wrapping behaviour

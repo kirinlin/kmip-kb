@@ -26,7 +26,7 @@ registered: keys, certificates, secret data, split keys, opaque objects, and
 | Field | Tag | XML Element | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object being handed over. |
-| Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure; the attribute payload is unchanged. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure; the attribute payload is unchanged. |
 | Managed Object |  |  | Yes | The object itself (for example a [Symmetric Key](../objects/symmetric-key.md), [Certificate](../objects/certificate.md), private/public key, split key, secret data, or opaque object). The object and its attributes may be supplied in wrapped form. |
 
 ## Response Fields

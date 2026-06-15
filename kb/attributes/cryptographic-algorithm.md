@@ -35,7 +35,7 @@ per-scheme ECDSA/ECDH/ECMQV values.
 - Always present for objects it applies to; single instance.
 - Immutable once the object exists; not deletable.
 - Must be consistent with the same field in the object's
-  [Key Block](../ttlv/key-block.md).
+  [Key Block](../structures/key-block.md).
 
 ## Applies To (Object Types)
 

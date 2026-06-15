@@ -20,6 +20,6 @@ configured by mechanisms the spec does not define.
 - [Put](put.md) — push a managed object (new or replacement) to a client.
 - [Query](query.md) — interrogate a client's capabilities (added in 1.3).
 
-All three reuse the standard [message structure](../../ttlv/message-structure.md)
+All three reuse the standard [message structure](../../messages/message-structure.md)
 with a few client-only header fields disallowed, and the client — not the
 server — returns the response.

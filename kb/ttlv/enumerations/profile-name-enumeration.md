@@ -13,7 +13,7 @@ keywords: ["profile name", "conformance profile", "KMIP profile", "baseline serv
 
 ## Overview
 
-The Profile Name enumeration identifies the named KMIP conformance profiles defined in the separate KMIP Profiles document. Servers advertise which profiles they conform to in their [Query](../../operations/query.md) responses via the [Profile Version](../profile-version.md) structure, and clients can use this to select appropriate server capabilities without querying every individual feature. Profiles define a minimum compliant feature set that an implementation must support to claim conformance.
+The Profile Name enumeration identifies the named KMIP conformance profiles defined in the separate KMIP Profiles document. Servers advertise which profiles they conform to in their [Query](../../operations/query.md) responses via the [Profile Version](../../structures/profile-version.md) structure, and clients can use this to select appropriate server capabilities without querying every individual feature. Profiles define a minimum compliant feature set that an implementation must support to claim conformance.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -37,4 +37,4 @@ A server that advertises **Complete Server Basic** supports the full set of KMIP
 
 ## Related
 
-[Profile Version](../profile-version.md) · [Query](../../operations/query.md) · [Server Information](../server-information.md)
+[Profile Version](../../structures/profile-version.md) · [Query](../../operations/query.md) · [Server Information](../../structures/server-information.md)
