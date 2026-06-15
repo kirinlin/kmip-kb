@@ -32,16 +32,30 @@ PULLMD_URL = os.environ.get("PULLMD_URL", "http://localhost:3000")
 # Path prefixes to exclude from crawl/download. The test-cases tree under
 # kmip-profiles v3.0 self-references via "kmip-v3.0", producing runaway depth
 # from server mis-linking, so we prune that subtree entirely.
-# usecases are renamed to testcases, but keep v1.0.
+# usecases/v1.1 is excluded because OASIS renamed "usecases" to "testcases"
+# in v1.1; keeping it would duplicate content already available under testcases/.
 EXCLUDE_PREFIXES = (
     "/kmip/kmip-profiles/v3.0/csd01/test-cases/kmip-v3.0",
     "/kmip/usecases/v1.1",
 )
+
+# 0.3 s gap between crawl requests to avoid hammering the OASIS server and
+# triggering rate-limiting or temporary blocks. Download workers run in
+# parallel against PullMD (a local process), so no delay is needed there.
 CRAWL_DELAY = 0.3   # seconds between crawl requests
+
+# PullMD can take several minutes to process a large XML or deeply nested HTML
+# document (it fetches the page, parses, and converts). 1-hour ceiling prevents
+# silent hangs from killing a multi-hour batch run.
 REQUEST_TIMEOUT = 3600
+
 RETRY_ATTEMPTS = 3
+# Exponential back-off: sleep RETRY_DELAY * attempt before each retry so that
+# transient 5xx errors or momentary network blips resolve themselves.
 RETRY_DELAY = 2
 
+# Dedicated session for the crawl phase only; keeps TCP connections alive
+# across the BFS loop to avoid repeated TLS handshakes on the same host.
 crawl_session = requests.Session()
 crawl_session.headers["User-Agent"] = "kmip-doc-crawler/1.0 (educational)"
 
@@ -68,6 +82,12 @@ log = _setup_logger()
 # ---------------------------------------------------------------------------
 
 def is_in_scope(url: str) -> bool:
+    """Return True only for URLs that belong to the KMIP subtree on docs.oasis-open.org.
+
+    Guards against the crawler accidentally following links to other OASIS
+    working groups (e.g. /pkcs/, /saml/) that share the same host, or to
+    external domains referenced inline in the KMIP pages.
+    """
     parsed = urlparse(url)
     return (
         parsed.scheme in ("http", "https")
@@ -78,14 +98,35 @@ def is_in_scope(url: str) -> bool:
 
 
 def looks_like_html(url: str) -> bool:
+    """Heuristic: decide whether a URL is likely to produce a renderable page.
+
+    The OASIS server serves HTML for:
+      - bare directory paths (no extension or trailing slash)
+      - .html / .htm pages
+      - .xml and .txt spec files (we download these directly, not via PullMD)
+
+    PDFs, Word docs, and other binary formats are excluded here so they don't
+    end up in the download queue with a misleading .md output path.
+    The "." not in last segment check catches extensionless directory URLs
+    that the server renders as index pages.
+    """
     path = urlparse(url).path.rstrip("/")
     return not path or path.endswith(("/", ".html", ".htm", ".xml", ".txt")) or "." not in path.split("/")[-1]
 
 
 def fetch_links(url: str) -> list[str]:
+    """Fetch a page and return all absolute, in-document href links (fragments stripped).
+
+    Fragments (#section) and query strings are normalised away before
+    returning so that "page.html#intro" and "page.html" are treated as the
+    same URL during deduplication in crawl(). Without this, sections with
+    many in-page anchor links would flood the visited set with near-duplicates
+    and trigger redundant downloads.
+    """
     try:
         resp = crawl_session.get(url, timeout=15)
         resp.raise_for_status()
+        # Skip binary responses — only HTML pages contain crawlable links.
         if "html" not in resp.headers.get("Content-Type", ""):
             return []
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -96,6 +137,7 @@ def fetch_links(url: str) -> list[str]:
                 continue
             full = urljoin(url, href)
             parsed = urlparse(full)
+            # Drop fragment and query — we want the canonical document URL only.
             full = parsed._replace(fragment="", query="").geturl()
             links.append(full)
         return links
@@ -105,6 +147,12 @@ def fetch_links(url: str) -> list[str]:
 
 
 def crawl(start: str) -> list[str]:
+    """BFS crawl from start, returning a sorted list of in-scope HTML/XML/TXT URLs.
+
+    Uses a deque for O(1) popleft and a visited set to guarantee each URL is
+    enqueued at most once regardless of how many pages link to it. The result
+    is sorted so that repeated runs produce a deterministic file for diffing.
+    """
     visited: set[str] = set()
     html_urls: list[str] = []
     queue: deque[str] = deque([start])
@@ -132,6 +180,19 @@ def crawl(start: str) -> list[str]:
 # ---------------------------------------------------------------------------
 
 def url_to_local_path(url: str, out_dir: Path) -> Path | None:
+    """Map a remote URL to the local file path where its content will be saved.
+
+    Mapping rules (mirrors the URL path structure under out_dir):
+      - Bare directory URL or trailing slash  →  <path>/index.md
+      - .html / .htm                          →  <stem>.md  (extension replaced)
+      - .xml / .txt                           →  <path>     (extension kept, raw bytes)
+      - No extension (extensionless dir slug) →  <path>/index.md
+      - Anything else (.pdf, .docx, ...)      →  None  (caller will skip)
+
+    Preserving the URL path under out_dir means re-running the script after
+    the OASIS server reorganises a subtree only produces changed files in the
+    moved subdirectory, making diffs easy to audit.
+    """
     parsed = urlparse(url)
     rel = parsed.path.lstrip("/")
 
@@ -151,6 +212,13 @@ def url_to_local_path(url: str, out_dir: Path) -> Path | None:
 
 
 def fetch_markdown(url: str) -> tuple[str | None, int, str]:
+    """Fetch a page through PullMD and return (markdown_text, http_status, info).
+
+    PullMD is queried with frontmatter=true so its response includes YAML
+    front matter with the source URL and title — useful for the KB pipeline.
+    404 and 403 are returned immediately without retrying because they
+    indicate a permanent server-side state, not transient failures.
+    """
     api_url = f"{PULLMD_URL}/api?url={quote(url, safe='')}&frontmatter=true"
     for attempt in range(1, RETRY_ATTEMPTS + 1):
         try:
@@ -160,6 +228,7 @@ def fetch_markdown(url: str) -> tuple[str | None, int, str]:
             if resp.status_code == 200:
                 return resp.text, resp.status_code, f"{source} quality={quality}"
             if resp.status_code in (404, 403):
+                # Permanent error — no point retrying.
                 return None, resp.status_code, source
             if attempt < RETRY_ATTEMPTS:
                 time.sleep(RETRY_DELAY * attempt)
@@ -172,6 +241,12 @@ def fetch_markdown(url: str) -> tuple[str | None, int, str]:
 
 
 def fetch_direct(url: str) -> tuple[bytes | None, int, str]:
+    """Download a URL directly as raw bytes (used for .xml and .txt files).
+
+    XML spec documents and plain-text files are not sent through PullMD
+    because PullMD's Markdown conversion would discard structure that is
+    valuable to the KB pipeline (e.g. TTLV encoding tables in XML).
+    """
     for attempt in range(1, RETRY_ATTEMPTS + 1):
         try:
             resp = requests.get(url, timeout=REQUEST_TIMEOUT)
@@ -190,6 +265,11 @@ def fetch_direct(url: str) -> tuple[bytes | None, int, str]:
 
 
 def load_skip_urls(skip_file: str | None) -> set[str]:
+    """Load a newline-separated list of URLs to skip during download.
+
+    A missing file is silently tolerated so that a fresh checkout (where
+    404skip.txt hasn't been populated yet) doesn't abort the run.
+    """
     if not skip_file:
         return set()
     path = Path(skip_file)
@@ -202,6 +282,15 @@ def load_skip_urls(skip_file: str | None) -> set[str]:
 
 
 def process_url(url: str, out_dir: Path, skip_existing: bool, skip_urls: set[str]) -> dict:
+    """Download one URL and write its content to disk; return a status dict.
+
+    Decision tree:
+      1. URL is in the explicit skip list          → skip (known 404 / unwanted)
+      2. url_to_local_path returns None            → skip (PDF, DOCX, …)
+      3. File already exists and skip_existing     → skip (incremental mode)
+      4. Extension is .xml or .txt                 → fetch_direct (raw bytes)
+      5. Everything else                           → fetch_markdown via PullMD
+    """
     if url in skip_urls:
         return {"url": url, "status": "skipped", "reason": "in skip file"}
 
@@ -212,6 +301,8 @@ def process_url(url: str, out_dir: Path, skip_existing: bool, skip_urls: set[str
     if skip_existing and local.exists():
         return {"url": url, "status": "skipped", "reason": "already exists", "path": str(local)}
 
+    # Determine fetch strategy from the original URL extension, not the local
+    # path extension (which may be .md after remapping from .html).
     ext = urlparse(url).path.rsplit(".", 1)[-1].lower() if "." in urlparse(url).path else ""
 
     if ext in ("xml", "txt"):
@@ -233,6 +324,12 @@ def process_url(url: str, out_dir: Path, skip_existing: bool, skip_urls: set[str
 
 def download_all(urls: list[str], out_dir: Path, workers: int, skip_existing: bool,
                  skip_urls: set[str]) -> None:
+    """Submit all URLs to a thread pool and log progress as futures complete.
+
+    as_completed is used (rather than iterating futures in submission order)
+    so that fast responses are logged immediately instead of waiting behind
+    a slow PullMD conversion. This also surfaces errors early in long runs.
+    """
     ok = skipped = errors = 0
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(process_url, url, out_dir, skip_existing, skip_urls): url for url in urls}
@@ -260,7 +357,7 @@ def main():
     parser.add_argument("--urls", metavar="FILE",
                         help="Skip crawl; load URLs from this file instead")
     parser.add_argument("--save-urls", metavar="FILE", default="./raw/kmip_urls.txt",
-                        help="Save discovered URLs to this file (default: kmip_urls.txt)")
+                        help="Save discovered URLs to this file (default: ./raw/kmip_urls.txt)")
     parser.add_argument("--out", default="raw", help="Output root directory (default: raw)")
     parser.add_argument("--workers", type=int, default=4, help="Parallel download workers (default: 4)")
     parser.add_argument("--no-skip", action="store_true", help="Re-download files that already exist")
@@ -275,6 +372,8 @@ def main():
             sys.exit(1)
         urls = [u.strip() for u in urls_file.read_text(encoding="utf-8").splitlines() if u.strip()]
         before = len(urls)
+        # Re-apply EXCLUDE_PREFIXES even when loading a pre-built URL list,
+        # in case the list was saved before a subtree was added to the exclusion set.
         urls = [u for u in urls if not urlparse(u).path.startswith(EXCLUDE_PREFIXES)]
         log.info("Loaded %d URL(s) from %s (%d excluded)", len(urls), urls_file, before - len(urls))
     else:
