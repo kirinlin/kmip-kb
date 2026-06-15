@@ -7,6 +7,8 @@ source_section: "11.43"
 status: reviewed
 related: ["unique-identifier"]
 keywords: ["put function", "put operation", "new object", "replace object", "Push operation"]
+tag_hex: "420070"
+xml_element: "PutFunction"
 ---
 
 # Put Function Enumeration

@@ -7,6 +7,8 @@ source_section: "11.4"
 status: reviewed
 related: ["credential-type-enumeration", "login"]
 keywords: ["attestation", "TPM", "TCG", "SAML", "credential", "authentication", "hardware trust"]
+tag_hex: "4200C7"
+xml_element: "AttestationType"
 ---
 
 # Attestation Type Enumeration

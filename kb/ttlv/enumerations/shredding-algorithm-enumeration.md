@@ -7,6 +7,8 @@ source_section: "11.53"
 status: reviewed
 related: ["destroy", "destroy-action-enumeration"]
 keywords: ["shredding", "key destruction", "secure erase", "overwrite", "cryptographic erase"]
+tag_hex: "4200F4"
+xml_element: "ShreddingAlgorithm"
 ---
 
 # Shredding Algorithm Enumeration

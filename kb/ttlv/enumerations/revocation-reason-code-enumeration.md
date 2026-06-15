@@ -7,6 +7,8 @@ source_section: "11.48"
 status: reviewed
 related: ["revocation-reason", "revoke", "state-enumeration"]
 keywords: ["revocation reason", "key compromise", "CA compromise", "superseded", "cessation", "privilege withdrawn", "revoke"]
+tag_hex: "420082"
+xml_element: "RevocationReasonCode"
 ---
 
 # Revocation Reason Code Enumeration

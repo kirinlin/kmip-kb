@@ -7,6 +7,8 @@ source_section: "11.5"
 status: reviewed
 related: ["result-status-enumeration", "result-reason-enumeration", "asynchronous-indicator-enumeration"]
 keywords: ["batch", "error handling", "continue", "stop", "undo", "rollback", "batch item", "request header"]
+tag_hex: "42000E"
+xml_element: "BatchErrorContinuationOption"
 ---
 
 # Batch Error Continuation Option Enumeration

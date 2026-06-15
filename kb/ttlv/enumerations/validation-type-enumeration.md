@@ -7,6 +7,8 @@ source_section: "11.62"
 status: reviewed
 related: ["cryptographic-parameters", "validation-authority-type-enumeration"]
 keywords: ["validation type", "software validation", "hardware validation", "firmware validation", "hybrid validation", "cryptographic validation"]
+tag_hex: "4200E5"
+xml_element: "ValidationType"
 ---
 
 # Validation Type Enumeration

@@ -7,6 +7,8 @@ source_section: "11.30"
 status: reviewed
 related: ["cryptographic-parameters", "padding-method-enumeration", "hashing-algorithm-enumeration"]
 keywords: ["mask generator", "MGF", "MFG1", "OAEP", "PSS", "RSA", "mask generation function"]
+tag_hex: "420101"
+xml_element: "MaskGenerator"
 ---
 
 # Mask Generator Enumeration

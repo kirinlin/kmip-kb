@@ -7,6 +7,8 @@ source_section: "11.57"
 status: reviewed
 related: ["ticket", "login", "logout", "delegated-login", "authentication"]
 keywords: ["ticket type", "session ticket", "login ticket", "delegation ticket", "authentication ticket"]
+tag_hex: "42014A"
+xml_element: "TicketType"
 ---
 
 # Ticket Type Enumeration

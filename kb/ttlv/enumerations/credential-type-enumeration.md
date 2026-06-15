@@ -7,6 +7,8 @@ source_section: "11.11"
 status: reviewed
 related: ["login", "attestation-type-enumeration", "ticket-type-enumeration"]
 keywords: ["credential", "authentication", "username password", "device", "attestation", "one-time password", "ticket", "hashed password"]
+tag_hex: "420024"
+xml_element: "CredentialType"
 ---
 
 # Credential Type Enumeration

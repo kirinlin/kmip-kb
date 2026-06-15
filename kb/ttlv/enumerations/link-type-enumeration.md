@@ -7,6 +7,8 @@ source_section: "11.28"
 status: reviewed
 related: ["unique-identifier", "create-key-pair", "certify", "register"]
 keywords: ["link type", "linked objects", "certificate link", "public key link", "private key link", "derivation", "replacement", "parent", "child"]
+tag_hex: "42004B"
+xml_element: "LinkType"
 ---
 
 # Link Type Enumeration

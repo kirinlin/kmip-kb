@@ -7,6 +7,8 @@ source_section: "11.54"
 status: reviewed
 related: ["split-key", "split-key-algorithms", "cryptographic-parameters"]
 keywords: ["split key method", "secret sharing", "XOR", "Shamir", "polynomial sharing", "Blakley", "GF", "key splitting"]
+tag_hex: "42008A"
+xml_element: "SplitKeyMethod"
 ---
 
 # Split Key Method Enumeration

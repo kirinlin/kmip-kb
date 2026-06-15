@@ -7,6 +7,8 @@ source_section: "11.1"
 status: reviewed
 related: ["adjust-attribute", "rotate-generation", "rotate-interval", "rotate-offset"]
 keywords: ["adjustment type", "numeric delta", "adjust attribute", "arithmetic operation"]
+tag_hex: "420158"
+xml_element: "AdjustmentType"
 ---
 
 # Adjustment Type Enumeration

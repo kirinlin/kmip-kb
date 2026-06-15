@@ -7,6 +7,8 @@ source_section: "11.40"
 status: reviewed
 related: ["asynchronous-request", "asynchronous-correlation-values", "query-asynchronous-requests"]
 keywords: ["processing stage", "async status", "asynchronous", "pending", "completed", "cancelled"]
+tag_hex: "420175"
+xml_element: "ProcessingStage"
 ---
 
 # Processing Stage Enumeration

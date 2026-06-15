@@ -7,6 +7,8 @@ source_section: "11.55"
 status: reviewed
 related: ["state", "activate", "revoke", "destroy", "archive", "recover"]
 keywords: ["state", "object lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "lifecycle state"]
+tag_hex: "42008D"
+xml_element: "State"
 ---
 
 # State Enumeration

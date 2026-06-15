@@ -7,6 +7,8 @@ source_section: "11.19"
 status: reviewed
 related: ["set-endpoint-role", "profile-version", "profile-name-enumeration"]
 keywords: ["endpoint role", "KMIP server", "KMIP client", "proxy", "replication", "storage array", "topology"]
+tag_hex: "420151"
+xml_element: "EndpointRole"
 ---
 
 # Endpoint Role Enumeration

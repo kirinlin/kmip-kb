@@ -7,6 +7,8 @@ source_section: "11.49"
 status: reviewed
 related: ["cryptographic-parameters", "drbg-algorithm-enumeration", "rng-mode-enumeration"]
 keywords: ["RNG", "random number generator", "DRBG", "NRBG", "ANSI X9.31", "FIPS 186", "random generation"]
+tag_hex: "4200DA"
+xml_element: "RNGAlgorithm"
 ---
 
 # RNG Algorithm Enumeration

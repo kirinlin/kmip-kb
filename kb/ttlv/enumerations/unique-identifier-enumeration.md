@@ -7,6 +7,8 @@ source_section: "11.58"
 status: reviewed
 related: ["unique-identifier", "locate", "message-structure"]
 keywords: ["unique identifier", "ID placeholder", "filtered", "sentinel", "batch operations", "ID reference"]
+tag_hex: "420094"
+xml_element: "UniqueIdentifier"
 ---
 
 # Unique Identifier Enumeration

@@ -7,6 +7,8 @@ source_section: "11.50"
 status: reviewed
 related: ["cryptographic-parameters", "rng-algorithm-enumeration", "drbg-algorithm-enumeration"]
 keywords: ["RNG mode", "prediction resistance", "reseeding", "non-reseeding", "random generation mode"]
+tag_hex: "4200F5"
+xml_element: "RNGMode"
 ---
 
 # RNG Mode Enumeration

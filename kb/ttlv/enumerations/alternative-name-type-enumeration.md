@@ -7,6 +7,8 @@ source_section: "11.2"
 status: reviewed
 related: ["alternative-name", "name-type-enumeration", "unique-identifier"]
 keywords: ["alternative name", "name type", "URI", "DNS name", "X.500", "object identity", "serial number"]
+tag_hex: "4200C1"
+xml_element: "AlternativeNameType"
 ---
 
 # Alternative Name Type Enumeration

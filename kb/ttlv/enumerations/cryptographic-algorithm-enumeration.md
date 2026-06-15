@@ -7,6 +7,8 @@ source_section: "11.12"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-length", "cryptographic-parameters", "key-block", "derive-key", "create", "create-key-pair"]
 keywords: ["algorithm", "AES", "RSA", "ECDSA", "ECDH", "Ed25519", "3DES", "ChaCha20", "symmetric key", "asymmetric key", "cryptographic algorithm"]
+tag_hex: "420028"
+xml_element: "CryptographicAlgorithm"
 ---
 
 # Cryptographic Algorithm Enumeration

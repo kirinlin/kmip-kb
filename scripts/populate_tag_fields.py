@@ -256,7 +256,10 @@ def main() -> None:
         if not title:
             continue
 
-        entry = tags.get(title.lower())
+        title_lower = title.lower()
+        entry = tags.get(title_lower)
+        if entry is None and title_lower.endswith(" enumeration"):
+            entry = tags.get(title_lower[: -len(" enumeration")])
         if entry is None:
             unmatched += 1
             continue

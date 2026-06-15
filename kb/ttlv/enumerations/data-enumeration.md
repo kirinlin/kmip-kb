@@ -7,6 +7,8 @@ source_section: "11.13"
 status: reviewed
 related: ["process"]
 keywords: ["data type", "process operation", "encrypt input", "decrypt input", "sign input", "verify input", "data payload"]
+tag_hex: "4200C2"
+xml_element: "Data"
 ---
 
 # Data Enumeration

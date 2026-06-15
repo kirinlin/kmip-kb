@@ -7,6 +7,8 @@ source_section: "11.61"
 status: reviewed
 related: ["cryptographic-parameters"]
 keywords: ["validation authority", "CMVP", "Common Criteria", "NIST validation", "cryptographic module validation"]
+tag_hex: "4200E0"
+xml_element: "ValidationAuthorityType"
 ---
 
 # Validation Authority Type Enumeration

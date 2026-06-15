@@ -7,6 +7,8 @@ source_section: "11.14"
 status: reviewed
 related: ["derive-key", "derivation-parameters", "hashing-algorithm-enumeration", "cryptographic-algorithm-enumeration"]
 keywords: ["key derivation", "KDF", "PBKDF2", "HKDF", "HMAC", "NIST 800-108", "AWS", "derive key", "derivation method"]
+tag_hex: "420031"
+xml_element: "DerivationMethod"
 ---
 
 # Derivation Method Enumeration

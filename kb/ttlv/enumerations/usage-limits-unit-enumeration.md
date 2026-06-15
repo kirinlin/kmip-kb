@@ -7,6 +7,8 @@ source_section: "11.60"
 status: reviewed
 related: ["usage-limits", "get-usage-allocation", "obtain-lease"]
 keywords: ["usage limits", "usage unit", "byte count", "object count", "key usage counting"]
+tag_hex: "420098"
+xml_element: "UsageLimitsUnit"
 ---
 
 # Usage Limits Unit Enumeration

@@ -7,6 +7,8 @@ source_section: "11.64"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "get", "cryptographic-parameters", "encoding-option-enumeration", "unwrap-mode-enumeration"]
 keywords: ["wrapping method", "key wrap", "encrypt", "MAC", "TR-31", "key protection", "key transport"]
+tag_hex: "42009E"
+xml_element: "WrappingMethod"
 ---
 
 # Wrapping Method Enumeration

@@ -7,6 +7,8 @@ source_section: "11.22"
 status: reviewed
 related: ["interop", "interop-function", "interop-identifier", "query-function-enumeration"]
 keywords: ["interop", "interoperability", "test function", "conformance testing", "KMIP interop"]
+tag_hex: "420160"
+xml_element: "InteropFunction"
 ---
 
 # Interop Function Enumeration

@@ -7,6 +7,8 @@ source_section: "11.26"
 status: reviewed
 related: ["split-key", "create-split-key", "join-split-key"]
 keywords: ["key role", "split key", "BDK", "KEK", "PIN", "payment", "DEK", "CVK", "base derivation key"]
+tag_hex: "420083"
+xml_element: "KeyRoleType"
 ---
 
 # Key Role Type Enumeration

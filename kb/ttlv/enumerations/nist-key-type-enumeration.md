@@ -7,6 +7,8 @@ source_section: "11.32"
 status: reviewed
 related: ["nist-key-type", "cryptographic-usage-mask", "cryptographic-algorithm-enumeration"]
 keywords: ["NIST key type", "SP 800-57", "key classification", "signature key", "encryption key", "key agreement", "authorization key"]
+tag_hex: "42013A"
+xml_element: "NISTKeyType"
 ---
 
 # NIST Key Type Enumeration

@@ -7,6 +7,8 @@ source_section: "11.38"
 status: reviewed
 related: ["pkcs-11-function", "pkcs-11-interface", "pkcs-11-input-parameters", "pkcs-11-output-parameters", "pkcs-11-return-code-enumeration"]
 keywords: ["pkcs11", "cryptoki", "CK function", "C_Encrypt", "C_Sign", "C_GenerateKey", "PKCS11 function"]
+tag_hex: "42015A"
+xml_element: "PKCS_11Function"
 ---
 
 # PKCS#11 Function Enumeration

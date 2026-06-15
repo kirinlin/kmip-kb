@@ -7,6 +7,8 @@ source_section: "11.21"
 status: reviewed
 related: ["cryptographic-parameters", "derivation-parameters", "digest", "digital-signature-algorithm-enumeration", "drbg-algorithm-enumeration"]
 keywords: ["hash", "SHA", "SHA-256", "SHA-3", "MD5", "RIPEMD", "Whirlpool", "hashing algorithm", "digest", "message digest"]
+tag_hex: "420038"
+xml_element: "HashingAlgorithm"
 ---
 
 # Hashing Algorithm Enumeration

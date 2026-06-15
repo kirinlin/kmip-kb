@@ -7,6 +7,8 @@ source_section: "11.33"
 status: reviewed
 related: ["locate", "state-enumeration"]
 keywords: ["object group", "group member", "fresh", "default", "key rotation", "object group attribute"]
+tag_hex: "4200AC"
+xml_element: "ObjectGroupMember"
 ---
 
 # Object Group Member Enumeration

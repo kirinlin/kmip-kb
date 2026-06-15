@@ -7,6 +7,8 @@ source_section: "11.24"
 status: reviewed
 related: ["key-block", "recommended-curve-enumeration", "cryptographic-algorithm-enumeration", "create-key-pair"]
 keywords: ["key compression", "EC public key", "point compression", "uncompressed", "X9.62", "elliptic curve", "key format"]
+tag_hex: "420041"
+xml_element: "KeyCompressionType"
 ---
 
 # Key Compression Type Enumeration

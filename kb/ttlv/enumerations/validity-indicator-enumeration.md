@@ -7,6 +7,8 @@ source_section: "11.63"
 status: reviewed
 related: ["validate", "certificate"]
 keywords: ["validity indicator", "valid", "invalid", "unknown", "validate", "certificate validation"]
+tag_hex: "42009B"
+xml_element: "ValidityIndicator"
 ---
 
 # Validity Indicator Enumeration

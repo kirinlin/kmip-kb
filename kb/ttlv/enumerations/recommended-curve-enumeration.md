@@ -7,6 +7,8 @@ source_section: "11.45"
 status: reviewed
 related: ["cryptographic-parameters", "cryptographic-algorithm-enumeration", "create-key-pair"]
 keywords: ["elliptic curve", "EC curve", "P-256", "P-384", "P-521", "Curve25519", "secp256k1", "brainpool", "recommended curve"]
+tag_hex: "420075"
+xml_element: "RecommendedCurve"
 ---
 
 # Recommended Curve Enumeration

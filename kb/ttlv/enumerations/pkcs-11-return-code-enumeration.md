@@ -7,6 +7,8 @@ source_section: "11.39"
 status: reviewed
 related: ["pkcs-11-return-code", "pkcs-11-function-enumeration", "pkcs-11-interface"]
 keywords: ["pkcs11", "CKR", "return code", "Cryptoki error", "PKCS11 error code"]
+tag_hex: "42015D"
+xml_element: "PKCS_11ReturnCode"
 ---
 
 # PKCS#11 Return Code Enumeration

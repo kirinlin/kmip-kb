@@ -7,6 +7,8 @@ source_section: "11.7"
 status: reviewed
 related: ["cancel", "asynchronous-indicator-enumeration", "processing-stage-enumeration", "query-asynchronous-requests"]
 keywords: ["cancellation", "cancel", "async", "asynchronous operation", "stop", "abort"]
+tag_hex: "420012"
+xml_element: "CancellationResult"
 ---
 
 # Cancellation Result Enumeration

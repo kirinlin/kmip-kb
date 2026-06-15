@@ -7,6 +7,8 @@ source_section: "11.18"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "wrapping-method-enumeration", "key-value"]
 keywords: ["encoding option", "key wrapping", "TTLV encoding", "no encoding", "key value", "wrapped key"]
+tag_hex: "4200A3"
+xml_element: "EncodingOption"
 ---
 
 # Encoding Option Enumeration

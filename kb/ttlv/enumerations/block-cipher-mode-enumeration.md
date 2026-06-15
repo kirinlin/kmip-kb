@@ -7,6 +7,8 @@ source_section: "11.6"
 status: reviewed
 related: ["cryptographic-parameters", "cryptographic-algorithm-enumeration", "padding-method-enumeration"]
 keywords: ["cipher mode", "CBC", "GCM", "CCM", "CTR", "ECB", "AEAD", "block cipher", "encryption mode"]
+tag_hex: "420011"
+xml_element: "BlockCipherMode"
 ---
 
 # Block Cipher Mode Enumeration

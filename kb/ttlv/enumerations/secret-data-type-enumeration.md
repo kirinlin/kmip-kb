@@ -7,6 +7,8 @@ source_section: "11.52"
 status: reviewed
 related: ["secret-data", "object-type-enumeration"]
 keywords: ["secret data type", "password", "seed", "secret data", "non-key secret"]
+tag_hex: "420086"
+xml_element: "SecretDataType"
 ---
 
 # Secret Data Type Enumeration

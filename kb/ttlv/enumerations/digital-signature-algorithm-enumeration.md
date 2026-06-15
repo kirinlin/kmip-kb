@@ -7,6 +7,8 @@ source_section: "11.16"
 status: reviewed
 related: ["cryptographic-algorithm-enumeration", "hashing-algorithm-enumeration", "certify", "digest"]
 keywords: ["digital signature", "signature algorithm", "RSA", "ECDSA", "DSA", "EdDSA", "HMAC", "signing"]
+tag_hex: "4200AE"
+xml_element: "DigitalSignatureAlgorithm"
 ---
 
 # Digital Signature Algorithm Enumeration

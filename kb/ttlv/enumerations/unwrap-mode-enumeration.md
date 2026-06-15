@@ -7,6 +7,8 @@ source_section: "11.59"
 status: reviewed
 related: ["key-wrapping-data", "key-block", "get", "cryptographic-parameters"]
 keywords: ["unwrap mode", "key unwrap", "MAC verify", "decrypt", "key extraction", "wrap mode"]
+tag_hex: "4200F2"
+xml_element: "UnwrapMode"
 ---
 
 # Unwrap Mode Enumeration

@@ -7,6 +7,8 @@ source_section: "11.8"
 status: reviewed
 related: ["certify", "certificate-type-enumeration", "certificate-request", "certificate"]
 keywords: ["certificate request", "CSR", "PKCS#10", "CRMF", "PEM", "PGP", "certify"]
+tag_hex: "420019"
+xml_element: "CertificateRequestType"
 ---
 
 # Certificate Request Type Enumeration

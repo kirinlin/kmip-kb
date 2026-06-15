@@ -7,6 +7,8 @@ source_section: "11.44"
 status: reviewed
 related: ["query", "server-information", "profile-version", "protection-storage-masks"]
 keywords: ["query function", "query", "server capabilities", "query operations", "server information", "profiles"]
+tag_hex: "420074"
+xml_element: "QueryFunction"
 ---
 
 # Query Function Enumeration

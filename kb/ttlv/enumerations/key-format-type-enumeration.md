@@ -7,6 +7,8 @@ source_section: "11.25"
 status: reviewed
 related: ["key-block", "key-format-type", "get", "register", "key-value"]
 keywords: ["key format", "PKCS#1", "PKCS#8", "X.509", "raw", "transparent", "key encoding", "ECPrivateKey", "PKCS#12"]
+tag_hex: "420042"
+xml_element: "KeyFormatType"
 ---
 
 # Key Format Type Enumeration

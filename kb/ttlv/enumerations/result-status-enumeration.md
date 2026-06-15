@@ -7,6 +7,8 @@ source_section: "11.47"
 status: reviewed
 related: ["result-reason-enumeration", "message-structure", "error-handling", "asynchronous-request"]
 keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "batch response"]
+tag_hex: "42007F"
+xml_element: "ResultStatus"
 ---
 
 # Result Status Enumeration

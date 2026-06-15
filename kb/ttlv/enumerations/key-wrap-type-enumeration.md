@@ -7,6 +7,8 @@ source_section: "11.29"
 status: reviewed
 related: ["key-block", "key-wrapping-data", "wrapping-method-enumeration", "encoding-option-enumeration", "get"]
 keywords: ["key wrap type", "wrapped", "not wrapped", "key wrapping", "key block", "transport"]
+tag_hex: "4200F8"
+xml_element: "KeyWrapType"
 ---
 
 # Key Wrap Type Enumeration

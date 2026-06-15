@@ -7,6 +7,8 @@ source_section: "11.17"
 status: reviewed
 related: ["cryptographic-parameters", "rng-algorithm-enumeration", "rng-mode-enumeration", "hashing-algorithm-enumeration"]
 keywords: ["DRBG", "deterministic random", "NIST SP 800-90A", "random number generator", "Dual-EC", "Hash DRBG", "HMAC DRBG", "CTR DRBG"]
+tag_hex: "4200DB"
+xml_element: "DRBGAlgorithm"
 ---
 
 # DRBG Algorithm Enumeration

@@ -7,6 +7,8 @@ source_section: "11.36"
 status: reviewed
 related: ["right", "rights", "constraint", "constraints", "message-structure"]
 keywords: ["operation", "operation code", "KMIP operations", "rights", "access control", "batch item"]
+tag_hex: "42005C"
+xml_element: "Operation"
 ---
 
 # Operation Enumeration

@@ -7,6 +7,8 @@ source_section: "11.34"
 status: reviewed
 related: ["object-type", "symmetric-key", "public-key", "private-key", "split-key", "secret-data", "certificate", "opaque-object", "certificate-request"]
 keywords: ["object type", "managed object type", "key type", "certificate", "secret data", "opaque object"]
+tag_hex: "420057"
+xml_element: "ObjectType"
 ---
 
 # Object Type Enumeration

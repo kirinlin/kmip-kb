@@ -7,6 +7,8 @@ source_section: "11.27"
 status: reviewed
 related: ["key-block", "get"]
 keywords: ["key value location", "URI", "text string", "key reference", "external key", "key location"]
+tag_hex: "4200BA"
+xml_element: "KeyValueLocationType"
 ---
 
 # Key Value Location Type Enumeration

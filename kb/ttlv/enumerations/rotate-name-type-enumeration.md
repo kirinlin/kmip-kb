@@ -7,6 +7,8 @@ source_section: "11.51"
 status: reviewed
 related: ["rotate-name"]
 keywords: ["rotate name type", "rotation group", "rotation identifier format", "text string", "URI"]
+tag_hex: "420171"
+xml_element: "RotateNameType"
 ---
 
 # Rotate Name Type Enumeration

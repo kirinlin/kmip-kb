@@ -7,6 +7,8 @@ source_section: "11.10"
 status: reviewed
 related: ["query", "query-function-enumeration", "login", "credential-type-enumeration"]
 keywords: ["client registration", "registration method", "provisioning", "client identity", "server pre-generated"]
+tag_hex: "4200F6"
+xml_element: "ClientRegistrationMethod"
 ---
 
 # Client Registration Method Enumeration

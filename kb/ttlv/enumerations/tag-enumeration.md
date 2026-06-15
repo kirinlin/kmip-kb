@@ -7,6 +7,8 @@ source_section: "11.56"
 status: reviewed
 related: ["ttlv-encoding", "item-data-types", "message-structure"]
 keywords: ["tag", "TTLV tag", "42XXXX", "tag enumeration", "field identifier", "tag namespace"]
+tag_hex: "420138"
+xml_element: "Tag"
 ---
 
 # Tag Enumeration

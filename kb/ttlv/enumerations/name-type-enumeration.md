@@ -7,6 +7,8 @@ source_section: "11.31"
 status: reviewed
 related: ["name", "alternative-name-type-enumeration", "locate"]
 keywords: ["name type", "URI", "text string", "name attribute", "object name"]
+tag_hex: "420054"
+xml_element: "NameType"
 ---
 
 # Name Type Enumeration

@@ -7,6 +7,8 @@ source_section: "11.9"
 status: reviewed
 related: ["certificate", "certify", "certificate-request-type-enumeration", "object-type-enumeration"]
 keywords: ["certificate", "X.509", "PGP", "certificate type", "public key certificate"]
+tag_hex: "42001D"
+xml_element: "CertificateType"
 ---
 
 # Certificate Type Enumeration

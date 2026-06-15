@@ -7,6 +7,8 @@ source_section: "11.46"
 status: reviewed
 related: ["result-status-enumeration", "message-structure", "error-handling"]
 keywords: ["result reason", "error code", "failure reason", "item not found", "operation not supported", "permission denied"]
+tag_hex: "42007E"
+xml_element: "ResultReason"
 ---
 
 # Result Reason Enumeration

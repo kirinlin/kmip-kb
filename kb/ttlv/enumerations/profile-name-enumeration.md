@@ -7,6 +7,8 @@ source_section: "11.41"
 status: reviewed
 related: ["profile-version", "query", "server-information"]
 keywords: ["profile name", "conformance profile", "KMIP profile", "baseline server", "complete server", "storage array"]
+tag_hex: "4200EC"
+xml_element: "ProfileName"
 ---
 
 # Profile Name Enumeration

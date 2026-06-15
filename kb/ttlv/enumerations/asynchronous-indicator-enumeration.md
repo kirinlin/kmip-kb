@@ -7,6 +7,8 @@ source_section: "11.3"
 status: reviewed
 related: ["asynchronous-request", "query-asynchronous-requests", "cancel", "poll", "batch-error-continuation-option-enumeration"]
 keywords: ["asynchronous", "async", "synchronous", "correlation value", "batch", "non-blocking"]
+tag_hex: "420007"
+xml_element: "AsynchronousIndicator"
 ---
 
 # Asynchronous Indicator Enumeration

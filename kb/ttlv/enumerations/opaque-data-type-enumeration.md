@@ -7,6 +7,8 @@ source_section: "11.35"
 status: reviewed
 related: ["opaque-data-type", "opaque-object", "object-type-enumeration"]
 keywords: ["opaque data type", "opaque object", "vendor-defined", "blob classification"]
+tag_hex: "420059"
+xml_element: "OpaqueDataType"
 ---
 
 # Opaque Data Type Enumeration
