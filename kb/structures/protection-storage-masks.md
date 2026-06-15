@@ -7,6 +7,8 @@ source_section: "7.33"
 status: reviewed
 related: ["protection-storage-mask", "protection-storage-mask", "server-information", "query"]
 keywords: ["protection storage masks", "supported storage configurations", "storage protection list", "query response", "server capabilities"]
+tag_hex: "42015F"
+xml_element: "ProtectionStorageMasks"
 ---
 
 # Protection Storage Masks

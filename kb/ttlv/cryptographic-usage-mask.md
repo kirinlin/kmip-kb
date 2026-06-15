@@ -7,6 +7,8 @@ source_section: "12.1"
 status: reviewed
 related: ["cryptographic-usage-mask", "key-block", "create", "create-key-pair", "register", "locate"]
 keywords: ["cryptographic usage mask", "bit mask", "key usage", "encrypt", "decrypt", "sign", "verify", "wrap key", "unwrap key", "export"]
+tag_hex: "42002C"
+xml_element: "CryptographicUsageMask"
 ---
 
 # Cryptographic Usage Mask

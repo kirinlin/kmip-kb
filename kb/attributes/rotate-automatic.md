@@ -7,6 +7,8 @@ source_section: "4.48"
 status: reviewed
 related: ["rotate-interval", "rotate-date", "rotate-generation", "rotate-latest", "rotate-name", "rotate-offset", "re-key", "deactivation-date"]
 keywords: ["rotate automatic", "key rotation", "automatic rotation", "auto-rotate", "rotation policy", "boolean"]
+tag_hex: "42016B"
+xml_element: "RotateAutomatic"
 ---
 
 # Rotate Automatic

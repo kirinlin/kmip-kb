@@ -7,6 +7,8 @@ source_section: "7.28"
 status: reviewed
 related: ["pkcs-11-function", "pkcs-11-input-parameters", "pkcs-11-output-parameters", "pkcs-11"]
 keywords: ["PKCS#11 interface", "token selection", "slot ID", "Cryptoki library", "PKCS11 interface name", "HSM slot"]
+tag_hex: "420159"
+xml_element: "PKCS_11Interface"
 ---
 
 # PKCS#11 Interface

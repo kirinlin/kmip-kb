@@ -7,6 +7,8 @@ source_section: "7.32"
 status: reviewed
 related: ["server-information", "query", "protocol-version"]
 keywords: ["profile version", "profile name", "KMIP profile", "conformance profile", "server capabilities"]
+tag_hex: "420142"
+xml_element: "ProfileVersion"
 ---
 
 # Profile Version

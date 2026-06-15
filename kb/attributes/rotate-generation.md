@@ -7,6 +7,8 @@ source_section: "4.50"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-interval", "rotate-latest", "rotate-name", "rotate-offset", "re-key"]
 keywords: ["rotate generation", "key generation", "rotation count", "generation number", "key versioning"]
+tag_hex: "42016E"
+xml_element: "RotateGeneration"
 ---
 
 # Rotate Generation

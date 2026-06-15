@@ -7,6 +7,8 @@ source_section: "4.56"
 status: reviewed
 related: ["unique-identifier", "name", "object-type", "locate"]
 keywords: ["short unique identifier", "abbreviated id", "short id", "compact identifier", "text string", "alias"]
+tag_hex: "420136"
+xml_element: "ShortUniqueIdentifier"
 ---
 
 # Short Unique Identifier

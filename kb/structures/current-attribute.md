@@ -7,6 +7,8 @@ source_section: "5.6"
 status: reviewed
 related: ["attribute", "new-attribute", "attribute-reference", "set-attribute", "adjust-attribute"]
 keywords: ["current attribute", "existing attribute", "attribute value before", "optimistic concurrency", "attribute update"]
+tag_hex: "42013C"
+xml_element: "CurrentAttribute"
 ---
 
 # Current Attribute

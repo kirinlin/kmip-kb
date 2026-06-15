@@ -7,6 +7,8 @@ source_section: "4.37"
 status: reviewed
 related: ["opaque-object", "object-type", "custom-attribute"]
 keywords: ["opaque data type", "opaque object", "vendor-defined", "blob type", "opaque data subtype"]
+tag_hex: "420059"
+xml_element: "OpaqueDataType"
 ---
 
 # Opaque Data Type

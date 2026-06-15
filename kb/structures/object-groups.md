@@ -7,6 +7,8 @@ source_section: "7.23"
 status: reviewed
 related: ["objects", "query", "locate", "server-information"]
 keywords: ["object groups", "group names", "object group", "group membership", "locate filter"]
+tag_hex: "420166"
+xml_element: "ObjectGroups"
 ---
 
 # Object Groups

@@ -7,6 +7,8 @@ source_section: "7.15"
 status: reviewed
 related: ["interop-identifier", "interop", "message-structure"]
 keywords: ["interop function", "interoperability test", "test function", "interop operation", "KMIP testing"]
+tag_hex: "420160"
+xml_element: "InteropFunction"
 ---
 
 # Interop Function

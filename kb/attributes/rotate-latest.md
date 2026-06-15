@@ -7,6 +7,8 @@ source_section: "4.52"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interval", "rotate-name", "re-key"]
 keywords: ["rotate latest", "latest rotation", "current key version", "key family head", "boolean"]
+tag_hex: "420172"
+xml_element: "RotateLatest"
 ---
 
 # Rotate Latest

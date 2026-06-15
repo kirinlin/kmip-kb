@@ -7,6 +7,8 @@ source_section: "7.27"
 status: reviewed
 related: ["pkcs-11-function", "pkcs-11-interface", "pkcs-11-output-parameters", "pkcs-11-return-code", "pkcs-11"]
 keywords: ["PKCS#11 input", "Cryptoki parameters", "CK_MECHANISM", "function arguments", "PKCS11 tunnel input"]
+tag_hex: "42015B"
+xml_element: "PKCS_11InputParameters"
 ---
 
 # PKCS#11 Input Parameters

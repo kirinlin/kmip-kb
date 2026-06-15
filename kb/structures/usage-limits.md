@@ -7,6 +7,8 @@ source_section: "7.40"
 status: reviewed
 related: ["get-attributes", "locate", "state", "cryptographic-usage-mask"]
 keywords: ["usage limits", "usage count", "usage total", "usage limits unit", "key usage enforcement", "byte count", "object count"]
+tag_hex: "420095"
+xml_element: "UsageLimits"
 ---
 
 # Usage Limits

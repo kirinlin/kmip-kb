@@ -7,6 +7,8 @@ source_section: "7.7"
 status: reviewed
 related: ["constraint", "rights", "right", "set-constraints", "get-constraints", "unique-identifier"]
 keywords: ["constraints", "access control policy", "constraint list", "policy", "KMIP constraints", "object policy"]
+tag_hex: "420168"
+xml_element: "Constraints"
 ---
 
 # Constraints

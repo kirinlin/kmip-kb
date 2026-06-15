@@ -7,6 +7,8 @@ source_section: "12.2"
 status: reviewed
 related: ["protection-storage-masks", "protection-storage-mask", "protection-level", "protection-period", "server-information", "query"]
 keywords: ["protection storage mask", "bit mask", "storage protection", "on premise", "off premise", "hardware module", "cloud storage", "third party"]
+tag_hex: "42015E"
+xml_element: "ProtectionStorageMask"
 ---
 
 # Protection Storage Mask

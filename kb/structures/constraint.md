@@ -7,6 +7,8 @@ source_section: "7.6"
 status: reviewed
 related: ["constraints", "rights", "right", "attribute-reference", "set-constraints", "get-constraints", "object-type"]
 keywords: ["constraint", "access constraint", "attribute constraint", "policy rule", "object type constraint", "operation constraint"]
+tag_hex: "420169"
+xml_element: "Constraint"
 ---
 
 # Constraint

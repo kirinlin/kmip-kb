@@ -7,6 +7,8 @@ source_section: "7.19"
 status: reviewed
 related: ["log", "message-structure"]
 keywords: ["log message", "audit log", "log operation", "log level", "log text", "server log"]
+tag_hex: "420141"
+xml_element: "LogMessage"
 ---
 
 # Log Message

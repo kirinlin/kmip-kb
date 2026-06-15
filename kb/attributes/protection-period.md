@@ -7,6 +7,8 @@ source_section: "4.43"
 status: reviewed
 related: ["protection-level", "protection-storage-mask", "activation-date", "deactivation-date", "rotate-interval"]
 keywords: ["protection period", "key lifetime", "protection duration", "interval", "cryptoperiod"]
+tag_hex: "420146"
+xml_element: "ProtectionPeriod"
 ---
 
 # Protection Period

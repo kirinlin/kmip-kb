@@ -7,6 +7,8 @@ source_section: "4.51"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-latest", "rotate-name", "rotate-offset", "protection-period", "re-key"]
 keywords: ["rotate interval", "rotation interval", "cryptoperiod", "key rotation period", "interval attribute"]
+tag_hex: "42016A"
+xml_element: "RotateInterval"
 ---
 
 # Rotate Interval

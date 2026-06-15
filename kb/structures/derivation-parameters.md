@@ -7,6 +7,8 @@ source_section: "7.12"
 status: reviewed
 related: ["derive-key", "key-block", "cryptographic-algorithm"]
 keywords: ["derivation parameters", "key derivation", "PBKDF2", "HKDF", "SP800-108", "derivation method", "salt", "iteration count", "KDF"]
+tag_hex: "420032"
+xml_element: "DerivationParameters"
 ---
 
 # Derivation Parameters

@@ -7,6 +7,8 @@ source_section: "4.53"
 status: reviewed
 related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interval", "rotate-latest", "rotate-offset", "name"]
 keywords: ["rotate name", "rotation group", "rotation policy name", "key family", "rotation identifier"]
+tag_hex: "42016F"
+xml_element: "RotateName"
 ---
 
 # Rotate Name

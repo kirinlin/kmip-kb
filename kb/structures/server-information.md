@@ -7,6 +7,8 @@ source_section: "7.37"
 status: reviewed
 related: ["query", "profile-version", "protocol-version", "object-types", "protection-storage-masks"]
 keywords: ["server information", "server name", "server version", "vendor identification", "server instance", "conformance clause"]
+tag_hex: "420088"
+xml_element: "ServerInformation"
 ---
 
 # Server Information

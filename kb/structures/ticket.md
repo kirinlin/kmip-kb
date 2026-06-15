@@ -7,6 +7,8 @@ source_section: "7.39"
 status: reviewed
 related: ["login", "logout", "delegated-login", "authentication", "message-structure"]
 keywords: ["ticket", "session ticket", "delegation ticket", "ticket type", "ticket value", "token authentication"]
+tag_hex: "420149"
+xml_element: "Ticket"
 ---
 
 # Ticket

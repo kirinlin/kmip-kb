@@ -7,6 +7,8 @@ source_section: "5.4"
 status: reviewed
 related: ["common-attributes", "private-key-attributes", "attribute", "template-attribute-structures", "create-key-pair", "public-key"]
 keywords: ["public key attributes", "asymmetric key attributes", "key pair attributes", "public key specific", "attribute structure"]
+tag_hex: "420128"
+xml_element: "PublicKeyAttributes"
 ---
 
 # Public Key Attributes

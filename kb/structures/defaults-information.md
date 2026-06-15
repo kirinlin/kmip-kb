@@ -7,6 +7,8 @@ source_section: "7.11"
 status: reviewed
 related: ["object-defaults", "set-defaults", "get-constraints", "attribute", "object-type"]
 keywords: ["defaults information", "server defaults", "object defaults", "default attributes", "set defaults"]
+tag_hex: "420152"
+xml_element: "DefaultsInformation"
 ---
 
 # Defaults Information

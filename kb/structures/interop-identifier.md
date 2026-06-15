@@ -7,6 +7,8 @@ source_section: "7.16"
 status: reviewed
 related: ["interop-function", "interop", "message-structure"]
 keywords: ["interop identifier", "interoperability test suite", "test case name", "interop test identifier"]
+tag_hex: "420161"
+xml_element: "InteropIdentifier"
 ---
 
 # Interop Identifier

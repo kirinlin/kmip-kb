@@ -7,6 +7,8 @@ source_section: "7.26"
 status: reviewed
 related: ["pkcs-11-interface", "pkcs-11-input-parameters", "pkcs-11-output-parameters", "pkcs-11-return-code", "pkcs-11"]
 keywords: ["PKCS#11", "PKCS11 function", "CKF", "cryptoki function", "token function", "tunnel"]
+tag_hex: "42015A"
+xml_element: "PKCS_11Function"
 ---
 
 # PKCS#11 Function

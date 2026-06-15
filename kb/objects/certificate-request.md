@@ -7,6 +7,8 @@ source_section: "2.2"
 status: reviewed
 related: ["certificate", "private-key", "public-key", "certify", "re-certify", "register", "create-key-pair", "unique-identifier"]
 keywords: ["certificate request", "csr", "pkcs10", "pem", "crmf", "cmc", "certificate signing request", "managed object"]
+tag_hex: "420018"
+xml_element: "CertificateRequest"
 ---
 
 # Certificate Request

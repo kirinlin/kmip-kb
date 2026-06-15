@@ -7,6 +7,8 @@ source_section: "7.21"
 status: reviewed
 related: ["object-types", "unique-identifier", "query", "locate", "message-structure"]
 keywords: ["objects structure", "object list", "query response", "unique identifier list", "managed objects summary"]
+tag_hex: "42014E"
+xml_element: "Objects"
 ---
 
 # Objects
