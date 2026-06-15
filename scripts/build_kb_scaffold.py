@@ -126,14 +126,19 @@ V21_SLUG_OVERRIDES: dict[str, str] = {
 #
 # v1.3–v2.x: §3 = Auth Suites, §5 = Profile definitions.
 PROF_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
-    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, HTTPS, Suite B, ...)
-    "5": ("profile", 2, ""),  # §5 Profile definitions (Baseline, Complete, HTTPS, ...)
+    "3": ("profile", 2, "authentication"),    # §3 Authentication Suites
+    "5.1": ("profile", 2, "base-encoding"),   # §5.1 Base Profiles
+    "5.2": ("profile", 2, "base-encoding"),   # §5.2 Complete Server Profile
+    "5.3": ("profile", 2, "base-encoding"),   # §5.3 HTTPS Profiles
+    "5.4": ("profile", 2, "base-encoding"),   # §5.4 XML Profiles
+    "5.5": ("profile", 2, "base-encoding"),   # §5.5 JSON Profiles
+    "5": ("profile", 2, "key-management"),    # §5.6+ Key Management Profiles
 }
 
 # v1.0–v1.2: §4 = KMIP Profiles (§5 is Conformance Clauses, not profiles).
 PROF_V1X_EARLY_RULES: dict[str, tuple[str, int, str]] = {
-    "3": ("profile", 2, ""),  # §3 Authentication Suites (Basic, TLS 1.2)
-    "4": ("profile", 2, ""),  # §4 KMIP Profiles
+    "3": ("profile", 2, "authentication"),  # §3 Authentication Suites
+    "4": ("profile", 2, "v1"),              # §4 KMIP Profiles (v1.x named profiles)
 }
 
 

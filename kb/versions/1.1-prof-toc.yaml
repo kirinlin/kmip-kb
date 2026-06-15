@@ -6,176 +6,176 @@ sections:
   - section: "3.1"
     title: "Basic Authentication Suite"
     category: profile
-    target_path: kb/profiles/basic-authentication-suite.md
+    target_path: kb/profiles/authentication/basic-authentication-suite.md
   - section: "3.2"
     title: "TLS 1.2 Authentication Suite"
     category: profile
-    target_path: kb/profiles/tls-1-2-authentication-suite.md
+    target_path: kb/profiles/authentication/tls-1-2-authentication-suite.md
   - section: "4.1"
     title: "Basic Discover Versions Server Profile"
     category: profile
-    target_path: kb/profiles/basic-discover-versions-server-profile.md
+    target_path: kb/profiles/v1/basic-discover-versions-server-profile.md
   - section: "4.2"
     title: "Basic Baseline Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-baseline-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-baseline-server-kmip-profile.md
   - section: "4.3"
     title: "Basic Secret Data Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-secret-data-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-secret-data-server-kmip-profile.md
   - section: "4.4"
     title: "Basic Symmetric Key Store and Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-symmetric-key-store-and-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-symmetric-key-store-and-server-kmip-profile.md
   - section: "4.5"
     title: "Basic Symmetric Key Foundry and Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-symmetric-key-foundry-and-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-symmetric-key-foundry-and-server-kmip-profile.md
   - section: "4.6"
     title: "Basic Asymmetric Key Store Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-store-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-store-server-kmip-profile.md
   - section: "4.7"
     title: "Basic Asymmetric Key and Certificate Store Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-and-certificate-store-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-and-certificate-store-server-kmip-profile.md
   - section: "4.8"
     title: "Basic Asymmetric Key Foundry and Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-foundry-and-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-foundry-and-server-kmip-profile.md
   - section: "4.9"
     title: "Basic Certificate Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-certificate-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-certificate-server-kmip-profile.md
   - section: "4.10"
     title: "Basic Asymmetric Key Foundry and Certificate Server KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-foundry-and-certificate-server-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-foundry-and-certificate-server-kmip-profile.md
   - section: "4.11"
     title: "Discover Versions TLS 1.2 Authentication Server Profile"
     category: profile
-    target_path: kb/profiles/discover-versions-tls-1-2-authentication-server-profile.md
+    target_path: kb/profiles/v1/discover-versions-tls-1-2-authentication-server-profile.md
   - section: "4.12"
     title: "Baseline Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.13"
     title: "Secret Data Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/secret-data-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/secret-data-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.14"
     title: "Symmetric Key Store and Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/symmetric-key-store-and-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/symmetric-key-store-and-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.15"
     title: "Symmetric Key Foundry and Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/symmetric-key-foundry-and-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/symmetric-key-foundry-and-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.16"
     title: "Asymmetric Key Store Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-store-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-store-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.17"
     title: "Asymmetric Key and Certificate Store Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-and-certificate-store-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-and-certificate-store-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.18"
     title: "Asymmetric Key Foundry and Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-foundry-and-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-foundry-and-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.19"
     title: "Certificate Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/certificate-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/certificate-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.20"
     title: "Asymmetric Key Foundry and Certificate Server TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-foundry-and-certificate-server-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-foundry-and-certificate-server-tls-1-2-authentication-kmip-profile.md
   - section: "4.21"
     title: "Basic Discover Versions Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-discover-versions-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-discover-versions-client-kmip-profile.md
   - section: "4.22"
     title: "Basic Baseline Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-baseline-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-baseline-client-kmip-profile.md
   - section: "4.23"
     title: "Basic Secret Data Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-secret-data-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-secret-data-client-kmip-profile.md
   - section: "4.24"
     title: "Basic Symmetric Key Store Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-symmetric-key-store-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-symmetric-key-store-client-kmip-profile.md
   - section: "4.25"
     title: "Basic Symmetric Key Foundry Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-symmetric-key-foundry-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-symmetric-key-foundry-client-kmip-profile.md
   - section: "4.26"
     title: "Basic Asymmetric Key Store Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-store-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-store-client-kmip-profile.md
   - section: "4.27"
     title: "Basic Asymmetric Key and Certificate Store Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-and-certificate-store-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-and-certificate-store-client-kmip-profile.md
   - section: "4.28"
     title: "Basic Asymmetric Key Foundry Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-foundry-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-foundry-client-kmip-profile.md
   - section: "4.29"
     title: "Basic Certificate Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-certificate-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-certificate-client-kmip-profile.md
   - section: "4.30"
     title: "Basic Asymmetric Key Foundry and Certificate Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/basic-asymmetric-key-foundry-and-certificate-client-kmip-profile.md
+    target_path: kb/profiles/v1/basic-asymmetric-key-foundry-and-certificate-client-kmip-profile.md
   - section: "4.31"
     title: "Discover Versions Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/discover-versions-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/discover-versions-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.32"
     title: "Baseline Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.33"
     title: "Secret Data Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/secret-data-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/secret-data-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.34"
     title: "Symmetric Key Store Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/symmetric-key-store-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/symmetric-key-store-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.35"
     title: "Symmetric Key Foundry Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/symmetric-key-foundry-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/symmetric-key-foundry-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.36"
     title: "Asymmetric Key Store Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-store-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-store-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.37"
     title: "Asymmetric Key and Certificate Store Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-and-certificate-store-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-and-certificate-store-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.38"
     title: "Asymmetric Key Foundry Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-foundry-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-foundry-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.39"
     title: "Certificate Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/certificate-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/certificate-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.40"
     title: "Asymmetric Key Foundry and Certificate Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/asymmetric-key-foundry-and-certificate-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/asymmetric-key-foundry-and-certificate-client-tls-1-2-authentication-kmip-profile.md
   - section: "4.41"
     title: "Storage Client KMIP Profile"
     category: profile
-    target_path: kb/profiles/storage-client-kmip-profile.md
+    target_path: kb/profiles/v1/storage-client-kmip-profile.md
   - section: "4.42"
     title: "Storage Client TLS 1.2 Authentication KMIP Profile"
     category: profile
-    target_path: kb/profiles/storage-client-tls-1-2-authentication-kmip-profile.md
+    target_path: kb/profiles/v1/storage-client-tls-1-2-authentication-kmip-profile.md

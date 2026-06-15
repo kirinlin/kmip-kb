@@ -8,6 +8,13 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Reorganised `kb/profiles/` into four subdirectories by source section:
+  `authentication/` ([KMIP-Prof] §3 auth suites), `base-encoding/`
+  ([KMIP-Prof] §5.1–5.5 base/encoding profiles), `key-management/`
+  ([KMIP-Prof] §5.6+ use-case profiles), and `v1/` (v1.x legacy named
+  profiles from [KMIP-Prof] §4/§5). All intra-profile links and the profiles
+  index are updated; `status_report.py` and `build_kb_scaffold.py` reflect the
+  new layout; all seven prof-toc YAML files carry updated `target_path` values.
 - Narrowed the `kb/ttlv/` category to TTLV wire encoding, enumerations, and bit
   masks. Data-structure articles (object, attribute, and operation building
   blocks) moved to a new `kb/structures/` category, and message-structure

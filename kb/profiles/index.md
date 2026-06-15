@@ -31,43 +31,65 @@ Runtime discovery of what a peer actually implements goes through
 
 ## Authentication Suites ([KMIP-Prof] §3)
 
-- [Basic Authentication Suite](basic-authentication-suite.md)
+- [Basic Authentication Suite](authentication/basic-authentication-suite.md)
   — TLS mutual auth, cipher suites, port 5696.
-- [HTTPS Authentication Suite](https-authentication-suite.md)
+- [HTTPS Authentication Suite](authentication/https-authentication-suite.md)
   — HTTP over TLS variant of the Basic suite.
+- [TLS 1.2 Authentication Suite](authentication/tls-1-2-authentication-suite.md)
+  — TLS 1.2 mutual auth variant.
+- [Suite B minLOS 128 Authentication Suite](authentication/suite-b-minlos-128-authentication-suite.md)
+  — NSA Suite B 128-bit minimum level of security.
+- [Suite B minLOS 192 Authentication Suite](authentication/suite-b-minlos-192-authentication-suite.md)
+  — NSA Suite B 192-bit minimum level of security.
 
 ## Base and Encoding Profiles ([KMIP-Prof] §5.1–5.5)
 
-- [Base Profiles](base-profiles.md)
+- [Base Profiles](base-encoding/base-profiles.md)
   — Baseline Client and Baseline Server; the foundation every other profile builds on.
-- [Complete Server Profile](complete-server-profile.md)
+- [Complete Server Profile](base-encoding/complete-server-profile.md)
   — a server implementing the entire KMIP specification.
-- [HTTPS Profiles](https-profiles.md)
+- [HTTPS Profiles](base-encoding/https-profiles.md)
   — KMIP over HTTP/TLS framing.
-- [XML Profiles](xml-profiles.md)
+- [XML Profiles](base-encoding/xml-profiles.md)
   — CamelCase XML encoding as an alternative to TTLV binary.
-- [JSON Profiles](json-profiles.md)
+- [JSON Profiles](base-encoding/json-profiles.md)
   — JSON object encoding as an alternative to TTLV binary.
 
-## Key Management Profiles ([KMIP-Prof] §5.6–5.14)
+## Key Management Profiles ([KMIP-Prof] §5.6+)
 
-- [Symmetric Key Lifecycle Profiles](symmetric-key-lifecycle-profiles.md)
+- [Symmetric Key Lifecycle Profiles](key-management/symmetric-key-lifecycle-profiles.md)
   — Create and manage AES/3DES symmetric keys.
-- [Symmetric Key Foundry for FIPS 140 Profiles](symmetric-key-foundry-for-fips-140-profiles.md)
+- [Symmetric Key Foundry for FIPS 140 Profiles](key-management/symmetric-key-foundry-for-fips-140-profiles.md)
   — FIPS-approved algorithm key generation; Basic, Intermediate, and Advanced client tiers.
-- [Asymmetric Key Lifecycle Profiles](asymmetric-key-lifecycle-profiles.md)
+- [Asymmetric Key Lifecycle Profiles](key-management/asymmetric-key-lifecycle-profiles.md)
   — RSA public/private key pair management.
-- [Cryptographic Profiles](cryptographic-profiles.md)
+- [Cryptographic Profiles](key-management/cryptographic-profiles.md)
   — Server-side Encrypt/Decrypt, Sign/Verify, MAC, and RNG operations.
-- [Opaque Managed Object Store Profiles](opaque-managed-object-store-profiles.md)
+- [Opaque Managed Object Store Profiles](key-management/opaque-managed-object-store-profiles.md)
   — Centralized storage of uninterpreted binary data (opaque objects).
-- [Storage Array with Self-Encrypting Drives Profiles](storage-array-with-self-encrypting-drives-profiles.md)
+- [Storage Array with Self-Encrypting Drives Profiles](key-management/storage-array-with-self-encrypting-drives-profiles.md)
   — Storage array SED authentication key management.
-- [Tape Library Profiles](tape-library-profiles.md)
+- [Tape Library Profiles](key-management/tape-library-profiles.md)
   — LTO tape encryption key management with KAD-based identifiers.
-- [AES XTS Profiles](aes-xts-profiles.md)
+- [AES XTS Profiles](key-management/aes-xts-profiles.md)
   — AES XTS sector-encryption key management (NVMe, FDE); with and without KEK wrapping.
-- [Quantum Safe Profiles](quantum-safe-profiles.md)
+- [Suite B Profiles](key-management/suite-b-profiles.md)
+  — NSA Suite B cryptographic profile bundle.
+- [Quantum Safe Profiles](key-management/quantum-safe-profiles.md)
   — Post-quantum algorithms (McEliece, SPHINCS); TLS 1.3 mandatory.
-- [PKCS#11 Profiles](pkcs-11-profiles.md)
+- [Quantum Safe Client](key-management/quantum-safe-client.md)
+  — Quantum-safe client profile specification.
+- [Quantum Safe Server](key-management/quantum-safe-server.md)
+  — Quantum-safe server profile specification.
+- [Mandatory Quantum Safe Test Cases KMIP v2.0](key-management/mandatory-quantum-safe-test-cases-kmip-v2-0.md)
+  — Mandatory test cases for quantum-safe conformance.
+- [PKCS#11 Profiles](key-management/pkcs-11-profiles.md)
   — KMIP as a PKCS#11 Cryptoki transport.
+
+## v1.x Named Profiles ([KMIP-Prof] §4/§5, v1.0–v1.4)
+
+The `v1/` subdirectory contains 52 individually named conformance profiles from
+the v1.x Profiles document ([KMIP-Prof] §4 in v1.0–v1.2, §5 in v1.3–v1.4).
+These cover baseline, symmetric key, asymmetric key, certificate, secret data,
+discover-versions, and storage-client profiles in both the Basic and TLS 1.2
+authentication variants. See the `v1/` directory for the full list.

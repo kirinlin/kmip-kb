@@ -6,32 +6,32 @@ sections:
   - section: "3.1"
     title: "Basic Authentication Suite"
     category: profile
-    target_path: kb/profiles/basic-authentication-suite.md
+    target_path: kb/profiles/authentication/basic-authentication-suite.md
   - section: "3.2"
     title: "TLS 1.2 Authentication Suite"
     category: profile
-    target_path: kb/profiles/tls-1-2-authentication-suite.md
+    target_path: kb/profiles/authentication/tls-1-2-authentication-suite.md
   - section: "4.1"
     title: "Baseline Server Basic KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-server-basic-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-server-basic-kmip-profile.md
   - section: "4.2"
     title: "Baseline Server TLS v1.2 KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-server-tls-v1-2-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-server-tls-v1-2-kmip-profile.md
   - section: "4.3"
     title: "Baseline Client Basic KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-client-basic-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-client-basic-kmip-profile.md
   - section: "4.4"
     title: "Baseline Client TLS v1.2 KMIP Profile"
     category: profile
-    target_path: kb/profiles/baseline-client-tls-v1-2-kmip-profile.md
+    target_path: kb/profiles/v1/baseline-client-tls-v1-2-kmip-profile.md
   - section: "4.5"
     title: "Complete Server Basic KMIP Profile"
     category: profile
-    target_path: kb/profiles/complete-server-basic-kmip-profile.md
+    target_path: kb/profiles/v1/complete-server-basic-kmip-profile.md
   - section: "4.6"
     title: "Complete Server TLS v1.2 KMIP Profile"
     category: profile
-    target_path: kb/profiles/complete-server-tls-v1-2-kmip-profile.md
+    target_path: kb/profiles/v1/complete-server-tls-v1-2-kmip-profile.md

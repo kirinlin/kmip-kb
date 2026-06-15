@@ -6,80 +6,80 @@ sections:
   - section: "3.1"
     title: "Basic Authentication Suite"
     category: profile
-    target_path: kb/profiles/basic-authentication-suite.md
+    target_path: kb/profiles/authentication/basic-authentication-suite.md
   - section: "3.2"
     title: "HTTPS Authentication Suite"
     category: profile
-    target_path: kb/profiles/https-authentication-suite.md
+    target_path: kb/profiles/authentication/https-authentication-suite.md
   - section: "5.1"
     title: "Base Profiles"
     category: profile
-    target_path: kb/profiles/base-profiles.md
+    target_path: kb/profiles/base-encoding/base-profiles.md
   - section: "5.2"
     title: "Complete Server Profile"
     category: profile
-    target_path: kb/profiles/complete-server-profile.md
+    target_path: kb/profiles/base-encoding/complete-server-profile.md
   - section: "5.3"
     title: "HTTPS Profiles"
     category: profile
-    target_path: kb/profiles/https-profiles.md
+    target_path: kb/profiles/base-encoding/https-profiles.md
   - section: "5.4"
     title: "XML Profiles"
     category: profile
-    target_path: kb/profiles/xml-profiles.md
+    target_path: kb/profiles/base-encoding/xml-profiles.md
   - section: "5.5"
     title: "JSON Profiles"
     category: profile
-    target_path: kb/profiles/json-profiles.md
+    target_path: kb/profiles/base-encoding/json-profiles.md
   - section: "5.6"
     title: "Symmetric Key Lifecycle Profiles"
     category: profile
-    target_path: kb/profiles/symmetric-key-lifecycle-profiles.md
+    target_path: kb/profiles/key-management/symmetric-key-lifecycle-profiles.md
   - section: "5.7"
     title: "Symmetric Key Foundry for FIPS 140 Profiles"
     category: profile
-    target_path: kb/profiles/symmetric-key-foundry-for-fips-140-profiles.md
+    target_path: kb/profiles/key-management/symmetric-key-foundry-for-fips-140-profiles.md
   - section: "5.8"
     title: "Asymmetric Key Lifecycle Profiles"
     category: profile
-    target_path: kb/profiles/asymmetric-key-lifecycle-profiles.md
+    target_path: kb/profiles/key-management/asymmetric-key-lifecycle-profiles.md
   - section: "5.9"
     title: "Cryptographic Profiles"
     category: profile
-    target_path: kb/profiles/cryptographic-profiles.md
+    target_path: kb/profiles/key-management/cryptographic-profiles.md
   - section: "5.10"
     title: "Opaque Managed Object Store Profiles"
     category: profile
-    target_path: kb/profiles/opaque-managed-object-store-profiles.md
+    target_path: kb/profiles/key-management/opaque-managed-object-store-profiles.md
   - section: "5.11"
     title: "Storage Array with Self-Encrypting Drives Profiles"
     category: profile
-    target_path: kb/profiles/storage-array-with-self-encrypting-drives-profiles.md
+    target_path: kb/profiles/key-management/storage-array-with-self-encrypting-drives-profiles.md
   - section: "5.12"
     title: "Tape Library Profiles"
     category: profile
-    target_path: kb/profiles/tape-library-profiles.md
+    target_path: kb/profiles/key-management/tape-library-profiles.md
   - section: "5.13"
     title: "AES XTS Profiles"
     category: profile
-    target_path: kb/profiles/aes-xts-profiles.md
+    target_path: kb/profiles/key-management/aes-xts-profiles.md
   - section: "5.14"
     title: "Quantum Safe Profiles"
     category: profile
-    target_path: kb/profiles/quantum-safe-profiles.md
+    target_path: kb/profiles/key-management/quantum-safe-profiles.md
   - section: "5.15"
     title: "Quantum Safe Client"
     category: profile
-    target_path: kb/profiles/quantum-safe-client.md
+    target_path: kb/profiles/key-management/quantum-safe-client.md
   - section: "5.16"
     title: "Quantum Safe Server"
     category: profile
-    target_path: kb/profiles/quantum-safe-server.md
+    target_path: kb/profiles/key-management/quantum-safe-server.md
   - section: "5.17"
     title: "Mandatory Quantum Safe Test Cases KMIP v2.0"
     category: profile
-    target_path: kb/profiles/mandatory-quantum-safe-test-cases-kmip-v2-0.md
+    target_path: kb/profiles/key-management/mandatory-quantum-safe-test-cases-kmip-v2-0.md
   - section: "5.18"
     title: "PKCS#11 Profiles"
     category: profile
-    target_path: kb/profiles/pkcs-11-profiles.md
+    target_path: kb/profiles/key-management/pkcs-11-profiles.md
