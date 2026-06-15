@@ -44,8 +44,9 @@ from pathlib import Path
 # Reuse the tag lookup + name->XML conversion already used for front matter.
 from populate_tag_fields import build_tag_lookup, to_xml_element  # noqa: F401
 
-# Header first-column labels that mark a "field" table.
+# Header first-column labels that trigger enrichment.
 FIELD_HEADER = "Field"
+TAG_HEADER = "Tag"
 
 # A Markdown table separator row, e.g. ``|---|---|`` or ``| :--- | ---: |``.
 _SEP_RE = re.compile(r'^\s*\|?[\s:|-]*-[\s:|-]*\|?\s*$')
@@ -81,24 +82,38 @@ def clean_field_name(cell: str) -> str:
 
 
 def enrich_table(header: list[str], rows: list[list[str]],
-                 tags: dict[str, tuple[str, str]]) -> tuple[list[str], list[list[str]], int]:
-    """Return (new_header, new_rows, filled) for one field table.
+                 tags: dict[str, tuple[str, str]],
+                 rev_tags: dict[str, str] | None = None,
+                 ) -> tuple[list[str], list[list[str]], int, int]:
+    """Return (new_header, new_rows, filled, orig_ncols) for one field table.
 
-    Inserts ``Tag`` and ``XML Element`` columns after ``Field`` if absent and
-    fills them from the tag lookup.  ``filled`` counts rows that matched a tag.
+    Two modes:
+    * Field-first (``header[0] == "Field"``): inserts ``Tag`` then
+      ``XML Element`` columns after ``Field``; fills both from the name→tag
+      lookup.
+    * Tag-first (``header[0] == "Tag"``): the Tag column is already present
+      at index 0; only inserts ``XML Element`` at index 1 and fills it via
+      the hex→element reverse lookup (``rev_tags``).
+
+    ``filled`` counts rows that matched a tag.
     """
     header = list(header)
     rows = [list(r) for r in rows]
     ncols = len(header)
+    tag_first = header[0] == TAG_HEADER
 
-    # Ensure a Tag column immediately after Field (index 0).
-    if "Tag" in header:
-        tag_idx = header.index("Tag")
+    if tag_first:
+        # Tag column is already at index 0; don't insert another one.
+        tag_idx = 0
     else:
-        tag_idx = 1
-        header.insert(tag_idx, "Tag")
-        for r in rows:
-            r.insert(min(tag_idx, len(r)), "")
+        # Field-first: ensure Tag column immediately after Field (index 0).
+        if "Tag" in header:
+            tag_idx = header.index("Tag")
+        else:
+            tag_idx = 1
+            header.insert(tag_idx, "Tag")
+            for r in rows:
+                r.insert(min(tag_idx, len(r)), "")
 
     # Ensure an XML Element column immediately after Tag.
     if "XML Element" in header:
@@ -114,16 +129,26 @@ def enrich_table(header: list[str], rows: list[list[str]],
         # Defend against ragged rows: pad to header width.
         while len(r) < len(header):
             r.append("")
-        name = clean_field_name(r[0])
-        entry = tags.get(name.lower())
-        if not entry:
-            continue
-        hex6, xml_el = entry
-        if not r[tag_idx].strip():
-            r[tag_idx] = f"`{hex6}`"
-        if not r[xml_idx].strip():
-            r[xml_idx] = f"`{xml_el}`"
-        filled += 1
+
+        if tag_first:
+            # Reverse lookup: hex tag value → XML element name.
+            hex_val = r[0].strip().strip("`").upper()
+            if rev_tags and hex_val and not r[xml_idx].strip():
+                xml_el = rev_tags.get(hex_val)
+                if xml_el:
+                    r[xml_idx] = f"`{xml_el}`"
+                    filled += 1
+        else:
+            name = clean_field_name(r[0])
+            entry = tags.get(name.lower())
+            if not entry:
+                continue
+            hex6, xml_el = entry
+            if not r[tag_idx].strip():
+                r[tag_idx] = f"`{hex6}`"
+            if not r[xml_idx].strip():
+                r[xml_idx] = f"`{xml_el}`"
+            filled += 1
 
     return header, rows, filled, ncols
 
@@ -136,6 +161,8 @@ def process_text(text: str, tags: dict[str, tuple[str, str]]) -> tuple[str, int,
     n = len(lines)
     in_fence = False
     tables = rows_filled = 0
+    # Reverse lookup: hex6 → xml_el (for Tag-first tables).
+    rev_tags = {hex6: xml_el for hex6, xml_el in tags.values()}
 
     while i < n:
         line = lines[i]
@@ -154,7 +181,7 @@ def process_text(text: str, tags: dict[str, tuple[str, str]]) -> tuple[str, int,
         )
         if is_header:
             header = _split_row(line)
-            if header and header[0] == FIELD_HEADER:
+            if header and header[0] in (FIELD_HEADER, TAG_HEADER):
                 # Collect contiguous data rows.
                 j = i + 2
                 data: list[list[str]] = []
@@ -171,7 +198,7 @@ def process_text(text: str, tags: dict[str, tuple[str, str]]) -> tuple[str, int,
                     out.append(line)
                     i += 1
                     continue
-                new_header, new_rows, filled, _ = enrich_table(header, data, tags)
+                new_header, new_rows, filled, _ = enrich_table(header, data, tags, rev_tags)
                 out.append(_render_row(new_header))
                 out.append("|" + "---|" * len(new_header))
                 for r in new_rows:
