@@ -20,25 +20,25 @@ and was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The key to decrypt with; the ID Placeholder is used when omitted. |
-| Cryptographic Parameters | No | The mode, padding, and related settings for this operation. |
-| Data | Yes (single-part) | The ciphertext to decrypt, as raw bytes. |
-| IV/Counter/Nonce | No | The IV, counter, or nonce the algorithm calls for. |
-| Correlation Value | No | Ties this call to an in-progress multi-part operation. |
-| Init Indicator | No | Marks the first call of a multi-part operation. |
-| Final Indicator | No | Marks the last call of a multi-part operation. |
-| Authenticated Encryption Additional Data | No | Extra data to authenticate (AEAD); for multi-part it goes on the first call. |
-| Authenticated Encryption Tag | No | The tag to check against (AEAD); for multi-part it goes on the first call. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The key to decrypt with; the ID Placeholder is used when omitted. |
+| Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The mode, padding, and related settings for this operation. |
+| Data | `4200C2` | `Data` | Yes (single-part) | The ciphertext to decrypt, as raw bytes. |
+| IV/Counter/Nonce | `42003D` | `IVCounterNonce` | No | The IV, counter, or nonce the algorithm calls for. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | Ties this call to an in-progress multi-part operation. |
+| Init Indicator | `4200D7` | `InitIndicator` | No | Marks the first call of a multi-part operation. |
+| Final Indicator | `4200D8` | `FinalIndicator` | No | Marks the last call of a multi-part operation. |
+| Authenticated Encryption Additional Data | `4200FE` | `AuthenticatedEncryptionAdditionalData` | No | Extra data to authenticate (AEAD); for multi-part it goes on the first call. |
+| Authenticated Encryption Tag | `4200FF` | `AuthenticatedEncryptionTag` | No | The tag to check against (AEAD); for multi-part it goes on the first call. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The key that was used. |
-| Data | Yes (single-part) | The recovered plaintext, as a byte string. |
-| Correlation Value | No | A handle to pass to subsequent calls of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
+| Data | `4200C2` | `Data` | Yes (single-part) | The recovered plaintext, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |
 
 ## Behavior & Server Requirements
 

@@ -25,9 +25,9 @@ key. Public keys are usually produced by
 
 ## Structure
 
-| Field | Required | Meaning |
-|---|---|---|
-| Key Block | Yes | The [Key Block](../ttlv/key-block.md) carrying the public key's format, algorithm, length, and material. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../ttlv/key-block.md) carrying the public key's format, algorithm, length, and material. |
 
 ## Key Attributes
 

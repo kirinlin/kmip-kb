@@ -26,11 +26,11 @@ peer speaks. Added in 1.1.
 
 Structure, tag `4200A4`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Extension Name | `4200A5` | Text String | Yes |
-| Extension Tag | `4200A6` | Integer | No |
-| Extension Type | `4200A7` | Integer | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Extension Name | `4200A5` | `ExtensionName` | Text String | Yes |
+| Extension Tag | `4200A6` | `ExtensionTag` | Integer | No |
+| Extension Type | `4200A7` | `ExtensionType` | Integer | No |
 
 ## Fields & Structure
 

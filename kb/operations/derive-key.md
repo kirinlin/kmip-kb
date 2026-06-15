@@ -22,20 +22,20 @@ material rather than randomly generated.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of object to derive (symmetric key or secret data). |
-| Unique Identifier | Yes (may repeat) | The base object(s) whose material feeds the derivation. The ID Placeholder may not be substituted here. |
-| Derivation Method | Yes | An enumeration naming the derivation function to apply. |
-| Derivation Parameters | Yes | A structure carrying the inputs the chosen method needs. |
-| Template-Attribute | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of object to derive (symmetric key or secret data). |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The base object(s) whose material feeds the derivation. The ID Placeholder may not be substituted here. |
+| Derivation Method | `420031` | `DerivationMethod` | Yes | An enumeration naming the derivation function to apply. |
+| Derivation Parameters | `420032` | `DerivationParameters` | Yes | A structure carrying the inputs the chosen method needs. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the derived object; the length, and for a key the algorithm, must always be given. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Identifier of the newly derived object. |
-| Template-Attribute | No | Attributes the server set implicitly. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the newly derived object. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 

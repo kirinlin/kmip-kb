@@ -19,17 +19,17 @@ keywords: ["get constraints", "operation constraints", "access control", "permis
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The identifier of the specific managed object whose constraints should be returned. When omitted, the server uses the ID Placeholder. |
-| Object Type | No | When supplied without a Unique Identifier, requests the server-wide default constraints for that object type rather than constraints on a specific object instance. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The identifier of the specific managed object whose constraints should be returned. When omitted, the server uses the ID Placeholder. |
+| Object Type | `420057` | `ObjectType` | No | When supplied without a Unique Identifier, requests the server-wide default constraints for that object type rather than constraints on a specific object instance. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | Present when the request targeted a specific object; echoes back the identifier. |
-| Constraints | Yes | The [Constraints](../ttlv/constraints.md) structure describing the operation permissions in effect for the identified object or object type. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | Present when the request targeted a specific object; echoes back the identifier. |
+| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../ttlv/constraints.md) structure describing the operation permissions in effect for the identified object or object type. |
 
 ## Behavior & Server Requirements
 

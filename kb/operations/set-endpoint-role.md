@@ -21,17 +21,17 @@ Both forms were introduced in v2.1.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Endpoint Role | Yes | An enumeration value indicating the role the client is claiming. Standard values include Key Management Client, Key Management Server, and Proxy. The full set of valid values is defined in the KMIP v2.1 Endpoint Role enumeration. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Endpoint Role | `420151` | `EndpointRole` | Yes | An enumeration value indicating the role the client is claiming. Standard values include Key Management Client, Key Management Server, and Proxy. The full set of valid values is defined in the KMIP v2.1 Endpoint Role enumeration. |
 
 ## Response Fields
 
 The response contains only the standard result status — no payload fields are returned on success.
 
-| Field | Required | Description |
-|---|---|---|
-| Result Status | Yes | Confirms whether the server accepted the declared role. A server that does not recognize or support the declared role may return an error or may silently accept it; behavior is server-dependent. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Result Status | `42007F` | `ResultStatus` | Yes | Confirms whether the server accepted the declared role. A server that does not recognize or support the declared role may return an error or may silently accept it; behavior is server-dependent. |
 
 ## Behavior & Server Requirements
 

@@ -20,22 +20,22 @@ each part as its own managed object. It was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of object to create. |
-| Unique Identifier | No | An existing key to split, when the client wants the server to split a known key. |
-| Split Key Parts | Yes | How many parts to produce in all. |
-| Split Key Threshold | Yes | How many parts must be combined to rebuild the key. |
-| Split Key Method | Yes | The secret-sharing method used to split the key. |
-| Prime Field Size | No | The prime field size, for methods that need one. |
-| Template-Attribute | Yes | Attributes for the new objects. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of object to create. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | An existing key to split, when the client wants the server to split a known key. |
+| Split Key Parts | `42008B` | `SplitKeyParts` | Yes | How many parts to produce in all. |
+| Split Key Threshold | `42008C` | `SplitKeyThreshold` | Yes | How many parts must be combined to rebuild the key. |
+| Split Key Method | `42008A` | `SplitKeyMethod` | Yes | The secret-sharing method used to split the key. |
+| Prime Field Size | `420062` | `PrimeFieldSize` | No | The prime field size, for methods that need one. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | Attributes for the new objects. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes (may repeat) | The identifiers of all the split objects created. |
-| Template-Attribute | No | Attributes the server set implicitly. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The identifiers of all the split objects created. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 

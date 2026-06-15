@@ -34,10 +34,10 @@ the [Template](../objects/template.md) object was removed in 2.0.
 Structures with tags `420091` (Template-Attribute), `42001F` (Common),
 `420065` (Private Key), `42006E` (Public Key):
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Name | `420053` | Structure | No; repeatable — a [Template](../objects/template.md) reference (deprecated) |
-| Attribute | `420008` | Structure | No; repeatable |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Name | `420053` | `Name` | Structure | No; repeatable — a [Template](../objects/template.md) reference (deprecated) |
+| Attribute | `420008` | `Attribute` | Structure | No; repeatable |
 
 ## Fields & Structure
 

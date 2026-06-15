@@ -21,16 +21,16 @@ the values it wants.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to inspect; the ID Placeholder is used when omitted. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to inspect; the ID Placeholder is used when omitted. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
-| Attribute Name | Yes (may repeat) | The name of each attribute currently set on the object. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Attribute Name | `42000A` | `AttributeName` | Yes (may repeat) | The name of each attribute currently set on the object. |
 
 ## Behavior & Server Requirements
 

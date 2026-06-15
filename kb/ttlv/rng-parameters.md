@@ -27,16 +27,16 @@ offers.
 
 Structure, tag `4200D9`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| RNG Algorithm | `4200DA` | Enumeration | Yes — Unspecified, FIPS 186-2, DRBG, NRBG, ANSI X9.31, ANSI X9.62 |
-| Cryptographic Algorithm | `420028` | Enumeration | No |
-| Cryptographic Length | `42002A` | Integer | No |
-| Hashing Algorithm | `420038` | Enumeration | No |
-| DRBG Algorithm | `4200DB` | Enumeration | No — Hash, HMAC, CTR, Dual-EC, Unspecified |
-| Recommended Curve | `420075` | Enumeration | No |
-| FIPS186 Variation | `4200DC` | Enumeration | No |
-| Prediction Resistance | `4200DD` | Boolean | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| RNG Algorithm | `4200DA` | `RNGAlgorithm` | Enumeration | Yes — Unspecified, FIPS 186-2, DRBG, NRBG, ANSI X9.31, ANSI X9.62 |
+| Cryptographic Algorithm | `420028` | `CryptographicAlgorithm` | Enumeration | No |
+| Cryptographic Length | `42002A` | `CryptographicLength` | Integer | No |
+| Hashing Algorithm | `420038` | `HashingAlgorithm` | Enumeration | No |
+| DRBG Algorithm | `4200DB` | `DRBGAlgorithm` | Enumeration | No — Hash, HMAC, CTR, Dual-EC, Unspecified |
+| Recommended Curve | `420075` | `RecommendedCurve` | Enumeration | No |
+| FIPS186 Variation | `4200DC` | `FIPS186Variation` | Enumeration | No |
+| Prediction Resistance | `4200DD` | `PredictionResistance` | Boolean | No |
 
 ## Fields & Structure
 

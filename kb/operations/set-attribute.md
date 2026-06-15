@@ -21,16 +21,16 @@ For applying a numeric or date delta to an existing attribute, use [`Adjust Attr
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | Identifies the object to update. Defaults to the server's ID Placeholder when omitted. |
-| Attribute | Yes | The [Attribute](../ttlv/attribute.md) structure carrying the attribute name and the new value to set. The attribute name is the canonical KMIP attribute name (e.g., `Activation Date`, `Name`, `Cryptographic Usage Mask`). |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | Identifies the object to update. Defaults to the server's ID Placeholder when omitted. |
+| Attribute | `420008` | `Attribute` | Yes | The [Attribute](../ttlv/attribute.md) structure carrying the attribute name and the new value to set. The attribute name is the canonical KMIP attribute name (e.g., `Activation Date`, `Name`, `Cryptographic Usage Mask`). |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Confirms the identifier of the updated object. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Confirms the identifier of the updated object. |
 
 ## Behavior & Server Requirements
 

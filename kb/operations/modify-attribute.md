@@ -20,17 +20,17 @@ which creates values; `Modify Attribute` only updates existing ones.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to change; the ID Placeholder is used when omitted. |
-| Attribute | Yes | The attribute name, optional index, and new value. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to change; the ID Placeholder is used when omitted. |
+| Attribute | `420008` | `Attribute` | Yes | The attribute name, optional index, and new value. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
-| Attribute | Yes | The attribute with its updated value. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Attribute | `420008` | `Attribute` | Yes | The attribute with its updated value. |
 
 ## Behavior & Server Requirements
 

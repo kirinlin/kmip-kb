@@ -19,20 +19,20 @@ Server Information is a structure embedded in [Query](../operations/query.md) re
 
 Server Information encodes as a Structure. All fields are optional but servers are expected to populate the ones that are meaningful for their deployment.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Server Name | `420244` | Text String | No |
-| Server Serial Number | `420245` | Text String | No |
-| Server Version | `420246` | Text String | No |
-| Server Load | `420247` | Text String | No |
-| Product Name | `420248` | Text String | No |
-| Build Level | `420249` | Text String | No |
-| Build Date | `42024A` | Text String | No |
-| Cluster Info | `42024B` | Text String | No |
-| Alternative Failover Endpoints | `42024C` | Structure | No (repeating) |
-| Vendor Identification | `420099` | Text String | No |
-| Server Instance Information | `42024F` | Text String | No |
-| Conformance Clause | `42020B` | Enumeration | No (repeating) |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Server Name | `420244` | `ServerName` | Text String | No |
+| Server Serial Number | `420245` | `ServerSerialNumber` | Text String | No |
+| Server Version | `420246` | `ServerVersion` | Text String | No |
+| Server Load | `420247` | `ServerLoad` | Text String | No |
+| Product Name | `420248` | `ProductName` | Text String | No |
+| Build Level | `420249` | `BuildLevel` | Text String | No |
+| Build Date | `42024A` | `BuildDate` | Text String | No |
+| Cluster Info | `42024B` | `ClusterInfo` | Text String | No |
+| Alternative Failover Endpoints | `42024C` |  | Structure | No (repeating) |
+| Vendor Identification | `420099` | `VendorIdentification` | Text String | No |
+| Server Instance Information | `42024F` |  | Text String | No |
+| Conformance Clause | `42020B` |  | Enumeration | No (repeating) |
 
 ## Fields & Structure
 

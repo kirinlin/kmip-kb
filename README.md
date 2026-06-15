@@ -3,7 +3,7 @@
 An independently written **KMIP developer knowledge base** — summaries,
 explanations, implementation guidance, examples, and machine-readable metadata
 for the OASIS Key Management Interoperability Protocol (KMIP), structured for
-LLM wikis, RAG / vector search, GraphRAG, and coding agents.
+LLM wikis, RAG / vector search, Graph RAG, and coding agents.
 
 It targets the **KMIP 1.x and 2.x** specification families (v1.0–v1.4,
 v2.0–v2.1), with **v2.1** as the baseline.
@@ -24,7 +24,7 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/workflows/` | End-to-end workflows that chain operations. |
 | `kb/examples/` | Worked request/response examples (original, not copied). |
 | `kb/mappings/` | Cross-version / cross-implementation mapping tables. |
-| `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds GraphRAG relation files. |
+| `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds Graph RAG relation files. |
 | `templates/` | Document skeletons used by the scaffold generator. |
 | `mcp_py/` | FastMCP server exposing the knowledge base to coding agents via BM25 search, article retrieval, listing, and related-article discovery. |
 
@@ -59,7 +59,8 @@ skeleton) → `draft` (authored) → `reviewed` (human-verified per
 operations (client and server-to-client), attributes, objects, TTLV structures,
 all 64 enumerations (§11), bit masks (§12), algorithm implementation (§13),
 profiles (KMIP-Prof v1.0–v2.1), and 83 usage-guide articles (KMIP-UG v2.1).
-Validators clean (front-matter schema, no-verbatim, link resolution) per the
+Validators clean (front-matter schema, no-verbatim, link resolution,
+field-table Tag/XML Element columns) per the
 [CONTRIBUTING.md](CONTRIBUTING.md) checklist. Remaining work is the planned
 content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
@@ -77,6 +78,30 @@ docs that already have `tag_hex`.
 ```sh
 python scripts/populate_tag_fields.py --dry-run   # preview matches
 python scripts/populate_tag_fields.py              # apply
+```
+
+## Field-table enrichment
+
+[`scripts/enrich_field_tables.py`](scripts/enrich_field_tables.py) adds `Tag`
+(6-digit hex) and `XML Element` (CamelCase name) columns to every Markdown table
+that documents a structure's or payload's fields — those whose header's first
+column is `Field`:
+
+```
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of object being handed over. |
+```
+
+It draws on the same tag lookup as the front-matter populator, reuses an
+existing `Tag` column where one is present, fills only cells matching a named
+KMIP tag (non-tag fields stay blank), never overwrites populated cells, and is
+idempotent. `--check` exits non-zero if any table is stale (CI guard).
+
+```sh
+python scripts/enrich_field_tables.py --dry-run   # preview changes
+python scripts/enrich_field_tables.py              # apply
+python scripts/enrich_field_tables.py --check      # fail if any table is stale
 ```
 
 ## Scaffold generator

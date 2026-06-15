@@ -27,14 +27,14 @@ client *asks* for wrapping — is the
 
 Structure, tag `420046`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Wrapping Method | `42009E` | Enumeration | Yes |
-| Encryption Key Information | `420036` | Structure | One of these two key-information fields must appear |
-| MAC/Signature Key Information | `42004E` | Structure | (see above) |
-| MAC/Signature | `42004D` | Byte String | No |
-| IV/Counter/Nonce | `42003D` | Byte String | If the wrapping method needs one |
-| Encoding Option | `4200A3` | Enumeration | No; absent ⇒ TTLV Encoding (1.1+) |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Wrapping Method | `42009E` | `WrappingMethod` | Enumeration | Yes |
+| Encryption Key Information | `420036` | `EncryptionKeyInformation` | Structure | One of these two key-information fields must appear |
+| MAC/Signature Key Information | `42004E` | `MACSignatureKeyInformation` | Structure | (see above) |
+| MAC/Signature | `42004D` | `MACSignature` | Byte String | No |
+| IV/Counter/Nonce | `42003D` | `IVCounterNonce` | Byte String | If the wrapping method needs one |
+| Encoding Option | `4200A3` | `EncodingOption` | Enumeration | No; absent ⇒ TTLV Encoding (1.1+) |
 
 Both key-information structures contain a Unique Identifier (`420094`,
 required — the wrapping/MACing key) and optional

@@ -21,9 +21,9 @@ Clients consult this list to understand which combinations of storage protection
 
 Protection Storage Masks encodes as a Structure containing one or more Protection Storage Mask integers.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Protection Storage Mask | `420126` | Integer | One or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Protection Storage Mask | `420126` | `ProtectionStorageMask` | Integer | One or more |
 
 Each Integer child is a 32-bit protection storage mask bit field.
 

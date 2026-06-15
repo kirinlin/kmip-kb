@@ -32,16 +32,27 @@ the official spec, rewrite it.
    understanding — never to copy.
 3. **Write original prose** under the existing headers. Explain purpose,
    fields, behavior, and relationships for an implementer audience.
-4. **Fill front matter.** Set `spec_versions` to the versions where the concept
+4. **Format field tables.** A table that documents the fields of a KMIP
+   structure or operation payload starts with a `Field` column, then `Tag` and
+   `XML Element` columns, then the table's own columns:
+   ```
+   | Field | Tag | XML Element | Required | Description |
+   ```
+   Author the prose columns; leave `Tag`/`XML Element` blank and let
+   `scripts/enrich_field_tables.py` fill them (6-digit hex and CamelCase element
+   name, both in backticks) for fields that are named KMIP tags. Non-tag fields
+   keep both cells blank.
+5. **Fill front matter.** Set `spec_versions` to the versions where the concept
    appears, add `related` cross-references and `keywords`, and set
    `status: draft`.
-5. **Validate.** Run the three checks:
+6. **Validate.** Run the checks:
    ```
    python scripts/build_kb_scaffold.py --check   # front-matter schema
    python scripts/check_verbatim.py <dir>         # no copied spec prose
    python scripts/validate_links.py <dir>         # related slugs + body links resolve
+   python scripts/enrich_field_tables.py --check  # Tag/XML Element columns current
    ```
-6. **Review** against the checklist below, then set `status: reviewed`.
+7. **Review** against the checklist below, then set `status: reviewed`.
 
 The generator never overwrites a file whose `status` is no longer `stub`, so
 re-running it to pick up new sections is safe.
@@ -52,6 +63,7 @@ re-running it to pick up new sections is safe.
 - [ ] Technical meaning is preserved and correct.
 - [ ] No hallucinated fields, operations, or behaviors.
 - [ ] Cross-references (`related`) resolve to real documents.
+- [ ] Field tables carry `Tag`/`XML Element` columns (`enrich_field_tables.py --check` clean).
 - [ ] Front matter validates (`--check` passes); `spec_versions` accurate.
 - [ ] Examples are original, not lifted from the spec.
 

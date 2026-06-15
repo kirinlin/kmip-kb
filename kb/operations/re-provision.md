@@ -21,17 +21,17 @@ This operation is most useful in device-provisioning and certificate-enrollment 
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Identifies the managed object to be re-provisioned. The object must already exist on the server. |
-| Attribute | No (repeatable) | One or more attributes to update on the object as part of the re-provisioning. Typical examples include `Activation Date`, `Deactivation Date`, and `Name`. Attributes not listed here retain their current values. |
-| Authentication | No | A credential or token representing the endpoint receiving the re-provisioned object. The server uses this to bind the refreshed object to the correct endpoint identity. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifies the managed object to be re-provisioned. The object must already exist on the server. |
+| Attribute | `420008` | `Attribute` | No (repeatable) | One or more attributes to update on the object as part of the re-provisioning. Typical examples include `Activation Date`, `Deactivation Date`, and `Name`. Attributes not listed here retain their current values. |
+| Authentication | `42000C` | `Authentication` | No | A credential or token representing the endpoint receiving the re-provisioned object. The server uses this to bind the refreshed object to the correct endpoint identity. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Confirms the identifier of the re-provisioned object. Remains the same as in the request — the object retains its identity. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Confirms the identifier of the re-provisioned object. Remains the same as in the request — the object retains its identity. |
 
 ## Behavior & Server Requirements
 

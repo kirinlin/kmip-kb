@@ -21,9 +21,9 @@ Common Attributes appears in Create Key Pair requests and responses (and in simi
 
 Common Attributes encodes as a Structure. It contains zero or more [Attribute](attribute.md) structures.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute | `420008` | Structure | Zero or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute | `420008` | `Attribute` | Structure | Zero or more |
 
 The structure may be empty; an empty Common Attributes means no common attributes are being specified in this payload. The repeating Attribute children carry individual attribute name/value pairs.
 

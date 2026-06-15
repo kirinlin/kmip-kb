@@ -19,10 +19,10 @@ PKCS#11 Interface is a structure that identifies which PKCS#11 token or slot the
 
 PKCS#11 Interface encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| PKCS#11 Interface Name | `420293` | Text String | Yes |
-| PKCS#11 Slot ID | `420297` | Long Integer | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| PKCS#11 Interface Name | `420293` |  | Text String | Yes |
+| PKCS#11 Slot ID | `420297` |  | Long Integer | No |
 
 The interface name is the primary selector. The slot ID further discriminates when a named library exposes multiple slots.
 

@@ -22,13 +22,13 @@ introduced in KMIP 1.1.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Private Key Unique Identifier | No | The existing pair to replace, named by its private key. If omitted, the ID Placeholder is used. |
-| Offset | No | An interval giving the gap between the replacement pair's initial date and its activation date. |
-| Common Template-Attribute | No | Attributes that apply to both replacement keys. |
-| Private Key Template-Attribute | No | Attributes for the replacement private key (override the common set). |
-| Public Key Template-Attribute | No | Attributes for the replacement public key (override the common set). |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | No | The existing pair to replace, named by its private key. If omitted, the ID Placeholder is used. |
+| Offset | `420058` | `Offset` | No | An interval giving the gap between the replacement pair's initial date and its activation date. |
+| Common Template-Attribute | `42001F` | `CommonTemplateAttribute` | No | Attributes that apply to both replacement keys. |
+| Private Key Template-Attribute | `420065` | `PrivateKeyTemplateAttribute` | No | Attributes for the replacement private key (override the common set). |
+| Public Key Template-Attribute | `42006E` | `PublicKeyTemplateAttribute` | No | Attributes for the replacement public key (override the common set). |
 
 The same precedence rules as [Create Key Pair](create-key-pair.md) apply when an
 attribute is supplied in more than one place. In KMIP 2.0+ these wrappers are
@@ -39,12 +39,12 @@ the routing semantics are unchanged.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Private Key Unique Identifier | Yes | Identifier of the replacement private key. |
-| Public Key Unique Identifier | Yes | Identifier of the replacement public key. |
-| Private Key Template-Attribute | No | Attributes the server set implicitly on the replacement private key. |
-| Public Key Template-Attribute | No | Attributes the server set implicitly on the replacement public key. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | Yes | Identifier of the replacement private key. |
+| Public Key Unique Identifier | `42006F` | `PublicKeyUniqueIdentifier` | Yes | Identifier of the replacement public key. |
+| Private Key Template-Attribute | `420065` | `PrivateKeyTemplateAttribute` | No | Attributes the server set implicitly on the replacement private key. |
+| Public Key Template-Attribute | `42006E` | `PublicKeyTemplateAttribute` | No | Attributes the server set implicitly on the replacement public key. |
 
 ## Behavior & Server Requirements
 

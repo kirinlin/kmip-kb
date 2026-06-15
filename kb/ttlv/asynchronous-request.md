@@ -21,10 +21,10 @@ The Processing Stage indicates whether the operation is still being executed (Pe
 
 Asynchronous Request encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Asynchronous Correlation Value | `420006` | Byte String | Yes |
-| Processing Stage | `42006C` | Enumeration | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Byte String | Yes |
+| Processing Stage | `42006C` | `ProcessingStage` | Enumeration | Yes |
 
 Both fields are mandatory. The correlation value links the status entry back to a specific batch item; the processing stage communicates the outcome or current state.
 

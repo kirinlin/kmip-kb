@@ -27,19 +27,19 @@ cryptography before storing keys.
 
 Structure, tag `4200DF`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Validation Authority Type | `4200E0` | Enumeration | Yes — Unspecified, NIST CMVP, Common Criteria |
-| Validation Authority Country | `4200E1` | Text String | No — two-letter ISO code |
-| Validation Authority URI | `4200E2` | Text String | No |
-| Validation Version Major | `4200E3` | Integer | Yes |
-| Validation Version Minor | `4200E4` | Integer | No |
-| Validation Type | `4200E5` | Enumeration | Yes — Hardware, Software, Firmware, Hybrid, Unspecified |
-| Validation Level | `4200E6` | Integer | Yes — e.g. FIPS 140 level |
-| Validation Certificate Identifier | `4200E7` | Text String | No |
-| Validation Certificate URI | `4200E8` | Text String | No |
-| Validation Vendor URI | `4200E9` | Text String | No |
-| Validation Profile | `4200EA` | Text String | No; repeatable |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Validation Authority Type | `4200E0` | `ValidationAuthorityType` | Enumeration | Yes — Unspecified, NIST CMVP, Common Criteria |
+| Validation Authority Country | `4200E1` | `ValidationAuthorityCountry` | Text String | No — two-letter ISO code |
+| Validation Authority URI | `4200E2` | `ValidationAuthorityURI` | Text String | No |
+| Validation Version Major | `4200E3` | `ValidationVersionMajor` | Integer | Yes |
+| Validation Version Minor | `4200E4` | `ValidationVersionMinor` | Integer | No |
+| Validation Type | `4200E5` | `ValidationType` | Enumeration | Yes — Hardware, Software, Firmware, Hybrid, Unspecified |
+| Validation Level | `4200E6` | `ValidationLevel` | Integer | Yes — e.g. FIPS 140 level |
+| Validation Certificate Identifier | `4200E7` | `ValidationCertificateIdentifier` | Text String | No |
+| Validation Certificate URI | `4200E8` | `ValidationCertificateURI` | Text String | No |
+| Validation Vendor URI | `4200E9` | `ValidationVendorURI` | Text String | No |
+| Validation Profile | `4200EA` | `ValidationProfile` | Text String | No; repeatable |
 
 ## Fields & Structure
 

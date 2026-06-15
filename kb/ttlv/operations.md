@@ -24,18 +24,18 @@ item layouts live on [Batch Item](batch-item.md).
 
 **Request Header** (`420077`), in order:
 
-| Field | Required |
-|---|---|
-| [Protocol Version](protocol-version.md) | Yes |
-| [Maximum Response Size](maximum-response-size.md) | No |
-| [Client](client-correlation-value.md) / [Server Correlation Value](server-correlation-value.md) | No (1.4) |
-| [Asynchronous Indicator](asynchronous-indicator.md) | No |
-| [Attestation Capable Indicator](attestation-capable-indicator.md), Attestation Type(s) | No (1.2+) |
-| [Authentication](authentication.md) | No |
-| [Batch Error Continuation Option](batch-error-continuation-option.md) | No (default Stop) |
-| [Batch Order Option](batch-order-option.md) | No (default False) |
-| [Time Stamp](time-stamp.md) | No |
-| [Batch Count](batch-count.md) | Yes |
+| Field | Tag | XML Element | Required |
+|---|---|---|---|
+| [Protocol Version](protocol-version.md) | `420069` | `ProtocolVersion` | Yes |
+| [Maximum Response Size](maximum-response-size.md) | `420050` | `MaximumResponseSize` | No |
+| [Client](client-correlation-value.md) / [Server Correlation Value](server-correlation-value.md) |  |  | No (1.4) |
+| [Asynchronous Indicator](asynchronous-indicator.md) | `420007` | `AsynchronousIndicator` | No |
+| [Attestation Capable Indicator](attestation-capable-indicator.md), Attestation Type(s) |  |  | No (1.2+) |
+| [Authentication](authentication.md) | `42000C` | `Authentication` | No |
+| [Batch Error Continuation Option](batch-error-continuation-option.md) | `42000E` | `BatchErrorContinuationOption` | No (default Stop) |
+| [Batch Order Option](batch-order-option.md) | `420010` | `BatchOrderOption` | No (default False) |
+| [Time Stamp](time-stamp.md) | `420092` | `TimeStamp` | No |
+| [Batch Count](batch-count.md) | `42000D` | `BatchCount` | Yes |
 
 **Response Header** (`42007A`), in order: Protocol Version (required),
 [Time Stamp](time-stamp.md) (required), [Nonce](nonce.md) (no),

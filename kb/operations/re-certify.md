@@ -21,13 +21,13 @@ unsupporting server returns an error.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The [Certificate](../objects/certificate.md) being renewed. If omitted, the ID Placeholder is used. |
-| Certificate Request Type | No | An enumeration naming the request format; required when a Certificate Request is included. |
-| Certificate Request | No | A byte string carrying the request itself (PKCS#10, PEM, etc.). |
-| Offset | No | An interval giving the gap between the new certificate's initial date and its activation date. |
-| Template-Attribute | No | Desired attributes for the new certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The [Certificate](../objects/certificate.md) being renewed. If omitted, the ID Placeholder is used. |
+| Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
+| Certificate Request | `420018` | `CertificateRequest` | No | A byte string carrying the request itself (PKCS#10, PEM, etc.). |
+| Offset | `420058` | `Offset` | No | An interval giving the gap between the new certificate's initial date and its activation date. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the new certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 If the Certificate Request and its type are both omitted and no certificate type
 is given via the template-attribute, the new certificate keeps the type of the
@@ -35,10 +35,10 @@ existing one.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Identifier of the new certificate. |
-| Template-Attribute | No | Attributes the server set implicitly. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the new certificate. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 

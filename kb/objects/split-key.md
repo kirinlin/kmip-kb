@@ -29,14 +29,14 @@ with [Join Split Key](../operations/join-split-key.md).
 Each Split Key object holds one share plus the parameters describing the
 splitting scheme.
 
-| Field | Required | Meaning |
-|---|---|---|
-| Split Key Parts | Yes | Total number of shares the secret was divided into. |
-| Key Part Identifier | Yes | Which share this object holds (from 1 up to Split Key Parts). |
-| Split Key Threshold | Yes | Minimum number of shares needed to reconstruct the secret. |
-| Split Key Method | Yes | The sharing algorithm used (see below). |
-| Prime Field Size | Conditional | Required only when the method is polynomial sharing over a prime field. |
-| Key Block | Yes | The [Key Block](../ttlv/key-block.md) carrying this share's material. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Split Key Parts | `42008B` | `SplitKeyParts` | Yes | Total number of shares the secret was divided into. |
+| Key Part Identifier | `420044` | `KeyPartIdentifier` | Yes | Which share this object holds (from 1 up to Split Key Parts). |
+| Split Key Threshold | `42008C` | `SplitKeyThreshold` | Yes | Minimum number of shares needed to reconstruct the secret. |
+| Split Key Method | `42008A` | `SplitKeyMethod` | Yes | The sharing algorithm used (see below). |
+| Prime Field Size | `420062` | `PrimeFieldSize` | Conditional | Required only when the method is polynomial sharing over a prime field. |
+| Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../ttlv/key-block.md) carrying this share's material. |
 
 ## Key Attributes
 

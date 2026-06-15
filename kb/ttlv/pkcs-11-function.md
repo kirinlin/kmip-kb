@@ -21,9 +21,9 @@ This structure names the function (as an enumeration corresponding to the standa
 
 PKCS#11 Function encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| PKCS#11 Function Enumeration | `420292` | Enumeration | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| PKCS#11 Function Enumeration | `420292` |  | Enumeration | Yes |
 
 The single required field is the function selector enumeration.
 

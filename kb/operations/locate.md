@@ -21,20 +21,20 @@ clients use it to find objects they did not just create, then follow up with
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Maximum Items | No | An upper bound on how many identifiers the server should return. |
-| Offset Items | No | How many otherwise-matching objects to skip before collecting results (0 is the same as omitting it). |
-| Storage Status Mask | No | Selects whether to search online objects, archived objects, or both; online-only is assumed when absent. |
-| Object Group Member | No | Selects how a named [object group](../attributes/object-group.md) is sampled (a fresh member versus the group default). |
-| Attribute | No (may repeat) | An attribute and value that a candidate object must match. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Maximum Items | `42004F` | `MaximumItems` | No | An upper bound on how many identifiers the server should return. |
+| Offset Items | `4200D4` | `OffsetItems` | No | How many otherwise-matching objects to skip before collecting results (0 is the same as omitting it). |
+| Storage Status Mask | `42008E` | `StorageStatusMask` | No | Selects whether to search online objects, archived objects, or both; online-only is assumed when absent. |
+| Object Group Member | `4200AC` | `ObjectGroupMember` | No | Selects how a named [object group](../attributes/object-group.md) is sampled (a fresh member versus the group default). |
+| Attribute | `420008` | `Attribute` | No (may repeat) | An attribute and value that a candidate object must match. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Located Items | No | The total count of objects meeting the criteria; a server may omit it if it cannot or will not compute the total. |
-| Unique Identifier | No (may repeat) | The identifiers of the matching objects. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Located Items | `4200D5` | `LocatedItems` | No | The total count of objects meeting the criteria; a server may omit it if it cannot or will not compute the total. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | No (may repeat) | The identifiers of the matching objects. |
 
 ## Behavior & Server Requirements
 

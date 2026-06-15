@@ -21,11 +21,11 @@ Usage limits are a complement to the [Cryptographic Usage Mask](cryptographic-us
 
 Usage Limits encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Usage Limits Count | `42009A` | Long Integer | Yes |
-| Usage Limits Total | `42009B` | Long Integer | Yes |
-| Usage Limits Unit | `42009C` | Enumeration | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Usage Limits Count | `42009A` | `UsageLimitsCount` | Long Integer | Yes |
+| Usage Limits Total | `42009B` | `UsageLimitsTotal` | Long Integer | Yes |
+| Usage Limits Unit | `42009C` | `UsageLimitsUnit` | Enumeration | Yes |
 
 All three fields are required.
 

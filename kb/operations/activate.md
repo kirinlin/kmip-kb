@@ -20,15 +20,15 @@ which the object may be used for cryptographic work.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to activate; the ID Placeholder is used when omitted. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to activate; the ID Placeholder is used when omitted. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 
 ## Behavior & Server Requirements
 

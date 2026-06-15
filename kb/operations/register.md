@@ -23,18 +23,18 @@ registered: keys, certificates, secret data, split keys, opaque objects, and
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of object being handed over. |
-| Template-Attribute | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure; the attribute payload is unchanged. |
-| Managed Object | Yes | The object itself (for example a [Symmetric Key](../objects/symmetric-key.md), [Certificate](../objects/certificate.md), private/public key, split key, secret data, or opaque object). The object and its attributes may be supplied in wrapped form. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of object being handed over. |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure; the attribute payload is unchanged. |
+| Managed Object |  |  | Yes | The object itself (for example a [Symmetric Key](../objects/symmetric-key.md), [Certificate](../objects/certificate.md), private/public key, split key, secret data, or opaque object). The object and its attributes may be supplied in wrapped form. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The identifier the server assigns to the registered object. |
-| Template-Attribute | No | Attributes the server set implicitly that were not in the request. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier the server assigns to the registered object. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly that were not in the request. |
 
 ## Behavior & Server Requirements
 

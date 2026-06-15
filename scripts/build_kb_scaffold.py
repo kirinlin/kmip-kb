@@ -211,7 +211,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",
     "kb/operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
     "kb/ttlv/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
-    "schemas/agent": "GraphRAG / coding-agent relation files (operation/object graphs).",
+    "schemas/agent": "Graph RAG / coding-agent relation files (operation/object graphs).",
     "kb/mappings": "Cross-version and cross-implementation mapping tables.",
     "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
     "kb/references": "Terminology and pointers to normative / non-normative references.",

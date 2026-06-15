@@ -22,9 +22,9 @@ Object Types is a structure that carries a list of Object Type Enumeration value
 
 Object Types encodes as a Structure containing one or more Object Type Enumeration values.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Object Type | `420057` | Enumeration | One or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Enumeration | One or more |
 
 Each Enumeration child corresponds to one supported or targeted object type. The order of entries is not significant.
 

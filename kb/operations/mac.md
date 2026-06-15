@@ -20,22 +20,22 @@ data using a managed key. Added in KMIP 1.2, it produces a keyed integrity tag
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The MAC key; the ID Placeholder is used when omitted. |
-| Cryptographic Parameters | No | The algorithm to use for the MAC. |
-| Data | Yes (single-part) | The data to authenticate, as a byte string. |
-| Correlation Value | No | Ties this call to an in-progress multi-part operation. |
-| Init Indicator | No | Marks the first call of a multi-part operation. |
-| Final Indicator | No | Marks the last call of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The MAC key; the ID Placeholder is used when omitted. |
+| Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The algorithm to use for the MAC. |
+| Data | `4200C2` | `Data` | Yes (single-part) | The data to authenticate, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | Ties this call to an in-progress multi-part operation. |
+| Init Indicator | `4200D7` | `InitIndicator` | No | Marks the first call of a multi-part operation. |
+| Final Indicator | `4200D8` | `FinalIndicator` | No | Marks the last call of a multi-part operation. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The key that was used. |
-| MAC Data | Yes (single-part) | The computed MAC, as a byte string. |
-| Correlation Value | No | A handle to pass to subsequent calls of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
+| MAC Data | `4200C6` | `MACData` | Yes (single-part) | The computed MAC, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |
 
 ## Behavior & Server Requirements
 

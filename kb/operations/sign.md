@@ -20,23 +20,23 @@ under server control while signing happens server-side.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The signing key; the ID Placeholder is used when omitted. |
-| Cryptographic Parameters | No | The signature algorithm (or the algorithm plus hash) to use. |
-| Data | Yes (single-part, unless digested data is given) | The data to sign, as a byte string. |
-| Digested Data | No | A pre-computed digest to sign instead of raw data. |
-| Correlation Value | No | Ties this call to an in-progress multi-part operation. |
-| Init Indicator | No | Marks the first call of a multi-part operation. |
-| Final Indicator | No | Marks the last call of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The signing key; the ID Placeholder is used when omitted. |
+| Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The signature algorithm (or the algorithm plus hash) to use. |
+| Data | `4200C2` | `Data` | Yes (single-part, unless digested data is given) | The data to sign, as a byte string. |
+| Digested Data | `420107` | `DigestedData` | No | A pre-computed digest to sign instead of raw data. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | Ties this call to an in-progress multi-part operation. |
+| Init Indicator | `4200D7` | `InitIndicator` | No | Marks the first call of a multi-part operation. |
+| Final Indicator | `4200D8` | `FinalIndicator` | No | Marks the last call of a multi-part operation. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The key that was used. |
-| Signature Data | Yes (single-part) | The resulting signature, as a byte string. |
-| Correlation Value | No | A handle to pass to subsequent calls of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
+| Signature Data | `4200C3` | `SignatureData` | Yes (single-part) | The resulting signature, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |
 
 ## Behavior & Server Requirements
 

@@ -27,13 +27,13 @@ and returns the result with a matching
 
 Structure, tag `420047`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Wrapping Method | `42009E` | Enumeration | Yes |
-| Encryption Key Information | `420036` | Structure | At least one of the two key-information fields |
-| MAC/Signature Key Information | `42004E` | Structure | (see above) |
-| Attribute Name | `42000A` | Text String | No; repeatable — attributes to bundle inside the wrapped [Key Value](key-value.md) |
-| Encoding Option | `4200A3` | Enumeration | No; absent ⇒ TTLV Encoding |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Wrapping Method | `42009E` | `WrappingMethod` | Enumeration | Yes |
+| Encryption Key Information | `420036` | `EncryptionKeyInformation` | Structure | At least one of the two key-information fields |
+| MAC/Signature Key Information | `42004E` | `MACSignatureKeyInformation` | Structure | (see above) |
+| Attribute Name | `42000A` | `AttributeName` | Text String | No; repeatable — attributes to bundle inside the wrapped [Key Value](key-value.md) |
+| Encoding Option | `4200A3` | `EncodingOption` | Enumeration | No; absent ⇒ TTLV Encoding |
 
 ## Fields & Structure
 

@@ -24,10 +24,10 @@ or handed to the server with [Register](../operations/register.md).
 
 ## Structure
 
-| Field | Required | Meaning |
-|---|---|---|
-| Certificate Type | Yes | Identifies the certificate encoding; in 1.x this is X.509 (see [Certificate Type](../attributes/certificate-type.md)). |
-| Certificate Value | Yes | The raw DER-encoded certificate bytes. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Certificate Type | `42001D` | `CertificateType` | Yes | Identifies the certificate encoding; in 1.x this is X.509 (see [Certificate Type](../attributes/certificate-type.md)). |
+| Certificate Value | `42001E` | `CertificateValue` | Yes | The raw DER-encoded certificate bytes. |
 
 The older PGP certificate type was deprecated as of version 1.2; the dedicated
 [PGP Key](pgp-key.md) object should be used for PGP material instead.

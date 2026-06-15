@@ -24,10 +24,10 @@ access control, and protection as keys, and they often serve as input to
 
 ## Structure
 
-| Field | Required | Meaning |
-|---|---|---|
-| Secret Data Type | Yes | Classifies the secret (for example a password or a seed). |
-| Key Block | Yes | The [Key Block](../ttlv/key-block.md) carrying the secret value, which may itself be wrapped. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Secret Data Type | `420086` | `SecretDataType` | Yes | Classifies the secret (for example a password or a seed). |
+| Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../ttlv/key-block.md) carrying the secret value, which may itself be wrapped. |
 
 ## Key Attributes
 

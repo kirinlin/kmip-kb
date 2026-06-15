@@ -20,17 +20,17 @@ attributes present, this operation returns their actual values.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to read; the ID Placeholder is used when omitted. |
-| Attribute Name | No (may repeat) | The name of an attribute to return. A given name must not appear more than once. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to read; the ID Placeholder is used when omitted. |
+| Attribute Name | `42000A` | `AttributeName` | No (may repeat) | The name of an attribute to return. A given name must not appear more than once. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
-| Attribute | No (may repeat) | A requested attribute and its value. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Attribute | `420008` | `Attribute` | No (may repeat) | A requested attribute and its value. |
 
 ## Behavior & Server Requirements
 

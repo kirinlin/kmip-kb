@@ -21,16 +21,16 @@ request returns a correlation value the client can later cancel or
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Asynchronous Correlation Value | Yes | Identifies the pending operation to cancel. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Yes | Identifies the pending operation to cancel. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Asynchronous Correlation Value | Yes | Echoes the value from the request. |
-| Cancellation Result | Yes | The outcome of the cancellation attempt. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Yes | Echoes the value from the request. |
+| Cancellation Result | `420012` | `CancellationResult` | Yes | The outcome of the cancellation attempt. |
 
 ## Behavior & Server Requirements
 

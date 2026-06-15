@@ -21,10 +21,10 @@ The structure is the response-side counterpart to a Locate or batch-query workfl
 
 Objects encodes as a Structure containing one or more Object entries, each of which is itself a small Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Unique Identifier | `420094` | Text String | One per object |
-| Object Type | `420057` | Enumeration | One per object |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Text String | One per object |
+| Object Type | `420057` | `ObjectType` | Enumeration | One per object |
 
 The Unique Identifier and Object Type appear as siblings within a repeating unit. Depending on encoding context they may be grouped in a per-object sub-structure or interspersed in sequence; implementations must pair them by position.
 

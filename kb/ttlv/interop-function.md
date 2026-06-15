@@ -21,10 +21,10 @@ Each Interop Function entry names a specific function (via an enumeration) and c
 
 Interop Function encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Interop Function Enumeration | `420280` | Enumeration | Yes |
-| Data | `4200C2` | Byte String | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Interop Function Enumeration | `420280` |  | Enumeration | Yes |
+| Data | `4200C2` | `Data` | Byte String | No |
 
 The Data field carries the serialized input arguments for the function being invoked. Its content and format are defined by the specific function enumeration value.
 

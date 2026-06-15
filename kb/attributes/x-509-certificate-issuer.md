@@ -25,10 +25,10 @@ this CA" ahead of a CA rotation. Added in 1.1, superseding the text-based
 
 A structure of Byte Strings:
 
-| Field | Required | Source |
-|---|---|---|
-| Issuer Distinguished Name | Yes | The Issuer field. |
-| Issuer Alternative Name | No; repeatable | The Issuer Alternative Name extension entries. |
+| Field | Tag | XML Element | Required | Source |
+|---|---|---|---|---|
+| Issuer Distinguished Name | `4200B2` | `IssuerDistinguishedName` | Yes | The Issuer field. |
+| Issuer Alternative Name | `4200B1` | `IssuerAlternativeName` | No; repeatable | The Issuer Alternative Name extension entries. |
 
 ## Constraints
 

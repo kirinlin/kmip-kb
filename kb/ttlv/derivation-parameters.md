@@ -21,16 +21,16 @@ KMIP supports several standard derivation approaches. The Derivation Method enum
 
 Derivation Parameters encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Derivation Method | `420269` | Enumeration | Yes |
-| Derivation Data | `4200C8` | Byte String | No |
-| Hash Algorithm | `420038` | Enumeration | No |
-| Salt Value | `42009D` | Byte String | No |
-| Iteration Count | `4200CA` | Integer | No |
-| Cryptographic Parameters | `420028` | Structure | No |
-| Initialization Vector | `42003D` | Byte String | No |
-| Unique Identifier | `420094` | Text String | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Derivation Method | `420269` | `DerivationMethod` | Enumeration | Yes |
+| Derivation Data | `4200C8` | `DerivationData` | Byte String | No |
+| Hash Algorithm | `420038` |  | Enumeration | No |
+| Salt Value | `42009D` |  | Byte String | No |
+| Iteration Count | `4200CA` | `IterationCount` | Integer | No |
+| Cryptographic Parameters | `420028` | `CryptographicParameters` | Structure | No |
+| Initialization Vector | `42003D` | `InitializationVector` | Byte String | No |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Text String | No |
 
 Fields beyond Derivation Method are conditionally required depending on the chosen method; a server returns an error if required inputs for the selected method are absent.
 

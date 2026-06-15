@@ -25,10 +25,10 @@ request, proving the attestation evidence is fresh rather than replayed.
 
 Structure, tag `4200C8`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Nonce ID | `4200C9` | Byte String | Yes — server-assigned handle for this challenge |
-| Nonce Value | `4200CA` | Byte String | Yes — the random bytes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Nonce ID | `4200C9` | `NonceID` | Byte String | Yes — server-assigned handle for this challenge |
+| Nonce Value | `4200CA` | `NonceValue` | Byte String | Yes — the random bytes |
 
 ## Fields & Structure
 

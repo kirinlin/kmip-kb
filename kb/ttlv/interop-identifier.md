@@ -21,10 +21,10 @@ The identifier is primarily informational metadata: the server uses it for loggi
 
 Interop Identifier encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Interop Function Enumeration | `420280` | Enumeration | Yes |
-| Interop Identifier Text | `420281` | Text String | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Interop Function Enumeration | `420280` |  | Enumeration | Yes |
+| Interop Identifier Text | `420281` |  | Text String | No |
 
 The Interop Function Enumeration scopes the identifier to a function family. The optional Text String carries a human-readable name or version qualifier for the specific test case within that family.
 

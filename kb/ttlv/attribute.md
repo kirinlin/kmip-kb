@@ -29,11 +29,11 @@ all carry their attributes in this envelope.
 
 Structure, tag `420008`. Inside:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute Name | `42000A` | Text String | Yes |
-| Attribute Index | `420009` | Integer | No (defaults to 0) |
-| Attribute Value | `42000B` | varies | Yes, except in [Notify](../operations/server-to-client/notify.md), where a value-less Attribute signals deletion |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute Name | `42000A` | `AttributeName` | Text String | Yes |
+| Attribute Index | `420009` | `AttributeIndex` | Integer | No (defaults to 0) |
+| Attribute Value | `42000B` | `AttributeValue` | varies | Yes, except in [Notify](../operations/server-to-client/notify.md), where a value-less Attribute signals deletion |
 
 ## Fields & Structure
 

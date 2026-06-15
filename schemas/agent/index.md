@@ -11,6 +11,6 @@ keywords: []
 
 # Agent
 
-GraphRAG / coding-agent relation files (operation/object graphs).
+Graph RAG / coding-agent relation files (operation/object graphs).
 
 _Stubs generated; prose pending. See CONTRIBUTING.md._

@@ -21,11 +21,11 @@ similar algorithms.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Common Template-Attribute | No | Attributes (individually or via templates) that apply to both the public and private key. |
-| Private Key Template-Attribute | No | Attributes that apply only to the [Private Key](../objects/private-key.md); these override the common set. |
-| Public Key Template-Attribute | No | Attributes that apply only to the [Public Key](../objects/public-key.md); these override the common set. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Common Template-Attribute | `42001F` | `CommonTemplateAttribute` | No | Attributes (individually or via templates) that apply to both the public and private key. |
+| Private Key Template-Attribute | `420065` | `PrivateKeyTemplateAttribute` | No | Attributes that apply only to the [Private Key](../objects/private-key.md); these override the common set. |
+| Public Key Template-Attribute | `42006E` | `PublicKeyTemplateAttribute` | No | Attributes that apply only to the [Public Key](../objects/public-key.md); these override the common set. |
 
 When the same single-valued attribute is supplied in more than one place, the
 key-specific template-attribute wins over the common one, and an explicitly
@@ -40,12 +40,12 @@ the routing semantics are unchanged.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Private Key Unique Identifier | Yes | Identifier of the newly created private key. |
-| Public Key Unique Identifier | Yes | Identifier of the newly created public key. |
-| Private Key Template-Attribute | No | Attributes the server set implicitly on the private key. |
-| Public Key Template-Attribute | No | Attributes the server set implicitly on the public key. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | Yes | Identifier of the newly created private key. |
+| Public Key Unique Identifier | `42006F` | `PublicKeyUniqueIdentifier` | Yes | Identifier of the newly created public key. |
+| Private Key Template-Attribute | `420065` | `PrivateKeyTemplateAttribute` | No | Attributes the server set implicitly on the private key. |
+| Public Key Template-Attribute | `42006E` | `PublicKeyTemplateAttribute` | No | Attributes the server set implicitly on the public key. |
 
 ## Behavior & Server Requirements
 

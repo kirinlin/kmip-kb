@@ -27,11 +27,11 @@ Query](../operations/server-to-client/query.md), by clients.
 
 Structure, tag `4200EB`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Profile Name | `4200EC` | Enumeration | Yes |
-| Server URI | `4200ED` | Text String | No |
-| Server Port | `4200EE` | Integer | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Profile Name | `4200EC` | `ProfileName` | Enumeration | Yes |
+| Server URI | `4200ED` | `ServerURI` | Text String | No |
+| Server Port | `4200EE` | `ServerPort` | Integer | No |
 
 ## Fields & Structure
 

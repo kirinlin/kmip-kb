@@ -21,9 +21,9 @@ This structure appears in two main places: in the response when operations have 
 
 Asynchronous Correlation Values encodes as a Structure containing one or more Asynchronous Correlation Value byte strings.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Asynchronous Correlation Value | `420006` | Byte String | One or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Byte String | One or more |
 
 The inner items repeat — one per pending operation being referenced. Their ordering within the structure is not semantically significant.
 

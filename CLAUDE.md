@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Purpose
 
-This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, GraphRAG, and coding agents. It targets the **KMIP 1.x and 2.x** families (v1.0–v1.4, v2.0–v2.1), baseline **v2.1**.
+This project is an **independently written KMIP knowledge base** — original summaries, explanations, implementation guidance, examples, and machine-readable metadata for the OASIS Key Management Interoperability Protocol, structured for LLM wikis, RAG, Graph RAG, and coding agents. It targets the **KMIP 1.x and 2.x** families (v1.0–v1.4, v2.0–v2.1), baseline **v2.1**.
 
 The spec is mirrored locally into `raw/` (gitignored) only as a *source* for authoring; the crawler that builds that mirror is secondary tooling.
 
@@ -23,6 +23,31 @@ Every doc has YAML front matter validated against `schemas/frontmatter.schema.js
 Two optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
 - `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
 - `xml_element`: CamelCase XML element name per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 113 docs carry these fields (107 from v2.1, 6 from removed v1.x tags). Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs).
+
+## Field tables (Tag / XML Element columns)
+
+Every table that documents the fields of a KMIP structure or operation payload
+starts with a `Field` column, followed by `Tag` and `XML Element` columns, then
+the table's own columns (`Required`, `Type`, `Description`, …):
+
+```
+| Field | Tag | XML Element | Required | Description |
+```
+
+`Tag` holds the 6-digit uppercase hex tag value in backticks (e.g. `` `420057` ``)
+and `XML Element` the CamelCase element name in backticks (e.g. `` `ObjectType` ``)
+— the same two identifiers carried in front matter by `tag_hex`/`xml_element`.
+Rows whose field is not a named tag (e.g. a generic "Managed Object" placeholder)
+leave both cells blank. `scripts/enrich_field_tables.py` fills these columns from
+the shared tag lookup; it only targets tables whose header's first column is
+exactly `Field`, reuses an existing `Tag` column where one is present, never
+overwrites a populated cell, and is idempotent. 135 docs / 195 field tables /
+505 tagged rows currently carry these columns. Run it after authoring or editing
+a field table:
+
+```
+python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
+```
 
 ## source_section for KMIP-Prof articles
 
@@ -68,6 +93,7 @@ authored) before linking. Validate before committing:
 python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
 python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
+python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Element columns
 ```
 
 Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0

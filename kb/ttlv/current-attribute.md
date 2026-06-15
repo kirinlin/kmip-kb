@@ -21,9 +21,9 @@ If the value carried in Current Attribute no longer matches what is stored on th
 
 Current Attribute encodes as a Structure containing a single Attribute.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute | `420008` | Structure | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute | `420008` | `Attribute` | Structure | Yes |
 
 The inner Attribute carries the name and the client's understanding of the current value. There is exactly one Attribute child — Current Attribute is not a list.
 

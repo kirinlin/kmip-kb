@@ -21,10 +21,10 @@ Servers maintain one Object Defaults entry per supported object type. A privileg
 
 Object Defaults encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Object Type | `420057` | Enumeration | Yes |
-| Attribute | `420008` | Structure | Zero or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Enumeration | Yes |
+| Attribute | `420008` | `Attribute` | Structure | Zero or more |
 
 The Object Type identifies the managed object category these defaults apply to. The repeating Attribute children are the default attribute name/value pairs for that type.
 

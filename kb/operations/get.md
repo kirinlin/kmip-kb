@@ -21,21 +21,21 @@ object may optionally be wrapped for protection in transit.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to retrieve; the ID Placeholder is used when omitted. |
-| Key Format Type | No | The format in which the client wants the key returned. |
-| Key Wrap Type | No | The wrap form to apply to the key bytes that come back. |
-| Key Compression Type | No | How elliptic-curve public keys should be compressed. |
-| Key Wrapping Specification | No | The keys and parameters for wrapping the returned object. Not allowed when the object is a Template. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to retrieve; the ID Placeholder is used when omitted. |
+| Key Format Type | `420042` | `KeyFormatType` | No | The format in which the client wants the key returned. |
+| Key Wrap Type | `4200F8` | `KeyWrapType` | No | The wrap form to apply to the key bytes that come back. |
+| Key Compression Type | `420041` | `KeyCompressionType` | No | How elliptic-curve public keys should be compressed. |
+| Key Wrapping Specification | `420047` | `KeyWrappingSpecification` | No | The keys and parameters for wrapping the returned object. Not allowed when the object is a Template. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of the returned object. |
-| Unique Identifier | Yes | The object's identifier. |
-| Managed Object | Yes | The object itself (key, certificate, secret data, opaque object, etc.). |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of the returned object. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Managed Object |  |  | Yes | The object itself (key, certificate, secret data, opaque object, etc.). |
 
 ## Behavior & Server Requirements
 

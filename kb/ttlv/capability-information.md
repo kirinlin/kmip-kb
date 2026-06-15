@@ -26,17 +26,17 @@ you answer asynchronously? what does Destroy actually do to the bytes?
 
 Structure, tag `4200F7`; every field optional:
 
-| Field | Tag | Type |
-|---|---|---|
-| Streaming Capability | `4200EF` | Boolean |
-| Asynchronous Capability | `4200F0` | Boolean |
-| Attestation Capability | `4200F1` | Boolean |
-| Batch Undo Capability | `4200F9` | Boolean (1.4) |
-| Batch Continue Capability | `4200FA` | Boolean (1.4) |
-| Unwrap Mode | `4200F2` | Enumeration — Processed, Not Processed, Unspecified |
-| Destroy Action | `4200F3` | Enumeration — Key Material Deleted/Shredded, Meta Data Deleted/Shredded, Deleted, Shredded, Unspecified |
-| Shredding Algorithm | `4200F4` | Enumeration — Cryptographic, Unsupported, Unspecified |
-| RNG Mode | `4200F5` | Enumeration — Shared / Non-Shared Instantiation, Unspecified |
+| Field | Tag | XML Element | Type |
+|---|---|---|---|
+| Streaming Capability | `4200EF` | `StreamingCapability` | Boolean |
+| Asynchronous Capability | `4200F0` | `AsynchronousCapability` | Boolean |
+| Attestation Capability | `4200F1` | `AttestationCapability` | Boolean |
+| Batch Undo Capability | `4200F9` | `BatchUndoCapability` | Boolean (1.4) |
+| Batch Continue Capability | `4200FA` | `BatchContinueCapability` | Boolean (1.4) |
+| Unwrap Mode | `4200F2` | `UnwrapMode` | Enumeration — Processed, Not Processed, Unspecified |
+| Destroy Action | `4200F3` | `DestroyAction` | Enumeration — Key Material Deleted/Shredded, Meta Data Deleted/Shredded, Deleted, Shredded, Unspecified |
+| Shredding Algorithm | `4200F4` | `ShreddingAlgorithm` | Enumeration — Cryptographic, Unsupported, Unspecified |
+| RNG Mode | `4200F5` | `RNGMode` | Enumeration — Shared / Non-Shared Instantiation, Unspecified |
 
 ## Fields & Structure
 

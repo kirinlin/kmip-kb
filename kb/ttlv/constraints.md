@@ -26,10 +26,10 @@ A request must satisfy both layers to succeed: the principal must have a [Right]
 
 Constraints encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Unique Identifier | `420094` | Text String | No |
-| Constraint | `420208` | Structure | Zero or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Text String | No |
+| Constraint | `420208` | `Constraint` | Structure | Zero or more |
 
 The optional Unique Identifier identifies the object whose policy this Constraints structure governs. When absent in a Set Constraints request, the constraints apply to the object identified in the request's target. Zero or more Constraint children carry the individual rules.
 

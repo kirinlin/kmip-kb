@@ -30,14 +30,14 @@ material is wrapped — the [Key Wrapping Data](key-wrapping-data.md).
 
 Structure, tag `420040`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Key Format Type | `420042` | Enumeration | Yes |
-| Key Compression Type | `420041` | Enumeration | No — EC public key point compression; uncompressed if absent |
-| Key Value | `420045` | Structure (plaintext) or Byte String (wrapped) | No — may be absent for metadata-only registrations (1.2+) |
-| Cryptographic Algorithm | `420028` | Enumeration | Yes unless derivable from the Key Value; n/a for Secret Data and Opaque Objects; paired with Length |
-| Cryptographic Length | `42002A` | Integer | Same rule as Algorithm |
-| Key Wrapping Data | `420046` | Structure | Only — and always — when the material is wrapped |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Key Format Type | `420042` | `KeyFormatType` | Enumeration | Yes |
+| Key Compression Type | `420041` | `KeyCompressionType` | Enumeration | No — EC public key point compression; uncompressed if absent |
+| Key Value | `420045` | `KeyValue` | Structure (plaintext) or Byte String (wrapped) | No — may be absent for metadata-only registrations (1.2+) |
+| Cryptographic Algorithm | `420028` | `CryptographicAlgorithm` | Enumeration | Yes unless derivable from the Key Value; n/a for Secret Data and Opaque Objects; paired with Length |
+| Cryptographic Length | `42002A` | `CryptographicLength` | Integer | Same rule as Algorithm |
+| Key Wrapping Data | `420046` | `KeyWrappingData` | Structure | Only — and always — when the material is wrapped |
 
 ## Fields & Structure
 

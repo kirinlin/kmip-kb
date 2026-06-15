@@ -22,19 +22,19 @@ in KMIP 1.4.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The identifier the imported object should have. |
-| Replace Existing | No | A boolean; when true, an existing object with the same identifier is replaced, otherwise a clash makes the operation fail. |
-| Key Wrap Type | No | Whether the object arrives wrapped; if "not wrapped" the server unwraps it before storing (and errors if the wrapping key is unavailable), otherwise it stores it as given. |
-| Attribute | Yes (repeated) | Every attribute the object should have. |
-| Managed Object | Yes | The object value, supplied as in [Register](register.md). |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier the imported object should have. |
+| Replace Existing | `420124` | `ReplaceExisting` | No | A boolean; when true, an existing object with the same identifier is replaced, otherwise a clash makes the operation fail. |
+| Key Wrap Type | `4200F8` | `KeyWrapType` | No | Whether the object arrives wrapped; if "not wrapped" the server unwraps it before storing (and errors if the wrapping key is unavailable), otherwise it stores it as given. |
+| Attribute | `420008` | `Attribute` | Yes (repeated) | Every attribute the object should have. |
+| Managed Object |  |  | Yes | The object value, supplied as in [Register](register.md). |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The identifier of the imported object. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier of the imported object. |
 
 ## Behavior & Server Requirements
 

@@ -21,9 +21,9 @@ and servers should allow even unauthenticated clients to call it.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Query Function | Yes (may repeat) | One or more selectors naming the categories of information to return. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Query Function | `420074` | `QueryFunction` | Yes (may repeat) | One or more selectors naming the categories of information to return. |
 
 The Query Function values select what the response contains. Defined selectors
 cover supported operations, supported object types, server information,
@@ -36,20 +36,20 @@ The response carries only the items that correspond to the requested selectors
 (and that the server actually supports); it is empty when there is nothing to
 report. Possible items include:
 
-| Field | Description |
-|---|---|
-| Operation | An operation the server supports. |
-| Object Type | A managed object type the server supports. |
-| Vendor Identification | A text string identifying the vendor (returned with server information). |
-| Server Information | A vendor-specific structure of additional detail. |
-| Application Namespace | A namespace the server can generate values for. |
-| Extension Information | A description of a supported extension object. |
-| Attestation Type | An attestation type the server supports. |
-| RNG Parameters | A random number generator the server supports. |
-| Profile Information | A profile the server supports, and how. |
-| Validation Information | A formal validation the server asserts. |
-| Capability Information | A capability of the server. |
-| Client Registration Method | A client registration method the server supports. |
+| Field | Tag | XML Element | Description |
+|---|---|---|---|
+| Operation | `42005C` | `Operation` | An operation the server supports. |
+| Object Type | `420057` | `ObjectType` | A managed object type the server supports. |
+| Vendor Identification | `42009D` | `VendorIdentification` | A text string identifying the vendor (returned with server information). |
+| Server Information | `420088` | `ServerInformation` | A vendor-specific structure of additional detail. |
+| Application Namespace | `420003` | `ApplicationNamespace` | A namespace the server can generate values for. |
+| Extension Information | `4200A4` | `ExtensionInformation` | A description of a supported extension object. |
+| Attestation Type | `4200C7` | `AttestationType` | An attestation type the server supports. |
+| RNG Parameters | `4200D9` | `RNGParameters` | A random number generator the server supports. |
+| Profile Information | `4200EB` | `ProfileInformation` | A profile the server supports, and how. |
+| Validation Information | `4200DF` | `ValidationInformation` | A formal validation the server asserts. |
+| Capability Information | `4200F7` | `CapabilityInformation` | A capability of the server. |
+| Client Registration Method | `4200F6` | `ClientRegistrationMethod` | A client registration method the server supports. |
 
 ## Behavior & Server Requirements
 

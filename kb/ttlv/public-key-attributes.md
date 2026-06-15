@@ -21,9 +21,9 @@ Public Key Attributes appears in Create Key Pair requests and responses to carry
 
 Public Key Attributes encodes as a Structure. It contains zero or more [Attribute](attribute.md) structures.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute | `420008` | Structure | Zero or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute | `420008` | `Attribute` | Structure | Zero or more |
 
 An empty Public Key Attributes structure is valid and means no public-key-specific attributes are being specified in this payload.
 

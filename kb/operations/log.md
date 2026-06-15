@@ -19,17 +19,17 @@ keywords: ["log", "audit log", "log message", "audit trail", "client logging", "
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Log Message | Yes | The [Log Message](../ttlv/log-message.md) structure carrying the content of the log entry. Includes the log message text; may also carry a log level indicator and a timestamp. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Log Message | `420141` | `LogMessage` | Yes | The [Log Message](../ttlv/log-message.md) structure carrying the content of the log entry. Includes the log message text; may also carry a log level indicator and a timestamp. |
 
 ## Response Fields
 
 The response carries only the standard result status. No payload fields are returned on success.
 
-| Field | Required | Description |
-|---|---|---|
-| Result Status | Yes | Indicates whether the server accepted and persisted the log entry. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Result Status | `42007F` | `ResultStatus` | Yes | Indicates whether the server accepted and persisted the log entry. |
 
 ## Behavior & Server Requirements
 

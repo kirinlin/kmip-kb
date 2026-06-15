@@ -28,9 +28,9 @@ A Symmetric Key carries its key material in a single [Key Block](../ttlv/key-blo
 which wraps the format, algorithm, length, and the actual bytes (optionally in
 wrapped form).
 
-| Field | Required | Meaning |
-|---|---|---|
-| Key Block | Yes | The container holding the key's format, cryptographic algorithm and length, and the key material itself. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Key Block | `420040` | `KeyBlock` | Yes | The container holding the key's format, cryptographic algorithm and length, and the key material itself. |
 
 ## Key Attributes
 

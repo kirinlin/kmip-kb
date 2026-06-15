@@ -20,20 +20,20 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Cryptographic Parameters | Yes | The hashing algorithm to apply. |
-| Data | Yes (single-part) | The data to hash, as a byte string. |
-| Correlation Value | No | Ties this call to an in-progress multi-part operation. |
-| Init Indicator | No | Marks the first call of a multi-part operation. |
-| Final Indicator | No | Marks the last call of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Cryptographic Parameters | `42002B` | `CryptographicParameters` | Yes | The hashing algorithm to apply. |
+| Data | `4200C2` | `Data` | Yes (single-part) | The data to hash, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | Ties this call to an in-progress multi-part operation. |
+| Init Indicator | `4200D7` | `InitIndicator` | No | Marks the first call of a multi-part operation. |
+| Final Indicator | `4200D8` | `FinalIndicator` | No | Marks the last call of a multi-part operation. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Data | Yes (single-part) | The resulting digest, as a byte string. |
-| Correlation Value | No | A handle to pass to subsequent calls of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Data | `4200C2` | `Data` | Yes (single-part) | The resulting digest, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |
 
 ## Behavior & Server Requirements
 

@@ -24,25 +24,25 @@ one, but up to whatever the server tolerates.
 
 Structure, tag `42000F`. Request-side contents:
 
-| Field | Required |
-|---|---|
-| [Operation](operation.md) | Yes |
-| [Unique Batch Item ID](unique-batch-item-id.md) | When Batch Count > 1 |
-| Request Payload (`420079`) | Yes — contents defined per operation |
-| [Message Extension](message-extension.md) | No |
+| Field | Tag | XML Element | Required |
+|---|---|---|---|
+| [Operation](operation.md) | `42005C` | `Operation` | Yes |
+| [Unique Batch Item ID](unique-batch-item-id.md) | `420093` | `UniqueBatchItemID` | When Batch Count > 1 |
+| Request Payload (`420079`) | `420079` | `RequestPayload` | Yes — contents defined per operation |
+| [Message Extension](message-extension.md) | `420051` | `MessageExtension` | No |
 
 Response-side contents:
 
-| Field | Required |
-|---|---|
-| Operation | Echoed when the request had one |
-| Unique Batch Item ID | Echoed when present in the request |
-| [Result Status](result-status.md) | Yes |
-| [Result Reason](result-reason.md) | On failure |
-| [Result Message](result-message.md) | No |
-| [Asynchronous Correlation Value](asynchronous-correlation-value.md) | When status is Pending |
-| Response Payload (`42007C`) | When not a failure |
-| Message Extension | No |
+| Field | Tag | XML Element | Required |
+|---|---|---|---|
+| Operation | `42005C` | `Operation` | Echoed when the request had one |
+| Unique Batch Item ID | `420093` | `UniqueBatchItemID` | Echoed when present in the request |
+| [Result Status](result-status.md) | `42007F` | `ResultStatus` | Yes |
+| [Result Reason](result-reason.md) | `42007E` | `ResultReason` | On failure |
+| [Result Message](result-message.md) | `42007D` | `ResultMessage` | No |
+| [Asynchronous Correlation Value](asynchronous-correlation-value.md) | `420006` | `AsynchronousCorrelationValue` | When status is Pending |
+| Response Payload (`42007C`) | `42007C` | `ResponsePayload` | When not a failure |
+| Message Extension | `420051` | `MessageExtension` | No |
 
 ## Fields & Structure
 

@@ -20,17 +20,17 @@ simply deactivates it.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to revoke; the ID Placeholder is used when omitted. |
-| Revocation Reason | Yes | Why the object is being revoked (for example key compromise or cessation of operation). |
-| Compromise Occurrence Date | No | When the compromise happened; supplied only for a compromise reason and not otherwise. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to revoke; the ID Placeholder is used when omitted. |
+| Revocation Reason | `420081` | `RevocationReason` | Yes | Why the object is being revoked (for example key compromise or cessation of operation). |
+| Compromise Occurrence Date | `420021` | `CompromiseOccurrenceDate` | No | When the compromise happened; supplied only for a compromise reason and not otherwise. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 
 ## Behavior & Server Requirements
 

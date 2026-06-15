@@ -19,17 +19,17 @@ keywords: ["set constraints", "constraints", "access control", "operation permis
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The identifier of the specific managed object whose constraints should be set. When omitted, the server uses the ID Placeholder. |
-| Object Type | No | When supplied without a Unique Identifier, sets the type-level default constraints for objects of that type, applying to all future objects of that type that do not have explicit per-object constraints. |
-| Constraints | Yes | The [Constraints](../ttlv/constraints.md) structure defining the new permission policy. If constraints already exist on the target, this call replaces them entirely — it is not a merge operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The identifier of the specific managed object whose constraints should be set. When omitted, the server uses the ID Placeholder. |
+| Object Type | `420057` | `ObjectType` | No | When supplied without a Unique Identifier, sets the type-level default constraints for objects of that type, applying to all future objects of that type that do not have explicit per-object constraints. |
+| Constraints | `420168` | `Constraints` | Yes | The [Constraints](../ttlv/constraints.md) structure defining the new permission policy. If constraints already exist on the target, this call replaces them entirely — it is not a merge operation. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | Present when the request targeted a specific object; echoes back the identifier. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | Present when the request targeted a specific object; echoes back the identifier. |
 
 ## Behavior & Server Requirements
 

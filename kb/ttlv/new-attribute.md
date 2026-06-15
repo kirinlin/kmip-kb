@@ -21,9 +21,9 @@ New Attribute appears in [Set Attribute](../operations/set-attribute.md) and [Ad
 
 New Attribute encodes as a Structure containing a single Attribute.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute | `420008` | Structure | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute | `420008` | `Attribute` | Structure | Yes |
 
 The inner Attribute follows the standard encoding with Attribute Name and Attribute Value sub-fields. There is exactly one Attribute child.
 

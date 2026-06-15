@@ -24,11 +24,11 @@ vendor content plus a flag that says whether understanding it is mandatory.
 
 Structure, tag `420051`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Vendor Identification | `42009D` | Text String | Yes — uniquely names the vendor |
-| Criticality Indicator | `420026` | Boolean | Yes |
-| Vendor Extension | `42009C` | Structure | Yes — the vendor-specific content |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Vendor Identification | `42009D` | `VendorIdentification` | Text String | Yes — uniquely names the vendor |
+| Criticality Indicator | `420026` | `CriticalityIndicator` | Boolean | Yes |
+| Vendor Extension | `42009C` | `VendorExtension` | Structure | Yes — the vendor-specific content |
 
 ## Fields & Structure
 

@@ -21,11 +21,11 @@ While [Rights](rights.md) describe which operations a principal may invoke, Cons
 
 Constraint encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Object Type | `420057` | Enumeration | No |
-| Attribute Reference | `420204` | Structure | Zero or more |
-| Operation | `42005C` | Enumeration | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Enumeration | No |
+| Attribute Reference | `420204` | `AttributeReference` | Structure | Zero or more |
+| Operation | `42005C` | `Operation` | Enumeration | No |
 
 All fields are optional, allowing Constraints to be scoped broadly (applying to all object types) or narrowly (applying to one specific operation on one specific object type).
 

@@ -26,10 +26,10 @@ ecosystems to find "the key for *this* volume" via
 
 A structure:
 
-| Field | Required | Type |
-|---|---|---|
-| Application Namespace | Yes | Text String |
-| Application Data | No | Text String |
+| Field | Tag | XML Element | Required | Type |
+|---|---|---|---|---|
+| Application Namespace | `420003` | `ApplicationNamespace` | Yes | Text String |
+| Application Data | `420002` | `ApplicationData` | No | Text String |
 
 There is a twist when Application Data is omitted *by the client*: if the
 server supports that namespace (advertised through

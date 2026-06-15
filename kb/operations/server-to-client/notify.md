@@ -22,10 +22,10 @@ the client, arranged through configuration outside the protocol.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Which object the notification is about. |
-| Attribute | Yes (repeatable) | Each attribute that changed, with its new value. [Last Change Date](../../attributes/last-change-date.md) is always among them. A deleted attribute is conveyed by an [Attribute structure](../../ttlv/attribute.md) with no Attribute Value. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Which object the notification is about. |
+| Attribute | `420008` | `Attribute` | Yes (repeatable) | Each attribute that changed, with its new value. [Last Change Date](../../attributes/last-change-date.md) is always among them. A deleted attribute is conveyed by an [Attribute structure](../../ttlv/attribute.md) with no Attribute Value. |
 
 ## Response Fields
 

@@ -26,10 +26,10 @@ were also referenced by their Name.
 
 A structure with two required fields:
 
-| Field | Type | Notes |
-|---|---|---|
-| Name Value | Text String | The label itself. |
-| Name Type | Enumeration | `Uninterpreted Text String` or `URI`. |
+| Field | Tag | XML Element | Type | Notes |
+|---|---|---|---|---|
+| Name Value | `420055` | `NameValue` | Text String | The label itself. |
+| Name Type | `420054` | `NameType` | Enumeration | `Uninterpreted Text String` or `URI`. |
 
 ## Constraints
 

@@ -24,10 +24,10 @@ object to Compromised, any other reason to Deactivated.
 
 A structure:
 
-| Field | Type | Required |
-|---|---|---|
-| Revocation Reason Code | Enumeration | Yes — the coded cause |
-| Revocation Message | Text String | No — free-text detail for audit/logging (e.g. which laptop was stolen) |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Revocation Reason Code | `420082` | `RevocationReasonCode` | Enumeration | Yes — the coded cause |
+| Revocation Message | `420080` | `RevocationMessage` | Text String | No — free-text detail for audit/logging (e.g. which laptop was stolen) |
 
 Reason codes mirror X.509 CRL reasons: Unspecified, Key Compromise, CA
 Compromise, Affiliation Changed, Superseded, Cessation of Operation,

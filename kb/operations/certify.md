@@ -22,12 +22,12 @@ server that does not implement it returns an error.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The [Public Key](../objects/public-key.md) to certify. If omitted, the ID Placeholder is used. |
-| Certificate Request Type | No | An enumeration naming the request format; required when a Certificate Request is included. |
-| Certificate Request | No | A byte string carrying the request itself (for example PKCS#10 or PEM). |
-| Template-Attribute | No | Desired attributes for the resulting certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The [Public Key](../objects/public-key.md) to certify. If omitted, the ID Placeholder is used. |
+| Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
+| Certificate Request | `420018` | `CertificateRequest` | No | A byte string carrying the request itself (for example PKCS#10 or PEM). |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Desired attributes for the resulting certificate. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 When no Certificate Request is supplied, the public key is named only by its
 Unique Identifier and the desired certificate type comes from the
@@ -36,10 +36,10 @@ any of several X.509 request encodings.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Identifier of the certificate that was produced. |
-| Template-Attribute | No | Attributes the server set implicitly. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the certificate that was produced. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 

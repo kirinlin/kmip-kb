@@ -21,9 +21,9 @@ Understanding the server's defaults is important for clients that do not want to
 
 Defaults Information encodes as a Structure containing one or more Object Defaults entries.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Object Defaults | `420236` | Structure | One or more |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Object Defaults | `420236` | `ObjectDefaults` | Structure | One or more |
 
 Each Object Defaults child describes the default attributes for one object type. The structure may contain separate entries for Symmetric Key, Private Key, Public Key, Secret Data, Certificate, and other supported object types.
 

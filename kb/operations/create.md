@@ -23,10 +23,10 @@ for asymmetric keys. `Create` is not used to build Template objects.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The kind of object to generate — a [Symmetric Key](../objects/symmetric-key.md). |
-| Template-Attribute | Yes | The attributes the new key should carry, given as individual attributes and/or by referencing server-side Template objects by name. Template objects have been deprecated since version 1.3, so attributes are better supplied individually. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The kind of object to generate — a [Symmetric Key](../objects/symmetric-key.md). |
+| Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes the new key should carry, given as individual attributes and/or by referencing server-side Template objects by name. Template objects have been deprecated since version 1.3, so attributes are better supplied individually. |
 
 *Version note:* KMIP 2.0 replaced the Template-Attribute wrapper with the flat
 [Attributes](../ttlv/template-attribute-structures.md) structure; the attribute
@@ -39,11 +39,11 @@ supplied as well so the server knows the key size to generate.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | Echoes the type of object that was generated. |
-| Unique Identifier | Yes | The server-assigned identifier for the new key, used to reference it in later operations. |
-| Template-Attribute | No | Any attributes the server set on its own initiative that the client did not specify. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | Echoes the type of object that was generated. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The server-assigned identifier for the new key, used to reference it in later operations. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Any attributes the server set on its own initiative that the client did not specify. |
 
 ## Behavior & Server Requirements
 

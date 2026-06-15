@@ -19,18 +19,18 @@ Servers that advertise interop capability in their [`Query`](query.md) response 
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Interop Identifier | Yes | Names the interoperability scenario or test suite to invoke on the server. The [Interop Identifier](../ttlv/interop-identifier.md) structure encodes the test namespace and identifier. |
-| Interop Function | No | Specifies the particular function within the named test to execute. The [Interop Function](../ttlv/interop-function.md) structure provides additional resolution when a test scenario contains multiple sub-functions. |
-| Data | No | Input data for the interop function, such as a plaintext to encrypt or a message to sign, depending on the scenario being tested. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Interop Identifier | `420161` | `InteropIdentifier` | Yes | Names the interoperability scenario or test suite to invoke on the server. The [Interop Identifier](../ttlv/interop-identifier.md) structure encodes the test namespace and identifier. |
+| Interop Function | `420160` | `InteropFunction` | No | Specifies the particular function within the named test to execute. The [Interop Function](../ttlv/interop-function.md) structure provides additional resolution when a test scenario contains multiple sub-functions. |
+| Data | `4200C2` | `Data` | No | Input data for the interop function, such as a plaintext to encrypt or a message to sign, depending on the scenario being tested. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Interop Identifier | Yes | Echoes the identifier from the request for correlation. |
-| Data | No | Output data produced by the interop function, such as ciphertext, a digest, or a signature result. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Interop Identifier | `420161` | `InteropIdentifier` | Yes | Echoes the identifier from the request for correlation. |
+| Data | `4200C2` | `Data` | No | Output data produced by the interop function, such as ciphertext, a digest, or a signature result. |
 
 ## Behavior & Server Requirements
 

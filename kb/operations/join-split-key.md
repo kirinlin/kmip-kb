@@ -21,19 +21,19 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of object to form from the splits. |
-| Unique Identifier | Yes (may repeat) | The split objects to combine; at least the threshold number must be supplied. |
-| Secret Data Type | No | When the result is secret data, which secret-data type the splits form. |
-| Template-Attribute | No | Attributes for the reconstructed object. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of object to form from the splits. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The split objects to combine; at least the threshold number must be supplied. |
+| Secret Data Type | `420086` | `SecretDataType` | No | When the result is secret data, which secret-data type the splits form. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes for the reconstructed object. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../ttlv/template-attribute-structures.md) structure. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The identifier of the reconstructed object. |
-| Template-Attribute | No | Attributes the server set implicitly. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier of the reconstructed object. |
+| Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |
 
 ## Behavior & Server Requirements
 

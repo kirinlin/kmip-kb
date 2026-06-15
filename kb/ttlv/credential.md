@@ -26,10 +26,10 @@ profile/policy territory (see the
 
 Structure, tag `420023`:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Credential Type | `420024` | Enumeration | Yes |
-| Credential Value | `420025` | varies by type | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Credential Type | `420024` | `CredentialType` | Enumeration | Yes |
+| Credential Value | `420025` | `CredentialValue` | varies by type | Yes |
 
 ## Fields & Structure
 

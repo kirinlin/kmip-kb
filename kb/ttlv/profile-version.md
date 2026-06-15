@@ -19,11 +19,11 @@ Profile Version is a structure that identifies a KMIP conformance profile by nam
 
 Profile Version encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Profile Name | `42010F` | Enumeration | Yes |
-| Profile Version Major | `420110` | Integer | Yes |
-| Profile Version Minor | `420111` | Integer | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Profile Name | `42010F` | `ProfileName` | Enumeration | Yes |
+| Profile Version Major | `420110` | `ProfileVersionMajor` | Integer | Yes |
+| Profile Version Minor | `420111` | `ProfileVersionMinor` | Integer | Yes |
 
 All three fields are required. Profile Name identifies the profile; Profile Version Major and Minor together express the profile version as a two-component integer tuple.
 

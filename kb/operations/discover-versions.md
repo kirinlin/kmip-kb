@@ -20,15 +20,15 @@ KMIP 1.1.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Protocol Version | No (may repeat) | The versions the client supports, listed most-preferred first. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Protocol Version | `420069` | `ProtocolVersion` | No (may repeat) | The versions the client supports, listed most-preferred first. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Protocol Version | No (may repeat) | The versions the server supports, listed most-preferred first. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Protocol Version | `420069` | `ProtocolVersion` | No (may repeat) | The versions the server supports, listed most-preferred first. |
 
 ## Behavior & Server Requirements
 

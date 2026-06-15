@@ -23,27 +23,27 @@ up a device before provisioning it.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Query Function | Yes (repeatable) | What to ask about: operations, objects, server information, extension list/map, attestation types, RNGs, validations, profiles, capabilities, or client registration methods. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Query Function | `420074` | `QueryFunction` | Yes (repeatable) | What to ask about: operations, objects, server information, extension list/map, attestation types, RNGs, validations, profiles, capabilities, or client registration methods. |
 
 ## Response Fields
 
 All response fields are optional and appear only when requested (and
 supported by the client):
 
-| Field | Description |
-|---|---|
-| Operation (repeatable) | Operations the client supports. |
-| Object Type (repeatable) | Managed object types the client supports. |
-| Vendor Identification / Server Information | Vendor string and vendor-specific structure. |
-| Extension Information (repeatable) | Vendor [extensions](../../ttlv/extension-information.md) the client understands; the map variant adds tags and types. |
-| Attestation Type (repeatable) | Attestation evidence formats the client can produce. |
-| RNG Parameters (repeatable) | The client's [random number generators](../../ttlv/rng-parameters.md). |
-| Profile Information (repeatable) | [Profiles](../../ttlv/profile-information.md) the client conforms to. |
-| Validation Information (repeatable) | Formal [validations](../../ttlv/validation-information.md) (e.g. FIPS 140) the client asserts. |
-| Capability Information (repeatable) | [Capabilities](../../ttlv/capability-information.md) such as streaming or asynchronous support. |
-| Client Registration Method (repeatable) | Registration methods the client supports. |
+| Field | Tag | XML Element | Description |
+|---|---|---|---|
+| Operation (repeatable) | `42005C` | `Operation` | Operations the client supports. |
+| Object Type (repeatable) | `420057` | `ObjectType` | Managed object types the client supports. |
+| Vendor Identification / Server Information |  |  | Vendor string and vendor-specific structure. |
+| Extension Information (repeatable) | `4200A4` | `ExtensionInformation` | Vendor [extensions](../../ttlv/extension-information.md) the client understands; the map variant adds tags and types. |
+| Attestation Type (repeatable) | `4200C7` | `AttestationType` | Attestation evidence formats the client can produce. |
+| RNG Parameters (repeatable) | `4200D9` | `RNGParameters` | The client's [random number generators](../../ttlv/rng-parameters.md). |
+| Profile Information (repeatable) | `4200EB` | `ProfileInformation` | [Profiles](../../ttlv/profile-information.md) the client conforms to. |
+| Validation Information (repeatable) | `4200DF` | `ValidationInformation` | Formal [validations](../../ttlv/validation-information.md) (e.g. FIPS 140) the client asserts. |
+| Capability Information (repeatable) | `4200F7` | `CapabilityInformation` | [Capabilities](../../ttlv/capability-information.md) such as streaming or asynchronous support. |
+| Client Registration Method (repeatable) | `4200F6` | `ClientRegistrationMethod` | Registration methods the client supports. |
 
 ## Behavior & Server Requirements
 

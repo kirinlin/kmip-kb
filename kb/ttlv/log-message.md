@@ -21,12 +21,12 @@ The server is responsible for persisting the log entry and associating it with t
 
 Log Message encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Log Message (Text String) | `42009F` | Text String | Yes |
-| Log Operation | `420271` | Enumeration | No |
-| Log Level | `4200A2` | Enumeration | No |
-| Date Time | `420034` | Date-Time | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Log Message (Text String) | `42009F` | `LogMessage` | Text String | Yes |
+| Log Operation | `420271` |  | Enumeration | No |
+| Log Level | `4200A2` |  | Enumeration | No |
+| Date Time | `420034` |  | Date-Time | No |
 
 The Text String child carries the actual log message content. The other fields provide severity, category, and timestamp metadata.
 

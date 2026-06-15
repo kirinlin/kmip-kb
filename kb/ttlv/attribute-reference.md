@@ -21,10 +21,10 @@ The structure appears in operation payloads such as [Set Attribute](../operation
 
 Attribute Reference encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Attribute Name | `420009` | Text String | Yes |
-| Attribute Index | `42000A` | Integer | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Attribute Name | `420009` | `AttributeName` | Text String | Yes |
+| Attribute Index | `42000A` | `AttributeIndex` | Integer | No |
 
 The Attribute Name is the canonical string name exactly as defined in the spec — for example `"Cryptographic Algorithm"` or `"Name"`. Attribute Index is omitted for single-valued attributes and, when present, selects a specific instance of a repeating attribute.
 

@@ -25,10 +25,10 @@ algorithms need a named curve. Supplied by the client in
 
 A structure with two optional fields:
 
-| Field | Type | Used for |
-|---|---|---|
-| Qlength | Integer | Bit length of the subgroup order Q (DSA/DH). The length of the prime P comes from [Cryptographic Length](cryptographic-length.md). |
-| Recommended Curve | Enumeration | Named curve for EC algorithms — NIST P/K/B curves, SECG, ANSI X9.62, and (1.2+) Brainpool curves. |
+| Field | Tag | XML Element | Type | Used for |
+|---|---|---|---|---|
+| Qlength | `420073` | `Qlength` | Integer | Bit length of the subgroup order Q (DSA/DH). The length of the prime P comes from [Cryptographic Length](cryptographic-length.md). |
+| Recommended Curve | `420075` | `RecommendedCurve` | Enumeration | Named curve for EC algorithms — NIST P/K/B curves, SECG, ANSI X9.62, and (1.2+) Brainpool curves. |
 
 ## Constraints
 

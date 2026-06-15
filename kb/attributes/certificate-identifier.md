@@ -26,10 +26,10 @@ plagued this one. Documented for compatibility with 1.0-era objects.
 
 A structure of Text Strings:
 
-| Field | Required | Notes |
-|---|---|---|
-| Issuer | Yes | Issuer DN as text; for the (also deprecated) PGP certificate type, the signing key's OpenPGP Key ID. |
-| Serial Number | For X.509 | Absent for PGP certificates, which have no serial. |
+| Field | Tag | XML Element | Required | Notes |
+|---|---|---|---|---|
+| Issuer | `42003B` | `Issuer` | Yes | Issuer DN as text; for the (also deprecated) PGP certificate type, the signing key's OpenPGP Key ID. |
+| Serial Number | `420087` | `SerialNumber` | For X.509 | Absent for PGP certificates, which have no serial. |
 
 ## Constraints
 

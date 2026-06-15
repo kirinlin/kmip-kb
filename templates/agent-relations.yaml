@@ -1,4 +1,4 @@
-# Machine-readable relations for GraphRAG / coding agents.
+# Machine-readable relations for Graph RAG / coding agents.
 # One file per operation or object, stored under schemas/agent/.
 # Fill the lists with KB document slugs. Leave [] until authored.
 name: Create

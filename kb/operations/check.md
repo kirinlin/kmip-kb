@@ -22,23 +22,23 @@ reject the intended use.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to check; the ID Placeholder is used when omitted. |
-| Usage Limits Count | No | An amount of usage the client wants to confirm is available. |
-| Cryptographic Usage Mask | No | The operations the client intends to perform with the object. |
-| Lease Time | No | A lease duration the client wants to confirm the server would grant. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to check; the ID Placeholder is used when omitted. |
+| Usage Limits Count | `420096` | `UsageLimitsCount` | No | An amount of usage the client wants to confirm is available. |
+| Cryptographic Usage Mask | `42002C` | `CryptographicUsageMask` | No | The operations the client intends to perform with the object. |
+| Lease Time | `420049` | `LeaseTime` | No | A lease duration the client wants to confirm the server would grant. |
 
 These fields are sent as plain objects, not wrapped in an Attribute structure.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes (unless failure) | The object's identifier, returned when the check passes. |
-| Usage Limits Count | No | Returned when the requested usage exceeds what policy allows. |
-| Cryptographic Usage Mask | No | Returned when the requested usage is rejected by policy. |
-| Lease Time | No | Returned when the requested lease exceeds what the server would grant. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes (unless failure) | The object's identifier, returned when the check passes. |
+| Usage Limits Count | `420096` | `UsageLimitsCount` | No | Returned when the requested usage exceeds what policy allows. |
+| Cryptographic Usage Mask | `42002C` | `CryptographicUsageMask` | No | Returned when the requested usage is rejected by policy. |
+| Lease Time | `420049` | `LeaseTime` | No | Returned when the requested lease exceeds what the server would grant. |
 
 ## Behavior & Server Requirements
 

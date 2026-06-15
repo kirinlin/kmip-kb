@@ -26,10 +26,10 @@ major version (a 2.1 server must serve 2.0 requests; a 1.4 server must serve
 
 Structure, tag `420069`:
 
-| Field | Tag | Type |
-|---|---|---|
-| Protocol Version Major | `42006A` | Integer |
-| Protocol Version Minor | `42006B` | Integer |
+| Field | Tag | XML Element | Type |
+|---|---|---|---|
+| Protocol Version Major | `42006A` | `ProtocolVersionMajor` | Integer |
+| Protocol Version Minor | `42006B` | `ProtocolVersionMinor` | Integer |
 
 ## Fields & Structure
 

@@ -21,9 +21,9 @@ The Right structure separates operation identity (which operation is permitted) 
 
 Right encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Operation | `42005C` | Enumeration | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Operation | `42005C` | `Operation` | Enumeration | Yes |
 
 Additional condition fields may accompany the Operation in extended implementations; the base form requires only the operation enumeration.
 

@@ -21,13 +21,13 @@ certificate or key expires — to clients that cannot or do not poll.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | Identifier of the object being delivered. |
-| Put Function | Yes | `New` (an object the client has not seen) or `Replace` (supersedes an object the client already holds). |
-| Replaced Unique Identifier | When Put Function is Replace | Which client-held object is being superseded. |
-| Managed Object | Yes | The object itself — symmetric key, certificate, public or private key, secret data, split key, template, or opaque object. |
-| Attribute | No (repeatable) | Attributes the server sends along, e.g. usage guidance or a [Lease Time](../../attributes/lease-time.md) granting a lease. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the object being delivered. |
+| Put Function | `420070` | `PutFunction` | Yes | `New` (an object the client has not seen) or `Replace` (supersedes an object the client already holds). |
+| Replaced Unique Identifier | `420076` | `ReplacedUniqueIdentifier` | When Put Function is Replace | Which client-held object is being superseded. |
+| Managed Object |  |  | Yes | The object itself — symmetric key, certificate, public or private key, secret data, split key, template, or opaque object. |
+| Attribute | `420008` | `Attribute` | No (repeatable) | Attributes the server sends along, e.g. usage guidance or a [Lease Time](../../attributes/lease-time.md) granting a lease. |
 
 ## Response Fields
 

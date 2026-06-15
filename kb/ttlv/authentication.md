@@ -26,9 +26,9 @@ everywhere; the spec recommends leaving
 
 Structure, tag `42000C`, containing:
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| Credential | `420023` | Structure | Yes; repeatable |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Credential | `420023` | `Credential` | Structure | Yes; repeatable |
 
 (In 1.0–1.1 exactly one Credential was carried; 1.2 made it repeatable so an
 identity credential and an attestation credential can travel together.)

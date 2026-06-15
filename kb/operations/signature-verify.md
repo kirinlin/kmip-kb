@@ -20,25 +20,25 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The verification key; the ID Placeholder is used when omitted. |
-| Cryptographic Parameters | No | The signature algorithm (or the algorithm plus hash) to use. |
-| Data | No | The original signed data, for algorithms that need it to verify. |
-| Digested Data | No | A pre-computed digest of the signed data. |
-| Signature Data | Yes (single-part) | The signature to check, as a byte string. |
-| Correlation Value | No | Ties this call to an in-progress multi-part operation. |
-| Init Indicator | No | Marks the first call of a multi-part operation. |
-| Final Indicator | No | Marks the last call of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The verification key; the ID Placeholder is used when omitted. |
+| Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The signature algorithm (or the algorithm plus hash) to use. |
+| Data | `4200C2` | `Data` | No | The original signed data, for algorithms that need it to verify. |
+| Digested Data | `420107` | `DigestedData` | No | A pre-computed digest of the signed data. |
+| Signature Data | `4200C3` | `SignatureData` | Yes (single-part) | The signature to check, as a byte string. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | Ties this call to an in-progress multi-part operation. |
+| Init Indicator | `4200D7` | `InitIndicator` | No | Marks the first call of a multi-part operation. |
+| Final Indicator | `4200D8` | `FinalIndicator` | No | Marks the last call of a multi-part operation. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The key that was used. |
-| Validity Indicator | Yes | Whether the signature checks out: valid, invalid, or indeterminate. |
-| Data | No | Data recovered from the signature, for algorithms that support recovery. |
-| Correlation Value | No | A handle to pass to subsequent calls of a multi-part operation. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
+| Validity Indicator | `42009B` | `ValidityIndicator` | Yes | Whether the signature checks out: valid, invalid, or indeterminate. |
+| Data | `4200C2` | `Data` | No | Data recovered from the signature, for algorithms that support recovery. |
+| Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |
 
 ## Behavior & Server Requirements
 

@@ -25,10 +25,10 @@ superseding the text-based [Certificate Subject](certificate-subject.md).
 
 A structure of Byte Strings:
 
-| Field | Required | Source |
-|---|---|---|
-| Subject Distinguished Name | Yes, but may be empty | The Subject field. |
-| Subject Alternative Name | Required when the DN is empty; repeatable | The SAN extension entries. |
+| Field | Tag | XML Element | Required | Source |
+|---|---|---|---|---|
+| Subject Distinguished Name | `4200B4` | `SubjectDistinguishedName` | Yes, but may be empty | The Subject field. |
+| Subject Alternative Name | `4200B3` | `SubjectAlternativeName` | Required when the DN is empty; repeatable | The SAN extension entries. |
 
 An empty subject DN is legitimate X.509 practice when a critical SAN
 extension carries the identity instead — hence the conditional requirement.

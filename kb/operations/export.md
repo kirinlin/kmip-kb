@@ -21,25 +21,25 @@ object's full attribute set. `Export` is new in KMIP 1.4.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to export; the ID Placeholder is used when omitted. |
-| Key Format Type | No | The format in which to return the key. |
-| Key Wrap Type | No | The wrap form applied to the exported key bytes. |
-| Key Compression Type | No | How elliptic-curve public keys should be compressed. |
-| Key Wrapping Specification | No | The keys and parameters for wrapping the returned object. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to export; the ID Placeholder is used when omitted. |
+| Key Format Type | `420042` | `KeyFormatType` | No | The format in which to return the key. |
+| Key Wrap Type | `4200F8` | `KeyWrapType` | No | The wrap form applied to the exported key bytes. |
+| Key Compression Type | `420041` | `KeyCompressionType` | No | How elliptic-curve public keys should be compressed. |
+| Key Wrapping Specification | `420047` | `KeyWrappingSpecification` | No | The keys and parameters for wrapping the returned object. |
 
 The format, wrap, compression, and wrapping fields carry the same meaning as in
 [Get](get.md).
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Object Type | Yes | The type of the returned object. |
-| Unique Identifier | Yes | The object's identifier. |
-| Attribute | Yes (repeated) | Every attribute of the object. |
-| Managed Object | Yes | The object value, returned as in [Get](get.md). |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Object Type | `420057` | `ObjectType` | Yes | The type of the returned object. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Attribute | `420008` | `Attribute` | Yes (repeated) | Every attribute of the object. |
+| Managed Object |  |  | Yes | The object value, returned as in [Get](get.md). |
 
 ## Behavior & Server Requirements
 

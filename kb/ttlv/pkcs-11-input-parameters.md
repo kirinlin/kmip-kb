@@ -21,10 +21,10 @@ This structure is the "in" side of the function call — providing the mechanism
 
 PKCS#11 Input Parameters encodes as a Structure.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| PKCS#11 Parameters | `420296` | Byte String | No |
-| Data | `4200C2` | Byte String | No |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| PKCS#11 Parameters | `420296` |  | Byte String | No |
+| Data | `4200C2` | `Data` | Byte String | No |
 
 Both fields are optional in general; specific function calls define which are required. Multiple Data or parameter fields may appear for functions that accept multiple inputs.
 

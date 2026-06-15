@@ -27,11 +27,11 @@ still recover everything it protected.
 
 A structure of three required fields:
 
-| Field | Type | Meaning |
-|---|---|---|
-| Usage Limits Total | Long Integer | Lifetime budget, fixed once the key starts protecting. |
-| Usage Limits Count | Long Integer | Budget still unspent. |
-| Usage Limits Unit | Enumeration | What is being counted: `Byte` or `Object`. |
+| Field | Tag | XML Element | Type | Meaning |
+|---|---|---|---|---|
+| Usage Limits Total | `420097` | `UsageLimitsTotal` | Long Integer | Lifetime budget, fixed once the key starts protecting. |
+| Usage Limits Count | `420096` | `UsageLimitsCount` | Long Integer | Budget still unspent. |
+| Usage Limits Unit | `420098` | `UsageLimitsUnit` | Enumeration | What is being counted: `Byte` or `Object`. |
 
 ## Constraints
 

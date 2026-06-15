@@ -20,15 +20,15 @@ validated generator) rather than its own. Added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Data Length | Yes | How many bytes of random output to return. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Data Length | `4200C4` | `DataLength` | Yes | How many bytes of random output to return. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Data | Yes | The random bytes produced by the generator. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Data | `4200C2` | `Data` | Yes | The random bytes produced by the generator. |
 
 ## Behavior & Server Requirements
 

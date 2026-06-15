@@ -20,6 +20,11 @@ keywords: []
 
 ## Fields & Structure
 
+<!-- Field tables start with a `Field` column followed by `Tag` and `XML Element`
+     columns; run `python scripts/enrich_field_tables.py` to fill the latter two
+     for fields that are named KMIP tags. Leave them blank for non-tag fields.
+     | Field | Tag | XML Element | Type | Required | -->
+
 ## Examples
 
 ## Related

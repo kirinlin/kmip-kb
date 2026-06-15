@@ -23,17 +23,17 @@ Server-to-client operations in KMIP v2.1 travel in the same TTLV message framing
 
 The server sends the following in the server-initiated message:
 
-| Field | Required | Description |
-|---|---|---|
-| Protocol Version | Yes (one or more) | One or more [Protocol Version](../../ttlv/protocol-version.md) structures, each identifying a KMIP major.minor version the server is willing to use. Ordered from most to least preferred. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Protocol Version | `420069` | `ProtocolVersion` | Yes (one or more) | One or more [Protocol Version](../../ttlv/protocol-version.md) structures, each identifying a KMIP major.minor version the server is willing to use. Ordered from most to least preferred. |
 
 ## Response Fields (client response)
 
 The client acknowledges the server's version advertisement:
 
-| Field | Required | Description |
-|---|---|---|
-| Protocol Version | Yes | The single [Protocol Version](../../ttlv/protocol-version.md) value the client selects from the server's list. Indicates the version the client will use for subsequent communication. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Protocol Version | `420069` | `ProtocolVersion` | Yes | The single [Protocol Version](../../ttlv/protocol-version.md) value the client selects from the server's list. Indicates the version the client will use for subsequent communication. |
 
 ## Behavior & Server Requirements
 

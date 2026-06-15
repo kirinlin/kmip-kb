@@ -26,10 +26,10 @@ a rotation.
 
 A structure:
 
-| Field | Type | Required |
-|---|---|---|
-| Link Type | Enumeration | Yes — the relationship kind |
-| Linked Object Identifier | Text String | Yes — the target's [Unique Identifier](unique-identifier.md) |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| Link Type | `42004B` | `LinkType` | Enumeration | Yes — the relationship kind |
+| Linked Object Identifier | `42004C` | `LinkedObjectIdentifier` | Text String | Yes — the target's [Unique Identifier](unique-identifier.md) |
 
 Link types and their direction:
 

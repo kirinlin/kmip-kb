@@ -20,20 +20,20 @@ an error. Exactly one chain is validated per request.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Certificate | No (may repeat) | One or more certificate objects supplied inline. |
-| Unique Identifier | No (may repeat) | One or more identifiers of managed certificate objects. |
-| Validity Date | No | The date at which the chain must be valid; the current time is assumed when omitted. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Certificate | `420013` | `Certificate` | No (may repeat) | One or more certificate objects supplied inline. |
+| Unique Identifier | `420094` | `UniqueIdentifier` | No (may repeat) | One or more identifiers of managed certificate objects. |
+| Validity Date | `42009A` | `ValidityDate` | No | The date at which the chain must be valid; the current time is assumed when omitted. |
 
 The inline certificates and the referenced certificates together make up the
 chain to be checked.
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Validity Indicator | Yes | Whether the chain is valid, invalid, or indeterminate. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Validity Indicator | `42009B` | `ValidityIndicator` | Yes | Whether the chain is valid, invalid, or indeterminate. |
 
 ## Behavior & Server Requirements
 

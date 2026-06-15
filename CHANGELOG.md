@@ -6,6 +6,16 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-06-15
+
+### Added
+
+- Field tables that document a structure's or payload's fields now carry `Tag`
+  (6-digit hex) and `XML Element` (CamelCase name) columns next to each field,
+  filled for fields that are named KMIP tags.
+- `enrich_field_tables.py` populates and validates those columns (`--check`
+  guard); included in the authoring validation checklist.
+
 ### Changed
 
 - Renamed `mcp_server/` directory to `mcp_py/`; updated `.mcp.json`, `README.md`,
@@ -304,7 +314,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `schemas/frontmatter.schema.json` — JSON Schema for document front matter,
   enforced by the generator's `--check` mode.
 - `templates/` — document skeletons (operation, attribute, object, concept,
-  ttlv, reference) plus `agent-relations.yaml` for GraphRAG relation files.
+  ttlv, reference) plus `agent-relations.yaml` for Graph RAG relation files.
 - `versions/1.4-toc.yaml` — generated section→file map for KMIP v1.4.
 - `CONTRIBUTING.md` — content rules, the no-verbatim rule, authoring workflow,
   and review checklist.
@@ -372,6 +382,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `operations/put.md`) left at the top level before server-to-client routing
   existed; the correct copies live under `operations/server-to-client/`.
 
-[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.12.0...HEAD
+[0.12.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.11.0...v0.12.0
+[0.11.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/kmip-dev/kmip-dev/releases/tag/v0.9.0

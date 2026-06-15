@@ -24,10 +24,10 @@ It is registered with [Register](../operations/register.md) and retrieved with
 
 ## Structure
 
-| Field | Required | Meaning |
-|---|---|---|
-| Opaque Data Type | Yes | Identifies the kind of opaque data, so a client knows how to interpret it. |
-| Opaque Data Value | Yes | The raw opaque bytes the server stores without interpreting. |
+| Field | Tag | XML Element | Required | Meaning |
+|---|---|---|---|---|
+| Opaque Data Type | `420059` | `OpaqueDataType` | Yes | Identifies the kind of opaque data, so a client knows how to interpret it. |
+| Opaque Data Value | `42005A` | `OpaqueDataValue` | Yes | The raw opaque bytes the server stores without interpreting. |
 
 ## Key Attributes
 

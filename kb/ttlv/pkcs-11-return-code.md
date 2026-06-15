@@ -21,9 +21,9 @@ A KMIP response may carry a Result Status of Success even when the PKCS#11 Retur
 
 PKCS#11 Return Code encodes as a Structure containing a single Long Integer.
 
-| Field | Tag | Type | Required |
-|---|---|---|---|
-| PKCS#11 Return Code Value | `420298` | Long Integer | Yes |
+| Field | Tag | XML Element | Type | Required |
+|---|---|---|---|---|
+| PKCS#11 Return Code Value | `420298` |  | Long Integer | Yes |
 
 The Long Integer value corresponds numerically to the Cryptoki `CKR_*` constant. Clients map this value back to the appropriate named constant from the PKCS#11 specification or their Cryptoki header.
 

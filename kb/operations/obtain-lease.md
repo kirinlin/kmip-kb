@@ -21,17 +21,17 @@ indefinitely.
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | No | The object to lease; the ID Placeholder is used when omitted. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to lease; the ID Placeholder is used when omitted. |
 
 ## Response Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Unique Identifier | Yes | The object's identifier. |
-| Lease Time | Yes | How long (in seconds) the object may be used before a new lease is needed. |
-| Last Change Date | Yes | When the object's contents or attributes last changed. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
+| Lease Time | `420049` | `LeaseTime` | Yes | How long (in seconds) the object may be used before a new lease is needed. |
+| Last Change Date | `420048` | `LastChangeDate` | Yes | When the object's contents or attributes last changed. |
 
 ## Behavior & Server Requirements
 

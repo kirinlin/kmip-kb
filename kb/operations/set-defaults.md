@@ -19,17 +19,17 @@ keywords: ["set defaults", "defaults", "default attributes", "object defaults", 
 
 ## Request Fields
 
-| Field | Required | Description |
-|---|---|---|
-| Defaults Information | Yes | The [Defaults Information](../ttlv/defaults-information.md) structure containing one or more Object Defaults entries. Each entry pairs an Object Type with a list of default attribute values to apply when creating objects of that type. Submitting a new Defaults Information structure replaces whatever defaults were previously configured. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Defaults Information | `420152` | `DefaultsInformation` | Yes | The [Defaults Information](../ttlv/defaults-information.md) structure containing one or more Object Defaults entries. Each entry pairs an Object Type with a list of default attribute values to apply when creating objects of that type. Submitting a new Defaults Information structure replaces whatever defaults were previously configured. |
 
 ## Response Fields
 
 The response contains only the standard result status — no payload fields are returned on success.
 
-| Field | Required | Description |
-|---|---|---|
-| Result Status | Yes | Confirms whether the defaults were successfully stored. |
+| Field | Tag | XML Element | Required | Description |
+|---|---|---|---|---|
+| Result Status | `42007F` | `ResultStatus` | Yes | Confirms whether the defaults were successfully stored. |
 
 ## Behavior & Server Requirements
 
