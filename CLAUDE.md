@@ -14,7 +14,7 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/ttlv/ (kb/ttlv/enumerations/) kb/structures/ kb/messages/ kb/profiles/ (kb/profiles/authentication/ kb/profiles/base-encoding/ kb/profiles/key-management/ kb/profiles/v1/) kb/usage-guide/ (kb/usage-guide/messaging/ kb/usage-guide/discovery/ kb/usage-guide/identity/ kb/usage-guide/lifecycle/ kb/usage-guide/identification/ kb/usage-guide/attributes/ kb/usage-guide/key-material/ kb/usage-guide/asymmetric/ kb/usage-guide/crypto-services/) kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/encoding/ (kb/encoding/enumerations/) kb/structures/ kb/messages/ kb/profiles/ (kb/profiles/authentication/ kb/profiles/base-encoding/ kb/profiles/key-management/ kb/profiles/v1/) kb/usage-guide/ (kb/usage-guide/messaging/ kb/usage-guide/discovery/ kb/usage-guide/identity/ kb/usage-guide/lifecycle/ kb/usage-guide/identification/ kb/usage-guide/attributes/ kb/usage-guide/key-material/ kb/usage-guide/asymmetric/ kb/usage-guide/crypto-services/) kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
 
 `kb/profiles/` subdirectories: `authentication/` ([KMIP-Prof] §3 — auth suites), `base-encoding/` ([KMIP-Prof] §5.1–5.5 — base, complete-server, HTTPS/XML/JSON encoding profiles), `key-management/` ([KMIP-Prof] §5.6+ — symmetric/asymmetric lifecycle, cryptographic services, tape/SED/AES-XTS/quantum-safe/PKCS#11 profiles), `v1/` ([KMIP-Prof] §4 — v1.x legacy named profiles). Index and implementation-conformance docs stay at the `kb/profiles/` root.
 
@@ -51,7 +51,7 @@ a field table:
 python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
 ```
 
-## Enumeration docs (kb/ttlv/enumerations/)
+## Enumeration docs (kb/encoding/enumerations/)
 
 Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Value | Hex | XML Text | Description`:
 
@@ -123,7 +123,7 @@ Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0
 `stub`**. All docs are reviewed per the CONTRIBUTING checklist (validators
 clean; identifier-only verbatim flags accepted as unavoidable: TLS
 cipher-suite names and `LIBRARY-LTO*` namespaces in 3 profile docs, plus
-EC key-compression enum value names in `kb/ttlv/enumerations/
+EC key-compression enum value names in `kb/encoding/enumerations/
 key-compression-type-enumeration.md`). Every `target_path` in
 `kb/versions/2.1-toc.yaml` now exists on disk at `reviewed` status, and
 re-running the generator is a no-op (created=0). Remaining work: net-new
@@ -147,7 +147,7 @@ when editing.
 ```
 python scripts/status_report.py                 # per-category stub/draft/reviewed table
 python scripts/status_report.py --next 10       # list next 10 stubs to author
-python scripts/status_report.py --category kb/ttlv --next 5   # filter to one category
+python scripts/status_report.py --category kb/encoding --next 5   # filter to one category
 python scripts/status_report.py --json          # machine-readable output
 ```
 

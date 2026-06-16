@@ -111,7 +111,7 @@ python scripts/enrich_field_tables.py --check      # fail if any table is stale
 
 [`scripts/enrich_enum_tables.py`](scripts/enrich_enum_tables.py) inserts or
 refreshes the `Value | Hex | XML Text | Description` table in every enumeration
-doc under `kb/ttlv/enumerations/`. `Hex` is the 8-digit integer value (e.g.
+doc under `kb/encoding/enumerations/`. `Hex` is the 8-digit integer value (e.g.
 `0x00000001`); `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 that
 appears inside the XML element when encoding the value. `--check` exits non-zero
 if any table is stale (CI guard).
