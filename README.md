@@ -179,6 +179,10 @@ bash mcp_py/start_kmip-kb.sh   # activate venv and run kmip-kb via stdio
 bash mcp_py/start_kmip-raw.sh  # activate venv and run kmip-raw via stdio
 ```
 
+> **Note:** `kmip-raw` requires a populated `raw/kmip/` directory. If it is
+> absent or empty the server exits immediately with a diagnostic message. Run
+> `python scripts/kmip_crawler.py` first (see [Source preparation](#source-preparation-private-local-only) below).
+
 Dependencies (`fastmcp`, `rank-bm25`, `pyyaml`) are listed in
 `mcp_py/requirements.txt`. See [`mcp_py/README.md`](mcp_py/README.md) for
 quick-test commands and a full tool reference. A `kmip-authoring` skill at

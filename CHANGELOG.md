@@ -6,6 +6,10 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- `kmip-raw` MCP server now exits immediately with a diagnostic message pointing to `scripts/kmip_crawler.py` if `raw/kmip/` is absent or empty, instead of silently building an empty index.
+
 ### Changed
 
 - Renamed `templates/ttlv.md` to `templates/encoding.md`; `scripts/build_kb_scaffold.py` and authoring docs updated.
