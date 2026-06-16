@@ -25,6 +25,14 @@ except ImportError:
 
 RAW_ROOT = pathlib.Path(__file__).parent.parent / "raw"
 
+_KMIP_ROOT = RAW_ROOT / "kmip"
+if not _KMIP_ROOT.is_dir() or not any(_KMIP_ROOT.rglob("*.md")):
+    sys.exit(
+        f"[kmip-raw] raw/kmip/ is missing or empty.\n"
+        f"  Expected: {_KMIP_ROOT}\n"
+        f"  Run `python scripts/kmip_crawler.py` to download spec documents first."
+    )
+
 # ---------------------------------------------------------------------------
 # Version pattern — matches directory components like "v2.1", "v1.4", "v3.0"
 # ---------------------------------------------------------------------------
