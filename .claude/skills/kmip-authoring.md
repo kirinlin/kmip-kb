@@ -67,7 +67,7 @@ When filling in a stub, flip `status: stub` → `status: draft` when done.
 | §6.1 Client operations | `kb/operations/` |
 | §6.2 Server-to-client operations | `kb/operations/server-to-client/` |
 | §3/§5/§7/§8/§9/§10.1 TTLV & message structure | `kb/encoding/` |
-| §11 Enumerations | `kb/encoding/enumerations/` |
+| §11 Enumerations | `kb/enumerations/` |
 | §10.3/§10.4 Auth/Transport + §13 Algorithm Impl | `kb/concepts/` |
 | §14 Profiles | `kb/profiles/` |
 | §1 References | `kb/references/` |

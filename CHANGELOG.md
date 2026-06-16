@@ -8,7 +8,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- New `templates/enumeration.md` template for `kb/encoding/enumerations/` docs. The `Fields & Structure` section now uses a table with `Value | Hex | XML Text | Description` columns, where `Hex` is the 8-digit integer value (e.g. `0x00000001`) and `XML Text` is the CamelCase enumeration value text per KMIP-ENCODE §6.1.3.
+- New `templates/enumeration.md` template for `kb/enumerations/` docs. The `Fields & Structure` section now uses a table with `Value | Hex | XML Text | Description` columns, where `Hex` is the 8-digit integer value (e.g. `0x00000001`) and `XML Text` is the CamelCase enumeration value text per KMIP-ENCODE §6.1.3.
 - `scripts/enrich_enum_tables.py` — inserts `Value | Hex | XML Text` tables into enumeration docs from spec data; idempotent with `--check` CI guard.
 - New `templates/structures.md`, `templates/messages.md`, and `templates/profile.md` templates for the `structures`, `messages`, and `profile` KB categories (previously had no dedicated template).
 - `tag_hex` and `xml_text` front matter values are now automatically included in each doc's `keywords` array to improve RAG retrieval by hex code and CamelCase identifier.
@@ -27,12 +27,16 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Renamed `kb/ttlv/` directory to `kb/encoding/`; all 70 content docs, cross-links,
   scripts, TOC YAML files, MCP server docstrings, JSON Schema enum, and templates
   updated. `category: ttlv` → `category: encoding` across all affected docs.
-- Narrowed the `kb/encoding/` category to TTLV wire encoding, enumerations, and bit
-  masks. Data-structure articles (object, attribute, and operation building
-  blocks) moved to a new `kb/structures/` category, and message-structure
-  articles (request/response envelope and message fields) moved to a new
-  `kb/messages/` category. Article paths and `category` front-matter values for
-  the moved docs change accordingly.
+- Narrowed the `kb/encoding/` category to TTLV wire encoding and bit masks.
+  Data-structure articles (object, attribute, and operation building blocks)
+  moved to a new `kb/structures/` category, and message-structure articles
+  (request/response envelope and message fields) moved to a new `kb/messages/`
+  category. Article paths and `category` front-matter values for the moved docs
+  change accordingly.
+- Moved enumeration docs from `kb/encoding/enumerations/` to a new top-level
+  `kb/enumerations/` directory. All 64 enumeration docs change to
+  `category: enumerations`. TOC YAML files, scripts, cross-links, and front-matter
+  schema updated accordingly.
 - Enriched `kb/attributes/key-format-type.md` with `tag_hex`/`xml_text` front
   matter (`420042`/`KeyFormatType`), structured Attribute Rules and Default Key
   Format Type tables (§4.26 Tables 79–81), and a Digest Interaction section

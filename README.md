@@ -16,7 +16,8 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/operations/` | Client-to-server operations; `kb/operations/server-to-client/` for the reverse. |
 | `kb/objects/` | Managed objects (symmetric/asymmetric keys, certificates, secret data, templates). |
 | `kb/attributes/` | Object attributes — data types, constraints, applicability. |
-| `kb/ttlv/` | TTLV wire encoding, enumerations (`kb/ttlv/enumerations/`), and bit masks. |
+| `kb/encoding/` | TTLV wire encoding and bit masks. |
+| `kb/enumerations/` | KMIP enumerations (§11) — named value sets used in TTLV-encoded fields. |
 | `kb/structures/` | Data structures: object (Key Block, …), attribute, and operation building blocks. |
 | `kb/messages/` | Protocol message structures: request/response envelope and message fields. |
 | `kb/profiles/` | Conformance profiles and implementation conformance. |
@@ -111,7 +112,7 @@ python scripts/enrich_field_tables.py --check      # fail if any table is stale
 
 [`scripts/enrich_enum_tables.py`](scripts/enrich_enum_tables.py) inserts or
 refreshes the `Value | Hex | XML Text | Description` table in every enumeration
-doc under `kb/encoding/enumerations/`. `Hex` is the 8-digit integer value (e.g.
+doc under `kb/enumerations/`. `Hex` is the 8-digit integer value (e.g.
 `0x00000001`); `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 that
 appears inside the XML element when encoding the value. `--check` exits non-zero
 if any table is stale (CI guard).

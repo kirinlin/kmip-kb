@@ -14,11 +14,11 @@ Never paste specification text, tables, or definitions into any tracked file. Re
 
 ## Knowledge-base layout
 
-`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/encoding/ (kb/encoding/enumerations/) kb/structures/ kb/messages/ kb/profiles/ (kb/profiles/authentication/ kb/profiles/base-encoding/ kb/profiles/key-management/ kb/profiles/v1/) kb/usage-guide/ (kb/usage-guide/messaging/ kb/usage-guide/discovery/ kb/usage-guide/identity/ kb/usage-guide/lifecycle/ kb/usage-guide/identification/ kb/usage-guide/attributes/ kb/usage-guide/key-material/ kb/usage-guide/asymmetric/ kb/usage-guide/crypto-services/) kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
+`kb/concepts/ kb/operations/ (kb/operations/server-to-client/) kb/objects/ kb/attributes/ kb/encoding/ kb/enumerations/ kb/structures/ kb/messages/ kb/profiles/ (kb/profiles/authentication/ kb/profiles/base-encoding/ kb/profiles/key-management/ kb/profiles/v1/) kb/usage-guide/ (kb/usage-guide/messaging/ kb/usage-guide/discovery/ kb/usage-guide/identity/ kb/usage-guide/lifecycle/ kb/usage-guide/identification/ kb/usage-guide/attributes/ kb/usage-guide/key-material/ kb/usage-guide/asymmetric/ kb/usage-guide/crypto-services/) kb/versions/ kb/references/ kb/workflows/ kb/examples/ kb/mappings/` plus `schemas/ (schemas/agent/) templates/` and `mcp_py/` (FastMCP server).
 
 `kb/profiles/` subdirectories: `authentication/` ([KMIP-Prof] §3 — auth suites), `base-encoding/` ([KMIP-Prof] §5.1–5.5 — base, complete-server, HTTPS/XML/JSON encoding profiles), `key-management/` ([KMIP-Prof] §5.6+ — symmetric/asymmetric lifecycle, cryptographic services, tape/SED/AES-XTS/quantum-safe/PKCS#11 profiles), `v1/` ([KMIP-Prof] §4 — v1.x legacy named profiles). Index and implementation-conformance docs stay at the `kb/profiles/` root.
 
-Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §10.1 TTLV + §12 Bit Masks→`kb/ttlv/`, §11 Enumerations→`kb/ttlv/enumerations/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures→`kb/structures/`, §8/§9 Messages→`kb/messages/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.1 Base Objects→`kb/structures/`, §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7→`kb/messages/`, §9→`kb/ttlv/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
+Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`kb/objects/`, §10.1 TTLV + §12 Bit Masks→`kb/encoding/`, §11 Enumerations→`kb/enumerations/`, §3 Object Data Structures + §5 Attribute Data Structures + §7 Operations Data Structures→`kb/structures/`, §8/§9 Messages→`kb/messages/`, §4 Attributes→`kb/attributes/`, §6.1 client + §6.2 server-to-client→`kb/operations/`, §10.3/§10.4 Authentication/Transport + §13 Algorithm Implementation→`kb/concepts/`, §14→`kb/profiles/`, §1→`kb/references/`. (v1.x used a different scheme: §2.1 Base Objects→`kb/structures/`, §2.2→`kb/objects/`, §3→`kb/attributes/`, §4/§5→`kb/operations/`, §6/§7→`kb/messages/`, §9→`kb/encoding/`, §8/§10/§11→`kb/concepts/`, §12→`kb/profiles/`; both rule sets live in `V1X_PREFIX_RULES`/`V20_PREFIX_RULES`.)
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
@@ -51,7 +51,7 @@ a field table:
 python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
 ```
 
-## Enumeration docs (kb/encoding/enumerations/)
+## Enumeration docs (kb/enumerations/)
 
 Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Value | Hex | XML Text | Description`:
 
@@ -123,7 +123,7 @@ Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0
 `stub`**. All docs are reviewed per the CONTRIBUTING checklist (validators
 clean; identifier-only verbatim flags accepted as unavoidable: TLS
 cipher-suite names and `LIBRARY-LTO*` namespaces in 3 profile docs, plus
-EC key-compression enum value names in `kb/encoding/enumerations/
+EC key-compression enum value names in `kb/enumerations/
 key-compression-type-enumeration.md`). Every `target_path` in
 `kb/versions/2.1-toc.yaml` now exists on disk at `reviewed` status, and
 re-running the generator is a no-op (created=0). Remaining work: net-new
