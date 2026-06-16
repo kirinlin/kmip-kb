@@ -36,7 +36,7 @@ Structure, tag `4200A4`:
 
 The name is the human-readable label for the extension object; the tag is
 its numeric Item Tag; the type is its Item Type code (per the
-[TTLV type table](../ttlv/ttlv-encoding.md)). Query's *Extension List* function
+[TTLV type table](../encoding/ttlv-encoding.md)). Query's *Extension List* function
 returns names only; *Extension Map* fills in tag and type as well — which is
 why both fields are optional here.
 
@@ -48,6 +48,6 @@ Type = 0x01 (Structure) }.
 
 ## Related
 
-[TTLV Encoding](../ttlv/ttlv-encoding.md) ·
+[TTLV Encoding](../encoding/ttlv-encoding.md) ·
 [Message Extension](../messages/message-extension.md) ·
 [Query](../operations/query.md)

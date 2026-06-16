@@ -1,6 +1,6 @@
 ---
 title: Message Encoding
-category: ttlv
+category: encoding
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "7.1"

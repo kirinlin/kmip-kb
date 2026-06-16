@@ -17,7 +17,7 @@ xml_text: "UsageLimits"
 
 Usage Limits is a structure that encodes quantitative restrictions on how many times — or for how much data — a managed object may be used. When a server enforces usage limits, it tracks consumption against these bounds and may transition an object to the Deactivated state once the limits are exhausted. The structure is used as an attribute on managed objects (primarily symmetric keys) and is carried in operation payloads when reading or setting usage limit information.
 
-Usage limits are a complement to the [Cryptographic Usage Mask](../ttlv/cryptographic-usage-mask.md) (which controls what operations a key may perform) and the [State](../attributes/state.md) machine (which tracks lifecycle). They add a *quantity* dimension: a key might be permitted to encrypt, but only for up to 1 billion bytes.
+Usage limits are a complement to the [Cryptographic Usage Mask](../encoding/cryptographic-usage-mask.md) (which controls what operations a key may perform) and the [State](../attributes/state.md) machine (which tracks lifecycle). They add a *quantity* dimension: a key might be permitted to encrypt, but only for up to 1 billion bytes.
 
 ## Encoding (Tag / Type / Length / Value)
 
@@ -52,4 +52,4 @@ A one-time-use symmetric key would be registered with Total = 1, Count = 1, Unit
 
 ## Related
 
-[Cryptographic Usage Mask](../ttlv/cryptographic-usage-mask.md) · [State](../attributes/state.md) · [Get Attributes](../operations/get-attributes.md) · [Locate](../operations/locate.md)
+[Cryptographic Usage Mask](../encoding/cryptographic-usage-mask.md) · [State](../attributes/state.md) · [Get Attributes](../operations/get-attributes.md) · [Locate](../operations/locate.md)

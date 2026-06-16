@@ -16,7 +16,7 @@ is framed, batched, authenticated, versioned, and how results are reported.
 Covers v2.1 §8 (Messages) and §9 (Message Data Structures); the v1.x message
 contents/format sections (§6–§7) map here too. The composite payloads carried
 inside live under [Data Structures](../structures/index.md), and the byte-level
-[TTLV encoding](../ttlv/index.md) underlies all of it.
+[TTLV encoding](../encoding/index.md) underlies all of it.
 
 ## Framing
 

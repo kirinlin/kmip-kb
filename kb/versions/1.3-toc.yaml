@@ -557,8 +557,8 @@ sections:
     target_path: concepts/authentication.md
   - section: "9.1"
     title: "TTLV Encoding"
-    category: ttlv
-    target_path: ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: encoding/ttlv-encoding.md
   - section: "10"
     title: "Transport"
     category: concept

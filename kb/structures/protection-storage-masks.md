@@ -15,7 +15,7 @@ xml_text: "ProtectionStorageMasks"
 
 ## Overview
 
-Protection Storage Masks is a wrapper structure (note the plural form) that carries a list of [Protection Storage Mask](../ttlv/protection-storage-mask.md) values in a server's [Query](../operations/query.md) response. Where the singular Protection Storage Mask describes a single storage protection configuration, this structure advertises the full set of storage protection configurations the server supports or offers.
+Protection Storage Masks is a wrapper structure (note the plural form) that carries a list of [Protection Storage Mask](../encoding/protection-storage-mask.md) values in a server's [Query](../operations/query.md) response. Where the singular Protection Storage Mask describes a single storage protection configuration, this structure advertises the full set of storage protection configurations the server supports or offers.
 
 Clients consult this list to understand which combinations of storage protection categories — On Premise, Hardware Module, Cloud, Third Party, etc. — are available before assigning protection requirements to managed objects.
 
@@ -46,4 +46,4 @@ A client that must satisfy a compliance requirement mandating hardware module pr
 
 ## Related
 
-[Protection Storage Mask (TTLV bit field)](../ttlv/protection-storage-mask.md) · [Protection Storage Mask (attribute)](../attributes/protection-storage-mask.md) · [Server Information](server-information.md) · [Query](../operations/query.md)
+[Protection Storage Mask (TTLV bit field)](../encoding/protection-storage-mask.md) · [Protection Storage Mask (attribute)](../attributes/protection-storage-mask.md) · [Server Information](server-information.md) · [Query](../operations/query.md)

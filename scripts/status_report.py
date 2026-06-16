@@ -37,8 +37,8 @@ CONTENT_DIRS = [
     "kb/profiles/key-management",
     "kb/profiles/v1",
     "kb/references",
-    "kb/ttlv",
-    "kb/ttlv/enumerations",
+    "kb/encoding",
+    "kb/encoding/enumerations",
     "kb/structures",
     "kb/messages",
     "kb/workflows",
@@ -57,7 +57,7 @@ CONTENT_DIRS = [
 # Human-readable labels for display grouping (sub-dirs collapse under parent).
 _DISPLAY_LABEL = {
     "kb/operations/server-to-client": "kb/operations/server-to-client",
-    "kb/ttlv/enumerations": "kb/ttlv/enumerations",
+    "kb/encoding/enumerations": "kb/encoding/enumerations",
 }
 
 

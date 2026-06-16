@@ -56,7 +56,7 @@ V1X_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "6": ("messages", 2, ""),     # Message Contents
     "7": ("messages", 2, ""),     # Message Format
     "8": ("concept", 1, ""),      # Authentication (whole section)
-    "9": ("ttlv", 2, ""),         # Message Encoding (TTLV)
+    "9": ("encoding", 2, ""),         # Message Encoding (TTLV)
     "10": ("concept", 1, ""),     # Transport
     "11": ("concept", 1, ""),     # Error Handling
     "12": ("profile", 2, ""),     # Conformance
@@ -75,11 +75,11 @@ V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "7": ("structures", 2, ""),          # Operations Data Structures
     "8": ("messages", 2, ""),            # Messages
     "9": ("messages", 2, ""),            # Message Data Structures
-    "10.1": ("ttlv", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
+    "10.1": ("encoding", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
     "10.3": ("concept", 2, ""),          # Authentication
     "10.4": ("concept", 2, ""),          # Transport
-    "11": ("ttlv", 2, "enumerations"),   # Enumerations (Tag, Operation, State, ...)
-    "12": ("ttlv", 2, ""),               # Bit Masks (Cryptographic Usage, ...)
+    "11": ("encoding", 2, "enumerations"),   # Enumerations (Tag, Operation, State, ...)
+    "12": ("encoding", 2, ""),               # Bit Masks (Cryptographic Usage, ...)
     "13": ("concept", 2, ""),            # Algorithm Implementation (Split Key)
     "14": ("profile", 2, ""),            # Conformance
 }
@@ -185,7 +185,7 @@ CATEGORY_DIR: dict[str, str] = {
     "attribute": "kb/attributes",
     "object": "kb/objects",
     "concept": "kb/concepts",
-    "ttlv": "kb/ttlv",
+    "encoding": "kb/encoding",
     "structures": "kb/structures",
     "messages": "kb/messages",
     "profile": "kb/profiles",
@@ -198,7 +198,7 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "attribute": "attribute.md",
     "object": "object.md",
     "concept": "concept.md",
-    "ttlv": "ttlv.md",
+    "encoding": "ttlv.md",
     "structures": "ttlv.md",   # data structures reuse the TTLV/structure skeleton
     "messages": "ttlv.md",     # message structures reuse the same skeleton
     "profile": "concept.md",   # profiles reuse the concept skeleton
@@ -213,7 +213,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/operations": "Client-to-server and server-to-client operations (Create, Locate, Get, ...).",
     "kb/objects": "Managed objects: symmetric/asymmetric keys, certificates, secret data, templates.",
     "kb/attributes": "Object attributes and their data types, constraints, and applicability.",
-    "kb/ttlv": "TTLV wire encoding, enumerations, and bit masks.",
+    "kb/encoding": "TTLV wire encoding, enumerations, and bit masks.",
     "kb/structures": "Data structures: object (Key Block, ...), attribute, and operation building blocks.",
     "kb/messages": "Protocol message structures: request/response envelope and message fields.",
     "kb/profiles": "Conformance profiles and implementation conformance requirements.",
@@ -221,7 +221,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/examples": "Worked request/response examples (original, not copied from the spec).",
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",
     "kb/operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
-    "kb/ttlv/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
+    "kb/encoding/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
     "schemas/agent": "Graph RAG / coding-agent relation files (operation/object graphs).",
     "kb/mappings": "Cross-version and cross-implementation mapping tables.",
     "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
@@ -230,7 +230,7 @@ STRUCTURE_DIRS: dict[str, str] = {
 }
 
 VALID_CATEGORIES = {
-    "operation", "attribute", "object", "concept", "ttlv", "structures",
+    "operation", "attribute", "object", "concept", "encoding", "structures",
     "messages", "profile", "reference", "workflow", "example", "schema",
     "index", "usage-guide",
 }

@@ -25,7 +25,7 @@ members of the KMIP 1.4 document family: the Usage Guide and the Test Cases.
   spec section is ambiguous.
 - **[KMIP-TC]** — KMIP Test Cases 1.4: complete request/response message
   transcripts used for interoperability testing; invaluable as encoding
-  ground truth for [TTLV](../ttlv/ttlv-encoding.md) implementations.
+  ground truth for [TTLV](../encoding/ttlv-encoding.md) implementations.
 - **[w1979]** — Shamir, "How to share a secret" (1979): the polynomial
   secret-sharing scheme behind [Split Key](../objects/split-key.md) methods.
 - **[RFC6151]** — security considerations for MD5/HMAC-MD5; context for why

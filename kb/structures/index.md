@@ -13,7 +13,7 @@ keywords: ["data structures", "object data structures", "attribute data structur
 
 Composite TTLV structures that serve as reusable building blocks across managed
 objects, attributes, and operation payloads. These are the things the
-[TTLV encoding](../ttlv/index.md) serializes; the request/response envelope that
+[TTLV encoding](../encoding/index.md) serializes; the request/response envelope that
 carries them lives under [Messages](../messages/index.md). Covers v2.1 §3
 (Object Data Structures), §5 (Attribute Data Structures), and §7 (Operations
 Data Structures); the v1.x base objects (§2.1) map here too.

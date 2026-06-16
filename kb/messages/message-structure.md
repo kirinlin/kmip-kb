@@ -50,4 +50,4 @@ Payload { Query Function = Query Operations } } }.
 
 [Operations (message format)](../structures/operations.md) · [Batch Item](batch-item.md) ·
 [Protocol Version](protocol-version.md) ·
-[TTLV Encoding](../ttlv/ttlv-encoding.md)
+[TTLV Encoding](../encoding/ttlv-encoding.md)

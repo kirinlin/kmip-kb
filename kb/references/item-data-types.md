@@ -39,4 +39,4 @@ KMIP defines a fixed set of primitive data types used throughout the protocol. E
 
 ## External References
 
-The data-type encodings are specified in the [TTLV Encoding](../ttlv/ttlv-encoding.md) section, which defines the full Type-Tag-Length-Value wire format. All protocol messages are built from these types, as described in [Message Structure](../messages/message-structure.md).
+The data-type encodings are specified in the [TTLV Encoding](../encoding/ttlv-encoding.md) section, which defines the full Type-Tag-Length-Value wire format. All protocol messages are built from these types, as described in [Message Structure](../messages/message-structure.md).

@@ -23,7 +23,7 @@ Every doc must have these required YAML keys:
 
 ```yaml
 title:          # human-readable title (from spec section heading)
-category:       # one of: operation | attribute | object | concept | ttlv |
+category:       # one of: operation | attribute | object | concept | encoding |
                 #         profile | reference | workflow | example | schema | index
 spec_version:   # "2.1"  (baseline)
 spec_versions:  # list of KMIP versions where this concept exists, e.g. ["1.0","1.1","2.1"]
@@ -66,8 +66,8 @@ When filling in a stub, flip `status: stub` → `status: draft` when done.
 | §4 Attributes | `kb/attributes/` |
 | §6.1 Client operations | `kb/operations/` |
 | §6.2 Server-to-client operations | `kb/operations/server-to-client/` |
-| §3/§5/§7/§8/§9/§10.1 TTLV & message structure | `kb/ttlv/` |
-| §11 Enumerations | `kb/ttlv/enumerations/` |
+| §3/§5/§7/§8/§9/§10.1 TTLV & message structure | `kb/encoding/` |
+| §11 Enumerations | `kb/encoding/enumerations/` |
 | §10.3/§10.4 Auth/Transport + §13 Algorithm Impl | `kb/concepts/` |
 | §14 Profiles | `kb/profiles/` |
 | §1 References | `kb/references/` |
@@ -81,7 +81,7 @@ When filling in a stub, flip `status: stub` → `status: draft` when done.
 
 Use relative links from the file's own directory:
 ```markdown
-[Key Block](../ttlv/key-block.md)
+[Key Block](../encoding/key-block.md)
 [Create](create.md)
 ```
 
@@ -129,6 +129,6 @@ Fix any errors before marking `status: draft` or `status: reviewed`.
 ```bash
 python scripts/status_report.py                      # table by category
 python scripts/status_report.py --next 10            # next stubs to author
-python scripts/status_report.py --category kb/ttlv   # one category
+python scripts/status_report.py --category kb/encoding   # one category
 python scripts/status_report.py --json               # machine-readable output
 ```

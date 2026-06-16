@@ -19,7 +19,7 @@ Transport section (v2.1 §10.4; v1.x §10) is a single requirement that clients
 and servers maintain a channel providing
 confidentiality, integrity, and authenticity, with the concrete mechanism
 defined in the profiles document. The protocol itself is just
-[TTLV-encoded](../ttlv/ttlv-encoding.md)
+[TTLV-encoded](../encoding/ttlv-encoding.md)
 [messages](../messages/message-structure.md) exchanged over that secured channel.
 
 ## Details
@@ -58,5 +58,5 @@ out-of-band configuration.
 ## Related Concepts
 
 [Authentication](authentication.md) · [Error Handling](error-handling.md) ·
-[TTLV Encoding](../ttlv/ttlv-encoding.md) ·
+[TTLV Encoding](../encoding/ttlv-encoding.md) ·
 [Message Structure](../messages/message-structure.md)

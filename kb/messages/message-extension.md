@@ -51,4 +51,4 @@ servers honor it.
 
 [Batch Item](batch-item.md) ·
 [Extension Information](../structures/extension-information.md) ·
-[TTLV Encoding](../ttlv/ttlv-encoding.md)
+[TTLV Encoding](../encoding/ttlv-encoding.md)

@@ -19,7 +19,7 @@ already carry example material:
 
 - Each [operation](../operations/index.md) page has an **Examples** section
   with a narrative walk-through of a typical call.
-- [TTLV Encoding](../ttlv/ttlv-encoding.md) shows byte-level encodings of
+- [TTLV Encoding](../encoding/ttlv-encoding.md) shows byte-level encodings of
   the primitive types.
 
 The OASIS Test Cases document (see

@@ -23,4 +23,4 @@ operation or object type.
 
 Closely related material lives elsewhere: the key lifecycle is described
 under the [State](../attributes/state.md) attribute, and message framing
-under [ttlv/](../ttlv/index.md).
+under [ttlv/](../encoding/index.md).

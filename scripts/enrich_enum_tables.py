@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Add enumeration value tables to the Fields & Structure section of enumeration docs.
 
-Each kb/ttlv/enumerations/*.md doc describes a KMIP enumeration whose values are
+Each kb/encoding/enumerations/*.md doc describes a KMIP enumeration whose values are
 defined in the spec.  The Fields & Structure section should contain a table with:
 
     | Value | Hex | XML Text | Description |
@@ -248,7 +248,7 @@ def main() -> None:
     enum_lookup = build_enum_lookup(repo_root)
     print(f"  Found {len(enum_lookup)} enumeration sections.\n")
 
-    enum_dir = kb_root / "ttlv" / "enumerations"
+    enum_dir = kb_root / "encoding" / "enumerations"
     if not enum_dir.exists():
         sys.exit(f"ERROR: enumeration dir not found: {enum_dir}")
 

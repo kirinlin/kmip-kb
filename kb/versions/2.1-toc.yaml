@@ -905,24 +905,24 @@ sections:
     target_path: kb/messages/unique-batch-item-id.md
   - section: "10.1.1"
     title: "Tag"
-    category: ttlv
-    target_path: kb/ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: kb/encoding/ttlv-encoding.md
   - section: "10.1.2"
     title: "Type"
-    category: ttlv
-    target_path: kb/ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: kb/encoding/ttlv-encoding.md
   - section: "10.1.3"
     title: "Length"
-    category: ttlv
-    target_path: kb/ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: kb/encoding/ttlv-encoding.md
   - section: "10.1.4"
     title: "Value"
-    category: ttlv
-    target_path: kb/ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: kb/encoding/ttlv-encoding.md
   - section: "10.1.5"
     title: "Padding"
-    category: ttlv
-    target_path: kb/ttlv/ttlv-encoding.md
+    category: encoding
+    target_path: kb/encoding/ttlv-encoding.md
   - section: "10.3"
     title: "Authentication"
     category: concept
@@ -933,272 +933,272 @@ sections:
     target_path: kb/concepts/transport.md
   - section: "11.1"
     title: "Adjustment Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/adjustment-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/adjustment-type-enumeration.md
   - section: "11.2"
     title: "Alternative Name Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/alternative-name-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/alternative-name-type-enumeration.md
   - section: "11.3"
     title: "Asynchronous Indicator Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/asynchronous-indicator-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/asynchronous-indicator-enumeration.md
   - section: "11.4"
     title: "Attestation Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/attestation-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/attestation-type-enumeration.md
   - section: "11.5"
     title: "Batch Error Continuation Option Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/batch-error-continuation-option-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/batch-error-continuation-option-enumeration.md
   - section: "11.6"
     title: "Block Cipher Mode Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/block-cipher-mode-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/block-cipher-mode-enumeration.md
   - section: "11.7"
     title: "Cancellation Result Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/cancellation-result-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/cancellation-result-enumeration.md
   - section: "11.8"
     title: "Certificate Request Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/certificate-request-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/certificate-request-type-enumeration.md
   - section: "11.9"
     title: "Certificate Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/certificate-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/certificate-type-enumeration.md
   - section: "11.10"
     title: "Client Registration Method Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/client-registration-method-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/client-registration-method-enumeration.md
   - section: "11.11"
     title: "Credential Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/credential-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/credential-type-enumeration.md
   - section: "11.12"
     title: "Cryptographic Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/cryptographic-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/cryptographic-algorithm-enumeration.md
   - section: "11.13"
     title: "Data Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/data-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/data-enumeration.md
   - section: "11.14"
     title: "Derivation Method Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/derivation-method-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/derivation-method-enumeration.md
   - section: "11.15"
     title: "Destroy Action Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/destroy-action-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/destroy-action-enumeration.md
   - section: "11.16"
     title: "Digital Signature Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/digital-signature-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/digital-signature-algorithm-enumeration.md
   - section: "11.17"
     title: "DRBG Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/drbg-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/drbg-algorithm-enumeration.md
   - section: "11.18"
     title: "Encoding Option Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/encoding-option-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/encoding-option-enumeration.md
   - section: "11.19"
     title: "Endpoint Role Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/endpoint-role-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/endpoint-role-enumeration.md
   - section: "11.20"
     title: "FIPS186 Variation Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/fips186-variation-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/fips186-variation-enumeration.md
   - section: "11.21"
     title: "Hashing Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/hashing-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/hashing-algorithm-enumeration.md
   - section: "11.22"
     title: "Interop Function Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/interop-function-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/interop-function-enumeration.md
   - section: "11.23"
     title: "Item Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/item-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/item-type-enumeration.md
   - section: "11.24"
     title: "Key Compression Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/key-compression-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/key-compression-type-enumeration.md
   - section: "11.25"
     title: "Key Format Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/key-format-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/key-format-type-enumeration.md
   - section: "11.26"
     title: "Key Role Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/key-role-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/key-role-type-enumeration.md
   - section: "11.27"
     title: "Key Value Location Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/key-value-location-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/key-value-location-type-enumeration.md
   - section: "11.28"
     title: "Link Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/link-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/link-type-enumeration.md
   - section: "11.29"
     title: "Key Wrap Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/key-wrap-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/key-wrap-type-enumeration.md
   - section: "11.30"
     title: "Mask Generator Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/mask-generator-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/mask-generator-enumeration.md
   - section: "11.31"
     title: "Name Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/name-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/name-type-enumeration.md
   - section: "11.32"
     title: "NIST Key Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/nist-key-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/nist-key-type-enumeration.md
   - section: "11.33"
     title: "Object Group Member Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/object-group-member-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/object-group-member-enumeration.md
   - section: "11.34"
     title: "Object Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/object-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/object-type-enumeration.md
   - section: "11.35"
     title: "Opaque Data Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/opaque-data-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/opaque-data-type-enumeration.md
   - section: "11.36"
     title: "Operation Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/operation-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/operation-enumeration.md
   - section: "11.37"
     title: "Padding Method Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/padding-method-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/padding-method-enumeration.md
   - section: "11.38"
     title: "PKCS#11 Function Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/pkcs-11-function-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/pkcs-11-function-enumeration.md
   - section: "11.39"
     title: "PKCS#11 Return Code Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/pkcs-11-return-code-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/pkcs-11-return-code-enumeration.md
   - section: "11.40"
     title: "Processing Stage Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/processing-stage-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/processing-stage-enumeration.md
   - section: "11.41"
     title: "Profile Name Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/profile-name-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/profile-name-enumeration.md
   - section: "11.42"
     title: "Protection Level Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/protection-level-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/protection-level-enumeration.md
   - section: "11.43"
     title: "Put Function Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/put-function-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/put-function-enumeration.md
   - section: "11.44"
     title: "Query Function Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/query-function-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/query-function-enumeration.md
   - section: "11.45"
     title: "Recommended Curve Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/recommended-curve-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/recommended-curve-enumeration.md
   - section: "11.46"
     title: "Result Reason Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/result-reason-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/result-reason-enumeration.md
   - section: "11.47"
     title: "Result Status Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/result-status-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/result-status-enumeration.md
   - section: "11.48"
     title: "Revocation Reason Code Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/revocation-reason-code-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/revocation-reason-code-enumeration.md
   - section: "11.49"
     title: "RNG Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/rng-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/rng-algorithm-enumeration.md
   - section: "11.50"
     title: "RNG Mode Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/rng-mode-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/rng-mode-enumeration.md
   - section: "11.51"
     title: "Rotate Name Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/rotate-name-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/rotate-name-type-enumeration.md
   - section: "11.52"
     title: "Secret Data Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/secret-data-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/secret-data-type-enumeration.md
   - section: "11.53"
     title: "Shredding Algorithm Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/shredding-algorithm-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/shredding-algorithm-enumeration.md
   - section: "11.54"
     title: "Split Key Method Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/split-key-method-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/split-key-method-enumeration.md
   - section: "11.55"
     title: "State Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/state-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/state-enumeration.md
   - section: "11.56"
     title: "Tag Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/tag-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/tag-enumeration.md
   - section: "11.57"
     title: "Ticket Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/ticket-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/ticket-type-enumeration.md
   - section: "11.58"
     title: "Unique Identifier Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/unique-identifier-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/unique-identifier-enumeration.md
   - section: "11.59"
     title: "Unwrap Mode Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/unwrap-mode-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/unwrap-mode-enumeration.md
   - section: "11.60"
     title: "Usage Limits Unit Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/usage-limits-unit-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/usage-limits-unit-enumeration.md
   - section: "11.61"
     title: "Validity Indicator Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/validity-indicator-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/validity-indicator-enumeration.md
   - section: "11.62"
     title: "Wrapping Method Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/wrapping-method-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/wrapping-method-enumeration.md
   - section: "11.63"
     title: "Validation Authority Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/validation-authority-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/validation-authority-type-enumeration.md
   - section: "11.64"
     title: "Validation Type Enumeration"
-    category: ttlv
-    target_path: kb/ttlv/enumerations/validation-type-enumeration.md
+    category: encoding
+    target_path: kb/encoding/enumerations/validation-type-enumeration.md
   - section: "12.1"
     title: "Cryptographic Usage Mask"
-    category: ttlv
-    target_path: kb/ttlv/cryptographic-usage-mask.md
+    category: encoding
+    target_path: kb/encoding/cryptographic-usage-mask.md
   - section: "12.2"
     title: "Protection Storage Mask"
-    category: ttlv
-    target_path: kb/ttlv/protection-storage-mask.md
+    category: encoding
+    target_path: kb/encoding/protection-storage-mask.md
   - section: "12.3"
     title: "Storage Status Mask"
-    category: ttlv
-    target_path: kb/ttlv/storage-status-mask.md
+    category: encoding
+    target_path: kb/encoding/storage-status-mask.md
   - section: "13.1"
     title: "Split Key Algorithms"
     category: concept
