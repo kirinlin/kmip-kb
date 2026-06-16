@@ -18,7 +18,7 @@ The XML Profiles replace TTLV binary encoding with an XML message encoding while
 
 ## XML Encoding
 
-Each TTLV item maps to an XML element. Tags become element names in CamelCase (e.g., `ActivationDate`, `BatchCount`). Unknown tags or extension tags may use either the hex form `0x54FFFF` or a published name. Structures encode as nested XML elements; scalar values use a `value` attribute. The `type` attribute defaults to `Structure` and may be omitted for structural elements.
+Each TTLV item maps to an XML element. Tags become element names in CamelCase (e.g., `ActivationDate`, `BatchCount`). Unknown tags or extension tags may use either the hex form `54FFFF` or a published name. Structures encode as nested XML elements; scalar values use a `value` attribute. The `type` attribute defaults to `Structure` and may be omitted for structural elements.
 
 The namespace for all KMIP XML elements is `urn:oasis:tc:kmip:xmlns`, but its use is optional unless namespace disambiguation is required.
 

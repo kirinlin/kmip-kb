@@ -27,7 +27,7 @@ KMIP defines a fixed set of primitive data types used throughout the protocol. E
 
 **Enumeration** — a 32-bit value occupying the same wire layout as Integer but semantically interpreted as a named constant from one of KMIP's enumeration types. Encoders select the Enumeration type byte rather than Integer when the field is a named constant.
 
-**Boolean** — an 8-byte field whose value is `0x0000000000000001` for true or `0x0000000000000000` for false, with 7 bytes of padding following the 1-byte value.
+**Boolean** — an 8-byte field whose value is `0000000000000001` for true or `0000000000000000` for false, with 7 bytes of padding following the 1-byte value.
 
 **Text String** — a variable-length UTF-8 string. The length field records the byte count of the string (not the code-point count); the value is padded to the nearest 8-byte boundary with zero bytes.
 

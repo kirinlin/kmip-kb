@@ -38,7 +38,7 @@ correlation values (1.4).
 ## Examples
 
 A Re-key against an HSM-backed server returns Operation Pending with
-correlation value `0x0042`. The client Polls with that value every few
+correlation value `0042`. The client Polls with that value every few
 seconds; the third Poll returns Success plus the replacement key's Unique
 Identifier.
 

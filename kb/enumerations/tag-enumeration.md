@@ -18,8 +18,8 @@ xml_text: "Tag"
 The Tag enumeration is the master registry of TTLV tag values — the 3-byte `42xxxx` identifiers that name every field, structure, and enumeration in a KMIP message. Every field in every KMIP request or response is prefixed with a 3-byte tag drawn from this enumeration, giving KMIP's encoding a self-describing character: a parser needs only the tag registry to identify any field it encounters, without a separate per-message schema.
 
 Tags are grouped by range:
-- `0x420000`–`0x42FFFF`: Standard KMIP tags defined in this enumeration.
-- `0x540000`–`0x54FFFF`: Extension tags. The range `0x540000`–`0x547FFF` is available for private-use extensions; `0x548000`–`0x54FFFF` is reserved for KMIP specification use.
+- `420000`–`42FFFF`: Standard KMIP tags defined in this enumeration.
+- `540000`–`54FFFF`: Extension tags. The range `540000`–`547FFF` is available for private-use extensions; `548000`–`54FFFF` is reserved for KMIP specification use.
 
 ## Encoding (Tag / Type / Length / Value)
 
