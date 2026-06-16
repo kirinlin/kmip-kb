@@ -43,8 +43,8 @@ Rows whose field is not a named tag (e.g. a generic "Managed Object" placeholder
 leave both cells blank. `scripts/enrich_field_tables.py` fills these columns from
 the shared tag lookup; it only targets tables whose header's first column is
 exactly `Field`, reuses an existing `Tag` column where one is present, never
-overwrites a populated cell, and is idempotent. 135 docs / 195 field tables /
-505 tagged rows currently carry these columns. Run it after authoring or editing
+overwrites a populated cell, and is idempotent. 137 docs / 199 field tables /
+506 tagged rows currently carry these columns. Run it after authoring or editing
 a field table:
 
 ```
@@ -116,6 +116,7 @@ python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
 python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Element columns
+python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Hex/XML Text
 ```
 
 Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0

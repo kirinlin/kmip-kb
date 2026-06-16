@@ -30,6 +30,10 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   articles (request/response envelope and message fields) moved to a new
   `kb/messages/` category. Article paths and `category` front-matter values for
   the moved docs change accordingly.
+- Enriched `kb/attributes/key-format-type.md` with `tag_hex`/`xml_text` front
+  matter (`420042`/`KeyFormatType`), structured Attribute Rules and Default Key
+  Format Type tables (§4.26 Tables 79–81), and a Digest Interaction section
+  covering dual-digest behaviour.
 
 ## [0.12.0] - 2026-06-15
 
