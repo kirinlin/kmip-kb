@@ -29,7 +29,7 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `kb/mappings/` | Cross-version / cross-implementation mapping tables. |
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds Graph RAG relation files. |
 | `templates/` | Document skeletons used by the scaffold generator. |
-| `mcp_py/` | FastMCP server exposing the knowledge base to coding agents via BM25 search, article retrieval, listing, and related-article discovery. |
+| `mcp_py/` | Two FastMCP servers: `kmip-kb` exposes the authored `kb/` knowledge base; `kmip-raw` exposes raw crawled spec documents in `raw/`. Both offer BM25 search and document retrieval. |
 
 Each document carries YAML front matter validated against
 [`schemas/frontmatter.schema.json`](schemas/frontmatter.schema.json):
@@ -162,23 +162,28 @@ python scripts/check_verbatim.py kb/operations  # check a directory
 python scripts/check_verbatim.py --n 8         # adjust the run length
 ```
 
-## MCP server
+## MCP servers
 
-[`mcp_py/kmip_kb_server.py`](mcp_py/kmip_kb_server.py) is a FastMCP
-server that exposes the knowledge base to coding agents over stdio. It provides
-four tools: BM25 full-text search (`search_kb`), full article retrieval
-(`get_article`), article listing with front-matter filters (`list_articles`),
-and related-article discovery (`get_related`). Start it with:
+Two FastMCP servers in [`mcp_py/`](mcp_py/) expose the project to coding agents
+over stdio. Both are pre-wired for Claude Code via `.mcp.json`.
+
+| Server | Script | Indexes | Tools |
+|---|---|---|---|
+| `kmip-kb` | `kmip_kb_server.py` | `kb/` — 450+ authored articles | `search_kb`, `get_article`, `list_articles`, `get_related` |
+| `kmip-raw` | `kmip_raw_server.py` | `raw/` — 250+ crawled spec docs | `search_raw`, `get_doc` (paginated), `list_docs` |
+
+Start them manually with:
 
 ```sh
-bash mcp_py/start.sh          # activate venv and run via stdio
+bash mcp_py/start_kmip-kb.sh   # activate venv and run kmip-kb via stdio
+bash mcp_py/start_kmip-raw.sh  # activate venv and run kmip-raw via stdio
 ```
 
 Dependencies (`fastmcp`, `rank-bm25`, `pyyaml`) are listed in
-`mcp_py/requirements.txt`. The server is pre-wired for Claude Code via
-`.mcp.json` and `.claude/settings.json`; a `kmip-authoring` skill at
-`.claude/skills/kmip-authoring.md` bundles authoring conventions for agents
-working in this repo.
+`mcp_py/requirements.txt`. See [`mcp_py/README.md`](mcp_py/README.md) for
+quick-test commands and a full tool reference. A `kmip-authoring` skill at
+`.claude/skills/kmip-authoring.md` bundles authoring conventions and MCP
+tool guidance for agents working in this repo.
 
 ## Contributing
 

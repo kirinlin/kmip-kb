@@ -8,6 +8,15 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `kmip-raw` MCP server (`mcp_py/kmip_raw_server.py`) — FastMCP server exposing the 250+ raw crawled spec documents in `raw/` over stdio. Provides three tools: `search_raw` (BM25 full-text search with `doc_type`, `version`, and `final_only` filters), `get_doc` (paginated character-offset retrieval for large spec files), and `list_docs` (browse by doc type and version). Pre-wired in `.mcp.json` alongside `kmip-kb`.
+- `mcp_py/README.md` — usage guide, quick Python test commands, and tool reference for both MCP servers.
+- `mcp_py/start_kmip-raw.sh` — venv-aware start script for the `kmip-raw` server.
+
+### Changed
+
+- Renamed `mcp_py/start.sh` to `mcp_py/start_kmip-kb.sh` for consistency with the new `start_kmip-raw.sh`.
+- Updated `.mcp.json` to use the renamed `start_kmip-kb.sh` and register the new `kmip-raw` server.
+
 - New `templates/enumeration.md` template for `kb/enumerations/` docs. The `Fields & Structure` section now uses a table with `Value | Hex | XML Text | Description` columns, where `Hex` is the 8-digit integer value (e.g. `0x00000001`) and `XML Text` is the CamelCase enumeration value text per KMIP-ENCODE §6.1.3.
 - `scripts/enrich_enum_tables.py` — inserts `Value | Hex | XML Text` tables into enumeration docs from spec data; idempotent with `--check` CI guard.
 - New `templates/structures.md`, `templates/messages.md`, and `templates/profile.md` templates for the `structures`, `messages`, and `profile` KB categories (previously had no dedicated template).
