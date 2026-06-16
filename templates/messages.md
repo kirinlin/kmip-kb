@@ -4,7 +4,6 @@ category: messages
 spec_version: "2.1"
 spec_versions: ["2.1"]
 source_section: "9.X"
-v1_source_section: "6.X"
 status: stub
 related: []
 keywords: []

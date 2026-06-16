@@ -56,7 +56,7 @@ V1X_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "6": ("messages", 2, ""),     # Message Contents
     "7": ("messages", 2, ""),     # Message Format
     "8": ("concept", 1, ""),      # Authentication (whole section)
-    "9": ("encoding", 2, ""),         # Message Encoding (TTLV)
+    "9": ("encoding", 2, ""),     # Message Encoding (TTLV)
     "10": ("concept", 1, ""),     # Transport
     "11": ("concept", 1, ""),     # Error Handling
     "12": ("profile", 2, ""),     # Conformance
@@ -201,9 +201,9 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "concept": "concept.md",
     "encoding": "encoding.md",
     "enumerations": "enumeration.md",
-    "structures": "encoding.md",   # data structures reuse the encoding/structure skeleton
-    "messages": "encoding.md",     # message structures reuse the same skeleton
-    "profile": "concept.md",   # profiles reuse the concept skeleton
+    "structures": "structures.md",
+    "messages": "messages.md",
+    "profile": "profile.md",
     "reference": "reference.md",
     "usage-guide": "usage-guide.md",
 }
@@ -636,6 +636,11 @@ def cmd_generate(args) -> int:
 
     # 3. stubs
     if not args.toc_only and not args.no_stubs:
+        missing = [tmpl for tmpl in CATEGORY_TEMPLATE.values()
+                   if not (REPO_ROOT / "templates" / tmpl).exists()]
+        if missing:
+            print(f"error: template files not found: {', '.join(missing)}", file=sys.stderr)
+            return 1
         bodies = {cat: _strip_front_matter(
                     (REPO_ROOT / "templates" / tmpl).read_text(encoding="utf-8"))
                   for cat, tmpl in CATEGORY_TEMPLATE.items()}
