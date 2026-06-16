@@ -33,11 +33,11 @@ The Long Integer value corresponds numerically to the Cryptoki `CKR_*` constant.
 
 The single **PKCS#11 Return Code Value** Long Integer holds the raw Cryptoki return code. Common values include:
 
-- `0x00000000` (CKR_OK) — the function completed successfully.
-- `0x00000020` (CKR_ARGUMENTS_BAD) — incorrect arguments were supplied.
-- `0x00000030` (CKR_BUFFER_TOO_SMALL) — an output buffer was insufficient.
-- `0x000000B0` (CKR_KEY_HANDLE_INVALID) — the key handle was not valid.
-- `0x000001B0` (CKR_MECHANISM_INVALID) — the mechanism is not supported.
+- `00000000` (CKR_OK) — the function completed successfully.
+- `00000020` (CKR_ARGUMENTS_BAD) — incorrect arguments were supplied.
+- `00000030` (CKR_BUFFER_TOO_SMALL) — an output buffer was insufficient.
+- `000000B0` (CKR_KEY_HANDLE_INVALID) — the key handle was not valid.
+- `000001B0` (CKR_MECHANISM_INVALID) — the mechanism is not supported.
 
 The full list of `CKR_*` values is defined in the PKCS#11 specification; clients should handle both known and unknown non-zero values gracefully.
 
@@ -45,7 +45,7 @@ When the PKCS#11 Return Code is non-zero, the [PKCS#11 Output Parameters](pkcs-1
 
 ## Examples
 
-A client requests a C_Decrypt operation on data that was encrypted with a different key. The server executes the Cryptoki call, which returns CKR_ENCRYPTED_DATA_INVALID. The KMIP response carries Result Status = Success (the KMIP operation itself completed without error) but PKCS#11 Return Code Value = `0x00000040` (CKR_ENCRYPTED_DATA_INVALID). The client parses the return code and reports the decryption failure to the caller.
+A client requests a C_Decrypt operation on data that was encrypted with a different key. The server executes the Cryptoki call, which returns CKR_ENCRYPTED_DATA_INVALID. The KMIP response carries Result Status = Success (the KMIP operation itself completed without error) but PKCS#11 Return Code Value = `00000040` (CKR_ENCRYPTED_DATA_INVALID). The client parses the return code and reports the decryption failure to the caller.
 
 ## Related
 

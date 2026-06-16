@@ -19,10 +19,10 @@ The Rotate Name Type enumeration classifies the format or interpretation of the 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Uninterpreted Text String | `0x00000001` | `UninterpretedTextString` |  |
-| URI | `0x00000002` | `URI` |  |
+| Uninterpreted Text String | `00000001` | `UninterpretedTextString` |  |
+| URI | `00000002` | `URI` |  |
 
 - **Uninterpreted Text String**: The Rotate Name value is an opaque human-readable label with no required structure — for example, "payment-keys" or "tls-server-certs-2024". Clients display it as-is.
 - **URI**: The Rotate Name value is a Uniform Resource Identifier that provides a globally namespaced, dereferenceable (or at least unique) identifier for the rotation group — for example, `urn:example:key-family:payment-aes-256`.

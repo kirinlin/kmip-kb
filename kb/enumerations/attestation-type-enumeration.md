@@ -19,11 +19,11 @@ The Attestation Type enumeration identifies the format and origin of an attestat
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| TPM Quote | `0x00000001` | `TPMQuote` |  |
-| TCG Integrity Report | `0x00000002` | `TCGIntegrityReport` |  |
-| SAML Assertion | `0x00000003` | `SAMLAssertion` |  |
+| TPM Quote | `00000001` | `TPMQuote` |  |
+| TCG Integrity Report | `00000002` | `TCGIntegrityReport` |  |
+| SAML Assertion | `00000003` | `SAMLAssertion` |  |
 
 - **TPM Quote**: An attestation produced by a Trusted Platform Module, in which the TPM signs a selection of Platform Configuration Register (PCR) values that describe the platform's measured boot state. Relying parties can verify the quote using the TPM's endorsement key certificate.
 - **TCG Integrity Report**: A broader report format defined by the Trusted Computing Group that can aggregate measurements from multiple components of a platform's boot and runtime environment, often expressed as an XML or binary report.

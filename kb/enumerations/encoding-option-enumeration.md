@@ -19,10 +19,10 @@ The Encoding Option enumeration controls how the [Key Value](../structures/key-v
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| No Encoding | `0x00000001` | `NoEncoding` |  |
-| TTLV Encoding | `0x00000002` | `TTLVEncoding` |  |
+| No Encoding | `00000001` | `NoEncoding` |  |
+| TTLV Encoding | `00000002` | `TTLVEncoding` |  |
 
 - **No Encoding**: The raw key material bytes are wrapped directly without any TTLV framing. The wrapping input is the key value as a plain byte string. This produces a compact, format-agnostic wrapped blob that can be exchanged with non-KMIP systems that expect bare wrapped key bytes.
 - **TTLV Encoding**: The full TTLV-encoded Key Value structure — which includes the key material along with any accompanying attributes such as cryptographic parameters or IV/nonce data — is serialised as a byte string and then wrapped. When the recipient unwraps the blob, they recover the complete Key Value structure and can reconstruct the KMIP key object with all its context intact.

@@ -19,15 +19,15 @@ The Revocation Reason Code enumeration classifies why a managed object is being 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Key Compromise | `0x00000002` | `KeyCompromise` |  |
-| CA Compromise | `0x00000003` | `CACompromise` |  |
-| Affiliation Changed | `0x00000004` | `AffiliationChanged` |  |
-| Superseded | `0x00000005` | `Superseded` |  |
-| Cessation of Operation | `0x00000006` | `CessationOfOperation` |  |
-| Privilege Withdrawn | `0x00000007` | `PrivilegeWithdrawn` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Key Compromise | `00000002` | `KeyCompromise` |  |
+| CA Compromise | `00000003` | `CACompromise` |  |
+| Affiliation Changed | `00000004` | `AffiliationChanged` |  |
+| Superseded | `00000005` | `Superseded` |  |
+| Cessation of Operation | `00000006` | `CessationOfOperation` |  |
+| Privilege Withdrawn | `00000007` | `PrivilegeWithdrawn` |  |
 
 - **Unspecified**: The reason is not categorised. Used when a more specific code is not applicable or not known.
 - **Key Compromise**: The private key or secret has been disclosed to an unauthorised party, or there is a credible risk that it has been. The most critical revocation reason; objects are typically moved to the Compromised state.

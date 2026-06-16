@@ -19,18 +19,18 @@ The Derivation Method enumeration names the key derivation function (KDF) or key
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| PBKDF2 | `0x00000001` | `PBKDF2` |  |
-| HASH | `0x00000002` | `HASH` |  |
-| HMAC | `0x00000003` | `HMAC` |  |
-| ENCRYPT | `0x00000004` | `ENCRYPT` |  |
-| NIST800-108-C | `0x00000005` | `NIST800_108_C` |  |
-| NIST800-108-F | `0x00000006` | `NIST800_108_F` |  |
-| NIST800-108-DPI | `0x00000007` | `NIST800_108_DPI` |  |
-| Asymmetric Key | `0x00000008` | `AsymmetricKey` |  |
-| AWS Signature Version 4 | `0x00000009` | `AWSSignatureVersion4` |  |
-| HKDF | `0x0000000A` | `HKDF` |  |
+| PBKDF2 | `00000001` | `PBKDF2` |  |
+| HASH | `00000002` | `HASH` |  |
+| HMAC | `00000003` | `HMAC` |  |
+| ENCRYPT | `00000004` | `ENCRYPT` |  |
+| NIST800-108-C | `00000005` | `NIST800_108_C` |  |
+| NIST800-108-F | `00000006` | `NIST800_108_F` |  |
+| NIST800-108-DPI | `00000007` | `NIST800_108_DPI` |  |
+| Asymmetric Key | `00000008` | `AsymmetricKey` |  |
+| AWS Signature Version 4 | `00000009` | `AWSSignatureVersion4` |  |
+| HKDF | `0000000A` | `HKDF` |  |
 
 - **PBKDF2** (Password-Based Key Derivation Function 2, RFC 8018): Derives a key from a password and salt using an iterated HMAC or hash. The iteration count controls computational cost to resist offline brute-force attacks. The standard choice for deriving encryption keys from passwords.
 - **Hash**: Derives key material by hashing the input directly (without HMAC). A simple but less flexible option; the hash algorithm is specified in the accompanying Hashing Algorithm field.

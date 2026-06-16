@@ -19,11 +19,11 @@ The Adjustment Type enumeration controls how the [Adjust Attribute](../operation
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Increment | `0x00000001` | `Increment` |  |
-| Decrement | `0x00000002` | `Decrement` |  |
-| Negate | `0x00000003` | `Negate` |  |
+| Increment | `00000001` | `Increment` |  |
+| Decrement | `00000002` | `Decrement` |  |
+| Negate | `00000003` | `Negate` |  |
 
 - **Add**: Increases the existing numeric attribute value by the supplied adjustment amount. Used when incrementing counters such as a rotate-generation counter or a usage count.
 - **Subtract**: Decreases the existing numeric attribute value by the supplied adjustment amount. Mirrors Add but in the opposite direction; useful for releasing reserved usage allocations.

@@ -19,13 +19,13 @@ The DRBG Algorithm enumeration identifies the specific deterministic random bit 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Dual-EC | `0x00000002` | `Dual_EC` |  |
-| Hash | `0x00000003` | `Hash` |  |
-| HMAC | `0x00000004` | `HMAC` |  |
-| CTR | `0x00000005` | `CTR` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Dual-EC | `00000002` | `Dual_EC` |  |
+| Hash | `00000003` | `Hash` |  |
+| HMAC | `00000004` | `HMAC` |  |
+| CTR | `00000005` | `CTR` |  |
 
 - **Unspecified**: The DRBG algorithm is not specified by the client; the server selects a suitable approved algorithm according to its policy.
 - **Dual-EC**: The Dual Elliptic Curve DRBG defined in early NIST SP 800-90A. This algorithm attracted significant scrutiny due to a potential backdoor in the standardised curve parameters; it is generally avoided in new implementations, though it remains enumerated for completeness.

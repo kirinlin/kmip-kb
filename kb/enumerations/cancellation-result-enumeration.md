@@ -19,13 +19,13 @@ The Cancellation Result enumeration conveys the server's response to a [Cancel](
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Canceled | `0x00000001` | `Canceled` |  |
-| Unable to Cancel | `0x00000002` | `UnableToCancel` |  |
-| Completed | `0x00000003` | `Completed` |  |
-| Failed | `0x00000004` | `Failed` |  |
-| Unavailable | `0x00000005` | `Unavailable` |  |
+| Canceled | `00000001` | `Canceled` |  |
+| Unable to Cancel | `00000002` | `UnableToCancel` |  |
+| Completed | `00000003` | `Completed` |  |
+| Failed | `00000004` | `Failed` |  |
+| Unavailable | `00000005` | `Unavailable` |  |
 
 - **Cancelled**: The server successfully stopped the operation before it completed. Any work-in-progress has been discarded and the correlation value is no longer valid.
 - **Unable to Cancel**: The operation has already completed by the time the Cancel request arrived. The result is available via Query Asynchronous Requests; the Cancel had no effect.

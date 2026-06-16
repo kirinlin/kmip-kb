@@ -19,11 +19,11 @@ The Asynchronous Indicator enumeration controls whether a particular batch item 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Mandatory | `0x00000001` | `Mandatory` |  |
-| Optional | `0x00000002` | `Optional` |  |
-| Prohibited | `0x00000003` | `Prohibited` |  |
+| Mandatory | `00000001` | `Mandatory` |  |
+| Optional | `00000002` | `Optional` |  |
+| Prohibited | `00000003` | `Prohibited` |  |
 
 - **Synchronous**: The server processes the operation fully before returning the response. This is the default behavior when no Asynchronous Indicator is supplied. The response batch item contains the complete result.
 - **Asynchronous**: The server accepts the request, assigns an Asynchronous Correlation Value, and returns immediately without waiting for the operation to finish. The client must subsequently poll using [Query Asynchronous Requests](../operations/query-asynchronous-requests.md) or use [Poll](../operations/poll.md) to retrieve the eventual outcome.

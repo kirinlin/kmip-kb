@@ -19,17 +19,17 @@ The Object Type enumeration identifies which kind of managed cryptographic objec
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Certificate | `0x00000001` | `Certificate` |  |
-| Symmetric Key | `0x00000002` | `SymmetricKey` |  |
-| Public Key | `0x00000003` | `PublicKey` |  |
-| Private Key | `0x00000004` | `PrivateKey` |  |
-| Split Key | `0x00000005` | `SplitKey` |  |
-| Secret Data | `0x00000007` | `SecretData` |  |
-| Opaque Object | `0x00000008` | `OpaqueObject` |  |
-| PGP Key | `0x00000009` | `PGPKey` |  |
-| Certificate Request | `0x0000000A` | `CertificateRequest` |  |
+| Certificate | `00000001` | `Certificate` |  |
+| Symmetric Key | `00000002` | `SymmetricKey` |  |
+| Public Key | `00000003` | `PublicKey` |  |
+| Private Key | `00000004` | `PrivateKey` |  |
+| Split Key | `00000005` | `SplitKey` |  |
+| Secret Data | `00000007` | `SecretData` |  |
+| Opaque Object | `00000008` | `OpaqueObject` |  |
+| PGP Key | `00000009` | `PGPKey` |  |
+| Certificate Request | `0000000A` | `CertificateRequest` |  |
 
 - **Certificate**: An X.509 or PGP certificate. The most common managed non-key object. Holds encoded certificate material and a Certificate Type sub-classification.
 - **Symmetric Key**: A secret key for symmetric cipher algorithms (AES, 3DES, ChaCha20, etc.).

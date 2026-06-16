@@ -19,15 +19,15 @@ The Data enumeration discriminates the role of a data payload within the [Proces
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Decrypt | `0x00000001` | `Decrypt` |  |
-| Encrypt | `0x00000002` | `Encrypt` |  |
-| Hash | `0x00000003` | `Hash` |  |
-| MAC MAC Data | `0x00000004` | `MACMACData` |  |
-| RNG Retrieve | `0x00000005` | `RNGRetrieve` |  |
-| Sign Signature Data | `0x00000006` | `SignSignatureData` |  |
-| Signature Verify | `0x00000007` | `SignatureVerify` |  |
+| Decrypt | `00000001` | `Decrypt` |  |
+| Encrypt | `00000002` | `Encrypt` |  |
+| Hash | `00000003` | `Hash` |  |
+| MAC MAC Data | `00000004` | `MACMACData` |  |
+| RNG Retrieve | `00000005` | `RNGRetrieve` |  |
+| Sign Signature Data | `00000006` | `SignSignatureData` |  |
+| Signature Verify | `00000007` | `SignatureVerify` |  |
 
 - **Encrypt Input**: The plaintext bytes to be encrypted using the referenced key and algorithm parameters. The output will be ciphertext.
 - **Decrypt Input**: The ciphertext bytes to be decrypted. The output will be plaintext.

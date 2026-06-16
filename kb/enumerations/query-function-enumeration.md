@@ -19,20 +19,20 @@ The Query Function enumeration selects which sections of server information a [Q
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Query Operations | `0x00000001` | `QueryOperations` |  |
-| Query Objects | `0x00000002` | `QueryObjects` |  |
-| Query Server Information | `0x00000003` | `QueryServerInformation` |  |
-| Query Application Namespaces | `0x00000004` | `QueryApplicationNamespaces` |  |
-| Query Attestation Types | `0x00000007` | `QueryAttestationTypes` |  |
-| Query RNGs | `0x00000008` | `QueryRNGs` |  |
-| Query Validations | `0x00000009` | `QueryValidations` |  |
-| Query Profiles | `0x0000000A` | `QueryProfiles` |  |
-| Query Capabilities | `0x0000000B` | `QueryCapabilities` |  |
-| Query Client Registration Methods | `0x0000000C` | `QueryClientRegistrationMethods` |  |
-| Query Defaults Information | `0x0000000D` | `QueryDefaultsInformation` |  |
-| Query Storage Protection Masks | `0x0000000E` | `QueryStorageProtectionMasks` |  |
+| Query Operations | `00000001` | `QueryOperations` |  |
+| Query Objects | `00000002` | `QueryObjects` |  |
+| Query Server Information | `00000003` | `QueryServerInformation` |  |
+| Query Application Namespaces | `00000004` | `QueryApplicationNamespaces` |  |
+| Query Attestation Types | `00000007` | `QueryAttestationTypes` |  |
+| Query RNGs | `00000008` | `QueryRNGs` |  |
+| Query Validations | `00000009` | `QueryValidations` |  |
+| Query Profiles | `0000000A` | `QueryProfiles` |  |
+| Query Capabilities | `0000000B` | `QueryCapabilities` |  |
+| Query Client Registration Methods | `0000000C` | `QueryClientRegistrationMethods` |  |
+| Query Defaults Information | `0000000D` | `QueryDefaultsInformation` |  |
+| Query Storage Protection Masks | `0000000E` | `QueryStorageProtectionMasks` |  |
 
 - **Query Operations**: Returns the list of KMIP operations the server supports.
 - **Query Objects**: Returns the list of managed object types the server stores.

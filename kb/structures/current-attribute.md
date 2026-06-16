@@ -39,7 +39,7 @@ When Current Attribute is absent from an operation that supports it, the operati
 
 ## Examples
 
-A client reads an object and finds Cryptographic Usage Mask = `0x00000004` (Encrypt). It wants to add the Decrypt bit. The client sends an Adjust Attribute request with Current Attribute containing Cryptographic Usage Mask = `0x00000004` and New Attribute containing the updated value `0x0000000C`. If another client has already modified the mask to `0x0000000C` in the meantime, the server can detect the mismatch and return an appropriate error rather than silently overwriting a value the client did not anticipate.
+A client reads an object and finds Cryptographic Usage Mask = `00000004` (Encrypt). It wants to add the Decrypt bit. The client sends an Adjust Attribute request with Current Attribute containing Cryptographic Usage Mask = `00000004` and New Attribute containing the updated value `0000000C`. If another client has already modified the mask to `0000000C` in the meantime, the server can detect the mismatch and return an appropriate error rather than silently overwriting a value the client did not anticipate.
 
 ## Related
 

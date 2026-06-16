@@ -19,10 +19,10 @@ The Object Group Member enumeration records the status of a managed object withi
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Group Member Fresh | `0x00000001` | `GroupMemberFresh` |  |
-| Group Member Default | `0x00000002` | `GroupMemberDefault` |  |
+| Group Member Fresh | `00000001` | `GroupMemberFresh` |  |
+| Group Member Default | `00000002` | `GroupMemberDefault` |  |
 
 - **Group Member Fresh**: The object is the current active member of its group — the one that new encryption or signing operations should use. When a key is rotated, the new key is marked **Group Member Fresh** and the previous key is either removed from this status or marked with the non-default value.
 - **Group Member Default**: The object is a member of the group but is not the currently preferred version. It may still be used for decryption or verification of data encrypted or signed with it, but new operations should use the fresh member. This is the typical state for retired-but-still-decryptable key versions.

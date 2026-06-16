@@ -19,11 +19,11 @@ The RNG Mode enumeration controls the reseeding and prediction-resistance behavi
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Shared Instantiation | `0x00000002` | `SharedInstantiation` |  |
-| Non-Shared Instantiation | `0x00000003` | `NonSharedInstantiation` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Shared Instantiation | `00000002` | `SharedInstantiation` |  |
+| Non-Shared Instantiation | `00000003` | `NonSharedInstantiation` |  |
 
 - **Unspecified**: The mode is not constrained; the server uses its default reseeding policy.
 - **Non-Reseeding**: The DRBG is instantiated without reseeding support. The internal state evolves from its initial seed without injecting additional entropy. Suitable when the seed is trusted and state exhaustion is not a concern.

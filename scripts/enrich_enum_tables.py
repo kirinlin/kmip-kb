@@ -4,12 +4,12 @@
 Each kb/enumerations/*.md doc describes a KMIP enumeration whose values are
 defined in the spec.  The Fields & Structure section should contain a table with:
 
-    | Value | Hex | XML Text | Description |
+    | Name | Value | XML Text | Description |
     |---|---|---|---|
-    | Certificate | `0x00000001` | `Certificate` | ... |
+    | Certificate | `00000001` | `Certificate` | ... |
 
-* ``Value``    — enumeration value name from the spec.
-* ``Hex``      — 8-digit hex integer string in backticks, prefixed with 0x.
+* ``Name``     — enumeration value name from the spec.
+* ``Value``    — 8-digit hex integer string in backticks.
 * ``XML Text`` — CamelCase text per KMIP-ENCODE §6.1.3 (same algorithm as xml_text
                  front matter, applied to the value name rather than the tag name).
 * ``Description`` — left blank; authors fill in per-value descriptions.
@@ -18,7 +18,7 @@ The script parses every enumeration section from the v2.1 spec (and v2.0/v1.x fo
 removed enumerations), then for each KB enumeration doc looks up the spec section
 via the source_section front matter field and inserts the table.
 
-The insertion is idempotent: docs that already have a ``| Value |`` table at the
+The insertion is idempotent: docs that already have a ``| Name |`` table at the
 start of their Fields & Structure section are skipped.
 
 Usage:
@@ -150,23 +150,23 @@ def _read_fm_field(text: str, field: str) -> str | None:
 
 def _render_table(rows: list[tuple[str, str]]) -> str:
     """Render the enumeration value table as Markdown."""
-    lines = ["| Value | Hex | XML Text | Description |", "|---|---|---|---|"]
+    lines = ["| Name | Value | XML Text | Description |", "|---|---|---|---|"]
     for name, hex8 in rows:
         xml_t = to_xml_element(name)
-        lines.append(f"| {name} | `0x{hex8}` | `{xml_t}` |  |")
+        lines.append(f"| {name} | `{hex8}` | `{xml_t}` |  |")
     return "\n".join(lines)
 
 
 _FS_HEADING_RE = re.compile(r'^## Fields & Structure\s*$', re.MULTILINE)
-# Detects an existing value table at the start of Fields & Structure
-_VALUE_TABLE_RE = re.compile(r'\|\s*Value\s*\|')
+# Detects an existing name table at the start of Fields & Structure
+_VALUE_TABLE_RE = re.compile(r'\|\s*Name\s*\|')
 
 
 def insert_enum_table(text: str, rows: list[tuple[str, str]]) -> str | None:
     """Insert a value table into the Fields & Structure section.
 
     Returns the modified text, or None if the doc was skipped (already has
-    a Value table or has no Fields & Structure section).
+    a Name table or has no Fields & Structure section).
     """
     m = _FS_HEADING_RE.search(text)
     if not m:
@@ -177,7 +177,7 @@ def insert_enum_table(text: str, rows: list[tuple[str, str]]) -> str | None:
     while content_start < len(text) and text[content_start] == "\n":
         content_start += 1
 
-    # Skip if a Value table is already present right after the heading
+    # Skip if a Name table is already present right after the heading
     upcoming = text[content_start: content_start + 200]
     if _VALUE_TABLE_RE.search(upcoming):
         return None
@@ -285,7 +285,7 @@ def main() -> None:
     suffix = "would be updated" if dry else "updated"
     print(
         f"\nResults: {changed} {suffix} | "
-        f"{skipped_exists} already had Value table | "
+        f"{skipped_exists} already had Name table | "
         f"{skipped_no_rows} sections not found in spec | "
         f"{skipped_no_sec} no source_section"
     )

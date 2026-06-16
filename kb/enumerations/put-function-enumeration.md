@@ -19,10 +19,10 @@ The Put Function enumeration controls the semantics of the `Put` operation — a
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| New | `0x00000001` | `New` |  |
-| Replace | `0x00000002` | `Replace` |  |
+| New | `00000001` | `New` |  |
+| Replace | `00000002` | `Replace` |  |
 
 - **New**: The object is being introduced to the client for the first time. The client should register it as a new managed object. If the client already holds an object with the same Unique Identifier, this is an error.
 - **Replace**: The object supersedes an existing one the client holds with the same Unique Identifier. The client should update its copy. Useful for proactive key distribution where the server rotates keys and pushes replacements.

@@ -19,10 +19,10 @@ The Secret Data Type enumeration sub-classifies a [Secret Data](../objects/secre
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Password | `0x00000001` | `Password` |  |
-| Seed | `0x00000002` | `Seed` |  |
+| Password | `00000001` | `Password` |  |
+| Seed | `00000002` | `Seed` |  |
 
 - **Password**: The secret is a password, passphrase, PIN, or other authentication credential. The server stores and manages it under the full KMIP lifecycle without interpreting its contents beyond the byte string.
 - **Seed**: The secret is a random seed value — typically entropy used to initialise a deterministic key-generation process, a DRBG, or a key derivation function. Seeds have the same lifecycle and access control needs as keys but are not themselves keys.

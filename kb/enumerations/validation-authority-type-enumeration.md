@@ -19,11 +19,11 @@ The Validation Authority Type enumeration identifies which standards body or pro
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Valid | `0x00000001` | `Valid` |  |
-| Invalid | `0x00000002` | `Invalid` |  |
-| Unknown | `0x00000003` | `Unknown` |  |
+| Valid | `00000001` | `Valid` |  |
+| Invalid | `00000002` | `Invalid` |  |
+| Unknown | `00000003` | `Unknown` |  |
 
 - **Unspecified**: No validation authority is identified. The implementation's validation status is unknown or not applicable.
 - **NIST CMVP** (Cryptographic Module Validation Program): The module has been validated under the NIST FIPS 140 programme (CMVP), run jointly by NIST and CCCS. CMVP-validated modules carry a certificate number and validation level (1–4). Required by US federal information systems.

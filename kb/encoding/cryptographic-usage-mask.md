@@ -64,7 +64,7 @@ Servers that store a key with a particular Cryptographic Usage Mask are expected
 
 ## Examples
 
-An AES key intended solely for encrypting data would carry a Cryptographic Usage Mask of `0x00000004` (Encrypt only). A signing key for an RSA certificate authority would set bits for Certificate Sign and CRL Sign: `0x00003000`. A symmetric key authorized to both encrypt and decrypt plaintext gets `0x0000000C` (Encrypt | Decrypt).
+An AES key intended solely for encrypting data would carry a Cryptographic Usage Mask of `00000004` (Encrypt only). A signing key for an RSA certificate authority would set bits for Certificate Sign and CRL Sign: `00003000`. A symmetric key authorized to both encrypt and decrypt plaintext gets `0000000C` (Encrypt | Decrypt).
 
 ## Related
 

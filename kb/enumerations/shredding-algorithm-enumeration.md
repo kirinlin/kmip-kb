@@ -19,11 +19,11 @@ The Shredding Algorithm enumeration specifies how the physical storage medium ho
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Cryptographic | `0x00000002` | `Cryptographic` |  |
-| Unsupported | `0x00000003` | `Unsupported` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Cryptographic | `00000002` | `Cryptographic` |  |
+| Unsupported | `00000003` | `Unsupported` |  |
 
 - **Unspecified**: The shredding method is not specified or is implementation-defined. The server uses its default sanitisation policy.
 - **Cryptographic Erase**: The key material is deleted by discarding the encryption key that protects it, rendering the stored ciphertext unrecoverable without key recovery. Fast and effective when the key truly cannot be recovered.

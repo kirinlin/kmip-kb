@@ -58,9 +58,9 @@ The mask operates differently depending on context:
 
 ## Examples
 
-A key stored in an on-premises HSM carries `0x00000102` (On Premises | Hardware). A key hosted by a cloud provider and managed externally carries `0x00000A00` (Off Premises | Outsourced). A software-based key held on the local system carries `0x00000009` (Software | On System).
+A key stored in an on-premises HSM carries `00000102` (On Premises | Hardware). A key hosted by a cloud provider and managed externally carries `00000A00` (Off Premises | Outsourced). A software-based key held on the local system carries `00000009` (Software | On System).
 
-A compliance policy requiring that a key remain in on-premises hardware storage specifies `0x00000102` as the minimum required mask. A stricter policy that additionally mandates the key be held in a validated store specifies `0x00001102` (On Premises | Hardware | Validated).
+A compliance policy requiring that a key remain in on-premises hardware storage specifies `00000102` as the minimum required mask. A stricter policy that additionally mandates the key be held in a validated store specifies `00001102` (On Premises | Hardware | Validated).
 
 ## Related
 

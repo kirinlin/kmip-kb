@@ -19,32 +19,32 @@ The Key Role Type enumeration identifies the functional role of a cryptographic 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| BDK | `0x00000001` | `BDK` |  |
-| CVK | `0x00000002` | `CVK` |  |
-| DEK | `0x00000003` | `DEK` |  |
-| MKAC | `0x00000004` | `MKAC` |  |
-| MKSMC | `0x00000005` | `MKSMC` |  |
-| MKSMI | `0x00000006` | `MKSMI` |  |
-| MKDAC | `0x00000007` | `MKDAC` |  |
-| MKDN | `0x00000008` | `MKDN` |  |
-| MKCP | `0x00000009` | `MKCP` |  |
-| MKOTH | `0x0000000A` | `MKOTH` |  |
-| KEK | `0x0000000B` | `KEK` |  |
-| MAC16609 | `0x0000000C` | `MAC16609` |  |
-| MAC97971 | `0x0000000D` | `MAC97971` |  |
-| MAC97972 | `0x0000000E` | `MAC97972` |  |
-| MAC97973 | `0x0000000F` | `MAC97973` |  |
-| MAC97974 | `0x00000010` | `MAC97974` |  |
-| MAC97975 | `0x00000011` | `MAC97975` |  |
-| ZPK | `0x00000012` | `ZPK` |  |
-| PVKIBM | `0x00000013` | `PVKIBM` |  |
-| PVKPVV | `0x00000014` | `PVKPVV` |  |
-| PVKOTH | `0x00000015` | `PVKOTH` |  |
-| DUKPT | `0x00000016` | `DUKPT` |  |
-| IV | `0x00000017` | `IV` |  |
-| TRKBK | `0x00000018` | `TRKBK` |  |
+| BDK | `00000001` | `BDK` |  |
+| CVK | `00000002` | `CVK` |  |
+| DEK | `00000003` | `DEK` |  |
+| MKAC | `00000004` | `MKAC` |  |
+| MKSMC | `00000005` | `MKSMC` |  |
+| MKSMI | `00000006` | `MKSMI` |  |
+| MKDAC | `00000007` | `MKDAC` |  |
+| MKDN | `00000008` | `MKDN` |  |
+| MKCP | `00000009` | `MKCP` |  |
+| MKOTH | `0000000A` | `MKOTH` |  |
+| KEK | `0000000B` | `KEK` |  |
+| MAC16609 | `0000000C` | `MAC16609` |  |
+| MAC97971 | `0000000D` | `MAC97971` |  |
+| MAC97972 | `0000000E` | `MAC97972` |  |
+| MAC97973 | `0000000F` | `MAC97973` |  |
+| MAC97974 | `00000010` | `MAC97974` |  |
+| MAC97975 | `00000011` | `MAC97975` |  |
+| ZPK | `00000012` | `ZPK` |  |
+| PVKIBM | `00000013` | `PVKIBM` |  |
+| PVKPVV | `00000014` | `PVKPVV` |  |
+| PVKOTH | `00000015` | `PVKOTH` |  |
+| DUKPT | `00000016` | `DUKPT` |  |
+| IV | `00000017` | `IV` |  |
+| TRKBK | `00000018` | `TRKBK` |  |
 
 **Derivation and master keys:**
 - **BDK** (Base Derivation Key): The root key from which session keys, device-specific keys, or PIN encryption keys are derived in triple-DES payment key hierarchies (e.g., DUKPT).

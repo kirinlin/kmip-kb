@@ -19,13 +19,13 @@ The Client Registration Method enumeration describes how a KMIP client identity 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Server Pre-Generated | `0x00000002` | `ServerPreGenerated` |  |
-| Server On-Demand | `0x00000003` | `ServerOnDemand` |  |
-| Client Generated | `0x00000004` | `ClientGenerated` |  |
-| Client Registered | `0x00000005` | `ClientRegistered` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Server Pre-Generated | `00000002` | `ServerPreGenerated` |  |
+| Server On-Demand | `00000003` | `ServerOnDemand` |  |
+| Client Generated | `00000004` | `ClientGenerated` |  |
+| Client Registered | `00000005` | `ClientRegistered` |  |
 
 - **Unspecified**: The registration method is not declared or is not applicable. Acts as a catch-all for deployments that do not distinguish among methods.
 - **Server Pre-Generated**: The server generates the client's credentials (certificates, tokens, or other identity material) ahead of time and distributes them through an out-of-band channel such as a management console or secure enrollment ceremony.

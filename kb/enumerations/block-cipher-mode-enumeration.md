@@ -19,26 +19,26 @@ The Block Cipher Mode enumeration specifies the mode of operation for a symmetri
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| CBC | `0x00000001` | `CBC` |  |
-| ECB | `0x00000002` | `ECB` |  |
-| PCBC | `0x00000003` | `PCBC` |  |
-| CFB | `0x00000004` | `CFB` |  |
-| OFB | `0x00000005` | `OFB` |  |
-| CTR | `0x00000006` | `CTR` |  |
-| CMAC | `0x00000007` | `CMAC` |  |
-| CCM | `0x00000008` | `CCM` |  |
-| GCM | `0x00000009` | `GCM` |  |
-| CBC-MAC | `0x0000000A` | `CBC_MAC` |  |
-| XTS | `0x0000000B` | `XTS` |  |
-| AESKeyWrapPadding | `0x0000000C` | `AESKeyWrapPadding` |  |
-| NISTKeyWrap | `0x0000000D` | `NISTKeyWrap` |  |
-| X9.102 AESKW | `0x0000000E` | `X9_102AESKW` |  |
-| X9.102 TDKW | `0x0000000F` | `X9_102TDKW` |  |
-| X9.102 AKW1 | `0x00000010` | `X9_102AKW1` |  |
-| X9.102 AKW2 | `0x00000011` | `X9_102AKW2` |  |
-| AEAD | `0x00000012` | `AEAD` |  |
+| CBC | `00000001` | `CBC` |  |
+| ECB | `00000002` | `ECB` |  |
+| PCBC | `00000003` | `PCBC` |  |
+| CFB | `00000004` | `CFB` |  |
+| OFB | `00000005` | `OFB` |  |
+| CTR | `00000006` | `CTR` |  |
+| CMAC | `00000007` | `CMAC` |  |
+| CCM | `00000008` | `CCM` |  |
+| GCM | `00000009` | `GCM` |  |
+| CBC-MAC | `0000000A` | `CBC_MAC` |  |
+| XTS | `0000000B` | `XTS` |  |
+| AESKeyWrapPadding | `0000000C` | `AESKeyWrapPadding` |  |
+| NISTKeyWrap | `0000000D` | `NISTKeyWrap` |  |
+| X9.102 AESKW | `0000000E` | `X9_102AESKW` |  |
+| X9.102 TDKW | `0000000F` | `X9_102TDKW` |  |
+| X9.102 AKW1 | `00000010` | `X9_102AKW1` |  |
+| X9.102 AKW2 | `00000011` | `X9_102AKW2` |  |
+| AEAD | `00000012` | `AEAD` |  |
 
 Common confidentiality-only modes:
 - **ECB** (Electronic Code Book): Processes each block independently with no chaining. Suitable for encrypting a single block or small random values; not recommended for multi-block messages due to pattern leakage.

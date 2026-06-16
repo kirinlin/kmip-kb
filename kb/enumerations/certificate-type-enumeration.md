@@ -19,10 +19,10 @@ The Certificate Type enumeration classifies the format of a certificate object m
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| X.509 | `0x00000001` | `X_509` |  |
-| PGP | `0x00000002` | `PGP` |  |
+| X.509 | `00000001` | `X_509` |  |
+| PGP | `00000002` | `PGP` |  |
 
 - **X.509**: An ASN.1/DER-encoded X.509v3 public key certificate as defined in RFC 5280. This is the dominant certificate format for TLS, code signing, and most enterprise PKI deployments. X.509 certificates carry a subject distinguished name, public key, validity period, extensions such as Subject Alternative Names and Key Usage, and a CA signature.
 - **PGP**: An OpenPGP certificate as defined in RFC 4880 or its successor RFC 9580. PGP certificates use a web-of-trust model rather than a hierarchical CA chain, and the encoding is based on PGP packet format rather than ASN.1. Used in email encryption and software signing workflows.

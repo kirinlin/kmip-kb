@@ -19,25 +19,25 @@ The Key Format Type enumeration specifies the encoding or serialisation format o
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Raw | `0x00000001` | `Raw` |  |
-| Opaque | `0x00000002` | `Opaque` |  |
-| PKCS#1 | `0x00000003` | `PKCS_1` |  |
-| PKCS#8 | `0x00000004` | `PKCS_8` |  |
-| X.509 | `0x00000005` | `X_509` |  |
-| ECPrivateKey | `0x00000006` | `ECPrivateKey` |  |
-| Transparent Symmetric Key | `0x00000007` | `TransparentSymmetricKey` |  |
-| Transparent DSA Private Key | `0x00000008` | `TransparentDSAPrivateKey` |  |
-| Transparent DSA Public Key | `0x00000009` | `TransparentDSAPublicKey` |  |
-| Transparent RSA Private Key | `0x0000000A` | `TransparentRSAPrivateKey` |  |
-| Transparent RSA Public Key | `0x0000000B` | `TransparentRSAPublicKey` |  |
-| Transparent DH Private Key | `0x0000000C` | `TransparentDHPrivateKey` |  |
-| Transparent DH Public Key | `0x0000000D` | `TransparentDHPublicKey` |  |
-| Transparent EC Private Key | `0x00000014` | `TransparentECPrivateKey` |  |
-| Transparent EC Public Key | `0x00000015` | `TransparentECPublicKey` |  |
-| PKCS#12 | `0x00000016` | `PKCS_12` |  |
-| PKCS#10 | `0x00000017` | `PKCS_10` |  |
+| Raw | `00000001` | `Raw` |  |
+| Opaque | `00000002` | `Opaque` |  |
+| PKCS#1 | `00000003` | `PKCS_1` |  |
+| PKCS#8 | `00000004` | `PKCS_8` |  |
+| X.509 | `00000005` | `X_509` |  |
+| ECPrivateKey | `00000006` | `ECPrivateKey` |  |
+| Transparent Symmetric Key | `00000007` | `TransparentSymmetricKey` |  |
+| Transparent DSA Private Key | `00000008` | `TransparentDSAPrivateKey` |  |
+| Transparent DSA Public Key | `00000009` | `TransparentDSAPublicKey` |  |
+| Transparent RSA Private Key | `0000000A` | `TransparentRSAPrivateKey` |  |
+| Transparent RSA Public Key | `0000000B` | `TransparentRSAPublicKey` |  |
+| Transparent DH Private Key | `0000000C` | `TransparentDHPrivateKey` |  |
+| Transparent DH Public Key | `0000000D` | `TransparentDHPublicKey` |  |
+| Transparent EC Private Key | `00000014` | `TransparentECPrivateKey` |  |
+| Transparent EC Public Key | `00000015` | `TransparentECPublicKey` |  |
+| PKCS#12 | `00000016` | `PKCS_12` |  |
+| PKCS#10 | `00000017` | `PKCS_10` |  |
 
 **Format-agnostic and opaque:**
 - **Raw**: The key material is an unformatted sequence of bytes — just the key value itself with no ASN.1, no headers. Used for symmetric keys and raw shared secrets.

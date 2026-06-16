@@ -33,16 +33,16 @@ Each Integer child is a 32-bit protection storage mask bit field.
 
 The repeating Protection Storage Mask children each represent one storage protection tier or combination that the server can provide. The bit-field semantics are defined in §12.2 — each bit corresponds to a protection category (On Premise, Off Premise, Hardware Module, Cloud, Client, Third Party).
 
-A server might list several entries to indicate distinct tiers: for example, one entry for on-premise software storage (`0x00000001`), another for on-premise hardware module storage (`0x00000005`), and a third for cloud storage with hardware backing (`0x0000000C`). Clients can then select the appropriate tier when specifying protection requirements for newly created objects.
+A server might list several entries to indicate distinct tiers: for example, one entry for on-premise software storage (`00000001`), another for on-premise hardware module storage (`00000005`), and a third for cloud storage with hardware backing (`0000000C`). Clients can then select the appropriate tier when specifying protection requirements for newly created objects.
 
 ## Examples
 
 A server Query response includes a Protection Storage Masks structure with three entries:
-- `0x00000001` (On Premise)
-- `0x00000005` (On Premise | Hardware Module)
-- `0x00000009` (On Premise | Cloud)
+- `00000001` (On Premise)
+- `00000005` (On Premise | Hardware Module)
+- `00000009` (On Premise | Cloud)
 
-A client that must satisfy a compliance requirement mandating hardware module protection knows to target the `0x00000005` tier when registering sensitive keys.
+A client that must satisfy a compliance requirement mandating hardware module protection knows to target the `00000005` tier when registering sensitive keys.
 
 ## Related
 

@@ -19,18 +19,18 @@ The Padding Method enumeration specifies the padding scheme applied during asymm
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| None | `0x00000001` | `None` |  |
-| OAEP | `0x00000002` | `OAEP` |  |
-| PKCS5 | `0x00000003` | `PKCS5` |  |
-| SSL3 | `0x00000004` | `SSL3` |  |
-| Zeros | `0x00000005` | `Zeros` |  |
-| ANSI X9.23 | `0x00000006` | `ANSIX9_23` |  |
-| ISO 10126 | `0x00000007` | `ISO10126` |  |
-| PKCS1 v1.5 | `0x00000008` | `PKCS1V1_5` |  |
-| X9.31 | `0x00000009` | `X9_31` |  |
-| PSS | `0x0000000A` | `PSS` |  |
+| None | `00000001` | `None` |  |
+| OAEP | `00000002` | `OAEP` |  |
+| PKCS5 | `00000003` | `PKCS5` |  |
+| SSL3 | `00000004` | `SSL3` |  |
+| Zeros | `00000005` | `Zeros` |  |
+| ANSI X9.23 | `00000006` | `ANSIX9_23` |  |
+| ISO 10126 | `00000007` | `ISO10126` |  |
+| PKCS1 v1.5 | `00000008` | `PKCS1V1_5` |  |
+| X9.31 | `00000009` | `X9_31` |  |
+| PSS | `0000000A` | `PSS` |  |
 
 - **None**: No padding applied. Used for algorithms and modes that handle arbitrary data lengths or where the caller guarantees block-aligned input.
 - **OAEP** (PKCS#1 OAEP): Optimal Asymmetric Encryption Padding. The recommended padding for RSA encryption in modern systems, using a mask generation function and a hash to randomise the ciphertext.

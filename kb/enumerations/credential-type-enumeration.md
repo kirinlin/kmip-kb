@@ -19,14 +19,14 @@ The Credential Type enumeration identifies the kind of authentication credential
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Username and Password | `0x00000001` | `UsernameAndPassword` |  |
-| Device | `0x00000002` | `Device` |  |
-| Attestation | `0x00000003` | `Attestation` |  |
-| One Time Password | `0x00000004` | `OneTimePassword` |  |
-| Hashed Password | `0x00000005` | `HashedPassword` |  |
-| Ticket | `0x00000006` | `Ticket` |  |
+| Username and Password | `00000001` | `UsernameAndPassword` |  |
+| Device | `00000002` | `Device` |  |
+| Attestation | `00000003` | `Attestation` |  |
+| One Time Password | `00000004` | `OneTimePassword` |  |
+| Hashed Password | `00000005` | `HashedPassword` |  |
+| Ticket | `00000006` | `Ticket` |  |
 
 - **Username and Password**: The simplest credential — a plaintext username and password pair transmitted over an already-secured transport (typically TLS). Widely supported but provides no hardware binding or replay protection beyond the transport layer.
 - **Device**: A device-level credential that identifies a specific physical endpoint rather than a user, typically using a device certificate or identifier. Used for machine-to-machine authentication in storage and HSM integrations.

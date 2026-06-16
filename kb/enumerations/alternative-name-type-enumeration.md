@@ -19,15 +19,15 @@ The Alternative Name Type enumeration classifies each entry in the [Alternative 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Uninterpreted Text String | `0x00000001` | `UninterpretedTextString` |  |
-| URI | `0x00000002` | `URI` |  |
-| Object Serial Number | `0x00000003` | `ObjectSerialNumber` |  |
-| Email Address | `0x00000004` | `EmailAddress` |  |
-| DNS Name | `0x00000005` | `DNSName` |  |
-| X.500 Distinguished Name | `0x00000006` | `X_500DistinguishedName` |  |
-| IP Address | `0x00000007` | `IPAddress` |  |
+| Uninterpreted Text String | `00000001` | `UninterpretedTextString` |  |
+| URI | `00000002` | `URI` |  |
+| Object Serial Number | `00000003` | `ObjectSerialNumber` |  |
+| Email Address | `00000004` | `EmailAddress` |  |
+| DNS Name | `00000005` | `DNSName` |  |
+| X.500 Distinguished Name | `00000006` | `X_500DistinguishedName` |  |
+| IP Address | `00000007` | `IPAddress` |  |
 
 - **Uninterpreted Text String**: The name carries no defined format or external semantics. Used for application-specific labels, internal tracking identifiers, or any free-form string that does not conform to a standard naming scheme.
 - **URI**: The name is a Uniform Resource Identifier, enabling the object to be addressed via URL or URN in REST-oriented or web-services integrations.

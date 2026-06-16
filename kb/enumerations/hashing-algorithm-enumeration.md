@@ -19,25 +19,25 @@ The Hashing Algorithm enumeration identifies the cryptographic hash function to 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| MD2 | `0x00000001` | `MD2` |  |
-| MD4 | `0x00000002` | `MD4` |  |
-| MD5 | `0x00000003` | `MD5` |  |
-| SHA-1 | `0x00000004` | `SHA_1` |  |
-| SHA-224 | `0x00000005` | `SHA_224` |  |
-| SHA-256 | `0x00000006` | `SHA_256` |  |
-| SHA-384 | `0x00000007` | `SHA_384` |  |
-| SHA-512 | `0x00000008` | `SHA_512` |  |
-| RIPEMD-160 | `0x00000009` | `RIPEMD_160` |  |
-| Tiger | `0x0000000A` | `Tiger` |  |
-| Whirlpool | `0x0000000B` | `Whirlpool` |  |
-| SHA-512/224 | `0x0000000C` | `SHA_512_224` |  |
-| SHA-512/256 | `0x0000000D` | `SHA_512_256` |  |
-| SHA3-224 | `0x0000000E` | `SHA3_224` |  |
-| SHA3-256 | `0x0000000F` | `SHA3_256` |  |
-| SHA3-384 | `0x00000010` | `SHA3_384` |  |
-| SHA3-512 | `0x00000011` | `SHA3_512` |  |
+| MD2 | `00000001` | `MD2` |  |
+| MD4 | `00000002` | `MD4` |  |
+| MD5 | `00000003` | `MD5` |  |
+| SHA-1 | `00000004` | `SHA_1` |  |
+| SHA-224 | `00000005` | `SHA_224` |  |
+| SHA-256 | `00000006` | `SHA_256` |  |
+| SHA-384 | `00000007` | `SHA_384` |  |
+| SHA-512 | `00000008` | `SHA_512` |  |
+| RIPEMD-160 | `00000009` | `RIPEMD_160` |  |
+| Tiger | `0000000A` | `Tiger` |  |
+| Whirlpool | `0000000B` | `Whirlpool` |  |
+| SHA-512/224 | `0000000C` | `SHA_512_224` |  |
+| SHA-512/256 | `0000000D` | `SHA_512_256` |  |
+| SHA3-224 | `0000000E` | `SHA3_224` |  |
+| SHA3-256 | `0000000F` | `SHA3_256` |  |
+| SHA3-384 | `00000010` | `SHA3_384` |  |
+| SHA3-512 | `00000011` | `SHA3_512` |  |
 
 **Legacy algorithms (avoid for new designs):**
 - **MD2**: Produces a 128-bit digest. Considered broken; included for legacy interoperability only.

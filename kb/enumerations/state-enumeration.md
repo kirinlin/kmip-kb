@@ -19,14 +19,14 @@ The State enumeration is the lifecycle state of a managed KMIP object. It is the
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Pre-Active | `0x00000001` | `PreActive` |  |
-| Active | `0x00000002` | `Active` |  |
-| Deactivated | `0x00000003` | `Deactivated` |  |
-| Compromised | `0x00000004` | `Compromised` |  |
-| Destroyed | `0x00000005` | `Destroyed` |  |
-| Destroyed Compromised | `0x00000006` | `DestroyedCompromised` |  |
+| Pre-Active | `00000001` | `PreActive` |  |
+| Active | `00000002` | `Active` |  |
+| Deactivated | `00000003` | `Deactivated` |  |
+| Compromised | `00000004` | `Compromised` |  |
+| Destroyed | `00000005` | `Destroyed` |  |
+| Destroyed Compromised | `00000006` | `DestroyedCompromised` |  |
 
 The six states form a directed lifecycle graph:
 

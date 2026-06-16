@@ -27,14 +27,14 @@ xml_text: "{{XmlTextName}}"
 ## Fields & Structure
 
 <!-- One row per defined enumeration value.
-     Hex:      8-digit lowercase hex integer string (e.g. 0x00000001).
+     Value:      8-digit lowercase hex integer string (e.g. 00000001). For Tag Enumeration, use 420xxx hex tag values.
      XML Text: CamelCase text per KMIP-ENCODE §6.1.3 (same algorithm as xml_text
                in front matter, applied to the value name).
      Description: one sentence explaining the meaning of this value. -->
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| ExampleValue | `0x00000001` | `ExampleValue` | Short description of what this value means. |
+| ExampleValue | `00000001` | `ExampleValue` | Short description of what this value means. |
 
 ## Examples
 

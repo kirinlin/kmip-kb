@@ -53,15 +53,15 @@ python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits no
 
 ## Enumeration docs (kb/enumerations/)
 
-Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Value | Hex | XML Text | Description`:
+Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Name | Value | XML Text | Description`:
 
 ```
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Certificate | `0x00000001` | `Certificate` | ... |
+| Certificate | `00000001` | `Certificate` | ... |
 ```
 
-`Hex` is the 8-digit hex integer value of each enumeration value (e.g. `0x00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled.
+`Value` is the 8-digit hex integer value of each enumeration value (e.g. `00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled.
 
 `scripts/enrich_enum_tables.py` inserts these tables from spec data and is idempotent. Run it when adding or editing enumeration docs:
 
@@ -116,7 +116,7 @@ python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
 python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Element columns
-python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Hex/XML Text
+python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Value/XML Text
 ```
 
 Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0

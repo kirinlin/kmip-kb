@@ -19,11 +19,11 @@ The Interop Function enumeration names the specific interoperability test functi
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Begin | `0x00000001` | `Begin` |  |
-| End | `0x00000002` | `End` |  |
-| Reset | `0x00000003` | `Reset` |  |
+| Begin | `00000001` | `Begin` |  |
+| End | `00000002` | `End` |  |
+| Reset | `00000003` | `Reset` |  |
 
 The enumeration values correspond to KMIP operation names and test scenarios used in formal interoperability workshops. Defined test functions include:
 

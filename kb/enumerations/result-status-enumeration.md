@@ -19,12 +19,12 @@ The Result Status enumeration is the top-level success or failure indicator in e
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Success | `0x00000000` | `Success` |  |
-| Operation Failed | `0x00000001` | `OperationFailed` |  |
-| Operation Pending | `0x00000002` | `OperationPending` |  |
-| Operation Undone | `0x00000003` | `OperationUndone` |  |
+| Success | `00000000` | `Success` |  |
+| Operation Failed | `00000001` | `OperationFailed` |  |
+| Operation Pending | `00000002` | `OperationPending` |  |
+| Operation Undone | `00000003` | `OperationUndone` |  |
 
 - **Success**: The operation completed without error. The response payload carries the operation's results.
 - **Operation Failed**: The operation did not complete due to an error. Result Reason and Result Message provide details.

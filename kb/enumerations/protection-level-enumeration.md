@@ -19,10 +19,10 @@ The Protection Level enumeration classifies the minimum physical or logical secu
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| High | `0x00000001` | `High` |  |
-| Low | `0x00000002` | `Low` |  |
+| High | `00000001` | `High` |  |
+| Low | `00000002` | `Low` |  |
 
 - **Software**: The key material is stored and processed solely under operating-system-level software access controls, with no dedicated cryptographic hardware.
 - **Hardware**: The key material is stored in or processed by dedicated cryptographic hardware that provides additional protection beyond OS controls — such as a hardware accelerator or TPM — but may not be a formally certified HSM.

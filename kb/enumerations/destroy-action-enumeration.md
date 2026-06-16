@@ -19,15 +19,15 @@ The Destroy Action enumeration describes what actually happened to a managed obj
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Key Material Deleted | `0x00000002` | `KeyMaterialDeleted` |  |
-| Key Material Shredded | `0x00000003` | `KeyMaterialShredded` |  |
-| Meta Data Deleted | `0x00000004` | `MetaDataDeleted` |  |
-| Meta Data Shredded | `0x00000005` | `MetaDataShredded` |  |
-| Deleted | `0x00000006` | `Deleted` |  |
-| Shredded | `0x00000007` | `Shredded` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Key Material Deleted | `00000002` | `KeyMaterialDeleted` |  |
+| Key Material Shredded | `00000003` | `KeyMaterialShredded` |  |
+| Meta Data Deleted | `00000004` | `MetaDataDeleted` |  |
+| Meta Data Shredded | `00000005` | `MetaDataShredded` |  |
+| Deleted | `00000006` | `Deleted` |  |
+| Shredded | `00000007` | `Shredded` |  |
 
 - **Unspecified**: The destruction method is not reported or is not meaningful for this object type. Used as a default when the server does not report granular action details.
 - **Key Material Deleted**: The raw cryptographic key bytes were logically deleted from the server's storage (e.g., database row removed) but no secure overwrite was performed.

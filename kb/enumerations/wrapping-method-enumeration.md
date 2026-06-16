@@ -19,13 +19,13 @@ The Wrapping Method enumeration specifies the cryptographic technique used to pr
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| Hardware | `0x00000002` | `Hardware` |  |
-| Software | `0x00000003` | `Software` |  |
-| Firmware | `0x00000004` | `Firmware` |  |
-| Hybrid | `0x00000005` | `Hybrid` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| Hardware | `00000002` | `Hardware` |  |
+| Software | `00000003` | `Software` |  |
+| Firmware | `00000004` | `Firmware` |  |
+| Hybrid | `00000005` | `Hybrid` |  |
 
 - **Encrypt**: The key material is wrapped using a key-encryption key (KEK) via symmetric encryption. The most common method — typically AES Key Wrap (RFC 3394), AES-GCM, or RSA-OAEP. The recipient decrypts with the corresponding KEK or private key to recover the plaintext.
 - **MAC/Hash**: The key material is integrity-protected using a MAC or cryptographic hash but is not encrypted. The plaintext key is present; only its integrity is verified. Rarely used for key transport; used in specific financial protocols where the recipient already holds the key.

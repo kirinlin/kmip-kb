@@ -19,10 +19,10 @@ The Key Wrap Type enumeration indicates whether and how the key material in a [K
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Not Wrapped | `0x00000001` | `NotWrapped` |  |
-| As Registered | `0x00000002` | `AsRegistered` |  |
+| Not Wrapped | `00000001` | `NotWrapped` |  |
+| As Registered | `00000002` | `AsRegistered` |  |
 
 - **Not Wrapped**: The key material is present in plaintext form (subject only to transport-layer protection). The client receives raw key bytes and can use them directly.
 - **As Registered That Is**: The key is delivered exactly as it was stored — wrapped or unwrapped — without any additional wrapping applied by the server at retrieval time. Used when a client wants to retrieve the key in its stored form rather than requesting a specific wrap.

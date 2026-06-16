@@ -19,11 +19,11 @@ The Processing Stage enumeration reports the current state of an asynchronous op
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Submitted | `0x00000001` | `Submitted` |  |
-| In Process | `0x00000002` | `InProcess` |  |
-| Completed | `0x00000003` | `Completed` |  |
+| Submitted | `00000001` | `Submitted` |  |
+| In Process | `00000002` | `InProcess` |  |
+| Completed | `00000003` | `Completed` |  |
 
 - **Server Processing**: The server has accepted the operation and is currently working on it. The client should poll again later.
 - **Completed**: The operation has finished. The response for the original operation is available in the [Asynchronous Request](../structures/asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated.

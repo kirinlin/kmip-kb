@@ -19,14 +19,14 @@ The RNG Algorithm enumeration identifies the algorithm or standard used by a ran
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| FIPS 186-2 | `0x00000002` | `FIPS186_2` |  |
-| DRBG | `0x00000003` | `DRBG` |  |
-| NRBG | `0x00000004` | `NRBG` |  |
-| ANSI X9.31 | `0x00000005` | `ANSIX9_31` |  |
-| ANSI X9.62 | `0x00000006` | `ANSIX9_62` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| FIPS 186-2 | `00000002` | `FIPS186_2` |  |
+| DRBG | `00000003` | `DRBG` |  |
+| NRBG | `00000004` | `NRBG` |  |
+| ANSI X9.31 | `00000005` | `ANSIX9_31` |  |
+| ANSI X9.62 | `00000006` | `ANSIX9_62` |  |
 
 - **Unspecified**: The algorithm is not identified or is implementation-defined.
 - **FIPS 186-2**: The DSA-based random-number generation method from FIPS 186-2. Largely superseded by SP 800-90A DRBGs.

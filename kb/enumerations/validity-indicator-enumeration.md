@@ -19,11 +19,11 @@ The Validity Indicator enumeration conveys the result of a [Validate](../operati
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `0x00000001` | `Unspecified` |  |
-| NIST CMVP | `0x00000002` | `NISTCMVP` |  |
-| Common Criteria | `0x00000003` | `CommonCriteria` |  |
+| Unspecified | `00000001` | `Unspecified` |  |
+| NIST CMVP | `00000002` | `NISTCMVP` |  |
+| Common Criteria | `00000003` | `CommonCriteria` |  |
 
 - **Valid**: The certificate or object passed all validation checks: the signature verifies, the chain of trust is intact, the certificate has not expired, and it has not been revoked. The client may proceed with confidence.
 - **Invalid**: One or more validation checks failed — the certificate is expired, the signature does not verify, it has been revoked, or the issuing CA is untrusted. The client should not rely on this certificate.

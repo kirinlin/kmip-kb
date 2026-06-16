@@ -19,27 +19,27 @@ The NIST Key Type enumeration classifies a cryptographic key according to the fu
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Private signature key | `0x00000001` | `PrivateSignatureKey` |  |
-| Public signature verification key | `0x00000002` | `PublicSignatureVerificationKey` |  |
-| Symmetric authentication key | `0x00000003` | `SymmetricAuthenticationKey` |  |
-| Private authentication key | `0x00000004` | `PrivateAuthenticationKey` |  |
-| Public authentication key | `0x00000005` | `PublicAuthenticationKey` |  |
-| Symmetric data encryption key | `0x00000006` | `SymmetricDataEncryptionKey` |  |
-| Symmetric key wrapping key | `0x00000007` | `SymmetricKeyWrappingKey` |  |
-| Symmetric random number generation key | `0x00000008` | `SymmetricRandomNumberGenerationKey` |  |
-| Symmetric master key | `0x00000009` | `SymmetricMasterKey` |  |
-| Private key transport key | `0x0000000A` | `PrivateKeyTransportKey` |  |
-| Public key transport key | `0x0000000B` | `PublicKeyTransportKey` |  |
-| Symmetric key agreement key | `0x0000000C` | `SymmetricKeyAgreementKey` |  |
-| Private static key agreement key | `0x0000000D` | `PrivateStaticKeyAgreementKey` |  |
-| Public static key agreement key | `0x0000000E` | `PublicStaticKeyAgreementKey` |  |
-| Private ephemeral key agreement key | `0x0000000F` | `PrivateEphemeralKeyAgreementKey` |  |
-| Public ephemeral key agreement key | `0x00000010` | `PublicEphemeralKeyAgreementKey` |  |
-| Symmetric authorization key | `0x00000011` | `SymmetricAuthorizationKey` |  |
-| Private authorization key | `0x00000012` | `PrivateAuthorizationKey` |  |
-| Public authorization key | `0x00000013` | `PublicAuthorizationKey` |  |
+| Private signature key | `00000001` | `PrivateSignatureKey` |  |
+| Public signature verification key | `00000002` | `PublicSignatureVerificationKey` |  |
+| Symmetric authentication key | `00000003` | `SymmetricAuthenticationKey` |  |
+| Private authentication key | `00000004` | `PrivateAuthenticationKey` |  |
+| Public authentication key | `00000005` | `PublicAuthenticationKey` |  |
+| Symmetric data encryption key | `00000006` | `SymmetricDataEncryptionKey` |  |
+| Symmetric key wrapping key | `00000007` | `SymmetricKeyWrappingKey` |  |
+| Symmetric random number generation key | `00000008` | `SymmetricRandomNumberGenerationKey` |  |
+| Symmetric master key | `00000009` | `SymmetricMasterKey` |  |
+| Private key transport key | `0000000A` | `PrivateKeyTransportKey` |  |
+| Public key transport key | `0000000B` | `PublicKeyTransportKey` |  |
+| Symmetric key agreement key | `0000000C` | `SymmetricKeyAgreementKey` |  |
+| Private static key agreement key | `0000000D` | `PrivateStaticKeyAgreementKey` |  |
+| Public static key agreement key | `0000000E` | `PublicStaticKeyAgreementKey` |  |
+| Private ephemeral key agreement key | `0000000F` | `PrivateEphemeralKeyAgreementKey` |  |
+| Public ephemeral key agreement key | `00000010` | `PublicEphemeralKeyAgreementKey` |  |
+| Symmetric authorization key | `00000011` | `SymmetricAuthorizationKey` |  |
+| Private authorization key | `00000012` | `PrivateAuthorizationKey` |  |
+| Public authorization key | `00000013` | `PublicAuthorizationKey` |  |
 
 **Signature keys:**
 - **Private Signature Key**: An asymmetric private key used to generate digital signatures (RSA, DSA, ECDSA, EdDSA). Must be strongly protected; exposure compromises all previously signed material.

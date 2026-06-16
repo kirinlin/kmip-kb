@@ -19,13 +19,13 @@ The Validation Type enumeration classifies the implementation layer that was sub
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Encrypt | `0x00000001` | `Encrypt` |  |
-| MAC/sign | `0x00000002` | `MACSign` |  |
-| Encrypt then MAC/sign | `0x00000003` | `EncryptThenMACSign` |  |
-| MAC/sign then encrypt | `0x00000004` | `MACSignThenEncrypt` |  |
-| TR-31 | `0x00000005` | `TR_31` |  |
+| Encrypt | `00000001` | `Encrypt` |  |
+| MAC/sign | `00000002` | `MACSign` |  |
+| Encrypt then MAC/sign | `00000003` | `EncryptThenMACSign` |  |
+| MAC/sign then encrypt | `00000004` | `MACSignThenEncrypt` |  |
+| TR-31 | `00000005` | `TR_31` |  |
 
 - **Unspecified**: The validation type is unknown or not applicable.
 - **Software**: The cryptographic implementation that was validated runs entirely in software, with no hardware cryptographic accelerator or tamper-resistant element involved. A software FIPS module on a general-purpose CPU falls into this category.

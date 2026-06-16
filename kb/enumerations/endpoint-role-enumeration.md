@@ -19,10 +19,10 @@ The Endpoint Role enumeration identifies the functional role of a KMIP endpoint 
 
 ## Fields & Structure
 
-| Value | Hex | XML Text | Description |
+| Name | Value | XML Text | Description |
 |---|---|---|---|
-| Client | `0x00000001` | `Client` |  |
-| Server | `0x00000002` | `Server` |  |
+| Client | `00000001` | `Client` |  |
+| Server | `00000002` | `Server` |  |
 
 - **Storage Array Client**: An endpoint that represents a storage controller or self-encrypting drive array. It acts as a KMIP client for the purpose of requesting encryption keys from the server, but its primary function is data storage rather than key management.
 - **KMIP Client**: A general-purpose KMIP client — typically an application, middleware, or device driver — that submits key management requests on behalf of applications.
