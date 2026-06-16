@@ -6,6 +6,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-06-16
+
 ### Added
 
 - `kmip-raw` MCP server (`mcp_py/kmip_raw_server.py`) — FastMCP server exposing the 250+ raw crawled spec documents in `raw/` over stdio. Provides three tools: `search_raw` (BM25 full-text search with `doc_type`, `version`, and `final_only` filters), `get_doc` (paginated character-offset retrieval for large spec files), and `list_docs` (browse by doc type and version). Pre-wired in `.mcp.json` alongside `kmip-kb`.
@@ -21,9 +23,6 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `scripts/enrich_enum_tables.py` — inserts `Value | Hex | XML Text` tables into enumeration docs from spec data; idempotent with `--check` CI guard.
 - New `templates/structures.md`, `templates/messages.md`, and `templates/profile.md` templates for the `structures`, `messages`, and `profile` KB categories (previously had no dedicated template).
 - `tag_hex` and `xml_text` front matter values are now automatically included in each doc's `keywords` array to improve RAG retrieval by hex code and CamelCase identifier.
-
-### Changed
-
 - Renamed front matter field `xml_element` → `xml_text` across all 223 KB docs, the frontmatter JSON Schema, scripts, templates, README, and authoring docs. The field represents the CamelCase XML text identifier used both as an element name for structure fields and as enumeration value text — `xml_text` captures this dual role more precisely.
 - The `Encoding (Tag / Type / Length / Value)` section is now omitted from standard enumeration docs (all 60 that contained only the trivial "Encoded as a 4-byte integer" statement), since the tag is already in `tag_hex` front matter and the encoding is uniform for all enumerations. Four docs with non-standard encoding (item type, PKCS#11 return code, Tag, Unique Identifier) keep their Encoding sections.
 - Reorganised `kb/profiles/` into four subdirectories by source section:
@@ -427,7 +426,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `operations/put.md`) left at the top level before server-to-client routing
   existed; the correct copies live under `operations/server-to-client/`.
 
-[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.12.0...HEAD
+[Unreleased]: https://github.com/kmip-dev/kmip-dev/compare/v0.16.0...HEAD
+[0.16.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.12.0...v0.16.0
 [0.12.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.11.0...v0.12.0
 [0.11.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/kmip-dev/kmip-dev/compare/v0.9.0...v0.10.0
