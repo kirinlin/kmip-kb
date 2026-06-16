@@ -30,10 +30,10 @@ Use kmip-raw when you need to read the actual spec text to understand a concept 
 
 **`doc_type` values** (the directory name under `raw/kmip/`):
 `kmip-spec`, `spec` (v1.x), `kmip-profiles`, `profiles` (v1.x), `kmip-ug`, `ug` (v1.x),
-`kmip-testcases`, `testcases` (v1.x), `usecases`, `kmip-addtl-msg-enc`,
-`kmip-asym-key-profile`, `kmip-cs-profile`, `kmip-sa-sed-profile`,
-`kmip-suite-b-profile`, `kmip-sym-foundry-profile`, `kmip-sym-key-profile`,
-`kmip-opaque-obj-profile`, `kmip-tape-lib-profile`
+`kmip-testcases`, `testcases` (v1.x), `usecases` (v1.x), `kmip-addtl-msg-enc` (v1.x),
+`kmip-asym-key-profile` (v1.x), `kmip-cs-profile` (v1.x), `kmip-sa-sed-profile` (v1.x),
+`kmip-suite-b-profile` (v1.x), `kmip-sym-foundry-profile` (v1.x), `kmip-sym-key-profile` (v1.x),
+`kmip-opaque-obj-profile` (v1.x), `kmip-tape-lib-profile` (v1.x)
 
 `final_only=True` (default) returns only the canonical top-level file per version; set `False` to include all draft stages.
 
