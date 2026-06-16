@@ -1,3 +1,6 @@
 {
-  "enabledMcpjsonServers": ["kmip-kb"]
+  "enabledMcpjsonServers": [
+    "kmip-kb",
+    "kmip-raw"
+  ]
 }
