@@ -8,6 +8,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Renamed `templates/ttlv.md` to `templates/encoding.md`; `scripts/build_kb_scaffold.py` and authoring docs updated.
 - Enumeration `Fields & Structure` table columns renamed: `Value` → `Name`, `Hex` → `Value`; hex values no longer carry the `0x` prefix (e.g. `00000001` instead of `0x00000001`). `scripts/enrich_enum_tables.py` and all 62 enumeration docs updated.
 - Removed `0x` prefix from inline hex values in structure and encoding docs (`kb/structures/`, `kb/encoding/`).
 
