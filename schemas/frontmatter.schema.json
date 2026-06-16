@@ -29,6 +29,7 @@
         "object",
         "concept",
         "encoding",
+        "enumerations",
         "structures",
         "messages",
         "profile",

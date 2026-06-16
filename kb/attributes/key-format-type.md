@@ -21,7 +21,7 @@ Key Format Type records the encoding format in which the key material is persist
 
 | Field | Tag | XML Element | Type |
 |---|---|---|---|
-| Key Format Type | `420042` | `KeyFormatType` | Enumeration — [Key Format Type Enumeration](../encoding/enumerations/key-format-type-enumeration.md) |
+| Key Format Type | `420042` | `KeyFormatType` | Enumeration — [Key Format Type Enumeration](../enumerations/key-format-type-enumeration.md) |
 
 Values include Raw, Opaque, PKCS#1, PKCS#8, PKCS#10, PKCS#12, X.509, ECPrivateKey, TransparentSymmetricKey, TransparentDSAPrivateKey, TransparentDSAPublicKey, TransparentDHPrivateKey, TransparentDHPublicKey, TransparentECPrivateKey, TransparentECPublicKey, TransparentRSAPrivateKey, TransparentRSAPublicKey, and vendor Extension types. The value reflects the format in which the key material is actually stored or was supplied.
 

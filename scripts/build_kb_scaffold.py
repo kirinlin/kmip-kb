@@ -78,7 +78,7 @@ V20_PREFIX_RULES: dict[str, tuple[str, int, str]] = {
     "10.1": ("encoding", 3, ""),             # TTLV encoding details (Tag, Type, Length, ...)
     "10.3": ("concept", 2, ""),          # Authentication
     "10.4": ("concept", 2, ""),          # Transport
-    "11": ("encoding", 2, "enumerations"),   # Enumerations (Tag, Operation, State, ...)
+    "11": ("enumerations", 2, ""),            # Enumerations (Tag, Operation, State, ...)
     "12": ("encoding", 2, ""),               # Bit Masks (Cryptographic Usage, ...)
     "13": ("concept", 2, ""),            # Algorithm Implementation (Split Key)
     "14": ("profile", 2, ""),            # Conformance
@@ -186,6 +186,7 @@ CATEGORY_DIR: dict[str, str] = {
     "object": "kb/objects",
     "concept": "kb/concepts",
     "encoding": "kb/encoding",
+    "enumerations": "kb/enumerations",
     "structures": "kb/structures",
     "messages": "kb/messages",
     "profile": "kb/profiles",
@@ -199,6 +200,7 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "object": "object.md",
     "concept": "concept.md",
     "encoding": "ttlv.md",
+    "enumerations": "enumeration.md",
     "structures": "ttlv.md",   # data structures reuse the TTLV/structure skeleton
     "messages": "ttlv.md",     # message structures reuse the same skeleton
     "profile": "concept.md",   # profiles reuse the concept skeleton
@@ -213,7 +215,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/operations": "Client-to-server and server-to-client operations (Create, Locate, Get, ...).",
     "kb/objects": "Managed objects: symmetric/asymmetric keys, certificates, secret data, templates.",
     "kb/attributes": "Object attributes and their data types, constraints, and applicability.",
-    "kb/encoding": "TTLV wire encoding, enumerations, and bit masks.",
+    "kb/encoding": "TTLV wire encoding and bit masks.",
     "kb/structures": "Data structures: object (Key Block, ...), attribute, and operation building blocks.",
     "kb/messages": "Protocol message structures: request/response envelope and message fields.",
     "kb/profiles": "Conformance profiles and implementation conformance requirements.",
@@ -221,7 +223,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/examples": "Worked request/response examples (original, not copied from the spec).",
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",
     "kb/operations/server-to-client": "Server-to-client operations (Notify, Put, Query).",
-    "kb/encoding/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
+    "kb/enumerations": "Enumerations (§11): named value sets used in TTLV-encoded fields.",
     "schemas/agent": "Graph RAG / coding-agent relation files (operation/object graphs).",
     "kb/mappings": "Cross-version and cross-implementation mapping tables.",
     "kb/versions": "Per-version TOC maps and 1.0-1.4 delta notes.",
@@ -230,9 +232,9 @@ STRUCTURE_DIRS: dict[str, str] = {
 }
 
 VALID_CATEGORIES = {
-    "operation", "attribute", "object", "concept", "encoding", "structures",
-    "messages", "profile", "reference", "workflow", "example", "schema",
-    "index", "usage-guide",
+    "operation", "attribute", "object", "concept", "encoding", "enumerations",
+    "structures", "messages", "profile", "reference", "workflow", "example",
+    "schema", "index", "usage-guide",
 }
 VALID_STATUS = {"stub", "draft", "reviewed"}
 
