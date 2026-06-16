@@ -199,10 +199,10 @@ CATEGORY_TEMPLATE: dict[str, str] = {
     "attribute": "attribute.md",
     "object": "object.md",
     "concept": "concept.md",
-    "encoding": "ttlv.md",
+    "encoding": "encoding.md",
     "enumerations": "enumeration.md",
-    "structures": "ttlv.md",   # data structures reuse the TTLV/structure skeleton
-    "messages": "ttlv.md",     # message structures reuse the same skeleton
+    "structures": "encoding.md",   # data structures reuse the encoding/structure skeleton
+    "messages": "encoding.md",     # message structures reuse the same skeleton
     "profile": "concept.md",   # profiles reuse the concept skeleton
     "reference": "reference.md",
     "usage-guide": "usage-guide.md",

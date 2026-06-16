@@ -53,7 +53,7 @@ python scripts/enrich_field_tables.py [--dry-run] [--check]   # --check exits no
 
 ## Enumeration docs (kb/enumerations/)
 
-Enumeration docs use the `templates/enumeration.md` template (not `templates/ttlv.md`). Their `Fields & Structure` section holds a value table with columns `Name | Value | XML Text | Description`:
+Enumeration docs use the `templates/enumeration.md` template (not `templates/encoding.md`). Their `Fields & Structure` section holds a value table with columns `Name | Value | XML Text | Description`:
 
 ```
 | Name | Value | XML Text | Description |
