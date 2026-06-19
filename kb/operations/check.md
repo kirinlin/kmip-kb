@@ -22,7 +22,7 @@ reject the intended use.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to check; the ID Placeholder is used when omitted. |
 | Usage Limits Count | `420096` | `UsageLimitsCount` | No | An amount of usage the client wants to confirm is available. |
@@ -33,7 +33,7 @@ These fields are sent as plain objects, not wrapped in an Attribute structure.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (unless failure) | The object's identifier, returned when the check passes. |
 | Usage Limits Count | `420096` | `UsageLimitsCount` | No | Returned when the requested usage exceeds what policy allows. |

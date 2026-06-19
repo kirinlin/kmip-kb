@@ -27,7 +27,7 @@ cryptography before storing keys.
 
 Structure, tag `4200DF`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Validation Authority Type | `4200E0` | `ValidationAuthorityType` | Enumeration | Yes — Unspecified, NIST CMVP, Common Criteria |
 | Validation Authority Country | `4200E1` | `ValidationAuthorityCountry` | Text String | No — two-letter ISO code |

@@ -20,7 +20,7 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The verification key; the ID Placeholder is used when omitted. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The signature algorithm (or the algorithm plus hash) to use. |
@@ -33,7 +33,7 @@ was added in KMIP 1.2.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
 | Validity Indicator | `42009B` | `ValidityIndicator` | Yes | Whether the signature checks out: valid, invalid, or indeterminate. |

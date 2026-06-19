@@ -29,7 +29,7 @@ all carry their attributes in this envelope.
 
 Structure, tag `420008`. Inside:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Attribute Name | `42000A` | `AttributeName` | Text String | Yes |
 | Attribute Index | `420009` | `AttributeIndex` | Integer | No (defaults to 0) |

@@ -23,14 +23,14 @@ metered and needs no allocation.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to allocate against; the ID Placeholder is used when omitted. |
 | Usage Limits Count | `420096` | `UsageLimitsCount` | Yes | How many usage-limit units the client wants to reserve for protection. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 

@@ -21,7 +21,7 @@ Calling `Logout` is the correct way to end a session cleanly. Relying on session
 
 `Logout` carries no payload fields beyond the standard message header. The session to terminate is identified by the Session Handle embedded in the Authentication field of the request.
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Authentication (Session Handle) | `42000C` | `Authentication` | Yes | The session ticket issued at [`Login`](login.md) time, supplied in the standard Authentication field. This is how the server identifies which session to invalidate. |
 
@@ -29,7 +29,7 @@ Calling `Logout` is the correct way to end a session cleanly. Relying on session
 
 The response contains only the standard result status. No payload fields are returned on success.
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Result Status | `42007F` | `ResultStatus` | Yes | Confirms that the session was successfully invalidated. |
 

@@ -28,7 +28,7 @@ A Symmetric Key carries its key material in a single [Key Block](../structures/k
 which wraps the format, algorithm, length, and the actual bytes (optionally in
 wrapped form).
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Key Block | `420040` | `KeyBlock` | Yes | The container holding the key's format, cryptographic algorithm and length, and the key material itself. |
 

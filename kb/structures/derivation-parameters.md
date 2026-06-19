@@ -23,7 +23,7 @@ KMIP supports several standard derivation approaches. The Derivation Method enum
 
 Derivation Parameters encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Derivation Method | `420269` | `DerivationMethod` | Enumeration | Yes |
 | Derivation Data | `4200C8` | `DerivationData` | Byte String | No |

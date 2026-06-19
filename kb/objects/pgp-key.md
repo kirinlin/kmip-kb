@@ -24,7 +24,7 @@ managed objects.
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | PGP Key Version | `4200BE` | `PGPKeyVersion` | Yes | The PGP key format version — version 3 or version 4 keys may be stored. |
 | Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../structures/key-block.md) carrying the ASCII-armored PGP export. |

@@ -23,7 +23,7 @@ Private Key Attributes appears in Create Key Pair requests and responses to carr
 
 Private Key Attributes encodes as a Structure. It contains zero or more [Attribute](attribute.md) structures.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Attribute | `420008` | `Attribute` | Structure | Zero or more |
 

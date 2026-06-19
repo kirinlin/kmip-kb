@@ -19,13 +19,13 @@ keywords: ["login", "session", "authentication", "session ticket", "stateful ses
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Authentication | `42000C` | `Authentication` | Yes | The credential the client wishes to authenticate with. This is the standard [Authentication](../concepts/authentication.md) structure — it may contain a username/password, a certificate, a token, or another credential type the server supports. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Session Handle |  |  | Yes | An opaque, server-issued token representing the authenticated session. The client passes this value in the Authentication field of subsequent requests to assert its identity without re-sending the full credential. |
 

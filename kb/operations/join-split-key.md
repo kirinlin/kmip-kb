@@ -21,7 +21,7 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object to form from the splits. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The split objects to combine; at least the threshold number must be supplied. |
@@ -30,7 +30,7 @@ was added in KMIP 1.2.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier of the reconstructed object. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |

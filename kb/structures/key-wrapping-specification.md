@@ -27,7 +27,7 @@ and returns the result with a matching
 
 Structure, tag `420047`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Wrapping Method | `42009E` | `WrappingMethod` | Enumeration | Yes |
 | Encryption Key Information | `420036` | `EncryptionKeyInformation` | Structure | At least one of the two key-information fields |

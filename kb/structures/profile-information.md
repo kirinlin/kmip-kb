@@ -27,7 +27,7 @@ Query](../operations/server-to-client/query.md), by clients.
 
 Structure, tag `4200EB`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Profile Name | `4200EC` | `ProfileName` | Enumeration | Yes |
 | Server URI | `4200ED` | `ServerURI` | Text String | No |

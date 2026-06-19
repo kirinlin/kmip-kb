@@ -21,7 +21,7 @@ This operation is most useful in device-provisioning and certificate-enrollment 
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifies the managed object to be re-provisioned. The object must already exist on the server. |
 | Attribute | `420008` | `Attribute` | No (repeatable) | One or more attributes to update on the object as part of the re-provisioning. Typical examples include `Activation Date`, `Deactivation Date`, and `Name`. Attributes not listed here retain their current values. |
@@ -29,7 +29,7 @@ This operation is most useful in device-provisioning and certificate-enrollment 
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Confirms the identifier of the re-provisioned object. Remains the same as in the request — the object retains its identity. |
 

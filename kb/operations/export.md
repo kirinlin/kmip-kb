@@ -21,7 +21,7 @@ object's full attribute set. `Export` is new in KMIP 1.4.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to export; the ID Placeholder is used when omitted. |
 | Key Format Type | `420042` | `KeyFormatType` | No | The format in which to return the key. |
@@ -34,7 +34,7 @@ The format, wrap, compression, and wrapping fields carry the same meaning as in
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of the returned object. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |

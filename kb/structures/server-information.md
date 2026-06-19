@@ -21,7 +21,7 @@ Server Information is a structure embedded in [Query](../operations/query.md) re
 
 Server Information encodes as a Structure. All fields are optional but servers are expected to populate the ones that are meaningful for their deployment.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Server Name | `420244` | `ServerName` | Text String | No |
 | Server Serial Number | `420245` | `ServerSerialNumber` | Text String | No |

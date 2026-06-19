@@ -19,7 +19,7 @@ keywords: ["log", "audit log", "log message", "audit trail", "client logging", "
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Log Message | `420141` | `LogMessage` | Yes | The [Log Message](../structures/log-message.md) structure carrying the content of the log entry. Includes the log message text; may also carry a log level indicator and a timestamp. |
 
@@ -27,7 +27,7 @@ keywords: ["log", "audit log", "log message", "audit trail", "client logging", "
 
 The response carries only the standard result status. No payload fields are returned on success.
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Result Status | `42007F` | `ResultStatus` | Yes | Indicates whether the server accepted and persisted the log entry. |
 

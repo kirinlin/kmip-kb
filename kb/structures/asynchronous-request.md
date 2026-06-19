@@ -23,7 +23,7 @@ The Processing Stage indicates whether the operation is still being executed (Pe
 
 Asynchronous Request encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Byte String | Yes |
 | Processing Stage | `42006C` | `ProcessingStage` | Enumeration | Yes |

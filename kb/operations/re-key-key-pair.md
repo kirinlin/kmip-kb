@@ -22,7 +22,7 @@ introduced in KMIP 1.1.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | No | The existing pair to replace, named by its private key. If omitted, the ID Placeholder is used. |
 | Offset | `420058` | `Offset` | No | An interval giving the gap between the replacement pair's initial date and its activation date. |
@@ -39,7 +39,7 @@ the routing semantics are unchanged.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | Yes | Identifier of the replacement private key. |
 | Public Key Unique Identifier | `42006F` | `PublicKeyUniqueIdentifier` | Yes | Identifier of the replacement public key. |

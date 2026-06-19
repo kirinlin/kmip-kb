@@ -19,7 +19,7 @@ keywords: ["set defaults", "defaults", "default attributes", "object defaults", 
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Defaults Information | `420152` | `DefaultsInformation` | Yes | The [Defaults Information](../structures/defaults-information.md) structure containing one or more Object Defaults entries. Each entry pairs an Object Type with a list of default attribute values to apply when creating objects of that type. Submitting a new Defaults Information structure replaces whatever defaults were previously configured. |
 
@@ -27,7 +27,7 @@ keywords: ["set defaults", "defaults", "default attributes", "object defaults", 
 
 The response contains only the standard result status — no payload fields are returned on success.
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Result Status | `42007F` | `ResultStatus` | Yes | Confirms whether the defaults were successfully stored. |
 

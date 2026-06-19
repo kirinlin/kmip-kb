@@ -22,7 +22,7 @@ server that does not implement it returns an error.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The [Public Key](../objects/public-key.md) to certify. If omitted, the ID Placeholder is used. |
 | Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
@@ -36,7 +36,7 @@ any of several X.509 request encodings.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the certificate that was produced. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |

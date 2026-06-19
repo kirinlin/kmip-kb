@@ -26,7 +26,7 @@ you answer asynchronously? what does Destroy actually do to the bytes?
 
 Structure, tag `4200F7`; every field optional:
 
-| Field | Tag | XML Element | Type |
+| Field | Tag | XML Text | Type |
 |---|---|---|---|
 | Streaming Capability | `4200EF` | `StreamingCapability` | Boolean |
 | Asynchronous Capability | `4200F0` | `AsynchronousCapability` | Boolean |

@@ -23,7 +23,7 @@ registered: keys, certificates, secret data, split keys, opaque objects, and
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object being handed over. |
 | Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes to associate with the object, given individually and/or via named templates. In KMIP 2.0+ this wrapper is replaced by the flat [Attributes](../structures/template-attribute-structures.md) structure; the attribute payload is unchanged. |
@@ -31,7 +31,7 @@ registered: keys, certificates, secret data, split keys, opaque objects, and
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier the server assigns to the registered object. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly that were not in the request. |

@@ -26,7 +26,7 @@ content.
 
 A structure of Text Strings:
 
-| Field | Tag | XML Element | Required | Notes |
+| Field | Tag | XML Text | Required | Notes |
 |---|---|---|---|---|
 | Certificate Subject Distinguished Name | `42001C` | `CertificateSubjectDistinguishedName` | Yes, may be empty | Empty is allowed when a critical SAN extension carries the identity. |
 | Certificate Subject Alternative Name | `42001B` | `CertificateSubjectAlternativeName` | No; repeatable | Email, DNS, IP, etc. |

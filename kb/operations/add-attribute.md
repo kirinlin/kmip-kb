@@ -22,14 +22,14 @@ value. Changing a value that already exists is the job of
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to add to; the ID Placeholder is used when omitted. |
 | Attribute | `420008` | `Attribute` | Yes | The attribute name and value to attach. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 | Attribute | `420008` | `Attribute` | Yes | The attribute that was added, including its assigned index. |

@@ -23,7 +23,7 @@ A KMIP response may carry a Result Status of Success even when the PKCS#11 Retur
 
 PKCS#11 Return Code encodes as a Structure containing a single Long Integer.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | PKCS#11 Return Code Value | `420298` |  | Long Integer | Yes |
 

@@ -24,7 +24,7 @@ access control, and protection as keys, and they often serve as input to
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Secret Data Type | `420086` | `SecretDataType` | Yes | Classifies the secret (for example a password or a seed). |
 | Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../structures/key-block.md) carrying the secret value, which may itself be wrapped. |

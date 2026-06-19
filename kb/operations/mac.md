@@ -20,7 +20,7 @@ data using a managed key. Added in KMIP 1.2, it produces a keyed integrity tag
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The MAC key; the ID Placeholder is used when omitted. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The algorithm to use for the MAC. |
@@ -31,7 +31,7 @@ data using a managed key. Added in KMIP 1.2, it produces a keyed integrity tag
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
 | MAC Data | `4200C6` | `MACData` | Yes (single-part) | The computed MAC, as a byte string. |

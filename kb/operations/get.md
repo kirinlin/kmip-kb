@@ -21,7 +21,7 @@ object may optionally be wrapped for protection in transit.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to retrieve; the ID Placeholder is used when omitted. |
 | Key Format Type | `420042` | `KeyFormatType` | No | The format in which the client wants the key returned. |
@@ -31,7 +31,7 @@ object may optionally be wrapped for protection in transit.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of the returned object. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |

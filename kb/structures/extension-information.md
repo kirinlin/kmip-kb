@@ -26,7 +26,7 @@ peer speaks. Added in 1.1.
 
 Structure, tag `4200A4`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Extension Name | `4200A5` | `ExtensionName` | Text String | Yes |
 | Extension Tag | `4200A6` | `ExtensionTag` | Integer | No |

@@ -20,7 +20,7 @@ an error. Exactly one chain is validated per request.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Certificate | `420013` | `Certificate` | No (may repeat) | One or more certificate objects supplied inline. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | No (may repeat) | One or more identifiers of managed certificate objects. |
@@ -31,7 +31,7 @@ chain to be checked.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Validity Indicator | `42009B` | `ValidityIndicator` | Yes | Whether the chain is valid, invalid, or indeterminate. |
 

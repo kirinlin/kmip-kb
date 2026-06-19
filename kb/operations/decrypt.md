@@ -20,7 +20,7 @@ and was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The key to decrypt with; the ID Placeholder is used when omitted. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The mode, padding, and related settings for this operation. |
@@ -34,7 +34,7 @@ and was added in KMIP 1.2.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
 | Data | `4200C2` | `Data` | Yes (single-part) | The recovered plaintext, as a byte string. |

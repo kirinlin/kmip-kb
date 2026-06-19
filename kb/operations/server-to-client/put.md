@@ -21,7 +21,7 @@ certificate or key expires — to clients that cannot or do not poll.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the object being delivered. |
 | Put Function | `420070` | `PutFunction` | Yes | `New` (an object the client has not seen) or `Replace` (supersedes an object the client already holds). |

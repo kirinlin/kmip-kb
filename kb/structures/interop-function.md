@@ -23,7 +23,7 @@ Each Interop Function entry names a specific function (via an enumeration) and c
 
 Interop Function encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Interop Function Enumeration | `420280` |  | Enumeration | Yes |
 | Data | `4200C2` | `Data` | Byte String | No |

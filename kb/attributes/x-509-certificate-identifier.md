@@ -28,7 +28,7 @@ Added in 1.1 to replace the text-based
 A structure of two required Byte Strings, both taken verbatim (DER) from the
 certificate:
 
-| Field | Tag | XML Element | Source |
+| Field | Tag | XML Text | Source |
 |---|---|---|---|
 | Issuer Distinguished Name | `4200B2` | `IssuerDistinguishedName` | The certificate's Issuer field. |
 | Certificate Serial Number | `4200AF` | `CertificateSerialNumber` | The certificate's Serial Number field. |

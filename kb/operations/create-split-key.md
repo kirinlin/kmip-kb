@@ -20,7 +20,7 @@ each part as its own managed object. It was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object to create. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | An existing key to split, when the client wants the server to split a known key. |
@@ -32,7 +32,7 @@ each part as its own managed object. It was added in KMIP 1.2.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The identifiers of all the split objects created. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |

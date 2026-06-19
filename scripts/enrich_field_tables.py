@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Add Tag (hex) and XML Element columns to field tables in KB docs.
+"""Add Tag (hex) and XML Text columns to field tables in KB docs.
 
 Many KB articles describe a KMIP structure or operation payload with a Markdown
 table whose first column lists the *fields* of that structure.  Most of those
@@ -11,13 +11,13 @@ as ``tag_hex`` and ``xml_text``.
 This script enriches every table whose header's first column is exactly
 ``Field`` by inserting two columns immediately after it::
 
-    | Field | Tag | XML Element | <existing columns...> |
+    | Field | Tag | XML Text | <existing columns...> |
 
 * ``Tag``         — 6-digit uppercase hex in backticks, e.g. ``420057``.
-* ``XML Element`` — CamelCase element name in backticks, e.g. ``ObjectType``.
+* ``XML Text`` — CamelCase element name in backticks, e.g. ``ObjectType``.
 
 A table that already has a ``Tag`` column (the TTLV structure tables use
-``Field | Tag | Type | Required``) keeps it and only gains the ``XML Element``
+``Field | Tag | Type | Required``) keeps it and only gains the ``XML Text``
 column right after it.  Rows whose field is not a named tag get blank cells.
 Cells already populated (e.g. an existing hex Tag value) are left untouched, so
 the script is idempotent and safe to re-run.
@@ -89,10 +89,10 @@ def enrich_table(header: list[str], rows: list[list[str]],
 
     Two modes:
     * Field-first (``header[0] == "Field"``): inserts ``Tag`` then
-      ``XML Element`` columns after ``Field``; fills both from the name→tag
+      ``XML Text`` columns after ``Field``; fills both from the name→tag
       lookup.
     * Tag-first (``header[0] == "Tag"``): the Tag column is already present
-      at index 0; only inserts ``XML Element`` at index 1 and fills it via
+      at index 0; only inserts ``XML Text`` at index 1 and fills it via
       the hex→element reverse lookup (``rev_tags``).
 
     ``filled`` counts rows that matched a tag.
@@ -115,12 +115,12 @@ def enrich_table(header: list[str], rows: list[list[str]],
             for r in rows:
                 r.insert(min(tag_idx, len(r)), "")
 
-    # Ensure an XML Element column immediately after Tag.
-    if "XML Element" in header:
-        xml_idx = header.index("XML Element")
+    # Ensure an XML Text column immediately after Tag.
+    if "XML Text" in header:
+        xml_idx = header.index("XML Text")
     else:
         xml_idx = tag_idx + 1
-        header.insert(xml_idx, "XML Element")
+        header.insert(xml_idx, "XML Text")
         for r in rows:
             r.insert(min(xml_idx, len(r)), "")
 
@@ -219,7 +219,7 @@ def process_text(text: str, tags: dict[str, tuple[str, str]]) -> tuple[str, int,
 
 def main() -> None:
     ap = argparse.ArgumentParser(
-        description="Add Tag (hex) and XML Element columns to KB field tables.")
+        description="Add Tag (hex) and XML Text columns to KB field tables.")
     ap.add_argument("--dry-run", action="store_true",
                     help="Report changes without writing files.")
     ap.add_argument("--check", action="store_true",

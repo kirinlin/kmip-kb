@@ -29,7 +29,7 @@ with [Join Split Key](../operations/join-split-key.md).
 Each Split Key object holds one share plus the parameters describing the
 splitting scheme.
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Split Key Parts | `42008B` | `SplitKeyParts` | Yes | Total number of shares the secret was divided into. |
 | Key Part Identifier | `420044` | `KeyPartIdentifier` | Yes | Which share this object holds (from 1 up to Split Key Parts). |

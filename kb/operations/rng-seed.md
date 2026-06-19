@@ -19,13 +19,13 @@ lets a client contribute entropy to the server's RNG. Added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Data | `4200C2` | `Data` | Yes | The bytes offered as seed material to the generator. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Data Length | `4200C4` | `DataLength` | Yes | How many bytes of the offered seed the server actually used. |
 

@@ -19,14 +19,14 @@ keywords: ["delegated login", "delegation", "impersonation", "credential", "sess
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Authentication | `42000C` | `Authentication` | Yes | The credential of the delegating principal — the client making the call. This is the standard message-level [Authentication](../concepts/authentication.md) field and identifies who is performing the delegation. |
 | Delegated Credential |  |  | Yes | The token, certificate, or credential structure that authorizes the caller to represent the delegated identity. The server uses this to determine the identity of the session being established. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Session Handle |  |  | Yes | A server-issued session ticket representing the delegated session, equivalent to what the delegated principal would receive from a direct [`Login`](login.md). The proxy uses this handle in the Authentication field of subsequent requests made on behalf of the delegated party. |
 

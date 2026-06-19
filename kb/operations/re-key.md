@@ -27,7 +27,7 @@ asymmetric equivalent is [Re-key Key Pair](re-key-key-pair.md).
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The existing symmetric key to replace. If omitted, the server uses the ID Placeholder. |
 | Offset | `420058` | `Offset` | No | An interval giving the gap between the replacement key's initial date and its activation date. |
@@ -35,7 +35,7 @@ asymmetric equivalent is [Re-key Key Pair](re-key-key-pair.md).
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the newly created replacement key. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly on the replacement. |

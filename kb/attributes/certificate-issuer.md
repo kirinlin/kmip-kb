@@ -25,7 +25,7 @@ DER-encoded DN bytes instead of a lossy string rendering.
 
 A structure of Text Strings:
 
-| Field | Tag | XML Element | Required |
+| Field | Tag | XML Text | Required |
 |---|---|---|---|
 | Certificate Issuer Distinguished Name | `420017` | `CertificateIssuerDistinguishedName` | Yes |
 | Certificate Issuer Alternative Name | `420016` | `CertificateIssuerAlternativeName` | No; repeatable |

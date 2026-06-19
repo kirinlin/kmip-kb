@@ -22,7 +22,7 @@ material rather than randomly generated.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object to derive (symmetric key or secret data). |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes (may repeat) | The base object(s) whose material feeds the derivation. The ID Placeholder may not be substituted here. |
@@ -32,7 +32,7 @@ material rather than randomly generated.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the newly derived object. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |

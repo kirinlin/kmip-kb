@@ -23,7 +23,7 @@ If the value carried in Current Attribute no longer matches what is stored on th
 
 Current Attribute encodes as a Structure containing a single Attribute.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Attribute | `420008` | `Attribute` | Structure | Yes |
 

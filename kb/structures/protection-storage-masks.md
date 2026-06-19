@@ -23,7 +23,7 @@ Clients consult this list to understand which combinations of storage protection
 
 Protection Storage Masks encodes as a Structure containing one or more Protection Storage Mask integers.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Protection Storage Mask | `420126` | `ProtectionStorageMask` | Integer | One or more |
 

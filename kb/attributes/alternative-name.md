@@ -26,7 +26,7 @@ from systems with looser naming rules.
 
 A structure:
 
-| Field | Tag | XML Element | Required | Type |
+| Field | Tag | XML Text | Required | Type |
 |---|---|---|---|---|
 | Alternative Name Value | `4200C0` | `AlternativeNameValue` | Yes | Text String |
 | Alternative Name Type | `4200C1` | `AlternativeNameType` | Yes | Enumeration — Uninterpreted Text String, URI, Object Serial Number, Email Address, DNS Name, X.500 Distinguished Name, or IP Address |

@@ -23,7 +23,7 @@ This structure names the function (as an enumeration corresponding to the standa
 
 PKCS#11 Function encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | PKCS#11 Function Enumeration | `420292` |  | Enumeration | Yes |
 

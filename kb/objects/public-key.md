@@ -25,7 +25,7 @@ key. Public keys are usually produced by
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Key Block | `420040` | `KeyBlock` | Yes | The [Key Block](../structures/key-block.md) carrying the public key's format, algorithm, length, and material. |
 

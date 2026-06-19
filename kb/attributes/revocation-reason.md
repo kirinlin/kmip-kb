@@ -24,7 +24,7 @@ object to Compromised, any other reason to Deactivated.
 
 A structure:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Revocation Reason Code | `420082` | `RevocationReasonCode` | Enumeration | Yes — the coded cause |
 | Revocation Message | `420080` | `RevocationMessage` | Text String | No — free-text detail for audit/logging (e.g. which laptop was stolen) |

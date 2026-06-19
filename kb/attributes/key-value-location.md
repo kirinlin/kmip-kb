@@ -25,7 +25,7 @@ storage (an HSM slot, an external vault, a tape).
 
 A structure:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Key Value Location Value | `4200B9` | `KeyValueLocationValue` | Text String | Yes — the locator itself |
 | Key Value Location Type | `4200BA` | `KeyValueLocationType` | Enumeration | Yes — `URI` or `Uninterpreted Text String` |

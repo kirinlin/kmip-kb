@@ -23,7 +23,7 @@ Tickets are also central to the delegated authentication model: a client that ha
 
 Ticket encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Ticket Type | `420233` | `TicketType` | Enumeration | Yes |
 | Ticket Value | `420234` | `TicketValue` | Byte String | Yes |

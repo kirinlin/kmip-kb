@@ -23,7 +23,7 @@ Both forms were introduced in v2.1.
 
 The server sends the following in the server-initiated message:
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Endpoint Role | `420151` | `EndpointRole` | Yes | The role enumeration value the server is assigning to the client. Standard values include Key Management Client, Key Management Server, and Proxy. |
 
@@ -31,7 +31,7 @@ The server sends the following in the server-initiated message:
 
 The client acknowledges the role assignment:
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Result Status | `42007F` | `ResultStatus` | Yes | `Success` if the client accepts and can operate in the assigned role; an error if the client cannot or will not accept the role. |
 

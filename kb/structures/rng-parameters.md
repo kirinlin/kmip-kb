@@ -27,7 +27,7 @@ offers.
 
 Structure, tag `4200D9`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | RNG Algorithm | `4200DA` | `RNGAlgorithm` | Enumeration | Yes — Unspecified, FIPS 186-2, DRBG, NRBG, ANSI X9.31, ANSI X9.62 |
 | Cryptographic Algorithm | `420028` | `CryptographicAlgorithm` | Enumeration | No |

@@ -23,7 +23,7 @@ This document covers the §12.1 bit mask definition, which is distinct from the 
 
 The Cryptographic Usage Mask value encodes as a 32-bit Integer (tag `42002C`). It is not a Structure — it is a scalar field whose bits are interpreted individually.
 
-| Tag | XML Element | Type | Width |
+| Tag | XML Text | Type | Width |
 |---|---|---|---|
 | `42002C` | `CryptographicUsageMask` | Integer | 32 bits |
 

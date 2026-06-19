@@ -21,7 +21,7 @@ and servers should allow even unauthenticated clients to call it.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Query Function | `420074` | `QueryFunction` | Yes (may repeat) | One or more selectors naming the categories of information to return. |
 
@@ -36,7 +36,7 @@ The response carries only the items that correspond to the requested selectors
 (and that the server actually supports); it is empty when there is nothing to
 report. Possible items include:
 
-| Field | Tag | XML Element | Description |
+| Field | Tag | XML Text | Description |
 |---|---|---|---|
 | Operation | `42005C` | `Operation` | An operation the server supports. |
 | Object Type | `420057` | `ObjectType` | A managed object type the server supports. |

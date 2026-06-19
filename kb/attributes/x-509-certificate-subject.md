@@ -25,7 +25,7 @@ superseding the text-based [Certificate Subject](certificate-subject.md).
 
 A structure of Byte Strings:
 
-| Field | Tag | XML Element | Required | Source |
+| Field | Tag | XML Text | Required | Source |
 |---|---|---|---|---|
 | Subject Distinguished Name | `4200B4` | `SubjectDistinguishedName` | Yes, but may be empty | The Subject field. |
 | Subject Alternative Name | `4200B3` | `SubjectAlternativeName` | Required when the DN is empty; repeatable | The SAN extension entries. |

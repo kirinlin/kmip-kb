@@ -21,7 +21,7 @@ PKCS#11 Interface is a structure that identifies which PKCS#11 token or slot the
 
 PKCS#11 Interface encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | PKCS#11 Interface Name | `420293` |  | Text String | Yes |
 | PKCS#11 Slot ID | `420297` |  | Long Integer | No |

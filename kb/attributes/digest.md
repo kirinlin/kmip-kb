@@ -25,7 +25,7 @@ held locally against one on the server without fetching it.
 
 A structure:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Hashing Algorithm | `420038` | `HashingAlgorithm` | Enumeration | Yes — which hash produced the value |
 | Digest Value | `420035` | `DigestValue` | Byte String | Yes, when the server has the material (or was given the digest out of band) |

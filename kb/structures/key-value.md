@@ -31,7 +31,7 @@ Tag `420045`. Two encodings:
   Value structure or the bare Key Material bytes, per the
   [Encoding Option](key-wrapping-data.md).
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Key Material | `420043` | `KeyMaterial` | Byte String for Raw/Opaque/PKCS#1/PKCS#8/ECPrivateKey formats; Structure for Transparent formats | Yes |
 | Attribute | `420008` | `Attribute` | Structure | No; repeatable |

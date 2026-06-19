@@ -19,7 +19,7 @@ keywords: ["process", "server-side crypto", "encrypt", "decrypt", "sign", "verif
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Identifies the managed key to use. Defaults to the server's ID Placeholder when omitted. The referenced object must be in a state that permits the requested cryptographic use. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | Specifies the algorithm, cipher mode, padding scheme, hash function, and other parameters governing how the operation is performed. When omitted, the server uses the key's default Cryptographic Parameters attribute. |
@@ -31,7 +31,7 @@ keywords: ["process", "server-side crypto", "encrypt", "decrypt", "sign", "verif
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Present when the request targeted a specific object; identifies the key used. |
 | Data | `4200C2` | `Data` | No | The output data produced by the operation. For encryption: the ciphertext. For decryption: the plaintext. For signing: the signature. For verification: absent (result indicated by Result Status). |

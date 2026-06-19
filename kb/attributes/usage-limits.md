@@ -27,7 +27,7 @@ still recover everything it protected.
 
 A structure of three required fields:
 
-| Field | Tag | XML Element | Type | Meaning |
+| Field | Tag | XML Text | Type | Meaning |
 |---|---|---|---|---|
 | Usage Limits Total | `420097` | `UsageLimitsTotal` | Long Integer | Lifetime budget, fixed once the key starts protecting. |
 | Usage Limits Count | `420096` | `UsageLimitsCount` | Long Integer | Budget still unspent. |

@@ -26,7 +26,7 @@ ecosystems to find "the key for *this* volume" via
 
 A structure:
 
-| Field | Tag | XML Element | Required | Type |
+| Field | Tag | XML Text | Required | Type |
 |---|---|---|---|---|
 | Application Namespace | `420003` | `ApplicationNamespace` | Yes | Text String |
 | Application Data | `420002` | `ApplicationData` | No | Text String |

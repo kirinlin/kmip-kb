@@ -26,7 +26,7 @@ everywhere; the spec recommends leaving
 
 Structure, tag `42000C`, containing:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Credential | `420023` | `Credential` | Structure | Yes; repeatable |
 

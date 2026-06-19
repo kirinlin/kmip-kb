@@ -23,7 +23,7 @@ A Rights structure appears in [Set Constraints](../operations/set-constraints.md
 
 Rights encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Text String | No |
 | Right | `420232` | `Right` | Structure | One or more |

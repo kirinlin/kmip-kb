@@ -24,7 +24,7 @@ or handed to the server with [Register](../operations/register.md).
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Certificate Type | `42001D` | `CertificateType` | Yes | Identifies the certificate encoding; in 1.x this is X.509 (see [Certificate Type](../attributes/certificate-type.md)). |
 | Certificate Value | `42001E` | `CertificateValue` | Yes | The raw DER-encoded certificate bytes. |

@@ -31,7 +31,7 @@ Template-Attribute structures of operations like
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Attribute | `420008` | `Attribute` | Yes (repeatable) | One or more attribute objects that the template carries and that get applied to objects referencing it. |
 

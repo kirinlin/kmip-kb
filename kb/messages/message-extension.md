@@ -24,7 +24,7 @@ vendor content plus a flag that says whether understanding it is mandatory.
 
 Structure, tag `420051`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Vendor Identification | `42009D` | `VendorIdentification` | Text String | Yes — uniquely names the vendor |
 | Criticality Indicator | `420026` | `CriticalityIndicator` | Boolean | Yes |

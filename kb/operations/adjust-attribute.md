@@ -19,7 +19,7 @@ keywords: ["adjust attribute", "delta", "increment", "decrement", "attribute upd
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Identifies the managed object to update. Defaults to the server's ID Placeholder when omitted. |
 | Attribute Name | `42000A` | `AttributeName` | Yes | The name of the attribute whose value is being adjusted. Must refer to a numeric or date-time attribute that supports delta operations. |
@@ -28,7 +28,7 @@ keywords: ["adjust attribute", "delta", "increment", "decrement", "attribute upd
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Confirms which object was updated. |
 | Attribute | `420008` | `Attribute` | Yes | Returns the updated [Attribute](../structures/attribute.md), containing the attribute name and the resulting value after the adjustment was applied. |

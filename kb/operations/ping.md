@@ -21,13 +21,13 @@ keywords: ["ping", "health check", "liveness", "connectivity test", "server stat
 
 `Ping` carries no mandatory payload fields. The request body may be empty.
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Correlation Value | `4200D6` | `CorrelationValue` | No | An opaque client-chosen value that the server echoes back in the response. Allows a caller to correlate a specific ping request with its response when multiple concurrent pings are in flight. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Correlation Value | `4200D6` | `CorrelationValue` | No | Present if the request included a Correlation Value; echoed back unchanged. |
 

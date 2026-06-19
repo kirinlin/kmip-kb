@@ -21,7 +21,7 @@ collect its result.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Yes | Identifies the pending operation to poll. |
 

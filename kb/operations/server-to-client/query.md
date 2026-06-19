@@ -23,7 +23,7 @@ up a device before provisioning it.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Query Function | `420074` | `QueryFunction` | Yes (repeatable) | What to ask about: operations, objects, server information, extension list/map, attestation types, RNGs, validations, profiles, capabilities, or client registration methods. |
 
@@ -32,7 +32,7 @@ up a device before provisioning it.
 All response fields are optional and appear only when requested (and
 supported by the client):
 
-| Field | Tag | XML Element | Description |
+| Field | Tag | XML Text | Description |
 |---|---|---|---|
 | Operation (repeatable) | `42005C` | `Operation` | Operations the client supports. |
 | Object Type (repeatable) | `420057` | `ObjectType` | Managed object types the client supports. |

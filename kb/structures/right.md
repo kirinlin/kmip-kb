@@ -23,7 +23,7 @@ The Right structure separates operation identity (which operation is permitted) 
 
 Right encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Operation | `42005C` | `Operation` | Enumeration | Yes |
 

@@ -21,7 +21,7 @@ unsupporting server returns an error.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The [Certificate](../objects/certificate.md) being renewed. If omitted, the ID Placeholder is used. |
 | Certificate Request Type | `420019` | `CertificateRequestType` | No | An enumeration naming the request format; required when a Certificate Request is included. |
@@ -35,7 +35,7 @@ existing one.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | Identifier of the new certificate. |
 | Template-Attribute | `420091` | `TemplateAttribute` | No | Attributes the server set implicitly. |

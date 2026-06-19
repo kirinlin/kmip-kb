@@ -19,7 +19,7 @@ Key Format Type records the encoding format in which the key material is persist
 
 ## Data Type & Structure
 
-| Field | Tag | XML Element | Type |
+| Field | Tag | XML Text | Type |
 |---|---|---|---|
 | Key Format Type | `420042` | `KeyFormatType` | Enumeration — [Key Format Type Enumeration](../enumerations/key-format-type-enumeration.md) |
 

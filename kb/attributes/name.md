@@ -26,7 +26,7 @@ were also referenced by their Name.
 
 A structure with two required fields:
 
-| Field | Tag | XML Element | Type | Notes |
+| Field | Tag | XML Text | Type | Notes |
 |---|---|---|---|---|
 | Name Value | `420055` | `NameValue` | Text String | The label itself. |
 | Name Type | `420054` | `NameType` | Enumeration | `Uninterpreted Text String` or `URI`. |

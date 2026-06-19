@@ -21,13 +21,13 @@ indefinitely.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to lease; the ID Placeholder is used when omitted. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 | Lease Time | `420049` | `LeaseTime` | Yes | How long (in seconds) the object may be used before a new lease is needed. |

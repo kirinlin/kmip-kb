@@ -26,7 +26,7 @@ a rotation.
 
 A structure:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Link Type | `42004B` | `LinkType` | Enumeration | Yes — the relationship kind |
 | Linked Object Identifier | `42004C` | `LinkedObjectIdentifier` | Text String | Yes — the target's [Unique Identifier](unique-identifier.md) |

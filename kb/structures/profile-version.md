@@ -21,7 +21,7 @@ Profile Version is a structure that identifies a KMIP conformance profile by nam
 
 Profile Version encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Profile Name | `42010F` | `ProfileName` | Enumeration | Yes |
 | Profile Version Major | `420110` | `ProfileVersionMajor` | Integer | Yes |

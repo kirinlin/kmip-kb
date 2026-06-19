@@ -21,7 +21,7 @@ Object Groups is a structure that carries a list of Object Group name strings â€
 
 Object Groups encodes as a Structure containing one or more Object Group Text String entries.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Object Group | `42004D` | `ObjectGroup` | Text String | One or more |
 

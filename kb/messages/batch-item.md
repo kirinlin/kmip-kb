@@ -24,7 +24,7 @@ one, but up to whatever the server tolerates.
 
 Structure, tag `42000F`. Request-side contents:
 
-| Field | Tag | XML Element | Required |
+| Field | Tag | XML Text | Required |
 |---|---|---|---|
 | [Operation](operation.md) | `42005C` | `Operation` | Yes |
 | [Unique Batch Item ID](unique-batch-item-id.md) | `420093` | `UniqueBatchItemID` | When Batch Count > 1 |
@@ -33,7 +33,7 @@ Structure, tag `42000F`. Request-side contents:
 
 Response-side contents:
 
-| Field | Tag | XML Element | Required |
+| Field | Tag | XML Text | Required |
 |---|---|---|---|
 | Operation | `42005C` | `Operation` | Echoed when the request had one |
 | Unique Batch Item ID | `420093` | `UniqueBatchItemID` | Echoed when present in the request |

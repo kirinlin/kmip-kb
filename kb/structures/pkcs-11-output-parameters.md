@@ -23,7 +23,7 @@ This structure is the "out" side of the tunneled call; [PKCS#11 Input Parameters
 
 PKCS#11 Output Parameters encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | PKCS#11 Parameters | `420296` |  | Byte String | No |
 | Data | `4200C2` | `Data` | Byte String | No |

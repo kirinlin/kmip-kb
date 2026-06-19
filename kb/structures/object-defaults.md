@@ -23,7 +23,7 @@ Servers maintain one Object Defaults entry per supported object type. A privileg
 
 Object Defaults encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Enumeration | Yes |
 | Attribute | `420008` | `Attribute` | Structure | Zero or more |

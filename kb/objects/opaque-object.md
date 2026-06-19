@@ -24,7 +24,7 @@ It is registered with [Register](../operations/register.md) and retrieved with
 
 ## Structure
 
-| Field | Tag | XML Element | Required | Meaning |
+| Field | Tag | XML Text | Required | Meaning |
 |---|---|---|---|---|
 | Opaque Data Type | `420059` | `OpaqueDataType` | Yes | Identifies the kind of opaque data, so a client knows how to interpret it. |
 | Opaque Data Value | `42005A` | `OpaqueDataValue` | Yes | The raw opaque bytes the server stores without interpreting. |

@@ -21,7 +21,7 @@ clients use it to find objects they did not just create, then follow up with
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Maximum Items | `42004F` | `MaximumItems` | No | An upper bound on how many identifiers the server should return. |
 | Offset Items | `4200D4` | `OffsetItems` | No | How many otherwise-matching objects to skip before collecting results (0 is the same as omitting it). |
@@ -31,7 +31,7 @@ clients use it to find objects they did not just create, then follow up with
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Located Items | `4200D5` | `LocatedItems` | No | The total count of objects meeting the criteria; a server may omit it if it cannot or will not compute the total. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | No (may repeat) | The identifiers of the matching objects. |

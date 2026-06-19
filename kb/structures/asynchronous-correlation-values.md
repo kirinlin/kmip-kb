@@ -23,7 +23,7 @@ This structure appears in two main places: in the response when operations have 
 
 Asynchronous Correlation Values encodes as a Structure containing one or more Asynchronous Correlation Value byte strings.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Asynchronous Correlation Value | `420006` | `AsynchronousCorrelationValue` | Byte String | One or more |
 

@@ -19,7 +19,7 @@ Servers that advertise interop capability in their [`Query`](query.md) response 
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Interop Identifier | `420161` | `InteropIdentifier` | Yes | Names the interoperability scenario or test suite to invoke on the server. The [Interop Identifier](../structures/interop-identifier.md) structure encodes the test namespace and identifier. |
 | Interop Function | `420160` | `InteropFunction` | No | Specifies the particular function within the named test to execute. The [Interop Function](../structures/interop-function.md) structure provides additional resolution when a test scenario contains multiple sub-functions. |
@@ -27,7 +27,7 @@ Servers that advertise interop capability in their [`Query`](query.md) response 
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Interop Identifier | `420161` | `InteropIdentifier` | Yes | Echoes the identifier from the request for correlation. |
 | Data | `4200C2` | `Data` | No | Output data produced by the interop function, such as ciphertext, a digest, or a signature result. |

@@ -20,7 +20,7 @@ as part of the server-side cryptographic operations.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The key to encrypt with; the ID Placeholder is used when omitted. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The mode, padding, and related settings for this operation. |
@@ -33,7 +33,7 @@ as part of the server-side cryptographic operations.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
 | Data | `4200C2` | `Data` | Yes (single-part) | The resulting ciphertext, as raw bytes. |

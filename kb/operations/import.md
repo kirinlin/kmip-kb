@@ -22,7 +22,7 @@ in KMIP 1.4.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier the imported object should have. |
 | Replace Existing | `420124` | `ReplaceExisting` | No | A boolean; when true, an existing object with the same identifier is replaced, otherwise a clash makes the operation fail. |
@@ -32,7 +32,7 @@ in KMIP 1.4.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The identifier of the imported object. |
 

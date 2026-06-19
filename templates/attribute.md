@@ -19,10 +19,10 @@ keywords: []
 ## Data Type & Structure
 
 <!-- A structured attribute's field table starts with a `Field` column followed
-     by `Tag` and `XML Element` columns; run
+     by `Tag` and `XML Text` columns; run
      `python scripts/enrich_field_tables.py` to fill the latter two for fields
      that are named KMIP tags. Leave them blank for non-tag fields.
-     | Field | Tag | XML Element | Type | Required | -->
+     | Field | Tag | XML Text | Type | Required | -->
 
 ## Constraints
 

@@ -21,7 +21,7 @@ similar algorithms.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Common Template-Attribute | `42001F` | `CommonTemplateAttribute` | No | Attributes (individually or via templates) that apply to both the public and private key. |
 | Private Key Template-Attribute | `420065` | `PrivateKeyTemplateAttribute` | No | Attributes that apply only to the [Private Key](../objects/private-key.md); these override the common set. |
@@ -40,7 +40,7 @@ the routing semantics are unchanged.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Private Key Unique Identifier | `420066` | `PrivateKeyUniqueIdentifier` | Yes | Identifier of the newly created private key. |
 | Public Key Unique Identifier | `42006F` | `PublicKeyUniqueIdentifier` | Yes | Identifier of the newly created public key. |

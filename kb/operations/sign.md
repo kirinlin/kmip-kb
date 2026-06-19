@@ -20,7 +20,7 @@ under server control while signing happens server-side.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The signing key; the ID Placeholder is used when omitted. |
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | No | The signature algorithm (or the algorithm plus hash) to use. |
@@ -32,7 +32,7 @@ under server control while signing happens server-side.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The key that was used. |
 | Signature Data | `4200C3` | `SignatureData` | Yes (single-part) | The resulting signature, as a byte string. |

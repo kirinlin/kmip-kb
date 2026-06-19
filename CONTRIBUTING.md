@@ -34,11 +34,11 @@ the official spec, rewrite it.
    fields, behavior, and relationships for an implementer audience.
 4. **Format field tables.** A table that documents the fields of a KMIP
    structure or operation payload starts with a `Field` column, then `Tag` and
-   `XML Element` columns, then the table's own columns:
+   `XML Text` columns, then the table's own columns:
    ```
-   | Field | Tag | XML Element | Required | Description |
+   | Field | Tag | XML Text | Required | Description |
    ```
-   Author the prose columns; leave `Tag`/`XML Element` blank and let
+   Author the prose columns; leave `Tag`/`XML Text` blank and let
    `scripts/enrich_field_tables.py` fill them (6-digit hex and CamelCase element
    name, both in backticks) for fields that are named KMIP tags. Non-tag fields
    keep both cells blank.
@@ -50,7 +50,7 @@ the official spec, rewrite it.
    python scripts/build_kb_scaffold.py --check   # front-matter schema
    python scripts/check_verbatim.py <dir>         # no copied spec prose
    python scripts/validate_links.py <dir>         # related slugs + body links resolve
-   python scripts/enrich_field_tables.py --check  # Tag/XML Element columns current
+   python scripts/enrich_field_tables.py --check  # Tag/XML Text columns current
    ```
 7. **Review** against the checklist below, then set `status: reviewed`.
 
@@ -63,7 +63,7 @@ re-running it to pick up new sections is safe.
 - [ ] Technical meaning is preserved and correct.
 - [ ] No hallucinated fields, operations, or behaviors.
 - [ ] Cross-references (`related`) resolve to real documents.
-- [ ] Field tables carry `Tag`/`XML Element` columns (`enrich_field_tables.py --check` clean).
+- [ ] Field tables carry `Tag`/`XML Text` columns (`enrich_field_tables.py --check` clean).
 - [ ] Front matter validates (`--check` passes); `spec_versions` accurate.
 - [ ] Examples are original, not lifted from the spec.
 

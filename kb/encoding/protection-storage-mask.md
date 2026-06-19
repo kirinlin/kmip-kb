@@ -23,7 +23,7 @@ By examining the bit field a consumer can determine what protection tiers a key 
 
 The Protection Storage Mask value encodes as a 32-bit Integer (tag `42015E`). It is a scalar field whose bits are interpreted individually.
 
-| Tag | XML Element | Type | Width |
+| Tag | XML Text | Type | Width |
 |---|---|---|---|
 | `42015E` | `ProtectionStorageMask` | Integer | 32 bits |
 

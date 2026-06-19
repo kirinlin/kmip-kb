@@ -19,7 +19,7 @@ keywords: ["set constraints", "constraints", "access control", "operation permis
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The identifier of the specific managed object whose constraints should be set. When omitted, the server uses the ID Placeholder. |
 | Object Type | `420057` | `ObjectType` | No | When supplied without a Unique Identifier, sets the type-level default constraints for objects of that type, applying to all future objects of that type that do not have explicit per-object constraints. |
@@ -27,7 +27,7 @@ keywords: ["set constraints", "constraints", "access control", "operation permis
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | Present when the request targeted a specific object; echoes back the identifier. |
 

@@ -28,7 +28,7 @@ A request must satisfy both layers to succeed: the principal must have a [Right]
 
 Constraints encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Text String | No |
 | Constraint | `420208` | `Constraint` | Structure | Zero or more |

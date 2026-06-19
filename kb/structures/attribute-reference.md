@@ -23,7 +23,7 @@ The structure appears in operation payloads such as [Set Attribute](../operation
 
 Attribute Reference encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Attribute Name | `420009` | `AttributeName` | Text String | Yes |
 | Attribute Index | `42000A` | `AttributeIndex` | Integer | No |

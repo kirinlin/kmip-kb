@@ -20,14 +20,14 @@ attributes present, this operation returns their actual values.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to read; the ID Placeholder is used when omitted. |
 | Attribute Name | `42000A` | `AttributeName` | No (may repeat) | The name of an attribute to return. A given name must not appear more than once. |
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 | Attribute | `420008` | `Attribute` | No (may repeat) | A requested attribute and its value. |

@@ -23,7 +23,7 @@ The structure is the response-side counterpart to a Locate or batch-query workfl
 
 Objects encodes as a Structure containing one or more Object entries, each of which is itself a small Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Text String | One per object |
 | Object Type | `420057` | `ObjectType` | Enumeration | One per object |

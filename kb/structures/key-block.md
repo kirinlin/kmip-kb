@@ -30,7 +30,7 @@ material is wrapped — the [Key Wrapping Data](key-wrapping-data.md).
 
 Structure, tag `420040`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Key Format Type | `420042` | `KeyFormatType` | Enumeration | Yes |
 | Key Compression Type | `420041` | `KeyCompressionType` | Enumeration | No — EC public key point compression; uncompressed if absent |

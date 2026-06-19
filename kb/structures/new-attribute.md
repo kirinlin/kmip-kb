@@ -23,7 +23,7 @@ New Attribute appears in [Set Attribute](../operations/set-attribute.md) and [Ad
 
 New Attribute encodes as a Structure containing a single Attribute.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Attribute | `420008` | `Attribute` | Structure | Yes |
 

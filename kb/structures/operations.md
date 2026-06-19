@@ -24,7 +24,7 @@ item layouts live on [Batch Item](../messages/batch-item.md).
 
 **Request Header** (`420077`), in order:
 
-| Field | Tag | XML Element | Required |
+| Field | Tag | XML Text | Required |
 |---|---|---|---|
 | [Protocol Version](../messages/protocol-version.md) | `420069` | `ProtocolVersion` | Yes |
 | [Maximum Response Size](../messages/maximum-response-size.md) | `420050` | `MaximumResponseSize` | No |

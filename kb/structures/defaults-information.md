@@ -23,7 +23,7 @@ Understanding the server's defaults is important for clients that do not want to
 
 Defaults Information encodes as a Structure containing one or more Object Defaults entries.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Object Defaults | `420236` | `ObjectDefaults` | Structure | One or more |
 

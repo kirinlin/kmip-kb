@@ -20,7 +20,7 @@ was added in KMIP 1.2.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Cryptographic Parameters | `42002B` | `CryptographicParameters` | Yes | The hashing algorithm to apply. |
 | Data | `4200C2` | `Data` | Yes (single-part) | The data to hash, as a byte string. |
@@ -30,7 +30,7 @@ was added in KMIP 1.2.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Data | `4200C2` | `Data` | Yes (single-part) | The resulting digest, as a byte string. |
 | Correlation Value | `4200D6` | `CorrelationValue` | No | A handle to pass to subsequent calls of a multi-part operation. |

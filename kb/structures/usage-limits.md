@@ -23,7 +23,7 @@ Usage limits are a complement to the [Cryptographic Usage Mask](../encoding/cryp
 
 Usage Limits encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Usage Limits Count | `42009A` | `UsageLimitsCount` | Long Integer | Yes |
 | Usage Limits Total | `42009B` | `UsageLimitsTotal` | Long Integer | Yes |

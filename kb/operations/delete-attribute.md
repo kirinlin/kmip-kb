@@ -19,7 +19,7 @@ counterpart to [Add Attribute](add-attribute.md).
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | No | The object to change; the ID Placeholder is used when omitted. |
 | Attribute Name | `42000A` | `AttributeName` | Yes | The name of the attribute to remove. |
@@ -27,7 +27,7 @@ counterpart to [Add Attribute](add-attribute.md).
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The object's identifier. |
 | Attribute | `420008` | `Attribute` | Yes | The attribute instance that was removed. |

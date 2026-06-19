@@ -23,7 +23,7 @@ for asymmetric keys. `Create` is not used to build Template objects.
 
 ## Request Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The kind of object to generate — a [Symmetric Key](../objects/symmetric-key.md). |
 | Template-Attribute | `420091` | `TemplateAttribute` | Yes | The attributes the new key should carry, given as individual attributes and/or by referencing server-side Template objects by name. Template objects have been deprecated since version 1.3, so attributes are better supplied individually. |
@@ -39,7 +39,7 @@ supplied as well so the server knows the key size to generate.
 
 ## Response Fields
 
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | Echoes the type of object that was generated. |
 | Unique Identifier | `420094` | `UniqueIdentifier` | Yes | The server-assigned identifier for the new key, used to reference it in later operations. |

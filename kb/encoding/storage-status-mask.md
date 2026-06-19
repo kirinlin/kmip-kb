@@ -21,7 +21,7 @@ The Storage Status Mask is a 32-bit integer bit field defined in §12.3 of the K
 
 The Storage Status Mask value encodes as a 32-bit Integer (tag `42008E`). It is a scalar field whose bits are interpreted individually.
 
-| Tag | XML Element | Type | Width |
+| Tag | XML Text | Type | Width |
 |---|---|---|---|
 | `42008E` | StorageStatusMask | Integer | 32 bits |
 

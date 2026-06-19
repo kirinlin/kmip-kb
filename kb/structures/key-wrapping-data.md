@@ -27,7 +27,7 @@ client *asks* for wrapping — is the
 
 Structure, tag `420046`:
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Wrapping Method | `42009E` | `WrappingMethod` | Enumeration | Yes |
 | Encryption Key Information | `420036` | `EncryptionKeyInformation` | Structure | One of these two key-information fields must appear |

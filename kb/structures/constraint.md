@@ -23,7 +23,7 @@ While [Rights](rights.md) describe which operations a principal may invoke, Cons
 
 Constraint encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Enumeration | No |
 | Attribute Reference | `420204` | `AttributeReference` | Structure | Zero or more |

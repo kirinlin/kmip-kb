@@ -23,7 +23,7 @@ The server is responsible for persisting the log entry and associating it with t
 
 Log Message encodes as a Structure.
 
-| Field | Tag | XML Element | Type | Required |
+| Field | Tag | XML Text | Type | Required |
 |---|---|---|---|---|
 | Log Message (Text String) | `42009F` | `LogMessage` | Text String | Yes |
 | Log Operation | `420271` |  | Enumeration | No |
