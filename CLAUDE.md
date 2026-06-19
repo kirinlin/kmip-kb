@@ -26,18 +26,18 @@ Two optional fields are present on docs that map to a named KMIP tag (§11.56 Ta
 - `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
 - `xml_text`: CamelCase XML text identifier per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — used as the XML element name for structure fields and as the enumeration value text for enumeration tags. Enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 223 docs carry these fields. Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs). Both `tag_hex` and `xml_text` values are automatically added to `keywords` for RAG retrieval.
 
-## Field tables (Tag / XML Element columns)
+## Field tables (Tag / XML Text columns)
 
 Every table that documents the fields of a KMIP structure or operation payload
-starts with a `Field` column, followed by `Tag` and `XML Element` columns, then
+starts with a `Field` column, followed by `Tag` and `XML Text` columns, then
 the table's own columns (`Required`, `Type`, `Description`, …):
 
 ```
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 ```
 
 `Tag` holds the 6-digit uppercase hex tag value in backticks (e.g. `` `420057` ``)
-and `XML Element` the CamelCase element name in backticks (e.g. `` `ObjectType` ``)
+and `XML Text` the CamelCase element name in backticks (e.g. `` `ObjectType` ``)
 — the same two identifiers carried in front matter by `tag_hex`/`xml_text`.
 Rows whose field is not a named tag (e.g. a generic "Managed Object" placeholder)
 leave both cells blank. `scripts/enrich_field_tables.py` fills these columns from
@@ -115,7 +115,7 @@ authored) before linking. Validate before committing:
 python scripts/build_kb_scaffold.py --check    # front matter vs JSON Schema
 python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs source_section
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
-python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Element columns
+python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Text columns
 python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Value/XML Text
 ```
 

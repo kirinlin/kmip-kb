@@ -12,6 +12,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Renamed field-table column `XML Element` to `XML Text` across all 146 KB docs, templates, and `scripts/enrich_field_tables.py` to align with the KMIP-ENCODE §6.1.3 term.
 - Renamed `templates/ttlv.md` to `templates/encoding.md`; `scripts/build_kb_scaffold.py` and authoring docs updated.
 - Enumeration `Fields & Structure` table columns renamed: `Value` → `Name`, `Hex` → `Value`; hex values no longer carry the `0x` prefix (e.g. `00000001` instead of `0x00000001`). `scripts/enrich_enum_tables.py` and all 62 enumeration docs updated.
 - Removed `0x` prefix from inline hex values in structure and encoding docs (`kb/structures/`, `kb/encoding/`).
@@ -65,7 +66,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - Field tables that document a structure's or payload's fields now carry `Tag`
-  (6-digit hex) and `XML Element` (CamelCase name) columns next to each field,
+  (6-digit hex) and `XML Text` (CamelCase name) columns next to each field,
   filled for fields that are named KMIP tags.
 - `enrich_field_tables.py` populates and validates those columns (`--check`
   guard); included in the authoring validation checklist.

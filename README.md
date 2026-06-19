@@ -64,7 +64,7 @@ operations (client and server-to-client), attributes, objects, data structures
 all 64 enumerations (§11), bit masks (§12), algorithm implementation (§13),
 profiles (KMIP-Prof v1.0–v2.1), and 83 usage-guide articles (KMIP-UG v2.1).
 Validators clean (front-matter schema, no-verbatim, link resolution,
-field-table Tag/XML Element columns) per the
+field-table Tag/XML Text columns) per the
 [CONTRIBUTING.md](CONTRIBUTING.md) checklist. Remaining work is the planned
 content in `kb/examples/`, `kb/workflows/`, and `kb/mappings/`.
 
@@ -87,12 +87,12 @@ python scripts/populate_tag_fields.py              # apply
 ## Field-table enrichment
 
 [`scripts/enrich_field_tables.py`](scripts/enrich_field_tables.py) adds `Tag`
-(6-digit hex) and `XML Element` (CamelCase name) columns to every Markdown table
+(6-digit hex) and `XML Text` (CamelCase name) columns to every Markdown table
 that documents a structure's or payload's fields — those whose header's first
 column is `Field`:
 
 ```
-| Field | Tag | XML Element | Required | Description |
+| Field | Tag | XML Text | Required | Description |
 |---|---|---|---|---|
 | Object Type | `420057` | `ObjectType` | Yes | The type of object being handed over. |
 ```
