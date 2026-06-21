@@ -33,30 +33,30 @@ When embedded in an Attribute structure it appears as the Attribute Value of the
 
 The 32 bits are allocated to distinct usage categories. The following summarizes the defined bit positions and their meanings:
 
-| Bit | Usage |
-|---|---|
-| 0 (0x00000001) | Sign |
-| 1 (0x00000002) | Verify |
-| 2 (0x00000004) | Encrypt |
-| 3 (0x00000008) | Decrypt |
-| 4 (0x00000010) | Wrap Key |
-| 5 (0x00000020) | Unwrap Key |
-| 6 (0x00000040) | Export |
-| 7 (0x00000080) | MAC Generate |
-| 8 (0x00000100) | MAC Verify |
-| 9 (0x00000200) | Derive Key |
-| 10 (0x00000400) | Content Commitment (Non-Repudiation) |
-| 11 (0x00000800) | Key Agreement |
-| 12 (0x00001000) | Certificate Sign |
-| 13 (0x00002000) | CRL Sign |
-| 14 (0x00004000) | Generate Cryptogram |
-| 15 (0x00008000) | Validate Cryptogram |
-| 16 (0x00010000) | Translate Encrypt |
-| 17 (0x00020000) | Translate Decrypt |
-| 18 (0x00040000) | Translate Wrap |
-| 19 (0x00080000) | Translate Unwrap |
-| 20 (0x00100000) | Authenticate |
-| 31 (0x80000000) | Unrestricted |
+| Bit | Usage | XML Text |
+|---|---|---|
+| 0 (0x00000001) | Sign | `Sign` |
+| 1 (0x00000002) | Verify | `Verify` |
+| 2 (0x00000004) | Encrypt | `Encrypt` |
+| 3 (0x00000008) | Decrypt | `Decrypt` |
+| 4 (0x00000010) | Wrap Key | `WrapKey` |
+| 5 (0x00000020) | Unwrap Key | `UnwrapKey` |
+| 6 (0x00000040) | Export | `Export` |
+| 7 (0x00000080) | MAC Generate | `MACGenerate` |
+| 8 (0x00000100) | MAC Verify | `MACVerify` |
+| 9 (0x00000200) | Derive Key | `DeriveKey` |
+| 10 (0x00000400) | Content Commitment (Non-Repudiation) | `ContentCommitmentNonRepudiation` |
+| 11 (0x00000800) | Key Agreement | `KeyAgreement` |
+| 12 (0x00001000) | Certificate Sign | `CertificateSign` |
+| 13 (0x00002000) | CRL Sign | `CRLSign` |
+| 14 (0x00004000) | Generate Cryptogram | `GenerateCryptogram` |
+| 15 (0x00008000) | Validate Cryptogram | `ValidateCryptogram` |
+| 16 (0x00010000) | Translate Encrypt | `TranslateEncrypt` |
+| 17 (0x00020000) | Translate Decrypt | `TranslateDecrypt` |
+| 18 (0x00040000) | Translate Wrap | `TranslateWrap` |
+| 19 (0x00080000) | Translate Unwrap | `TranslateUnwrap` |
+| 20 (0x00100000) | Authenticate | `Authenticate` |
+| 31 (0x80000000) | Unrestricted | `Unrestricted` |
 
 Bits 21–30 are reserved. The Unrestricted bit (31) indicates that all defined usage operations are permitted; it overrides all other bits when set.
 

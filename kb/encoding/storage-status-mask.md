@@ -29,11 +29,11 @@ The Storage Status Mask value encodes as a 32-bit Integer (tag `42008E`). It is 
 
 The defined bit positions and their storage status categories:
 
-| Bit | Status |
-|---|---|
-| 0 (0x00000001) | On-Line Storage |
-| 1 (0x00000002) | Archival Storage |
-| 2 (0x00000004) | Destroyed Storage |
+| Bit | Status | XML Text |
+|---|---|---|
+| 0 (0x00000001) | On-Line Storage | `OnLineStorage` |
+| 1 (0x00000002) | Archival Storage | `ArchivalStorage` |
+| 2 (0x00000004) | Destroyed Storage | `DestroyedStorage` |
 
 Bits 3 and above are reserved for standard use; extension values use even-numbered bit positions only. Multiple bits may be set when an object exists in more than one storage state simultaneously (for example, an object whose original is in on-line storage while an archival copy also exists).
 

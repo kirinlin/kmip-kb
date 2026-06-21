@@ -31,22 +31,22 @@ The Protection Storage Mask value encodes as a 32-bit Integer (tag `42015E`). It
 
 The defined bit positions and their storage protection categories:
 
-| Bit | Category |
-|---|---|
-| 0 (0x00000001) | Software |
-| 1 (0x00000002) | Hardware |
-| 2 (0x00000004) | On Processor |
-| 3 (0x00000008) | On System |
-| 4 (0x00000010) | Off System |
-| 5 (0x00000020) | Hypervisor |
-| 6 (0x00000040) | Operating System |
-| 7 (0x00000080) | Container |
-| 8 (0x00000100) | On Premises |
-| 9 (0x00000200) | Off Premises |
-| 10 (0x00000400) | Self Managed |
-| 11 (0x00000800) | Outsourced |
-| 12 (0x00001000) | Validated |
-| 13 (0x00002000) | Same Jurisdiction |
+| Bit | Category | XML Text |
+|---|---|---|
+| 0 (0x00000001) | Software | `Software` |
+| 1 (0x00000002) | Hardware | `Hardware` |
+| 2 (0x00000004) | On Processor | `OnProcessor` |
+| 3 (0x00000008) | On System | `OnSystem` |
+| 4 (0x00000010) | Off System | `OffSystem` |
+| 5 (0x00000020) | Hypervisor | `Hypervisor` |
+| 6 (0x00000040) | Operating System | `OperatingSystem` |
+| 7 (0x00000080) | Container | `Container` |
+| 8 (0x00000100) | On Premises | `OnPremises` |
+| 9 (0x00000200) | Off Premises | `OffPremises` |
+| 10 (0x00000400) | Self Managed | `SelfManaged` |
+| 11 (0x00000800) | Outsourced | `Outsourced` |
+| 12 (0x00001000) | Validated | `Validated` |
+| 13 (0x00002000) | Same Jurisdiction | `SameJurisdiction` |
 
 Bits 14 and above are reserved for standard use; extension values use even-numbered bit positions only. Multiple bits may be set simultaneously to indicate that a key is stored under more than one protection category (for example, an HSM-backed key at an on-premises data center would set both On Premises and Hardware).
 
