@@ -8,6 +8,9 @@ v1_source_section: "2.2"
 status: stub
 related: []
 keywords: []
+tag_hex: "42XXXX"
+xml_text: "{{XmlTextName}}"
+tag_type: "Structure"
 ---
 
 # {{title}}

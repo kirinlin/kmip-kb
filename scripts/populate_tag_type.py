@@ -149,8 +149,8 @@ def _resolve_conflict(
     # Enumeration KB docs always encode as Enumeration
     if category == "enumerations" and "Enumeration" in types:
         return "Enumeration"
-    # Structure and operation KB docs always encode as Structure
-    if category in ("structures", "operation") and "Structure" in types:
+    # Structure, operation, and object KB docs always encode as Structure
+    if category in ("structures", "operation", "object") and "Structure" in types:
         return "Structure"
     # For other categories: if exactly one non-Structure type appears,
     # the tag is a leaf value (not a container) and the non-structure type wins
@@ -163,12 +163,12 @@ def _resolve_conflict(
 def _category_fallback(category: str) -> str | None:
     """Return a TTLV type for tags absent from the XML corpus, based on category.
 
-    Enumerations, structures, and operation categories have deterministic TTLV
-    types regardless of what the XML test suite covers.
+    Enumerations, structures, operation, and object categories have deterministic
+    TTLV types regardless of what the XML test suite covers.
     """
     if category == "enumerations":
         return "Enumeration"
-    if category in ("structures", "operation"):
+    if category in ("structures", "operation", "object"):
         return "Structure"
     return None
 

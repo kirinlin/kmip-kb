@@ -20,6 +20,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- `templates/object.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, matching the other managed-object templates.
+- `scripts/populate_tag_type.py` now recognises the `object` category as a deterministic `Structure` type in both conflict-resolution and category-fallback logic.
 - Renamed field-table column `XML Element` to `XML Text` across all 146 KB docs, templates, and `scripts/enrich_field_tables.py` to align with the KMIP-ENCODE §6.1.3 term.
 - Renamed `templates/ttlv.md` to `templates/encoding.md`; `scripts/build_kb_scaffold.py` and authoring docs updated.
 - Enumeration `Fields & Structure` table columns renamed: `Value` → `Name`, `Hex` → `Value`; hex values no longer carry the `0x` prefix (e.g. `00000001` instead of `0x00000001`). `scripts/enrich_enum_tables.py` and all 62 enumeration docs updated.
