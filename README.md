@@ -47,6 +47,7 @@ related: []
 keywords: []
 tag_hex: "420018"            # optional — 6-digit hex from §11.56 Tag Enumeration
 xml_text: "CertificateRequest"     # optional — CamelCase XML text identifier (KMIP-ENCODE §6.1.3)
+tag_type: "Structure"        # optional — TTLV wire type (Structure, Text String, Enumeration, …)
 ---
 ```
 
@@ -82,6 +83,27 @@ docs that already have `tag_hex`.
 ```sh
 python scripts/populate_tag_fields.py --dry-run   # preview matches
 python scripts/populate_tag_fields.py              # apply
+```
+
+## Tag type populator
+
+[`scripts/populate_tag_type.py`](scripts/populate_tag_type.py) adds the
+`tag_type` frontmatter field to any KB doc that already carries `tag_hex`,
+recording the TTLV wire type the tag uses on the wire (one of `Structure`,
+`Integer`, `Long Integer`, `Big Integer`, `Enumeration`, `Boolean`,
+`Text String`, `Byte String`, `Date-Time`, `Interval`, `Date-Time Extended`).
+
+Type is inferred from KMIP XML test-case files, supplemented by a static
+override table for tags absent from the test corpus and category fallbacks for
+unambiguous categories (`enumerations` → `Enumeration`, `structures` /
+`operation` / `object` → `Structure`). The one genuinely polymorphic tag
+(`UniqueIdentifier`) is intentionally omitted. Requires `raw/` to be populated
+(run `scripts/kmip_crawler.py` first). Run after `populate_tag_fields.py`.
+
+```sh
+python scripts/populate_tag_type.py --dry-run   # preview changes
+python scripts/populate_tag_type.py              # apply
+python scripts/populate_tag_type.py --check      # fail if any doc is missing tag_type
 ```
 
 ## Field-table enrichment
