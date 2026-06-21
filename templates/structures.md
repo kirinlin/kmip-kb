@@ -9,6 +9,7 @@ related: []
 keywords: []
 tag_hex: "42XXXX"
 xml_text: "{{XmlTextName}}"
+tag_type: "Structure"
 ---
 
 # {{title}}
