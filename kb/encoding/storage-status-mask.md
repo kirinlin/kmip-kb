@@ -9,6 +9,7 @@ related: ["locate", "protection-storage-mask", "state"]
 keywords: ["storage status mask", "bit mask", "online storage", "archival storage", "destroyed storage", "locate filter", "storage status", "42008E", "StorageStatusMask"]
 tag_hex: "42008E"
 xml_text: "StorageStatusMask"
+tag_type: "Integer"
 ---
 
 # Storage Status Mask

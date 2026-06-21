@@ -10,6 +10,7 @@ related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["destroy date", "destroyed state", "key destruction", "audit", "420033", "DestroyDate"]
 tag_hex: "420033"
 xml_text: "DestroyDate"
+tag_type: "Date-Time"
 ---
 
 # Destroy Date

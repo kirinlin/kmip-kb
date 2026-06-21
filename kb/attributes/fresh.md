@@ -10,6 +10,7 @@ related: ["object-group", "initial-date", "key-value-present"]
 keywords: ["fresh", "unused key", "key pool", "group member fresh", "4200A8"]
 tag_hex: "4200A8"
 xml_text: "Fresh"
+tag_type: "Boolean"
 ---
 
 # Fresh

@@ -10,6 +10,7 @@ related: ["cryptographic-algorithm", "certificate-length", "cryptographic-domain
 keywords: ["cryptographic length", "key size", "bits", "key length", "42002A", "CryptographicLength"]
 tag_hex: "42002A"
 xml_text: "CryptographicLength"
+tag_type: "Integer"
 ---
 
 # Cryptographic Length

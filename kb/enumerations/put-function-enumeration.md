@@ -9,6 +9,7 @@ related: ["unique-identifier"]
 keywords: ["put function", "put operation", "new object", "replace object", "Push operation", "420070", "PutFunction"]
 tag_hex: "420070"
 xml_text: "PutFunction"
+tag_type: "Enumeration"
 ---
 
 # Put Function Enumeration

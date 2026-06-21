@@ -10,6 +10,7 @@ related: ["cryptographic-parameters", "cryptographic-length", "cryptographic-alg
 keywords: ["domain parameters", "Qlength", "recommended curve", "DSA", "DH", "elliptic curve", "420029", "CryptographicDomainParameters"]
 tag_hex: "420029"
 xml_text: "CryptographicDomainParameters"
+tag_type: "Structure"
 ---
 
 # Cryptographic Domain Parameters

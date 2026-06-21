@@ -10,6 +10,7 @@ related: ["compromise-occurrence-date", "revocation-reason", "state", "destroy-d
 keywords: ["compromise date", "compromised state", "revoke", "incident response", "420020", "CompromiseDate"]
 tag_hex: "420020"
 xml_text: "CompromiseDate"
+tag_type: "Date-Time"
 ---
 
 # Compromise Date

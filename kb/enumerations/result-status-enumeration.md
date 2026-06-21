@@ -9,6 +9,7 @@ related: ["result-reason-enumeration", "message-structure", "error-handling", "a
 keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "batch response", "42007F", "ResultStatus"]
 tag_hex: "42007F"
 xml_text: "ResultStatus"
+tag_type: "Enumeration"
 ---
 
 # Result Status Enumeration

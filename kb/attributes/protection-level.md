@@ -9,6 +9,7 @@ related: ["protection-storage-mask", "protection-period", "sensitive", "extracta
 keywords: ["protection level", "hsm", "hardware security", "software protection", "storage protection", "key protection tier", "420145", "ProtectionLevel"]
 tag_hex: "420145"
 xml_text: "ProtectionLevel"
+tag_type: "Enumeration"
 ---
 
 # Protection Level

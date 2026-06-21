@@ -9,6 +9,7 @@ related: ["nist-key-type", "cryptographic-usage-mask", "cryptographic-algorithm-
 keywords: ["NIST key type", "SP 800-57", "key classification", "signature key", "encryption key", "key agreement", "authorization key", "42013A", "NISTKeyType"]
 tag_hex: "42013A"
 xml_text: "NISTKeyType"
+tag_type: "Enumeration"
 ---
 
 # NIST Key Type Enumeration

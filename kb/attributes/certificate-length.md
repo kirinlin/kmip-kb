@@ -10,6 +10,7 @@ related: ["certificate-type", "cryptographic-length"]
 keywords: ["certificate length", "bytes", "DER size", "4200AD", "CertificateLength"]
 tag_hex: "4200AD"
 xml_text: "CertificateLength"
+tag_type: "Integer"
 ---
 
 # Certificate Length

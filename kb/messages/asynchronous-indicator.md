@@ -10,6 +10,7 @@ related: ["asynchronous-correlation-value", "result-status", "capability-informa
 keywords: ["asynchronous indicator", "async", "polling", "request header", "420007", "AsynchronousIndicator"]
 tag_hex: "420007"
 xml_text: "AsynchronousIndicator"
+tag_type: "Enumeration"
 ---
 
 # Asynchronous Indicator

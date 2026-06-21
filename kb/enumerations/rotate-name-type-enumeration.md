@@ -9,6 +9,7 @@ related: ["rotate-name"]
 keywords: ["rotate name type", "rotation group", "rotation identifier format", "text string", "URI", "420171", "RotateNameType"]
 tag_hex: "420171"
 xml_text: "RotateNameType"
+tag_type: "Enumeration"
 ---
 
 # Rotate Name Type Enumeration

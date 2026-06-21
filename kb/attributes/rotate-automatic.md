@@ -9,6 +9,7 @@ related: ["rotate-interval", "rotate-date", "rotate-generation", "rotate-latest"
 keywords: ["rotate automatic", "key rotation", "automatic rotation", "auto-rotate", "rotation policy", "boolean", "42016B", "RotateAutomatic"]
 tag_hex: "42016B"
 xml_text: "RotateAutomatic"
+tag_type: "Boolean"
 ---
 
 # Rotate Automatic

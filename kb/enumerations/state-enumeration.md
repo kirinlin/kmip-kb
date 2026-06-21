@@ -9,6 +9,7 @@ related: ["state", "activate", "revoke", "destroy", "archive", "recover"]
 keywords: ["state", "object lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "lifecycle state", "42008D"]
 tag_hex: "42008D"
 xml_text: "State"
+tag_type: "Enumeration"
 ---
 
 # State Enumeration

@@ -9,6 +9,7 @@ related: ["cryptographic-algorithm", "cryptographic-length", "cryptographic-para
 keywords: ["algorithm", "AES", "RSA", "ECDSA", "ECDH", "Ed25519", "3DES", "ChaCha20", "symmetric key", "asymmetric key", "cryptographic algorithm", "420028", "CryptographicAlgorithm"]
 tag_hex: "420028"
 xml_text: "CryptographicAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Cryptographic Algorithm Enumeration

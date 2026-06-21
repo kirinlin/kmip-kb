@@ -9,6 +9,7 @@ related: ["unique-identifier", "locate", "message-structure"]
 keywords: ["unique identifier", "ID placeholder", "filtered", "sentinel", "batch operations", "ID reference", "420094", "UniqueIdentifier"]
 tag_hex: "420094"
 xml_text: "UniqueIdentifier"
+tag_type: "Enumeration"
 ---
 
 # Unique Identifier Enumeration

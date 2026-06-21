@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "rng-algorithm-enumeration", "rng-mode-enu
 keywords: ["DRBG", "deterministic random", "NIST SP 800-90A", "random number generator", "Dual-EC", "Hash DRBG", "HMAC DRBG", "CTR DRBG", "4200DB", "DRBGAlgorithm"]
 tag_hex: "4200DB"
 xml_text: "DRBGAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # DRBG Algorithm Enumeration

@@ -9,6 +9,7 @@ related: ["secret-data", "object-type-enumeration"]
 keywords: ["secret data type", "password", "seed", "secret data", "non-key secret", "420086", "SecretDataType"]
 tag_hex: "420086"
 xml_text: "SecretDataType"
+tag_type: "Enumeration"
 ---
 
 # Secret Data Type Enumeration

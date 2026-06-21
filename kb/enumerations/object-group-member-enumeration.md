@@ -9,6 +9,7 @@ related: ["locate", "state-enumeration"]
 keywords: ["object group", "group member", "fresh", "default", "key rotation", "object group attribute", "4200AC", "ObjectGroupMember"]
 tag_hex: "4200AC"
 xml_text: "ObjectGroupMember"
+tag_type: "Enumeration"
 ---
 
 # Object Group Member Enumeration

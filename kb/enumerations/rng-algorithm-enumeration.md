@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "drbg-algorithm-enumeration", "rng-mode-en
 keywords: ["RNG", "random number generator", "DRBG", "NRBG", "ANSI X9.31", "FIPS 186", "random generation", "4200DA", "RNGAlgorithm"]
 tag_hex: "4200DA"
 xml_text: "RNGAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # RNG Algorithm Enumeration

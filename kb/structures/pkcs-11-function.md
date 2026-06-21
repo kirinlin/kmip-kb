@@ -9,6 +9,7 @@ related: ["pkcs-11-interface", "pkcs-11-input-parameters", "pkcs-11-output-param
 keywords: ["PKCS#11", "PKCS11 function", "CKF", "cryptoki function", "token function", "tunnel", "42015A", "PKCS_11Function"]
 tag_hex: "42015A"
 xml_text: "PKCS_11Function"
+tag_type: "Enumeration"
 ---
 
 # PKCS#11 Function

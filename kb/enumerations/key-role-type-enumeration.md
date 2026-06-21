@@ -9,6 +9,7 @@ related: ["split-key", "create-split-key", "join-split-key"]
 keywords: ["key role", "split key", "BDK", "KEK", "PIN", "payment", "DEK", "CVK", "base derivation key", "420083", "KeyRoleType"]
 tag_hex: "420083"
 xml_text: "KeyRoleType"
+tag_type: "Enumeration"
 ---
 
 # Key Role Type Enumeration

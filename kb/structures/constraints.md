@@ -9,6 +9,7 @@ related: ["constraint", "rights", "right", "set-constraints", "get-constraints",
 keywords: ["constraints", "access control policy", "constraint list", "policy", "KMIP constraints", "object policy", "420168"]
 tag_hex: "420168"
 xml_text: "Constraints"
+tag_type: "Structure"
 ---
 
 # Constraints

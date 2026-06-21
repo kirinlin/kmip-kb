@@ -9,6 +9,7 @@ related: ["mutating-attributes"]
 keywords: ["attributes", "Add Attribute", "Set Attribute", "Modify Attribute", "Delete Attribute", "Adjust Attribute", "multi-instance", "420125"]
 tag_hex: "420125"
 xml_text: "Attributes"
+tag_type: "Structure"
 ---
 
 # Attributes

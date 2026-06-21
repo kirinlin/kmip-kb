@@ -10,6 +10,7 @@ related: ["unique-identifier", "state", "cryptographic-algorithm", "cryptographi
 keywords: ["attributes", "metadata", "attribute rules", "multi-instance", "lifecycle dates", "420125"]
 tag_hex: "420125"
 xml_text: "Attributes"
+tag_type: "Structure"
 ---
 
 # Attributes

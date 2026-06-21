@@ -10,6 +10,7 @@ related: ["x-509-certificate-identifier", "x-509-certificate-issuer", "certifica
 keywords: ["X.509 certificate subject", "subject distinguished name", "subject alternative name", "SAN", "4200B7", "X_509CertificateSubject"]
 tag_hex: "4200B7"
 xml_text: "X_509CertificateSubject"
+tag_type: "Structure"
 ---
 
 # X.509 Certificate Subject

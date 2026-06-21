@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "derivation-parameters", "digest", "digita
 keywords: ["hash", "SHA", "SHA-256", "SHA-3", "MD5", "RIPEMD", "Whirlpool", "hashing algorithm", "digest", "message digest", "420038", "HashingAlgorithm"]
 tag_hex: "420038"
 xml_text: "HashingAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Hashing Algorithm Enumeration

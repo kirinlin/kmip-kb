@@ -9,6 +9,7 @@ related: ["key-block", "key-value"]
 keywords: ["Key Block", "Key Value", "Key Wrapping Data", "Key Value Type", "attributes in Key Value", "wrapping", "420040", "KeyBlock"]
 tag_hex: "420040"
 xml_text: "KeyBlock"
+tag_type: "Structure"
 ---
 
 # Key Block

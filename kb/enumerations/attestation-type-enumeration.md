@@ -9,6 +9,7 @@ related: ["credential-type-enumeration", "login"]
 keywords: ["attestation", "TPM", "TCG", "SAML", "credential", "authentication", "hardware trust", "4200C7", "AttestationType"]
 tag_hex: "4200C7"
 xml_text: "AttestationType"
+tag_type: "Enumeration"
 ---
 
 # Attestation Type Enumeration

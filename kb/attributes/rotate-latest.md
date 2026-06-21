@@ -9,6 +9,7 @@ related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interv
 keywords: ["rotate latest", "latest rotation", "current key version", "key family head", "boolean", "420172", "RotateLatest"]
 tag_hex: "420172"
 xml_text: "RotateLatest"
+tag_type: "Boolean"
 ---
 
 # Rotate Latest

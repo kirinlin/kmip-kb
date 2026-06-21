@@ -9,6 +9,7 @@ related: ["cryptographic-usage-mask", "key-block", "create", "create-key-pair", 
 keywords: ["cryptographic usage mask", "bit mask", "key usage", "encrypt", "decrypt", "sign", "verify", "wrap key", "unwrap key", "export", "42002C", "CryptographicUsageMask"]
 tag_hex: "42002C"
 xml_text: "CryptographicUsageMask"
+tag_type: "Integer"
 ---
 
 # Cryptographic Usage Mask

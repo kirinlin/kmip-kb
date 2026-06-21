@@ -10,6 +10,7 @@ related: ["initial-date", "last-change-date", "state"]
 keywords: ["archive date", "archival storage", "recover", "storage status", "420005", "ArchiveDate"]
 tag_hex: "420005"
 xml_text: "ArchiveDate"
+tag_type: "Date-Time"
 ---
 
 # Archive Date

@@ -9,6 +9,7 @@ related: ["asynchronous-correlation-values", "asynchronous-correlation-value", "
 keywords: ["asynchronous", "async request", "processing stage", "correlation value", "pending", "420173", "AsynchronousRequest"]
 tag_hex: "420173"
 xml_text: "AsynchronousRequest"
+tag_type: "Structure"
 ---
 
 # Asynchronous Request

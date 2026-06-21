@@ -9,6 +9,7 @@ related: ["objects", "query", "locate", "object-type", "server-information"]
 keywords: ["object types", "supported object types", "object type list", "query response", "locate filter", "420167", "ObjectTypes"]
 tag_hex: "420167"
 xml_text: "ObjectTypes"
+tag_type: "Structure"
 ---
 
 # Object Types

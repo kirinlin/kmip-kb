@@ -10,6 +10,7 @@ related: ["cryptographic-usage-mask", "sensitive", "extractable"]
 keywords: ["operation policy", "access control", "default policy", "deprecated", "owner", "42005D", "OperationPolicyName"]
 tag_hex: "42005D"
 xml_text: "OperationPolicyName"
+tag_type: "Text String"
 ---
 
 # Operation Policy Name

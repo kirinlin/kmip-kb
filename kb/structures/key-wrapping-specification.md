@@ -10,6 +10,7 @@ related: ["key-wrapping-data", "key-block", "key-value"]
 keywords: ["key wrapping specification", "wrapped key request", "get wrapped", "encoding option", "420047", "KeyWrappingSpecification"]
 tag_hex: "420047"
 xml_text: "KeyWrappingSpecification"
+tag_type: "Structure"
 ---
 
 # Key Wrapping Specification

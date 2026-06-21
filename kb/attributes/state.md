@@ -10,6 +10,7 @@ related: ["activation-date", "deactivation-date", "compromise-date", "destroy-da
 keywords: ["state", "lifecycle", "pre-active", "active", "deactivated", "compromised", "destroyed", "SP 800-57", "42008D"]
 tag_hex: "42008D"
 xml_text: "State"
+tag_type: "Enumeration"
 ---
 
 # State

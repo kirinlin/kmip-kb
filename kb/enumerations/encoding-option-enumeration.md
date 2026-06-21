@@ -9,6 +9,7 @@ related: ["key-wrapping-data", "key-block", "wrapping-method-enumeration", "key-
 keywords: ["encoding option", "key wrapping", "TTLV encoding", "no encoding", "key value", "wrapped key", "4200A3", "EncodingOption"]
 tag_hex: "4200A3"
 xml_text: "EncodingOption"
+tag_type: "Enumeration"
 ---
 
 # Encoding Option Enumeration

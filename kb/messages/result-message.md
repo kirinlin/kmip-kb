@@ -10,6 +10,7 @@ related: ["result-status", "result-reason"]
 keywords: ["result message", "error text", "diagnostics", "logging", "42007D", "ResultMessage"]
 tag_hex: "42007D"
 xml_text: "ResultMessage"
+tag_type: "Text String"
 ---
 
 # Result Message

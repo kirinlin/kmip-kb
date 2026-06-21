@@ -10,6 +10,7 @@ related: ["never-extractable", "sensitive", "always-sensitive"]
 keywords: ["extractable", "non-exportable key", "key extraction", "PKCS#11 parity", "420122"]
 tag_hex: "420122"
 xml_text: "Extractable"
+tag_type: "Boolean"
 ---
 
 # Extractable

@@ -9,6 +9,7 @@ related: ["asynchronous-request", "asynchronous-correlation-values", "query-asyn
 keywords: ["processing stage", "async status", "asynchronous", "pending", "completed", "cancelled", "420175", "ProcessingStage"]
 tag_hex: "420175"
 xml_text: "ProcessingStage"
+tag_type: "Enumeration"
 ---
 
 # Processing Stage Enumeration

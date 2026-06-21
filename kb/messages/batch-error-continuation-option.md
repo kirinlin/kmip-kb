@@ -10,6 +10,7 @@ related: ["batch-order-option", "batch-count", "result-status", "capability-info
 keywords: ["batch error continuation", "undo", "stop", "continue", "rollback", "42000E", "BatchErrorContinuationOption"]
 tag_hex: "42000E"
 xml_text: "BatchErrorContinuationOption"
+tag_type: "Enumeration"
 ---
 
 # Batch Error Continuation Option

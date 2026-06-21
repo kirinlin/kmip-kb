@@ -10,6 +10,7 @@ related: ["compromise-date", "revocation-reason", "state", "initial-date"]
 keywords: ["compromise occurrence date", "incident time", "key compromise", "forensics", "420021", "CompromiseOccurrenceDate"]
 tag_hex: "420021"
 xml_text: "CompromiseOccurrenceDate"
+tag_type: "Date-Time"
 ---
 
 # Compromise Occurrence Date

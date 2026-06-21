@@ -9,6 +9,7 @@ related: ["query", "query-function-enumeration", "login", "credential-type-enume
 keywords: ["client registration", "registration method", "provisioning", "client identity", "server pre-generated", "4200F6", "ClientRegistrationMethod"]
 tag_hex: "4200F6"
 xml_text: "ClientRegistrationMethod"
+tag_type: "Enumeration"
 ---
 
 # Client Registration Method Enumeration

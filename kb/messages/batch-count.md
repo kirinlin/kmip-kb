@@ -10,6 +10,7 @@ related: ["batch-item", "batch-order-option", "unique-batch-item-id"]
 keywords: ["batch count", "message header", "number of operations", "42000D", "BatchCount"]
 tag_hex: "42000D"
 xml_text: "BatchCount"
+tag_type: "Integer"
 ---
 
 # Batch Count

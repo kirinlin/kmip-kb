@@ -9,6 +9,7 @@ related: ["certificate", "private-key", "public-key", "certify", "re-certify", "
 keywords: ["certificate request", "csr", "pkcs10", "pem", "crmf", "cmc", "certificate signing request", "managed object", "420018", "CertificateRequest"]
 tag_hex: "420018"
 xml_text: "CertificateRequest"
+tag_type: "Byte String"
 ---
 
 # Certificate Request

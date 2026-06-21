@@ -10,6 +10,7 @@ related: ["message-structure", "discover-versions"]
 keywords: ["protocol version", "version negotiation", "major minor", "backward compatibility", "420069", "ProtocolVersion"]
 tag_hex: "420069"
 xml_text: "ProtocolVersion"
+tag_type: "Structure"
 ---
 
 # Protocol Version

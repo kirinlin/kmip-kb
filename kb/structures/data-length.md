@@ -10,6 +10,7 @@ related: ["data", "rng-retrieve"]
 keywords: ["data length", "requested bytes", "RNG retrieve", "4200C4", "DataLength"]
 tag_hex: "4200C4"
 xml_text: "DataLength"
+tag_type: "Integer"
 ---
 
 # Data Length

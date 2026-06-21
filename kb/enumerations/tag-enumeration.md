@@ -9,6 +9,7 @@ related: ["ttlv-encoding", "item-data-types", "message-structure"]
 keywords: ["tag", "TTLV tag", "42XXXX", "tag enumeration", "field identifier", "tag namespace", "420138"]
 tag_hex: "420138"
 xml_text: "Tag"
+tag_type: "Enumeration"
 ---
 
 # Tag Enumeration

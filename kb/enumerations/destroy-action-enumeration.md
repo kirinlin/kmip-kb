@@ -9,6 +9,7 @@ related: ["destroy", "shredding-algorithm-enumeration", "state-enumeration", "re
 keywords: ["destroy action", "key destruction", "shred", "deletion", "metadata", "cryptographic erase", "destroy", "4200F3", "DestroyAction"]
 tag_hex: "4200F3"
 xml_text: "DestroyAction"
+tag_type: "Enumeration"
 ---
 
 # Destroy Action Enumeration

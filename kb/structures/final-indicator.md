@@ -10,6 +10,7 @@ related: ["init-indicator", "correlation-value", "data"]
 keywords: ["final indicator", "streaming", "multi-part", "last part", "4200D8", "FinalIndicator"]
 tag_hex: "4200D8"
 xml_text: "FinalIndicator"
+tag_type: "Boolean"
 ---
 
 # Final Indicator

@@ -9,6 +9,7 @@ related: ["cryptographic-algorithm", "cryptographic-length", "nist-key-type", "p
 keywords: ["quantum safe", "post-quantum", "quantum resistant", "pqc", "quantum computer", "boolean attribute", "420147", "QuantumSafe"]
 tag_hex: "420147"
 xml_text: "QuantumSafe"
+tag_type: "Boolean"
 ---
 
 # Quantum Safe

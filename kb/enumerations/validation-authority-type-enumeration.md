@@ -9,6 +9,7 @@ related: ["cryptographic-parameters"]
 keywords: ["validation authority", "CMVP", "Common Criteria", "NIST validation", "cryptographic module validation", "4200E0", "ValidationAuthorityType"]
 tag_hex: "4200E0"
 xml_text: "ValidationAuthorityType"
+tag_type: "Enumeration"
 ---
 
 # Validation Authority Type Enumeration

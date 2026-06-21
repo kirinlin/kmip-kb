@@ -9,6 +9,7 @@ related: ["derive-key", "derivation-parameters", "hashing-algorithm-enumeration"
 keywords: ["key derivation", "KDF", "PBKDF2", "HKDF", "HMAC", "NIST 800-108", "AWS", "derive key", "derivation method", "420031", "DerivationMethod"]
 tag_hex: "420031"
 xml_text: "DerivationMethod"
+tag_type: "Enumeration"
 ---
 
 # Derivation Method Enumeration

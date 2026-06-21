@@ -10,6 +10,7 @@ related: ["asynchronous-indicator", "result-status", "correlation-value"]
 keywords: ["asynchronous correlation value", "pending operation", "poll", "cancel", "420006", "AsynchronousCorrelationValue"]
 tag_hex: "420006"
 xml_text: "AsynchronousCorrelationValue"
+tag_type: "Byte String"
 ---
 
 # Asynchronous Correlation Value

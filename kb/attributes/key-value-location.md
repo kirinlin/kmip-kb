@@ -10,6 +10,7 @@ related: ["key-value-present", "application-specific-information"]
 keywords: ["key value location", "external key material", "URI", "metadata-only registration", "4200B8", "KeyValueLocation"]
 tag_hex: "4200B8"
 xml_text: "KeyValueLocation"
+tag_type: "Structure"
 ---
 
 # Key Value Location

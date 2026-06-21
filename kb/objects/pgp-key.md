@@ -10,6 +10,7 @@ related: ["register", "get", "public-key", "private-key", "opaque-object", "key-
 keywords: ["PGP key", "OpenPGP", "RFC 4880", "ASCII armor", "key block", "4200BD", "PGPKey"]
 tag_hex: "4200BD"
 xml_text: "PGPKey"
+tag_type: "Structure"
 ---
 
 # PGP Key

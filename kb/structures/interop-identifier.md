@@ -9,6 +9,7 @@ related: ["interop-function", "interop", "message-structure"]
 keywords: ["interop identifier", "interoperability test suite", "test case name", "interop test identifier", "420161", "InteropIdentifier"]
 tag_hex: "420161"
 xml_text: "InteropIdentifier"
+tag_type: "Text String"
 ---
 
 # Interop Identifier

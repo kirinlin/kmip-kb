@@ -10,6 +10,7 @@ related: ["unique-identifier", "object-type", "pkcs-12-friendly-name"]
 keywords: ["link", "link type", "object relationships", "replacement object", "certificate chain", "derived key", "42004A"]
 tag_hex: "42004A"
 xml_text: "Link"
+tag_type: "Structure"
 ---
 
 # Link

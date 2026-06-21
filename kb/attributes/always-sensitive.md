@@ -10,6 +10,7 @@ related: ["sensitive", "never-extractable", "extractable"]
 keywords: ["always sensitive", "history flag", "audit", "PKCS#11 parity", "420121", "AlwaysSensitive"]
 tag_hex: "420121"
 xml_text: "AlwaysSensitive"
+tag_type: "Boolean"
 ---
 
 # Always Sensitive

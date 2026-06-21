@@ -9,6 +9,7 @@ related: ["common-attributes", "public-key-attributes", "attribute", "template-a
 keywords: ["private key attributes", "asymmetric key attributes", "key pair attributes", "private key specific", "attribute structure", "420127", "PrivateKeyAttributes"]
 tag_hex: "420127"
 xml_text: "PrivateKeyAttributes"
+tag_type: "Structure"
 ---
 
 # Private Key Attributes

@@ -10,6 +10,7 @@ related: ["template-attribute-structures", "custom-attribute", "ttlv-encoding"]
 keywords: ["attribute structure", "attribute name", "attribute index", "attribute value", "420008", "Attribute"]
 tag_hex: "420008"
 xml_text: "Attribute"
+tag_type: "Structure"
 ---
 
 # Attribute

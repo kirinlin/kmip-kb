@@ -9,6 +9,7 @@ related: ["key-block", "key-format-type", "get", "register", "key-value"]
 keywords: ["key format", "PKCS#1", "PKCS#8", "X.509", "raw", "transparent", "key encoding", "ECPrivateKey", "PKCS#12", "420042", "KeyFormatType"]
 tag_hex: "420042"
 xml_text: "KeyFormatType"
+tag_type: "Enumeration"
 ---
 
 # Key Format Type Enumeration

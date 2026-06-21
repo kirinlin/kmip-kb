@@ -10,6 +10,7 @@ related: ["create", "register", "get", "locate", "query"]
 keywords: ["operations", "client-to-server", "server-to-client", "lifecycle", "cryptographic operations", "42014F"]
 tag_hex: "42014F"
 xml_text: "Operations"
+tag_type: "Structure"
 ---
 
 # Operations

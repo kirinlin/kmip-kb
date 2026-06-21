@@ -10,6 +10,7 @@ related: ["ttlv-encoding", "message-extension"]
 keywords: ["extension information", "vendor extension", "extension tag", "query extension list", "4200A4", "ExtensionInformation"]
 tag_hex: "4200A4"
 xml_text: "ExtensionInformation"
+tag_type: "Structure"
 ---
 
 # Extension Information

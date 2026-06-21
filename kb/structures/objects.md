@@ -9,6 +9,7 @@ related: ["object-types", "unique-identifier", "query", "locate", "message-struc
 keywords: ["objects structure", "object list", "query response", "unique identifier list", "managed objects summary", "42014E", "Objects"]
 tag_hex: "42014E"
 xml_text: "Objects"
+tag_type: "Structure"
 ---
 
 # Objects

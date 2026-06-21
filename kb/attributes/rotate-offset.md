@@ -9,6 +9,7 @@ related: ["rotate-interval", "rotate-date", "rotate-automatic", "rotate-name", "
 keywords: ["rotate offset", "rotation offset", "grace period", "lead time", "rotation adjustment", "interval", "42016C", "RotateOffset"]
 tag_hex: "42016C"
 xml_text: "RotateOffset"
+tag_type: "Interval"
 ---
 
 # Rotate Offset

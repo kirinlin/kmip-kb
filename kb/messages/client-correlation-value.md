@@ -10,6 +10,7 @@ related: ["server-correlation-value", "correlation-value", "message-structure"]
 keywords: ["client correlation value", "request tracing", "logging", "observability", "420105", "ClientCorrelationValue"]
 tag_hex: "420105"
 xml_text: "ClientCorrelationValue"
+tag_type: "Text String"
 ---
 
 # Client Correlation Value

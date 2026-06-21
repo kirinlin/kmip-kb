@@ -10,6 +10,7 @@ related: ["unique-identifier", "cryptographic-algorithm"]
 keywords: ["object type", "enumeration", "symmetric key", "certificate", "classification", "420057", "ObjectType"]
 tag_hex: "420057"
 xml_text: "ObjectType"
+tag_type: "Enumeration"
 ---
 
 # Object Type

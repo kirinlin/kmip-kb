@@ -9,6 +9,7 @@ related: ["pkcs-11-function", "pkcs-11-input-parameters", "pkcs-11-output-parame
 keywords: ["PKCS#11 interface", "token selection", "slot ID", "Cryptoki library", "PKCS11 interface name", "HSM slot", "420159", "PKCS_11Interface"]
 tag_hex: "420159"
 xml_text: "PKCS_11Interface"
+tag_type: "Structure"
 ---
 
 # PKCS#11 Interface

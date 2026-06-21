@@ -10,6 +10,7 @@ related: ["result-status", "result-message", "batch-item"]
 keywords: ["result reason", "error code", "item not found", "permission denied", "general failure", "42007E", "ResultReason"]
 tag_hex: "42007E"
 xml_text: "ResultReason"
+tag_type: "Enumeration"
 ---
 
 # Result Reason

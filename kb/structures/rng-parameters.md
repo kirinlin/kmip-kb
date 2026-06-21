@@ -10,6 +10,7 @@ related: ["random-number-generator", "capability-information", "validation-infor
 keywords: ["RNG parameters", "DRBG", "NRBG", "prediction resistance", "randomness", "4200D9", "RNGParameters"]
 tag_hex: "4200D9"
 xml_text: "RNGParameters"
+tag_type: "Structure"
 ---
 
 # RNG Parameters

@@ -9,6 +9,7 @@ related: ["revocation-reason", "revoke", "state-enumeration"]
 keywords: ["revocation reason", "key compromise", "CA compromise", "superseded", "cessation", "privilege withdrawn", "revoke", "420082", "RevocationReasonCode"]
 tag_hex: "420082"
 xml_text: "RevocationReasonCode"
+tag_type: "Enumeration"
 ---
 
 # Revocation Reason Code Enumeration

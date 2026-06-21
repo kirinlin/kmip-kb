@@ -9,6 +9,7 @@ related: ["rotate-automatic", "rotate-interval", "rotate-generation", "rotate-la
 keywords: ["rotate date", "key rotation date", "next rotation", "rotation schedule", "date-time", "42016D", "RotateDate"]
 tag_hex: "42016D"
 xml_text: "RotateDate"
+tag_type: "Date-Time"
 ---
 
 # Rotate Date

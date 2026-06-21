@@ -9,6 +9,7 @@ related: ["cryptographic-algorithm-enumeration", "hashing-algorithm-enumeration"
 keywords: ["digital signature", "signature algorithm", "RSA", "ECDSA", "DSA", "EdDSA", "HMAC", "signing", "4200AE", "DigitalSignatureAlgorithm"]
 tag_hex: "4200AE"
 xml_text: "DigitalSignatureAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Digital Signature Algorithm Enumeration

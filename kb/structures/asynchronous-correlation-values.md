@@ -9,6 +9,7 @@ related: ["asynchronous-request", "asynchronous-correlation-value", "query-async
 keywords: ["asynchronous", "correlation values", "pending operations", "async batch", "polling", "420176", "AsynchronousCorrelationValues"]
 tag_hex: "420176"
 xml_text: "AsynchronousCorrelationValues"
+tag_type: "Structure"
 ---
 
 # Asynchronous Correlation Values

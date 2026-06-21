@@ -9,6 +9,7 @@ related: ["key-block", "get"]
 keywords: ["key value location", "URI", "text string", "key reference", "external key", "key location", "4200BA", "KeyValueLocationType"]
 tag_hex: "4200BA"
 xml_text: "KeyValueLocationType"
+tag_type: "Enumeration"
 ---
 
 # Key Value Location Type Enumeration

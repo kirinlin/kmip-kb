@@ -9,6 +9,7 @@ related: ["unique-identifier", "name", "object-type", "locate"]
 keywords: ["short unique identifier", "abbreviated id", "short id", "compact identifier", "text string", "alias", "420136", "ShortUniqueIdentifier"]
 tag_hex: "420136"
 xml_text: "ShortUniqueIdentifier"
+tag_type: "Byte String"
 ---
 
 # Short Unique Identifier

@@ -10,6 +10,7 @@ related: ["x-509-certificate-subject", "certificate-identifier", "certificate-is
 keywords: ["certificate subject", "deprecated", "subject distinguished name", "42001A", "CertificateSubject"]
 tag_hex: "42001A"
 xml_text: "CertificateSubject"
+tag_type: "Structure"
 ---
 
 # Certificate Subject

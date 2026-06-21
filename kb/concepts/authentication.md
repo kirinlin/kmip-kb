@@ -10,6 +10,7 @@ related: ["transport", "error-handling", "credential", "kmip-server-implementati
 keywords: ["authentication", "TLS", "client certificate", "credential", "identity", "mutual authentication", "42000C"]
 tag_hex: "42000C"
 xml_text: "Authentication"
+tag_type: "Structure"
 ---
 
 # Authentication

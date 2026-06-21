@@ -10,6 +10,7 @@ related: ["cryptographic-algorithm", "certificate-type", "digest"]
 keywords: ["digital signature algorithm", "signature", "SHA-256 with RSA", "ECDSA", "certificate signing", "4200AE", "DigitalSignatureAlgorithm"]
 tag_hex: "4200AE"
 xml_text: "DigitalSignatureAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Digital Signature Algorithm

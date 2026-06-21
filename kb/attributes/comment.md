@@ -10,6 +10,7 @@ related: ["description", "contact-information", "custom-attribute"]
 keywords: ["comment", "notes", "informational attribute", "4200FD"]
 tag_hex: "4200FD"
 xml_text: "Comment"
+tag_type: "Text String"
 ---
 
 # Comment

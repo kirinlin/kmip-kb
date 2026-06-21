@@ -9,6 +9,7 @@ related: ["protection-level", "protection-storage-mask", "activation-date", "dea
 keywords: ["protection period", "key lifetime", "protection duration", "interval", "cryptoperiod", "420146", "ProtectionPeriod"]
 tag_hex: "420146"
 xml_text: "ProtectionPeriod"
+tag_type: "Interval"
 ---
 
 # Protection Period

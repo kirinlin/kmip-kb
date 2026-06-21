@@ -10,6 +10,7 @@ related: ["certify", "re-certify", "register", "get", "public-key", "certificate
 keywords: ["certificate", "X.509", "DER", "public key certificate", "PKI", "420013"]
 tag_hex: "420013"
 xml_text: "Certificate"
+tag_type: "Structure"
 ---
 
 # Certificate

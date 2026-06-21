@@ -9,6 +9,7 @@ related: ["pkcs-11-return-code", "pkcs-11-function-enumeration", "pkcs-11-interf
 keywords: ["pkcs11", "CKR", "return code", "Cryptoki error", "PKCS11 error code", "42015D", "PKCS_11ReturnCode"]
 tag_hex: "42015D"
 xml_text: "PKCS_11ReturnCode"
+tag_type: "Enumeration"
 ---
 
 # PKCS#11 Return Code Enumeration

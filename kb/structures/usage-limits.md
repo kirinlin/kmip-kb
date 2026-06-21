@@ -9,6 +9,7 @@ related: ["get-attributes", "locate", "state", "cryptographic-usage-mask"]
 keywords: ["usage limits", "usage count", "usage total", "usage limits unit", "key usage enforcement", "byte count", "object count", "420095", "UsageLimits"]
 tag_hex: "420095"
 xml_text: "UsageLimits"
+tag_type: "Structure"
 ---
 
 # Usage Limits

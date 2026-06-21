@@ -90,6 +90,23 @@
       "type": "string",
       "minLength": 1,
       "description": "CamelCase XML text identifier for this tag (e.g. \"BatchCount\"). Used as the XML element name for structure fields and as the enumeration value text for enumeration tags. Derived from the tag name per KMIP-ENCODE §6.1.3 normalisation algorithm."
+    },
+    "tag_type": {
+      "type": "string",
+      "enum": [
+        "Structure",
+        "Integer",
+        "Long Integer",
+        "Big Integer",
+        "Enumeration",
+        "Boolean",
+        "Text String",
+        "Byte String",
+        "Date-Time",
+        "Interval",
+        "Date-Time Extended"
+      ],
+      "description": "TTLV type byte for this tag — what encoding the tag's value uses on the wire (e.g. \"Structure\", \"Enumeration\", \"Text String\"). Populated by scripts/populate_tag_type.py. Omitted for tags whose type is context-dependent (polymorphic)."
     }
   }
 }

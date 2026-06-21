@@ -9,6 +9,7 @@ related: ["login", "logout", "delegated-login", "authentication", "message-struc
 keywords: ["ticket", "session ticket", "delegation ticket", "ticket type", "ticket value", "token authentication", "420149"]
 tag_hex: "420149"
 xml_text: "Ticket"
+tag_type: "Structure"
 ---
 
 # Ticket

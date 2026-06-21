@@ -10,6 +10,7 @@ related: ["authenticated-encryption-additional-data", "data", "mac-data"]
 keywords: ["authentication tag", "GCM tag", "AEAD", "integrity", "4200FF", "AuthenticatedEncryptionTag"]
 tag_hex: "4200FF"
 xml_text: "AuthenticatedEncryptionTag"
+tag_type: "Byte String"
 ---
 
 # Authenticated Encryption Tag

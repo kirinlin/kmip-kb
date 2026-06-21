@@ -10,6 +10,7 @@ related: ["public-key", "create-key-pair", "certify", "register", "get", "key-bl
 keywords: ["private key", "asymmetric key", "RSA", "EC", "key pair", "wrapping", "420064", "PrivateKey"]
 tag_hex: "420064"
 xml_text: "PrivateKey"
+tag_type: "Structure"
 ---
 
 # Private Key

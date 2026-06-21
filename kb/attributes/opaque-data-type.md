@@ -9,6 +9,7 @@ related: ["opaque-object", "object-type", "custom-attribute"]
 keywords: ["opaque data type", "opaque object", "vendor-defined", "blob type", "opaque data subtype", "420059", "OpaqueDataType"]
 tag_hex: "420059"
 xml_text: "OpaqueDataType"
+tag_type: "Enumeration"
 ---
 
 # Opaque Data Type

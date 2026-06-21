@@ -9,6 +9,7 @@ related: ["name", "alternative-name-type-enumeration", "locate"]
 keywords: ["name type", "URI", "text string", "name attribute", "object name", "420054", "NameType"]
 tag_hex: "420054"
 xml_text: "NameType"
+tag_type: "Enumeration"
 ---
 
 # Name Type Enumeration

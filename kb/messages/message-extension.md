@@ -10,6 +10,7 @@ related: ["batch-item", "extension-information", "ttlv-encoding"]
 keywords: ["message extension", "vendor extension", "criticality indicator", "vendor identification", "420051", "MessageExtension"]
 tag_hex: "420051"
 xml_text: "MessageExtension"
+tag_type: "Structure"
 ---
 
 # Message Extension

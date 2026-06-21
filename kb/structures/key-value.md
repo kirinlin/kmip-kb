@@ -10,6 +10,7 @@ related: ["key-block", "key-wrapping-data", "transparent-key-structures", "attri
 keywords: ["key value", "key material", "wrapped key", "encapsulated attributes", "420045", "KeyValue"]
 tag_hex: "420045"
 xml_text: "KeyValue"
+tag_type: "Structure"
 ---
 
 # Key Value

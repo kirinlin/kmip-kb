@@ -10,6 +10,7 @@ related: ["derive-key", "register", "get", "symmetric-key", "key-block", "crypto
 keywords: ["secret data", "password", "shared secret", "seed", "derivation", "420085", "SecretData"]
 tag_hex: "420085"
 xml_text: "SecretData"
+tag_type: "Structure"
 ---
 
 # Secret Data

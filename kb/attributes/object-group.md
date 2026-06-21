@@ -10,6 +10,7 @@ related: ["name", "application-specific-information", "fresh"]
 keywords: ["object group", "grouping", "group member", "locate", "default group", "420056", "ObjectGroup"]
 tag_hex: "420056"
 xml_text: "ObjectGroup"
+tag_type: "Text String"
 ---
 
 # Object Group

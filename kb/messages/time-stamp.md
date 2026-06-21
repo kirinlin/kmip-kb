@@ -10,6 +10,7 @@ related: ["message-structure", "initial-date", "last-change-date"]
 keywords: ["time stamp", "message header", "clock skew", "POSIX time", "420092", "TimeStamp"]
 tag_hex: "420092"
 xml_text: "TimeStamp"
+tag_type: "Date-Time"
 ---
 
 # Time Stamp

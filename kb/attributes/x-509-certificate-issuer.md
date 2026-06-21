@@ -10,6 +10,7 @@ related: ["x-509-certificate-identifier", "x-509-certificate-subject", "certific
 keywords: ["X.509 certificate issuer", "issuer distinguished name", "issuer alternative name", "CA", "4200B6", "X_509CertificateIssuer"]
 tag_hex: "4200B6"
 xml_text: "X_509CertificateIssuer"
+tag_type: "Structure"
 ---
 
 # X.509 Certificate Issuer

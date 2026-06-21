@@ -9,6 +9,7 @@ related: ["destroy", "destroy-action-enumeration"]
 keywords: ["shredding", "key destruction", "secure erase", "overwrite", "cryptographic erase", "4200F4", "ShreddingAlgorithm"]
 tag_hex: "4200F4"
 xml_text: "ShreddingAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Shredding Algorithm Enumeration

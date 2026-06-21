@@ -9,6 +9,7 @@ related: ["login", "attestation-type-enumeration", "ticket-type-enumeration"]
 keywords: ["credential", "authentication", "username password", "device", "attestation", "one-time password", "ticket", "hashed password", "420024", "CredentialType"]
 tag_hex: "420024"
 xml_text: "CredentialType"
+tag_type: "Enumeration"
 ---
 
 # Credential Type Enumeration

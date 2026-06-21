@@ -9,6 +9,7 @@ related: ["right", "rights", "constraint", "constraints", "message-structure"]
 keywords: ["operation", "operation code", "KMIP operations", "rights", "access control", "batch item", "42005C"]
 tag_hex: "42005C"
 xml_text: "Operation"
+tag_type: "Enumeration"
 ---
 
 # Operation Enumeration

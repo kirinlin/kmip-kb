@@ -9,6 +9,7 @@ related: ["cancel", "asynchronous-indicator-enumeration", "processing-stage-enum
 keywords: ["cancellation", "cancel", "async", "asynchronous operation", "stop", "abort", "420012", "CancellationResult"]
 tag_hex: "420012"
 xml_text: "CancellationResult"
+tag_type: "Enumeration"
 ---
 
 # Cancellation Result Enumeration

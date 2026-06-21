@@ -9,6 +9,7 @@ related: ["objects", "query", "locate", "server-information"]
 keywords: ["object groups", "group names", "object group", "group membership", "locate filter", "420166", "ObjectGroups"]
 tag_hex: "420166"
 xml_text: "ObjectGroups"
+tag_type: "Structure"
 ---
 
 # Object Groups

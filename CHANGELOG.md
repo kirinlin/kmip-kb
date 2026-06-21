@@ -8,6 +8,9 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `tag_type` frontmatter field added to 223 KB docs that carry `tag_hex`/`xml_text`, recording the TTLV wire type (`Structure`, `Enumeration`, `Text String`, `Date-Time`, etc.) for each named KMIP tag. The one genuinely polymorphic tag (`UniqueIdentifier`) is intentionally omitted.
+- `scripts/populate_tag_type.py` — derives `tag_type` from KMIP XML test-case files and a static override table; supports `--dry-run` and `--check` CI guard.
+- `tag_type` property added to `schemas/frontmatter.schema.json` (optional enum of all eleven TTLV types).
 - `scripts/enrich_mask_tables.py` — inserts an `XML Text` column (CamelCase KMIP-ENCODE §6.1.3 form) into the bit tables of `kb/encoding/*-mask.md` docs; idempotent with `--dry-run` and `--check` CI guard.
 - `XML Text` column added to the `Fields & Structure` bit tables of all three mask docs (`cryptographic-usage-mask.md`, `protection-storage-mask.md`, `storage-status-mask.md`).
 

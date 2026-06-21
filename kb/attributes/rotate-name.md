@@ -9,6 +9,7 @@ related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-interv
 keywords: ["rotate name", "rotation group", "rotation policy name", "key family", "rotation identifier", "42016F", "RotateName"]
 tag_hex: "42016F"
 xml_text: "RotateName"
+tag_type: "Structure"
 ---
 
 # Rotate Name

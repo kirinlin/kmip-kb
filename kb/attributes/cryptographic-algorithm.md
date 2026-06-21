@@ -10,6 +10,7 @@ related: ["cryptographic-length", "cryptographic-parameters", "digital-signature
 keywords: ["cryptographic algorithm", "AES", "RSA", "algorithm enumeration", "420028", "CryptographicAlgorithm"]
 tag_hex: "420028"
 xml_text: "CryptographicAlgorithm"
+tag_type: "Enumeration"
 ---
 
 # Cryptographic Algorithm

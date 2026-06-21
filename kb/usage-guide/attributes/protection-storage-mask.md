@@ -9,6 +9,7 @@ related: ["server-policy"]
 keywords: ["Protection Storage Mask", "storage", "HSM", "data sovereignty", "geographic constraint", "preference", "42015E", "ProtectionStorageMask"]
 tag_hex: "42015E"
 xml_text: "ProtectionStorageMask"
+tag_type: "Integer"
 ---
 
 # Protection Storage Mask

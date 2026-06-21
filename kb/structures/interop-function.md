@@ -9,6 +9,7 @@ related: ["interop-identifier", "interop", "message-structure"]
 keywords: ["interop function", "interoperability test", "test function", "interop operation", "KMIP testing", "420160", "InteropFunction"]
 tag_hex: "420160"
 xml_text: "InteropFunction"
+tag_type: "Enumeration"
 ---
 
 # Interop Function

@@ -10,6 +10,7 @@ related: ["register", "create", "create-key-pair", "name", "get"]
 keywords: ["template", "deprecated", "attributes", "named object", "420090"]
 tag_hex: "420090"
 xml_text: "Template"
+tag_type: "Structure"
 ---
 
 # Template

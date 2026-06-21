@@ -10,6 +10,7 @@ related: ["client-correlation-value", "correlation-value", "message-structure"]
 keywords: ["server correlation value", "request ID", "audit", "logging", "420106", "ServerCorrelationValue"]
 tag_hex: "420106"
 xml_text: "ServerCorrelationValue"
+tag_type: "Text String"
 ---
 
 # Server Correlation Value

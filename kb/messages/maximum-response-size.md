@@ -10,6 +10,7 @@ related: ["message-structure", "result-reason", "batch-count"]
 keywords: ["maximum response size", "response too large", "buffer limit", "constrained client", "420050", "MaximumResponseSize"]
 tag_hex: "420050"
 xml_text: "MaximumResponseSize"
+tag_type: "Integer"
 ---
 
 # Maximum Response Size

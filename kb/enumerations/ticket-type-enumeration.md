@@ -9,6 +9,7 @@ related: ["ticket", "login", "logout", "delegated-login", "authentication"]
 keywords: ["ticket type", "session ticket", "login ticket", "delegation ticket", "authentication ticket", "42014A", "TicketType"]
 tag_hex: "42014A"
 xml_text: "TicketType"
+tag_type: "Enumeration"
 ---
 
 # Ticket Type Enumeration

@@ -9,6 +9,7 @@ related: ["constraints", "rights", "right", "attribute-reference", "set-constrai
 keywords: ["constraint", "access constraint", "attribute constraint", "policy rule", "object type constraint", "operation constraint", "420169"]
 tag_hex: "420169"
 xml_text: "Constraint"
+tag_type: "Structure"
 ---
 
 # Constraint

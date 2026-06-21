@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "rng-algorithm-enumeration", "drbg-algorit
 keywords: ["RNG mode", "prediction resistance", "reseeding", "non-reseeding", "random generation mode", "4200F5", "RNGMode"]
 tag_hex: "4200F5"
 xml_text: "RNGMode"
+tag_type: "Enumeration"
 ---
 
 # RNG Mode Enumeration

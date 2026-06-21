@@ -10,6 +10,7 @@ related: ["credential", "nonce", "result-reason"]
 keywords: ["attestation capable indicator", "TPM", "attestation required", "request header", "4200D3", "AttestationCapableIndicator"]
 tag_hex: "4200D3"
 xml_text: "AttestationCapableIndicator"
+tag_type: "Boolean"
 ---
 
 # Attestation Capable Indicator

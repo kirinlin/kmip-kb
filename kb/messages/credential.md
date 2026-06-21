@@ -10,6 +10,7 @@ related: ["authentication", "nonce", "message-structure"]
 keywords: ["credential", "username password", "device credential", "attestation", "client identity", "420023"]
 tag_hex: "420023"
 xml_text: "Credential"
+tag_type: "Structure"
 ---
 
 # Credential

@@ -10,6 +10,7 @@ related: ["data", "signature-data", "authenticated-encryption-tag"]
 keywords: ["MAC data", "message authentication code", "HMAC", "MAC verify", "4200C6", "MACData"]
 tag_hex: "4200C6"
 xml_text: "MACData"
+tag_type: "Byte String"
 ---
 
 # MAC Data

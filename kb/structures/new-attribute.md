@@ -9,6 +9,7 @@ related: ["attribute", "current-attribute", "attribute-reference", "set-attribut
 keywords: ["new attribute", "updated attribute", "replacement attribute value", "attribute modification", "42013D", "NewAttribute"]
 tag_hex: "42013D"
 xml_text: "NewAttribute"
+tag_type: "Structure"
 ---
 
 # New Attribute

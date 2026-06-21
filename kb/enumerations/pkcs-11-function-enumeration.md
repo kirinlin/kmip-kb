@@ -9,6 +9,7 @@ related: ["pkcs-11-function", "pkcs-11-interface", "pkcs-11-input-parameters", "
 keywords: ["pkcs11", "cryptoki", "CK function", "C_Encrypt", "C_Sign", "C_GenerateKey", "PKCS11 function", "42015A", "PKCS_11Function"]
 tag_hex: "42015A"
 xml_text: "PKCS_11Function"
+tag_type: "Enumeration"
 ---
 
 # PKCS#11 Function Enumeration

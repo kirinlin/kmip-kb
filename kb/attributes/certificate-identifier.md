@@ -10,6 +10,7 @@ related: ["x-509-certificate-identifier", "certificate-subject", "certificate-is
 keywords: ["certificate identifier", "deprecated", "issuer", "serial number", "420014", "CertificateIdentifier"]
 tag_hex: "420014"
 xml_text: "CertificateIdentifier"
+tag_type: "Structure"
 ---
 
 # Certificate Identifier

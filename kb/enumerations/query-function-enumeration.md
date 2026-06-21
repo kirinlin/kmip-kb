@@ -9,6 +9,7 @@ related: ["query", "server-information", "profile-version", "protection-storage-
 keywords: ["query function", "query", "server capabilities", "query operations", "server information", "profiles", "420074", "QueryFunction"]
 tag_hex: "420074"
 xml_text: "QueryFunction"
+tag_type: "Enumeration"
 ---
 
 # Query Function Enumeration

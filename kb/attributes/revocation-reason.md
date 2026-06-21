@@ -10,6 +10,7 @@ related: ["state", "compromise-date", "deactivation-date"]
 keywords: ["revocation reason", "revoke", "key compromise", "superseded", "audit", "420081", "RevocationReason"]
 tag_hex: "420081"
 xml_text: "RevocationReason"
+tag_type: "Structure"
 ---
 
 # Revocation Reason

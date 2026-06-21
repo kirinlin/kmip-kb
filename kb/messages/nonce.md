@@ -10,6 +10,7 @@ related: ["credential", "attestation-capable-indicator", "message-structure"]
 keywords: ["nonce", "attestation", "replay protection", "challenge", "4200C8"]
 tag_hex: "4200C8"
 xml_text: "Nonce"
+tag_type: "Structure"
 ---
 
 # Nonce

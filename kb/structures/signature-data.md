@@ -10,6 +10,7 @@ related: ["data", "mac-data", "digital-signature-algorithm"]
 keywords: ["signature data", "sign", "signature verify", "digital signature bytes", "4200C3", "SignatureData"]
 tag_hex: "4200C3"
 xml_text: "SignatureData"
+tag_type: "Byte String"
 ---
 
 # Signature Data

@@ -10,6 +10,7 @@ related: ["initial-date", "original-creation-date", "state"]
 keywords: ["last change date", "modification time", "audit", "notify", "420048", "LastChangeDate"]
 tag_hex: "420048"
 xml_text: "LastChangeDate"
+tag_type: "Date-Time"
 ---
 
 # Last Change Date

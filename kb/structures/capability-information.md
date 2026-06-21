@@ -10,6 +10,7 @@ related: ["profile-information", "validation-information", "correlation-value"]
 keywords: ["capability information", "streaming capability", "asynchronous capability", "destroy action", "unwrap mode", "4200F7", "CapabilityInformation"]
 tag_hex: "4200F7"
 xml_text: "CapabilityInformation"
+tag_type: "Structure"
 ---
 
 # Capability Information

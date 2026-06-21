@@ -10,6 +10,7 @@ related: ["data-length", "signature-data", "mac-data", "correlation-value"]
 keywords: ["data", "payload", "encrypt", "decrypt", "sign", "cryptographic operations", "4200C2"]
 tag_hex: "4200C2"
 xml_text: "Data"
+tag_type: "Structure"
 ---
 
 # Data

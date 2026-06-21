@@ -10,6 +10,7 @@ related: ["register", "get", "secret-data", "name"]
 keywords: ["opaque object", "blob", "custom attributes", "unmanaged format", "42005B", "OpaqueObject"]
 tag_hex: "42005B"
 xml_text: "OpaqueObject"
+tag_type: "Structure"
 ---
 
 # Opaque Object

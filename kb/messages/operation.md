@@ -10,6 +10,7 @@ related: ["batch-item", "operations", "message-structure"]
 keywords: ["operation field", "operation enumeration", "batch item", "request type", "42005C", "Operation"]
 tag_hex: "42005C"
 xml_text: "Operation"
+tag_type: "Enumeration"
 ---
 
 # Operation

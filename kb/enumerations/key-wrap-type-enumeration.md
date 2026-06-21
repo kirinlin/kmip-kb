@@ -9,6 +9,7 @@ related: ["key-block", "key-wrapping-data", "wrapping-method-enumeration", "enco
 keywords: ["key wrap type", "wrapped", "not wrapped", "key wrapping", "key block", "transport", "4200F8", "KeyWrapType"]
 tag_hex: "4200F8"
 xml_text: "KeyWrapType"
+tag_type: "Enumeration"
 ---
 
 # Key Wrap Type Enumeration

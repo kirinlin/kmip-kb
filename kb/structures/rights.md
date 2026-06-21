@@ -9,6 +9,7 @@ related: ["right", "constraint", "constraints", "set-constraints", "get-constrai
 keywords: ["rights", "access rights", "principal permissions", "authorization policy", "KMIP access control", "operation list", "42014D"]
 tag_hex: "42014D"
 xml_text: "Rights"
+tag_type: "Structure"
 ---
 
 # Rights

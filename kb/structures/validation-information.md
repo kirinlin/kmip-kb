@@ -10,6 +10,7 @@ related: ["profile-information", "capability-information", "rng-parameters"]
 keywords: ["validation information", "FIPS 140", "Common Criteria", "certification", "CMVP", "4200DF", "ValidationInformation"]
 tag_hex: "4200DF"
 xml_text: "ValidationInformation"
+tag_type: "Structure"
 ---
 
 # Validation Information

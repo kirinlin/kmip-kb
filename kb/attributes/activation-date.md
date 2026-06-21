@@ -10,6 +10,7 @@ related: ["state", "initial-date", "deactivation-date", "process-start-date"]
 keywords: ["activation date", "active state", "lifecycle dates", "activate", "420001", "ActivationDate"]
 tag_hex: "420001"
 xml_text: "ActivationDate"
+tag_type: "Date-Time"
 ---
 
 # Activation Date

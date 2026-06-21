@@ -10,6 +10,7 @@ related: ["result-reason", "result-message", "batch-error-continuation-option"]
 keywords: ["result status", "success", "operation failed", "operation pending", "operation undone", "42007F", "ResultStatus"]
 tag_hex: "42007F"
 xml_text: "ResultStatus"
+tag_type: "Enumeration"
 ---
 
 # Result Status

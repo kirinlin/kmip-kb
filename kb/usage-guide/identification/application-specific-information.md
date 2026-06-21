@@ -9,6 +9,7 @@ related: ["object-group"]
 keywords: ["Application Specific Information", "Application Namespace", "Application Data", "server-generated data", "namespaces", "420004", "ApplicationSpecificInformation"]
 tag_hex: "420004"
 xml_text: "ApplicationSpecificInformation"
+tag_type: "Structure"
 ---
 
 # Application Specific Information

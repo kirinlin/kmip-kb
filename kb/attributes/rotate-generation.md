@@ -9,6 +9,7 @@ related: ["rotate-automatic", "rotate-date", "rotate-interval", "rotate-latest",
 keywords: ["rotate generation", "key generation", "rotation count", "generation number", "key versioning", "42016E", "RotateGeneration"]
 tag_hex: "42016E"
 xml_text: "RotateGeneration"
+tag_type: "Integer"
 ---
 
 # Rotate Generation

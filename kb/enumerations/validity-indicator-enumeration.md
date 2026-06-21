@@ -9,6 +9,7 @@ related: ["validate", "certificate"]
 keywords: ["validity indicator", "valid", "invalid", "unknown", "validate", "certificate validation", "42009B", "ValidityIndicator"]
 tag_hex: "42009B"
 xml_text: "ValidityIndicator"
+tag_type: "Enumeration"
 ---
 
 # Validity Indicator Enumeration

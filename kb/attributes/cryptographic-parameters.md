@@ -10,6 +10,7 @@ related: ["cryptographic-algorithm", "cryptographic-domain-parameters", "cryptog
 keywords: ["cryptographic parameters", "block cipher mode", "padding", "IV", "key role", "OAEP", "PSS", "42002B", "CryptographicParameters"]
 tag_hex: "42002B"
 xml_text: "CryptographicParameters"
+tag_type: "Structure"
 ---
 
 # Cryptographic Parameters

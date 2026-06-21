@@ -10,6 +10,7 @@ related: ["lease-time", "cryptographic-usage-mask", "state"]
 keywords: ["usage limits", "usage allocation", "byte limit", "key exhaustion", "quota", "420095", "UsageLimits"]
 tag_hex: "420095"
 xml_text: "UsageLimits"
+tag_type: "Structure"
 ---
 
 # Usage Limits

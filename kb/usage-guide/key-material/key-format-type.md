@@ -9,6 +9,7 @@ related: ["key-block", "key-encoding"]
 keywords: ["Key Format Type", "Digest", "encoding format", "interoperability", "format negotiation", "420042", "KeyFormatType"]
 tag_hex: "420042"
 xml_text: "KeyFormatType"
+tag_type: "Enumeration"
 ---
 
 # Key Format Type

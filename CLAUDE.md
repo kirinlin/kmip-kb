@@ -22,9 +22,14 @@ Spec section → category mapping (baseline **v2.1** numbering): §2 Objects→`
 
 Every doc has YAML front matter validated against `schemas/frontmatter.schema.json`, with `status: stub | draft | reviewed`. `source_section` is the **v2.1** baseline section; `v1_source_section` (optional) records the v1.x section for the same concept. Features removed in v2.0 use `source_section: "del_v2"` and keep their last v1.x section in `v1_source_section`; v2.x-only features omit `v1_source_section`.
 
-Two optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
+Three optional fields are present on docs that map to a named KMIP tag (§11.56 Tag Enumeration):
 - `tag_hex`: 6-digit uppercase hex tag value, e.g. `"42000D"` — enables hex-lookup search.
 - `xml_text`: CamelCase XML text identifier per KMIP-ENCODE §6.1.3, e.g. `"BatchCount"` — used as the XML element name for structure fields and as the enumeration value text for enumeration tags. Enables XML-context search. Populated by `scripts/populate_tag_fields.py`; 223 docs carry these fields. Edge-case forms: `X_509CertificateIdentifier`, `PKCS_12FriendlyName` (underscore before digits, per the official spec algorithm verified against v2.1 test-case XML). The script also parses all v1.x and v2.0 specs to cover the 17 tags deprecated by v2.0 (17 identified via cross-version diff; 6 have KB docs). Both `tag_hex` and `xml_text` values are automatically added to `keywords` for RAG retrieval.
+- `tag_type`: TTLV type byte for this tag — what encoding the tag's value uses on the wire. One of: `Structure`, `Integer`, `Long Integer`, `Big Integer`, `Enumeration`, `Boolean`, `Text String`, `Byte String`, `Date-Time`, `Interval`, `Date-Time Extended`. Populated by `scripts/populate_tag_type.py` (requires `raw/` XML test cases); 223 docs carry this field. Omitted for the single genuinely polymorphic tag (`UniqueIdentifier`, which may be Text String, Integer, or Enumeration depending on context). The script infers type from KMIP XML test-case files, supplemented by `_STATIC_OVERRIDES` for tags absent from the test corpus (del_v2 attributes, obscure v2.1 fields) and category fallbacks for unambiguous cases (`enumerations` → Enumeration, `structures` → Structure). Run it after `populate_tag_fields.py`:
+
+```
+python scripts/populate_tag_type.py [--dry-run] [--check]   # --check exits non-zero if any resolvable doc is missing tag_type
+```
 
 ## Field tables (Tag / XML Text columns)
 
@@ -140,6 +145,7 @@ python scripts/validate_links.py [dir ...]      # checks related slugs + relativ
 python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Text columns
 python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Value/XML Text
 python scripts/enrich_mask_tables.py --check    # Bit-mask tables carry up-to-date XML Text column
+python scripts/populate_tag_type.py --check     # tag_hex docs carry tag_type (requires raw/ XML test cases)
 ```
 
 Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0

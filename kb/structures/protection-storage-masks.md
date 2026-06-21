@@ -9,6 +9,7 @@ related: ["protection-storage-mask", "protection-storage-mask", "server-informat
 keywords: ["protection storage masks", "supported storage configurations", "storage protection list", "query response", "server capabilities", "42015F", "ProtectionStorageMasks"]
 tag_hex: "42015F"
 xml_text: "ProtectionStorageMasks"
+tag_type: "Structure"
 ---
 
 # Protection Storage Masks

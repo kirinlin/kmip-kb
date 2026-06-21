@@ -9,6 +9,7 @@ related: ["result-status-enumeration", "message-structure", "error-handling"]
 keywords: ["result reason", "error code", "failure reason", "item not found", "operation not supported", "permission denied", "42007E", "ResultReason"]
 tag_hex: "42007E"
 xml_text: "ResultReason"
+tag_type: "Enumeration"
 ---
 
 # Result Reason Enumeration

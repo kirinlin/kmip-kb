@@ -10,6 +10,7 @@ related: ["application-specific-information", "description", "comment"]
 keywords: ["custom attribute", "x- prefix", "y- prefix", "vendor extension", "client-defined attribute", "42002D", "CustomAttribute"]
 tag_hex: "42002D"
 xml_text: "CustomAttribute"
+tag_type: "Structure"
 ---
 
 # Custom Attribute

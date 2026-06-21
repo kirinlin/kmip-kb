@@ -9,6 +9,7 @@ xml_text: "KeyFormatType"
 status: reviewed
 related: ["cryptographic-algorithm", "cryptographic-length", "key-block", "symmetric-key", "public-key", "private-key"]
 keywords: ["key format type", "key format", "raw", "pkcs1", "pkcs8", "transparent", "opaque key", "stored format", "420042", "KeyFormatType"]
+tag_type: "Enumeration"
 ---
 
 # Key Format Type (Attribute)

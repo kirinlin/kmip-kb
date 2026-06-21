@@ -10,6 +10,7 @@ related: ["key-value", "key-wrapping-data", "transparent-key-structures", "crypt
 keywords: ["key block", "key format type", "key compression", "wrapped key", "key container", "420040", "KeyBlock"]
 tag_hex: "420040"
 xml_text: "KeyBlock"
+tag_type: "Structure"
 ---
 
 # Key Block

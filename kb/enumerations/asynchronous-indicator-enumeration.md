@@ -9,6 +9,7 @@ related: ["asynchronous-request", "query-asynchronous-requests", "cancel", "poll
 keywords: ["asynchronous", "async", "synchronous", "correlation value", "batch", "non-blocking", "420007", "AsynchronousIndicator"]
 tag_hex: "420007"
 xml_text: "AsynchronousIndicator"
+tag_type: "Enumeration"
 ---
 
 # Asynchronous Indicator Enumeration

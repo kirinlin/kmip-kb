@@ -9,6 +9,7 @@ related: ["log", "message-structure"]
 keywords: ["log message", "audit log", "log operation", "log level", "log text", "server log", "420141", "LogMessage"]
 tag_hex: "420141"
 xml_text: "LogMessage"
+tag_type: "Text String"
 ---
 
 # Log Message

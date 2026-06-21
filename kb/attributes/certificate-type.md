@@ -10,6 +10,7 @@ related: ["certificate-length", "x-509-certificate-identifier", "digital-signatu
 keywords: ["certificate type", "X.509", "PGP", "certificate", "42001D", "CertificateType"]
 tag_hex: "42001D"
 xml_text: "CertificateType"
+tag_type: "Enumeration"
 ---
 
 # Certificate Type

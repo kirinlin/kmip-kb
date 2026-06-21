@@ -10,6 +10,7 @@ related: ["link", "name", "secret-data"]
 keywords: ["PKCS#12", "friendly name", "alias", "keystore", "private key", "4200FB", "PKCS_12FriendlyName"]
 tag_hex: "4200FB"
 xml_text: "PKCS_12FriendlyName"
+tag_type: "Text String"
 ---
 
 # PKCS#12 Friendly Name

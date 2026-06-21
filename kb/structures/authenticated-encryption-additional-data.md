@@ -10,6 +10,7 @@ related: ["authenticated-encryption-tag", "data", "cryptographic-parameters"]
 keywords: ["AAD", "additional authenticated data", "GCM", "CCM", "AEAD", "4200FE", "AuthenticatedEncryptionAdditionalData"]
 tag_hex: "4200FE"
 xml_text: "AuthenticatedEncryptionAdditionalData"
+tag_type: "Byte String"
 ---
 
 # Authenticated Encryption Additional Data

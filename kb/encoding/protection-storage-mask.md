@@ -9,6 +9,7 @@ related: ["protection-storage-masks", "protection-storage-mask", "protection-lev
 keywords: ["protection storage mask", "bit mask", "storage protection", "on premise", "off premise", "hardware module", "cloud storage", "third party", "42015E", "ProtectionStorageMask"]
 tag_hex: "42015E"
 xml_text: "ProtectionStorageMask"
+tag_type: "Integer"
 ---
 
 # Protection Storage Mask

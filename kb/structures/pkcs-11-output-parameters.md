@@ -9,6 +9,7 @@ related: ["pkcs-11-function", "pkcs-11-input-parameters", "pkcs-11-interface", "
 keywords: ["PKCS#11 output", "Cryptoki output", "function result", "ciphertext output", "signature output", "PKCS11 tunnel output", "42015C", "PKCS_11OutputParameters"]
 tag_hex: "42015C"
 xml_text: "PKCS_11OutputParameters"
+tag_type: "Byte String"
 ---
 
 # PKCS#11 Output Parameters

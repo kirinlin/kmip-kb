@@ -9,6 +9,7 @@ related: ["alternative-name", "name-type-enumeration", "unique-identifier"]
 keywords: ["alternative name", "name type", "URI", "DNS name", "X.500", "object identity", "serial number", "4200C1", "AlternativeNameType"]
 tag_hex: "4200C1"
 xml_text: "AlternativeNameType"
+tag_type: "Enumeration"
 ---
 
 # Alternative Name Type Enumeration

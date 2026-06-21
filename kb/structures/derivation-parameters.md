@@ -9,6 +9,7 @@ related: ["derive-key", "key-block", "cryptographic-algorithm"]
 keywords: ["derivation parameters", "key derivation", "PBKDF2", "HKDF", "SP800-108", "derivation method", "salt", "iteration count", "KDF", "420032", "DerivationParameters"]
 tag_hex: "420032"
 xml_text: "DerivationParameters"
+tag_type: "Structure"
 ---
 
 # Derivation Parameters

@@ -9,6 +9,7 @@ related: ["split-key", "split-key-algorithms", "cryptographic-parameters"]
 keywords: ["split key method", "secret sharing", "XOR", "Shamir", "polynomial sharing", "Blakley", "GF", "key splitting", "42008A", "SplitKeyMethod"]
 tag_hex: "42008A"
 xml_text: "SplitKeyMethod"
+tag_type: "Enumeration"
 ---
 
 # Split Key Method Enumeration

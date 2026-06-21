@@ -10,6 +10,7 @@ related: ["x-509-certificate-issuer", "certificate-identifier", "certificate-sub
 keywords: ["certificate issuer", "deprecated", "issuer distinguished name", "420015", "CertificateIssuer"]
 tag_hex: "420015"
 xml_text: "CertificateIssuer"
+tag_type: "Structure"
 ---
 
 # Certificate Issuer

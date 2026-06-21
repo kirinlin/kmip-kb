@@ -9,6 +9,7 @@ related: ["default-crypto-parameters", "server-policy"]
 keywords: ["constraints", "SetConstraints", "GetConstraints", "algorithm constraints", "key length", "Object Group", "420168"]
 tag_hex: "420168"
 xml_text: "Constraints"
+tag_type: "Structure"
 ---
 
 # Constraints

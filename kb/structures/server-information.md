@@ -9,6 +9,7 @@ related: ["query", "profile-version", "protocol-version", "object-types", "prote
 keywords: ["server information", "server name", "server version", "vendor identification", "server instance", "conformance clause", "420088", "ServerInformation"]
 tag_hex: "420088"
 xml_text: "ServerInformation"
+tag_type: "Structure"
 ---
 
 # Server Information

@@ -9,6 +9,7 @@ related: ["key-wrapping-data", "key-block", "get", "cryptographic-parameters"]
 keywords: ["unwrap mode", "key unwrap", "MAC verify", "decrypt", "key extraction", "wrap mode", "4200F2", "UnwrapMode"]
 tag_hex: "4200F2"
 xml_text: "UnwrapMode"
+tag_type: "Enumeration"
 ---
 
 # Unwrap Mode Enumeration

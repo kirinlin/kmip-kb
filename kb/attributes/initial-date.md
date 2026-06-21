@@ -10,6 +10,7 @@ related: ["original-creation-date", "activation-date", "last-change-date", "stat
 keywords: ["initial date", "creation time", "registration time", "lifecycle dates", "420039", "InitialDate"]
 tag_hex: "420039"
 xml_text: "InitialDate"
+tag_type: "Date-Time"
 ---
 
 # Initial Date

@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "padding-method-enumeration", "hashing-alg
 keywords: ["mask generator", "MGF", "MFG1", "OAEP", "PSS", "RSA", "mask generation function", "420101", "MaskGenerator"]
 tag_hex: "420101"
 xml_text: "MaskGenerator"
+tag_type: "Enumeration"
 ---
 
 # Mask Generator Enumeration

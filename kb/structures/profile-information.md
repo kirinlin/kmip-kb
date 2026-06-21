@@ -10,6 +10,7 @@ related: ["capability-information", "validation-information", "kmip-server-imple
 keywords: ["profile information", "profile name", "server URI", "conformance discovery", "4200EB", "ProfileInformation"]
 tag_hex: "4200EB"
 xml_text: "ProfileInformation"
+tag_type: "Structure"
 ---
 
 # Profile Information

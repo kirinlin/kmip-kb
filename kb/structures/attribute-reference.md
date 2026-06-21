@@ -9,6 +9,7 @@ related: ["attribute", "current-attribute", "new-attribute", "set-attribute", "d
 keywords: ["attribute reference", "attribute name", "attribute index", "attribute pointer", "attribute identification", "42013B", "AttributeReference"]
 tag_hex: "42013B"
 xml_text: "AttributeReference"
+tag_type: "Structure"
 ---
 
 # Attribute Reference

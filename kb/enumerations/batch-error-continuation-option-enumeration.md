@@ -9,6 +9,7 @@ related: ["result-status-enumeration", "result-reason-enumeration", "asynchronou
 keywords: ["batch", "error handling", "continue", "stop", "undo", "rollback", "batch item", "request header", "42000E", "BatchErrorContinuationOption"]
 tag_hex: "42000E"
 xml_text: "BatchErrorContinuationOption"
+tag_type: "Enumeration"
 ---
 
 # Batch Error Continuation Option Enumeration

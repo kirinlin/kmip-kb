@@ -9,6 +9,7 @@ related: ["server-information", "query", "protocol-version"]
 keywords: ["profile version", "profile name", "KMIP profile", "conformance profile", "server capabilities", "420142", "ProfileVersion"]
 tag_hex: "420142"
 xml_text: "ProfileVersion"
+tag_type: "Structure"
 ---
 
 # Profile Version

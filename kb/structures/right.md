@@ -9,6 +9,7 @@ related: ["rights", "constraint", "constraints", "set-constraints", "get-constra
 keywords: ["right", "access right", "operation permission", "KMIP operation", "authorization", "access control", "420150"]
 tag_hex: "420150"
 xml_text: "Right"
+tag_type: "Structure"
 ---
 
 # Right

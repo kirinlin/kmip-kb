@@ -10,6 +10,7 @@ related: ["initial-date", "last-change-date", "random-number-generator"]
 keywords: ["original creation date", "key age", "registration", "provenance", "4200BC", "OriginalCreationDate"]
 tag_hex: "4200BC"
 xml_text: "OriginalCreationDate"
+tag_type: "Date-Time"
 ---
 
 # Original Creation Date

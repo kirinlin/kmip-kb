@@ -9,6 +9,7 @@ related: ["key-wrapping-data", "key-block", "get", "cryptographic-parameters", "
 keywords: ["wrapping method", "key wrap", "encrypt", "MAC", "TR-31", "key protection", "key transport", "42009E", "WrappingMethod"]
 tag_hex: "42009E"
 xml_text: "WrappingMethod"
+tag_type: "Enumeration"
 ---
 
 # Wrapping Method Enumeration

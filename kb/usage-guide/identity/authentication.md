@@ -9,6 +9,7 @@ related: ["credential", "transport"]
 keywords: ["authentication", "TLS", "credential", "username password", "device credential", "attestation", "identity", "42000C"]
 tag_hex: "42000C"
 xml_text: "Authentication"
+tag_type: "Structure"
 ---
 
 # Authentication

@@ -9,6 +9,7 @@ related: ["usage-limits", "get-usage-allocation", "obtain-lease"]
 keywords: ["usage limits", "usage unit", "byte count", "object count", "key usage counting", "420098", "UsageLimitsUnit"]
 tag_hex: "420098"
 xml_text: "UsageLimitsUnit"
+tag_type: "Enumeration"
 ---
 
 # Usage Limits Unit Enumeration

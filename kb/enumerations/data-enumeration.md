@@ -9,6 +9,7 @@ related: ["process"]
 keywords: ["data type", "process operation", "encrypt input", "decrypt input", "sign input", "verify input", "data payload", "4200C2", "Data"]
 tag_hex: "4200C2"
 xml_text: "Data"
+tag_type: "Enumeration"
 ---
 
 # Data Enumeration

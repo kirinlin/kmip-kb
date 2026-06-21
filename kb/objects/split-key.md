@@ -10,6 +10,7 @@ related: ["create-split-key", "join-split-key", "symmetric-key", "private-key", 
 keywords: ["split key", "secret sharing", "key splitting", "threshold", "XOR", "420089", "SplitKey"]
 tag_hex: "420089"
 xml_text: "SplitKey"
+tag_type: "Structure"
 ---
 
 # Split Key

@@ -10,6 +10,7 @@ related: ["protect-stop-date", "activation-date", "deactivation-date", "state"]
 keywords: ["process start date", "decryption window", "symmetric key", "lifecycle dates", "420067", "ProcessStartDate"]
 tag_hex: "420067"
 xml_text: "ProcessStartDate"
+tag_type: "Date-Time"
 ---
 
 # Process Start Date

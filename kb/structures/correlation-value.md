@@ -10,6 +10,7 @@ related: ["init-indicator", "final-indicator", "data", "asynchronous-correlation
 keywords: ["correlation value", "streaming", "multi-part operation", "session handle", "4200D6", "CorrelationValue"]
 tag_hex: "4200D6"
 xml_text: "CorrelationValue"
+tag_type: "Byte String"
 ---
 
 # Correlation Value

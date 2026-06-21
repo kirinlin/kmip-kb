@@ -9,6 +9,7 @@ related: ["pkcs-11-function", "pkcs-11-output-parameters", "pkcs-11", "error-han
 keywords: ["PKCS#11 return code", "CKR", "Cryptoki return value", "CKR_OK", "error code", "PKCS11 status", "42015D", "PKCS_11ReturnCode"]
 tag_hex: "42015D"
 xml_text: "PKCS_11ReturnCode"
+tag_type: "Enumeration"
 ---
 
 # PKCS#11 Return Code

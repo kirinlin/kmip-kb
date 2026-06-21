@@ -10,6 +10,7 @@ related: ["always-sensitive", "extractable", "never-extractable", "cryptographic
 keywords: ["sensitive", "wrapped export only", "key extraction", "PKCS#11 parity", "420120"]
 tag_hex: "420120"
 xml_text: "Sensitive"
+tag_type: "Boolean"
 ---
 
 # Sensitive

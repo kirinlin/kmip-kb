@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "cryptographic-algorithm-enumeration", "cr
 keywords: ["elliptic curve", "EC curve", "P-256", "P-384", "P-521", "Curve25519", "secp256k1", "brainpool", "recommended curve", "420075", "RecommendedCurve"]
 tag_hex: "420075"
 xml_text: "RecommendedCurve"
+tag_type: "Enumeration"
 ---
 
 # Recommended Curve Enumeration

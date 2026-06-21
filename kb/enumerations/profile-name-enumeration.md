@@ -9,6 +9,7 @@ related: ["profile-version", "query", "server-information"]
 keywords: ["profile name", "conformance profile", "KMIP profile", "baseline server", "complete server", "storage array", "4200EC", "ProfileName"]
 tag_hex: "4200EC"
 xml_text: "ProfileName"
+tag_type: "Enumeration"
 ---
 
 # Profile Name Enumeration

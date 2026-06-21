@@ -10,6 +10,7 @@ related: ["x-509-certificate-subject", "x-509-certificate-issuer", "certificate-
 keywords: ["X.509 certificate identifier", "issuer distinguished name", "serial number", "4200B5", "X_509CertificateIdentifier"]
 tag_hex: "4200B5"
 xml_text: "X_509CertificateIdentifier"
+tag_type: "Structure"
 ---
 
 # X.509 Certificate Identifier

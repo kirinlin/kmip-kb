@@ -9,6 +9,7 @@ related: ["attribute", "new-attribute", "attribute-reference", "set-attribute", 
 keywords: ["current attribute", "existing attribute", "attribute value before", "optimistic concurrency", "attribute update", "42013C", "CurrentAttribute"]
 tag_hex: "42013C"
 xml_text: "CurrentAttribute"
+tag_type: "Structure"
 ---
 
 # Current Attribute

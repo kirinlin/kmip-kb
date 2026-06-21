@@ -10,6 +10,7 @@ related: ["key-wrapping-specification", "key-block", "key-value"]
 keywords: ["key wrapping data", "wrapping method", "encryption key information", "MAC signature", "encoding option", "420046", "KeyWrappingData"]
 tag_hex: "420046"
 xml_text: "KeyWrappingData"
+tag_type: "Structure"
 ---
 
 # Key Wrapping Data

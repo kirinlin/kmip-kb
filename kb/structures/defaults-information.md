@@ -9,6 +9,7 @@ related: ["object-defaults", "set-defaults", "get-constraints", "attribute", "ob
 keywords: ["defaults information", "server defaults", "object defaults", "default attributes", "set defaults", "420152", "DefaultsInformation"]
 tag_hex: "420152"
 xml_text: "DefaultsInformation"
+tag_type: "Structure"
 ---
 
 # Defaults Information

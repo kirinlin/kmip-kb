@@ -10,6 +10,7 @@ related: ["key-value-location", "digest", "fresh"]
 keywords: ["key value present", "metadata-only registration", "key value absent", "registry", "4200BB", "KeyValuePresent"]
 tag_hex: "4200BB"
 xml_text: "KeyValuePresent"
+tag_type: "Boolean"
 ---
 
 # Key Value Present

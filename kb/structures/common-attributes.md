@@ -9,6 +9,7 @@ related: ["attribute", "private-key-attributes", "public-key-attributes", "templ
 keywords: ["common attributes", "attribute structure", "all object types", "shared attributes", "key pair attributes", "420126", "CommonAttributes"]
 tag_hex: "420126"
 xml_text: "CommonAttributes"
+tag_type: "Structure"
 ---
 
 # Common Attributes

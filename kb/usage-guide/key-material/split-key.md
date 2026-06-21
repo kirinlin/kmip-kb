@@ -9,6 +9,7 @@ related: ["symmetric-key"]
 keywords: ["split key", "key splitting", "Shamir", "XOR", "key threshold", "Join Split Key", "Create Split Key", "420089", "SplitKey"]
 tag_hex: "420089"
 xml_text: "SplitKey"
+tag_type: "Structure"
 ---
 
 # Split Key

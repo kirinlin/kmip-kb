@@ -9,6 +9,7 @@ related: ["cryptographic-algorithm-enumeration", "block-cipher-mode-enumeration"
 keywords: ["padding", "OAEP", "PKCS#1 v1.5", "PSS", "RSA padding", "block padding", "padding method", "42005F", "PaddingMethod"]
 tag_hex: "42005F"
 xml_text: "PaddingMethod"
+tag_type: "Enumeration"
 ---
 
 # Padding Method Enumeration

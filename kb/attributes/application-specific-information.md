@@ -10,6 +10,7 @@ related: ["object-group", "custom-attribute", "name"]
 keywords: ["application specific information", "application namespace", "application data", "ASI", "420004", "ApplicationSpecificInformation"]
 tag_hex: "420004"
 xml_text: "ApplicationSpecificInformation"
+tag_type: "Structure"
 ---
 
 # Application Specific Information

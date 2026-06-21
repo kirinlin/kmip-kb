@@ -9,6 +9,7 @@ related: ["unique-identifier", "create-key-pair", "certify", "register"]
 keywords: ["link type", "linked objects", "certificate link", "public key link", "private key link", "derivation", "replacement", "parent", "child", "42004B", "LinkType"]
 tag_hex: "42004B"
 xml_text: "LinkType"
+tag_type: "Enumeration"
 ---
 
 # Link Type Enumeration

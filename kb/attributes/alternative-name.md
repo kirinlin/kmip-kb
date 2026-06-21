@@ -10,6 +10,7 @@ related: ["name", "unique-identifier", "application-specific-information"]
 keywords: ["alternative name", "alias", "locate", "URI", "DNS name", "email", "4200BF", "AlternativeName"]
 tag_hex: "4200BF"
 xml_text: "AlternativeName"
+tag_type: "Structure"
 ---
 
 # Alternative Name

@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "cryptographic-algorithm-enumeration", "pa
 keywords: ["cipher mode", "CBC", "GCM", "CCM", "CTR", "ECB", "AEAD", "block cipher", "encryption mode", "420011", "BlockCipherMode"]
 tag_hex: "420011"
 xml_text: "BlockCipherMode"
+tag_type: "Enumeration"
 ---
 
 # Block Cipher Mode Enumeration

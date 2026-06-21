@@ -10,6 +10,7 @@ related: ["create", "register", "get", "derive-key", "encrypt", "decrypt", "key-
 keywords: ["symmetric key", "AES", "secret key", "managed cryptographic object", "key block", "42008F", "SymmetricKey"]
 tag_hex: "42008F"
 xml_text: "SymmetricKey"
+tag_type: "Structure"
 ---
 
 # Symmetric Key

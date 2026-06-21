@@ -10,6 +10,7 @@ related: ["state", "activation-date", "protect-stop-date", "revocation-reason"]
 keywords: ["deactivation date", "deactivated state", "expiry", "lifecycle dates", "42002F", "DeactivationDate"]
 tag_hex: "42002F"
 xml_text: "DeactivationDate"
+tag_type: "Date-Time"
 ---
 
 # Deactivation Date

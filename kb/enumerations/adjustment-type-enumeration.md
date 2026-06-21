@@ -9,6 +9,7 @@ related: ["adjust-attribute", "rotate-generation", "rotate-interval", "rotate-of
 keywords: ["adjustment type", "numeric delta", "adjust attribute", "arithmetic operation", "420158", "AdjustmentType"]
 tag_hex: "420158"
 xml_text: "AdjustmentType"
+tag_type: "Enumeration"
 ---
 
 # Adjustment Type Enumeration

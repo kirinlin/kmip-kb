@@ -9,6 +9,7 @@ related: ["set-endpoint-role", "profile-version", "profile-name-enumeration"]
 keywords: ["endpoint role", "KMIP server", "KMIP client", "proxy", "replication", "storage array", "topology", "420151", "EndpointRole"]
 tag_hex: "420151"
 xml_text: "EndpointRole"
+tag_type: "Enumeration"
 ---
 
 # Endpoint Role Enumeration

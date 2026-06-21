@@ -9,6 +9,7 @@ related: ["protection-level", "protection-storage-mask", "sensitive"]
 keywords: ["protection level", "software protection", "hardware module", "HSM", "FIPS 140", "key protection tier", "420145", "ProtectionLevel"]
 tag_hex: "420145"
 xml_text: "ProtectionLevel"
+tag_type: "Enumeration"
 ---
 
 # Protection Level Enumeration

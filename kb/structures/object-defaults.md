@@ -9,6 +9,7 @@ related: ["defaults-information", "set-defaults", "attribute", "object-type"]
 keywords: ["object defaults", "default attributes", "object type defaults", "server defaults", "attribute defaults", "420153", "ObjectDefaults"]
 tag_hex: "420153"
 xml_text: "ObjectDefaults"
+tag_type: "Structure"
 ---
 
 # Object Defaults

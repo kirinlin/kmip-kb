@@ -9,6 +9,7 @@ related: ["key-block", "recommended-curve-enumeration", "cryptographic-algorithm
 keywords: ["key compression", "EC public key", "point compression", "uncompressed", "X9.62", "elliptic curve", "key format", "420041", "KeyCompressionType"]
 tag_hex: "420041"
 xml_text: "KeyCompressionType"
+tag_type: "Enumeration"
 ---
 
 # Key Compression Type Enumeration

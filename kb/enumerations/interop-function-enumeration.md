@@ -9,6 +9,7 @@ related: ["interop", "interop-function", "interop-identifier", "query-function-e
 keywords: ["interop", "interoperability", "test function", "conformance testing", "KMIP interop", "420160", "InteropFunction"]
 tag_hex: "420160"
 xml_text: "InteropFunction"
+tag_type: "Enumeration"
 ---
 
 # Interop Function Enumeration

@@ -9,6 +9,7 @@ related: ["cryptographic-parameters", "validation-authority-type-enumeration"]
 keywords: ["validation type", "software validation", "hardware validation", "firmware validation", "hybrid validation", "cryptographic validation", "4200E5", "ValidationType"]
 tag_hex: "4200E5"
 xml_text: "ValidationType"
+tag_type: "Enumeration"
 ---
 
 # Validation Type Enumeration

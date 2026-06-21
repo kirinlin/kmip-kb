@@ -10,6 +10,7 @@ related: ["unique-identifier", "key-value-present", "digital-signature-algorithm
 keywords: ["digest", "hash", "SHA-256", "fingerprint", "key material integrity", "420034"]
 tag_hex: "420034"
 xml_text: "Digest"
+tag_type: "Structure"
 ---
 
 # Digest

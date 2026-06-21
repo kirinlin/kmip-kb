@@ -9,6 +9,7 @@ related: ["certify", "certificate-type-enumeration", "certificate-request", "cer
 keywords: ["certificate request", "CSR", "PKCS#10", "CRMF", "PEM", "PGP", "certify", "420019", "CertificateRequestType"]
 tag_hex: "420019"
 xml_text: "CertificateRequestType"
+tag_type: "Enumeration"
 ---
 
 # Certificate Request Type Enumeration

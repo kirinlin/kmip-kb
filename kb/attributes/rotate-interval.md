@@ -9,6 +9,7 @@ related: ["rotate-automatic", "rotate-date", "rotate-generation", "rotate-latest
 keywords: ["rotate interval", "rotation interval", "cryptoperiod", "key rotation period", "interval attribute", "42016A", "RotateInterval"]
 tag_hex: "42016A"
 xml_text: "RotateInterval"
+tag_type: "Interval"
 ---
 
 # Rotate Interval

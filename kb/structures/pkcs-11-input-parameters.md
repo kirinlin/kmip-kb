@@ -9,6 +9,7 @@ related: ["pkcs-11-function", "pkcs-11-interface", "pkcs-11-output-parameters", 
 keywords: ["PKCS#11 input", "Cryptoki parameters", "CK_MECHANISM", "function arguments", "PKCS11 tunnel input", "42015B", "PKCS_11InputParameters"]
 tag_hex: "42015B"
 xml_text: "PKCS_11InputParameters"
+tag_type: "Byte String"
 ---
 
 # PKCS#11 Input Parameters

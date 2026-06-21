@@ -10,6 +10,7 @@ related: ["description", "comment", "custom-attribute"]
 keywords: ["contact information", "owner contact", "informational attribute", "420022", "ContactInformation"]
 tag_hex: "420022"
 xml_text: "ContactInformation"
+tag_type: "Text String"
 ---
 
 # Contact Information

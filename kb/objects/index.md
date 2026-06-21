@@ -10,6 +10,7 @@ related: ["symmetric-key", "certificate", "public-key", "private-key", "split-ke
 keywords: ["managed objects", "managed cryptographic objects", "key", "certificate", "42014E", "Objects"]
 tag_hex: "42014E"
 xml_text: "Objects"
+tag_type: "Structure"
 ---
 
 # Objects

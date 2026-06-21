@@ -9,6 +9,7 @@ related: ["attributes", "locate"]
 keywords: ["Object Group", "Fresh", "group member", "round robin", "key pool", "Locate", "420056", "ObjectGroup"]
 tag_hex: "420056"
 xml_text: "ObjectGroup"
+tag_type: "Text String"
 ---
 
 # Object Group

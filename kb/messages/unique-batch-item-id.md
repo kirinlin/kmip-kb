@@ -10,6 +10,7 @@ related: ["batch-item", "batch-count", "batch-order-option"]
 keywords: ["unique batch item ID", "correlation", "batching", "request response matching", "420093", "UniqueBatchItemID"]
 tag_hex: "420093"
 xml_text: "UniqueBatchItemID"
+tag_type: "Byte String"
 ---
 
 # Unique Batch Item ID

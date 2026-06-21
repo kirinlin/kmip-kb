@@ -9,6 +9,7 @@ related: ["object-type", "symmetric-key", "public-key", "private-key", "split-ke
 keywords: ["object type", "managed object type", "key type", "certificate", "secret data", "opaque object", "420057", "ObjectType"]
 tag_hex: "420057"
 xml_text: "ObjectType"
+tag_type: "Enumeration"
 ---
 
 # Object Type Enumeration

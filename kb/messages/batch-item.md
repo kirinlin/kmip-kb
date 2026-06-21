@@ -10,6 +10,7 @@ related: ["batch-count", "operation", "message-structure", "operations"]
 keywords: ["batch item", "request payload", "response payload", "message body", "42000F", "BatchItem"]
 tag_hex: "42000F"
 xml_text: "BatchItem"
+tag_type: "Structure"
 ---
 
 # Batch Item

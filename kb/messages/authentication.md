@@ -10,6 +10,7 @@ related: ["credential", "message-structure", "nonce"]
 keywords: ["authentication structure", "request header", "credential container", "42000C", "Authentication"]
 tag_hex: "42000C"
 xml_text: "Authentication"
+tag_type: "Structure"
 ---
 
 # Authentication

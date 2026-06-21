@@ -10,6 +10,7 @@ related: ["unique-identifier", "alternative-name", "object-group"]
 keywords: ["name", "human-readable label", "locate by name", "name type", "420053"]
 tag_hex: "420053"
 xml_text: "Name"
+tag_type: "Text String"
 ---
 
 # Name

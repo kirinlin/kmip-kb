@@ -10,6 +10,7 @@ related: ["usage-limits", "state", "last-change-date"]
 keywords: ["lease time", "interval", "obtain lease", "caching", "time-limited use", "420049", "LeaseTime"]
 tag_hex: "420049"
 xml_text: "LeaseTime"
+tag_type: "Interval"
 ---
 
 # Lease Time

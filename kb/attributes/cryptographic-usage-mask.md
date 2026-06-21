@@ -10,6 +10,7 @@ related: ["cryptographic-algorithm", "state", "usage-limits", "operation-policy-
 keywords: ["usage mask", "bitmask", "encrypt", "sign", "wrap key", "key usage", "42002C", "CryptographicUsageMask"]
 tag_hex: "42002C"
 xml_text: "CryptographicUsageMask"
+tag_type: "Integer"
 ---
 
 # Cryptographic Usage Mask
