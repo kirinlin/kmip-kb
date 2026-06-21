@@ -6,6 +6,11 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `scripts/enrich_mask_tables.py` — inserts an `XML Text` column (CamelCase KMIP-ENCODE §6.1.3 form) into the bit tables of `kb/encoding/*-mask.md` docs; idempotent with `--dry-run` and `--check` CI guard.
+- `XML Text` column added to the `Fields & Structure` bit tables of all three mask docs (`cryptographic-usage-mask.md`, `protection-storage-mask.md`, `storage-status-mask.md`).
+
 ### Fixed
 
 - `kmip-raw` MCP server now exits immediately with a diagnostic message pointing to `scripts/kmip_crawler.py` if `raw/kmip/` is absent or empty, instead of silently building an empty index.

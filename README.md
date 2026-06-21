@@ -123,6 +123,29 @@ python scripts/enrich_enum_tables.py              # apply
 python scripts/enrich_enum_tables.py --check      # fail if any table is stale
 ```
 
+## Mask-table enrichment
+
+[`scripts/enrich_mask_tables.py`](scripts/enrich_mask_tables.py) adds an
+`XML Text` column (CamelCase KMIP-ENCODE §6.1.3 form) to the bit tables in
+`kb/encoding/*-mask.md` docs — those whose header's first column is `Bit`:
+
+```
+| Bit | Usage | XML Text |
+|---|---|---|
+| 4 (0x00000010) | Wrap Key | `WrapKey` |
+| 20 (0x00100000) | Authenticate | `Authenticate` |
+```
+
+Covers all three mask docs: Cryptographic Usage Mask (22 bits), Protection
+Storage Mask (14 bits), and Storage Status Mask (3 bits). `--check` exits
+non-zero if any table is stale (CI guard).
+
+```sh
+python scripts/enrich_mask_tables.py --dry-run   # preview changes
+python scripts/enrich_mask_tables.py              # apply
+python scripts/enrich_mask_tables.py --check      # fail if any table is stale
+```
+
 ## Scaffold generator
 
 [`scripts/build_kb_scaffold.py`](scripts/build_kb_scaffold.py) parses a locally

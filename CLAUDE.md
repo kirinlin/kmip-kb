@@ -71,6 +71,28 @@ python scripts/enrich_enum_tables.py [--dry-run] [--check]   # --check exits non
 
 The `Encoding (Tag / Type / Length / Value)` section is **omitted** from enumeration docs that encode as a standard 4-byte TTLV Integer (type `05`) — the tag is already in `tag_hex` front matter and the encoding is uniform. Only docs where the encoding is non-standard (e.g. `item-type-enumeration.md`, `tag-enumeration.md`) keep an Encoding section.
 
+## Bit-mask docs (kb/encoding/*-mask.md)
+
+Bit-mask docs (`cryptographic-usage-mask.md`, `protection-storage-mask.md`,
+`storage-status-mask.md`) have a `Fields & Structure` section with a bit table
+whose second column names each flag. An `XML Text` column follows the name column:
+
+```
+| Bit | Usage | XML Text |
+|---|---|---|
+| 0 (0x00000001) | Sign | `Sign` |
+| 4 (0x00000010) | Wrap Key | `WrapKey` |
+```
+
+`XML Text` is the CamelCase form derived by the KMIP-ENCODE §6.1.3 algorithm
+applied to the bit name (e.g. "Wrap Key" → `WrapKey`, "On-Line Storage" →
+`OnLineStorage`). `scripts/enrich_mask_tables.py` inserts this column and is
+idempotent. Run it when adding or editing a mask doc:
+
+```
+python scripts/enrich_mask_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale
+```
+
 ## source_section for KMIP-Prof articles
 
 Articles sourced from the separate OASIS Profiles document ([KMIP-Prof]) use
@@ -117,6 +139,7 @@ python scripts/check_verbatim.py <dir>          # flags shared 8+-word runs vs s
 python scripts/validate_links.py [dir ...]      # checks related slugs + relative body links resolve
 python scripts/enrich_field_tables.py --check   # Field tables carry up-to-date Tag/XML Text columns
 python scripts/enrich_enum_tables.py --check    # Enumeration value tables carry up-to-date Value/XML Text
+python scripts/enrich_mask_tables.py --check    # Bit-mask tables carry up-to-date XML Text column
 ```
 
 Authored so far: **452 content docs total — 452 `reviewed`, 0 `draft`, 0
