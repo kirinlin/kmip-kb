@@ -80,6 +80,11 @@ CamelCase algorithm verified against v2.1 test-case XML (e.g.
 `X_509CertificateIdentifier`, `PKCS_12FriendlyName`). Safe to re-run — skips
 docs that already have `tag_hex`.
 
+All 59 `kb/operations/` docs also carry `xml_text` (the CamelCase XML text
+of the operation's value in the Operation Enumeration, e.g. `"CreateKeyPair"`),
+but they do **not** carry `tag_hex` — operation enumeration values are not named
+KMIP tags. These were populated directly, not via this script.
+
 ```sh
 python scripts/populate_tag_fields.py --dry-run   # preview matches
 python scripts/populate_tag_fields.py              # apply

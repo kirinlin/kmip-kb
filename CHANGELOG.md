@@ -8,6 +8,9 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `xml_text` frontmatter field added to all 59 operation docs (`kb/operations/*.md` plus `server-to-client/notify.md` and `server-to-client/put.md`), recording the CamelCase XML text of each operation's value in the Operation Enumeration (e.g. `"CreateKeyPair"`, `"PKCS_11"`).
+- Operation Enumeration table (`kb/enumerations/operation-enumeration.md`) now links every row's Name cell to its corresponding operation doc.
+- `XML Text` column added to the message-structure encoding table.
 - `tag_type` frontmatter field added to 223 KB docs that carry `tag_hex`/`xml_text`, recording the TTLV wire type (`Structure`, `Enumeration`, `Text String`, `Date-Time`, etc.) for each named KMIP tag. The one genuinely polymorphic tag (`UniqueIdentifier`) is intentionally omitted.
 - `scripts/populate_tag_type.py` — derives `tag_type` from KMIP XML test-case files and a static override table; supports `--dry-run` and `--check` CI guard.
 - `tag_type` property added to `schemas/frontmatter.schema.json` (optional enum of all eleven TTLV types).
