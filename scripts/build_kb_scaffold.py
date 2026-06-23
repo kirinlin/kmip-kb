@@ -219,6 +219,7 @@ STRUCTURE_DIRS: dict[str, str] = {
     "kb/structures": "Data structures: object (Key Block, ...), attribute, and operation building blocks.",
     "kb/messages": "Protocol message structures: request/response envelope and message fields.",
     "kb/profiles": "Conformance profiles and implementation conformance requirements.",
+    "kb/profiles/v1": "v1.x named conformance profiles ([KMIP-Prof] §4/§5).",
     "kb/workflows": "End-to-end usage workflows that chain operations together.",
     "kb/examples": "Worked request/response examples (original, not copied from the spec).",
     "schemas": "JSON Schemas and machine-readable contracts (e.g. front-matter schema).",

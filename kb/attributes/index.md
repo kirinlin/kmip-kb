@@ -28,7 +28,8 @@ value).
 
 ## Identity
 
-[Unique Identifier](unique-identifier.md) · [Name](name.md) ·
+[Unique Identifier](unique-identifier.md) ·
+[Short Unique Identifier](short-unique-identifier.md) (2.1) · [Name](name.md) ·
 [Alternative Name](alternative-name.md) · [Object Type](object-type.md)
 
 ## Cryptographic description
@@ -38,7 +39,10 @@ value).
 [Cryptographic Parameters](cryptographic-parameters.md) ·
 [Cryptographic Domain Parameters](cryptographic-domain-parameters.md) ·
 [Digest](digest.md) ·
-[Random Number Generator](random-number-generator.md) (1.3+)
+[Random Number Generator](random-number-generator.md) (1.3+) ·
+[Key Format Type](key-format-type.md) (2.1) ·
+[NIST Key Type](nist-key-type.md) (2.1) ·
+[Quantum Safe](quantum-safe.md) (2.1)
 
 ## Certificates
 
@@ -48,6 +52,7 @@ value).
 [Subject](x-509-certificate-subject.md) /
 [Issuer](x-509-certificate-issuer.md) (1.1+) ·
 [Digital Signature Algorithm](digital-signature-algorithm.md) (1.1+) ·
+[Certificate Attributes](certificate-attributes.md) (2.1) ·
 deprecated 1.0 forms: [Certificate Identifier](certificate-identifier.md) ·
 [Certificate Subject](certificate-subject.md) ·
 [Certificate Issuer](certificate-issuer.md)
@@ -85,4 +90,18 @@ deprecated 1.0 forms: [Certificate Identifier](certificate-identifier.md) ·
 [Custom Attribute](custom-attribute.md) ·
 [Key Value Present](key-value-present.md) /
 [Key Value Location](key-value-location.md) (1.2+) ·
-[PKCS#12 Friendly Name](pkcs-12-friendly-name.md) (1.4)
+[PKCS#12 Friendly Name](pkcs-12-friendly-name.md) (1.4) ·
+[Opaque Data Type](opaque-data-type.md) (2.1)
+
+## Protection storage (2.1)
+
+[Protection Level](protection-level.md) ·
+[Protection Period](protection-period.md) ·
+[Protection Storage Mask](protection-storage-mask.md)
+
+## Key rotation (2.1)
+
+[Rotate Automatic](rotate-automatic.md) · [Rotate Date](rotate-date.md) ·
+[Rotate Generation](rotate-generation.md) ·
+[Rotate Interval](rotate-interval.md) · [Rotate Latest](rotate-latest.md) ·
+[Rotate Name](rotate-name.md) · [Rotate Offset](rotate-offset.md)

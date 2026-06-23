@@ -88,8 +88,9 @@ Runtime discovery of what a peer actually implements goes through
 
 ## v1.x Named Profiles ([KMIP-Prof] §4/§5, v1.0–v1.4)
 
-The `v1/` subdirectory contains 52 individually named conformance profiles from
-the v1.x Profiles document ([KMIP-Prof] §4 in v1.0–v1.2, §5 in v1.3–v1.4).
-These cover baseline, symmetric key, asymmetric key, certificate, secret data,
-discover-versions, and storage-client profiles in both the Basic and TLS 1.2
-authentication variants. See the `v1/` directory for the full list.
+The [v1/](v1/index.md) subdirectory contains 52 individually named conformance
+profiles from the v1.x Profiles document ([KMIP-Prof] §4 in v1.0–v1.2, §5 in
+v1.3–v1.4). These cover baseline, symmetric key, asymmetric key, certificate,
+secret data, discover-versions, and storage-client profiles in both the Basic
+and TLS 1.2 authentication variants. See the
+[v1.x Named Profiles index](v1/index.md) for the full list.

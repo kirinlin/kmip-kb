@@ -8,6 +8,8 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- Top-level `kb/index.md` — a knowledge-base landing page linking every category index, grouped into protocol surface, encoding/structure, cross-cutting guidance, and reference material.
+- `kb/profiles/v1/index.md` — a sub-index listing all 52 v1.x named conformance profiles, grouped by capability (baseline, symmetric/asymmetric key, certificate, secret data, discover-versions, storage); linked from the profiles index.
 - `xml_text` frontmatter field added to all 59 operation docs (`kb/operations/*.md` plus `server-to-client/notify.md` and `server-to-client/put.md`), recording the CamelCase XML text of each operation's value in the Operation Enumeration (e.g. `"CreateKeyPair"`, `"PKCS_11"`).
 - Operation Enumeration table (`kb/enumerations/operation-enumeration.md`) now links every row's Name cell to its corresponding operation doc.
 - `XML Text` column added to the message-structure encoding table.
@@ -23,6 +25,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Category index pages now link every article in their tree: backfilled 35 previously-unlisted entries across the attributes, operations, objects, concepts, and references indexes (mostly v2.1 additions such as the `Rotate *`, protection-storage, session, and server-configuration families).
 - `templates/object.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, matching the other managed-object templates.
 - `templates/operation.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, with `tag_type` defaulting to `Structure`.
 - `templates/structures.md`, `templates/enumeration.md`, and `templates/messages.md` now include a `tag_type` placeholder field (`Structure`, `Enumeration`, and `{{TagType}}` respectively).

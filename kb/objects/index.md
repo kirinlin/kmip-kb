@@ -33,4 +33,5 @@ called Managed Cryptographic Objects. Most are built on a shared
 - [Secret Data](secret-data.md) — a shared secret such as a password or seed, distinct from keys and certificates.
 - [Opaque Object](opaque-object.md) — data the server stores without interpreting.
 - [PGP Key](pgp-key.md) — an ASCII-armored OpenPGP key (added in 1.2).
+- [Certificate Request](certificate-request.md) — a PKCS#10 / PEM / CRMF certification request, used when certifying a public key (2.1).
 - [Template](template.md) — a named bundle of attributes (deprecated in 1.3).

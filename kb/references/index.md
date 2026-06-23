@@ -21,3 +21,6 @@ Front-matter material from §1 of the spec: vocabulary and citations.
   implementations depend on (v2.1 §1.3).
 - [Non-Normative References](non-normative-references.md) — companion Usage
   Guide, Test Cases, and background reading (v2.1 §1.4).
+- [Item Data Types](item-data-types.md) — the fixed set of primitive TTLV data
+  types (Structure, Integer, Enumeration, …) used throughout the protocol
+  (v2.1 §1.5).

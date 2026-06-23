@@ -43,6 +43,8 @@ standard [message structure](../messages/message-structure.md).
 
 - [Add Attribute](add-attribute.md) · [Modify Attribute](modify-attribute.md) ·
   [Delete Attribute](delete-attribute.md)
+- [Set Attribute](set-attribute.md) · [Adjust Attribute](adjust-attribute.md)
+  (2.1)
 
 ## Lifecycle
 
@@ -51,6 +53,7 @@ standard [message structure](../messages/message-structure.md).
   [Re-key Key Pair](re-key-key-pair.md)
 - [Obtain Lease](obtain-lease.md) ·
   [Get Usage Allocation](get-usage-allocation.md)
+- [Re-Provision](re-provision.md) (2.1)
 
 ## Cryptographic services (1.2+)
 
@@ -58,11 +61,27 @@ standard [message structure](../messages/message-structure.md).
   [Signature Verify](signature-verify.md) · [MAC](mac.md) ·
   [MAC Verify](mac-verify.md) · [Hash](hash.md) ·
   [RNG Retrieve](rng-retrieve.md) · [RNG Seed](rng-seed.md)
+- [Process](process.md) (2.1) — apply a cryptographic operation in a streamed,
+  multi-part exchange.
+
+## Sessions (2.1)
+
+- [Login](login.md) · [Logout](logout.md) ·
+  [Delegated Login](delegated-login.md)
+
+## Server configuration (2.1)
+
+- [Set Defaults](set-defaults.md) · [Set Constraints](set-constraints.md) ·
+  [Get Constraints](get-constraints.md) ·
+  [Set Endpoint Role](set-endpoint-role.md)
 
 ## Protocol housekeeping
 
 - [Query](query.md) · [Discover Versions](discover-versions.md) (1.1+) ·
   [Poll](poll.md) · [Cancel](cancel.md)
+- [Query Asynchronous Requests](query-asynchronous-requests.md) ·
+  [Ping](ping.md) · [Log](log.md) · [Interop](interop.md) ·
+  [PKCS#11](pkcs-11.md) (2.1)
 
 ## Server-to-client
 

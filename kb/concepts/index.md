@@ -20,6 +20,9 @@ operation or object type.
   TLS requirements live in the profiles, port 5696 by convention.
 - [Error Handling](error-handling.md) — per-batch-item status/reason/message
   reporting and batch continuation semantics.
+- [Split Key Algorithms](split-key-algorithms.md) — the secret-sharing schemes
+  (XOR, polynomial/Shamir) behind the [Split Key](../objects/split-key.md)
+  object type (§13.1).
 
 Closely related material lives elsewhere: the key lifecycle is described
 under the [State](../attributes/state.md) attribute, and message framing
