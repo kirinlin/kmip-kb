@@ -14,16 +14,18 @@ keywords: ["examples", "request", "response", "worked examples"]
 Worked, original request/response examples — written for this knowledge base,
 never copied from the spec or test-cases documents.
 
-No standalone examples have been authored yet. Until they are, two places
-already carry example material:
+## Articles
 
-- Each [operation](../operations/index.md) page has an **Examples** section
-  with a narrative walk-through of a typical call.
-- [TTLV Encoding](../encoding/ttlv-encoding.md) shows byte-level encodings of
-  the primitive types.
+- [Annotated TTLV](annotated-ttlv.md) — how to read a KMIP binary hex dump; includes a full Locate request and response pair in both XML and annotated TTLV.
+
+## Additional example material
+
+Each [operation](../operations/index.md) page has an **Examples** section with
+a narrative walk-through of a typical call.
+[TTLV Encoding](../encoding/ttlv-encoding.md) shows byte-level encodings of
+the primitive types.
 
 The OASIS Test Cases document (see
 [Non-Normative References](../references/non-normative-references.md))
-provides full official transcripts; planned content here will translate a
-few common flows (create → activate → get, register, locate) into annotated
-hex dumps.
+provides full official transcripts; planned content here will expand to cover
+common flows (create → activate → get, register) as annotated hex dumps.

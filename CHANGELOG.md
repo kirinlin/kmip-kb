@@ -8,6 +8,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `kb/examples/annotated-ttlv.md` — full worked example of an annotated TTLV hex dump, covering how to read the format (type-code table, header/value/padding layout), a complete Locate request with authentication, and the matching success response, each shown in both XML and annotated binary.
 - Top-level `kb/index.md` — a knowledge-base landing page linking every category index, grouped into protocol surface, encoding/structure, cross-cutting guidance, and reference material.
 - `kb/profiles/v1/index.md` — a sub-index listing all 52 v1.x named conformance profiles, grouped by capability (baseline, symmetric/asymmetric key, certificate, secret data, discover-versions, storage); linked from the profiles index.
 - `xml_text` frontmatter field added to all 59 operation docs (`kb/operations/*.md` plus `server-to-client/notify.md` and `server-to-client/put.md`), recording the CamelCase XML text of each operation's value in the Operation Enumeration (e.g. `"CreateKeyPair"`, `"PKCS_11"`).
