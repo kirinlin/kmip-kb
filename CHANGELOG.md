@@ -26,6 +26,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Category index pages now link every article in their tree: backfilled 35 previously-unlisted entries across the attributes, operations, objects, concepts, and references indexes (mostly v2.1 additions such as the `Rotate *`, protection-storage, session, and server-configuration families).
+- Request Header and Response Header section headings in `kb/structures/operations.md` now include the CamelCase XML text identifier alongside the hex tag (e.g. `420077`, `RequestHeader`).
 - `templates/object.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, matching the other managed-object templates.
 - `templates/operation.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, with `tag_type` defaulting to `Structure`.
 - `templates/structures.md`, `templates/enumeration.md`, and `templates/messages.md` now include a `tag_type` placeholder field (`Structure`, `Enumeration`, and `{{TagType}}` respectively).
