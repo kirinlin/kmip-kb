@@ -8,6 +8,7 @@ v1_source_section: "4.30"
 status: reviewed
 related: ["encrypt", "cryptographic-parameters", "cryptographic-usage-mask", "symmetric-key"]
 keywords: ["decrypt", "decryption", "cipher", "AEAD", "plaintext recovery"]
+xml_text: "Decrypt"
 ---
 
 # Decrypt

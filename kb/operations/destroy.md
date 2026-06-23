@@ -8,6 +8,7 @@ v1_source_section: "4.21"
 status: reviewed
 related: ["revoke", "archive", "state", "destroy-date"]
 keywords: ["destroy", "delete key", "key destruction", "key material", "end of life"]
+xml_text: "Destroy"
 ---
 
 # Destroy

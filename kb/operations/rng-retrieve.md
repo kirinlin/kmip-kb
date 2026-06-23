@@ -8,6 +8,7 @@ v1_source_section: "4.35"
 status: reviewed
 related: ["rng-seed", "rng-parameters"]
 keywords: ["rng retrieve", "random number", "random bytes", "rng output"]
+xml_text: "RNGRetrieve"
 ---
 
 # RNG Retrieve

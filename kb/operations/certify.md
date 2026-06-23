@@ -8,6 +8,7 @@ v1_source_section: "4.7"
 status: reviewed
 related: ["re-certify", "create-key-pair", "register", "certificate", "public-key", "link"]
 keywords: ["certify", "certificate", "X.509", "PKCS#10", "certificate signing request", "CSR"]
+xml_text: "Certify"
 ---
 
 # Certify

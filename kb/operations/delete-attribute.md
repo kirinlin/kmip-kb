@@ -8,6 +8,7 @@ v1_source_section: "4.16"
 status: reviewed
 related: ["add-attribute", "modify-attribute", "get-attributes"]
 keywords: ["delete attribute", "remove attribute", "attribute index"]
+xml_text: "DeleteAttribute"
 ---
 
 # Delete Attribute

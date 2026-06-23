@@ -8,6 +8,7 @@ v1_source_section: "4.22"
 status: reviewed
 related: ["recover", "destroy", "archive-date"]
 keywords: ["archive", "offline storage", "object archival", "lifecycle"]
+xml_text: "Archive"
 ---
 
 # Archive

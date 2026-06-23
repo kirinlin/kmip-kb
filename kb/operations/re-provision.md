@@ -7,6 +7,7 @@ source_section: "6.1.48"
 status: reviewed
 related: ["register", "get", "destroy", "create", "activate", "re-key", "unique-identifier"]
 keywords: ["re-provision", "reprovisioning", "re-issue", "endpoint", "device", "binding refresh", "attribute update", "lifecycle", "refresh"]
+xml_text: "ReProvision"
 ---
 
 # Re-Provision

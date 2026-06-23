@@ -7,6 +7,7 @@ source_section: "6.1.54"
 status: reviewed
 related: ["query", "login", "protocol-version"]
 keywords: ["set endpoint role", "endpoint role", "client role", "key management client", "key management server", "proxy", "role negotiation"]
+xml_text: "SetEndpointRole"
 ---
 
 # Set Endpoint Role

@@ -8,6 +8,7 @@ v1_source_section: "4.38"
 status: reviewed
 related: ["join-split-key", "create", "split-key"]
 keywords: ["create split key", "split key", "key splitting", "secret sharing", "threshold"]
+xml_text: "CreateSplitKey"
 ---
 
 # Create Split Key

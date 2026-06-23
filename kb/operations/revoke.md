@@ -8,6 +8,7 @@ v1_source_section: "4.20"
 status: reviewed
 related: ["activate", "destroy", "state", "revocation-reason", "compromise-occurrence-date"]
 keywords: ["revoke", "compromise", "deactivate", "revocation reason", "key state"]
+xml_text: "Revoke"
 ---
 
 # Revoke

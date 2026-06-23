@@ -7,6 +7,7 @@ source_section: "6.1.30"
 status: reviewed
 related: ["logout", "delegated-login", "authentication", "query", "protocol-version"]
 keywords: ["login", "session", "authentication", "session ticket", "stateful session", "credential", "session management"]
+xml_text: "Login"
 ---
 
 # Login

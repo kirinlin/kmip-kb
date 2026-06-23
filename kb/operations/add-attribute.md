@@ -8,6 +8,7 @@ v1_source_section: "4.14"
 status: reviewed
 related: ["modify-attribute", "delete-attribute", "get-attributes"]
 keywords: ["add attribute", "set attribute", "attribute instance", "attribute index"]
+xml_text: "AddAttribute"
 ---
 
 # Add Attribute

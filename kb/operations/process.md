@@ -7,6 +7,7 @@ source_section: "6.1.39"
 status: reviewed
 related: ["mac", "get", "export", "pkcs-11", "unique-identifier", "symmetric-key", "derivation-parameters", "cryptographic-usage-mask"]
 keywords: ["process", "server-side crypto", "encrypt", "decrypt", "sign", "verify", "server-side operation", "key not returned", "cryptographic operation"]
+xml_text: "Process"
 ---
 
 # Process

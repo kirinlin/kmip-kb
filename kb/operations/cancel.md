@@ -8,6 +8,7 @@ v1_source_section: "4.27"
 status: reviewed
 related: ["poll", "asynchronous-correlation-value"]
 keywords: ["cancel", "asynchronous", "correlation value", "abort operation"]
+xml_text: "Cancel"
 ---
 
 # Cancel

@@ -8,6 +8,7 @@ v1_source_section: "4.40"
 status: reviewed
 related: ["import", "get", "register", "key-wrapping-specification"]
 keywords: ["export", "object export", "migration", "key wrapping", "attributes"]
+xml_text: "Export"
 ---
 
 # Export

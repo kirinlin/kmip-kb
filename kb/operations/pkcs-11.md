@@ -7,6 +7,7 @@ source_section: "6.1.37"
 status: reviewed
 related: ["query", "get", "export", "process", "pkcs-11-interface", "pkcs-11-function", "pkcs-11-input-parameters", "pkcs-11-output-parameters", "pkcs-11-return-code"]
 keywords: ["PKCS#11", "PKCS11", "CKA", "token", "slot", "C_Encrypt", "C_Sign", "C_Decrypt", "PKCS11 tunnel", "cryptoki", "hardware token", "HSM"]
+xml_text: "PKCS_11"
 ---
 
 # PKCS#11

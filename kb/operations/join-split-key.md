@@ -8,6 +8,7 @@ v1_source_section: "4.39"
 status: reviewed
 related: ["create-split-key", "split-key", "secret-data"]
 keywords: ["join split key", "reconstruct key", "secret sharing", "combine splits"]
+xml_text: "JoinSplitKey"
 ---
 
 # Join Split Key

@@ -7,6 +7,7 @@ source_section: "6.1.53"
 status: reviewed
 related: ["set-constraints", "get-constraints", "create", "create-key-pair", "register", "query", "defaults-information"]
 keywords: ["set defaults", "defaults", "default attributes", "object defaults", "server defaults", "attribute defaults", "provisioning policy"]
+xml_text: "SetDefaults"
 ---
 
 # Set Defaults

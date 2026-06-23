@@ -8,6 +8,7 @@ v1_source_section: "4.37"
 status: reviewed
 related: ["mac", "sign", "cryptographic-parameters", "digest"]
 keywords: ["hash", "digest", "message digest", "sha", "hashing"]
+xml_text: "Hash"
 ---
 
 # Hash

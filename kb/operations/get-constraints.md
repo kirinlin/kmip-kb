@@ -7,6 +7,7 @@ source_section: "6.1.22"
 status: reviewed
 related: ["set-constraints", "set-defaults", "query", "constraint", "constraints", "unique-identifier", "object-type"]
 keywords: ["get constraints", "operation constraints", "access control", "permission", "object constraints", "policy retrieval"]
+xml_text: "GetConstraints"
 ---
 
 # Get Constraints

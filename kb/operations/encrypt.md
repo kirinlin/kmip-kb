@@ -8,6 +8,7 @@ v1_source_section: "4.29"
 status: reviewed
 related: ["decrypt", "get-usage-allocation", "cryptographic-parameters", "cryptographic-usage-mask", "symmetric-key"]
 keywords: ["encrypt", "encryption", "cipher", "IV", "AEAD", "block cipher mode"]
+xml_text: "Encrypt"
 ---
 
 # Encrypt

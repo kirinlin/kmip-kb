@@ -8,6 +8,7 @@ v1_source_section: "4.36"
 status: reviewed
 related: ["rng-retrieve", "rng-parameters"]
 keywords: ["rng seed", "seed random", "entropy", "rng"]
+xml_text: "RNGSeed"
 ---
 
 # RNG Seed

@@ -8,6 +8,7 @@ v1_source_section: "4.10"
 status: reviewed
 related: ["locate", "get", "obtain-lease", "get-usage-allocation", "cryptographic-usage-mask"]
 keywords: ["check", "policy check", "usage check", "batch", "pre-flight"]
+xml_text: "Check"
 ---
 
 # Check

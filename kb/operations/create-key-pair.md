@@ -8,6 +8,7 @@ v1_source_section: "4.2"
 status: reviewed
 related: ["create", "register", "re-key-key-pair", "certify", "public-key", "private-key", "cryptographic-algorithm"]
 keywords: ["create key pair", "asymmetric key", "public key", "private key", "RSA", "key generation"]
+xml_text: "CreateKeyPair"
 ---
 
 # Create Key Pair

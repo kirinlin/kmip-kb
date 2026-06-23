@@ -8,6 +8,7 @@ v1_source_section: "4.26"
 status: reviewed
 related: ["query", "protocol-version"]
 keywords: ["discover versions", "protocol version", "version negotiation", "compatibility"]
+xml_text: "DiscoverVersions"
 ---
 
 # Discover Versions

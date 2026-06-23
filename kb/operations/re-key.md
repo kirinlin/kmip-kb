@@ -8,6 +8,7 @@ v1_source_section: "4.4"
 status: reviewed
 related: ["re-key-key-pair", "create", "revoke", "symmetric-key", "state", "link"]
 keywords: ["re-key", "rekey", "replacement key", "key rotation", "symmetric key"]
+xml_text: "ReKey"
 ---
 
 # Re-key

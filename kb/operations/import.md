@@ -8,6 +8,7 @@ v1_source_section: "4.41"
 status: reviewed
 related: ["export", "register", "get"]
 keywords: ["import", "object import", "migration", "replace existing", "key wrapping"]
+xml_text: "Import"
 ---
 
 # Import

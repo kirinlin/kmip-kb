@@ -8,6 +8,7 @@ v1_source_section: "4.31"
 status: reviewed
 related: ["signature-verify", "get-usage-allocation", "cryptographic-parameters", "digital-signature-algorithm", "private-key"]
 keywords: ["sign", "signature", "digital signature", "private key", "signing"]
+xml_text: "Sign"
 ---
 
 # Sign

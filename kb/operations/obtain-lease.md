@@ -8,6 +8,7 @@ v1_source_section: "4.17"
 status: reviewed
 related: ["check", "get-attributes", "lease-time", "last-change-date"]
 keywords: ["obtain lease", "lease time", "cache expiry", "client caching"]
+xml_text: "ObtainLease"
 ---
 
 # Obtain Lease

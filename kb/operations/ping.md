@@ -7,6 +7,7 @@ source_section: "6.1.36"
 status: reviewed
 related: ["query", "interop", "protocol-version"]
 keywords: ["ping", "health check", "liveness", "connectivity test", "server status", "keepalive"]
+xml_text: "Ping"
 ---
 
 # Ping

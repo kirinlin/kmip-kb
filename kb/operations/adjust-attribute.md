@@ -7,6 +7,7 @@ source_section: "6.1.3"
 status: reviewed
 related: ["set-attribute", "add-attribute", "modify-attribute", "delete-attribute", "get-attributes", "unique-identifier", "attribute"]
 keywords: ["adjust attribute", "delta", "increment", "decrement", "attribute update", "numeric attribute", "date attribute", "usage counter", "rotation offset"]
+xml_text: "AdjustAttribute"
 ---
 
 # Adjust Attribute

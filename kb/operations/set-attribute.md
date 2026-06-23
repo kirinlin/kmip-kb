@@ -7,6 +7,7 @@ source_section: "6.1.51"
 status: reviewed
 related: ["adjust-attribute", "add-attribute", "modify-attribute", "delete-attribute", "get-attributes", "unique-identifier", "attribute"]
 keywords: ["set attribute", "attribute update", "single attribute", "overwrite", "attribute management", "v2.1 attribute operations"]
+xml_text: "SetAttribute"
 ---
 
 # Set Attribute

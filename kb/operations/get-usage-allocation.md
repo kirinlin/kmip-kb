@@ -8,6 +8,7 @@ v1_source_section: "4.18"
 status: reviewed
 related: ["check", "usage-limits", "activate", "encrypt", "sign"]
 keywords: ["get usage allocation", "usage limits", "protection quota", "metering"]
+xml_text: "GetUsageAllocation"
 ---
 
 # Get Usage Allocation

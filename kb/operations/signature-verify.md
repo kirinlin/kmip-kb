@@ -8,6 +8,7 @@ v1_source_section: "4.32"
 status: reviewed
 related: ["sign", "cryptographic-parameters", "digital-signature-algorithm", "public-key"]
 keywords: ["signature verify", "verify signature", "validity indicator", "public key"]
+xml_text: "SignatureVerify"
 ---
 
 # Signature Verify

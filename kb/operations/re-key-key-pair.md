@@ -8,6 +8,7 @@ v1_source_section: "4.5"
 status: reviewed
 related: ["re-key", "create-key-pair", "certify", "public-key", "private-key", "link"]
 keywords: ["re-key key pair", "rekey", "replacement key pair", "asymmetric rotation"]
+xml_text: "ReKeyKeyPair"
 ---
 
 # Re-key Key Pair

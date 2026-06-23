@@ -21,10 +21,10 @@ the order the spec tables prescribe.
 
 ## Encoding (Tag / Type / Length / Value)
 
-| Message | Tag | Contents |
-|---|---|---|
-| Request Message | `420078` | Request Header (`420077`) + Batch Item × N |
-| Response Message | `42007B` | Response Header (`42007A`) + Batch Item × N |
+| Message | Tag | XML Text | Contents |
+|---|---|---|---|
+| Request Message | `420078` | `RequestMessage` | Request Header (`420077`) + Batch Item × N |
+| Response Message | `42007B` | `ResponseMessage` | Response Header (`42007A`) + Batch Item × N |
 
 The header field layouts (what goes in a request header vs a response
 header) are detailed under [Operations (message format)](../structures/operations.md).

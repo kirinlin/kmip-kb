@@ -8,6 +8,7 @@ v1_source_section: "4.8"
 status: reviewed
 related: ["certify", "create-key-pair", "certificate", "public-key", "link"]
 keywords: ["re-certify", "recertify", "certificate renewal", "X.509", "certificate update"]
+xml_text: "ReCertify"
 ---
 
 # Re-certify

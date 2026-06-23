@@ -8,6 +8,7 @@ v1_source_section: "4.33"
 status: reviewed
 related: ["mac-verify", "sign", "cryptographic-parameters", "symmetric-key"]
 keywords: ["mac", "message authentication code", "hmac", "cmac", "integrity"]
+xml_text: "MAC"
 ---
 
 # MAC

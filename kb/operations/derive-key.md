@@ -8,6 +8,7 @@ v1_source_section: "4.6"
 status: reviewed
 related: ["create", "register", "secret-data", "symmetric-key", "cryptographic-parameters", "cryptographic-usage-mask"]
 keywords: ["derive key", "key derivation", "PBKDF2", "HKDF", "HMAC", "KDF", "SP800-108"]
+xml_text: "DeriveKey"
 ---
 
 # Derive Key

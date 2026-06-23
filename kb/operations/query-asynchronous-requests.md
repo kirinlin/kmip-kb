@@ -7,6 +7,7 @@ source_section: "6.1.41"
 status: reviewed
 related: ["query", "cancel", "poll", "asynchronous-request", "asynchronous-correlation-values"]
 keywords: ["query asynchronous requests", "async", "asynchronous", "pending operations", "correlation value", "async status", "long-running operation"]
+xml_text: "QueryAsynchronousRequests"
 ---
 
 # Query Asynchronous Requests

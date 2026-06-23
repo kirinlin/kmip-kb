@@ -8,6 +8,7 @@ v1_source_section: "4.19"
 status: reviewed
 related: ["create", "revoke", "destroy", "state", "activation-date"]
 keywords: ["activate", "key state", "pre-active", "active", "activation date"]
+xml_text: "Activate"
 ---
 
 # Activate

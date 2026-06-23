@@ -7,6 +7,7 @@ source_section: "6.1.12"
 status: reviewed
 related: ["login", "logout", "authentication", "query"]
 keywords: ["delegated login", "delegation", "impersonation", "credential", "session", "proxy login", "on behalf of", "service account"]
+xml_text: "DelegatedLogin"
 ---
 
 # Delegated Login

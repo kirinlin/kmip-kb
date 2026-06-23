@@ -8,6 +8,7 @@ v1_source_section: "4.9"
 status: reviewed
 related: ["get", "get-attributes", "recover", "object-group", "cryptographic-usage-mask", "state"]
 keywords: ["locate", "search", "find object", "query objects", "attribute match"]
+xml_text: "Locate"
 ---
 
 # Locate

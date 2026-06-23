@@ -7,6 +7,7 @@ source_section: "6.1.31"
 status: reviewed
 related: ["login", "delegated-login", "authentication", "query"]
 keywords: ["logout", "session termination", "session invalidation", "session handle", "end session", "disconnect"]
+xml_text: "Logout"
 ---
 
 # Logout

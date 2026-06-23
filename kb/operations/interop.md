@@ -7,6 +7,7 @@ source_section: "6.1.26"
 status: reviewed
 related: ["query", "ping", "interop-function", "interop-identifier"]
 keywords: ["interop", "interoperability", "conformance", "test", "protocol validation", "interop function", "interop identifier"]
+xml_text: "Interop"
 ---
 
 # Interop

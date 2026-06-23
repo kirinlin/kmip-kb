@@ -8,6 +8,7 @@ v1_source_section: "4.24"
 status: reviewed
 related: ["certify", "certificate", "signature-verify"]
 keywords: ["validate", "certificate chain", "validity indicator", "trust", "path validation"]
+xml_text: "Validate"
 ---
 
 # Validate

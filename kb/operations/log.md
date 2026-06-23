@@ -7,6 +7,7 @@ source_section: "6.1.29"
 status: reviewed
 related: ["query", "ping", "log-message", "authentication"]
 keywords: ["log", "audit log", "log message", "audit trail", "client logging", "event logging"]
+xml_text: "Log"
 ---
 
 # Log

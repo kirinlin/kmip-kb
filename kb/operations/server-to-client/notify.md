@@ -8,6 +8,7 @@ v1_source_section: "5.1"
 status: reviewed
 related: ["put", "query", "modify-attribute", "get-attributes", "last-change-date"]
 keywords: ["notify", "server-to-client", "push notification", "attribute change", "event"]
+xml_text: "Notify"
 ---
 
 # Notify

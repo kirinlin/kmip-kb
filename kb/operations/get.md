@@ -8,6 +8,7 @@ v1_source_section: "4.11"
 status: reviewed
 related: ["locate", "get-attributes", "register", "key-wrapping-specification", "symmetric-key"]
 keywords: ["get", "retrieve object", "fetch key", "key wrapping", "PKCS#12", "key format"]
+xml_text: "Get"
 ---
 
 # Get

@@ -8,6 +8,7 @@ v1_source_section: "4.25"
 status: reviewed
 related: ["discover-versions", "profile-information", "rng-parameters"]
 keywords: ["query", "capabilities", "server information", "feature discovery", "supported operations"]
+xml_text: "Query"
 ---
 
 # Query

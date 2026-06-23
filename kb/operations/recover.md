@@ -8,6 +8,7 @@ v1_source_section: "4.23"
 status: reviewed
 related: ["archive", "get", "poll"]
 keywords: ["recover", "unarchive", "restore object", "archive retrieval"]
+xml_text: "Recover"
 ---
 
 # Recover

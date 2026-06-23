@@ -8,6 +8,7 @@ v1_source_section: "5.2"
 status: reviewed
 related: ["notify", "query", "get", "re-key", "obtain-lease", "lease-time"]
 keywords: ["put", "server-to-client", "push", "key distribution", "replace", "put function"]
+xml_text: "Put"
 ---
 
 # Put

@@ -8,6 +8,7 @@ v1_source_section: "4.13"
 status: reviewed
 related: ["get-attributes", "get"]
 keywords: ["get attribute list", "attribute names", "list attributes", "metadata"]
+xml_text: "GetAttributeList"
 ---
 
 # Get Attribute List

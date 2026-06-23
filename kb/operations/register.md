@@ -8,6 +8,7 @@ v1_source_section: "4.3"
 status: reviewed
 related: ["create", "create-key-pair", "import", "get", "symmetric-key", "certificate", "secret-data"]
 keywords: ["register", "import object", "store key", "client-supplied key", "provisioning"]
+xml_text: "Register"
 ---
 
 # Register

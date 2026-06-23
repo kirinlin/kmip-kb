@@ -8,6 +8,7 @@ v1_source_section: "4.1"
 status: reviewed
 related: ["create-key-pair", "register", "derive-key", "get", "symmetric-key", "cryptographic-algorithm", "cryptographic-usage-mask"]
 keywords: ["create", "symmetric key", "generate key", "provisioning", "key generation"]
+xml_text: "Create"
 ---
 
 # Create

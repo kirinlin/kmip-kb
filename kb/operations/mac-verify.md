@@ -8,6 +8,7 @@ v1_source_section: "4.34"
 status: reviewed
 related: ["mac", "signature-verify", "cryptographic-parameters", "symmetric-key"]
 keywords: ["mac verify", "verify mac", "validity indicator", "integrity check"]
+xml_text: "MACVerify"
 ---
 
 # MAC Verify

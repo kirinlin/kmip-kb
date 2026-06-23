@@ -8,6 +8,7 @@ v1_source_section: "4.28"
 status: reviewed
 related: ["cancel", "recover", "asynchronous-correlation-value"]
 keywords: ["poll", "asynchronous", "correlation value", "operation status", "pending"]
+xml_text: "Poll"
 ---
 
 # Poll
