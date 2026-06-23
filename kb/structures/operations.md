@@ -22,7 +22,7 @@ item layouts live on [Batch Item](../messages/batch-item.md).
 
 ## Encoding (Tag / Type / Length / Value)
 
-**Request Header** (`420077`), in order:
+**Request Header** (`420077`, `RequestHeader`), in order:
 
 | Field | Tag | XML Text | Required |
 |---|---|---|---|
@@ -37,7 +37,7 @@ item layouts live on [Batch Item](../messages/batch-item.md).
 | [Time Stamp](../messages/time-stamp.md) | `420092` | `TimeStamp` | No |
 | [Batch Count](../messages/batch-count.md) | `42000D` | `BatchCount` | Yes |
 
-**Response Header** (`42007A`), in order: Protocol Version (required),
+**Response Header** (`42007A`, `ResponseHeader`), in order: Protocol Version (required),
 [Time Stamp](../messages/time-stamp.md) (required), [Nonce](../messages/nonce.md) (no),
 Attestation Type(s) (required in an `Attestation Required` failure when the
 client declared capability), Client/Server Correlation Value (no, 1.4),
