@@ -1,4 +1,12 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__kmip-kb__search_kb",
+      "mcp__kmip-kb__list_articles",
+      "mcp__kmip-kb__get_article",
+      "mcp__kmip-kb__get_related"
+    ]
+  },
   "enabledMcpjsonServers": [
     "kmip-kb",
     "kmip-raw"
