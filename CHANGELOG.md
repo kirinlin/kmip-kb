@@ -8,6 +8,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- `mcp_go/` — Go MCP server implementation: two standalone binaries (`kmip-kb`, `kmip-raw`) that are drop-in replacements for the Python FastMCP servers with no Python/venv dependency. Uses SQLite FTS5 BM25 search (via pure-Go `modernc.org/sqlite`) and the `mark3labs/mcp-go` stdio transport. `kmip-kb` supports an embedded-DB build (`make build-kb-embed`) that bakes the pre-indexed FTS5 database into the binary for deployment without a `kb/` tree on disk. 38 tests, all fixture-based with no dependency on live `kb/` or `raw/` data.
 - `kb/examples/annotated-ttlv.md` — full worked example of an annotated TTLV hex dump, covering how to read the format (type-code table, header/value/padding layout), a complete Locate request with authentication, and the matching success response, each shown in both XML and annotated binary.
 - Top-level `kb/index.md` — a knowledge-base landing page linking every category index, grouped into protocol surface, encoding/structure, cross-cutting guidance, and reference material.
 - `kb/profiles/v1/index.md` — a sub-index listing all 52 v1.x named conformance profiles, grouped by capability (baseline, symmetric/asymmetric key, certificate, secret data, discover-versions, storage); linked from the profiles index.
@@ -19,6 +20,10 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `tag_type` property added to `schemas/frontmatter.schema.json` (optional enum of all eleven TTLV types).
 - `scripts/enrich_mask_tables.py` — inserts an `XML Text` column (CamelCase KMIP-ENCODE §6.1.3 form) into the bit tables of `kb/encoding/*-mask.md` docs; idempotent with `--dry-run` and `--check` CI guard.
 - `XML Text` column added to the `Fields & Structure` bit tables of all three mask docs (`cryptographic-usage-mask.md`, `protection-storage-mask.md`, `storage-status-mask.md`).
+
+### Changed
+
+- `Makefile` `build` target now builds both Go MCP binaries (`mcp_go/bin/kmip-kb` and `mcp_go/bin/kmip-raw`). New targets: `build-kb`, `build-raw`, `build-kb-embed`, `gen-db`, `test`, `test-kb`, `test-raw`, `test-parser`, `clean`.
 
 ### Fixed
 

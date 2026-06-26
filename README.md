@@ -30,6 +30,7 @@ v2.0–v2.1), with **v2.1** as the baseline.
 | `schemas/` | JSON Schemas and machine-readable contracts; `schemas/agent/` holds Graph RAG relation files. |
 | `templates/` | Document skeletons used by the scaffold generator. |
 | `mcp_py/` | Two FastMCP servers: `kmip-kb` exposes the authored `kb/` knowledge base; `kmip-raw` exposes raw crawled spec documents in `raw/`. Both offer BM25 search and document retrieval. |
+| `mcp_go/` | Go port of both MCP servers as standalone binaries (`mcp_go/bin/kmip-kb`, `mcp_go/bin/kmip-raw`) with no Python/venv dependency. Same tools and tool signatures as `mcp_py/`. `kmip-kb` supports an embedded-DB build (`make build-kb-embed`) that bakes the FTS5 index into the binary. |
 
 Each document carries YAML front matter validated against
 [`schemas/frontmatter.schema.json`](schemas/frontmatter.schema.json):
@@ -214,8 +215,12 @@ python scripts/check_verbatim.py --n 8         # adjust the run length
 
 ## MCP servers
 
-Two FastMCP servers in [`mcp_py/`](mcp_py/) expose the project to coding agents
-over stdio. Both are pre-wired for Claude Code via `.mcp.json`.
+Two server implementations expose the project to coding agents over stdio, both pre-wired for Claude Code via `.mcp.json`:
+
+- **Python** ([`mcp_py/`](mcp_py/)) — FastMCP servers; requires Python 3.11+ and a venv.
+- **Go** ([`mcp_go/`](mcp_go/)) — standalone binaries; no Python, no venv, no pip. Build with `make build` and point your MCP config at `mcp_go/bin/kmip-kb` / `mcp_go/bin/kmip-raw`.
+
+Both implementations offer the same tools with identical signatures.
 
 | Server | Script | Indexes | Tools |
 |---|---|---|---|
