@@ -1,12 +1,20 @@
 {
   "mcpServers": {
-    "kmip-kb": {
+    "kmip-kb_py": {
       "command": "bash",
       "args": ["mcp_py/start_kmip-kb.sh"]
     },
-    "kmip-raw": {
+    "kmip-raw_py": {
       "command": "bash",
       "args": ["mcp_py/start_kmip-raw.sh"]
+    },
+    "kmip-kb": {
+      "command": "mcp_go/bin/kmip-kb",
+      "env": { "KMIP_KB_ROOT": "." }
+    },
+    "kmip-raw": {
+      "command": "mcp_go/bin/kmip-raw",
+      "env": { "KMIP_KB_ROOT": "." }
     }
   }
 }
