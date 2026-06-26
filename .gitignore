@@ -1,6 +1,15 @@
 # Python bytecode cache
 __pycache__/
 *.pyc
+
+# Go build outputs
+mcp_go/bin/
+mcp_go/internal/kb/data/*.db
+mcp_go/kmip-kb
+mcp_go/kmip-raw
+mcp_go/kmip-kb.exe
+mcp_go/kmip-raw.exe
+vendor/
 # Claude Code — machine-specific, don't share
 .claude/settings.local.json
 .claude/.session*
