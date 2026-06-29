@@ -20,11 +20,11 @@ The Asynchronous Indicator enumeration controls whether a particular batch item 
 
 ## Fields & Structure
 
-| Name | Value | XML Text | Description |
-|---|---|---|---|
-| Mandatory | `00000001` | `Mandatory` |  |
-| Optional | `00000002` | `Optional` |  |
-| Prohibited | `00000003` | `Prohibited` |  |
+| Name | Value | XML Text |
+|---|---|---|
+| Mandatory | `00000001` | `Mandatory` |
+| Optional | `00000002` | `Optional` |
+| Prohibited | `00000003` | `Prohibited` |
 
 ## Examples
 
