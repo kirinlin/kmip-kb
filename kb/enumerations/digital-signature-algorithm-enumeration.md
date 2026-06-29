@@ -20,27 +20,27 @@ The Digital Signature Algorithm enumeration identifies the full signature algori
 
 ## Fields & Structure
 
-| Name | Value | XML Text | Description |
-|---|---|---|---|
-| MD2 with RSA Encryption | `00000001` | `MD2WithRSAEncryption` |  |
-| MD5 with RSA Encryption | `00000002` | `MD5WithRSAEncryption` |  |
-| SHA-1 with RSA Encryption | `00000003` | `SHA_1WithRSAEncryption` |  |
-| SHA-224 with RSA Encryption | `00000004` | `SHA_224WithRSAEncryption` |  |
-| SHA-256 with RSA Encryption | `00000005` | `SHA_256WithRSAEncryption` |  |
-| SHA-384 with RSA Encryption | `00000006` | `SHA_384WithRSAEncryption` |  |
-| SHA-512 with RSA Encryption | `00000007` | `SHA_512WithRSAEncryption` |  |
-| RSASSA-PSS | `00000008` | `RSASSA_PSS` |  |
-| DSA with SHA-1 | `00000009` | `DSAWithSHA_1` |  |
-| DSA with SHA224 | `0000000A` | `DSAWithSHA224` |  |
-| DSA with SHA256 | `0000000B` | `DSAWithSHA256` |  |
-| ECDSA with SHA-1 | `0000000C` | `ECDSAWithSHA_1` |  |
-| ECDSA with SHA224 | `0000000D` | `ECDSAWithSHA224` |  |
-| ECDSA with SHA256 | `0000000E` | `ECDSAWithSHA256` |  |
-| ECDSA with SHA384 | `0000000F` | `ECDSAWithSHA384` |  |
-| ECDSA with SHA512 | `00000010` | `ECDSAWithSHA512` |  |
-| SHA3-256 with RSA Encryption | `00000011` | `SHA3_256WithRSAEncryption` |  |
-| SHA3-384 with RSA Encryption | `00000012` | `SHA3_384WithRSAEncryption` |  |
-| SHA3-512 with RSA Encryption | `00000013` | `SHA3_512WithRSAEncryption` |  |
+| Name | Value | XML Text |
+|---|---|---|
+| MD2 with RSA Encryption | `00000001` | `MD2WithRSAEncryption` |
+| MD5 with RSA Encryption | `00000002` | `MD5WithRSAEncryption` |
+| SHA-1 with RSA Encryption | `00000003` | `SHA_1WithRSAEncryption` |
+| SHA-224 with RSA Encryption | `00000004` | `SHA_224WithRSAEncryption` |
+| SHA-256 with RSA Encryption | `00000005` | `SHA_256WithRSAEncryption` |
+| SHA-384 with RSA Encryption | `00000006` | `SHA_384WithRSAEncryption` |
+| SHA-512 with RSA Encryption | `00000007` | `SHA_512WithRSAEncryption` |
+| RSASSA-PSS | `00000008` | `RSASSA_PSS` |
+| DSA with SHA-1 | `00000009` | `DSAWithSHA_1` |
+| DSA with SHA224 | `0000000A` | `DSAWithSHA224` |
+| DSA with SHA256 | `0000000B` | `DSAWithSHA256` |
+| ECDSA with SHA-1 | `0000000C` | `ECDSAWithSHA_1` |
+| ECDSA with SHA224 | `0000000D` | `ECDSAWithSHA224` |
+| ECDSA with SHA256 | `0000000E` | `ECDSAWithSHA256` |
+| ECDSA with SHA384 | `0000000F` | `ECDSAWithSHA384` |
+| ECDSA with SHA512 | `00000010` | `ECDSAWithSHA512` |
+| SHA3-256 with RSA Encryption | `00000011` | `SHA3_256WithRSAEncryption` |
+| SHA3-384 with RSA Encryption | `00000012` | `SHA3_384WithRSAEncryption` |
+| SHA3-512 with RSA Encryption | `00000013` | `SHA3_512WithRSAEncryption` |
 
 ## Examples
 
