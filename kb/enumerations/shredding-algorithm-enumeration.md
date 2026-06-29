@@ -23,8 +23,8 @@ The Shredding Algorithm enumeration specifies how the physical storage medium ho
 | Name | Value | XML Text | Description |
 |---|---|---|---|
 | Unspecified | `00000001` | `Unspecified` | The shredding method is not specified or is implementation-defined. The server uses its default sanitisation policy. |
-| Cryptographic | `00000002` | `Cryptographic` |  |
-| Unsupported | `00000003` | `Unsupported` |  |
+| Cryptographic | `00000002` | `Cryptographic` | Cryptographic erasure: the key material was stored encrypted under a wrapping key, and destroying that wrapping key renders the protected data unrecoverable without any physical media overwrite. Equivalent to NIST SP 800-88 Cryptographic Erase. |
+| Unsupported | `00000003` | `Unsupported` | The server does not support physical sanitisation of the storage medium. Destruction deletes logical references only; no hardware-level shredding is performed. Servers advertise this value in Capability Information when they lack the ability to sanitise storage. |
 
 ## Examples
 
