@@ -28,17 +28,17 @@ The Key Format Type enumeration specifies the encoding or serialisation format o
 | PKCS#8 | `00000004` | `PKCS_8` | An algorithm-agnostic private key format (RFC 5958) that wraps the key in a `PrivateKeyInfo` or `OneAsymmetricKey` structure. Supports RSA, EC, DSA, and Ed25519/Ed448 private keys; can optionally be encrypted (`EncryptedPrivateKeyInfo`). The most portable private key format. |
 | X.509 | `00000005` | `X_509` | A public key encoded in the SubjectPublicKeyInfo DER structure (RFC 5280 §4.1.2.7). Algorithm-agnostic: covers RSA, EC, DSA, and Ed25519/Ed448 public keys. |
 | ECPrivateKey | `00000006` | `ECPrivateKey` | An EC private key in the SEC 1 format (RFC 5915), which is the `ECPrivateKey` ASN.1 structure. Optionally includes the public key and the named curve OID. |
-| Transparent Symmetric Key | `00000007` | `TransparentSymmetricKey` |  |
-| Transparent DSA Private Key | `00000008` | `TransparentDSAPrivateKey` |  |
-| Transparent DSA Public Key | `00000009` | `TransparentDSAPublicKey` |  |
-| Transparent RSA Private Key | `0000000A` | `TransparentRSAPrivateKey` |  |
-| Transparent RSA Public Key | `0000000B` | `TransparentRSAPublicKey` |  |
-| Transparent DH Private Key | `0000000C` | `TransparentDHPrivateKey` |  |
-| Transparent DH Public Key | `0000000D` | `TransparentDHPublicKey` |  |
-| Transparent EC Private Key | `00000014` | `TransparentECPrivateKey` |  |
-| Transparent EC Public Key | `00000015` | `TransparentECPublicKey` |  |
+| Transparent Symmetric Key | `00000007` | `TransparentSymmetricKey` | A KMIP-native structure that exposes the raw key bytes of a symmetric key as a named `Key` field, without any external encoding wrapper. Used for key escrow, key import/export, and split-key operations where the exact key material must be accessible by value. |
+| Transparent DSA Private Key | `00000008` | `TransparentDSAPrivateKey` | A KMIP-native structure holding a DSA private key by its mathematical components: domain parameters p (prime modulus), q (prime divisor), g (generator), and the private key integer x. Avoids any ASN.1 wrapper and makes each parameter individually addressable. |
+| Transparent DSA Public Key | `00000009` | `TransparentDSAPublicKey` | A KMIP-native structure holding a DSA public key by its components: domain parameters p, q, g, and the public key integer y. Mirrors TransparentDSAPrivateKey at the public side. |
+| Transparent RSA Private Key | `0000000A` | `TransparentRSAPrivateKey` | A KMIP-native structure that exposes an RSA private key as named integer fields: modulus n, public exponent e, private exponent d, and optionally the CRT components (prime1, prime2, exponent1, exponent2, coefficient). Provides direct access to each RSA component without DER encoding. |
+| Transparent RSA Public Key | `0000000B` | `TransparentRSAPublicKey` | A KMIP-native structure holding an RSA public key as two named integer fields: the modulus n and the public exponent e. Complements TransparentRSAPrivateKey at the public side. |
+| Transparent DH Private Key | `0000000C` | `TransparentDHPrivateKey` | A KMIP-native structure holding a Diffie-Hellman private key by its components: group parameters p, q (optional), g, and the private integer x. Useful for DH key agreement escrow without wrapping the value in PKCS#3 or other encodings. |
+| Transparent DH Public Key | `0000000D` | `TransparentDHPublicKey` | A KMIP-native structure holding a Diffie-Hellman public key by its group parameters p, q (optional), g, and the public integer y. Mirrors TransparentDHPrivateKey at the public side. |
+| Transparent EC Private Key | `00000014` | `TransparentECPrivateKey` | A KMIP-native structure for an elliptic-curve private key containing the recommended curve identifier and the scalar private value d. Optionally includes the corresponding public key point Q. Does not use SEC 1 or PKCS#8 encoding. |
+| Transparent EC Public Key | `00000015` | `TransparentECPublicKey` | A KMIP-native structure for an elliptic-curve public key containing the recommended curve identifier and the public key point Q as a byte string (typically uncompressed or compressed form per SEC 1). Complements TransparentECPrivateKey. |
 | PKCS#12 | `00000016` | `PKCS_12` | A DER-encoded archive that bundles a private key with its certificate and optionally its certificate chain and additional attributes. Used for portability between applications (e.g., browser import/export). |
-| PKCS#10 | `00000017` | `PKCS_10` |  |
+| PKCS#10 | `00000017` | `PKCS_10` | A Certificate Signing Request (CSR) encoded per PKCS#10 (RFC 2986). Contains a public key and subject identifying information, signed by the corresponding private key, and submitted to a CA to obtain a certificate. |
 
 ## Examples
 
