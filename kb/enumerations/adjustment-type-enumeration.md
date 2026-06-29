@@ -20,11 +20,11 @@ The Adjustment Type enumeration controls how the [Adjust Attribute](../operation
 
 ## Fields & Structure
 
-| Name | Value | XML Text | Description |
-|---|---|---|---|
-| Increment | `00000001` | `Increment` |  |
-| Decrement | `00000002` | `Decrement` |  |
-| Negate | `00000003` | `Negate` |  |
+| Name | Value | XML Text |
+|---|---|---|
+| Increment | `00000001` | `Increment` |
+| Decrement | `00000002` | `Decrement` |
+| Negate | `00000003` | `Negate` |
 
 ## Examples
 
