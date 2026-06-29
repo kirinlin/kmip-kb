@@ -31,9 +31,9 @@ Unlike other KMIP enumerations (which are encoded as 4-byte integers with type `
 | Boolean | `00000006` | `Boolean` | (`06`): A true/false value stored in 8 bytes (padded for alignment). Used for binary flag fields. |
 | Text String | `00000007` | `TextString` | (`07`): A UTF-8 encoded text string, padded to a multiple of 8 bytes. Used for human-readable names, URIs, and textual attribute values. |
 | Byte String | `00000008` | `ByteString` | (`08`): An arbitrary byte sequence, padded to a multiple of 8 bytes. Used for key material, ciphertext, digests, and other opaque binary data. |
-| Date Time | `00000009` | `DateTime` |  |
+| Date Time | `00000009` | `DateTime` | (`09`): A signed 64-bit POSIX timestamp in **seconds**, stored in 8 bytes. Used for date-time attributes such as Activation Date, Deactivation Date, and Initial Date. |
 | Interval | `0000000A` | `Interval` | (`0A`): A 32-bit unsigned duration in seconds. Used for lease time, validity periods, and similar bounded time values. |
-| Date Time Extended | `0000000B` | `DateTimeExtended` |  |
+| Date Time Extended | `0000000B` | `DateTimeExtended` | (`0B`): A signed 64-bit POSIX timestamp in **microseconds**, stored in 8 bytes. Provides sub-second precision for high-resolution timestamps such as audit log submission dates. |
 
 ## Examples
 
