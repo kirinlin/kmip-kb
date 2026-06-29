@@ -68,7 +68,7 @@ Enumeration docs use the `templates/enumeration.md` template (not `templates/enc
 | Certificate | `00000001` | `Certificate` | ... |
 ```
 
-`Value` is the 8-digit hex integer value of each enumeration value (e.g. `00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled.
+`Value` is the 8-digit hex integer value of each enumeration value (e.g. `00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled; when per-value descriptions add no meaning beyond the value name (e.g. self-evident single-word enum values), the column is omitted from the table entirely.
 
 `scripts/enrich_enum_tables.py` inserts these tables from spec data and is idempotent. Run it when adding or editing enumeration docs:
 

@@ -142,8 +142,10 @@ python scripts/enrich_field_tables.py --check      # fail if any table is stale
 refreshes the `Name | Value | XML Text | Description` table in every enumeration
 doc under `kb/enumerations/`. `Value` is the 8-digit integer value (e.g.
 `00000001`); `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 that
-appears inside the XML element when encoding the value. `--check` exits non-zero
-if any table is stale (CI guard).
+appears inside the XML element when encoding the value. The `Description` column
+is author-filled and omitted from tables where per-value descriptions add no
+meaning beyond the value name. `--check` exits non-zero if any table is stale
+(CI guard).
 
 ```sh
 python scripts/enrich_enum_tables.py --dry-run   # preview changes

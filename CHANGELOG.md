@@ -25,18 +25,10 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Profile Name Enumeration (`kb/enumerations/profile-name-enumeration.md`) Description column filled for all 37 values, covering Baseline, Complete Server, encoding (HTTPS/JSON/XML), key-lifecycle, cryptographic service, FIPS 140 foundry, opaque object store, SED storage array, tape library, AES XTS, Quantum Safe, PKCS#11, and the two legacy v1.4 named profiles.
+- FIPS 186 Variation Enumeration (`kb/enumerations/fips186-variation-enumeration.md`) and Key Format Type Enumeration (`kb/enumerations/key-format-type-enumeration.md`) Description columns filled.
+- Unique Identifier Enumeration (`kb/enumerations/unique-identifier-enumeration.md`) table restructured to reflect the three distinct encoding forms (Text String, Integer, Enumeration) and their selection rules.
+- `Description` column removed from enumeration tables where values are self-evident (adjustment-type, asynchronous-indicator, digital-signature-algorithm, data, NIST key type, recommended-curve, operation, and tag enumerations); `Description` is now only present when per-value prose adds meaning.
 - `Makefile` `build` target now builds both Go MCP binaries (`mcp_go/bin/kmip-kb` and `mcp_go/bin/kmip-raw`). New targets: `build-kb`, `build-raw`, `build-kb-embed`, `gen-db`, `test`, `test-kb`, `test-raw`, `test-parser`, `clean`.
-
-### Fixed
-
-- `Description` column populated across all `kb/enumerations/` value tables; previously the column existed in the table header but all cells were empty.
-- `Description` column fully populated in `result-reason-enumeration.md`; all 42 previously-empty cells now carry descriptions.
-- Corrected swapped table content in `wrapping-method-enumeration.md` (§11.62) and `validation-type-enumeration.md` (§11.64); corrected `source_section` values on both docs and on `validity-indicator-enumeration.md` (§11.61) and `validation-authority-type-enumeration.md` (§11.63).
-- Removed two spurious rows (Query Interop Functions / Query PKCS#11 Interfaces) from `query-function-enumeration.md`; v2.1 §11.44 defines 14 values only (0x01–0x0E).
-- `kmip-raw` MCP server now exits immediately with a diagnostic message pointing to `scripts/kmip_crawler.py` if `raw/kmip/` is absent or empty, instead of silently building an empty index.
-
-### Changed
-
 - Category index pages now link every article in their tree: backfilled 35 previously-unlisted entries across the attributes, operations, objects, concepts, and references indexes (mostly v2.1 additions such as the `Rotate *`, protection-storage, session, and server-configuration families).
 - Request Header and Response Header section headings in `kb/structures/operations.md` now include the CamelCase XML text identifier alongside the hex tag (e.g. `420077`, `RequestHeader`).
 - `templates/object.md` now includes `tag_hex`, `xml_text`, and `tag_type` placeholder fields, matching the other managed-object templates.
@@ -47,6 +39,14 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Renamed `templates/ttlv.md` to `templates/encoding.md`; `scripts/build_kb_scaffold.py` and authoring docs updated.
 - Enumeration `Fields & Structure` table columns renamed: `Value` → `Name`, `Hex` → `Value`; hex values no longer carry the `0x` prefix (e.g. `00000001` instead of `0x00000001`). `scripts/enrich_enum_tables.py` and all 62 enumeration docs updated.
 - Removed `0x` prefix from inline hex values in structure and encoding docs (`kb/structures/`, `kb/encoding/`).
+
+### Fixed
+
+- `Description` column now populated in all `kb/enumerations/` value tables that carry one; previously the column existed in the table header but all cells were empty.
+- `Description` column fully populated in `result-reason-enumeration.md`; all 42 previously-empty cells now carry descriptions.
+- Corrected swapped table content in `wrapping-method-enumeration.md` (§11.62) and `validation-type-enumeration.md` (§11.64); corrected `source_section` values on both docs and on `validity-indicator-enumeration.md` (§11.61) and `validation-authority-type-enumeration.md` (§11.63).
+- Removed two spurious rows (Query Interop Functions / Query PKCS#11 Interfaces) from `query-function-enumeration.md`; v2.1 §11.44 defines 14 values only (0x01–0x0E).
+- `kmip-raw` MCP server now exits immediately with a diagnostic message pointing to `scripts/kmip_crawler.py` if `raw/kmip/` is absent or empty, instead of silently building an empty index.
 
 ## [0.16.0] - 2026-06-16
 
