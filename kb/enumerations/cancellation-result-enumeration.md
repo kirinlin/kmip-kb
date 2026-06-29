@@ -22,11 +22,11 @@ The Cancellation Result enumeration conveys the server's response to a [Cancel](
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Canceled | `00000001` | `Canceled` |  |
+| Canceled | `00000001` | `Canceled` | The server successfully stopped the in-progress operation before it completed; no result will be produced for this correlation value. |
 | Unable to Cancel | `00000002` | `UnableToCancel` | The operation has already completed by the time the Cancel request arrived. The result is available via Query Asynchronous Requests; the Cancel had no effect. |
-| Completed | `00000003` | `Completed` |  |
-| Failed | `00000004` | `Failed` |  |
-| Unavailable | `00000005` | `Unavailable` |  |
+| Completed | `00000003` | `Completed` | The asynchronous operation finished successfully before the Cancel request arrived; the operation cannot be undone but its result is available via Query Asynchronous Requests. |
+| Failed | `00000004` | `Failed` | The asynchronous operation terminated with an error before the Cancel request was processed; a failure result is recorded and retrievable via Query Asynchronous Requests. |
+| Unavailable | `00000005` | `Unavailable` | The server has no record of an asynchronous operation matching the supplied correlation value, or the operation's tracking entry has already expired or been purged. |
 
 ## Examples
 
