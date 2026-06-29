@@ -24,6 +24,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Profile Name Enumeration (`kb/enumerations/profile-name-enumeration.md`) Description column filled for all 37 values, covering Baseline, Complete Server, encoding (HTTPS/JSON/XML), key-lifecycle, cryptographic service, FIPS 140 foundry, opaque object store, SED storage array, tape library, AES XTS, Quantum Safe, PKCS#11, and the two legacy v1.4 named profiles.
 - `Makefile` `build` target now builds both Go MCP binaries (`mcp_go/bin/kmip-kb` and `mcp_go/bin/kmip-raw`). New targets: `build-kb`, `build-raw`, `build-kb-embed`, `gen-db`, `test`, `test-kb`, `test-raw`, `test-parser`, `clean`.
 
 ### Fixed
