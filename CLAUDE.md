@@ -70,7 +70,7 @@ Enumeration docs use the `templates/enumeration.md` template (not `templates/enc
 
 `Value` is the 8-digit hex integer value of each enumeration value (e.g. `00000001`). `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 — the text that appears inside the XML element when encoding the value in XML. The `Description` column is author-filled; when per-value descriptions add no meaning beyond the value name (e.g. self-evident single-word enum values), the column is omitted from the table entirely.
 
-`scripts/enrich_enum_tables.py` inserts these tables from spec data and is idempotent. Run it when adding or editing enumeration docs:
+`scripts/enrich_enum_tables.py` inserts or corrects these tables from spec data and is idempotent. It compares the existing table header against the expected format; a mismatch triggers a full table replacement. The `NO_DESCRIPTION_TABLES` frozenset inside the script lists the 9 filenames that should use the 3-column format (no Description). Run it when adding or editing enumeration docs:
 
 ```
 python scripts/enrich_enum_tables.py [--dry-run] [--check]   # --check exits non-zero if any table is stale

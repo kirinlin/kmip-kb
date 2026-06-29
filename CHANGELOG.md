@@ -24,6 +24,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- `scripts/enrich_enum_tables.py` now maintains a `NO_DESCRIPTION_TABLES` whitelist (9 filenames) for enumerations whose tables omit the Description column. The script compares the existing table header to the expected format instead of merely detecting a `| Name |` table; a header mismatch triggers a full table replacement. `--check` now catches format drift in both directions (Description present when it should be absent, and vice versa).
 - Profile Name Enumeration (`kb/enumerations/profile-name-enumeration.md`) Description column filled for all 37 values, covering Baseline, Complete Server, encoding (HTTPS/JSON/XML), key-lifecycle, cryptographic service, FIPS 140 foundry, opaque object store, SED storage array, tape library, AES XTS, Quantum Safe, PKCS#11, and the two legacy v1.4 named profiles.
 - FIPS 186 Variation Enumeration (`kb/enumerations/fips186-variation-enumeration.md`) and Key Format Type Enumeration (`kb/enumerations/key-format-type-enumeration.md`) Description columns filled.
 - Unique Identifier Enumeration (`kb/enumerations/unique-identifier-enumeration.md`) table restructured to reflect the three distinct encoding forms (Text String, Integer, Enumeration) and their selection rules.

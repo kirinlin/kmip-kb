@@ -139,13 +139,14 @@ python scripts/enrich_field_tables.py --check      # fail if any table is stale
 ## Enumeration-table enrichment
 
 [`scripts/enrich_enum_tables.py`](scripts/enrich_enum_tables.py) inserts or
-refreshes the `Name | Value | XML Text | Description` table in every enumeration
+corrects the `Name | Value | XML Text | Description` table in every enumeration
 doc under `kb/enumerations/`. `Value` is the 8-digit integer value (e.g.
 `00000001`); `XML Text` is the CamelCase text per KMIP-ENCODE §6.1.3 that
 appears inside the XML element when encoding the value. The `Description` column
-is author-filled and omitted from tables where per-value descriptions add no
-meaning beyond the value name. `--check` exits non-zero if any table is stale
-(CI guard).
+is author-filled and omitted from tables in the `NO_DESCRIPTION_TABLES` whitelist
+(9 enumerations whose values are self-evident). The script compares the existing
+table header to the expected format; a mismatch triggers replacement. `--check`
+exits non-zero if any table header is stale or missing (CI guard).
 
 ```sh
 python scripts/enrich_enum_tables.py --dry-run   # preview changes
