@@ -20,12 +20,12 @@ The FIPS 186 Variation enumeration specifies which variation of the FIPS 186 sta
 | Name | Value | XML Text | Description |
 |---|---|---|---|
 | Unspecified | `00000001` | `Unspecified` | No specific variation is requested; the server selects an appropriate method according to its policy and the FIPS 186 edition it implements. |
-| GP x-Original | `00000002` | `GPXOriginal` |  |
-| GP x-Change Notice | `00000003` | `GPXChangeNotice` |  |
-| x-Original | `00000004` | `XOriginal` |  |
-| x-Change Notice | `00000005` | `XChangeNotice` |  |
-| k-Original | `00000006` | `KOriginal` |  |
-| k-Change Notice | `00000007` | `KChangeNotice` |  |
+| GP x-Original | `00000002` | `GPXOriginal` | General Purpose prime generation method using the x-parameter seeding approach, as defined in the original FIPS 186-2 publication. |
+| GP x-Change Notice | `00000003` | `GPXChangeNotice` | General Purpose x-parameter prime generation method as revised by the FIPS 186-2 change notice, which updated the underlying random number generation procedures. |
+| x-Original | `00000004` | `XOriginal` | Prime generation using the x-parameter method from the original FIPS 186-2, without the General Purpose extension. Deprecated; included for legacy interoperability. |
+| x-Change Notice | `00000005` | `XChangeNotice` | x-parameter prime generation method as revised by the FIPS 186-2 change notice. Deprecated; included for legacy interoperability. |
+| k-Original | `00000006` | `KOriginal` | Prime generation using the k-parameter variant of the FIPS 186-2 algorithm, a distinct algorithmic approach for deriving DSA domain parameters p and q. Deprecated; included for legacy interoperability. |
+| k-Change Notice | `00000007` | `KChangeNotice` | k-parameter prime generation method as revised by the FIPS 186-2 change notice. Deprecated; included for legacy interoperability. |
 
 ## Examples
 
