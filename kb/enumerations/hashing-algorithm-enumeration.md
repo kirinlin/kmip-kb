@@ -33,12 +33,12 @@ The Hashing Algorithm enumeration identifies the cryptographic hash function to 
 | RIPEMD-160 | `00000009` | `RIPEMD_160` | A 160-bit hash from Europe, used in Bitcoin address derivation and some legacy TLS deployments. |
 | Tiger | `0000000A` | `Tiger` | A 192-bit hash designed for 64-bit platforms; used in some P2P and older network protocols. |
 | Whirlpool | `0000000B` | `Whirlpool` | A 512-bit Miyaguchi-Preneel hash recommended by NESSIE; used in some high-security European applications. |
-| SHA-512/224 | `0000000C` | `SHA_512_224` | / **SHA-512/256**: SHA-512 with truncated outputs, providing the same performance as SHA-512 with shorter digests. |
-| SHA-512/256 | `0000000D` | `SHA_512_256` |  |
-| SHA3-224 | `0000000E` | `SHA3_224` |  |
-| SHA3-256 | `0000000F` | `SHA3_256` |  |
-| SHA3-384 | `00000010` | `SHA3_384` |  |
-| SHA3-512 | `00000011` | `SHA3_512` |  |
+| SHA-512/224 | `0000000C` | `SHA_512_224` | SHA-512 with a 224-bit truncated output; offers the same 64-bit platform efficiency as SHA-512 with a digest size appropriate for 112-bit security equivalence. |
+| SHA-512/256 | `0000000D` | `SHA_512_256` | SHA-512 with a 256-bit truncated output; resists length-extension attacks that affect SHA-256 while delivering equivalent security strength at SHA-512 performance. |
+| SHA3-224 | `0000000E` | `SHA3_224` | 224-bit output from the Keccak-based SHA-3 family (FIPS 202); structurally distinct from SHA-2 and immune to length-extension attacks. |
+| SHA3-256 | `0000000F` | `SHA3_256` | 256-bit SHA-3 output; the primary SHA-3 drop-in for SHA-256 in new designs seeking algorithm diversity beyond the SHA-2 family. |
+| SHA3-384 | `00000010` | `SHA3_384` | 384-bit SHA-3 output; used in higher-assurance applications and as the hash component for ECDSA-384 under SHA-3. |
+| SHA3-512 | `00000011` | `SHA3_512` | 512-bit SHA-3 output; the highest-strength SHA-3 variant, providing 256-bit collision resistance for the most demanding security requirements. |
 
 ## Examples
 
