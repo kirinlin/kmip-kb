@@ -33,12 +33,12 @@ The Block Cipher Mode enumeration specifies the mode of operation for a symmetri
 | GCM | `00000009` | `GCM` | (Galois/Counter Mode): The most widely deployed AEAD mode, combining CTR encryption with GHASH-based authentication. Provides both confidentiality and integrity efficiently with hardware support. |
 | CBC-MAC | `0000000A` | `CBC_MAC` | Classic cipher-based MAC; predecessor to CMAC. |
 | XTS | `0000000B` | `XTS` | (XEX-based Tweaked CodeBook with ciphertext Stealing): Designed for disk sector encryption where a tweak value (sector number) is used to vary the encryption per sector. |
-| AESKeyWrapPadding | `0000000C` | `AESKeyWrapPadding` |  |
-| NISTKeyWrap | `0000000D` | `NISTKeyWrap` | / **AESKeyWrapPadding**: NIST SP 800-38F key-wrapping algorithms based on AES, providing integrity protection for key material without requiring an IV. |
-| X9.102 AESKW | `0000000E` | `X9_102AESKW` |  |
-| X9.102 TDKW | `0000000F` | `X9_102TDKW` |  |
-| X9.102 AKW1 | `00000010` | `X9_102AKW1` |  |
-| X9.102 AKW2 | `00000011` | `X9_102AKW2` |  |
+| AESKeyWrapPadding | `0000000C` | `AESKeyWrapPadding` | AES Key Wrap with Padding per RFC 5649 and NIST SP 800-38F §6.3. Extends NISTKeyWrap to support plaintexts whose length is not a multiple of 8 bytes. |
+| NISTKeyWrap | `0000000D` | `NISTKeyWrap` | AES Key Wrap without padding per RFC 3394 and NIST SP 800-38F §6.2. Wraps key material in 8-byte chunks using AES; the plaintext must be a multiple of 8 bytes. Provides integrity protection without requiring a separate IV. |
+| X9.102 AESKW | `0000000E` | `X9_102AESKW` | AES-based symmetric key wrap defined in ANSI X9.102, aligned with the RFC 3394 AES Key Wrap construction. |
+| X9.102 TDKW | `0000000F` | `X9_102TDKW` | Triple-DES-based key wrap defined in ANSI X9.102, applying the same structural wrapping approach as AESKW using Triple-DES as the underlying cipher. |
+| X9.102 AKW1 | `00000010` | `X9_102AKW1` | Key-wrap algorithm variant 1 per ANSI X9.102; an AES-based wrapping scheme with key-size semantics distinct from AESKW. |
+| X9.102 AKW2 | `00000011` | `X9_102AKW2` | Key-wrap algorithm variant 2 per ANSI X9.102; an alternative AES-based wrapping construction defined alongside AKW1. |
 | AEAD | `00000012` | `AEAD` | A generic label for authenticated encryption with associated data, used when the specific AEAD mode is captured elsewhere. |
 
 ## Examples
