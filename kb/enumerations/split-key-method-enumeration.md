@@ -23,9 +23,9 @@ The Split Key Method enumeration identifies the mathematical technique used to d
 | Name | Value | XML Text | Description |
 |---|---|---|---|
 | XOR | `00000001` | `XOR` | A trivial 2-of-2 split. One share is random; the second share is the XOR of the random share and the original key. Both shares are required for reconstruction; there is no threshold flexibility. |
-| Polynomial Sharing GF (216) | `00000002` | `PolynomialSharingGF216` |  |
+| Polynomial Sharing GF (216) | `00000002` | `PolynomialSharingGF216` | Shamir's Secret Sharing over GF(2^16), the Galois field with 65,536 elements. Polynomial evaluation uses 16-bit word arithmetic in a finite field, enabling k-of-n threshold sharing. Larger than GF(2^8) per share word, offering a wider element space at the cost of more complex field arithmetic. |
 | Polynomial Sharing Prime Field | `00000003` | `PolynomialSharingPrimeField` | Shamir's Secret Sharing over a prime field (modular integer arithmetic). The same k-of-n threshold property, operating over integers modulo a large prime. Often easier to implement in arbitrary-precision arithmetic environments. |
-| Polynomial Sharing GF (28) | `00000004` | `PolynomialSharingGF28` |  |
+| Polynomial Sharing GF (28) | `00000004` | `PolynomialSharingGF28` | Shamir's Secret Sharing over GF(2^8), the Galois field with 256 elements. Polynomial evaluation uses byte-level finite field arithmetic (mod an irreducible polynomial over GF(2)), making it highly efficient for byte-oriented secrets. Each share byte is independently computed, and any k shares suffice to reconstruct the original key. The most widely implemented variant. |
 
 ## Examples
 
