@@ -22,8 +22,8 @@ The Endpoint Role enumeration identifies the functional role of a KMIP endpoint 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Client | `00000001` | `Client` |  |
-| Server | `00000002` | `Server` |  |
+| Client | `00000001` | `Client` | An endpoint that initiates KMIP requests; it sends operations such as Create, Get, and Locate to a server and consumes the responses. |
+| Server | `00000002` | `Server` | An endpoint that receives and processes KMIP requests from clients; it manages cryptographic objects and enforces access control policy. |
 
 ## Examples
 
