@@ -20,15 +20,15 @@ The Data enumeration discriminates the role of a data payload within the [Proces
 
 ## Fields & Structure
 
-| Name | Value | XML Text | Description |
-|---|---|---|---|
-| Decrypt | `00000001` | `Decrypt` |  |
-| Encrypt | `00000002` | `Encrypt` |  |
-| Hash | `00000003` | `Hash` |  |
-| MAC MAC Data | `00000004` | `MACMACData` |  |
-| RNG Retrieve | `00000005` | `RNGRetrieve` |  |
-| Sign Signature Data | `00000006` | `SignSignatureData` |  |
-| Signature Verify | `00000007` | `SignatureVerify` |  |
+| Name | Value | XML Text |
+|---|---|---|
+| Decrypt | `00000001` | `Decrypt` |
+| Encrypt | `00000002` | `Encrypt` |
+| Hash | `00000003` | `Hash` |
+| MAC MAC Data | `00000004` | `MACMACData` |
+| RNG Retrieve | `00000005` | `RNGRetrieve` |
+| Sign Signature Data | `00000006` | `SignSignatureData` |
+| Signature Verify | `00000007` | `SignatureVerify` |
 
 ## Examples
 
