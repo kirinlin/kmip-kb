@@ -24,25 +24,27 @@ When the Unique Identifier field carries a sentinel value from this enumeration,
 
 ## Fields & Structure
 
-| Name | Value | XML Text | Description |
-|---|---|---|---|
-| ID Placeholder | `00000001` | `IDPlaceholder` | Refers to the object identified by the server's current ID Placeholder — a per-session register that holds the Unique Identifier of the most recently created or located object. A batch item can use this sentinel in a Get immediately after a Create to retrieve the key that was just made, without needing to capture the Create response's Unique Identifier first. |
-| Certify | `00000002` | `Certify` |  |
-| Create | `00000003` | `Create` |  |
-| Create Key Pair | `00000004` | `CreateKeyPair` |  |
-| Create Key Pair Private Key | `00000005` | `CreateKeyPairPrivateKey` |  |
-| Create Key Pair Public Key | `00000006` | `CreateKeyPairPublicKey` |  |
-| Create Split Key | `00000007` | `CreateSplitKey` |  |
-| Derive Key | `00000008` | `DeriveKey` |  |
-| Import | `00000009` | `Import` |  |
-| Join Split Key | `0000000A` | `JoinSplitKey` |  |
-| Locate | `0000000B` | `Locate` |  |
-| Register | `0000000C` | `Register` |  |
-| Re-key | `0000000D` | `ReKey` |  |
-| Re-certify | `0000000E` | `ReCertify` |  |
-| Re-key Key Pair | `0000000F` | `ReKeyKeyPair` |  |
-| Re-key Key Pair Private Key | `00000010` | `ReKeyKeyPairPrivateKey` |  |
-| Re-key Key Pair Public Key | `00000011` | `ReKeyKeyPairPublicKey` |  |
+| Name | Value | XML Text |
+|---|---|---|
+| ID Placeholder | `00000001` | `IDPlaceholder` |
+| Certify | `00000002` | `Certify` |
+| Create | `00000003` | `Create` |
+| Create Key Pair | `00000004` | `CreateKeyPair` |
+| Create Key Pair Private Key | `00000005` | `CreateKeyPairPrivateKey` |
+| Create Key Pair Public Key | `00000006` | `CreateKeyPairPublicKey` |
+| Create Split Key | `00000007` | `CreateSplitKey` |
+| Derive Key | `00000008` | `DeriveKey` |
+| Import | `00000009` | `Import` |
+| Join Split Key | `0000000A` | `JoinSplitKey` |
+| Locate | `0000000B` | `Locate` |
+| Register | `0000000C` | `Register` |
+| Re-key | `0000000D` | `ReKey` |
+| Re-certify | `0000000E` | `ReCertify` |
+| Re-key Key Pair | `0000000F` | `ReKeyKeyPair` |
+| Re-key Key Pair Private Key | `00000010` | `ReKeyKeyPairPrivateKey` |
+| Re-key Key Pair Public Key | `00000011` | `ReKeyKeyPairPublicKey` |
+
+**ID Placeholder** - Refers to the object identified by the server's current ID Placeholder — a per-session register that holds the Unique Identifier of the most recently created or located object. A batch item can use this sentinel in a Get immediately after a Create to retrieve the key that was just made, without needing to capture the Create response's Unique Identifier first.
 
 ## Examples
 
