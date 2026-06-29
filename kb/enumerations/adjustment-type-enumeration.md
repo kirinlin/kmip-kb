@@ -26,11 +26,6 @@ The Adjustment Type enumeration controls how the [Adjust Attribute](../operation
 | Decrement | `00000002` | `Decrement` |  |
 | Negate | `00000003` | `Negate` |  |
 
-- **Add**: Increases the existing numeric attribute value by the supplied adjustment amount. Used when incrementing counters such as a rotate-generation counter or a usage count.
-- **Subtract**: Decreases the existing numeric attribute value by the supplied adjustment amount. Mirrors Add but in the opposite direction; useful for releasing reserved usage allocations.
-- **Multiply**: Multiplies the existing value by the adjustment amount. Less common but available for scaling operations.
-- **Replace**: Overwrites the attribute with the supplied value regardless of what the current value is. Functionally equivalent to a Set Attribute but expressed through the Adjust Attribute path, and useful when the caller has authoritative knowledge of the correct final value.
-
 ## Examples
 
 A client maintaining a rotation-generation counter can issue an Adjust Attribute request with type **Add** and a value of 1 each time a key generation is recorded, without needing to read the current counter first. If a management operation determines the counter has drifted, **Replace** lets it reset the attribute to an authoritative value in a single round trip.

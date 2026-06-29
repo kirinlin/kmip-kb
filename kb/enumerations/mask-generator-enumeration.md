@@ -22,11 +22,7 @@ The Mask Generator enumeration identifies the mask generation function (MGF) use
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| MFG1 | `00000001` | `MFG1` |  |
-
-- **MFG1**: Mask Generation Function 1 as defined in PKCS#1 v2.x (RFC 8017) and IEEE P1363. MFG1 applies a hash function iteratively over a counter and seed to produce a mask of the required length. It is by far the most commonly deployed MGF: OAEP as used in TLS and S/MIME almost universally uses MFG1 with SHA-1, SHA-256, or SHA-384.
-
-Additional MGF values may be defined for use with other padding schemes or international standards, though MFG1 covers the overwhelming majority of practical deployments.
+| MFG1 | `00000001` | `MFG1` | Mask Generation Function 1 as defined in PKCS#1 v2.x (RFC 8017) and IEEE P1363. MFG1 applies a hash function iteratively over a counter and seed to produce a mask of the required length. It is by far the most commonly deployed MGF: OAEP as used in TLS and S/MIME almost universally uses MFG1 with SHA-1, SHA-256, or SHA-384. |
 
 ## Examples
 

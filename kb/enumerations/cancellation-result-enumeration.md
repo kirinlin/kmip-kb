@@ -23,15 +23,10 @@ The Cancellation Result enumeration conveys the server's response to a [Cancel](
 | Name | Value | XML Text | Description |
 |---|---|---|---|
 | Canceled | `00000001` | `Canceled` |  |
-| Unable to Cancel | `00000002` | `UnableToCancel` |  |
+| Unable to Cancel | `00000002` | `UnableToCancel` | The operation has already completed by the time the Cancel request arrived. The result is available via Query Asynchronous Requests; the Cancel had no effect. |
 | Completed | `00000003` | `Completed` |  |
 | Failed | `00000004` | `Failed` |  |
 | Unavailable | `00000005` | `Unavailable` |  |
-
-- **Cancelled**: The server successfully stopped the operation before it completed. Any work-in-progress has been discarded and the correlation value is no longer valid.
-- **Unable to Cancel**: The operation has already completed by the time the Cancel request arrived. The result is available via Query Asynchronous Requests; the Cancel had no effect.
-- **Cancelling**: The server has accepted the cancellation request and is in the process of stopping the operation, but has not yet fully terminated it. The client may need to poll again to confirm final cancellation.
-- **Cannot Cancel**: The server does not support cancellation for this type of operation, or the operation is in a state that makes cancellation impossible (for example, already committed to hardware).
 
 ## Examples
 

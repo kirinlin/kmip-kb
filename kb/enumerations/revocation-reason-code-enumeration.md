@@ -22,21 +22,13 @@ The Revocation Reason Code enumeration classifies why a managed object is being 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| Key Compromise | `00000002` | `KeyCompromise` |  |
-| CA Compromise | `00000003` | `CACompromise` |  |
-| Affiliation Changed | `00000004` | `AffiliationChanged` |  |
-| Superseded | `00000005` | `Superseded` |  |
-| Cessation of Operation | `00000006` | `CessationOfOperation` |  |
-| Privilege Withdrawn | `00000007` | `PrivilegeWithdrawn` |  |
-
-- **Unspecified**: The reason is not categorised. Used when a more specific code is not applicable or not known.
-- **Key Compromise**: The private key or secret has been disclosed to an unauthorised party, or there is a credible risk that it has been. The most critical revocation reason; objects are typically moved to the Compromised state.
-- **CA Compromise**: The issuing Certificate Authority has been compromised. Triggers bulk revocation of all certificates issued by the compromised CA.
-- **Affiliation Changed**: The subject's organisational affiliation has changed — for example, an employee has left the organisation. Applies primarily to certificates.
-- **Superseded**: The object has been replaced by a newer version (rotation, re-key, re-certify). The predecessor is deactivated or revoked in favour of the successor.
-- **Cessation of Operation**: The entity for which the key was created no longer needs or uses it — operations have ceased. The key was not compromised.
-- **Privilege Withdrawn**: The permissions or privileges associated with the key or certificate have been explicitly revoked, even if the key material itself is uncompromised.
+| Unspecified | `00000001` | `Unspecified` | The reason is not categorised. Used when a more specific code is not applicable or not known. |
+| Key Compromise | `00000002` | `KeyCompromise` | The private key or secret has been disclosed to an unauthorised party, or there is a credible risk that it has been. The most critical revocation reason; objects are typically moved to the Compromised state. |
+| CA Compromise | `00000003` | `CACompromise` | The issuing Certificate Authority has been compromised. Triggers bulk revocation of all certificates issued by the compromised CA. |
+| Affiliation Changed | `00000004` | `AffiliationChanged` | The subject's organisational affiliation has changed — for example, an employee has left the organisation. Applies primarily to certificates. |
+| Superseded | `00000005` | `Superseded` | The object has been replaced by a newer version (rotation, re-key, re-certify). The predecessor is deactivated or revoked in favour of the successor. |
+| Cessation of Operation | `00000006` | `CessationOfOperation` | The entity for which the key was created no longer needs or uses it — operations have ceased. The key was not compromised. |
+| Privilege Withdrawn | `00000007` | `PrivilegeWithdrawn` | The permissions or privileges associated with the key or certificate have been explicitly revoked, even if the key material itself is uncompromised. |
 
 ## Examples
 

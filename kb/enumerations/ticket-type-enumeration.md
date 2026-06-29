@@ -22,11 +22,7 @@ The Ticket Type enumeration classifies the nature of a session [Ticket](../struc
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Login | `00000001` | `Login` |  |
-
-- **Login**: The ticket was issued as a result of a successful [Login](../operations/login.md) operation. It represents a standard authenticated session for the principal who logged in. This is the only baseline-defined value in KMIP v2.1.
-
-Additional ticket types may be defined by vendor extensions or future specification revisions to represent delegation tickets, impersonation tokens, or time-limited one-time-use tokens.
+| Login | `00000001` | `Login` | The ticket was issued as a result of a successful [Login](../operations/login.md) operation. It represents a standard authenticated session for the principal who logged in. This is the only baseline-defined value in KMIP v2.1. |
 
 ## Examples
 

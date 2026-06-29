@@ -22,15 +22,10 @@ The Key Compression Type enumeration specifies how an elliptic curve public key 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| EC Public Key Type Uncompressed | `00000001` | `ECPublicKeyTypeUncompressed` |  |
-| EC Public Key Type X9.62 Compressed Prime | `00000002` | `ECPublicKeyTypeX9_62CompressedPrime` |  |
-| EC Public Key Type X9.62 Compressed Char2 | `00000003` | `ECPublicKeyTypeX9_62CompressedChar2` |  |
-| EC Public Key Type X9.62 Hybrid | `00000004` | `ECPublicKeyTypeX9_62Hybrid` |  |
-
-- **EC Public Key Type Uncompressed**: The public key point is encoded as a full `04 || X || Y` byte string where both the X and Y coordinates are included at full length. This is the most universally supported format — virtually every EC library accepts uncompressed points.
-- **EC Public Key Type X9.62 Compressed Prime**: Compressed encoding for curves over prime fields (e.g., NIST P-256, P-384). The Y coordinate is omitted and replaced by a prefix byte (`02` or `03`) indicating the parity of Y. Halves the public key size but requires the receiver to support point decompression.
-- **EC Public Key Type X9.62 Compressed Char2**: Compressed encoding for curves over characteristic-2 binary fields (e.g., NIST B-163, K-163). Similar to compressed prime but uses different prefix bytes and a different recovery formula suited to the binary field arithmetic.
-- **EC Public Key Type X9.62 Hybrid**: Encodes both the compressed prefix byte and the full `X || Y` coordinates, providing a self-consistent encoding that simultaneously allows quick compressed-form parsing and direct extraction of Y.
+| EC Public Key Type Uncompressed | `00000001` | `ECPublicKeyTypeUncompressed` | The public key point is encoded as a full `04 || X || Y` byte string where both the X and Y coordinates are included at full length. This is the most universally supported format — virtually every EC library accepts uncompressed points. |
+| EC Public Key Type X9.62 Compressed Prime | `00000002` | `ECPublicKeyTypeX9_62CompressedPrime` | Compressed encoding for curves over prime fields (e.g., NIST P-256, P-384). The Y coordinate is omitted and replaced by a prefix byte (`02` or `03`) indicating the parity of Y. Halves the public key size but requires the receiver to support point decompression. |
+| EC Public Key Type X9.62 Compressed Char2 | `00000003` | `ECPublicKeyTypeX9_62CompressedChar2` | Compressed encoding for curves over characteristic-2 binary fields (e.g., NIST B-163, K-163). Similar to compressed prime but uses different prefix bytes and a different recovery formula suited to the binary field arithmetic. |
+| EC Public Key Type X9.62 Hybrid | `00000004` | `ECPublicKeyTypeX9_62Hybrid` | Encodes both the compressed prefix byte and the full `X || Y` coordinates, providing a self-consistent encoding that simultaneously allows quick compressed-form parsing and direct extraction of Y. |
 
 ## Examples
 

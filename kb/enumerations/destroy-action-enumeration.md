@@ -22,21 +22,13 @@ The Destroy Action enumeration describes what actually happened to a managed obj
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| Key Material Deleted | `00000002` | `KeyMaterialDeleted` |  |
-| Key Material Shredded | `00000003` | `KeyMaterialShredded` |  |
+| Unspecified | `00000001` | `Unspecified` | The destruction method is not reported or is not meaningful for this object type. Used as a default when the server does not report granular action details. |
+| Key Material Deleted | `00000002` | `KeyMaterialDeleted` | The raw cryptographic key bytes were logically deleted from the server's storage (e.g., database row removed) but no secure overwrite was performed. |
+| Key Material Shredded | `00000003` | `KeyMaterialShredded` | The raw key bytes were securely overwritten or cryptographically erased according to a defined shredding algorithm, providing assurance that the material cannot be recovered through storage forensics. |
 | Meta Data Deleted | `00000004` | `MetaDataDeleted` |  |
 | Meta Data Shredded | `00000005` | `MetaDataShredded` |  |
-| Deleted | `00000006` | `Deleted` |  |
-| Shredded | `00000007` | `Shredded` |  |
-
-- **Unspecified**: The destruction method is not reported or is not meaningful for this object type. Used as a default when the server does not report granular action details.
-- **Key Material Deleted**: The raw cryptographic key bytes were logically deleted from the server's storage (e.g., database row removed) but no secure overwrite was performed.
-- **Key Material Shredded**: The raw key bytes were securely overwritten or cryptographically erased according to a defined shredding algorithm, providing assurance that the material cannot be recovered through storage forensics.
-- **Metadata Deleted**: The object's metadata (attributes, access control entries, history) was logically deleted. May be used in combination with key material actions.
-- **Metadata Shredded**: The metadata was securely overwritten, ensuring that even attribute values such as key labels and usage history cannot be recovered.
-- **Deleted**: Both key material and metadata were logically deleted in a single atomic action.
-- **Shredded**: Both key material and metadata were securely overwritten or cryptographically erased in a single atomic action. This is the highest assurance level for complete object destruction.
+| Deleted | `00000006` | `Deleted` | Both key material and metadata were logically deleted in a single atomic action. |
+| Shredded | `00000007` | `Shredded` | Both key material and metadata were securely overwritten or cryptographically erased in a single atomic action. This is the highest assurance level for complete object destruction. |
 
 ## Examples
 

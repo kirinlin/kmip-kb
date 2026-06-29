@@ -3,7 +3,7 @@ title: Validity Indicator Enumeration
 category: enumerations
 spec_version: "2.1"
 spec_versions: ["1.2","1.3","1.4","2.0","2.1"]
-source_section: "11.63"
+source_section: "11.61"
 status: reviewed
 related: ["validate", "certificate"]
 keywords: ["validity indicator", "valid", "invalid", "unknown", "validate", "certificate validation", "42009B", "ValidityIndicator"]
@@ -22,13 +22,9 @@ The Validity Indicator enumeration conveys the result of a [Validate](../operati
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| NIST CMVP | `00000002` | `NISTCMVP` |  |
-| Common Criteria | `00000003` | `CommonCriteria` |  |
-
-- **Valid**: The certificate or object passed all validation checks: the signature verifies, the chain of trust is intact, the certificate has not expired, and it has not been revoked. The client may proceed with confidence.
-- **Invalid**: One or more validation checks failed — the certificate is expired, the signature does not verify, it has been revoked, or the issuing CA is untrusted. The client should not rely on this certificate.
-- **Unknown**: The server cannot determine validity with certainty — for example, it cannot reach the OCSP responder or CRL distribution point to check revocation, or the certificate has an unsupported extension that the server cannot evaluate. The client must decide whether to accept the unknown verdict based on its own risk tolerance.
+| Valid | `00000001` | `Valid` | The certificate or object passed all validation checks: the signature verifies, the chain of trust is intact, the certificate has not expired, and it has not been revoked. The client may proceed with confidence. |
+| Invalid | `00000002` | `Invalid` | One or more validation checks failed — the certificate is expired, the signature does not verify, it has been revoked, or the issuing CA is untrusted. The client should not rely on this certificate. |
+| Unknown | `00000003` | `Unknown` | The server cannot determine validity with certainty — for example, it cannot reach the OCSP responder or CRL distribution point to check revocation, or the certificate has an unsupported extension that the server cannot evaluate. The client must decide whether to accept the unknown verdict based on its own risk tolerance. |
 
 ## Examples
 

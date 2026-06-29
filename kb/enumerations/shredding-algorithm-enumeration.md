@@ -22,14 +22,9 @@ The Shredding Algorithm enumeration specifies how the physical storage medium ho
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
+| Unspecified | `00000001` | `Unspecified` | The shredding method is not specified or is implementation-defined. The server uses its default sanitisation policy. |
 | Cryptographic | `00000002` | `Cryptographic` |  |
 | Unsupported | `00000003` | `Unsupported` |  |
-
-- **Unspecified**: The shredding method is not specified or is implementation-defined. The server uses its default sanitisation policy.
-- **Cryptographic Erase**: The key material is deleted by discarding the encryption key that protects it, rendering the stored ciphertext unrecoverable without key recovery. Fast and effective when the key truly cannot be recovered.
-- **Overwrite** (single pass): The storage blocks holding key material are overwritten once with zeros, ones, or a pseudo-random pattern before the space is released. Meets common data sanitisation requirements for non-volatile storage.
-- **Overwrite** (multiple passes): Multiple overwrite passes with varying patterns (e.g., DoD 5220.22-M or Gutmann method). Intended to defeat advanced forensic recovery techniques on magnetic media.
 
 ## Examples
 

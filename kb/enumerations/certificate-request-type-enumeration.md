@@ -22,14 +22,9 @@ The Certificate Request Type enumeration identifies the format of the certificat
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| CRMF | `00000001` | `CRMF` |  |
-| PKCS#10 | `00000002` | `PKCS_10` |  |
-| PEM | `00000003` | `PEM` |  |
-
-- **CRMF** (Certificate Request Message Format, RFC 4211): An ASN.1-based format used in Certificate Management over CMS (CMC) and the Certificate Management Protocol (CMP). More expressive than PKCS#10, allowing proof-of-possession and certificate template constraints to be specified.
-- **PKCS#10** (RFC 2986): The most widely deployed CSR format, consisting of a DER-encoded CertificationRequest structure signed by the private key corresponding to the public key being certified. Supported by virtually all CAs and PKI toolkits.
-- **PEM**: A base64-encoded DER format with `-----BEGIN CERTIFICATE REQUEST-----` headers, commonly used in file-based CA workflows. Typically wraps a PKCS#10 structure.
-- **PGP**: An OpenPGP key certification request, used when obtaining a PGP certificate rather than an X.509 certificate.
+| CRMF | `00000001` | `CRMF` | (Certificate Request Message Format, RFC 4211): An ASN.1-based format used in Certificate Management over CMS (CMC) and the Certificate Management Protocol (CMP). More expressive than PKCS#10, allowing proof-of-possession and certificate template constraints to be specified. |
+| PKCS#10 | `00000002` | `PKCS_10` | (RFC 2986): The most widely deployed CSR format, consisting of a DER-encoded CertificationRequest structure signed by the private key corresponding to the public key being certified. Supported by virtually all CAs and PKI toolkits. |
+| PEM | `00000003` | `PEM` | A base64-encoded DER format with `-----BEGIN CERTIFICATE REQUEST-----` headers, commonly used in file-based CA workflows. Typically wraps a PKCS#10 structure. |
 
 ## Examples
 

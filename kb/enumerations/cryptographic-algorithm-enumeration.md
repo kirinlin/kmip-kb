@@ -22,34 +22,34 @@ The Cryptographic Algorithm enumeration identifies the algorithm associated with
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| DES | `00000001` | `DES` |  |
-| 3DES | `00000002` | `DES3` |  |
-| AES | `00000003` | `AES` |  |
-| RSA | `00000004` | `RSA` |  |
-| DSA | `00000005` | `DSA` |  |
-| ECDSA | `00000006` | `ECDSA` |  |
+| DES | `00000001` | `DES` | Single DES, retained for legacy interoperability only. Considered cryptographically broken for data protection. |
+| 3DES | `00000002` | `DES3` | (Triple DES, also TDEA): A legacy symmetric cipher applying DES three times for a security level of 112 effective bits. Still found in payment systems but deprecated for new designs. |
+| AES | `00000003` | `AES` | (Advanced Encryption Standard): The dominant symmetric cipher for enterprise key management. Paired with a key length of 128, 192, or 256 bits and a block cipher mode. |
+| RSA | `00000004` | `RSA` | The RSA public-key algorithm for encryption and digital signatures. Key lengths typically range from 2048 to 4096 bits. |
+| DSA | `00000005` | `DSA` | The Digital Signature Algorithm based on discrete logarithm over prime fields (FIPS 186). |
+| ECDSA | `00000006` | `ECDSA` | (Elliptic Curve Digital Signature Algorithm): EC-based signature algorithm, specified in combination with a recommended curve. |
 | HMAC-SHA1 | `00000007` | `HMAC_SHA1` |  |
 | HMAC-SHA224 | `00000008` | `HMAC_SHA224` |  |
 | HMAC-SHA256 | `00000009` | `HMAC_SHA256` |  |
 | HMAC-SHA384 | `0000000A` | `HMAC_SHA384` |  |
 | HMAC-SHA512 | `0000000B` | `HMAC_SHA512` |  |
 | HMAC-MD5 | `0000000C` | `HMAC_MD5` |  |
-| DH | `0000000D` | `DH` |  |
-| ECDH | `0000000E` | `ECDH` |  |
-| ECMQV | `0000000F` | `ECMQV` |  |
-| Blowfish | `00000010` | `Blowfish` |  |
-| Camellia | `00000011` | `Camellia` |  |
+| DH | `0000000D` | `DH` | (Diffie-Hellman): The classic key-agreement algorithm over finite fields. |
+| ECDH | `0000000E` | `ECDH` | (Elliptic Curve Diffie-Hellman): EC-based key agreement. |
+| ECMQV | `0000000F` | `ECMQV` | An EC key agreement protocol with implicit mutual authentication. |
+| Blowfish | `00000010` | `Blowfish` | A variable-key-length block cipher used in some legacy applications and VPNs. |
+| Camellia | `00000011` | `Camellia` | A 128-bit block cipher from NTT and Mitsubishi, widely used in Japan and standardised by ISO/IEC. |
 | CAST5 | `00000012` | `CAST5` |  |
-| IDEA | `00000013` | `IDEA` |  |
+| IDEA | `00000013` | `IDEA` | An older 64-bit block cipher, mostly of historical interest. |
 | MARS | `00000014` | `MARS` |  |
-| RC2 | `00000015` | `RC2` |  |
+| RC2 | `00000015` | `RC2` | , **RC4**, **RC5**, **RC6**: RSA Security cipher family; RC4 is a stream cipher. All are largely deprecated for modern use. |
 | RC4 | `00000016` | `RC4` |  |
 | RC5 | `00000017` | `RC5` |  |
 | SKIPJACK | `00000018` | `SKIPJACK` |  |
 | Twofish | `00000019` | `Twofish` |  |
-| EC | `0000001A` | `EC` |  |
+| EC | `0000001A` | `EC` | (Elliptic Curve, generic): Used when the specific EC sub-algorithm is captured by context (e.g., the key format type or curve selection). |
 | One Time Pad | `0000001B` | `OneTimePad` |  |
-| ChaCha20 | `0000001C` | `ChaCha20` |  |
+| ChaCha20 | `0000001C` | `ChaCha20` | A modern stream cipher widely deployed in TLS 1.3 combined with Poly1305 for AEAD. |
 | Poly1305 | `0000001D` | `Poly1305` |  |
 | ChaCha20Poly1305 | `0000001E` | `ChaCha20Poly1305` |  |
 | SHA3-224 | `0000001F` | `SHA3_224` |  |
@@ -62,11 +62,11 @@ The Cryptographic Algorithm enumeration identifies the algorithm associated with
 | HMAC-SHA3-512 | `00000026` | `HMAC_SHA3_512` |  |
 | SHAKE-128 | `00000027` | `SHAKE_128` |  |
 | SHAKE-256 | `00000028` | `SHAKE_256` |  |
-| ARIA | `00000029` | `ARIA` |  |
-| SEED | `0000002A` | `SEED` |  |
+| ARIA | `00000029` | `ARIA` | Another Korean standard block cipher, an AES finalist. |
+| SEED | `0000002A` | `SEED` | A Korean national standard 128-bit block cipher. |
 | SM2 | `0000002B` | `SM2` |  |
 | SM3 | `0000002C` | `SM3` |  |
-| SM4 | `0000002D` | `SM4` |  |
+| SM4 | `0000002D` | `SM4` | A Chinese national standard 128-bit block cipher (also called SMS4). |
 | GOST R 34.10-2012 | `0000002E` | `GOSTR34_10_2012` |  |
 | GOST R 34.11-2012 | `0000002F` | `GOSTR34_11_2012` |  |
 | GOST R 34.13-2015 | `00000030` | `GOSTR34_13_2015` |  |
@@ -76,36 +76,8 @@ The Cryptographic Algorithm enumeration identifies the algorithm associated with
 | McEliece | `00000034` | `McEliece` |  |
 | McEliece-6960119 | `00000035` | `McEliece_6960119` |  |
 | McEliece-8192128 | `00000036` | `McEliece_8192128` |  |
-| Ed25519 | `00000037` | `Ed25519` |  |
+| Ed25519 | `00000037` | `Ed25519` | / **Ed448**: Edwards-curve digital signature algorithms defined in RFC 8032. Ed25519 uses Curve25519 and Ed448 uses Curve448; both are modern, fast, and have strong security properties. |
 | Ed448 | `00000038` | `Ed448` |  |
-
-**Symmetric block ciphers:**
-- **AES** (Advanced Encryption Standard): The dominant symmetric cipher for enterprise key management. Paired with a key length of 128, 192, or 256 bits and a block cipher mode.
-- **3DES** (Triple DES, also TDEA): A legacy symmetric cipher applying DES three times for a security level of 112 effective bits. Still found in payment systems but deprecated for new designs.
-- **DES**: Single DES, retained for legacy interoperability only. Considered cryptographically broken for data protection.
-- **Blowfish**: A variable-key-length block cipher used in some legacy applications and VPNs.
-- **Camellia**: A 128-bit block cipher from NTT and Mitsubishi, widely used in Japan and standardised by ISO/IEC.
-- **IDEA**: An older 64-bit block cipher, mostly of historical interest.
-- **RC2**, **RC4**, **RC5**, **RC6**: RSA Security cipher family; RC4 is a stream cipher. All are largely deprecated for modern use.
-- **SEED**: A Korean national standard 128-bit block cipher.
-- **ARIA**: Another Korean standard block cipher, an AES finalist.
-- **SM4**: A Chinese national standard 128-bit block cipher (also called SMS4).
-
-**Stream and authenticated ciphers:**
-- **ChaCha20**: A modern stream cipher widely deployed in TLS 1.3 combined with Poly1305 for AEAD.
-
-**Asymmetric and key-agreement algorithms:**
-- **RSA**: The RSA public-key algorithm for encryption and digital signatures. Key lengths typically range from 2048 to 4096 bits.
-- **DSA**: The Digital Signature Algorithm based on discrete logarithm over prime fields (FIPS 186).
-- **DH** (Diffie-Hellman): The classic key-agreement algorithm over finite fields.
-- **EC** (Elliptic Curve, generic): Used when the specific EC sub-algorithm is captured by context (e.g., the key format type or curve selection).
-- **ECDSA** (Elliptic Curve Digital Signature Algorithm): EC-based signature algorithm, specified in combination with a recommended curve.
-- **ECDH** (Elliptic Curve Diffie-Hellman): EC-based key agreement.
-- **ECMQV**: An EC key agreement protocol with implicit mutual authentication.
-- **Ed25519** / **Ed448**: Edwards-curve digital signature algorithms defined in RFC 8032. Ed25519 uses Curve25519 and Ed448 uses Curve448; both are modern, fast, and have strong security properties.
-
-**Hash-based MAC algorithms:**
-- **HMAC-SHA-1**, **HMAC-SHA-224**, **HMAC-SHA-256**, **HMAC-SHA-384**, **HMAC-SHA-512**: HMAC instantiations over the SHA family, used for data authentication and key derivation.
 
 ## Examples
 

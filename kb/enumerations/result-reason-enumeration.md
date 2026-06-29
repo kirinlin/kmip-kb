@@ -22,17 +22,17 @@ The Result Reason enumeration provides the specific error code within a failed b
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Item Not Found | `00000001` | `ItemNotFound` |  |
-| Response Too Large | `00000002` | `ResponseTooLarge` |  |
-| Authentication Not Successful | `00000003` | `AuthenticationNotSuccessful` |  |
-| Invalid Message | `00000004` | `InvalidMessage` |  |
-| Operation Not Supported | `00000005` | `OperationNotSupported` |  |
-| Missing Data | `00000006` | `MissingData` |  |
-| Invalid Field | `00000007` | `InvalidField` |  |
-| Feature Not Supported | `00000008` | `FeatureNotSupported` |  |
+| Item Not Found | `00000001` | `ItemNotFound` | The Unique Identifier in the request does not correspond to any managed object on the server. The most frequent error for well-formed but referentially-invalid requests. |
+| Response Too Large | `00000002` | `ResponseTooLarge` | The server cannot return all requested data within a single response message. The client must use paging or narrow its request. |
+| Authentication Not Successful | `00000003` | `AuthenticationNotSuccessful` | The credential supplied is invalid, expired, or otherwise rejected by the authentication mechanism. |
+| Invalid Message | `00000004` | `InvalidMessage` | The request structure is malformed at the TTLV or message-structure level. |
+| Operation Not Supported | `00000005` | `OperationNotSupported` | The server does not implement the requested operation. |
+| Missing Data | `00000006` | `MissingData` | A required field is absent from the request. |
+| Invalid Field | `00000007` | `InvalidField` | A field value is syntactically or semantically incorrect. |
+| Feature Not Supported | `00000008` | `FeatureNotSupported` | The server supports the operation in general but not the specific combination of parameters or options requested. |
 | Operation Canceled By Requester | `00000009` | `OperationCanceledByRequester` |  |
-| Cryptographic Failure | `0000000A` | `CryptographicFailure` |  |
-| Permission Denied | `0000000C` | `PermissionDenied` |  |
+| Cryptographic Failure | `0000000A` | `CryptographicFailure` | A cryptographic operation (sign, verify, encrypt) failed — for example, an invalid signature. |
+| Permission Denied | `0000000C` | `PermissionDenied` | The authenticated principal does not have the right to perform the operation on the target object. |
 | Object Archived | `0000000D` | `ObjectArchived` |  |
 | Application Namespace Not Supported | `0000000F` | `ApplicationNamespaceNotSupported` |  |
 | Key Format Type Not Supported | `00000010` | `KeyFormatTypeNotSupported` |  |
@@ -43,7 +43,7 @@ The Result Reason enumeration provides the specific error code within a failed b
 | Attestation Failed | `00000015` | `AttestationFailed` |  |
 | Sensitive | `00000016` | `Sensitive` |  |
 | Not Extractable | `00000017` | `NotExtractable` |  |
-| Object Already Exists | `00000018` | `ObjectAlreadyExists` |  |
+| Object Already Exists | `00000018` | `ObjectAlreadyExists` | A Create or Register request conflicts with an existing object. |
 | Invalid Ticket | `00000019` | `InvalidTicket` |  |
 | Usage Limit Exceeded | `0000001A` | `UsageLimitExceeded` |  |
 | Numeric Range | `0000001B` | `NumericRange` |  |
@@ -81,35 +81,17 @@ The Result Reason enumeration provides the specific error code within a failed b
 | Wrapping Object Archived | `00000040` | `WrappingObjectArchived` |  |
 | Wrapping Object Destroyed | `00000041` | `WrappingObjectDestroyed` |  |
 | Wrapping Object Not Found | `00000042` | `WrappingObjectNotFound` |  |
-| Wrong Key Lifecycle State | `00000043` | `WrongKeyLifecycleState` |  |
-| Protection Storage Unavailable | `00000044` | `ProtectionStorageUnavailable` |  |
+| Wrong Key Lifecycle State | `00000043` | `WrongKeyLifecycleState` | The operation is not permitted given the object's current state (e.g., using a Deactivated key for encryption). |
+| Protection Storage Unavailable | `00000044` | `ProtectionStorageUnavailable` | The server cannot store the object in the protection environment required by the Protection Storage Mask attribute. |
 | PKCS#11 Codec Error | `00000045` | `PKCS_11CodecError` |  |
 | PKCS#11 Invalid Function | `00000046` | `PKCS_11InvalidFunction` |  |
 | PKCS#11 Invalid Interface | `00000047` | `PKCS_11InvalidInterface` |  |
 | Private Protection Storage Unavailable | `00000048` | `PrivateProtectionStorageUnavailable` |  |
 | Public Protection Storage Unavailable | `00000049` | `PublicProtectionStorageUnavailable` |  |
 | Unknown Object Group | `0000004A` | `UnknownObjectGroup` |  |
-| Constraint Violation | `0000004B` | `ConstraintViolation` |  |
+| Constraint Violation | `0000004B` | `ConstraintViolation` | An attribute-based constraint rule was violated. |
 | Duplicate Process Request | `0000004C` | `DuplicateProcessRequest` |  |
 | General Failure | `00000100` | `GeneralFailure` |  |
-
-Common reasons include:
-
-- **Item Not Found**: The Unique Identifier in the request does not correspond to any managed object on the server. The most frequent error for well-formed but referentially-invalid requests.
-- **Response Too Large**: The server cannot return all requested data within a single response message. The client must use paging or narrow its request.
-- **Authentication Not Successful**: The credential supplied is invalid, expired, or otherwise rejected by the authentication mechanism.
-- **Invalid Message**: The request structure is malformed at the TTLV or message-structure level.
-- **Operation Not Supported**: The server does not implement the requested operation.
-- **Missing Data**: A required field is absent from the request.
-- **Invalid Field**: A field value is syntactically or semantically incorrect.
-- **Feature Not Supported**: The server supports the operation in general but not the specific combination of parameters or options requested.
-- **Operation Cancelled**: The operation was terminated by a Cancel request.
-- **Permission Denied**: The authenticated principal does not have the right to perform the operation on the target object.
-- **Object Already Exists**: A Create or Register request conflicts with an existing object.
-- **Wrong Key Lifecycle State**: The operation is not permitted given the object's current state (e.g., using a Deactivated key for encryption).
-- **Constraint Violation**: An attribute-based constraint rule was violated.
-- **Cryptographic Failure**: A cryptographic operation (sign, verify, encrypt) failed — for example, an invalid signature.
-- **Protection Storage Unavailable**: The server cannot store the object in the protection environment required by the Protection Storage Mask attribute.
 
 ## Examples
 

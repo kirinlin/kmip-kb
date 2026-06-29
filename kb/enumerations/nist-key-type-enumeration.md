@@ -42,34 +42,6 @@ The NIST Key Type enumeration classifies a cryptographic key according to the fu
 | Private authorization key | `00000012` | `PrivateAuthorizationKey` |  |
 | Public authorization key | `00000013` | `PublicAuthorizationKey` |  |
 
-**Signature keys:**
-- **Private Signature Key**: An asymmetric private key used to generate digital signatures (RSA, DSA, ECDSA, EdDSA). Must be strongly protected; exposure compromises all previously signed material.
-- **Public Signature Verification Key**: The corresponding asymmetric public key used to verify signatures. May be widely distributed.
-
-**Authentication keys:**
-- **Symmetric Authentication Key**: A symmetric key (e.g., HMAC key) used to generate and verify message authentication codes.
-- **Private Authentication Key**: An asymmetric private key used in authentication protocols.
-- **Public Authentication Key**: The corresponding public key for asymmetric authentication.
-
-**Data encryption keys:**
-- **Symmetric Encryption Key**: A symmetric key (e.g., AES) used directly to encrypt and decrypt data. These keys require strong access controls and short active lifetimes in high-volume environments.
-
-**Key management keys:**
-- **Symmetric Key Wrapping Key**: A symmetric key used to encrypt other keys for storage or transport (a Key Encryption Key). Typically has longer lifetimes and higher access restrictions than data encryption keys.
-- **Symmetric Master Key**: A root key from which other keys are derived or protected. Examples include HSM Master Keys and Key Encryption Keys at the top of a hierarchy.
-
-**Random number and derivation keys:**
-- **Symmetric Random Number Generation Key**: A key used as seed material for a DRBG or PRNG, ensuring reproducibility of the random stream.
-
-**Key agreement keys:**
-- **Private Key Agreement Key**: An asymmetric private key used in a key agreement protocol (e.g., ECDH private key).
-- **Public Key Agreement Key**: The corresponding public key shared with the peer during key agreement.
-
-**Authorisation keys:**
-- **Symmetric Authorization Key**: A symmetric key used to protect authorisation data or access tokens.
-- **Private Authorization Key**: An asymmetric private key used in authorisation schemes.
-- **Public Authorization Key**: The corresponding public key.
-
 ## Examples
 
 An AES-256 key used by a database to encrypt columns is classified as **Symmetric Encryption Key** with an SP 800-57 recommended active lifetime of 2 years. The AES-256 key that wraps it in the HSM is a **Symmetric Key Wrapping Key** with a longer recommended lifetime and higher protection requirements.

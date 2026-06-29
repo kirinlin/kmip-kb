@@ -22,35 +22,20 @@ The Query Function enumeration selects which sections of server information a [Q
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Query Operations | `00000001` | `QueryOperations` |  |
-| Query Objects | `00000002` | `QueryObjects` |  |
-| Query Server Information | `00000003` | `QueryServerInformation` |  |
-| Query Application Namespaces | `00000004` | `QueryApplicationNamespaces` |  |
-| Query Attestation Types | `00000007` | `QueryAttestationTypes` |  |
-| Query RNGs | `00000008` | `QueryRNGs` |  |
-| Query Validations | `00000009` | `QueryValidations` |  |
-| Query Profiles | `0000000A` | `QueryProfiles` |  |
-| Query Capabilities | `0000000B` | `QueryCapabilities` |  |
-| Query Client Registration Methods | `0000000C` | `QueryClientRegistrationMethods` |  |
-| Query Defaults Information | `0000000D` | `QueryDefaultsInformation` |  |
-| Query Storage Protection Masks | `0000000E` | `QueryStorageProtectionMasks` |  |
-
-- **Query Operations**: Returns the list of KMIP operations the server supports.
-- **Query Objects**: Returns the list of managed object types the server stores.
-- **Query Server Information**: Returns the [Server Information](../structures/server-information.md) structure — server name, vendor, version, conformance clauses.
-- **Query Application Namespaces**: Returns vendor-defined application namespaces.
-- **Query Extension List**: Returns names of vendor extensions supported.
-- **Query Extension Map**: Returns the full extension map (name to numeric code).
-- **Query Attestation Types**: Returns the attestation credential types the server accepts.
-- **Query RNG Parameters**: Returns random number generation capabilities.
-- **Query Validations**: Returns cryptographic validation records the server holds.
-- **Query Profiles** *(v1.1+)*: Returns the [Profile Version](../structures/profile-version.md) structures listing supported conformance profiles.
-- **Query Capabilities** *(v1.1+)*: Returns algorithm-and-mode capability declarations.
-- **Query Client Registration Methods** *(v1.2+)*: Returns how clients may register with the server.
-- **Query Defaults Information** *(v2.1)*: Returns the [Defaults Information](../structures/defaults-information.md) structure — server default attributes by object type.
-- **Query Storage Protection Masks** *(v2.1)*: Returns the [Protection Storage Masks](../structures/protection-storage-masks.md) the server supports.
-- **Query Interop Functions** *(v2.1)*: Returns named interoperability test functions available via the Interop operation.
-- **Query PKCS#11 Interfaces** *(v2.1)*: Returns PKCS#11 interface descriptors for the PKCS#11 tunnel.
+| Query Operations | `00000001` | `QueryOperations` | Returns the list of KMIP operations the server supports. |
+| Query Objects | `00000002` | `QueryObjects` | Returns the list of managed object types the server stores. |
+| Query Server Information | `00000003` | `QueryServerInformation` | Returns the [Server Information](../structures/server-information.md) structure — server name, vendor, version, conformance clauses. |
+| Query Application Namespaces | `00000004` | `QueryApplicationNamespaces` | Returns vendor-defined application namespaces. |
+| Query Extension List | `00000005` | `QueryExtensionList` | Returns names of vendor extensions supported. |
+| Query Extension Map | `00000006` | `QueryExtensionMap` | Returns the full extension map (name to numeric code). |
+| Query Attestation Types | `00000007` | `QueryAttestationTypes` | Returns the attestation credential types the server accepts. |
+| Query RNGs | `00000008` | `QueryRNGs` | Returns random number generation capabilities. |
+| Query Validations | `00000009` | `QueryValidations` | Returns cryptographic validation records the server holds. |
+| Query Profiles | `0000000A` | `QueryProfiles` | Returns the [Profile Version](../structures/profile-version.md) structures listing supported conformance profiles. *(v1.1+)* |
+| Query Capabilities | `0000000B` | `QueryCapabilities` | Returns algorithm-and-mode capability declarations. *(v1.1+)* |
+| Query Client Registration Methods | `0000000C` | `QueryClientRegistrationMethods` | Returns how clients may register with the server. *(v1.2+)* |
+| Query Defaults Information | `0000000D` | `QueryDefaultsInformation` | Returns the [Defaults Information](../structures/defaults-information.md) structure — server default attributes by object type. *(v2.1)* |
+| Query Storage Protection Masks | `0000000E` | `QueryStorageProtectionMasks` | Returns the [Protection Storage Masks](../structures/protection-storage-masks.md) the server supports. *(v2.1)* |
 
 ## Examples
 

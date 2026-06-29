@@ -22,15 +22,10 @@ The Result Status enumeration is the top-level success or failure indicator in e
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Success | `00000000` | `Success` |  |
-| Operation Failed | `00000001` | `OperationFailed` |  |
-| Operation Pending | `00000002` | `OperationPending` |  |
-| Operation Undone | `00000003` | `OperationUndone` |  |
-
-- **Success**: The operation completed without error. The response payload carries the operation's results.
-- **Operation Failed**: The operation did not complete due to an error. Result Reason and Result Message provide details.
-- **Operation Pending**: The operation was accepted but has not yet completed — it is being processed asynchronously. The response carries an Asynchronous Correlation Value that the client uses to poll via [Query Asynchronous Requests](../operations/query-asynchronous-requests.md).
-- **Operation Undone**: The operation was rolled back. Used when a batch request specifies the Undo error-continuation option and an earlier operation in the batch failed, causing the server to reverse previously completed operations in the same batch.
+| Success | `00000000` | `Success` | The operation completed without error. The response payload carries the operation's results. |
+| Operation Failed | `00000001` | `OperationFailed` | The operation did not complete due to an error. Result Reason and Result Message provide details. |
+| Operation Pending | `00000002` | `OperationPending` | The operation was accepted but has not yet completed — it is being processed asynchronously. The response carries an Asynchronous Correlation Value that the client uses to poll via [Query Asynchronous Requests](../operations/query-asynchronous-requests.md). |
+| Operation Undone | `00000003` | `OperationUndone` | The operation was rolled back. Used when a batch request specifies the Undo error-continuation option and an earlier operation in the batch failed, causing the server to reverse previously completed operations in the same batch. |
 
 ## Examples
 

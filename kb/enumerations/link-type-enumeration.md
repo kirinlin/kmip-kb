@@ -22,39 +22,20 @@ The Link Type enumeration classifies the relationship between a managed object a
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Certificate Link | `00000101` | `CertificateLink` |  |
-| Public Key Link | `00000102` | `PublicKeyLink` |  |
-| Private Key Link | `00000103` | `PrivateKeyLink` |  |
-| Derivation Base Object Link | `00000104` | `DerivationBaseObjectLink` |  |
-| Derived Key Link | `00000105` | `DerivedKeyLink` |  |
-| Replacement Object Link | `00000106` | `ReplacementObjectLink` |  |
-| Replaced Object Link | `00000107` | `ReplacedObjectLink` |  |
-| Parent Link | `00000108` | `ParentLink` |  |
-| Child Link | `00000109` | `ChildLink` |  |
-| Previous Link | `0000010A` | `PreviousLink` |  |
-| Next Link | `0000010B` | `NextLink` |  |
-| PKCS#12 Certificate Link | `0000010C` | `PKCS_12CertificateLink` |  |
-| PKCS#12 Password Link | `0000010D` | `PKCS_12PasswordLink` |  |
+| Certificate Link | `00000101` | `CertificateLink` | Points from a key object (typically a private or public key) to its associated certificate. |
+| Public Key Link | `00000102` | `PublicKeyLink` | Points from a private key or certificate to the corresponding public key object. |
+| Private Key Link | `00000103` | `PrivateKeyLink` | Points from a public key or certificate to the corresponding private key object. |
+| Derivation Base Object Link | `00000104` | `DerivationBaseObjectLink` | Points from a derived key to the base key or secret from which it was derived. |
+| Derived Key Link | `00000105` | `DerivedKeyLink` | Points from a base key to one or more keys derived from it. |
+| Replacement Object Link | `00000106` | `ReplacementObjectLink` | Points from a key that has been superseded to the key that replaced it. Used when a key is rotated out of service. |
+| Replaced Object Link | `00000107` | `ReplacedObjectLink` | The inverse — points from the new/replacement key back to the old key it superseded. |
+| Parent Link | `00000108` | `ParentLink` | Points to the parent in a key hierarchy (e.g., a wrapping key or a higher-level key). |
+| Child Link | `00000109` | `ChildLink` | Points to a child in the hierarchy. |
+| Previous Link | `0000010A` | `PreviousLink` | Points to the previous object in a sequence (e.g., the key that was active before this one in a time-ordered rotation series). |
+| Next Link | `0000010B` | `NextLink` | Points to the next object in the sequence. |
+| PKCS#12 Certificate Link | `0000010C` | `PKCS_12CertificateLink` | Points to a certificate stored as part of a PKCS#12 bundle relationship. |
+| PKCS#12 Password Link | `0000010D` | `PKCS_12PasswordLink` | Points to the password or secret used to protect a PKCS#12 archive. |
 | Wrapping Key Link | `0000010E` | `WrappingKeyLink` |  |
-
-**PKI relationships:**
-- **Certificate Link**: Points from a key object (typically a private or public key) to its associated certificate.
-- **Public Key Link**: Points from a private key or certificate to the corresponding public key object.
-- **Private Key Link**: Points from a public key or certificate to the corresponding private key object.
-- **PKCS#12 Certificate Link**: Points to a certificate stored as part of a PKCS#12 bundle relationship.
-- **PKCS#12 Password Link**: Points to the password or secret used to protect a PKCS#12 archive.
-
-**Derivation and key hierarchy:**
-- **Derivation Base Object Link**: Points from a derived key to the base key or secret from which it was derived.
-- **Derived Key Link**: Points from a base key to one or more keys derived from it.
-- **Replacement Object Link**: Points from a key that has been superseded to the key that replaced it. Used when a key is rotated out of service.
-- **Replaced Object Link**: The inverse — points from the new/replacement key back to the old key it superseded.
-
-**Ordering and hierarchy:**
-- **Parent Link**: Points to the parent in a key hierarchy (e.g., a wrapping key or a higher-level key).
-- **Child Link**: Points to a child in the hierarchy.
-- **Previous Link**: Points to the previous object in a sequence (e.g., the key that was active before this one in a time-ordered rotation series).
-- **Next Link**: Points to the next object in the sequence.
 
 ## Examples
 

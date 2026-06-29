@@ -22,17 +22,11 @@ The Client Registration Method enumeration describes how a KMIP client identity 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| Server Pre-Generated | `00000002` | `ServerPreGenerated` |  |
-| Server On-Demand | `00000003` | `ServerOnDemand` |  |
-| Client Generated | `00000004` | `ClientGenerated` |  |
-| Client Registered | `00000005` | `ClientRegistered` |  |
-
-- **Unspecified**: The registration method is not declared or is not applicable. Acts as a catch-all for deployments that do not distinguish among methods.
-- **Server Pre-Generated**: The server generates the client's credentials (certificates, tokens, or other identity material) ahead of time and distributes them through an out-of-band channel such as a management console or secure enrollment ceremony.
-- **Server On-Demand**: The server generates and issues credentials in response to an enrollment request at connection time. Similar to SCEP or EST enrollment flows where the client triggers credential issuance.
-- **Client Generated**: The client generates its own credentials (typically a key pair and certificate signing request) and presents them to the server for enrollment. The server validates and trusts the credentials after verifying the request.
-- **Client Registered**: The client arrives with pre-existing credentials issued by a trusted third party (such as a CA certificate chain) and registers those credentials with the server without the server needing to issue anything new.
+| Unspecified | `00000001` | `Unspecified` | The registration method is not declared or is not applicable. Acts as a catch-all for deployments that do not distinguish among methods. |
+| Server Pre-Generated | `00000002` | `ServerPreGenerated` | The server generates the client's credentials (certificates, tokens, or other identity material) ahead of time and distributes them through an out-of-band channel such as a management console or secure enrollment ceremony. |
+| Server On-Demand | `00000003` | `ServerOnDemand` | The server generates and issues credentials in response to an enrollment request at connection time. Similar to SCEP or EST enrollment flows where the client triggers credential issuance. |
+| Client Generated | `00000004` | `ClientGenerated` | The client generates its own credentials (typically a key pair and certificate signing request) and presents them to the server for enrollment. The server validates and trusts the credentials after verifying the request. |
+| Client Registered | `00000005` | `ClientRegistered` | The client arrives with pre-existing credentials issued by a trusted third party (such as a CA certificate chain) and registers those credentials with the server without the server needing to issue anything new. |
 
 ## Examples
 

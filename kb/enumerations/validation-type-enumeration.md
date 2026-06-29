@@ -3,7 +3,7 @@ title: Validation Type Enumeration
 category: enumerations
 spec_version: "2.1"
 spec_versions: ["1.3","1.4","2.0","2.1"]
-source_section: "11.62"
+source_section: "11.64"
 status: reviewed
 related: ["cryptographic-parameters", "validation-authority-type-enumeration"]
 keywords: ["validation type", "software validation", "hardware validation", "firmware validation", "hybrid validation", "cryptographic validation", "4200E5", "ValidationType"]
@@ -22,17 +22,11 @@ The Validation Type enumeration classifies the implementation layer that was sub
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Encrypt | `00000001` | `Encrypt` |  |
-| MAC/sign | `00000002` | `MACSign` |  |
-| Encrypt then MAC/sign | `00000003` | `EncryptThenMACSign` |  |
-| MAC/sign then encrypt | `00000004` | `MACSignThenEncrypt` |  |
-| TR-31 | `00000005` | `TR_31` |  |
-
-- **Unspecified**: The validation type is unknown or not applicable.
-- **Software**: The cryptographic implementation that was validated runs entirely in software, with no hardware cryptographic accelerator or tamper-resistant element involved. A software FIPS module on a general-purpose CPU falls into this category.
-- **Hardware**: The validated implementation resides in dedicated cryptographic hardware — typically an HSM, cryptographic accelerator, or SED controller that implements the algorithms in silicon.
-- **Firmware**: The implementation runs as firmware within a hardware device (e.g., embedded in a smart card microcontroller or a TPM) that is neither pure software nor a full hardware implementation.
-- **Hybrid**: The validated implementation spans both software and hardware components — for example, an FIPS-validated library that offloads some operations to a hardware accelerator where available and falls back to software otherwise.
+| Unspecified | `00000001` | `Unspecified` | The validation type is unknown or not applicable. |
+| Hardware | `00000002` | `Hardware` | The validated implementation resides in dedicated cryptographic hardware — typically an HSM, cryptographic accelerator, or SED controller that implements the algorithms in silicon. |
+| Software | `00000003` | `Software` | The cryptographic implementation that was validated runs entirely in software, with no hardware cryptographic accelerator or tamper-resistant element involved. A software FIPS module on a general-purpose CPU falls into this category. |
+| Firmware | `00000004` | `Firmware` | The implementation runs as firmware within a hardware device (e.g., embedded in a smart card microcontroller or a TPM) that is neither pure software nor a full hardware implementation. |
+| Hybrid | `00000005` | `Hybrid` | The validated implementation spans both software and hardware components — for example, an FIPS-validated library that offloads some operations to a hardware accelerator where available and falls back to software otherwise. |
 
 ## Examples
 

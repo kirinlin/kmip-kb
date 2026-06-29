@@ -28,6 +28,9 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
+- `Description` column populated across all `kb/enumerations/` value tables; previously the column existed in the table header but all cells were empty.
+- Corrected swapped table content in `wrapping-method-enumeration.md` (§11.62) and `validation-type-enumeration.md` (§11.64); corrected `source_section` values on both docs and on `validity-indicator-enumeration.md` (§11.61) and `validation-authority-type-enumeration.md` (§11.63).
+- Removed two spurious rows (Query Interop Functions / Query PKCS#11 Interfaces) from `query-function-enumeration.md`; v2.1 §11.44 defines 14 values only (0x01–0x0E).
 - `kmip-raw` MCP server now exits immediately with a diagnostic message pointing to `scripts/kmip_crawler.py` if `raw/kmip/` is absent or empty, instead of silently building an empty index.
 
 ### Changed

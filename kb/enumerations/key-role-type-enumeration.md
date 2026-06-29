@@ -22,18 +22,18 @@ The Key Role Type enumeration identifies the functional role of a cryptographic 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| BDK | `00000001` | `BDK` |  |
-| CVK | `00000002` | `CVK` |  |
-| DEK | `00000003` | `DEK` |  |
-| MKAC | `00000004` | `MKAC` |  |
+| BDK | `00000001` | `BDK` | (Base Derivation Key): The root key from which session keys, device-specific keys, or PIN encryption keys are derived in triple-DES payment key hierarchies (e.g., DUKPT). |
+| CVK | `00000002` | `CVK` | (Card Verification Key): Used to compute and verify the Card Verification Value printed on payment cards. |
+| DEK | `00000003` | `DEK` | (Data Encryption Key): Encrypts cardholder data, transaction records, or other application data. |
+| MKAC | `00000004` | `MKAC` | / **MKSMC** / **MKSMI** / **MKDAC** / **MKDN** / **MKCP** / **MKOTH**: A family of EMV application master key types used to derive session keys for application cryptograms (AC), secure messaging confidentiality (SMC), secure messaging integrity (SMI), data authentication code (DAC), dynamic number (DN), card personalisation (CP), and other uses. |
 | MKSMC | `00000005` | `MKSMC` |  |
 | MKSMI | `00000006` | `MKSMI` |  |
 | MKDAC | `00000007` | `MKDAC` |  |
 | MKDN | `00000008` | `MKDN` |  |
 | MKCP | `00000009` | `MKCP` |  |
 | MKOTH | `0000000A` | `MKOTH` |  |
-| KEK | `0000000B` | `KEK` |  |
-| MAC16609 | `0000000C` | `MAC16609` |  |
+| KEK | `0000000B` | `KEK` | (Key Encryption Key): Wraps or encrypts other keys for secure transport. KEKs are central to key hierarchy management. |
+| MAC16609 | `0000000C` | `MAC16609` | / **MAC97971-3** / **MAC97971-4** / **MAC97971-6**: Payment-specific MAC keys aligned with ISO 16609 and ISO 9797-1 MAC algorithms used in ATM and POS terminal message authentication. |
 | MAC97971 | `0000000D` | `MAC97971` |  |
 | MAC97972 | `0000000E` | `MAC97972` |  |
 | MAC97973 | `0000000F` | `MAC97973` |  |
@@ -46,23 +46,6 @@ The Key Role Type enumeration identifies the functional role of a cryptographic 
 | DUKPT | `00000016` | `DUKPT` |  |
 | IV | `00000017` | `IV` |  |
 | TRKBK | `00000018` | `TRKBK` |  |
-
-**Derivation and master keys:**
-- **BDK** (Base Derivation Key): The root key from which session keys, device-specific keys, or PIN encryption keys are derived in triple-DES payment key hierarchies (e.g., DUKPT).
-- **CVK** (Card Verification Key): Used to compute and verify the Card Verification Value printed on payment cards.
-- **DEK** (Data Encryption Key): Encrypts cardholder data, transaction records, or other application data.
-- **MKAC** / **MKSMC** / **MKSMI** / **MKDAC** / **MKDN** / **MKCP** / **MKOTH**: A family of EMV application master key types used to derive session keys for application cryptograms (AC), secure messaging confidentiality (SMC), secure messaging integrity (SMI), data authentication code (DAC), dynamic number (DN), card personalisation (CP), and other uses.
-
-**Key encryption keys:**
-- **KEK** (Key Encryption Key): Wraps or encrypts other keys for secure transport. KEKs are central to key hierarchy management.
-
-**MAC keys:**
-- **MAC16609** / **MAC97971-3** / **MAC97971-4** / **MAC97971-6**: Payment-specific MAC keys aligned with ISO 16609 and ISO 9797-1 MAC algorithms used in ATM and POS terminal message authentication.
-
-**PIN and encryption keys:**
-- **PIN** (PIN Encryption Key, also PEK): Encrypts or protects a cardholder's Personal Identification Number during transmission between a PIN entry device and the processing host.
-- **PGK** (PIN Generation Key): Generates or encrypts PINs during card personalisation.
-- **PEK** (Private Encryption Key): A general-purpose key used in HSM-based encryption workflows, distinct from PIN encryption.
 
 ## Examples
 

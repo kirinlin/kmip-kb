@@ -26,16 +26,6 @@ The Interop Function enumeration names the specific interoperability test functi
 | End | `00000002` | `End` |  |
 | Reset | `00000003` | `Reset` |  |
 
-The enumeration values correspond to KMIP operation names and test scenarios used in formal interoperability workshops. Defined test functions include:
-
-- **Create**: Exercises the Create operation to generate a managed symmetric key object.
-- **Register**: Exercises the Register operation to store an externally generated key or certificate.
-- **Get**: Exercises the Get operation to retrieve key material.
-- **Locate**: Exercises the Locate operation to find objects by attribute criteria.
-- **Destroy**: Exercises the Destroy operation to delete a managed object.
-
-Additional test functions may correspond to other KMIP operations (Activate, Revoke, Get Attributes, Create Key Pair, etc.) as defined in KMIP interoperability test case specifications. The full set of values is maintained in alignment with the KMIP Interoperability Test Cases document published by OASIS.
-
 ## Examples
 
 A KMIP client vendor running an interoperability test with a server vendor's implementation would submit an Interop request specifying **Create** to verify that both sides handle a Create operation identically, then follow up with **Get** and **Destroy** to confirm the full lifecycle round-trip. The Interop Identifier field distinguishes among different test vectors for the same operation name.

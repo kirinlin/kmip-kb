@@ -22,11 +22,8 @@ The Usage Limits Unit enumeration specifies how the usage counter in the [Usage 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Byte | `00000001` | `Byte` |  |
-| Object | `00000002` | `Object` |  |
-
-- **Byte**: Usage is counted in bytes of plaintext or ciphertext processed. A key with a 1 GB Usage Limits Total set to Byte may encrypt up to 1,073,741,824 bytes before its limit is exhausted. Appropriate for bulk encryption where volume matters more than invocation count.
-- **Object** (or Count): Usage is counted in operation invocations. A key with Usage Limits Total = 1000 and unit = Object may be used for 1000 cryptographic operations (e.g., 1000 MAC computations) before exhaustion. Appropriate for signing keys or other operations where each invocation is independently significant regardless of data size.
+| Byte | `00000001` | `Byte` | Usage is counted in bytes of plaintext or ciphertext processed. A key with a 1 GB Usage Limits Total set to Byte may encrypt up to 1,073,741,824 bytes before its limit is exhausted. Appropriate for bulk encryption where volume matters more than invocation count. |
+| Object | `00000002` | `Object` | (or Count): Usage is counted in operation invocations. A key with Usage Limits Total = 1000 and unit = Object may be used for 1000 cryptographic operations (e.g., 1000 MAC computations) before exhaustion. Appropriate for signing keys or other operations where each invocation is independently significant regardless of data size. |
 
 ## Examples
 

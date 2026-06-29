@@ -22,25 +22,15 @@ The Object Type enumeration identifies which kind of managed cryptographic objec
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Certificate | `00000001` | `Certificate` |  |
-| Symmetric Key | `00000002` | `SymmetricKey` |  |
-| Public Key | `00000003` | `PublicKey` |  |
-| Private Key | `00000004` | `PrivateKey` |  |
-| Split Key | `00000005` | `SplitKey` |  |
-| Secret Data | `00000007` | `SecretData` |  |
-| Opaque Object | `00000008` | `OpaqueObject` |  |
-| PGP Key | `00000009` | `PGPKey` |  |
-| Certificate Request | `0000000A` | `CertificateRequest` |  |
-
-- **Certificate**: An X.509 or PGP certificate. The most common managed non-key object. Holds encoded certificate material and a Certificate Type sub-classification.
-- **Symmetric Key**: A secret key for symmetric cipher algorithms (AES, 3DES, ChaCha20, etc.).
-- **Public Key**: The public half of an asymmetric key pair (RSA, EC, DSA, etc.).
-- **Private Key**: The private half of an asymmetric key pair. The most access-controlled object type.
-- **Split Key**: One share of a key that has been divided using XOR, Shamir, or Blakley secret sharing.
-- **Secret Data**: Non-key secrets — passwords, seeds, PINs, API tokens — that need lifecycle management without cryptographic algorithm semantics.
-- **Opaque Object**: An arbitrary byte blob whose content the server does not interpret. Sub-classified by Opaque Data Type.
-- **PGP Key**: A PGP public or private key packet. Added to cover PGP workflows alongside the X.509/asymmetric key model.
-- **Certificate Request** *(v2.1)*: A certificate signing request (CSR) — PKCS#10, PEM, CRMF, or CMC — promoted to a first-class managed object in v2.1.
+| Certificate | `00000001` | `Certificate` | An X.509 or PGP certificate. The most common managed non-key object. Holds encoded certificate material and a Certificate Type sub-classification. |
+| Symmetric Key | `00000002` | `SymmetricKey` | A secret key for symmetric cipher algorithms (AES, 3DES, ChaCha20, etc.). |
+| Public Key | `00000003` | `PublicKey` | The public half of an asymmetric key pair (RSA, EC, DSA, etc.). |
+| Private Key | `00000004` | `PrivateKey` | The private half of an asymmetric key pair. The most access-controlled object type. |
+| Split Key | `00000005` | `SplitKey` | One share of a key that has been divided using XOR, Shamir, or Blakley secret sharing. |
+| Secret Data | `00000007` | `SecretData` | Non-key secrets — passwords, seeds, PINs, API tokens — that need lifecycle management without cryptographic algorithm semantics. |
+| Opaque Object | `00000008` | `OpaqueObject` | An arbitrary byte blob whose content the server does not interpret. Sub-classified by Opaque Data Type. |
+| PGP Key | `00000009` | `PGPKey` | A PGP public or private key packet. Added to cover PGP workflows alongside the X.509/asymmetric key model. |
+| Certificate Request | `0000000A` | `CertificateRequest` | A certificate signing request (CSR) — PKCS#10, PEM, CRMF, or CMC — promoted to a first-class managed object in v2.1. *(v2.1)* |
 
 ## Examples
 

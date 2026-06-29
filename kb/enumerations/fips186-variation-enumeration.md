@@ -19,19 +19,13 @@ The FIPS 186 Variation enumeration specifies which variation of the FIPS 186 sta
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
+| Unspecified | `00000001` | `Unspecified` | No specific variation is requested; the server selects an appropriate method according to its policy and the FIPS 186 edition it implements. |
 | GP x-Original | `00000002` | `GPXOriginal` |  |
 | GP x-Change Notice | `00000003` | `GPXChangeNotice` |  |
 | x-Original | `00000004` | `XOriginal` |  |
 | x-Change Notice | `00000005` | `XChangeNotice` |  |
 | k-Original | `00000006` | `KOriginal` |  |
 | k-Change Notice | `00000007` | `KChangeNotice` |  |
-
-- **Unspecified**: No specific variation is requested; the server selects an appropriate method according to its policy and the FIPS 186 edition it implements.
-- **GPB** (Generation of Probable Primes by testing candidates): Domain parameters are generated using a probabilistic primality test (e.g., Miller-Rabin). This is the most common and efficient method in practice. The security relies on the probability of a composite passing repeated tests being negligibly small.
-- **Probable Random Primes**: A categorisation of prime-generation methods based on random sampling and probabilistic testing, aligned with specific annexes of FIPS 186.
-- **Provable Random Primes**: Domain parameters are generated using a constructive (provably prime) method such as Shawe-Taylor or Maurer's algorithm. Slower than probabilistic methods but provides a mathematical proof of primality, satisfying higher-assurance requirements.
-- **Probable Primes with Conditions** / **Provable Primes with Conditions**: Variants that impose additional constraints on the prime structure (e.g., safe-prime requirements or specific bit patterns) for enhanced security against certain number-theoretic attacks.
 
 ## Examples
 

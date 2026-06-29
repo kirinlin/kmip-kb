@@ -25,13 +25,6 @@ The Endpoint Role enumeration identifies the functional role of a KMIP endpoint 
 | Client | `00000001` | `Client` |  |
 | Server | `00000002` | `Server` |  |
 
-- **Storage Array Client**: An endpoint that represents a storage controller or self-encrypting drive array. It acts as a KMIP client for the purpose of requesting encryption keys from the server, but its primary function is data storage rather than key management.
-- **KMIP Client**: A general-purpose KMIP client — typically an application, middleware, or device driver — that submits key management requests on behalf of applications.
-- **KMIP Server**: A full key management server that stores managed objects, enforces policies, and serves responses to KMIP clients.
-- **KMIP Proxy**: An intermediary that forwards KMIP requests between clients and servers, potentially translating between protocol versions or aggregating clients behind a single authenticated identity.
-- **Replication Source**: An endpoint that acts as the origin in a key replication relationship, pushing key objects to one or more replication destinations.
-- **Replication Destination**: An endpoint that receives replicated key objects from a Replication Source. It holds copies of key material for availability or geographic redundancy.
-
 ## Examples
 
 A cloud key management service deployed in two data centres might configure each instance as both a **Replication Source** and a **Replication Destination**, forming a bidirectional sync pair. A thin VM agent that proxies requests from applications to the central KMIP server would declare itself as a **KMIP Proxy**.

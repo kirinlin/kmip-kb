@@ -22,11 +22,8 @@ The Name Type enumeration classifies each entry in the [Name](../attributes/name
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Uninterpreted Text String | `00000001` | `UninterpretedTextString` |  |
-| URI | `00000002` | `URI` |  |
-
-- **Uninterpreted Text String**: The name is a plain human-readable label with no defined format or external semantics. This is the most common type in practice — administrators assign meaningful names like `"prod-db-encryption-key-2024"` that help humans identify objects in key management consoles. No external validation of the string is required.
-- **URI**: The name is a Uniform Resource Identifier, allowing the object to be addressed and referenced via a standard URL or URN. Useful in microservice architectures where key names correspond to service identities or where key references appear in policy documents by URI.
+| Uninterpreted Text String | `00000001` | `UninterpretedTextString` | The name is a plain human-readable label with no defined format or external semantics. This is the most common type in practice — administrators assign meaningful names like `"prod-db-encryption-key-2024"` that help humans identify objects in key management consoles. No external validation of the string is required. |
+| URI | `00000002` | `URI` | The name is a Uniform Resource Identifier, allowing the object to be addressed and referenced via a standard URL or URN. Useful in microservice architectures where key names correspond to service identities or where key references appear in policy documents by URI. |
 
 ## Examples
 

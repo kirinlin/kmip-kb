@@ -22,17 +22,11 @@ The DRBG Algorithm enumeration identifies the specific deterministic random bit 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| Dual-EC | `00000002` | `Dual_EC` |  |
-| Hash | `00000003` | `Hash` |  |
-| HMAC | `00000004` | `HMAC` |  |
-| CTR | `00000005` | `CTR` |  |
-
-- **Unspecified**: The DRBG algorithm is not specified by the client; the server selects a suitable approved algorithm according to its policy.
-- **Dual-EC**: The Dual Elliptic Curve DRBG defined in early NIST SP 800-90A. This algorithm attracted significant scrutiny due to a potential backdoor in the standardised curve parameters; it is generally avoided in new implementations, though it remains enumerated for completeness.
-- **Hash**: The Hash DRBG construction, which uses a cryptographic hash function as its underlying primitive. Straightforward to implement and widely approved.
-- **HMAC**: The HMAC DRBG construction, which uses HMAC over a specified hash function. Considered the most commonly recommended DRBG because of its clean security proof and resistance to related-key attacks.
-- **CTR**: The CTR DRBG construction, which uses a block cipher in counter mode (typically AES-CTR) as its underlying primitive. Highly efficient in hardware and widely used in HSMs.
+| Unspecified | `00000001` | `Unspecified` | The DRBG algorithm is not specified by the client; the server selects a suitable approved algorithm according to its policy. |
+| Dual-EC | `00000002` | `Dual_EC` | The Dual Elliptic Curve DRBG defined in early NIST SP 800-90A. This algorithm attracted significant scrutiny due to a potential backdoor in the standardised curve parameters; it is generally avoided in new implementations, though it remains enumerated for completeness. |
+| Hash | `00000003` | `Hash` | The Hash DRBG construction, which uses a cryptographic hash function as its underlying primitive. Straightforward to implement and widely approved. |
+| HMAC | `00000004` | `HMAC` | The HMAC DRBG construction, which uses HMAC over a specified hash function. Considered the most commonly recommended DRBG because of its clean security proof and resistance to related-key attacks. |
+| CTR | `00000005` | `CTR` | The CTR DRBG construction, which uses a block cipher in counter mode (typically AES-CTR) as its underlying primitive. Highly efficient in hardware and widely used in HSMs. |
 
 ## Examples
 

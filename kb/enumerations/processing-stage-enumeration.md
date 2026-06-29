@@ -24,11 +24,7 @@ The Processing Stage enumeration reports the current state of an asynchronous op
 |---|---|---|---|
 | Submitted | `00000001` | `Submitted` |  |
 | In Process | `00000002` | `InProcess` |  |
-| Completed | `00000003` | `Completed` |  |
-
-- **Server Processing**: The server has accepted the operation and is currently working on it. The client should poll again later.
-- **Completed**: The operation has finished. The response for the original operation is available in the [Asynchronous Request](../structures/asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated.
-- **Cancelled**: The operation was stopped before completion, either because the client issued a Cancel or the server aborted it. No result is available.
+| Completed | `00000003` | `Completed` | The operation has finished. The response for the original operation is available in the [Asynchronous Request](../structures/asynchronous-request.md) structure, and the client can retrieve it. Once retrieved, the correlation value is typically invalidated. |
 
 ## Examples
 

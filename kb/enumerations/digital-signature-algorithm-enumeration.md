@@ -42,26 +42,6 @@ The Digital Signature Algorithm enumeration identifies the full signature algori
 | SHA3-384 with RSA Encryption | `00000012` | `SHA3_384WithRSAEncryption` |  |
 | SHA3-512 with RSA Encryption | `00000013` | `SHA3_512WithRSAEncryption` |  |
 
-**RSA-based signature algorithms:**
-- **MD2 with RSA**: RSA signature with MD2 hash. Historically used in early TLS certificates; considered broken and no longer acceptable.
-- **MD5 with RSA**: RSA signature with MD5 hash. Also considered insecure for certificate signing due to MD5 collision attacks.
-- **SHA-1 with RSA**: RSA signature with SHA-1. Legacy; deprecated for certificate signing by most CAs and browsers.
-- **SHA-224 with RSA** / **SHA-256 with RSA** / **SHA-384 with RSA** / **SHA-512 with RSA**: The current family of RSA signature algorithms. SHA-256 with RSA is the dominant choice for TLS certificates and code signing today.
-
-**ECDSA-based signature algorithms:**
-- **SHA-1 with ECDSA**: Legacy EC signature; retained for compatibility only.
-- **SHA-224 with ECDSA** / **SHA-256 with ECDSA** / **SHA-384 with ECDSA** / **SHA-512 with ECDSA**: The recommended ECDSA suite. SHA-256 with ECDSA over P-256 is the most widely deployed.
-
-**DSA-based signature algorithms:**
-- **SHA-1 with DSA**: Legacy DSA signature over finite fields.
-- **SHA-224 with DSA** / **SHA-256 with DSA**: Current DSA variants, used primarily in FIPS-compliant environments.
-
-**Modern algorithms:**
-- **EdDSA**: Edwards-curve Digital Signature Algorithm (Ed25519 or Ed448). No separate hash specification needed — the curve determines the hash internally.
-
-**HMAC-based algorithms:**
-- HMAC variants (e.g., HMAC-SHA-1, HMAC-SHA-256): Used in contexts where a shared-key MAC is treated as a signature-like authentication code.
-
 ## Examples
 
 When registering a TLS certificate in KMIP, the certificate's `signatureAlgorithm` field maps to **SHA-256 with RSA** or **SHA-256 with ECDSA** for a typical modern CA. An HSM that performs code signing for firmware images would use **SHA-384 with ECDSA** to match the platform's security requirements.

@@ -3,7 +3,7 @@ title: Validation Authority Type Enumeration
 category: enumerations
 spec_version: "2.1"
 spec_versions: ["1.3","1.4","2.0","2.1"]
-source_section: "11.61"
+source_section: "11.63"
 status: reviewed
 related: ["cryptographic-parameters"]
 keywords: ["validation authority", "CMVP", "Common Criteria", "NIST validation", "cryptographic module validation", "4200E0", "ValidationAuthorityType"]
@@ -22,13 +22,9 @@ The Validation Authority Type enumeration identifies which standards body or pro
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Valid | `00000001` | `Valid` |  |
-| Invalid | `00000002` | `Invalid` |  |
-| Unknown | `00000003` | `Unknown` |  |
-
-- **Unspecified**: No validation authority is identified. The implementation's validation status is unknown or not applicable.
-- **NIST CMVP** (Cryptographic Module Validation Program): The module has been validated under the NIST FIPS 140 programme (CMVP), run jointly by NIST and CCCS. CMVP-validated modules carry a certificate number and validation level (1–4). Required by US federal information systems.
-- **Common Criteria**: The product or module has been evaluated under the ISO/IEC 15408 (Common Criteria) evaluation assurance levels (EAL1–EAL7). Used widely in European and international procurement.
+| Unspecified | `00000001` | `Unspecified` | No validation authority is identified. The implementation's validation status is unknown or not applicable. |
+| NIST CMVP | `00000002` | `NISTCMVP` | (Cryptographic Module Validation Program): The module has been validated under the NIST FIPS 140 programme (CMVP), run jointly by NIST and CCCS. CMVP-validated modules carry a certificate number and validation level (1–4). Required by US federal information systems. |
+| Common Criteria | `00000003` | `CommonCriteria` | The product or module has been evaluated under the ISO/IEC 15408 (Common Criteria) evaluation assurance levels (EAL1–EAL7). Used widely in European and international procurement. |
 
 ## Examples
 

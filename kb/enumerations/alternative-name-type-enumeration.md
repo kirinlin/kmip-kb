@@ -22,21 +22,13 @@ The Alternative Name Type enumeration classifies each entry in the [Alternative 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Uninterpreted Text String | `00000001` | `UninterpretedTextString` |  |
-| URI | `00000002` | `URI` |  |
-| Object Serial Number | `00000003` | `ObjectSerialNumber` |  |
-| Email Address | `00000004` | `EmailAddress` |  |
-| DNS Name | `00000005` | `DNSName` |  |
-| X.500 Distinguished Name | `00000006` | `X_500DistinguishedName` |  |
-| IP Address | `00000007` | `IPAddress` |  |
-
-- **Uninterpreted Text String**: The name carries no defined format or external semantics. Used for application-specific labels, internal tracking identifiers, or any free-form string that does not conform to a standard naming scheme.
-- **URI**: The name is a Uniform Resource Identifier, enabling the object to be addressed via URL or URN in REST-oriented or web-services integrations.
-- **Object Serial Number**: A vendor- or manufacturer-assigned serial number, commonly applied to physical devices such as HSMs or self-encrypting drives.
-- **Email Address**: An RFC 5321-style email address, relevant when the object is associated with a user account or a service identity.
-- **DNS Name**: A fully qualified domain name. Common in TLS/PKI environments where a certificate or key is tied to a specific hostname.
-- **X.500 Distinguished Name**: An LDAP/X.500-formatted DN string, enabling integration with directory services and certificate authorities that use DN-based identity.
-- **IP Address**: A dotted-decimal IPv4 or colon-separated IPv6 address, used when the object corresponds to a specific network endpoint.
+| Uninterpreted Text String | `00000001` | `UninterpretedTextString` | The name carries no defined format or external semantics. Used for application-specific labels, internal tracking identifiers, or any free-form string that does not conform to a standard naming scheme. |
+| URI | `00000002` | `URI` | The name is a Uniform Resource Identifier, enabling the object to be addressed via URL or URN in REST-oriented or web-services integrations. |
+| Object Serial Number | `00000003` | `ObjectSerialNumber` | A vendor- or manufacturer-assigned serial number, commonly applied to physical devices such as HSMs or self-encrypting drives. |
+| Email Address | `00000004` | `EmailAddress` | An RFC 5321-style email address, relevant when the object is associated with a user account or a service identity. |
+| DNS Name | `00000005` | `DNSName` | A fully qualified domain name. Common in TLS/PKI environments where a certificate or key is tied to a specific hostname. |
+| X.500 Distinguished Name | `00000006` | `X_500DistinguishedName` | An LDAP/X.500-formatted DN string, enabling integration with directory services and certificate authorities that use DN-based identity. |
+| IP Address | `00000007` | `IPAddress` | A dotted-decimal IPv4 or colon-separated IPv6 address, used when the object corresponds to a specific network endpoint. |
 
 ## Examples
 

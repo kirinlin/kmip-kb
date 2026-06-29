@@ -22,12 +22,12 @@ The Key Format Type enumeration specifies the encoding or serialisation format o
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Raw | `00000001` | `Raw` |  |
-| Opaque | `00000002` | `Opaque` |  |
-| PKCS#1 | `00000003` | `PKCS_1` |  |
-| PKCS#8 | `00000004` | `PKCS_8` |  |
-| X.509 | `00000005` | `X_509` |  |
-| ECPrivateKey | `00000006` | `ECPrivateKey` |  |
+| Raw | `00000001` | `Raw` | The key material is an unformatted sequence of bytes — just the key value itself with no ASN.1, no headers. Used for symmetric keys and raw shared secrets. |
+| Opaque | `00000002` | `Opaque` | The format is vendor-defined or not otherwise specified. The server stores the bytes as-is without interpreting them. |
+| PKCS#1 | `00000003` | `PKCS_1` | RSA private or public key encoded according to PKCS#1 (RFC 8017). RSA private keys use the `RSAPrivateKey` ASN.1 structure; public keys use `RSAPublicKey`. |
+| PKCS#8 | `00000004` | `PKCS_8` | An algorithm-agnostic private key format (RFC 5958) that wraps the key in a `PrivateKeyInfo` or `OneAsymmetricKey` structure. Supports RSA, EC, DSA, and Ed25519/Ed448 private keys; can optionally be encrypted (`EncryptedPrivateKeyInfo`). The most portable private key format. |
+| X.509 | `00000005` | `X_509` | A public key encoded in the SubjectPublicKeyInfo DER structure (RFC 5280 §4.1.2.7). Algorithm-agnostic: covers RSA, EC, DSA, and Ed25519/Ed448 public keys. |
+| ECPrivateKey | `00000006` | `ECPrivateKey` | An EC private key in the SEC 1 format (RFC 5915), which is the `ECPrivateKey` ASN.1 structure. Optionally includes the public key and the named curve OID. |
 | Transparent Symmetric Key | `00000007` | `TransparentSymmetricKey` |  |
 | Transparent DSA Private Key | `00000008` | `TransparentDSAPrivateKey` |  |
 | Transparent DSA Public Key | `00000009` | `TransparentDSAPublicKey` |  |
@@ -37,28 +37,8 @@ The Key Format Type enumeration specifies the encoding or serialisation format o
 | Transparent DH Public Key | `0000000D` | `TransparentDHPublicKey` |  |
 | Transparent EC Private Key | `00000014` | `TransparentECPrivateKey` |  |
 | Transparent EC Public Key | `00000015` | `TransparentECPublicKey` |  |
-| PKCS#12 | `00000016` | `PKCS_12` |  |
+| PKCS#12 | `00000016` | `PKCS_12` | A DER-encoded archive that bundles a private key with its certificate and optionally its certificate chain and additional attributes. Used for portability between applications (e.g., browser import/export). |
 | PKCS#10 | `00000017` | `PKCS_10` |  |
-
-**Format-agnostic and opaque:**
-- **Raw**: The key material is an unformatted sequence of bytes — just the key value itself with no ASN.1, no headers. Used for symmetric keys and raw shared secrets.
-- **Opaque**: The format is vendor-defined or not otherwise specified. The server stores the bytes as-is without interpreting them.
-
-**ASN.1/DER-based formats:**
-- **PKCS#1**: RSA private or public key encoded according to PKCS#1 (RFC 8017). RSA private keys use the `RSAPrivateKey` ASN.1 structure; public keys use `RSAPublicKey`.
-- **PKCS#8**: An algorithm-agnostic private key format (RFC 5958) that wraps the key in a `PrivateKeyInfo` or `OneAsymmetricKey` structure. Supports RSA, EC, DSA, and Ed25519/Ed448 private keys; can optionally be encrypted (`EncryptedPrivateKeyInfo`). The most portable private key format.
-- **X.509**: A public key encoded in the SubjectPublicKeyInfo DER structure (RFC 5280 §4.1.2.7). Algorithm-agnostic: covers RSA, EC, DSA, and Ed25519/Ed448 public keys.
-- **ECPrivateKey**: An EC private key in the SEC 1 format (RFC 5915), which is the `ECPrivateKey` ASN.1 structure. Optionally includes the public key and the named curve OID.
-
-**KMIP transparent structures:**
-- **TransparentSymmetricKey**: The symmetric key value as a TTLV Big Integer, suitable for key archiving and explicit inspection.
-- **TransparentDSAPrivateKey** / **TransparentDSAPublicKey**: DSA key components (p, q, g, x/y) as individual TTLV fields.
-- **TransparentRSAPrivateKey** / **TransparentRSAPublicKey**: RSA key components (n, e, d, p, q, etc.) as individual TTLV fields. Enables key component inspection and archival.
-- **TransparentDHPrivateKey** / **TransparentDHPublicKey**: Diffie-Hellman key components as TTLV fields.
-- **TransparentECPrivateKey** / **TransparentECPublicKey**: EC private scalar and public point as TTLV fields, with the recommended curve identified separately.
-
-**Container formats:**
-- **PKCS#12**: A DER-encoded archive that bundles a private key with its certificate and optionally its certificate chain and additional attributes. Used for portability between applications (e.g., browser import/export).
 
 ## Examples
 

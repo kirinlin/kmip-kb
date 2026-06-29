@@ -22,14 +22,9 @@ The RNG Mode enumeration controls the reseeding and prediction-resistance behavi
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
+| Unspecified | `00000001` | `Unspecified` | The mode is not constrained; the server uses its default reseeding policy. |
 | Shared Instantiation | `00000002` | `SharedInstantiation` |  |
 | Non-Shared Instantiation | `00000003` | `NonSharedInstantiation` |  |
-
-- **Unspecified**: The mode is not constrained; the server uses its default reseeding policy.
-- **Non-Reseeding**: The DRBG is instantiated without reseeding support. The internal state evolves from its initial seed without injecting additional entropy. Suitable when the seed is trusted and state exhaustion is not a concern.
-- **Prediction Resistance**: Fresh entropy is injected before every generate call, ensuring that even if the internal state were compromised at time T, outputs before T are still unpredictable. Required for the highest-security applications.
-- **Reseeding**: The DRBG is reseeded periodically (after a defined number of generate calls or by explicit request) but not for every individual call. A balance between performance and forward security.
 
 ## Examples
 

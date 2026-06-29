@@ -22,46 +22,23 @@ The Hashing Algorithm enumeration identifies the cryptographic hash function to 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| MD2 | `00000001` | `MD2` |  |
-| MD4 | `00000002` | `MD4` |  |
-| MD5 | `00000003` | `MD5` |  |
-| SHA-1 | `00000004` | `SHA_1` |  |
-| SHA-224 | `00000005` | `SHA_224` |  |
-| SHA-256 | `00000006` | `SHA_256` |  |
-| SHA-384 | `00000007` | `SHA_384` |  |
-| SHA-512 | `00000008` | `SHA_512` |  |
-| RIPEMD-160 | `00000009` | `RIPEMD_160` |  |
-| Tiger | `0000000A` | `Tiger` |  |
-| Whirlpool | `0000000B` | `Whirlpool` |  |
-| SHA-512/224 | `0000000C` | `SHA_512_224` |  |
+| MD2 | `00000001` | `MD2` | Produces a 128-bit digest. Considered broken; included for legacy interoperability only. |
+| MD4 | `00000002` | `MD4` | Produces a 128-bit digest. Also broken; predecessor to MD5. |
+| MD5 | `00000003` | `MD5` | 128-bit digest. Widely deployed but vulnerable to collision attacks; acceptable only for non-security-critical checksums or legacy MAC schemes. |
+| SHA-1 | `00000004` | `SHA_1` | 160-bit digest. Deprecated for digital signatures and certificates; retained for legacy TLS and older code-signing workflows. |
+| SHA-224 | `00000005` | `SHA_224` | 224-bit truncated variant of SHA-256. |
+| SHA-256 | `00000006` | `SHA_256` | The most widely deployed hash today; 256-bit output; the baseline choice for new designs. |
+| SHA-384 | `00000007` | `SHA_384` | 384-bit output; truncated variant of SHA-512; used in ECDSA-384 and higher-assurance applications. |
+| SHA-512 | `00000008` | `SHA_512` | 512-bit output; the highest-strength SHA-2 variant for symmetric-equivalent 256-bit security. |
+| RIPEMD-160 | `00000009` | `RIPEMD_160` | A 160-bit hash from Europe, used in Bitcoin address derivation and some legacy TLS deployments. |
+| Tiger | `0000000A` | `Tiger` | A 192-bit hash designed for 64-bit platforms; used in some P2P and older network protocols. |
+| Whirlpool | `0000000B` | `Whirlpool` | A 512-bit Miyaguchi-Preneel hash recommended by NESSIE; used in some high-security European applications. |
+| SHA-512/224 | `0000000C` | `SHA_512_224` | / **SHA-512/256**: SHA-512 with truncated outputs, providing the same performance as SHA-512 with shorter digests. |
 | SHA-512/256 | `0000000D` | `SHA_512_256` |  |
 | SHA3-224 | `0000000E` | `SHA3_224` |  |
 | SHA3-256 | `0000000F` | `SHA3_256` |  |
 | SHA3-384 | `00000010` | `SHA3_384` |  |
 | SHA3-512 | `00000011` | `SHA3_512` |  |
-
-**Legacy algorithms (avoid for new designs):**
-- **MD2**: Produces a 128-bit digest. Considered broken; included for legacy interoperability only.
-- **MD4**: Produces a 128-bit digest. Also broken; predecessor to MD5.
-- **MD5**: 128-bit digest. Widely deployed but vulnerable to collision attacks; acceptable only for non-security-critical checksums or legacy MAC schemes.
-- **SHA-1**: 160-bit digest. Deprecated for digital signatures and certificates; retained for legacy TLS and older code-signing workflows.
-
-**SHA-2 family (widely recommended):**
-- **SHA-224**: 224-bit truncated variant of SHA-256.
-- **SHA-256**: The most widely deployed hash today; 256-bit output; the baseline choice for new designs.
-- **SHA-384**: 384-bit output; truncated variant of SHA-512; used in ECDSA-384 and higher-assurance applications.
-- **SHA-512**: 512-bit output; the highest-strength SHA-2 variant for symmetric-equivalent 256-bit security.
-- **SHA-512/224** / **SHA-512/256**: SHA-512 with truncated outputs, providing the same performance as SHA-512 with shorter digests.
-
-**SHA-3 family (Keccak-based, FIPS 202):**
-- **SHA-3-224** / **SHA-3-256** / **SHA-3-384** / **SHA-3-512**: The SHA-3 standardised hash functions. Structurally different from SHA-2 (sponge construction), providing an independent security hedge.
-
-**Other algorithms:**
-- **RIPEMD-160**: A 160-bit hash from Europe, used in Bitcoin address derivation and some legacy TLS deployments.
-- **Tiger**: A 192-bit hash designed for 64-bit platforms; used in some P2P and older network protocols.
-- **Whirlpool**: A 512-bit Miyaguchi-Preneel hash recommended by NESSIE; used in some high-security European applications.
-- **GOSTR3411-94**: The original Russian GOST hash standard, producing a 256-bit digest.
-- **GOSTR3411-2012-256** / **GOSTR3411-2012-512**: The updated Streebog hash function from GOST R 34.11-2012, providing 256- or 512-bit outputs. Mandatory in Russian government systems.
 
 ## Examples
 

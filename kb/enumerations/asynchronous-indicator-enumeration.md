@@ -26,9 +26,6 @@ The Asynchronous Indicator enumeration controls whether a particular batch item 
 | Optional | `00000002` | `Optional` |  |
 | Prohibited | `00000003` | `Prohibited` |  |
 
-- **Synchronous**: The server processes the operation fully before returning the response. This is the default behavior when no Asynchronous Indicator is supplied. The response batch item contains the complete result.
-- **Asynchronous**: The server accepts the request, assigns an Asynchronous Correlation Value, and returns immediately without waiting for the operation to finish. The client must subsequently poll using [Query Asynchronous Requests](../operations/query-asynchronous-requests.md) or use [Poll](../operations/poll.md) to retrieve the eventual outcome.
-
 ## Examples
 
 A client generating a large RSA key pair over a slow HSM might specify **Asynchronous** on the Create Key Pair batch item, receive a correlation value immediately, and poll for the result once processing completes — freeing the client thread to handle other work in the interim.

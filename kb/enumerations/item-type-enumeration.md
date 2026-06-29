@@ -23,28 +23,17 @@ Unlike other KMIP enumerations (which are encoded as 4-byte integers with type `
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Structure | `00000001` | `Structure` |  |
-| Integer | `00000002` | `Integer` |  |
-| Long Integer | `00000003` | `LongInteger` |  |
-| Big Integer | `00000004` | `BigInteger` |  |
-| Enumeration | `00000005` | `Enumeration` |  |
-| Boolean | `00000006` | `Boolean` |  |
-| Text String | `00000007` | `TextString` |  |
-| Byte String | `00000008` | `ByteString` |  |
+| Structure | `00000001` | `Structure` | (`01`): A container item that holds a sequence of nested TTLV items. Structures do not have a value of their own — the Length field indicates how many bytes of sub-items follow. Almost every complex KMIP object (request, response, key block) is a Structure. |
+| Integer | `00000002` | `Integer` | (`02`): A signed 32-bit integer, stored in 4 bytes of value. Used for small numeric fields such as cryptographic key lengths, batch counts, and offset values. |
+| Long Integer | `00000003` | `LongInteger` | (`03`): A signed 64-bit integer, stored in 8 bytes of value. Used for timestamps, large counters, and date-time values that require 64-bit precision. |
+| Big Integer | `00000004` | `BigInteger` | (`04`): An arbitrary-precision signed integer, stored as a variable-length byte string padded to a multiple of 8 bytes. Used for large public key moduli, elliptic curve parameters, and other big-number fields in transparent key structures. |
+| Enumeration | `00000005` | `Enumeration` | (`05`): A 32-bit integer whose value comes from a named enumeration (such as any of the other enumerations documented in this directory). Stored in 4 bytes. |
+| Boolean | `00000006` | `Boolean` | (`06`): A true/false value stored in 8 bytes (padded for alignment). Used for binary flag fields. |
+| Text String | `00000007` | `TextString` | (`07`): A UTF-8 encoded text string, padded to a multiple of 8 bytes. Used for human-readable names, URIs, and textual attribute values. |
+| Byte String | `00000008` | `ByteString` | (`08`): An arbitrary byte sequence, padded to a multiple of 8 bytes. Used for key material, ciphertext, digests, and other opaque binary data. |
 | Date Time | `00000009` | `DateTime` |  |
-| Interval | `0000000A` | `Interval` |  |
+| Interval | `0000000A` | `Interval` | (`0A`): A 32-bit unsigned duration in seconds. Used for lease time, validity periods, and similar bounded time values. |
 | Date Time Extended | `0000000B` | `DateTimeExtended` |  |
-
-- **Structure** (`01`): A container item that holds a sequence of nested TTLV items. Structures do not have a value of their own — the Length field indicates how many bytes of sub-items follow. Almost every complex KMIP object (request, response, key block) is a Structure.
-- **Integer** (`02`): A signed 32-bit integer, stored in 4 bytes of value. Used for small numeric fields such as cryptographic key lengths, batch counts, and offset values.
-- **Long Integer** (`03`): A signed 64-bit integer, stored in 8 bytes of value. Used for timestamps, large counters, and date-time values that require 64-bit precision.
-- **Big Integer** (`04`): An arbitrary-precision signed integer, stored as a variable-length byte string padded to a multiple of 8 bytes. Used for large public key moduli, elliptic curve parameters, and other big-number fields in transparent key structures.
-- **Enumeration** (`05`): A 32-bit integer whose value comes from a named enumeration (such as any of the other enumerations documented in this directory). Stored in 4 bytes.
-- **Boolean** (`06`): A true/false value stored in 8 bytes (padded for alignment). Used for binary flag fields.
-- **Text String** (`07`): A UTF-8 encoded text string, padded to a multiple of 8 bytes. Used for human-readable names, URIs, and textual attribute values.
-- **Byte String** (`08`): An arbitrary byte sequence, padded to a multiple of 8 bytes. Used for key material, ciphertext, digests, and other opaque binary data.
-- **Date-Time** (`09`): A 64-bit Unix epoch timestamp (seconds since 1970-01-01T00:00:00Z), stored in 8 bytes. Used for activation dates, expiry dates, and event timestamps.
-- **Interval** (`0A`): A 32-bit unsigned duration in seconds. Used for lease time, validity periods, and similar bounded time values.
 
 ## Examples
 

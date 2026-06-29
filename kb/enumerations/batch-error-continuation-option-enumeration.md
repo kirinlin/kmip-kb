@@ -22,13 +22,9 @@ The Batch Error Continuation Option enumeration, carried in the Request Header, 
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Continue | `00000001` | `Continue` |  |
-| Stop | `00000002` | `Stop` |  |
-| Undo | `00000003` | `Undo` |  |
-
-- **Continue**: The server processes all batch items regardless of individual failures. Each failed item returns its own error result, but subsequent items are still attempted. Useful when the operations are logically independent and partial success is acceptable.
-- **Stop**: The server halts processing as soon as it encounters a failed item. Operations that have already been completed remain committed; items after the failure are not attempted. The response includes results only for items that were actually processed.
-- **Undo**: The server attempts to roll back any operations that succeeded before the failure was encountered, then stops. This provides a best-effort transactional semantic. Note that not all operations can be reversed by the server, and the undo is advisory rather than a guaranteed atomic transaction.
+| Continue | `00000001` | `Continue` | The server processes all batch items regardless of individual failures. Each failed item returns its own error result, but subsequent items are still attempted. Useful when the operations are logically independent and partial success is acceptable. |
+| Stop | `00000002` | `Stop` | The server halts processing as soon as it encounters a failed item. Operations that have already been completed remain committed; items after the failure are not attempted. The response includes results only for items that were actually processed. |
+| Undo | `00000003` | `Undo` | The server attempts to roll back any operations that succeeded before the failure was encountered, then stops. This provides a best-effort transactional semantic. Note that not all operations can be reversed by the server, and the undo is advisory rather than a guaranteed atomic transaction. |
 
 ## Examples
 

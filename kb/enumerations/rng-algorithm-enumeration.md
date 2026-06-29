@@ -22,19 +22,12 @@ The RNG Algorithm enumeration identifies the algorithm or standard used by a ran
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Unspecified | `00000001` | `Unspecified` |  |
-| FIPS 186-2 | `00000002` | `FIPS186_2` |  |
-| DRBG | `00000003` | `DRBG` |  |
-| NRBG | `00000004` | `NRBG` |  |
-| ANSI X9.31 | `00000005` | `ANSIX9_31` |  |
-| ANSI X9.62 | `00000006` | `ANSIX9_62` |  |
-
-- **Unspecified**: The algorithm is not identified or is implementation-defined.
-- **FIPS 186-2**: The DSA-based random-number generation method from FIPS 186-2. Largely superseded by SP 800-90A DRBGs.
-- **DRBG**: A deterministic random bit generator, typically one of the SP 800-90A constructions (Hash_DRBG, HMAC_DRBG, CTR_DRBG). The specific DRBG construction is further identified by the [DRBG Algorithm Enumeration](drbg-algorithm-enumeration.md).
-- **NRBG**: A non-deterministic (true) random bit generator seeded from physical entropy sources. Provides the highest randomness quality but may be slower.
-- **ANSI X9.31**: The ANSI X9.31 RNG method for financial applications, based on 3DES or AES.
-- **ANSI X9.62**: The ANSI X9.62 random-number generation method defined for ECDSA key generation.
+| Unspecified | `00000001` | `Unspecified` | The algorithm is not identified or is implementation-defined. |
+| FIPS 186-2 | `00000002` | `FIPS186_2` | The DSA-based random-number generation method from FIPS 186-2. Largely superseded by SP 800-90A DRBGs. |
+| DRBG | `00000003` | `DRBG` | A deterministic random bit generator, typically one of the SP 800-90A constructions (Hash_DRBG, HMAC_DRBG, CTR_DRBG). The specific DRBG construction is further identified by the [DRBG Algorithm Enumeration](drbg-algorithm-enumeration.md). |
+| NRBG | `00000004` | `NRBG` | A non-deterministic (true) random bit generator seeded from physical entropy sources. Provides the highest randomness quality but may be slower. |
+| ANSI X9.31 | `00000005` | `ANSIX9_31` | The ANSI X9.31 RNG method for financial applications, based on 3DES or AES. |
+| ANSI X9.62 | `00000006` | `ANSIX9_62` | The ANSI X9.62 random-number generation method defined for ECDSA key generation. |
 
 ## Examples
 

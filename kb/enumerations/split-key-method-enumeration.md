@@ -22,15 +22,10 @@ The Split Key Method enumeration identifies the mathematical technique used to d
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| XOR | `00000001` | `XOR` |  |
+| XOR | `00000001` | `XOR` | A trivial 2-of-2 split. One share is random; the second share is the XOR of the random share and the original key. Both shares are required for reconstruction; there is no threshold flexibility. |
 | Polynomial Sharing GF (216) | `00000002` | `PolynomialSharingGF216` |  |
-| Polynomial Sharing Prime Field | `00000003` | `PolynomialSharingPrimeField` |  |
+| Polynomial Sharing Prime Field | `00000003` | `PolynomialSharingPrimeField` | Shamir's Secret Sharing over a prime field (modular integer arithmetic). The same k-of-n threshold property, operating over integers modulo a large prime. Often easier to implement in arbitrary-precision arithmetic environments. |
 | Polynomial Sharing GF (28) | `00000004` | `PolynomialSharingGF28` |  |
-
-- **XOR**: A trivial 2-of-2 split. One share is random; the second share is the XOR of the random share and the original key. Both shares are required for reconstruction; there is no threshold flexibility.
-- **Polynomial Sharing GF(2^8)**: Shamir's Secret Sharing over the Galois field GF(2^8). Supports k-of-n threshold sharing with byte-oriented arithmetic. Suitable for keys whose byte count aligns naturally with GF(2^8) operations.
-- **Polynomial Sharing Prime Field**: Shamir's Secret Sharing over a prime field (modular integer arithmetic). The same k-of-n threshold property, operating over integers modulo a large prime. Often easier to implement in arbitrary-precision arithmetic environments.
-- **Polynomial Sharing GF(2^16)**: A variant over GF(2^16), used for certain financial key ceremonies.
 
 ## Examples
 

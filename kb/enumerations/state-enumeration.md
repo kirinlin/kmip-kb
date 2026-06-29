@@ -22,21 +22,12 @@ The State enumeration is the lifecycle state of a managed KMIP object. It is the
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Pre-Active | `00000001` | `PreActive` |  |
-| Active | `00000002` | `Active` |  |
-| Deactivated | `00000003` | `Deactivated` |  |
-| Compromised | `00000004` | `Compromised` |  |
-| Destroyed | `00000005` | `Destroyed` |  |
-| Destroyed Compromised | `00000006` | `DestroyedCompromised` |  |
-
-The six states form a directed lifecycle graph:
-
-- **Pre-Active** (1): The object exists on the server but cannot yet be used for cryptographic operations. Attributes may be freely modified while in this state. Transition to Active occurs when the Activation Date is reached or via an explicit Activate operation.
-- **Active** (2): The object is live and available for its intended cryptographic purposes. Most operations on the object (encrypt, decrypt, sign, verify, MAC) require it to be in this state. Attributes are generally locked against modification.
-- **Deactivated** (3): The object's cryptographic lifespan has ended. It cannot be used for new cryptographic operations but its metadata and key material remain accessible for archival or key recovery purposes. The state is entered via Revoke (with a non-compromise reason) or when the Deactivation Date is reached.
-- **Compromised** (4): The object's security has been breached or is suspected to have been breached. Key material may still be accessible to authorised parties for forensic or recovery purposes, but the object must not be used for any new cryptographic operations.
-- **Destroyed** (5): The object's key material has been deleted or shredded. Only metadata (attributes, audit trail) may remain. The Unique Identifier is no longer usable for cryptographic operations.
-- **Destroyed Compromised** (6): The object was in a compromised state when it was destroyed. The metadata records that the material was both destroyed and previously compromised.
+| Pre-Active | `00000001` | `PreActive` | The object exists on the server but cannot yet be used for cryptographic operations. Attributes may be freely modified while in this state. Transition to Active occurs when the Activation Date is reached or via an explicit Activate operation. |
+| Active | `00000002` | `Active` | The object is live and available for its intended cryptographic purposes. Most operations on the object (encrypt, decrypt, sign, verify, MAC) require it to be in this state. Attributes are generally locked against modification. |
+| Deactivated | `00000003` | `Deactivated` | The object's cryptographic lifespan has ended. It cannot be used for new cryptographic operations but its metadata and key material remain accessible for archival or key recovery purposes. The state is entered via Revoke (with a non-compromise reason) or when the Deactivation Date is reached. |
+| Compromised | `00000004` | `Compromised` | The object's security has been breached or is suspected to have been breached. Key material may still be accessible to authorised parties for forensic or recovery purposes, but the object must not be used for any new cryptographic operations. |
+| Destroyed | `00000005` | `Destroyed` | The object's key material has been deleted or shredded. Only metadata (attributes, audit trail) may remain. The Unique Identifier is no longer usable for cryptographic operations. |
+| Destroyed Compromised | `00000006` | `DestroyedCompromised` | The object was in a compromised state when it was destroyed. The metadata records that the material was both destroyed and previously compromised. |
 
 ## Examples
 

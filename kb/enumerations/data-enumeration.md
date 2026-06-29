@@ -30,13 +30,6 @@ The Data enumeration discriminates the role of a data payload within the [Proces
 | Sign Signature Data | `00000006` | `SignSignatureData` |  |
 | Signature Verify | `00000007` | `SignatureVerify` |  |
 
-- **Encrypt Input**: The plaintext bytes to be encrypted using the referenced key and algorithm parameters. The output will be ciphertext.
-- **Decrypt Input**: The ciphertext bytes to be decrypted. The output will be plaintext.
-- **Sign Input**: The message or hash bytes to be signed. The output will be a digital signature.
-- **Verify Input**: Data submitted for signature verification alongside a signature value; the result indicates whether the signature is valid.
-
-Additional values may be defined for other process functions such as MAC generation and verification, hash computation, and random number generation, allowing the Process operation to be extended without adding new operation codes.
-
 ## Examples
 
 A client calling Process to sign a software artefact submits the artefact hash as **Sign Input** along with a reference to the signing key. A client calling Process to authenticate a message provides the received ciphertext as **Decrypt Input** and separately provides the authentication tag, if required by the mode.

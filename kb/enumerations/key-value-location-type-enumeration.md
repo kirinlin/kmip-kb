@@ -22,11 +22,8 @@ The Key Value Location Type enumeration classifies how the Key Value Location at
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Uninterpreted Text String | `00000001` | `UninterpretedTextString` |  |
-| URI | `00000002` | `URI` |  |
-
-- **Uninterpreted Text String**: The location is a free-form string whose interpretation is application-specific. It could be a hardware slot identifier, an HSM label, a partition name, or any other opaque reference that the consuming system understands without a standard URI scheme.
-- **URI**: The location is a Uniform Resource Identifier that can be used to retrieve or reference the key material through a standard protocol (e.g., an HTTPS URL to a REST key vault API or a PKCS#11 URI as defined in RFC 7512).
+| Uninterpreted Text String | `00000001` | `UninterpretedTextString` | The location is a free-form string whose interpretation is application-specific. It could be a hardware slot identifier, an HSM label, a partition name, or any other opaque reference that the consuming system understands without a standard URI scheme. |
+| URI | `00000002` | `URI` | The location is a Uniform Resource Identifier that can be used to retrieve or reference the key material through a standard protocol (e.g., an HTTPS URL to a REST key vault API or a PKCS#11 URI as defined in RFC 7512). |
 
 ## Examples
 
