@@ -226,6 +226,20 @@ v1.0–v1.2 profiles put profile definitions in §4 (§5 is Conformance Clauses 
 
 The section→category rules and per-section stub depth live in `V1X_PREFIX_RULES` / `V20_PREFIX_RULES` / `PROF_PREFIX_RULES` / `PROF_V1X_EARLY_RULES` / `UG_PREFIX_RULES` at the top of the script; `get_prof_prefix_rules(version)` selects the right ruleset for `--source prof`. `V21_SLUG_OVERRIDES` (applied for `--source spec --version 2.1` only) maps consolidated/renamed sections to their authored doc's slug so re-runs stay idempotent. Stub bodies come from `templates/<category>.md`.
 
+## Release
+
+`.github/workflows/release.yml` — triggered by any `v*` tag push. Builds the embedded-DB `kmip-kb` binary (`go build -tags embed`, `CGO_ENABLED=0`) for five targets on `ubuntu-latest` via cross-compilation, then publishes them as GitHub Release assets:
+
+| Target | Asset name |
+|---|---|
+| Linux amd64 | `kmip-kb-linux-amd64` |
+| Linux arm64 | `kmip-kb-linux-arm64` |
+| macOS amd64 | `kmip-kb-darwin-amd64` |
+| macOS arm64 | `kmip-kb-darwin-arm64` |
+| Windows amd64 | `kmip-kb-windows-amd64.exe` |
+
+Each job runs `gen-db` first (bakes `kb/` into `internal/kb/data/kb.db`), then builds the self-contained binary. The `kmip-raw` binary is **not** released — it requires `raw/` at runtime, which is private/local-only.
+
 ## Crawler (source preparation, private)
 
 `scripts/kmip_crawler.py` — unified crawl + download in one pass.

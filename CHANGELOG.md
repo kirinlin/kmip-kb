@@ -8,6 +8,7 @@ to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- GitHub Actions release workflow: pushing a tag matching `v*` triggers cross-compiled builds of the embedded-DB `kmip-kb` binary for Linux/macOS/Windows (amd64 + arm64 for POSIX, amd64 for Windows) and publishes them as GitHub Release assets.
 - `mcp_go/` — Go MCP server implementation: two standalone binaries (`kmip-kb`, `kmip-raw`) that are drop-in replacements for the Python FastMCP servers with no Python/venv dependency. Uses SQLite FTS5 BM25 search (via pure-Go `modernc.org/sqlite`) and the `mark3labs/mcp-go` stdio transport. `kmip-kb` supports an embedded-DB build (`make build-kb-embed`) that bakes the pre-indexed FTS5 database into the binary for deployment without a `kb/` tree on disk. 38 tests, all fixture-based with no dependency on live `kb/` or `raw/` data.
 - `kb/examples/annotated-ttlv.md` — full worked example of an annotated TTLV hex dump, covering how to read the format (type-code table, header/value/padding layout), a complete Locate request with authentication, and the matching success response, each shown in both XML and annotated binary.
 - Top-level `kb/index.md` — a knowledge-base landing page linking every category index, grouped into protocol surface, encoding/structure, cross-cutting guidance, and reference material.

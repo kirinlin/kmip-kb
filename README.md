@@ -244,6 +244,20 @@ quick-test commands and a full tool reference. A `kmip-authoring` skill at
 `.claude/skills/kmip-authoring.md` bundles authoring conventions and MCP
 tool guidance for agents working in this repo.
 
+## Releases
+
+Pre-built `kmip-kb` binaries (embedded-DB, self-contained — no `kb/` tree required) are published as GitHub Release assets on every `v*` tag. Download the binary for your platform and point your MCP config at it directly:
+
+| Platform | Asset |
+|---|---|
+| Linux x86-64 | `kmip-kb-linux-amd64` |
+| Linux arm64 | `kmip-kb-linux-arm64` |
+| macOS x86-64 | `kmip-kb-darwin-amd64` |
+| macOS Apple Silicon | `kmip-kb-darwin-arm64` |
+| Windows x86-64 | `kmip-kb-windows-amd64.exe` |
+
+To build locally from source: `make build-kb-embed` (requires Go 1.23+; runs `gen-db` then compiles with `-tags embed`).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the content rules — most importantly
