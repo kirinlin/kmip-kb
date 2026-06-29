@@ -22,9 +22,9 @@ The Interop Function enumeration names the specific interoperability test functi
 
 | Name | Value | XML Text | Description |
 |---|---|---|---|
-| Begin | `00000001` | `Begin` |  |
-| End | `00000002` | `End` |  |
-| Reset | `00000003` | `Reset` |  |
+| Begin | `00000001` | `Begin` | Signals that the named test scenario is about to start. |
+| End | `00000002` | `End` | Signals that the named test scenario has completed. |
+| Reset | `00000003` | `Reset` | Instructs the server to return to the baseline state it held at the start of the interoperability session, discarding any objects or state created during testing. |
 
 ## Examples
 
