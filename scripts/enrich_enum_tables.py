@@ -13,13 +13,16 @@ defined in the spec.  The Fields & Structure section should contain a table with
 * ``XML Text`` — CamelCase text per KMIP-ENCODE §6.1.3 (same algorithm as xml_text
                  front matter, applied to the value name rather than the tag name).
 * ``Description`` — left blank; authors fill in per-value descriptions.
+                    Omitted entirely for enumerations listed in NO_DESCRIPTION_TABLES
+                    where per-value descriptions add no meaning beyond the value name.
 
 The script parses every enumeration section from the v2.1 spec (and v2.0/v1.x for
 removed enumerations), then for each KB enumeration doc looks up the spec section
-via the source_section front matter field and inserts the table.
+via the source_section front matter field and inserts or corrects the table.
 
-The insertion is idempotent: docs that already have a ``| Name |`` table at the
-start of their Fields & Structure section are skipped.
+The operation is idempotent: docs whose table header already matches the expected
+format are skipped.  Docs in NO_DESCRIPTION_TABLES that carry a stale four-column
+header have the Description column removed.
 
 Usage:
     python scripts/enrich_enum_tables.py [--dry-run] [--check] [--kb PATH]
@@ -39,6 +42,24 @@ from pathlib import Path
 # Reuse the CamelCase algorithm from populate_tag_fields.
 sys.path.insert(0, str(Path(__file__).parent))
 from populate_tag_fields import to_xml_element  # noqa: E402
+
+
+# --------------------------------------------------------------------------- #
+# Whitelist — enumerations whose table omits the Description column because
+# per-value descriptions add no meaning beyond the value name itself.
+# --------------------------------------------------------------------------- #
+
+NO_DESCRIPTION_TABLES: frozenset[str] = frozenset({
+    "adjustment-type-enumeration.md",
+    "asynchronous-indicator-enumeration.md",
+    "data-enumeration.md",
+    "digital-signature-algorithm-enumeration.md",
+    "nist-key-type-enumeration.md",
+    "operation-enumeration.md",
+    "recommended-curve-enumeration.md",
+    "tag-enumeration.md",
+    "unique-identifier-enumeration.md",
+})
 
 
 # --------------------------------------------------------------------------- #
@@ -148,25 +169,38 @@ def _read_fm_field(text: str, field: str) -> str | None:
 # Table generation and insertion
 # --------------------------------------------------------------------------- #
 
-def _render_table(rows: list[tuple[str, str]]) -> str:
+def _render_table(rows: list[tuple[str, str]], with_description: bool = True) -> str:
     """Render the enumeration value table as Markdown."""
-    lines = ["| Name | Value | XML Text | Description |", "|---|---|---|---|"]
-    for name, hex8 in rows:
-        xml_t = to_xml_element(name)
-        lines.append(f"| {name} | `{hex8}` | `{xml_t}` |  |")
+    if with_description:
+        lines = ["| Name | Value | XML Text | Description |", "|---|---|---|---|"]
+        for name, hex8 in rows:
+            xml_t = to_xml_element(name)
+            lines.append(f"| {name} | `{hex8}` | `{xml_t}` |  |")
+    else:
+        lines = ["| Name | Value | XML Text |", "|---|---|---|"]
+        for name, hex8 in rows:
+            xml_t = to_xml_element(name)
+            lines.append(f"| {name} | `{hex8}` | `{xml_t}` |")
     return "\n".join(lines)
 
 
 _FS_HEADING_RE = re.compile(r'^## Fields & Structure\s*$', re.MULTILINE)
-# Detects an existing name table at the start of Fields & Structure
 _VALUE_TABLE_RE = re.compile(r'\|\s*Name\s*\|')
 
 
-def insert_enum_table(text: str, rows: list[tuple[str, str]]) -> str | None:
-    """Insert a value table into the Fields & Structure section.
+def insert_enum_table(
+    text: str,
+    rows: list[tuple[str, str]],
+    with_description: bool = True,
+) -> str | None:
+    """Insert or correct a value table in the Fields & Structure section.
 
-    Returns the modified text, or None if the doc was skipped (already has
-    a Name table or has no Fields & Structure section).
+    Returns the modified text, or None if the doc was skipped (table already
+    matches expected format, or section is missing).
+
+    When an existing table's header does not match the expected format (e.g. a
+    NO_DESCRIPTION_TABLES doc still carries a stale four-column header), the
+    entire table block is replaced with a freshly rendered one.
     """
     m = _FS_HEADING_RE.search(text)
     if not m:
@@ -177,16 +211,37 @@ def insert_enum_table(text: str, rows: list[tuple[str, str]]) -> str | None:
     while content_start < len(text) and text[content_start] == "\n":
         content_start += 1
 
-    # Skip if a Name table is already present right after the heading
-    upcoming = text[content_start: content_start + 200]
-    if _VALUE_TABLE_RE.search(upcoming):
-        return None
+    expected_header = (
+        "| Name | Value | XML Text | Description |"
+        if with_description
+        else "| Name | Value | XML Text |"
+    )
+    table = _render_table(rows, with_description)
 
-    table = _render_table(rows)
-    # Insert table + blank line before existing content
+    # Check for an existing Name table near the top of the section
+    upcoming = text[content_start: content_start + 300]
+    existing_m = _VALUE_TABLE_RE.search(upcoming)
+
+    if existing_m:
+        # Find the start of the header line (back up to beginning of line)
+        table_start = content_start + existing_m.start()
+        while table_start > 0 and text[table_start - 1] != "\n":
+            table_start -= 1
+        # Extract the header line and compare to expected
+        header_line = text[table_start:].split("\n", 1)[0]
+        if header_line.strip() == expected_header:
+            return None  # already correct format
+        # Header mismatch: replace the entire table block (header + separator + rows)
+        pos = table_start
+        for line in text[table_start:].splitlines(True):
+            if not line.startswith("|"):
+                break
+            pos += len(line)
+        return text[:table_start] + table + "\n" + text[pos:]
+
+    # No Name table: insert with a blank line before existing content
     existing_content = text[content_start:]
     if existing_content.startswith("<!-- "):
-        # Skip leading comment block
         comment_end = existing_content.find("-->")
         if comment_end != -1:
             comment_end += 3
@@ -270,7 +325,8 @@ def main() -> None:
             print(f"  NO DATA  {doc.name}  (section {source_sec})")
             continue
 
-        new_text = insert_enum_table(text, rows)
+        with_desc = doc.name not in NO_DESCRIPTION_TABLES
+        new_text = insert_enum_table(text, rows, with_description=with_desc)
         if new_text is None:
             skipped_exists += 1
             continue
@@ -278,14 +334,14 @@ def main() -> None:
         changed += 1
         rel = doc.relative_to(repo_root)
         verb = "[DRY RUN]" if dry else "WRITE   "
-        print(f"  {verb}  {rel}  ({len(rows)} values)")
+        print(f"  {verb}  {rel}  ({len(rows)} values, desc={'yes' if with_desc else 'no'})")
         if not dry:
             doc.write_text(new_text, encoding="utf-8")
 
     suffix = "would be updated" if dry else "updated"
     print(
         f"\nResults: {changed} {suffix} | "
-        f"{skipped_exists} already had Name table | "
+        f"{skipped_exists} already correct | "
         f"{skipped_no_rows} sections not found in spec | "
         f"{skipped_no_sec} no source_section"
     )
