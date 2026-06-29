@@ -28,56 +28,56 @@ The Cryptographic Algorithm enumeration identifies the algorithm associated with
 | RSA | `00000004` | `RSA` | The RSA public-key algorithm for encryption and digital signatures. Key lengths typically range from 2048 to 4096 bits. |
 | DSA | `00000005` | `DSA` | The Digital Signature Algorithm based on discrete logarithm over prime fields (FIPS 186). |
 | ECDSA | `00000006` | `ECDSA` | (Elliptic Curve Digital Signature Algorithm): EC-based signature algorithm, specified in combination with a recommended curve. |
-| HMAC-SHA1 | `00000007` | `HMAC_SHA1` |  |
-| HMAC-SHA224 | `00000008` | `HMAC_SHA224` |  |
-| HMAC-SHA256 | `00000009` | `HMAC_SHA256` |  |
-| HMAC-SHA384 | `0000000A` | `HMAC_SHA384` |  |
-| HMAC-SHA512 | `0000000B` | `HMAC_SHA512` |  |
-| HMAC-MD5 | `0000000C` | `HMAC_MD5` |  |
+| HMAC-SHA1 | `00000007` | `HMAC_SHA1` | HMAC using SHA-1; present in older protocols but SHA-1 is deprecated for collision resistance. |
+| HMAC-SHA224 | `00000008` | `HMAC_SHA224` | HMAC using SHA-224; provides a 112-bit security level. |
+| HMAC-SHA256 | `00000009` | `HMAC_SHA256` | HMAC using SHA-256; widely used in TLS, JWT signing, and API authentication. |
+| HMAC-SHA384 | `0000000A` | `HMAC_SHA384` | HMAC using SHA-384; suited to 192-bit security environments. |
+| HMAC-SHA512 | `0000000B` | `HMAC_SHA512` | HMAC using SHA-512; provides a 256-bit security level. |
+| HMAC-MD5 | `0000000C` | `HMAC_MD5` | HMAC using MD5; largely replaced by SHA-based HMACs, though HMAC-MD5 is not directly broken. |
 | DH | `0000000D` | `DH` | (Diffie-Hellman): The classic key-agreement algorithm over finite fields. |
 | ECDH | `0000000E` | `ECDH` | (Elliptic Curve Diffie-Hellman): EC-based key agreement. |
 | ECMQV | `0000000F` | `ECMQV` | An EC key agreement protocol with implicit mutual authentication. |
 | Blowfish | `00000010` | `Blowfish` | A variable-key-length block cipher used in some legacy applications and VPNs. |
 | Camellia | `00000011` | `Camellia` | A 128-bit block cipher from NTT and Mitsubishi, widely used in Japan and standardised by ISO/IEC. |
-| CAST5 | `00000012` | `CAST5` |  |
+| CAST5 | `00000012` | `CAST5` | A 64-bit block cipher with keys up to 128 bits; used in older PGP and OpenPGP implementations. |
 | IDEA | `00000013` | `IDEA` | An older 64-bit block cipher, mostly of historical interest. |
-| MARS | `00000014` | `MARS` |  |
-| RC2 | `00000015` | `RC2` | , **RC4**, **RC5**, **RC6**: RSA Security cipher family; RC4 is a stream cipher. All are largely deprecated for modern use. |
-| RC4 | `00000016` | `RC4` |  |
-| RC5 | `00000017` | `RC5` |  |
-| SKIPJACK | `00000018` | `SKIPJACK` |  |
-| Twofish | `00000019` | `Twofish` |  |
+| MARS | `00000014` | `MARS` | An IBM-designed AES finalist 128-bit block cipher; not widely adopted after AES selection. |
+| RC2 | `00000015` | `RC2` | An older variable-key-length block cipher by Ron Rivest; found in legacy protocols but largely deprecated for new designs. |
+| RC4 | `00000016` | `RC4` | A stream cipher by Ron Rivest; cryptographically broken and prohibited in TLS 1.3. |
+| RC5 | `00000017` | `RC5` | A variable-parameter block cipher by Ron Rivest with configurable word size, key length, and rounds. |
+| SKIPJACK | `00000018` | `SKIPJACK` | A classified NSA block cipher designed for the Clipper chip; declassified in 1998 but rarely used today. |
+| Twofish | `00000019` | `Twofish` | A 128-bit block cipher AES finalist; remains unbroken but not widely deployed after AES selection. |
 | EC | `0000001A` | `EC` | (Elliptic Curve, generic): Used when the specific EC sub-algorithm is captured by context (e.g., the key format type or curve selection). |
-| One Time Pad | `0000001B` | `OneTimePad` |  |
+| One Time Pad | `0000001B` | `OneTimePad` | A theoretically unbreakable cipher requiring a random key as long as the message, used exactly once. |
 | ChaCha20 | `0000001C` | `ChaCha20` | A modern stream cipher widely deployed in TLS 1.3 combined with Poly1305 for AEAD. |
-| Poly1305 | `0000001D` | `Poly1305` |  |
-| ChaCha20Poly1305 | `0000001E` | `ChaCha20Poly1305` |  |
-| SHA3-224 | `0000001F` | `SHA3_224` |  |
-| SHA3-256 | `00000020` | `SHA3_256` |  |
-| SHA3-384 | `00000021` | `SHA3_384` |  |
-| SHA3-512 | `00000022` | `SHA3_512` |  |
-| HMAC-SHA3-224 | `00000023` | `HMAC_SHA3_224` |  |
-| HMAC-SHA3-256 | `00000024` | `HMAC_SHA3_256` |  |
-| HMAC-SHA3-384 | `00000025` | `HMAC_SHA3_384` |  |
-| HMAC-SHA3-512 | `00000026` | `HMAC_SHA3_512` |  |
-| SHAKE-128 | `00000027` | `SHAKE_128` |  |
-| SHAKE-256 | `00000028` | `SHAKE_256` |  |
+| Poly1305 | `0000001D` | `Poly1305` | A polynomial MAC by Bernstein; nearly always combined with ChaCha20 to form an AEAD construction. |
+| ChaCha20Poly1305 | `0000001E` | `ChaCha20Poly1305` | Combined AEAD construction of the ChaCha20 stream cipher and Poly1305 MAC, standardized in RFC 8439. |
+| SHA3-224 | `0000001F` | `SHA3_224` | SHA-3 hash function with 224-bit output (FIPS 202); Keccak-based, resistant to length-extension attacks. |
+| SHA3-256 | `00000020` | `SHA3_256` | SHA-3 hash function with 256-bit output (FIPS 202); the most common SHA-3 variant. |
+| SHA3-384 | `00000021` | `SHA3_384` | SHA-3 hash function with 384-bit output (FIPS 202). |
+| SHA3-512 | `00000022` | `SHA3_512` | SHA-3 hash function with 512-bit output (FIPS 202). |
+| HMAC-SHA3-224 | `00000023` | `HMAC_SHA3_224` | HMAC using SHA3-224. |
+| HMAC-SHA3-256 | `00000024` | `HMAC_SHA3_256` | HMAC using SHA3-256. |
+| HMAC-SHA3-384 | `00000025` | `HMAC_SHA3_384` | HMAC using SHA3-384. |
+| HMAC-SHA3-512 | `00000026` | `HMAC_SHA3_512` | HMAC using SHA3-512. |
+| SHAKE-128 | `00000027` | `SHAKE_128` | An extendable-output function (XOF) from FIPS 202 based on Keccak; outputs a caller-specified number of bits with 128-bit security. |
+| SHAKE-256 | `00000028` | `SHAKE_256` | An extendable-output function (XOF) from FIPS 202 based on Keccak; outputs a caller-specified number of bits with 256-bit security. |
 | ARIA | `00000029` | `ARIA` | Another Korean standard block cipher, an AES finalist. |
 | SEED | `0000002A` | `SEED` | A Korean national standard 128-bit block cipher. |
-| SM2 | `0000002B` | `SM2` |  |
-| SM3 | `0000002C` | `SM3` |  |
+| SM2 | `0000002B` | `SM2` | A Chinese national standard elliptic curve algorithm for digital signatures and key exchange (GB/T 32918). |
+| SM3 | `0000002C` | `SM3` | A Chinese national standard hash function producing 256-bit digests (GB/T 32905). |
 | SM4 | `0000002D` | `SM4` | A Chinese national standard 128-bit block cipher (also called SMS4). |
-| GOST R 34.10-2012 | `0000002E` | `GOSTR34_10_2012` |  |
-| GOST R 34.11-2012 | `0000002F` | `GOSTR34_11_2012` |  |
-| GOST R 34.13-2015 | `00000030` | `GOSTR34_13_2015` |  |
-| GOST 28147-89 | `00000031` | `GOST28147_89` |  |
-| XMSS | `00000032` | `XMSS` |  |
-| SPHINCS-256 | `00000033` | `SPHINCS_256` |  |
-| McEliece | `00000034` | `McEliece` |  |
-| McEliece-6960119 | `00000035` | `McEliece_6960119` |  |
-| McEliece-8192128 | `00000036` | `McEliece_8192128` |  |
-| Ed25519 | `00000037` | `Ed25519` | / **Ed448**: Edwards-curve digital signature algorithms defined in RFC 8032. Ed25519 uses Curve25519 and Ed448 uses Curve448; both are modern, fast, and have strong security properties. |
-| Ed448 | `00000038` | `Ed448` |  |
+| GOST R 34.10-2012 | `0000002E` | `GOSTR34_10_2012` | Russian national standard for digital signatures using GOST elliptic curves; supports 256- or 512-bit security. |
+| GOST R 34.11-2012 | `0000002F` | `GOSTR34_11_2012` | Russian national standard hash function (Streebog) with 256- or 512-bit output. |
+| GOST R 34.13-2015 | `00000030` | `GOSTR34_13_2015` | Russian national standard defining block cipher modes of operation for use with GOST block ciphers. |
+| GOST 28147-89 | `00000031` | `GOST28147_89` | A legacy Soviet/Russian 64-bit block cipher (Magma); predecessor to the Kuznyechik (Grasshopper) cipher. |
+| XMSS | `00000032` | `XMSS` | eXtended Merkle Signature Scheme; a stateful hash-based post-quantum signature scheme (RFC 8391). |
+| SPHINCS-256 | `00000033` | `SPHINCS_256` | A stateless hash-based post-quantum signature scheme; the basis for NIST SLH-DSA (FIPS 205). |
+| McEliece | `00000034` | `McEliece` | A code-based post-quantum public-key encryption scheme, one of the oldest quantum-resistant proposals. |
+| McEliece-6960119 | `00000035` | `McEliece_6960119` | McEliece using the (6960, 119) binary Goppa code parameter set. |
+| McEliece-8192128 | `00000036` | `McEliece_8192128` | McEliece using the (8192, 128) binary Goppa code parameter set. |
+| Ed25519 | `00000037` | `Ed25519` | An Edwards-curve digital signature algorithm (RFC 8032) using Curve25519; modern, fast, and widely deployed in SSH and TLS. |
+| Ed448 | `00000038` | `Ed448` | An Edwards-curve digital signature algorithm (RFC 8032) using Curve448; provides a ~224-bit security level for conservative deployments. |
 
 ## Examples
 

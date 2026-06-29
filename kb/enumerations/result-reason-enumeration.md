@@ -30,13 +30,13 @@ The Result Reason enumeration provides the specific error code within a failed b
 | Missing Data | `00000006` | `MissingData` | A required field is absent from the request. |
 | Invalid Field | `00000007` | `InvalidField` | A field value is syntactically or semantically incorrect. |
 | Feature Not Supported | `00000008` | `FeatureNotSupported` | The server supports the operation in general but not the specific combination of parameters or options requested. |
-| Operation Canceled By Requester | `00000009` | `OperationCanceledByRequester` |  |
+| Operation Canceled By Requester | `00000009` | `OperationCanceledByRequester` | The client explicitly canceled the asynchronous operation via a Cancel request. |
 | Cryptographic Failure | `0000000A` | `CryptographicFailure` | A cryptographic operation (sign, verify, encrypt) failed — for example, an invalid signature. |
 | Permission Denied | `0000000C` | `PermissionDenied` | The authenticated principal does not have the right to perform the operation on the target object. |
-| Object Archived | `0000000D` | `ObjectArchived` |  |
-| Application Namespace Not Supported | `0000000F` | `ApplicationNamespaceNotSupported` |  |
-| Key Format Type Not Supported | `00000010` | `KeyFormatTypeNotSupported` |  |
-| Key Compression Type Not Supported | `00000011` | `KeyCompressionTypeNotSupported` |  |
+| Object Archived | `0000000D` | `ObjectArchived` | The referenced object has been moved to offline archival storage and is not immediately available for the requested operation. |
+| Application Namespace Not Supported | `0000000F` | `ApplicationNamespaceNotSupported` | The Application Namespace specified in the request is not supported by the server. |
+| Key Format Type Not Supported | `00000010` | `KeyFormatTypeNotSupported` | The server does not support the Key Format Type requested for the key material. |
+| Key Compression Type Not Supported | `00000011` | `KeyCompressionTypeNotSupported` | The server does not support the Key Compression Type requested for the key material. |
 | Encoding Option Error | `00000012` | `EncodingOptionError` |  |
 | Key Value Not Present | `00000013` | `KeyValueNotPresent` |  |
 | Attestation Required | `00000014` | `AttestationRequired` |  |
